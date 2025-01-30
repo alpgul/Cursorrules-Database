@@ -1,0 +1,21 @@
+{
+  "name": "cursorrulesdb",
+  "scripts": {
+    "start": "NODE_ENV=production bun run src/jobs/codeSearch.ts",
+    "dev": "NODE_ENV=development bun --watch src/jobs/codeSearch.ts",
+    "build": "bun build src/jobs/codeSearch.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^20.0.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@octokit/rest": "^21.1.0",
+    "axios": "^1.7.9",
+    "dotenv": "^16.4.0",
+    "zod": "^3.22.0"
+  }
+}

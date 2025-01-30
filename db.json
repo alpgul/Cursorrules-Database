@@ -1,0 +1,47 @@
+{
+  "id": "14a868b9-059f-4fc9-9d0f-3b7f83a30d3a",
+  "apisearch": [
+    [
+      "wasp-lang/open-saas/template/app/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/wasp-lang/open-saas/47b21486f8a2faf9cfe4b5cb544bcf710694b3a8/template/app/.cursorrules",
+        "repositoryId": 726082384,
+        "path": "wasp-lang/open-saas/template/app/.cursorrules",
+        "ownerName": "wasp-lang",
+        "repositoryName": "open-saas",
+        "htmlUrl": "https://github.com/wasp-lang/open-saas/blob/47b21486f8a2faf9cfe4b5cb544bcf710694b3a8/template/app/.cursorrules",
+        "size": 2.55,
+        "timestamp": "2025-01-29T16:46:53.433Z"
+      }
+    ],
+    [
+      "manifoldmarkets/manifold/knowledge.cursorrules",
+      {
+        "name": "knowledge.cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/manifoldmarkets/manifold/9a9fde19750c1c06786f872746c63b45efdf6c8d/knowledge.cursorrules",
+        "repositoryId": 433321004,
+        "path": "manifoldmarkets/manifold/knowledge.cursorrules",
+        "ownerName": "manifoldmarkets",
+        "repositoryName": "manifold",
+        "htmlUrl": "https://github.com/manifoldmarkets/manifold/blob/9a9fde19750c1c06786f872746c63b45efdf6c8d/knowledge.cursorrules",
+        "size": 15.54,
+        "timestamp": "2025-01-29T16:48:07.071Z"
+      }
+    ],
+    [
+      "MervinPraison/PraisonAI/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/MervinPraison/PraisonAI/31dc8dd1fafa8c85ad0731e136fd8da3d26e010f/.cursorrules",
+        "repositoryId": 774497032,
+        "path": "MervinPraison/PraisonAI/.cursorrules",
+        "ownerName": "MervinPraison",
+        "repositoryName": "PraisonAI",
+        "htmlUrl": "https://github.com/MervinPraison/PraisonAI/blob/31dc8dd1fafa8c85ad0731e136fd8da3d26e010f/.cursorrules",
+        "size": 75.7,
+        "timestamp": "2025-01-29T16:48:07.551Z"
+      }
+    ]
+  ]
+}
