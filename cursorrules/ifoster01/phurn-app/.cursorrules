@@ -1,0 +1,435 @@
+// React Native Expo with Supabase + React Native Paper .cursorrules
+
+// Project structure - Enhanced for maintainability and scale
+const projectStructure = `
+src/
+  ├── assets/
+  │   ├── images/
+  │   ├── icons/
+  │   └── animations/      # For LottieFiles animations
+  ├── components/
+  │   ├── common/
+  │   ├── features/
+  │   ├── layouts/
+  │   └── providers/       # Custom context providers
+  ├── hooks/
+  │   ├── auth/
+  │   ├── supabase/
+  │   ├── ui/
+  │   └── analytics/       # Analytics hooks for tracking user behavior
+  ├── navigation/
+  │   ├── AppNavigator.tsx
+  │   ├── AuthNavigator.tsx
+  │   ├── linking.ts      # Deep linking configuration
+  │   └── types.ts
+  ├── screens/
+  │   ├── auth/
+  │   ├── app/
+  │   └── error/          # Error boundary screens
+  ├── services/
+  │   ├── supabase/
+  │   ├── analytics/
+  │   └── storage/        # File handling service
+  ├── theme/
+  │   ├── paper.ts
+  │   ├── spacing.ts
+  │   └── typography.ts   # Custom font configurations
+  ├── types/
+  ├── utils/
+  └── constants/          # App-wide constants
+`;
+
+// Enhanced authentication configuration
+const authConfig = {
+  providers: ['google', 'apple', 'email'],
+  requiredSetup: [
+    'expo-auth-session',
+    'expo-crypto',
+    '@react-native-google-signin/google-signin',
+    'expo-apple-authentication'
+  ],
+  authScreens: [
+    'SignIn',
+    'SignUp',
+    'ForgotPassword',
+    'ResetPassword',
+    'VerifyEmail'         // Added email verification
+  ],
+  security: {
+    sessionTimeout: 7200, // 2 hours
+    refreshToken: true,
+    biometricSupport: true
+  }
+};
+
+// Enhanced UI configuration
+const uiConfig = {
+  theme: {
+    useSystemColorScheme: true,
+    animations: {
+      scale: 1.0,
+      defaultDuration: 200
+    },
+    colors: {
+      primary: '#6200ee',
+      accent: '#03dac4',
+      background: '#f6f6f6',
+      surface: '#ffffff',
+      error: '#B00020',
+      success: '#00C853',  // Added success color
+      warning: '#FF9800',  // Added warning color
+      info: '#2196F3',     // Added info color
+      text: '#1B1B1B',
+      onBackground: '#000000',
+      onSurface: '#1B1B1B',
+    }
+  },
+  components: {
+    required: [
+      'ActivityIndicator',
+      'Button',
+      'Card',
+      'TextInput',
+      'Surface',
+      'Portal',
+      'Snackbar',         // Added for toast messages
+      'Dialog',           // Added for modals
+      'Banner'            // Added for important notifications
+    ]
+  }
+};
+
+// Enhanced EAS Configuration
+const easConfig = {
+  build: {
+    development: {
+      distribution: 'internal',
+      android: {
+        buildType: 'apk',
+        gradleCommand: ':app:assembleDebug'
+      },
+      ios: {
+        simulator: true,
+        buildConfiguration: 'Debug'
+      },
+      cache: {
+        key: 'development'
+      }
+    },
+    preview: {
+      distribution: 'internal',
+      android: {
+        buildType: 'apk'
+      },
+      cache: {
+        key: 'preview'
+      }
+    },
+    production: {
+      autoIncrement: true,
+      android: {
+        buildType: 'app-bundle'
+      },
+      cache: {
+        key: 'production'
+      }
+    }
+  },
+  submit: {
+    production: {
+      ios: {
+        appleId: 'REQUIRED',
+        ascAppId: 'REQUIRED',
+        appleTeamId: 'REQUIRED'
+      }
+    }
+  }
+};
+
+// Enhanced performance rules
+const performanceRules = [
+  'Use React.memo() for expensive render components',
+  'Implement virtualized lists for long scrolling screens',
+  'Lazy load screens using React Navigation',
+  'Use proper image caching strategies',
+  'Implement proper Supabase subscription cleanup',
+  'Use proper error boundaries',
+  'Implement proper loading states with React Native Paper Skeleton',
+  'Use InteractionManager for expensive operations',
+  'Implement proper keyboard handling',
+  'Use proper asset preloading',
+  'Implement proper splash screen management'
+];
+
+// Enhanced Supabase rules
+const supabaseRules = {
+  queries: {
+    useTypedQueries: true,
+    implementPagination: true,
+    maxRowsPerFetch: 50,
+    useOptimisticUpdates: true,
+    retryConfig: {
+      retries: 3,
+      backoff: true
+    }
+  },
+  realtime: {
+    maxSubscriptions: 5,
+    cleanupOnScreenExit: true,
+    reconnectionStrategy: true
+  },
+  security: {
+    requireRLS: true,
+    requireTypes: true,
+    enableEdgeFunctions: true
+  },
+  storage: {
+    maxFileSize: 5 * 1024 * 1024, // 5MB
+    allowedFileTypes: ['image/*', 'application/pdf']
+  }
+};
+
+// Enhanced testing rules
+const testingRules = {
+  coverage: {
+    statements: 80,
+    branches: 80,
+    functions: 80,
+    lines: 80
+  },
+  required: [
+    'Jest',
+    '@testing-library/react-native',
+    'jest-expo',
+    'msw'  // Added for API mocking
+  ],
+  patterns: {
+    unit: '**/*.test.ts',
+    integration: '**/*.test.tsx',
+    e2e: 'e2e/**/*.spec.ts'
+  },
+  setup: {
+    setupFiles: ['./jest.setup.js'],
+    transformIgnorePatterns: [
+      'node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|react-native-svg)'
+    ]
+  }
+};
+
+// Error handling configuration
+const errorConfig = {
+  monitoring: {
+    required: ['sentry-expo'],
+    captureUnhandledErrors: true,
+    captureUnhandledRejections: true
+  },
+  fallbacks: {
+    requireErrorBoundaries: true,
+    requireLoadingStates: true
+  }
+};
+
+module.exports = {
+  projectStructure,
+  authConfig,
+  uiConfig,
+  easConfig,
+  performanceRules,
+  supabaseRules,
+  testingRules,
+  errorConfig,
+  environmentSetup: {
+    required: [
+      'EXPO_PUBLIC_SUPABASE_URL',
+      'EXPO_PUBLIC_SUPABASE_ANON_KEY',
+      'EXPO_PUBLIC_GOOGLE_CLIENT_ID',
+      'EXPO_PUBLIC_GOOGLE_REVERSED_CLIENT_ID',
+      'SENTRY_DSN'  // Added for error monitoring
+    ]
+  }
+};
+
+// Previous configurations remain the same...
+
+// React Query (TanStack Query) Configuration
+const queryConfig = {
+  defaultOptions: {
+    queries: {
+      staleTime: 1000 * 60 * 5, // 5 minutes
+      cacheTime: 1000 * 60 * 30, // 30 minutes
+      retry: (failureCount, error) => {
+        if (error?.status === 404) return false;
+        return failureCount < 3;
+      },
+      refetchOnWindowFocus: false,
+      refetchOnReconnect: 'always',
+      suspense: false, // Enable when needed per query
+      useErrorBoundary: true
+    },
+    mutations: {
+      retry: 2,
+      useErrorBoundary: true
+    }
+  },
+  queryClient: {
+    defaultOptions: {
+      logger: {
+        error: process.env.NODE_ENV === 'development',
+        warn: process.env.NODE_ENV === 'development',
+        log: process.env.NODE_ENV === 'development'
+      }
+    }
+  },
+  patterns: {
+    queryKeyFactory: `
+    export const queryKeys = {
+      users: {
+        all: ['users'] as const,
+        lists: () => [...queryKeys.users.all, 'list'] as const,
+        detail: (id: string) => [...queryKeys.users.all, 'detail', id] as const,
+      },
+      // Add other entities following the same pattern
+    }
+    `
+  }
+};
+
+// API Service Structure
+const apiStructure = `
+src/
+  ├── services/
+  │   ├── api/
+  │   │   ├── mutations/           # Mutation hooks
+  │   │   │   └── useCreateUser.ts
+  │   │   ├── queries/            # Query hooks
+  │   │   │   └── useUser.ts
+  │   │   ├── types/              # API types
+  │   │   │   └── api.types.ts
+  │   │   └── utils/              # API utilities
+  │   │       ├── queryClient.ts
+  │   │       └── errorHandler.ts
+`;
+
+// API Hooks Configuration
+const apiHooksConfig = {
+  required: [
+    '@tanstack/react-query',
+    '@tanstack/react-query-devtools',
+    'axios',
+    'zod'  // For runtime type validation
+  ],
+  hookTemplate: `
+    export const useQuery = <T>(
+      key: QueryKey,
+      fetcher: () => Promise<T>,
+      options?: UseQueryOptions<T>
+    ) => {
+      return useBaseQuery({
+        queryKey: key,
+        queryFn: fetcher,
+        ...defaultOptions,
+        ...options,
+        onError: (error) => {
+          handleQueryError(error);
+          options?.onError?.(error);
+        }
+      });
+    }
+  `,
+  errorHandling: {
+    types: [
+      'NetworkError',
+      'ValidationError',
+      'AuthenticationError',
+      'AuthorizationError',
+      'NotFoundError',
+      'RateLimitError'
+    ],
+    retryStrategy: `
+    const shouldRetry = (error: Error, attemptIndex: number) => {
+      if (error instanceof NetworkError && attemptIndex < 3) return true;
+      if (error instanceof RateLimitError) return false;
+      return false;
+    }
+    `
+  }
+};
+
+// API Performance Optimizations
+const apiPerformanceConfig = {
+  caching: {
+    persistConfig: {
+      persistQueryClient: true,
+      persistedClient: 'PERSISTED_QUERY_CLIENT',
+      maxAge: 1000 * 60 * 60 * 24 // 24 hours
+    },
+    prefetchingRules: [
+      'Prefetch on hover for navigation',
+      'Prefetch next page in pagination',
+      'Prefetch related entities'
+    ]
+  },
+  optimization: {
+    batchRequests: true,
+    deduplication: true,
+    parallelQueries: true,
+    suspenseMode: {
+      enabled: false,
+      fallback: 'SkeletonLoader'
+    }
+  },
+  monitoring: {
+    metrics: [
+      'queryTime',
+      'cacheHitRate',
+      'errorRate',
+      'networkTime'
+    ],
+    logging: {
+      development: 'verbose',
+      production: 'error'
+    }
+  }
+};
+
+// API Testing Configuration
+const apiTestingConfig = {
+  mocking: {
+    tool: 'msw',
+    setupFile: `
+    import { setupServer } from 'msw/node';
+    import { handlers } from './handlers';
+    
+    export const server = setupServer(...handlers);
+    `,
+    patterns: [
+      'Mock successful responses',
+      'Mock errors',
+      'Mock loading states',
+      'Mock offline scenarios'
+    ]
+  },
+  testing: {
+    queries: [
+      'Test stale time behavior',
+      'Test cache invalidation',
+      'Test error boundaries',
+      'Test retry logic'
+    ],
+    mutations: [
+      'Test optimistic updates',
+      'Test rollback behavior',
+      'Test error handling'
+    ]
+  }
+};
+
+// Export enhanced configurations
+module.exports = {
+  // ... previous exports ...
+  queryConfig,
+  apiStructure,
+  apiHooksConfig,
+  apiPerformanceConfig,
+  apiTestingConfig
+};

@@ -1,0 +1,189 @@
+# .cursorrules
+# File defines rules and best practices for monorepo management, Git branching strategies, and collaborative workflows.
+
+[Monorepo Setup]
+- Use a single repository named "virtual-consultant-monorepo" to store all related projects:
+  - ElizaOS
+  - GPT Researcher
+  - Agent Memory
+  - Agent Twitter Client
+  - Powerpointer
+  - Twitter Scraper Finetune
+- Maintain a top-level `README.md` to describe the structure and purpose of each sub-project.
+- Use Git subtree to add repositories:
+  - `git subtree add --prefix=<folder-name> <repo-url> <branch> --squash`
+  - Example: `git subtree add --prefix=elizaos https://github.com/elizaOS/eliza.git main --squash`
+
+[Git Branching Strategy]
+- **Branches:**
+  - `main`: Production-ready and stable.
+  - `dev`: Integration branch for merging features before moving to `main`.
+  - `feature/<feature-name>`: Feature-specific branches (e.g., `feature/twitter-integration`).
+
+- **Workflow:**
+  - Create feature branches from `dev`.
+  - Commit changes locally with descriptive messages.
+  - Push feature branches to remote and open Pull Requests to `dev`.
+  - Merge to `main` only after testing and review.
+
+[Commit Rules]
+- **Message Format:**
+  - Use imperative style for commit messages.
+  - Example: "Add support for SOL payment gateway."
+
+- **Atomic Commits:**
+  - Keep commits small and focused on one logical change.
+  - Avoid bundling unrelated changes in a single commit.
+
+[Dependencies and Shared Resources]
+- Maintain a top-level `requirements.txt` or `package.json` for shared dependencies.
+- Individual sub-projects can have their own dependency files to prevent version conflicts.
+
+[Subtree Management]
+- To update subtrees with changes from their original repositories:
+  - `git subtree pull --prefix=<folder-name> <repo-url> <branch> --squash`
+  - Example: `git subtree pull --prefix=agentmemory https://github.com/elizaOS/agentmemory.git main --squash`
+
+[Docker and CI/CD]
+- Use a single `docker-compose.yml` at the root of the monorepo to manage all services:
+  - Define separate services for each project.
+  - Example services: `elizaos`, `gpt-researcher`, `agent-memory`.
+
+- CI/CD pipelines should:
+  - Run tests for each sub-project.
+  - Ensure cross-project integration (e.g., ElizaOS and GPT Researcher compatibility).
+  - Deploy only after all tests pass.
+
+[Large Files and Models]
+- Add large files like AI models or datasets to `.gitignore` unless versioning is critical.
+- Use Git LFS (Large File Storage) for binaries that must be tracked:
+  - Example: `git lfs track "*.model"`
+
+[Collaboration Between Agents and Humans]
+- Use agent-generated branches for autonomous agent contributions.
+- Let humans review agent-created changes before merging into `dev` or `main`.
+
+[Documentation]
+- Keep detailed documentation in the `docs/` folder:
+  - `architecture.md`: Overview of system architecture.
+  - `integration_guide.md`: Steps to integrate services and sub-projects.
+  - `API_documentation.md`: Description of exposed APIs.
+
+- Add prompt engineering logic for AI models in dedicated directories:
+  - Example: `gpt-researcher/prompts/`
+
+[Testing]
+- Write and maintain tests for:
+  - Research workflows (e.g., GPT Researcher crawling and summarizing).
+  - Payment gateway integration (e.g., SOL transactions).
+  - Content generation (e.g., Twitter posts, Substack updates).
+
+- Test hierarchy:
+  - `tests/backend/`: Backend service tests.
+  - `tests/frontend/`: Frontend component tests.
+  - Use mock services for external dependencies during testing.
+
+[Team Collaboration]
+- Use Pull Requests for all changes:
+  - Assign reviewers to verify code quality and functionality.
+  - Ensure at least one approval before merging.
+
+- Enable branch protection rules:
+  - Prevent direct pushes to `main`.
+  - Require status checks and passing tests before merging.
+
+[Build Process and Dependencies]
+- Use Poetry for dependency management:
+  - `pyproject.toml` for project configuration
+  - `poetry.lock` for dependency locking
+  - Use `poetry add` for adding dependencies
+  - Use `poetry install` for installing dependencies
+
+- Automated build scripts:
+  - `scripts/setup_dev.sh`: Development environment setup
+  - `scripts/run_tests.sh`: Test runner with coverage
+  - `scripts/build.sh`: Package and Docker build
+
+- Code quality standards:
+  - Line length: 100 characters
+  - Code formatting: black
+  - Import sorting: isort
+  - Type checking: mypy
+  - Linting: ruff
+  - Minimum test coverage: 80%
+
+- Pre-commit hooks:
+  - Code formatting
+  - Linting
+  - Type checking
+  - Test suite
+
+[Git Workflow - MANDATORY]
+- ALWAYS create feature branches from `dev`:
+  ```bash
+  git checkout dev
+  git pull origin dev
+  git checkout -b feature/descriptive-name
+  ```
+
+- NEVER commit directly to `main` or `dev` branches
+- ALWAYS write meaningful commit messages:
+  - Use imperative mood: "Add feature" not "Added feature"
+  - Include context: "Fix memory leak in agent orchestrator"
+  - Reference issue numbers: "Fix #123: Add SOL payment validation"
+
+- REQUIRED commit structure:
+  ```
+  <type>(<scope>): <subject>
+
+  <body>
+
+  <footer>
+  ```
+  Example:
+  ```
+  feat(payment): implement SOL transaction validation
+
+  - Add signature verification
+  - Implement balance checks
+  - Add error handling for failed transactions
+
+  Closes #123
+  ```
+
+- Types MUST be one of:
+  - feat: New feature
+  - fix: Bug fix
+  - refactor: Code restructuring
+  - docs: Documentation
+  - test: Test addition/modification
+  - chore: Maintenance tasks
+
+- BEFORE pushing changes:
+  1. Run all tests: `./scripts/run_tests.sh`
+  2. Format code: `poetry run black .`
+  3. Update dependencies if needed: `poetry install`
+
+- Pull Request Requirements:
+  - MUST include test coverage
+  - MUST pass CI/CD checks
+  - MUST be reviewed by at least one team member
+  - MUST update documentation if needed
+
+- Branch Naming Convention:
+  - feature/: New features
+  - fix/: Bug fixes
+  - refactor/: Code restructuring
+  - docs/: Documentation updates
+  Example: feature/sol-payment-integration
+
+- NEVER force push to shared branches
+- ALWAYS rebase feature branches on dev before merging
+- ALWAYS delete branches after merging
+
+[References]
+- Detailed Git workflow guide: docs/git_workflow.md
+- Build process documentation: docs/build_process.md
+- Monorepo setup guide: docs/monorepo_setup.md
+
+# End of .cursorrules

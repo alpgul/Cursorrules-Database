@@ -1,0 +1,218 @@
+// Swift Development Guidelines
+const swiftGuidelines = {
+    // Architecture & State Management
+    architecture: {
+      pattern: "MVVM with clean architecture",
+      stateManagement: "SwiftUI + Combine for state management",
+      dependencyInjection: "Property wrappers + Environment",
+      routing: "NavigationStack",
+      errorHandling: "Result type for functional error handling",
+    },
+  
+    // Project Structure
+    projectStructure: `
+    BudgetBuddy/
+      ├── App/                    # App lifecycle and configuration
+      │   ├── BudgetBuddyApp.swift
+      │   ├── AppDelegate.swift
+      │   └── Configuration/      # Environment configs (dev/prod)
+      │
+      ├── Core/                   # Core functionalities and services
+      │   ├── Network/           # Network layer
+      │   │   ├── APIClient.swift
+      │   │   └── Endpoints/
+      │   ├── Storage/           # Local storage
+      │   │   ├── CoreData/
+      │   │   └── UserDefaults/
+      │   ├── Security/          # Security services
+      │   │   ├── Keychain/
+      │   │   └── Encryption/
+      │   ├── Services/          # App services
+      │   │   ├── Analytics/
+      │   │   ├── Notifications/
+      │   │   └── Location/
+      │   └── Theme/             # App theming
+      │       ├── Colors/
+      │       └── Typography/
+      │
+      ├── Features/              # Feature modules
+      │   ├── Authentication/    # User authentication
+      │   │   ├── Views/
+      │   │   ├── ViewModels/
+      │   │   └── Services/
+      │   ├── Home/             # Home screen
+      │   │   ├── Views/
+      │   │   │   └── Components/
+      │   │   ├── ViewModels/
+      │   │   └── Services/
+      │   ├── Transactions/     # Transaction management
+      │   │   ├── Views/
+      │   │   │   └── Components/
+      │   │   ├── ViewModels/
+      │   │   └── Services/
+      │   ├── Goals/            # Financial goals
+      │   │   ├── Views/
+      │   │   │   └── Components/
+      │   │   ├── ViewModels/
+      │   │   └── Services/
+      │   ├── Budget/           # Budget management
+      │   │   ├── Views/
+      │   │   │   └── Components/
+      │   │   ├── ViewModels/
+      │   │   └── Services/
+      │   ├── Reports/          # Financial reports
+      │   │   ├── Views/
+      │   │   │   └── Components/
+      │   │   ├── ViewModels/
+      │   │   └── Services/
+      │   ├── Profile/          # User profile
+      │   │   ├── Views/
+      │   │   │   └── Components/
+      │   │   ├── ViewModels/
+      │   │   └── Services/
+      │   └── Payments/         # Payment processing
+      │       ├── Views/
+      │       │   └── Components/
+      │       ├── ViewModels/
+      │       └── Services/
+      │
+      ├── Domain/               # Business logic and models
+      │   ├── Models/           # Core data models
+      │   │   ├── User/
+      │   │   ├── Transaction/
+      │   │   ├── Goal/
+      │   │   └── Budget/
+      │   ├── Protocols/        # Interfaces and protocols
+      │   ├── Extensions/       # Swift extensions
+      │   └── Utilities/        # Helper functions
+      │
+      ├── Resources/            # App resources
+      │   ├── Assets.xcassets/  # Images and colors
+      │   ├── Localizable/      # Localization files
+      │   └── Fonts/           # Custom fonts
+      │
+      └── Supporting Files/     # Additional files
+          ├── Info.plist
+          ├── Configuration/    # Build configurations
+          └── LaunchScreen.storyboard
+    `,
+  
+    // Technical Standards
+    standards: {
+      storage: {
+        local: "UserDefaults or CoreData",
+        caching: "NSCache for memory management",
+        // Added note for possible secure storage:
+        secure: "Keychain usage for sensitive data (optional)",
+      },
+      testing: {
+        framework: "XCTest",
+        mocking: "Protocol-based mocking",
+        // Recommendation for financial flows:
+        coverage: "High coverage for critical budgeting & goal-related logic",
+      },
+      localization: {
+        tools: ["Localizable.strings", "SwiftGen"],
+        format: "Structured string resources",
+        // Added note for multi-currency support:
+        currencySupport: "Ensure numeric/currency format localization",
+      },
+      theming: {
+        source: "AppTheme for colors and text styles",
+        darkMode: [
+          "Test all UI components in both themes",
+          "Use Color assets from Asset catalog",
+          "Check contrast ratios in both modes",
+          "Verify text selection colors",
+        ],
+        usage: "Color+Extensions instead of hard-coded colors",
+        // Recommendation for brand consistency:
+        guidelines: "Match brand identity in iconography and color palettes",
+      }
+    },
+  
+    // Development Workflow
+    workflow: [
+      "SwiftUI previews for rapid development",
+      "SwiftLint for code style enforcement",
+      "Environment-based development (dev/prod)",
+      "Regular integration testing with bank API mocks",
+      "Implement push notification logic early for reminder features",
+    ],
+  
+    // Best Practices
+    bestPractices: [
+      "Stateless views for UI-only components",
+      "Final classes when inheritance not needed",
+      "Files under 300 lines",
+      "Proper error handling and logging",
+      "Lazy loading for heavy components",
+      "SwiftUI design guidelines",
+      "Theme-aware components using Environment",
+      "Use Combine pipelines to handle real-time expense updates",
+      "Ensure secure handling of sensitive user data (bank tokens, credentials)",
+      "Include multi-currency calculations in domain logic",
+    ],
+  
+    // Quality Assurance
+    qualityAssurance: {
+      review: [
+        "Test in both light/dark themes",
+        "Verify responsive layouts",
+        "Check accessibility standards",
+        "Validate theme consistency",
+        "Review finance-related flows for correct budget & goal calculations",
+        "Perform currency conversion tests for multi-currency support",
+      ],
+      documentation: [
+        "Reference PROJECT.md for implementations",
+        "Keep project_progress.md up to date",
+        "Document theme usage patterns",
+        "Update changelog",
+        "Maintain a 'Financial Features' doc covering budgeting, bank integration, and notifications",
+      ]
+    },
+  
+    // Project Progress Documentation
+    projectProgress: {
+      sections: [
+        "Current sprint status",
+        "Completed features",
+        "Known issues",
+      ],
+      updateGuidelines: [
+        "Update at the end of each working session",
+        "Update after every major feature completion",
+        "Keep entries concise and dated",
+        "Highlight blocking issues",
+      ],
+    },
+  
+    // Commit Message Guidelines
+    commitFormat: {
+      pattern: "<type>: <description>",
+      types: {
+        feat: "A new feature",
+        fix: "A bug fix",
+        docs: "Documentation only changes",
+        style: "Changes not affecting code meaning (whitespace, formatting)",
+        refactor: "Code change that neither fixes a bug nor adds a feature",
+        test: "Adding missing tests or correcting existing tests",
+        chore: "Changes to build process or auxiliary tools",
+      },
+      descriptionRules: [
+        "Keep it short (4-5 words)",
+        "Use present tense",
+        "No capitalization at start",
+        "No period at end",
+      ],
+      examples: [
+        "feat: add expense tracking flow",
+        "fix: resolve crash in budget calculation",
+        "docs: update readme installation",
+        "style: format budget service",
+      ]
+    }
+  };
+  
+  

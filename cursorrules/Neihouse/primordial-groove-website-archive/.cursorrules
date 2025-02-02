@@ -1,0 +1,149 @@
+Certainly! Here's the updated YAML file, aligned with your new goals of minimizing JavaScript usage and incorporating **AlpineJS** or **HTMX** if interactivity is needed.
+
+```yaml
+# Cursor Guidelines for Building the Multi-Page Website
+
+project:
+  name: "Primordial Groove Website"
+  description: "A multi-page website for the Primordial Groove community, built with HTML, Tailwind CSS, minimal JavaScript, and hosted on GitHub Pages."
+
+# Guidelines for Structure and Organization
+
+structure:
+
+- Ensure that each page (Home, About, Events, Contact, etc.) has its own HTML file.
+- Use relative paths for internal links between pages.
+- Keep a clear, hierarchical folder structure. Example:
+  - /index.html
+  - /about.html
+  - /events.html
+  - /contact.html
+  - /assets/css (for any custom stylesheets)
+  - /assets/images (for images from past events)
+- Limit the use of unnecessary directories and files to maintain simplicity.
+- **Mobile-first principle**: Prioritize structuring pages to render well on mobile screens first, and then adjust for larger devices using responsive utilities.
+
+# Naming Conventions
+
+naming_conventions:
+
+- Use kebab-case for all filenames (e.g., index.html, about.html, events.html, contact.html).
+- Ensure HTML element class names in Tailwind CSS follow descriptive patterns (e.g., `bg-gray-800`, `text-center`).
+- Keep naming clear and meaningful for IDs or custom classes, e.g., use `main-hero` instead of `div1`.
+- Tailwind class prefixes like `sm:`, `md:`, `lg:` should only be used when enhancing the layout for larger screens (mobile-first).
+
+# Styling Guidelines (Tailwind CSS)
+
+styling:
+
+- Utilize Tailwind CSS for all page styling. Avoid inline styles or additional CSS unless necessary.
+- Stick to utility-first classes from Tailwind for rapid development and maintainability.
+- **Mobile-first responsiveness**: Use base Tailwind classes for mobile devices and apply responsive breakpoints (`sm:`, `md:`, `lg:`, etc.) to modify styles on larger screens.
+- Prioritize `flex`, `grid`, and other responsive utility classes to ensure flexible layouts that adapt from mobile to desktop smoothly.
+- Use Tailwind's predefined color palette or customize via config if needed to reflect the Primordial Groove ethos.
+- Minimize custom CSS usage. If required, custom styles should go in `/assets/css/styles.css`.
+
+# JavaScript Usage Guidelines
+
+javascript:
+
+- Aim to minimize JavaScript usage throughout the website.
+- If interactivity or dynamic behavior is needed, prefer using **AlpineJS** or **HTMX**.
+- Include AlpineJS or HTMX via CDN to avoid increasing build complexity.
+- Avoid heavy JavaScript frameworks or libraries.
+- Place any custom JavaScript at the bottom of the `<body>` tag or in separate JS files if needed.
+- Ensure that the site functions correctly even if JavaScript is disabled (progressive enhancement).
+
+# Accessibility and Semantics
+
+accessibility:
+
+- All images must include `alt` attributes for accessibility purposes.
+- Use semantic HTML elements where possible (e.g., `<nav>`, `<section>`, `<header>`, `<footer>`, `<main>`, `<article>`).
+- Ensure all text content is readable on any background by using sufficient color contrast (e.g., `bg-gray-800 text-white`).
+- **Mobile-first considerations**: Ensure that tap targets (buttons, links) are large enough for mobile users (44x44 pixels minimum) and that content is accessible without zooming or horizontal scrolling.
+- Use ARIA attributes where necessary to enhance accessibility.
+
+# Best Practices for HTML
+
+html_practices:
+
+- Keep HTML files clean and well-indented for readability.
+- **Avoid inline JavaScript and event handlers** (e.g., `onclick`). Use data attributes with AlpineJS or HTMX for interactivity.
+- **Mobile-first meta tag**: Ensure each HTML file includes a meta tag for responsive design:
+
+  ```html
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  ```
+
+- Use proper `<title>` and `<meta>` descriptions for each page.
+- Keep the HTML5 `doctype` declaration at the top of every file:
+
+  ```html
+  <!DOCTYPE html>
+  ```
+
+- Ensure the design adapts naturally to mobile devices first, then apply enhancements for larger screens.
+
+# Version Control Guidelines
+
+version_control:
+
+- Commit changes frequently with meaningful commit messages.
+- Each commit should represent a logical and cohesive set of changes (e.g., "Added about page content").
+- Keep the main branch clean; create feature branches for significant changes.
+- Use `.gitignore` to exclude unnecessary files like temporary backups or `node_modules` (if used in the future).
+
+# Content and Branding
+
+content:
+
+- Ensure consistency in tone and messaging across all pages.
+- Use a unified design style (e.g., consistent colors, typography, and layout) that reflects the Primordial Groove ethos.
+- Integrate the tagline **"Find Your Tribe, Find Your Rhythm"** prominently on the homepage.
+- Use images from past events to showcase the community and authenticity.
+- Avoid filler text—every section must have meaningful and relevant content.
+- **Mobile-first content flow**: Ensure text, images, and other media scale correctly on mobile devices. Start by testing on smaller screens and progressively enhance for larger devices.
+
+# Deployment Guidelines
+
+deployment:
+
+- Ensure all necessary files (HTML, CSS, images) are committed to GitHub before deployment.
+- Test all internal and external links before deploying.
+- After deployment to GitHub Pages, test responsiveness and functionality on various devices and browsers.
+- If you make changes, ensure they are reflected on GitHub Pages by pushing new commits.
+- **Mobile-first testing**: Prioritize testing on mobile devices (smartphones, tablets) and ensure smooth navigation and usability before expanding to desktop devices.
+
+# Performance Optimization
+
+performance:
+
+- Minimize the number of HTTP requests (e.g., by combining assets where possible).
+- Optimize all images to reduce load times (use web-optimized formats like `.webp` where applicable).
+- Leverage Tailwind CSS's purging capability to remove unused CSS classes if necessary.
+- **Mobile-first optimizations**: Focus on reducing page load times and minimizing asset sizes for mobile users. Optimize for mobile network performance by compressing images and limiting heavy resources.
+- Include AlpineJS or HTMX via CDN to avoid increasing the bundle size.
+
+# Future-Proofing and Scalability
+
+scalability:
+
+- Keep the website modular to allow easy expansion (adding more pages or sections).
+- Maintain a consistent structure so others can easily contribute to the project if needed.
+- Plan for potential enhancements like adding more interactivity using AlpineJS or HTMX while keeping JavaScript minimal.
+- **Mobile-first mindset**: Ensure the project can scale for future mobile-focused features, such as progressive web app (PWA) support, offline access, or further mobile optimizations.
+
+```
+
+This updated YAML file aligns with your new goals of minimizing JavaScript usage and preferring **AlpineJS** or **HTMX** for any required interactivity. It emphasizes building a website that reflects the ethos of **Primordial Groove** while maintaining simplicity and performance, especially on mobile devices.
+
+---
+
+**Key Updates:**
+
+- **JavaScript Usage Guidelines**: Added a new section specifying the use of **AlpineJS** or **HTMX** for minimal JavaScript needs.
+- **Content and Branding**: Emphasized using images from past events to showcase community authenticity.
+- **Performance Optimization**: Included notes on loading AlpineJS or HTMX via CDN to keep the bundle size small.
+- **Best Practices for HTML**: Adjusted guidelines to avoid inline JavaScript and use data attributes for interactivity with AlpineJS or HTMX.
+- **Scalability**: Planned for future enhancements using AlpineJS or HTMX while keeping JavaScript minimal.

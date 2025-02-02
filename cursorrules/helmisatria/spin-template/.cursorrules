@@ -1,0 +1,79 @@
+# Spin Template Generator
+
+A Node.js package (@helmisatria/spin-template) that generates project files and directories from templates.
+
+## Core Functionality
+
+- Generates files and directories based on predefined templates
+- Template source location: `templates/` directory
+- Mandatory copy: `.infrastructure/` directory
+- Optional copy: `templates/*` (user-selectable)
+- File handling: Upsert (update/insert) strategy for files and directories
+- Variable replacement using `replace-in-file` for placeholders
+
+## Technical Stack
+
+- **Runtime:** Bun
+- **Language:** TypeScript
+- **Build tool:** tsx
+- **CLI Interface:** @clack/prompts
+- **Package Registry:** npmjs.com
+- **Package Name:** @helmisatria/spin-template
+- Don't need to build the package, just use #!/usr/bin/env -S npx tsx.
+
+## User Experience Flow
+
+1. User executes: `npx @helmisatria/spin-template`
+2. Interactive prompts collect:
+   - Template selection from `templates/*` (excluding `.infrastructure`)
+   - User inputs for configuration
+
+```typescript
+interface UserInputs {
+  // Required
+  appName: string; // Transformed to lowercase, dash-separated
+
+  // Optional (can be configured later)
+  email?: string; // For SSL certificate
+  sshKey?: string; // Public SSH key
+  hostServer?: string; // Server hostname or IP address
+  productionDomain?: string; // Production domain
+}
+```
+
+3. Confirmation prompts for:
+   - File overwrites when conflicts exist
+   - Template selection confirmation
+4. Processing:
+   - Copies selected templates and `.infrastructure`
+   - Replaces placeholders in files using `replace-in-file`
+   - Upserts files in target directory (current directory by default)
+
+## File Handling Rules
+
+### .infrastructure/ directory
+
+- Always copied
+- Mandatory for project setup
+
+### templates/ directory
+
+- Optional components
+- User can select which templates to include
+- Files are upserted (updated if exists, created if not)
+- Prompts for confirmation before overwriting existing files
+
+## Reusability
+
+The package supports multiple executions, allowing users to:
+
+- Fill in previously skipped optional fields
+- Update existing values
+- Add new templates to an existing project
+- Modify configuration without losing existing customizations
+
+## Usage Examples
+
+```bash
+npx @helmisatria/spin-template
+```

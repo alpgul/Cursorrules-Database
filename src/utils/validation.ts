@@ -1,3 +1,4 @@
+import FileManager from './fileManager';
 import Logger from './logger';
 
 interface SearchItem {
@@ -40,8 +41,9 @@ export default class ValidationUtils {
   /**
    * Tekil bir arama sonucu öğesinin geçerli olup olmadığını kontrol eder
    */
-  public static validateSearchItem(item: any): { isValid: boolean; errors: string[] } {
+  public static  validateSearchItem(item: any): { isValid: boolean; errors: string[] } {
     const errors: string[] = [];
+
 
     try {
       if (!item || typeof item !== 'object') {
@@ -81,7 +83,7 @@ export default class ValidationUtils {
           errors.push('repository.full_name string tipinde olmalıdır');
         }
       }
-
+     
       return { isValid: errors.length === 0, errors };
 
     } catch (error) {

@@ -1,0 +1,49 @@
+# Cursor Rules for Enhancing Java Learning with AI Assistance
+
+# General Guidelines
+1. **Model Selection**:
+   - Use GitHub Copilot for rapid code generation and quick fixes.
+   - Turn to Claude for understanding complex concepts and exploring creative solutions.
+   - Leverage Cursor for in-depth learning and project-specific guidance.
+
+2. **Effective Prompting Techniques**:
+   - Start with a clear objective: Define the task or question precisely.
+   - Provide essential context: Include relevant information, code snippets, or examples.
+   - Be specific about desired output: Specify the format, level of detail, or any constraints.
+   - Experiment and iterate: Analyze the model's output and refine your prompt based on feedback.
+
+# Concept-Specific Prompts
+3. **Gradle Build Tool**:
+   - Task: Explain the core concepts of Gradle and provide a basic example.
+   - Prompt: Describe the purpose of Gradle, key components of a `build.gradle` file, and provide a simple example.
+
+4. **Algorithm Development**:
+   - Task: Guide through developing an efficient algorithm for sorting an array.
+   - Prompt: State the problem, suggest suitable algorithms, and request a Java implementation.
+
+# Leveraging AI Models
+5. **Cursor Features**:
+   - Use custom `.cursorrules` for tailored assistance and inline documentation.
+   - AI-Powered Code Generation: Generate code snippets, refactor existing code, or create functions based on natural language descriptions.
+
+# Learning Pathway
+6. **Formal Learning**:
+   - Supplement coursework with AI assistance for clarifications and code examples.
+7. **Informal Learning**:
+   - Explore open-source projects and tackle coding challenges on platforms like LeetCode.
+8. **Project-Based Learning**:
+   - Define project goals, break tasks down, and seek feedback.
+
+# Documentation and Reference Materials
+9. **Generate Comprehensive Documentation**:
+   - Leverage AI to create clear and concise explanations of your code, algorithms, and design decisions.
+10. **Build a Personalized Knowledge Base**:
+    - Compile AI-generated explanations, code examples, and best practices into a reference document for future use.
+
+# Conclusion
+11. **Balance AI Assistance with Independent Problem-Solving**:
+    - Use AI as a tool to enhance your learning, not replace it. Strive to develop your own critical thinking and problem-solving skills.
+
+# Additional Notes
+12. **Iterative Prompt Development**:
+    - Start with a clear objective, provide essential context, be specific about desired output, and iterate based on model feedback.

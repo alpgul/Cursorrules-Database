@@ -1,0 +1,76 @@
+You are an expert in UI/UX design and front-end development, specializing in creating modern, accessible, and performant web applications.
+
+Create a responsive, fully accessible e-commerce website in Portuguese (pt-br) using React, React Router Vite, TypeScript, Shadcn UI, and Framer Motion.
+
+The e-commerce platform must allow users to list their own items and shop for items from others. The design must include light mode and dark mode themes with smooth transitions between them.
+Key Requirements
+Visual Design
+
+    Implement a clean, minimal, and modern design with light and dark mode counterparts:
+        Light Mode:
+            Primary color: Indigo shades (e.g., #4B0082) for branding and key interface elements.
+            Secondary color: Muted blues or grays (e.g., #E5E7EB) for subtle UI elements and backgrounds.
+            Accent color: Warm tones like amber (#FFC107) or coral (#FF7043) for calls-to-action like "Buy Now".
+            Background: Light neutral shades (e.g., #F9FAFB) for a clean, airy look.
+            Text: Dark grays (e.g., #111827) for high contrast against light backgrounds.
+        Dark Mode:
+            Primary color: Indigo tones slightly desaturated (e.g., #3730A3) to reduce brightness.
+            Secondary color: Soft blues or dark neutrals (e.g., #1F2937) for secondary elements and backgrounds.
+            Accent color: Vibrant warm tones (e.g., #FFB020 or #FF5733) to maintain visibility and energy in dark contexts.
+            Background: Dark gray shades (e.g., #111827) to reduce eye strain.
+            Text: Light neutrals (e.g., #E5E7EB) for readability against dark backgrounds.
+
+Interaction Design
+
+    Use Framer Motion for smooth transitions between light and dark modes.
+    Provide clear visual feedback for actions like toggling modes, adding items, or viewing details.
+
+Accessibility
+
+    Ensure both themes meet WCAG 2.1 AA contrast standards.
+    Include semantic HTML, keyboard navigability, and focus states for all interactive elements.
+
+Mobile Responsiveness
+
+    Use mobile-first design principles.
+    Ensure components like navigation, product cards, and buttons are touch-friendly with sufficient spacing.
+
+Performance Optimization
+
+    Optimize assets separately for light and dark modes to minimize performance impacts.
+    Preload critical resources for both themes to ensure a seamless experience.
+
+Design Patterns and Documentation
+
+    Develop a design system that supports both light and dark modes, with reusable components.
+    Document all design decisions, including color codes, typography, and spacing rules for both themes.
+    Provide detailed user flows and style guides for developers to extend the system.
+
+First Steps
+1. Reusable Components
+
+    Create foundational components for consistency and reusability:
+        Button: Configurable for primary, secondary, and disabled states, with hover and focus effects.
+        Card: Displays product images, title, price, and action buttons (e.g., "Buy", "Add to Cart").
+        Navbar: Responsive navigation with a logo, links, search bar, and light/dark mode toggle.
+        Footer: Minimal footer with navigation links and branding.
+
+2. Landing Page
+
+    Use the reusable components to build the homepage:
+        Hero Section: Highlight the platform's purpose with a bold call-to-action button (e.g., "Start Selling").
+        Featured Products: Grid showcasing a selection of product cards.
+        Key Features Section: Highlight the benefits of the platform (e.g., "Sell Easily", "Shop Securely").
+        Footer: Include navigation links, branding, and any additional informational links.
+
+3. Responsiveness
+
+    Ensure the design adapts seamlessly across devices and screen sizes.
+    Test touch interactions and ensure components have enough spacing for mobile use.
+
+4. Smooth Transitions
+
+    Use Framer Motion for animations like:
+        Light/dark mode transitions.
+        Hover effects on buttons and cards.
+        Page transitions (e.g., navigating to product details).

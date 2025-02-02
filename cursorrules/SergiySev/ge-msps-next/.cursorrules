@@ -1,0 +1,240 @@
+{
+  "projectType": "medical-system",
+  "framework": {
+    "name": "Next.js",
+    "version": "15.x"
+  },
+  "expertise": {
+    "technologies": [
+      "ReactJS",
+      "NextJS",
+      "Prisma",
+      "JavaScript",
+      "TypeScript",
+      "HTML",
+      "CSS",
+      "TailwindCSS"
+    ]
+  },
+  "projectStructure": {
+    "components": "lib/components",
+    "formComponents": "lib/components/controlled-form-components",
+    "actions": "lib/actions",
+    "validation": "lib/validation",
+    "i18n": {
+      "messages": "messages",
+      "config": "i18n"
+    }
+  },
+  "codingGuidelines": {
+    "general": [
+      "Use early returns for better readability",
+      "Follow DRY principle",
+      "Ensure code completeness",
+      "Include all required imports",
+      "Use proper component naming"
+    ],
+    "styling": [
+      "Use Tailwind classes exclusively",
+      "Prefer class: over ternary operators"
+    ],
+    "naming": {
+      "eventHandlers": "prefix with 'handle' (e.g., handleClick)",
+      "functions": "use const arrow functions"
+    },
+    "accessibility": {
+      "required": [
+        "tabindex",
+        "aria-label",
+        "onClick",
+        "onKeyDown"
+      ]
+    }
+  },
+  "nextjsFeatures": {
+    "components": [
+      "server-components",
+      "client-components"
+    ],
+    "routing": [
+      "dynamic-routes",
+      "middleware",
+      "redirects"
+    ],
+    "optimization": [
+      "dynamic-imports",
+      "dynamic-metadata",
+      "dynamic-seo"
+    ]
+  },
+  "rules": [
+    {
+      "name": "next-15-params-handling",
+      "description": "Ensure Next.js 15 route component params are properly typed and handled",
+      "pattern": {
+        "find": "params: Promise<{ locale: string }>",
+        "replace": "params: { locale: string }"
+      },
+      "message": "Next.js 15 route params should be directly accessible without Promise typing",
+      "examples": {
+        "incorrect": [
+          "export default async function Page({ params }: { params: Promise<{ locale: string }> }) {",
+          "const { locale } = await params;"
+        ],
+        "correct": [
+          "export default async function Page({ params }: { params: { locale: string } }) {",
+          "const { locale } = params;"
+        ]
+      },
+      "severity": "error",
+      "filePatterns": [
+        "app/**/page.tsx",
+        "app/**/layout.tsx"
+      ],
+      "autofix": true
+    },
+    {
+      "name": "tailwind-only",
+      "description": "Ensure only Tailwind classes are used for styling",
+      "pattern": {
+        "find": "style=|className=\".*?{.*?}\"|styled\\.",
+        "replace": null
+      },
+      "message": "Use Tailwind classes exclusively for styling",
+      "severity": "warning",
+      "filePatterns": [
+        "lib/components/**/*.tsx",
+        "app/**/*.tsx"
+      ],
+      "autofix": false
+    },
+    {
+      "name": "accessibility-requirements",
+      "description": "Ensure interactive elements have required accessibility attributes",
+      "pattern": {
+        "find": "<(button|a|input|select)(?![^>]*aria-label)(?![^>]*role)",
+        "replace": null
+      },
+      "message": "Interactive elements must include appropriate ARIA attributes",
+      "severity": "error",
+      "filePatterns": [
+        "lib/components/**/*.tsx"
+      ],
+      "autofix": false
+    },
+    {
+      "name": "event-handler-naming",
+      "description": "Enforce 'handle' prefix for event handler functions",
+      "pattern": {
+        "find": "(?:on[A-Z]\\w+)=\\{(?!handle\\w+)",
+        "replace": null
+      },
+      "message": "Event handler functions should be prefixed with 'handle'",
+      "severity": "warning",
+      "filePatterns": [
+        "lib/components/**/*.tsx"
+      ],
+      "autofix": false
+    },
+    {
+      "name": "controlled-form-components",
+      "description": "Ensure form components are in the correct directory",
+      "pattern": {
+        "find": "(?:Form|Input|Select|Checkbox|Radio)(?:\\.tsx)?$",
+        "replace": null
+      },
+      "message": "Form components should be placed in lib/components/controlled-form-components",
+      "severity": "warning",
+      "filePatterns": [
+        "lib/components/*.tsx"
+      ],
+      "autofix": false
+    },
+    {
+      "name": "server-component-directive",
+      "description": "Ensure server components have the correct directive",
+      "pattern": {
+        "find": "^(?!['\"']use client['\"'];).*?(export\\s+default|function\\s+\\w+)",
+        "replace": null
+      },
+      "message": "Add 'use client' directive for client components or ensure component is properly marked as server component",
+      "severity": "error",
+      "filePatterns": [
+        "lib/components/**/*.tsx"
+      ],
+      "autofix": false
+    },
+    {
+      "name": "i18n-message-keys",
+      "description": "Ensure i18n message keys follow convention",
+      "pattern": {
+        "find": "useTranslations\\(['\"](?!\\w+\\.\\w+)['\"]\\)",
+        "replace": null
+      },
+      "message": "Translation keys should follow the format 'namespace.key'",
+      "severity": "warning",
+      "filePatterns": [
+        "messages/**/*.json",
+        "lib/components/**/*.tsx"
+      ],
+      "autofix": false
+    },
+    {
+      "name": "form-action-pattern",
+      "description": "Ensure server actions follow the pattern with next-safe-action and proper schema validation",
+      "pattern": {
+        "find": "export\\s+const\\s+\\w+\\s*=\\s*actionClient\\.schema\\([^)]+\\)\\.action\\(",
+        "replace": null
+      },
+      "message": "Server actions should use actionClient.schema() with proper validation schema",
+      "severity": "error",
+      "filePatterns": [
+        "lib/actions/**/*.ts"
+      ],
+      "autofix": false
+    },
+    {
+      "name": "form-component-pattern",
+      "description": "Ensure form components use controlled components with next-safe-action hooks",
+      "pattern": {
+        "find": "useHookFormAction\\(.*zodResolver\\(.*\\)",
+        "replace": null
+      },
+      "message": "Form components should use useHookFormAction with controlled form components and zod validation",
+      "severity": "error",
+      "filePatterns": [
+        "lib/components/**/Form*.tsx"
+      ],
+      "autofix": false
+    },
+    {
+      "name": "controlled-form-imports",
+      "description": "Ensure form components import from controlled-form-components directory",
+      "pattern": {
+        "find": "import.*from\\s+['\"](?!.*controlled-form-components).*(?:Input|Select|Checkbox|TextArea|SubmitButton)['\"]",
+        "replace": null
+      },
+      "message": "Use controlled form components from lib/components/controlled-form-components",
+      "severity": "error",
+      "filePatterns": [
+        "lib/components/**/Form*.tsx"
+      ],
+      "autofix": false
+    },
+    {
+      "name": "form-validation-schema",
+      "description": "Ensure form validation schemas are properly defined and imported",
+      "pattern": {
+        "find": "import.*Schema.*from\\s+['\"].*validation.*['\"]",
+        "replace": null
+      },
+      "message": "Form validation schemas should be imported from lib/validation directory",
+      "severity": "warning",
+      "filePatterns": [
+        "lib/components/**/Form*.tsx",
+        "lib/actions/**/*.ts"
+      ],
+      "autofix": false
+    }
+  ]
+}

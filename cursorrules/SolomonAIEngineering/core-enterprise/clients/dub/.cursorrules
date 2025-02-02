@@ -1,0 +1,488 @@
+{
+  "typescript": {
+    "style": {
+      "preferFunctional": true,
+      "preferNamedExports": true,
+      "avoidEnums": true,
+      "useInterfaces": true,
+      "preferConst": true,
+      "preferArrowFunctions": true
+    },
+    "formatting": {
+      "indentSize": 2,
+      "maxLineLength": 80,
+      "useSemicolons": true,
+      "quoteStyle": "double",
+      "trailingComma": "all"
+    },
+    "imports": {
+      "preferTypeImports": true,
+      "noDefaultExports": true,
+      "grouping": [
+        "^react",
+        "^next",
+        "^@dub/",
+        "^@/",
+        "^[./]"
+      ]
+    }
+  },
+  "naming": {
+    "directories": {
+      "pattern": "kebab-case",
+      "examples": ["auth-wizard", "user-settings"],
+      "specialDirs": {
+        "app": "Next.js app router directory",
+        "lib": "Shared utilities and helpers",
+        "ui": "Reusable UI components",
+        "emails": "Email templates",
+        "public": "Static assets",
+        "styles": "Global styles",
+        "tests": "Test files"
+      }
+    },
+    "components": {
+      "pattern": "PascalCase",
+      "examples": ["AuthWizard", "UserSettings"],
+      "clientSuffix": "-client",
+      "serverSuffix": "-server",
+      "layoutFile": "layout.tsx",
+      "pageFile": "page.tsx",
+      "loadingFile": "loading.tsx",
+      "errorFile": "error.tsx"
+    },
+    "variables": {
+      "pattern": "camelCase",
+      "prefixes": {
+        "boolean": ["is", "has", "should", "can", "will"],
+        "event": ["on", "handle"],
+        "ref": ["ref", "elementRef"],
+        "count": ["num", "count", "total"],
+        "callback": ["cb", "fn"]
+      }
+    },
+    "constants": {
+      "pattern": "UPPER_SNAKE_CASE",
+      "location": "lib/constants"
+    }
+  },
+  "fileStructure": {
+    "app": {
+      "layout": ["imports", "metadata", "layout component"],
+      "page": ["imports", "metadata", "page component"],
+      "route": ["imports", "validation", "middleware", "handlers"],
+      "components": ["imports", "types", "component", "helpers"]
+    },
+    "lib": {
+      "pattern": ["types", "constants", "helpers", "hooks"],
+      "utils": "shared utility functions",
+      "api": "API-related utilities",
+      "auth": "Authentication utilities",
+      "zod": "Schema validation"
+    },
+    "ui": {
+      "pattern": ["component", "types", "styles"],
+      "location": "ui/",
+      "shared": "shared UI components",
+      "layout": "layout components"
+    }
+  },
+  "api": {
+    "patterns": {
+      "validation": {
+        "library": "zod",
+        "location": "lib/zod/schemas",
+        "naming": "{resource}.schema.ts"
+      },
+      "middleware": {
+        "auth": ["withSession", "withWorkspace", "withAdmin"],
+        "error": ["handleAndReturnErrorResponse"],
+        "cache": ["linkCache"]
+      },
+      "errorHandling": {
+        "class": "DubApiError",
+        "codes": ["not_found", "unauthorized", "forbidden", "internal_server_error"]
+      },
+      "responseType": {
+        "success": "NextResponse.json(data)",
+        "error": "handleAndReturnErrorResponse(error)"
+      },
+      "categories": {
+        "auth": ["login", "callback", "providers"],
+        "workspaces": ["domains", "links", "analytics"],
+        "users": ["me", "settings", "billing"],
+        "integrations": ["slack", "shopify", "stripe"],
+        "features": ["ai", "analytics", "qr"],
+        "admin": ["impersonate", "ban", "refresh-domain"]
+      },
+      "edgeRuntime": {
+        "enabled": true,
+        "routes": [
+          "analytics",
+          "links",
+          "domains"
+        ]
+      }
+    },
+    "structure": {
+      "route": "app/api/[resource]/route.ts",
+      "handlers": ["GET", "POST", "PUT", "DELETE", "PATCH"],
+      "middleware": "lib/auth/*.ts",
+      "folders": {
+        "auth": "Authentication endpoints",
+        "workspaces": "Workspace management",
+        "links": "Link management",
+        "analytics": "Analytics endpoints",
+        "webhooks": "External service webhooks",
+        "ai": "AI features endpoints",
+        "metatags": "Meta tags management",
+        "categories": "Category management",
+        "events": "Event tracking",
+        "financial-settings": "Billing and subscriptions",
+        "oauth": "OAuth integrations",
+        "scim": "SCIM provisioning",
+        "customers": "Customer management"
+      }
+    }
+  },
+  "database": {
+    "orm": "prisma",
+    "clients": {
+      "edge": {
+        "import": "@dub/prisma/edge",
+        "usage": "prismaEdge",
+        "location": "packages/prisma/edge.ts",
+        "features": ["edge runtime", "connection pooling"]
+      },
+      "standard": {
+        "import": "@dub/prisma",
+        "usage": "prisma",
+        "location": "packages/prisma/client.ts",
+        "features": ["full API support"]
+      }
+    },
+    "schema": {
+      "location": "packages/prisma/schema",
+      "files": {
+      "main": "schema.prisma",
+        "workspace": "workspace.prisma",
+        "user": "user.prisma",
+       "link": "link.prisma",
+       "tag": "tag.prisma",
+       "domain": "domain.prisma",
+       "notification": "notification.prisma",
+       "ai": "ai.prisma",
+       "analytics": "analytics.prisma",
+       "auth": "auth.prisma",
+       "billing": "billing.prisma",
+       "category": "category.prisma",
+       "customer": "customer.prisma",
+       "event": "event.prisma",
+       "integration": "integration.prisma",
+       "metatag": "metatag.prisma",
+       "oauth": "oauth.prisma",
+       "partner": "partner.prisma",
+       "program": "program.prisma",
+       "qr": "qr.prisma",
+       "scim": "scim.prisma",
+       "support": "support.prisma",
+       "webhook": "webhook.prisma"
+      },
+      "conventions": {
+        "models": {
+          "naming": "PascalCase",
+          "idField": {
+            "type": "String",
+            "default": "@default(cuid())"
+          },
+          "timestamps": {
+            "createdAt": "DateTime @default(now())",
+            "updatedAt": "DateTime @updatedAt"
+          },
+          "relations": {
+            "oneToOne": "@relation(fields: [fieldId], references: [id])",
+            "oneToMany": "@relation(\"RelationName\")",
+            "manyToMany": "implicit through join table"
+          },
+          "cascading": {
+            "delete": "onDelete: Cascade",
+            "update": "onUpdate: Cascade"
+          }
+        },
+        "fields": {
+          "naming": "camelCase",
+          "types": {
+            "id": "String @id @default(cuid())",
+            "foreignKey": "String",
+            "enum": "defined in schema",
+            "json": "Json",
+            "boolean": "Boolean @default(false)",
+            "number": "Int @default(0)",
+            "date": "DateTime",
+            "text": "String"
+          },
+          "attributes": {
+            "required": "@required",
+            "unique": "@unique",
+            "default": "@default(value)",
+            "map": "@map(\"column_name\")"
+          }
+        },
+        "enums": {
+          "naming": "PascalCase",
+          "values": "UPPER_SNAKE_CASE"
+        }
+      }
+    },
+    "migrations": {
+      "location": "packages/prisma/migrations",
+      "naming": "YYYYMMDDHHMMSS_descriptive_name",
+      "commands": {
+        "generate": "prisma generate",
+        "migrate": "prisma migrate dev",
+        "deploy": "prisma migrate deploy",
+        "reset": "prisma migrate reset"
+      }
+    },
+    "packages": {
+      "structure": {
+        "client": "client.ts - Standard Prisma client",
+        "edge": "edge.ts - Edge runtime client",
+        "index": "index.ts - Package exports",
+        "tsconfig": "TypeScript configuration",
+        "package": "Package dependencies and scripts"
+      },
+      "dependencies": {
+        "required": ["@prisma/client", "prisma"],
+        "devDependencies": ["typescript"]
+      }
+    },
+    "queries": {
+      "patterns": {
+        "find": {
+          "single": "findUnique",
+          "many": "findMany",
+          "first": "findFirst"
+        },
+        "create": {
+          "single": "create",
+          "many": "createMany"
+        },
+        "update": {
+          "single": "update",
+          "many": "updateMany"
+        },
+        "delete": {
+          "single": "delete",
+          "many": "deleteMany"
+        },
+        "upsert": "upsert"
+      },
+      "includes": {
+        "syntax": "include: { relation: true }",
+        "select": "select: { field: true }",
+        "nested": "include: { relation: { select: { field: true } } }"
+      },
+      "transactions": {
+        "syntax": "prisma.$transaction",
+        "usage": "atomic operations"
+      }
+    },
+    "errorHandling": {
+      "types": [
+        "PrismaClientKnownRequestError",
+        "PrismaClientUnknownRequestError",
+        "PrismaClientRustPanicError",
+        "PrismaClientInitializationError"
+      ],
+      "patterns": {
+        "try": "try/catch with specific error types",
+        "codes": {
+          "P2002": "Unique constraint violation",
+          "P2025": "Record not found"
+        }
+      }
+    }
+  },
+  "components": {
+    "ui": {
+      "preferred": ["shadcn/ui", "radix-ui"],
+      "styling": "tailwind",
+      "location": "ui/",
+      "patterns": {
+        "props": "interface {Component}Props",
+        "client": "'use client'",
+        "server": "default RSC"
+      }
+    },
+    "patterns": {
+      "responsive": true,
+      "mobileFirst": true,
+      "accessibility": {
+        "required": true,
+        "aria": true,
+        "semantics": true
+      }
+    }
+  },
+  "testing": {
+    "framework": "vitest",
+    "patterns": {
+      "filePattern": "**/*.test.ts",
+      "naming": "{name}.test.ts",
+      "location": "tests/"
+    },
+    "coverage": {
+      "statements": 80,
+      "branches": 80,
+      "functions": 80,
+      "lines": 80
+    }
+  },
+  "documentation": {
+    "required": true,
+    "format": "TSDoc",
+    "scope": ["components", "hooks", "utils", "api"],
+    "api": {
+      "format": "swagger",
+      "location": "app/api/**/route.ts"
+    }
+  },
+  "environment": {
+    "files": [".env", ".env.example"],
+    "required": [
+      "NEXT_PUBLIC_APP_NAME",
+      "NEXT_PUBLIC_APP_DOMAIN",
+      "DATABASE_URL",
+      "NEXTAUTH_SECRET"
+    ],
+    "validation": "lib/env.ts"
+  },
+  "appRouter": {
+    "structure": {
+      "rootFiles": {
+        "layout": "Root layout with providers",
+        "not-found": "Global 404 page",
+        "providers": "Global providers wrapper",
+        "manifest": "Web app manifest",
+        "sitemap": "SEO sitemap",
+        "robots": "Robots.txt configuration"
+      },
+      "subdomains": {
+        "app.dub.co": "Main application routes",
+        "admin.dub.co": "Admin panel routes",
+        "partners.dub.co": "Partners portal routes"
+      },
+      "dynamicRoutes": {
+        "[domain]": "Custom domain handling",
+        "proxy": "Proxy routes",
+        "inspect": "Link inspection",
+        "password": "Password protection"
+      },
+      "specialRoutes": {
+        "expired": "Expired links handling",
+        "deeplink": "Mobile deep linking",
+        "banned": "Banned links handling",
+        "cloaked": "Cloaked links"
+      }
+    },
+    "conventions": {
+      "metadata": {
+        "required": true,
+        "location": "layout.tsx or page.tsx",
+        "function": "constructMetadata"
+      },
+      "loading": {
+        "required": true,
+        "implementation": "loading.tsx",
+        "fallback": "LayoutLoader"
+      },
+      "error": {
+        "required": true,
+        "implementation": "error.tsx",
+        "handling": "DubApiError"
+      },
+      "layout": {
+        "structure": [
+          "imports",
+          "metadata export",
+          "interface Props",
+          "layout component"
+        ],
+        "components": [
+          "MaxWidthWrapper",
+          "Nav",
+          "Footer"
+        ]
+      }
+    }
+  },
+  "routing": {
+    "patterns": {
+      "authentication": {
+        "public": ["/", "/login", "/register"],
+        "protected": ["/app", "/admin", "/partners"],
+        "middleware": "middleware.ts"
+      },
+      "redirects": {
+        "auth": "/login",
+        "workspace": "/app/[slug]",
+        "notFound": "/404"
+      },
+      "parameters": {
+        "workspace": "[slug]",
+        "domain": "[domain]",
+        "link": "[key]"
+      }
+    }
+  },
+  "security": {
+    "middleware": {
+      "required": true,
+      "location": "middleware.ts",
+      "features": [
+        "authentication",
+        "authorization",
+        "rateLimit",
+        "cors"
+      ]
+    },
+    "headers": {
+      "security": true,
+      "cors": true,
+      "csp": true
+    }
+  },
+  "features": {
+    "analytics": {
+      "tracking": ["clicks", "locations", "devices"],
+      "storage": "tinybird",
+      "realtime": true
+    },
+    "ai": {
+      "provider": "anthropic",
+      "features": ["completion", "analysis"]
+    },
+    "auth": {
+      "providers": ["email", "google", "github"],
+      "session": "nextauth"
+    },
+    "links": {
+      "features": [
+        "custom-domains",
+        "qr-codes",
+        "password-protection",
+        "expiration"
+      ]
+    }
+  },
+  "deployment": {
+    "platform": "vercel",
+    "regions": ["all"],
+    "runtime": "edge",
+    "configuration": {
+      "location": "vercel.json",
+      "required": true
+    }
+  }
+}

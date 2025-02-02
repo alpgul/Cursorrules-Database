@@ -1,0 +1,73 @@
+# AI Memory Chatbot Project Rules
+
+# Environment
+- Python version: 3.9+
+- AWS Region: us-east-2
+- Redis required: true
+- OpenAI API key required: true
+
+# Code Style
+- Use type hints consistently
+- Document complex functions
+- Use meaningful variable names
+- Follow PEP 8 guidelines
+- Include docstrings for all classes and methods
+
+# Project Structure
+app/
+  - main.py: FastAPI application with SSE support
+  - chat_processor.py: Chat processing with stats tracking
+  - database.py: Redis vector store operations
+  - embeddings.py: OpenAI embeddings integration
+  - models.py: Pydantic models
+static/
+  - css/: Stylesheets
+  - js/: Progress tracking and UI updates
+templates/
+  - chat.html: Real-time chat interface with progress tracking
+tests/
+  - test_chat.py
+  - test_embeddings.py
+  - test_database.py
+  - test_integration.py
+
+# Dependencies
+- fastapi: Web framework
+- uvicorn: ASGI server
+- redis: Vector store
+- openai: GPT and embeddings API
+- langchain: Agent-based RAG system
+- sse_starlette: Server-sent events
+- python-dotenv: Environment management
+
+# Features
+1. File Processing:
+   - ZIP file support
+   - JSON conversation import
+   - Real-time progress tracking
+   - Batch processing
+
+2. Memory Management:
+   - Vector-based conversation storage
+   - Conversation history tracking
+   - Memory statistics
+   - Efficient retrieval
+
+3. UI Features:
+   - Real-time upload progress
+   - Memory statistics display
+   - Conversation history view
+   - Tool usage transparency
+
+# Security
+- Store API keys in .env
+- Rate limit API requests
+- Sanitize user input
+- Validate file uploads
+
+# Monitoring
+- Track upload progress
+- Monitor memory usage
+- Track processing stats
+- Error handling with stats
+

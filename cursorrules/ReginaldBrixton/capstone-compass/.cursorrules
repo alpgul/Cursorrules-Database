@@ -1,0 +1,84 @@
+# Global Rules for Next.js Project
+
+# Code Style
+max_line_length = 80
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# JavaScript/JSX
+jsx_quotes = double
+semi = true
+trailing_comma = es5
+arrow_parens = always
+bracket_spacing = true
+jsx_bracket_same_line = false
+
+# Component Structure
+component_directory = src/app/components
+styles_directory = src/app/styles
+utils_directory = src/app/utils
+hooks_directory = src/app/hooks
+contexts_directory = src/app/contexts
+
+# Naming Conventions
+component_naming = PascalCase
+function_naming = camelCase
+variable_naming = camelCase
+constant_naming = UPPER_SNAKE_CASE
+file_naming = kebab-case
+
+# Import Order
+import_order = [
+  "^react",
+  "^next",
+  "^@/components",
+  "^@/styles",
+  "^@/utils",
+  "^@/hooks",
+  "^@/contexts",
+  "^[./]"
+]
+
+# Performance
+enable_code_splitting = true
+enable_lazy_loading = true
+enable_image_optimization = true
+
+# Accessibility
+enforce_aria_labels = true
+enforce_semantic_html = true
+enforce_keyboard_navigation = true
+
+# Documentation
+require_component_documentation = true
+require_function_documentation = true
+require_prop_types = true
+
+# Testing
+require_unit_tests = true
+require_integration_tests = true
+test_coverage_threshold = 80
+
+# State Management
+prefer_hooks = true
+prefer_context = true
+prefer_redux = false
+
+# CSS
+prefer_vanilla_css = true
+css_modules = false
+css_in_js = false
+tailwind = false
+
+# Build
+enable_minification = true
+enable_tree_shaking = true
+enable_source_maps = true
+
+# Dependencies
+package_manager = bun
+node_version = ">=18.0.0"

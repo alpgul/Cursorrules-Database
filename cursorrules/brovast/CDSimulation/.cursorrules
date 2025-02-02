@@ -1,0 +1,122 @@
+# CD声学仿真平台项目规范
+
+## 项目基本信息
+项目名称: CDSimulation
+开发环境: Qt 6.7.3, C++, CMake, MinGW, SQLite3
+项目路径: D:\XMH_PROJECT\QT\CDSimulation
+数据库: D:\XMH_PROJECT\QT\CDSimulation\build\cursor\database.db
+默认账户: admin/admin
+终端：powershell
+平台支持：windows、linux
+用户语言：中文
+
+## 命名规范
+- 类名: PascalCase (首字母大写驼峰式)
+- 文件名: snake_case (小写下划线式)
+- 变量名: camelCase (首字母小写驼峰式)
+- UI文件: snake_case (小写下划线式)
+- 类成员变量前缀: m_
+- 指针变量前缀: p_
+
+## 代码风格
+- 缩进: 4空格
+- 大括号: 换行
+- 注释: 中文
+- 编码: UTF-8
+
+## 数据库规范
+### 用户表(users)
+- id: INTEGER PRIMARY KEY AUTOINCREMENT
+- username: TEXT NOT NULL UNIQUE
+- password: TEXT NOT NULL
+- role_id: INTEGER
+- status: INTEGER DEFAULT 0 (0:待审批 1:已审批 2:拒绝)
+
+### 角色表(roles)
+- id: INTEGER PRIMARY KEY AUTOINCREMENT
+- name: TEXT NOT NULL
+- permissions: TEXT
+
+### 审批表(approvals)
+- id: INTEGER PRIMARY KEY AUTOINCREMENT
+- user_id: INTEGER
+- approver_id: INTEGER
+- status: INTEGER
+- create_time: DATETIME
+- approve_time: DATETIME
+
+### 任务表(tasks)
+- id: INTEGER PRIMARY KEY AUTOINCREMENT
+- name: TEXT NOT NULL
+- description: TEXT
+- model_path: TEXT
+- assigned_to: INTEGER
+- status: INTEGER DEFAULT 0
+- created_by: INTEGER
+- create_time: DATETIME
+- update_time: DATETIME
+
+## 文件结构规范
+database/
+├── basicdata/     # 基础数据
+├── materialdata/  # 材料数据
+├── loaddata/      # 载荷数据
+└── cddata/        # 舱段数据
+    └── {型号}/
+        ├── 舱段壳体/
+        ├── 减震/
+        ├── 吊支架/
+        ├── 基座/
+        ├── 法兰/
+        ├── 筏架/
+        ├── 管路/
+        ├── 设备/
+        ├── 阀门/
+        └── 其它结构/
+
+## 文件系统结构
+tasks/                                     -- 任务根目录
+└── username_taskname/                     -- 任务工作目录(以用户名_任务名创建文件夹)
+    ├── model/                            -- 模型文件目录（从cddata复制）
+    ├── drymodal/                         -- 干模态分析
+    │   └── results/                      -- 干模态分析结果目录
+    ├── wetmodal/                         -- 湿模态分析
+    │   └── results/                      -- 湿模态分析结果目录
+    ├── static/                           -- 静力学分析
+    │   └── results/                      -- 静力学分析结果目录
+    ├── vibration/                        -- 振动分析
+    │   └── results/                      -- 振动分析结果目录
+    └── acoustics/                        -- 声学分析
+        └── results/                      -- 声学分析结果目录
+
+## 权限规范
+### 管理员权限
+- 访问所有界面
+- 用户管理
+- 注册审批
+- 角色管理
+- 数据管理
+
+### 工程师权限
+- 访问工作台
+- 查看相关数据
+
+## UI组件命名规范
+### 登录界面(login.ui)
+- 角色选择: radioGroupRole
+- 账号输入: lineEditUsername
+- 密码输入: lineEditPassword
+- 登录按钮: btnLogin
+- 注册按钮: btnRegister
+- 配置按钮: btnConfig
+
+### 系统管理界面(systemmanager.ui)
+- 数据管理标签: tabWidgetDataManage
+- 任务管理标签: tabTaskManage
+- 系统管理标签: tabSystemManage
+
+### 配置界面(config_dialog.ui)
+- 软件路径输入: lineEditSoftwarePath
+- 浏览按钮: btnBrowse
+- 保存按钮: btnSave
+- 关闭按钮: btnClose

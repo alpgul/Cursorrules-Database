@@ -1,0 +1,508 @@
+// 语言设置
+LANGUAGE: zh-CN
+
+// 代码风格
+STYLE: {
+    python: PEP8,
+    typescript: prettier,
+    max_line_length: 120
+}
+
+// AI 行为规则
+RULES: {
+    // 注释和文档
+    COMMENTS: {
+        language: "chinese",
+        docstring_style: "google",
+        require_function_docstring: true,
+        require_class_docstring: true
+    },
+
+    // 命名约定
+    NAMING: {
+        language: "pinyin",
+        class: "PascalCase",
+        function: "snake_case",
+        variable: "snake_case",
+        constant: "UPPER_CASE"
+    },
+
+    // 代码组织
+    ORGANIZATION: {
+        imports_order: ["stdlib", "third_party", "local"],
+        group_imports: true,
+        max_function_length: 50
+    },
+
+    // 错误处理
+    ERROR_HANDLING: {
+        language: "chinese",
+        require_type_hints: true,
+        require_error_messages: true
+    },
+
+    // 类型提示
+    TYPE_HINTS: {
+        require: true,
+        check_mypy: true
+    },
+
+    // 测试规范
+    TESTING: {
+        require_tests: true,
+        naming_pattern: "test_*",
+        framework: "pytest"
+    }
+}
+
+// 项目特定规则
+PROJECT_SPECIFIC: {
+    // API 相关
+    api_response_format: {
+        success: true,
+        code: 200,
+        message: "操作成功",
+        data: {}
+    },
+
+    // 仓库管理
+    repo_naming: {
+        github_prefix: "gh_",
+        gitee_prefix: "gt_"
+    },
+
+    // 日志格式
+    logging: {
+        format: "[%(asctime)s] %(levelname)s: %(message)s",
+        language: "chinese"
+    }
+}
+
+// AI 助手行为
+AI_BEHAVIOR: {
+    language: "chinese",
+    code_suggestions: true,
+    error_explanations: true,
+    documentation_help: true,
+    refactoring_suggestions: true
+}
+
+// 桌面应用规则
+DESKTOP_APP_RULES: {
+    // 使用中文注释
+    COMMENTS: {
+        language: "chinese",
+        docstring_style: "google",
+        require_function_docstring: true,
+        require_class_docstring: true
+    },
+
+    // 中文变量命名
+    NAMING: {
+        language: "pinyin",
+        class: "PascalCase",
+        function: "snake_case",
+        variable: "snake_case",
+        constant: "UPPER_CASE"
+    },
+
+    // 文档规范
+    DOCUMENTATION: {
+        language: "chinese",
+        docstring_style: "google",
+        require_function_docstring: true,
+        require_class_docstring: true
+    },
+
+    // 错误信息本地化
+    ERROR_HANDLING: {
+        language: "chinese",
+        require_type_hints: true,
+        require_error_messages: true
+    },
+
+    // 代码结构
+    ORGANIZATION: {
+        imports_order: ["stdlib", "third_party", "local"],
+        group_imports: true,
+        max_function_length: 50
+    },
+
+    // 项目相关
+    REPO_NAMING: {
+        github_prefix: "gh_",
+        gitee_prefix: "gt_"
+    },
+
+    // 桌面应用规范
+    ELECTRON_RULES: {
+        contextIsolation: true,
+        nodeIntegration: false,
+        enableRemoteModule: false
+    },
+
+    // 安全规范
+    SECURITY_RULES: {
+        token_storage: "encrypted",
+        api_communication: "https_only",
+        sensitive_data: ["github_token", "gitee_token", "user_email"],
+        required_validations: ["input_sanitization", "token_validation", "permission_check"]
+    },
+
+    // 电子规则
+    ELECTRON_RULES: {
+        ipc_naming: {
+            prefix: "ipc",
+            separator: ":",
+            format: "camelCase"
+        },
+        window_management: {
+            main_window: {
+                width: 1200,
+                height: 800,
+                minWidth: 800,
+                minHeight: 600
+            }
+        },
+        security_policies: {
+            csp: "default-src 'self'; script-src 'self'",
+            websecurity: true,
+            allowRunningInsecureContent: false
+        }
+    },
+
+    // 文档规则
+    DOCUMENTATION: {
+        required_sections: [
+            "功能描述",
+            "参数说明",
+            "返回值",
+            "异常处理",
+            "使用示例"
+        ],
+        api_documentation: {
+            required_fields: [
+                "接口说明",
+                "请求方法",
+                "请求参数",
+                "响应格式",
+                "错误码"
+            ]
+        }
+    },
+
+    // 测试规则
+    TESTING: {
+        require_tests: true,
+        naming_pattern: "test_*",
+        framework: "pytest"
+    },
+
+    // 错误处理规则
+    ERROR_HANDLING: {
+        log_format: {
+            timestamp: true,
+            level: true,
+            message: true,
+            stack_trace: true
+        },
+        notification_rules: {
+            error_threshold: 3,
+            notification_methods: ["email", "system_notification"]
+        }
+    }
+}
+
+{
+    "context_initialization": {
+        "description": "每次交互的起点",
+        "steps": [
+            "ALWAYS read .notes/project_overview.md",
+            "ALWAYS read .notes/architecture.md",
+            "ALWAYS check .notes/task_list.md"
+        ]
+    },
+    "operational_protocol": {
+        "description": "任务处理方式",
+        "before_action": [
+            "创建 MECE 任务分解",
+            "检查相关配置",
+            "验证安全要求"
+        ],
+        "code_changes": [
+            "修改代码前先阅读相关部分",
+            "保持现有功能",
+            "维护类型安全",
+            "确保向后兼容"
+        ]
+    },
+    "safety_requirements": [
+        "NEVER 破坏类型安全",
+        "ALWAYS 保持适当的错误处理",
+        "ALWAYS 编写文档"
+    ],
+    "priorities": [
+        {
+            "source": ".notes/",
+            "weight": 1.0
+        }
+    ],
+    "modes": {
+        "base": {
+            "description": "常规任务模式"
+        },
+        "enhanced": {
+            "description": "复杂问题模式"
+        }
+    },
+    "language": "zh-CN",
+    "rules": [
+        {
+            "name": "使用中文注释",
+            "description": "所有的代码注释必须使用中文编写，确保代码的可读性和可维护性"
+        },
+        {
+            "name": "中文变量命名",
+            "description": "允许使用拼音或有意义的中文拼音组合作为变量名，但需要符合编程规范"
+        },
+        {
+            "name": "文档规范",
+            "description": "所有的文档字符串(docstring)必须使用中文编写，包括函数说明、参数描述和返回值说明"
+        },
+        {
+            "name": "错误信息本地化",
+            "description": "所有的错误信息和用户提示信息都应该使用中文编写"
+        },
+        {
+            "name": "代码结构",
+            "description": "保持清晰的代码结构，每个函数和类都应该有完整的中文注释说明"
+        },
+        {
+            "name": "项目相关",
+            "description": "针对GitHub和Gitee仓库管理的特定功能，使用清晰的中文命名约定"
+        }
+    ],
+    "code_style": {
+        "python": {
+            "style": "pep8",
+            "max_line_length": 120,
+            "docstring_style": "google",
+            "imports_order": ["stdlib", "third_party", "local"],
+            "group_imports": true
+        },
+        "typescript": {
+            "style": "prettier",
+            "semi": true,
+            "singleQuote": true,
+            "tabWidth": 2,
+            "printWidth": 120,
+            "trailingComma": "es5"
+        }
+    },
+    "naming_conventions": {
+        "python": {
+            "class": "PascalCase",
+            "function": "snake_case",
+            "variable": "snake_case",
+            "constant": "UPPER_CASE",
+            "module": "snake_case",
+            "parameter": "snake_case"
+        },
+        "typescript": {
+            "class": "PascalCase",
+            "interface": "PascalCase",
+            "function": "camelCase",
+            "variable": "camelCase",
+            "constant": "UPPER_CASE",
+            "component": "PascalCase",
+            "enum": "PascalCase",
+            "type": "PascalCase"
+        }
+    },
+    "electron": {
+        "security": {
+            "contextIsolation": true,
+            "nodeIntegration": false,
+            "enableRemoteModule": false,
+            "sandbox": true,
+            "webSecurity": true,
+            "allowRunningInsecureContent": false,
+            "csp": "default-src 'self'; script-src 'self'"
+        },
+        "window": {
+            "main": {
+                "width": 1200,
+                "height": 800,
+                "minWidth": 800,
+                "minHeight": 600,
+                "frame": true,
+                "transparent": false
+            }
+        },
+        "ipc": {
+            "naming": {
+                "prefix": "ipc",
+                "separator": ":",
+                "format": "camelCase"
+            },
+            "validation": {
+                "requireSchema": true,
+                "validatePayload": true
+            }
+        },
+        "updates": {
+            "autoDownload": false,
+            "autoInstall": false,
+            "checkFrequency": "daily"
+        }
+    },
+    "security": {
+        "authentication": {
+            "token_storage": "encrypted",
+            "token_rotation": "7d",
+            "session_timeout": "24h"
+        },
+        "api": {
+            "rate_limiting": true,
+            "max_requests": 100,
+            "timeframe": "1m",
+            "require_https": true
+        },
+        "data": {
+            "encryption": {
+                "algorithm": "AES-256-GCM",
+                "key_rotation": "30d"
+            },
+            "sensitive_fields": [
+                "github_token",
+                "gitee_token",
+                "user_email",
+                "password"
+            ]
+        },
+        "validation": {
+            "required_checks": [
+                "input_sanitization",
+                "token_validation",
+                "permission_check",
+                "rate_limit_check"
+            ]
+        }
+    },
+    "documentation": {
+        "language": "chinese",
+        "required_sections": [
+            "功能描述",
+            "参数说明",
+            "返回值",
+            "异常处理",
+            "使用示例"
+        ],
+        "api_documentation": {
+            "required_fields": [
+                "接口说明",
+                "请求方法",
+                "请求参数",
+                "响应格式",
+                "错误码",
+                "权限要求"
+            ]
+        },
+        "comments": {
+            "require_function_docstring": true,
+            "require_class_docstring": true,
+            "require_complex_method_docstring": true
+        }
+    },
+    "testing": {
+        "python": {
+            "framework": "pytest",
+            "coverage_threshold": 80,
+            "required_tests": [
+                "unit_tests",
+                "integration_tests",
+                "e2e_tests"
+            ],
+            "naming_pattern": "test_*"
+        },
+        "typescript": {
+            "framework": "jest",
+            "coverage_threshold": 80,
+            "required_tests": [
+                "unit_tests",
+                "component_tests",
+                "e2e_tests"
+            ],
+            "naming_pattern": "*.test.ts"
+        }
+    },
+    "error_handling": {
+        "logging": {
+            "format": "[%(asctime)s] %(levelname)s: %(message)s",
+            "language": "chinese",
+            "include": {
+                "timestamp": true,
+                "level": true,
+                "message": true,
+                "stack_trace": true,
+                "context": true
+            }
+        },
+        "notifications": {
+            "error_threshold": 3,
+            "channels": [
+                "email",
+                "system_notification",
+                "in_app_notification"
+            ],
+            "aggregation_window": "5m"
+        },
+        "recovery": {
+            "auto_retry": {
+                "enabled": true,
+                "max_attempts": 3,
+                "backoff": "exponential"
+            },
+            "fallback": {
+                "enabled": true,
+                "offline_mode": true
+            }
+        }
+    },
+    "performance": {
+        "caching": {
+            "enabled": true,
+            "strategy": "stale-while-revalidate",
+            "ttl": "1h",
+            "max_size": "100MB"
+        },
+        "optimization": {
+            "lazy_loading": true,
+            "code_splitting": true,
+            "compression": true
+        }
+    },
+    "project_specific": {
+        "repo_naming": {
+            "github_prefix": "gh_",
+            "gitee_prefix": "gt_"
+        },
+        "sync": {
+            "batch_size": 10,
+            "timeout": "30m",
+            "retry_count": 3
+        },
+        "api_response": {
+            "format": {
+                "success": true,
+                "code": 200,
+                "message": "操作成功",
+                "data": null
+            },
+            "pagination": {
+                "page_size": 20,
+                "max_page_size": 100
+            }
+        }
+    }
+} 

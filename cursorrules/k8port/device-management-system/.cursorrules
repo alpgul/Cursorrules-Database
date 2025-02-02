@@ -1,0 +1,206 @@
+
+# Key Principles
+
+- Write clean, modular, and reusable code following modern JavaScript and TypeScript standards.
+- Enforce RESTful API design best practices, ensuring proper HTTP status codes, verbs, and error handling.
+- Prioritize security, multi-tenancy, and scalability in all designs and implementations.
+- Ensure strict typing with TypeScript across the backend and React frontend.
+- Use Sequelize for ORM with PostgreSQL, ensuring tenant-based data isolation.
+- Integrate AWS services like S3 (for data storage) and RDS (PostgreSQL) securely and efficiently.
+- Implement proper authentication using Firebase Auth/Auth0 with JWT for user and tenant management.
+- Ensure consistent code formatting using ESLint and Prettier.
+- Write comprehensive tests for both the backend (Mocha/Chai, Supertest) and frontend (Jest, Detox, React Native Testing Library).
+- Provide detailed and user-friendly error messages with structured error handling.
+- Leverage Material-UI for React frontend components with an emphasis on accessibility (ARIA standards).
+- Enforce CI/CD best practices and ensure deployment readiness.
+
+---
+
+## Backend Rules
+
+### Project Structure
+
+- Organize the backend using feature-based modular directories.
+- Follow this structure:
+    ├── src/
+        ├── controllers/ # Business logic
+        ├── models/ # Sequelize models
+        ├── routes/ # API endpoints
+        ├── services/ # Helper functions, tenant handling, etc.
+        ├── middleware/ # Custom middleware for auth, error handling, etc.
+        ├── utils/ # Reusable utilities
+        ├── config/ # Configuration files (e.g., env, db setup)
+        ├── tests/ # Mocha/Chai tests
+        ├── index.ts # Entry point
+    ├── .env # Environment variables
+    ├── .env.example # Environment variable example
+    ├── .gitignore # Files to ignore in git
+    ├── .prettierrc # Prettier configuration
+    ├── .sequelizerc # Sequelize configuration
+    ├── .eslintrc.json # ESLint configuration
+    ├── tsconfig.json # TypeScript configuration
+    ├── package.json # Project dependencies and scripts
+    ├── README.md # Project documentation
+    ├── docker-compose.yml # Docker Compose configuration
+    ├── Dockerfile # Dockerfile for Docker
+    ├── docker-compose.yml # Docker Compose configuration
+    ├── Dockerfile # Dockerfile for Docker
+
+### Multi-Tenancy
+
+- Use a `tenantId` field to isolate tenant-specific data in all Sequelize models.
+- Fetch tenant data dynamically from the `Authorization` header or JWT token.
+- Create middleware to inject the tenant context into every request:
+
+```typescript
+const tenantMiddleware = (req, res, next) => {
+  const tenantId = req.user?.tenantId; // Extract tenantId from JWT
+  if (!tenantId) return res.status(403).json({ error: 'No tenantId found' });
+  req.tenantId = tenantId;
+  next();
+};
+```
+
+### Sequelize Rules
+
+- Use Sequelize migrations for database schema changes. Store migrations in migrations/.
+- Leverage associations (e.g., belongsTo, hasMany) for user-to-tenant relationships.
+- Enable optimistic locking (using Sequelize’s version field) to handle concurrent writes.
+- Enforce validations using Sequelize model definitions (e.g., validate property).
+
+### Authentication
+
+- Use Firebase/Auth0 for authentication.
+- Verify JWT tokens in an Express middleware:
+
+```typescript
+const jwtMiddleware = (req, res, next) => {
+  const token = req.headers.authorization?.split(" ")[1];
+  if (!token) return res.status(401).json({ error: 'Unauthorized' });
+
+  jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
+    if (err) return res.status(403).json({ error: 'Invalid token' });
+    req.user = decoded;
+    next();
+  });
+};
+```
+
+- Refresh JWT tokens securely and enforce expiration times.
+
+### API Design
+
+- Use consistent naming conventions for routes: `/api/v1/<resource>`.
+- Paginate responses for all list endpoints using query parameters: `?page=1&limit=10`.
+- Return standardized JSON responses:
+
+```json
+{
+  "status": "success",
+  "data": { ... },
+  "message": "Optional user-friendly message"
+}
+```
+
+- Implement request validation with express-validator or Joi.
+
+### Security
+
+- Sanitize inputs to prevent SQL injection and XSS attacks.
+- Store environment variables in .env and load securely using dotenv.
+- Enforce HTTPS with HSTS headers using the helmet package.
+- Secure S3 uploads with pre-signed URLs:
+
+```javascript
+const s3 = new AWS.S3();
+const signedUrl = s3.getSignedUrl("putObject", { ... });
+```
+
+- Use snyk for dependency vulnerability checks.
+
+### Testing
+
+- Write unit tests for controllers, services, and middleware using Mocha/Chai.
+- Write integration tests for API endpoints with Supertest.
+- Ensure 80%+ test coverage for all backend code.
+- Use sinon for mocking external dependencies.
+
+## Frontend Rules (React + Material-UI)
+
+### Project Structure (Frontend)
+
+Follow this structure for the React app:
+
+```bash
+├── src/
+    ├── components/    # UI components
+    ├── hooks/         # Custom React hooks
+    ├── pages/         # Route-level components
+    ├── services/      # API integration
+    ├── styles/        # Theme and global styles
+    ├── utils/         # Reusable helpers
+    ├── tests/         # Jest/RTL tests
+```
+
+### React Rules
+
+- Use functional components with React hooks (useState, useEffect, useContext).
+- Write custom hooks for reusable logic (e.g., useFetch, useAuth).
+- Style components using Material-UI's makeStyles or styled API.
+- Enforce TypeScript usage with strict types for props and state.
+
+### Testing in React
+
+- Write unit tests for components using Jest and React Testing Library.
+- Test asynchronous React features with mock APIs (msw library recommended).
+- Write end-to-end tests for key flows (e.g., login, tenant switching) using Detox.
+- Mock API calls in tests to avoid hitting the real backend.
+
+### Material-UI Styling
+
+- Follow Material-UI's theming conventions:
+
+```javascript
+const theme = createTheme({
+  palette: {
+    primary: { main: "#1976d2" },
+    secondary: { main: "#d32f2f" },
+  },
+});
+```
+
+- Use accessible design principles (e.g., proper ARIA roles and labels).
+
+### Tooling and CI/CD
+
+#### Linting and Formatting
+
+- Use ESLint and Prettier for code formatting.
+- Enforce the following linting rules:
+  - No console.log in production code.
+  - Strict use of === for comparisons.
+  - Disallow unused variables.
+- Pre-commit hooks:
+  - Run eslint and prettier --check on staged files using lint-staged.
+
+#### CI/CD
+
+- Use GitHub Actions for CI/CD pipelines:
+  - Run tests for backend (Mocha/Chai) and frontend (Jest/RTL).
+  - Check code formatting and linting.
+  - Deploy to staging environment on AWS automatically.
+
+#### Frontend Security
+
+- Use snyk and Node Security Platform in CI to detect and fix vulnerabilities.
+- Monitor dependencies with automated updates using dependabot.
+
+#### General Conventions
+
+- Use kebab-case for file and directory names.
+- Name variables and functions descriptively (e.g., fetchTenantUsers).
+- Write modular and reusable code to minimize duplication.
+- Prioritize performance and scalability in all implementations.
+- Document key functions and services using JSDoc.
+
+For advanced features or further rules, refer to the official documentation for Node.js, React, Sequelize, AWS SDK, and Material-UI.

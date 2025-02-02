@@ -1,0 +1,76 @@
+**Overall Purpose**
+
+The application is a web-based educational tool that uses large language models (LLMs) to simulate one-on-one tutoring sessions. It allows administrators to upload articles, which are then used as the basis for guided conversations with the LLM. The primary goal is to provide personalized, high-quality instruction that is more accessible and scalable than traditional tutoring.
+
+**Key Features**
+
+1.  **User Authentication and Authorization:**
+    *   Users can sign in using Clerk authentication.
+    *   Only users with the "admin" role can add or delete specialties and subtopics.
+
+
+2.  **Content Management:**
+    *   Administrators can create and manage educational content by defining specialties and subtopics.
+    *   Specialties and subtopics are stored in a key-value store (Vercel KV).
+    *   Administrators can upload articles associated with a specialty and subtopic.
+    *   Articles are stored in a key-value store (Vercel KV).
+
+3.  **Case Simulation:**
+    *   Users can select a specialty and subtopics to start a case simulation.
+    *   The application fetches a random article based on the selected criteria.
+
+4.  **Chat Interface:**
+    *   The application provides a chat interface for users to interact with the LLM.
+    *   The chat interface supports text input and voice input (transcription).
+    *   The chat interface displays messages from the user and the LLM.
+    *   The LLM's responses can include "thinking" blocks with quotes, which are extracted and displayed separately.
+
+
+5.  **LLM Integration:**
+    *   The application supports multiple LLMs, including Google Gemini, Anthropic Claude, and OpenAI; currently only using Gemini.
+    *   The application uses the `ai` library to handle streaming responses from the LLMs.
+    *   The application uses the `@ai-sdk` library by Vercel to interface with the LLMs.
+
+6.  **Audio Transcription:**
+    *   The application uses Groq's transcription service to convert voice input to text.
+
+7.  **UI Components:**
+    *   The application uses Radix UI for its UI components.
+    *   The application uses Tailwind CSS for styling.
+    *   The application supports light and dark themes.
+
+8.  **Data Types:**
+    *   The application defines several data types for processing status, chat messages, and chat sessions.
+
+**Workflow**
+
+1.  An administrator logs in and adds specialties and subtopics.
+2.  An administrator uploads articles associated with a specialty and subtopic.
+3.  A user selects a specialty and subtopics to start a case simulation.
+4.  The application fetches a random article based on the selected criteria.
+5.  The application inserts the article into a prompt for the LLM.
+6.  The user engages in a chat with the LLM, which acts as a tutor.
+7.  The chat history is persisted.
+
+**Technology Stack**
+
+*   Next.js
+*   React
+*   TypeScript
+*   Tailwind CSS
+*   Radix UI/shadcn
+*   Vercel KV
+*   Clerk Authentication
+*   `ai` library
+*   `@ai-sdk` libraries
+*   Groq API
+
+**Future Features**
+
+*   Create personalized learning features inclduing:
+    *  An assessment test for each specialty
+    *  A dashboard for users to see their progress, including areas of strength and areas of weakness
+    *  A feature which analyzes user's chat history and updates their learning progress
+    *  A feature which allows users to tweak the behavior of the LLM tutor
+    *  A feature which uses the user's progress to recommend specific subtopics and articles for them to practice with
+    *  A feature which alters the behavior of the LLM tutor regardless of specific article they are currently working on, to incorporate what the application has learned about the user's knowledge and learning style

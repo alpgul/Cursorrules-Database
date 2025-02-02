@@ -1,0 +1,653 @@
+// Flutter Architecture and Development Guidelines
+// Version: 3.0 
+// Purpose: Guide AI agents in implementing Flutter applications following best practices
+
+// Core Principles
+const corePrinciples = {
+    architecture: [
+        "Follow Clean Architecture principles, separating Presentation, Domain, and Data layers.", 
+        "Implement Feature-First folder structure for better scalability and maintainability.",
+        "Practice Separation of Concerns (SoC) at all levels to improve code organization.",
+        "Use Domain-Driven Design (DDD) principles where applicable to model complex business logic.",
+        "Maintain high cohesion within modules and loose coupling between them for better flexibility."
+    ],
+    
+    codeQuality: [
+        "Follow SOLID principles strictly to write maintainable and testable code.",
+        "Implement comprehensive error handling and logging throughout the application.",
+        "Write self-documenting code with clear and consistent naming conventions.",
+        "Maintain consistent code style across the project using `flutter format` and `flutter analyze`.",
+        "Keep classes and methods focused and single-responsibility to improve readability."
+    ],
+    
+    testing: [
+        "Follow Test-Driven Development (TDD) when possible to ensure code quality from the start.",
+        "Maintain high test coverage for business logic and critical user flows.",
+        "Implement integration tests to verify interactions between different components.",
+        "Use proper mocking and test doubles to isolate units of code during testing.",
+        "Include performance testing for critical features to identify bottlenecks."
+    ]
+};
+
+// Enhanced Project Structure
+const projectStructure = `
+lib/
+  ├── core/
+  │   ├── config/                 # App configuration, environment variables
+  │   ├── constants/              # App-wide constants
+  │   ├── error/                  # Error handling, custom exceptions
+  │   ├── network/                # Network handling, interceptors
+  │   ├── theme/                  # App theming, styles
+  │   ├── utils/                  # Utility functions, helpers
+  │   └── widgets/                # Reusable UI components
+  │
+  ├── features/                  # Feature-first organization
+  │   └── feature_name/           # Each feature is self-contained
+  │       ├── data/              # Data layer for the feature
+  │       │   ├── datasources/    # Remote and local data sources
+  │       │   ├── models/         # Data models, DTOs
+  │       │   └── repositories/   # Repository implementations
+  │       ├── domain/             # Domain layer for the feature
+  │       │   ├── entities/       # Business objects, models
+  │       │   ├── repositories/   # Repository interfaces
+  │       │   └── usecases/       # Business logic use cases
+  │       └── presentation/      # Presentation layer for the feature
+  │           ├── providers/      # Riverpod providers for state management
+  │           ├── pages/          # Feature screens, UI
+  │           └── widgets/        # Feature-specific UI components
+  │
+  ├── providers/                  # Global Riverpod providers
+  ├── l10n/                       # Localization resources
+  └── main.dart                   # App entry point
+
+test/
+  ├── unit/                       # Unit tests for individual components
+  ├── widget/                     # Widget tests for UI components
+  └── integration/                # Integration tests for user flows
+`;
+
+// State Management Guidelines
+const stateManagementGuidelines = {
+    riverpod: [
+        "Use Riverpod for dependency injection and state management throughout the application.",
+        "Implement proper provider organization and composition for better maintainability.",
+        "Keep providers focused and single-responsibility to improve code readability.",
+        "Utilize appropriate provider types (StateNotifierProvider, FutureProvider, StreamProvider).",
+        "Implement proper error handling within providers using AsyncValue.",
+        "Use ref.watch and ref.read appropriately for accessing state and dependencies.",
+        "Implement proper provider disposal and cleanup to avoid memory leaks.",
+        "Utilize provider modifiers (.family, .autoDispose) when necessary for optimization."
+    ],
+    
+    general: [
+        "For simpler state management needs, consider using Provider.",
+        "Ensure state immutability to avoid unexpected side effects.",
+        "Follow unidirectional data flow for predictable state changes.",
+        "Handle loading and error states consistently throughout the application.",
+        "Implement proper state restoration to preserve user data across app sessions."
+    ]
+};
+
+// Performance Optimization Rules
+const performanceRules = {
+    rendering: [
+        "Use `const` constructors whenever possible to minimize widget rebuilds.",
+        "Implement proper widget keys to optimize widget tree updates.",
+        "Minimize rebuilds by using appropriate widget composition and state management techniques.",
+        "Use lazy loading for heavy components or images to improve initial load time.",
+        "Implement proper list view optimization with `ListView.builder` for large datasets."
+    ],
+    
+    memory: [
+        "Implement proper image caching to reduce memory usage and improve performance.",
+        "Dispose of controllers, streams, and other resources properly to avoid memory leaks.",
+        "Use weak references when appropriate to prevent memory leaks caused by circular references.",
+        "Implement proper memory leak detection and analysis tools during development.",
+        "Follow best practices for resource cleanup and memory management."
+    ],
+    
+    network: [
+        "Implement proper API caching to reduce network requests and improve response time.",
+        "Use pagination for large datasets to avoid loading excessive data at once.",
+        "Implement proper offline support to enhance user experience in low connectivity situations.",
+        "Optimize API calls by using proper batching and minimizing the number of requests.",
+        "Handle network errors gracefully and provide informative feedback to the user."
+    ]
+};
+
+// Code Quality Standards
+const codeQualityStandards = {
+    naming: [
+        "Use meaningful and descriptive names for classes, methods, and variables.",
+        "Follow Flutter naming conventions consistently throughout the project.",
+        "Use a proper prefix (e.g., underscore) for private members to indicate visibility.",
+        "Maintain consistent naming across the project to improve code readability.",
+        "Use proper case conventions (PascalCase for classes, camelCase for methods, etc.)."
+    ],
+    
+    documentation: [
+        "Write clear and concise documentation for all classes, methods, and APIs.",
+        "Use proper dartdoc comments to generate documentation automatically.",
+        "Document complex business logic and algorithms thoroughly.",
+        "Maintain up-to-date API documentation for external consumers.",
+        "Include usage examples in documentation to demonstrate functionality."
+    ],
+    
+    testing: [
+        "Write testable code by following good design principles and separation of concerns.",
+        "Implement proper test coverage for all critical components and functionalities.",
+        "Use proper test naming conventions to clearly describe the test case.",
+        "Implement proper test organization to keep tests structured and maintainable.",
+        "Follow proper testing patterns and best practices for different types of tests."
+    ]
+};
+
+// Security Guidelines
+const securityGuidelines = {
+    dataProtection: [
+        "Implement proper data encryption for sensitive data both in transit and at rest.",
+        "Use secure storage mechanisms for sensitive data, considering platform-specific best practices.",
+        "Implement proper certificate pinning to prevent man-in-the-middle attacks.",
+        "Handle sensitive data with care, minimizing its exposure and following data privacy regulations.",
+        "Implement proper authentication and authorization mechanisms to protect user data."
+    ],
+    
+    codeProtection: [
+        "Implement proper code obfuscation techniques to make reverse engineering more difficult.",
+        "Use proper dependency verification to ensure the integrity of third-party libraries.",
+        "Implement proper API key protection to prevent unauthorized access to sensitive resources.",
+        "Handle debug flags properly to avoid exposing sensitive information in production builds.",
+        "Implement proper error logging without revealing sensitive data or stack traces to end-users."
+    ],
+
+    authentication: [
+        "Use secure authentication methods (e.g., OAuth 2.0, JWT).",
+        "Implement multi-factor authentication (MFA) when necessary.",
+        "Store user credentials securely using hashing and salting.",
+        "Enforce strong password policies and password rotation.",
+        "Protect against common authentication vulnerabilities (e.g., brute-force attacks)."
+    ],
+
+    authorization: [
+        "Implement role-based access control (RBAC) to restrict access to resources.",
+        "Validate user permissions before allowing access to sensitive data or functionalities.",
+        "Use authorization tokens with limited lifetimes.",
+        "Regularly review and update authorization rules."
+    ],
+
+    secureCoding: [
+        "Prevent SQL injection by using parameterized queries or prepared statements.",
+        "Prevent cross-site scripting (XSS) by sanitizing user inputs and escaping outputs.",
+        "Prevent cross-site request forgery (CSRF) by using CSRF tokens and implementing proper session management.",
+        "Validate and sanitize all data received from external sources.",
+        "Follow secure coding practices to avoid common vulnerabilities."
+    ]
+};
+
+// Accessibility Guidelines
+const accessibilityGuidelines = {
+    implementation: [
+        "Use proper semantic widgets to make the app accessible to assistive technologies.",
+        "Implement proper navigation for screen readers to ensure easy navigation for visually impaired users.",
+        "Use proper color contrast to ensure readability for users with visual impairments.",
+        "Implement proper text scaling to allow users to adjust text size according to their needs.",
+        "Handle different device orientations properly to ensure accessibility in all contexts."
+    ],
+    
+    testing: [
+        "Test with screen readers to verify accessibility for visually impaired users.",
+        "Verify color contrast ratios meet accessibility standards.",
+        "Test with different text sizes to ensure readability for users with low vision.",
+        "Verify keyboard navigation is possible for all interactive elements.",
+        "Test with different accessibility settings to ensure a good experience for all users."
+    ]
+};
+
+// Version Control Guidelines
+const versionControlGuidelines = {
+    commitPractices: [
+        "Write meaningful commit messages that clearly describe the changes made.",
+        "Use proper branch naming conventions to keep the repository organized.",
+        "Follow a consistent workflow (e.g., Gitflow) for managing branches and releases.",
+        "Implement proper code review process to ensure code quality and knowledge sharing.",
+        "Maintain a clean commit history by using appropriate commit squashing and rebasing techniques."
+    ],
+    
+    cicd: [
+        "Implement a proper CI/CD pipeline to automate the build, testing, and deployment process.",
+        "Use a proper versioning system (e.g., Semantic Versioning) to track releases.",
+        "Implement proper deployment strategies (e.g., rolling updates, blue/green deployments).",
+        "Maintain proper testing within the CI/CD pipeline to ensure code quality.",
+        "Implement proper release management to track releases and communicate changes effectively."
+    ]
+};
+
+// UI/UX Best Practices
+const uiUxBestPractices = {
+    general: [
+        "Follow platform-specific design conventions (Material Design for Android, Cupertino for iOS).",
+        "Maintain consistent branding and visual language throughout the application.",
+        "Prioritize clear and concise navigation to ensure a user-friendly experience.",
+        "Provide informative error messages and helpful guidance to assist users.",
+        "Ensure responsiveness across different screen sizes and orientations for a seamless experience."
+    ],
+    
+    navigation: [
+        "Use appropriate navigation patterns (tabs, drawers, bottom navigation) based on the app's structure.",
+        "Provide clear visual cues for navigation hierarchy and current location within the app.",
+        "Implement intuitive back navigation to avoid confusion and frustration.",
+        "Use deep linking for seamless navigation to specific content or functionalities.",
+        "Ensure smooth transitions and animations between screens for a polished experience."
+    ],
+    
+    forms: [
+        "Use clear and concise labels for input fields to guide users.",
+        "Provide real-time validation and feedback to help users avoid errors.",
+        "Group related fields logically to improve form usability.",
+        "Use appropriate keyboard types for input fields to streamline data entry.",
+        "Implement autofill and suggestions to speed up form completion."
+    ],
+    
+    accessibility: [
+        "Use sufficient color contrast for text and interactive elements to ensure readability.",
+        "Provide alternative text descriptions for images to make them accessible to screen readers.",
+        "Ensure keyboard accessibility for all interactive components for users who cannot use a mouse.",
+        "Support dynamic font sizes for accessibility settings to accommodate users with low vision."
+    ]
+};
+
+// Internationalization Guidelines
+const internationalizationGuidelines = {
+    localization: [
+        "Use Flutter's localization mechanisms for translating text and UI elements.",
+        "Provide support for multiple languages to reach a wider audience.",
+        "Handle locale-specific date and time formats for a personalized experience.",
+        "Use appropriate number and currency formats based on the user's locale."
+    ],
+    
+    textDirection: [
+        "Support both left-to-right (LTR) and right-to-left (RTL) languages for inclusivity.",
+        "Ensure proper layout mirroring for RTL languages to provide a consistent experience."
+    ],
+    
+    culturalization: [
+        "Consider cultural differences in design and content to avoid misunderstandings.",
+        "Use culturally appropriate icons and imagery to enhance user experience."
+    ]
+};
+
+// Third-Party Libraries Guidelines
+const thirdPartyLibrariesGuidelines = {
+    selection: [
+        "Evaluate libraries based on community support, documentation quality, and activity.",
+        "Prioritize well-maintained and actively developed libraries to avoid compatibility issues.",
+        "Consider potential security risks and licensing implications before integrating a library.",
+        "Favor libraries with clear and comprehensive documentation to ease integration and usage."
+    ],
+    
+    integration: [
+        "Follow library documentation for proper integration and configuration.",
+        "Use dependency injection for better testability and modularity when integrating libraries.",
+        "Keep library dependencies up-to-date to benefit from bug fixes and new features.",
+        "Avoid direct dependencies on platform-specific libraries whenever possible."
+    ],
+    
+    usage: [
+        "Understand the library's API and best practices before using it extensively.",
+        "Avoid unnecessary library dependencies to reduce the app's size and complexity.",
+        "Contribute back to the community by reporting issues or submitting pull requests to improve libraries."
+    ]
+};
+
+// Maintainability Guidelines
+const maintainabilityGuidelines = {
+    codeStyle: [
+        "Follow consistent code formatting and style guidelines throughout the project.",
+        "Use linters and code analysis tools (e.g., `flutter analyze`, `flutter format`) to enforce code quality.",
+        "Write self-documenting code with clear comments and meaningful variable names."
+    ],
+    
+    modularity: [
+        "Break down code into smaller, reusable modules with well-defined interfaces.",
+        "Use appropriate design patterns (e.g., Singleton, Factory, Observer) to improve code organization, reusability, and maintainability.",
+        "Minimize code duplication by extracting common logic into reusable components.",
+        "Organize code into packages based on features or modules to improve structure and navigation."
+    ],
+    
+    technicalDebt: [
+        "Regularly refactor code to reduce technical debt and improve code quality.",
+        "Address code smells and warnings promptly to prevent accumulation of technical debt.",
+        "Prioritize technical debt management in the development process to ensure long-term maintainability."
+    ]
+};
+
+// Animation Guidelines
+const animationGuidelines = {
+    performance: [
+        "Use efficient animation techniques to avoid performance issues.",
+        "Minimize the number of animated widgets to reduce rendering overhead.",
+        "Optimize animation code for performance by using appropriate animation controllers and curves."
+    ],
+    
+    userExperience: [
+        "Use animations to enhance user feedback and make interactions more engaging.",
+        "Keep animations smooth and natural to avoid distractions and provide a pleasant experience.",
+        "Use animations sparingly to avoid overwhelming the user and maintain focus on content."
+    ],
+    
+    accessibility: [
+        "Provide options to disable animations for users with motion sensitivities or vestibular disorders.",
+        "Ensure animations do not cause accessibility issues for users with visual impairments."
+    ]
+};
+
+// State Restoration Guidelines
+const stateRestorationGuidelines = {
+    implementation: [
+        "Use Flutter's built-in mechanisms for state restoration to preserve user data across app sessions.",
+        "Save and restore the state of all relevant widgets to provide a seamless user experience.",
+        "Handle state restoration failures gracefully to prevent crashes and data loss."
+    ],
+    
+    testing: [
+        "Test state restoration functionality thoroughly to ensure data is preserved correctly.",
+        "Simulate different scenarios, including app termination and backgrounding, to test state restoration."
+    ]
+};
+
+// Error Monitoring and Reporting Guidelines
+const errorMonitoringGuidelines = {
+    implementation: [
+        "Integrate error monitoring tools (e.g., Sentry, Firebase Crashlytics) for tracking and reporting errors.",
+        "Capture relevant error information, including stack traces and device information, for debugging.",
+        "Implement user-friendly error reporting mechanisms to allow users to provide feedback."
+    ],
+    
+    security: [
+        "Protect sensitive information in error reports to prevent data leaks.",
+        "Securely store and transmit error data to protect user privacy."
+    ]
+};
+
+// Cross-Platform Architecture Analysis Guidelines
+const crossPlatformArchitectureAnalysis = {
+  analysisProcess: [
+    "**Project Structure Analysis:**",
+    "  * Examine the `lib/` directory structure for organization and code sharing.",
+    "  * Identify the location of platform-specific code within the project.",
+    "  * Map how business logic is organized relative to UI components.",
+    "  * Check for proper separation between data, domain, and presentation layers.",
+    "**Business Logic Assessment:**",
+    "  * Review all service classes, repositories, and business logic implementations.",
+    "  * Identify shared code patterns and potential duplication across platforms.",
+    "  * Evaluate the use of abstract classes and interfaces for platform independence.",
+    "  * Check for appropriate dependency injection patterns.",
+    "  * Analyze state management solutions used across platforms.",
+    "**Platform-Specific Implementation Review:**",
+    "  * Locate and catalog all platform-specific code:",
+    "    * `ios/` directory contents and platform channels.",
+    "    * `android/` directory native implementations.",
+    "    * `web/` directory specialized renderers.",
+    "  * Evaluate method channel implementations for efficiency and clarity.",
+    "  * Check for platform-specific UI adaptations and their necessity.",
+    "  * Review any conditional platform code using `Platform.isIOS`, `Platform.isAndroid`, etc.",
+    "**Code Sharing Metrics:**",
+    "  * Calculate the approximate percentage of shared vs. platform-specific code.",
+    "  * Identify opportunities for increasing code sharing and reducing redundancy.",
+    "  * List any unnecessary platform-specific implementations.",
+    "  * Document justified platform-specific implementations with clear explanations.",
+    "**Architecture Pattern Validation:**",
+    "  * Confirm consistent architectural pattern usage (e.g., Clean Architecture, MVVM).",
+    "  * Verify proper interface segregation for platform implementations.",
+    "  * Check for appropriate use of dependency inversion.",
+    "  * Review factory patterns for platform-specific instantiation.",
+  ]
+	
+	
+
+  specificAreas: [
+    "Network layer implementation across platforms.",
+    "File system interactions and platform-specific APIs.",
+    "Authentication mechanisms and platform integrations.",
+    "Database access and platform-specific storage solutions.",
+    "Hardware feature access (camera, sensors, etc.) and permissions.",
+    "Platform-specific UI components and their integration.",
+    "Navigation implementation and platform-specific behaviors.",
+    "State persistence strategies across platforms.",
+  ],
+
+  performanceConsiderations: [
+    "Identify any platform-specific performance optimizations.",
+    "Review initialization code for each platform for efficiency.",
+    "Check for platform-specific memory management considerations.",
+    "Evaluate lazy loading strategies per platform to improve startup time.",
+  ],
+
+  reporting: [
+    "**Provide findings with:**",
+    "  * Concrete examples from the codebase to illustrate points.",
+    "  * Specific file paths and code snippets where relevant.",
+    "  * Recommendations for improvement with clear explanations.",
+    "  * Architecture diagrams where helpful to visualize the structure.",
+    "  * Quantitative metrics where possible to measure code sharing.",
+    "  * Clear explanations of why certain implementations are or aren't following best practices.",
+    "**Additionally, highlight:**",
+    "  * Any anti-patterns discovered that could hinder maintainability or performance.",
+    "  * Security considerations per platform, including data protection and permissions.",
+    "  * Testing coverage for shared vs. platform-specific code to ensure quality.",
+    "  * Build configuration differences between platforms and their impact.",
+    "  * Package dependencies that might affect cross-platform compatibility.",
+    "**Expected output format:**",
+    "  * Executive Summary of key findings and overall assessment.",
+    "  * Detailed Analysis by Section with specific observations and recommendations.",
+    "  * Recommendations for improvement prioritized by impact and feasibility.",
+    "  * Risk Assessment of potential issues and their severity.",
+    "  * Improvement Roadmap with actionable steps for addressing identified issues.",
+  ],
+};
+
+// Error Handling and Logging Guidelines
+const errorHandlingGuidelines = {
+    general: [
+        "Implement robust error handling throughout the application.",
+        "Catch and handle exceptions at appropriate levels.",
+        "Provide informative error messages to the user.",
+        "Log detailed error information for debugging."
+    ],
+    
+    databaseExceptions: [
+        "Implement specific handling for database exceptions.",
+        "Catch and identify different types of database errors.",
+        "Example: Catching a `SqliteException` or a `PostgresException` and displaying a user-friendly message like 'Failed to save data. Please try again later.' while logging the full exception details with stack trace.",
+        "Example: Differentiating between `UniqueConstraintError` and `ForeignKeyConstraintError` to provide more specific error messages to the user regardless of the database being used (SQLite or PostgreSQL).",
+        "Provide user-friendly error messages for database operations.",
+        "Log detailed database error information with context."
+    ],
+    
+    logging: [
+        "Use a logging system to record errors and events.",
+        "Use a logging library like `logger` which allows for different log levels (debug, info, warning, error) and provides options for secure storage (e.g., encrypted files or logging to a secure server).",
+        "Example: `logger.e('Failed to insert data: $e', exception: e);` logs an error message with the exception details.",
+        "Log different levels of information (debug, info, warning, error).",
+        "Include timestamps and relevant context in log messages.",
+        "Store logs securely and accessibly for debugging."
+    ],
+    
+    security: [
+        "Do not expose sensitive information in error messages.",
+        "Log errors securely without revealing sensitive data."
+    ]
+};
+
+// Changelog Management Guidelines
+const changelogGuidelines = {
+    updates: [
+        "Maintain a `CHANGELOG.md` file to track code changes.",
+        "Only add approved and finalized code changes to the changelog.",
+        "Use a consistent format for changelog entries (e.g., Keep a Changelog).",
+        "Categorize changes by type (added, changed, deprecated, removed, fixed, security).",
+        "Include relevant context and links to issues or pull requests."
+    ],
+    
+    aiIntegration: [
+        "The AI agent should periodically check the `CHANGELOG.md` file.",
+        "The AI agent should use the changelog to understand the project's evolution.",
+        "The AI agent should consider the changelog when making code suggestions.",
+        "The AI agent should not suggest changes that contradict the changelog."
+    ]
+};
+
+// Advanced Architectural Concepts
+const advancedArchitecture = {
+    modularization: [
+        "Create highly modular code with clear boundaries and well-defined interfaces.",
+        "Structure the project into independent modules with minimal dependencies between them.",
+        "Use modularization to improve code reusability, testability, and maintainability."
+    ],
+    
+    designPatterns: [
+        "Utilize appropriate design patterns (e.g., Singleton, Factory, Observer) to solve common architectural problems.",
+        "Choose design patterns that align with the project's needs and complexity.",
+        "Document the rationale behind using specific design patterns to aid understanding and maintenance."
+    ],
+    
+    dependencyInjection: [
+        "Consider using dependency injection frameworks (e.g., GetIt, Injectable) to manage dependencies effectively.",
+        "Choose a dependency injection framework that suits the project's scale and complexity.",
+        "Use dependency injection to improve code testability and modularity."
+    ]
+};
+
+// Code Organization and Structure
+const codeOrganization = {
+    layeredArchitecture: [
+        "Emphasize a layered architecture (Presentation, Business Logic, Data) to separate concerns and promote maintainability.",
+        "Clearly define the responsibilities of each layer and enforce separation between them."
+    ],
+    
+    packageOrganization: [
+        "Organize code into packages based on features or modules to improve structure and navigation.",
+        "Use a clear and consistent naming convention for packages to make them easily identifiable."
+    ],
+    
+    codeStyle: [
+        "Enforce consistent code style and formatting using tools like `flutter format` and `flutter analyze`.",
+        "Define and follow a code style guide to ensure readability and maintainability across the project."
+    ]
+};
+
+// Data Management
+const dataManagement = {
+    persistence: [
+        "Choose appropriate data persistence mechanisms (e.g., SQLite, Hive, ObjectBox) based on the application's needs.",
+        "Consider factors like data complexity, performance requirements, and security when choosing a persistence solution."
+    ],
+    
+    synchronization: [
+        "If applicable, implement robust data synchronization mechanisms between the local device and a remote server.",
+        "Handle data conflicts and ensure data integrity during synchronization."
+    ],
+    
+    validation: [
+        "Emphasize data validation at different layers (client-side and server-side) to ensure data integrity.",
+        "Implement validation rules to prevent invalid data from entering the system."
+    ]
+};
+
+// Performance Optimization
+const performanceOptimization = {
+    profiling: [
+        "Use profiling tools (e.g., Flutter DevTools) to identify performance bottlenecks in the application.",
+        "Analyze performance data to understand areas for improvement."
+    ],
+    
+    rendering: [
+        "Optimize rendering performance by minimizing widget rebuilds and using efficient layout techniques.",
+        "Use profiling tools to identify rendering bottlenecks and optimize accordingly."
+    ],
+    
+    network: [
+        "Optimize network requests by reducing payload size, using caching, and minimizing the number of requests.",
+        "Monitor network performance to identify areas for improvement."
+    ]
+};
+
+// Testing Strategies
+const testingStrategies = {
+    unitTesting: [
+        "Emphasize unit testing individual components to ensure they function correctly in isolation.",
+        "Write effective unit tests that cover different scenarios and edge cases."
+    ],
+    
+    integrationTesting: [
+        "Encourage integration testing to verify the interaction between different components and modules.",
+        "Write integration tests that cover critical user flows and interactions."
+    ],
+    
+    endToEndTesting: [
+        "If applicable, implement end-to-end testing to simulate user interactions and ensure the application functions as expected.",
+        "Use end-to-end tests to verify the overall functionality and user experience of the application."
+    ]
+};
+
+// Deployment and Release Management
+const deploymentAndRelease = {
+    ciCd: [
+        "Encourage the use of CI/CD pipelines to automate the build, testing, and deployment process.",
+        "Configure the CI/CD pipeline to run tests, perform code analysis, and build artifacts for different environments."
+    ],
+    
+    releaseManagement: [
+        "Implement proper release management practices to track releases, manage versions, and communicate changes effectively.",
+        "Use a consistent versioning scheme (e.g., Semantic Versioning) to track releases.",
+        "Maintain a changelog to document changes between releases."
+    ]
+};
+
+// Documentation and Communication
+const documentationAndCommunication = {
+    codeDocumentation: [
+        "Emphasize the importance of clear and concise code documentation using comments and documentation generation tools.",
+        "Use tools like dartdoc to generate documentation from code comments."
+    ],
+    
+    architecturalDocumentation: [
+        "Encourage documenting the application's architecture using diagrams and descriptions.",
+        "Maintain architectural documentation to aid understanding and communication among team members."
+    ],
+    
+    communication: [
+        "Promote effective communication and collaboration among team members through code reviews, pair programming, and knowledge sharing.",
+        "Use tools like issue trackers and communication platforms to facilitate communication and collaboration."
+    ]
+};
+
+
+// Export all guidelines
+module.exports = {
+    corePrinciples,
+    projectStructure,
+    stateManagementGuidelines,
+    performanceRules,
+    codeQualityStandards,
+    securityGuidelines,
+    accessibilityGuidelines,
+    versionControlGuidelines,
+    uiUxBestPractices,
+    internationalizationGuidelines,
+    thirdPartyLibrariesGuidelines,
+    maintainabilityGuidelines,
+    animationGuidelines,
+    stateRestorationGuidelines,
+    errorMonitoringGuidelines,
+    crossPlatformArchitectureAnalysis,
+    errorHandlingGuidelines,
+    changelogGuidelines,
+    advancedArchitecture,
+    codeOrganization,
+    dataManagement,
+    performanceOptimization,
+    testingStrategies,
+    deploymentAndRelease,
+    documentationAndCommunication
+};

@@ -1,0 +1,215 @@
+We are creating a tool Motivational tool for Entrepreneurs. Users give their DISC profile and goal. The system
+generates emails and keeps them on tracked and accountable for their goal.
+
+      You have extensive expertise in Vue 3, Nuxt 3, TypeScript, Node.js, Vite, Vue Router, Pinia, VueUse, Vuetify 3 for UI, Supabase for authentication and database (PostgreSQL @nuxtjs/supabase module). You possess a deep knowledge of best practices and performance optimization techniques across these technologies.
+
+      Core Principles:
+      - Keep It Simple: Avoid over-engineering and unnecessary complexity
+      - Write Defensive Code: Handle errors gracefully without complex error management
+      - Minimal TypeScript: Use TypeScript for basic type safety without going overboard
+      - Practical Over Perfect: Focus on working solutions rather than theoretical perfection
+      - Data First: Prioritize efficient data fetching and state management
+
+      Code Style and Structure
+      - Write clean, maintainable, and technically accurate TypeScript code.
+      - Prioritize functional and declarative programming patterns; avoid using classes.
+      - Emphasize iteration and modularization to follow DRY principles and minimize code duplication.
+      - Prefer Composition API <script setup> style.
+      - Use Composables only when they genuinely simplify code reuse
+      - Add types to /types directory
+      - Use and update Vuetify.ts for styling Vuetify components
+      - Put Global styles in /assets/styles/tokens.css
+
+      Data Fetching Best Practices:
+      - Use useFetch as the primary data fetching tool
+        - For SSR and automatic caching: useFetch('/api/data')
+        - For client-only fetching: useFetch('/api/data', { server: false })
+        - For lazy loading: useFetch('/api/data', { lazy: true })
+      - Use $fetch for one-off client-side requests (e.g., in event handlers)
+      - Use useAsyncData for complex data fetching scenarios
+      - Implement proper loading and error states for all data fetching
+      - Use watch with immediate: true for reactive data fetching
+      - Cache responses when beneficial using Nuxt's built-in caching
+
+      State Management
+      - Use Pinia only for truly global state
+      - Keep store structure simple
+      - Prefer component-level state when possible
+      - Use @pinia-plugin-persistedstate/nuxt for state persistence
+        - Configure persistence per store module
+        - Use sessionStorage for sensitive data
+        - Use localStorage for user preferences
+        - Implement proper state rehydration
+
+      Nuxt 3 Specifics
+      - Nuxt 3 provides auto imports, so theres no need to manually import 'ref', 'useState', or 'useRouter'.
+      - For color mode handling, use the built-in '@nuxtjs/color-mode' with the 'useColorMode()' function.
+      - Use VueUse functions only for common, well-tested utilities
+      - Use the Server API (within the server/api directory) to handle server-side operations like database interactions, authentication, or processing sensitive data that must remain confidential.
+      - use useRuntimeConfig to access and manage runtime configuration variables that differ between environments and are needed both on the server and client sides.
+      - For SEO use useHead and useSeoMeta.
+
+      Naming Conventions
+      - Use **PascalCase** for component file names (e.g., components/MyComponent.vue)
+      - Use **kebab-case** for routes (e.g., pages/contact-us.vue)
+      - Use **camelCase** for variables and functions
+      - Prefix composables with 'use' (e.g., useAuth)
+
+      TypeScript Usage
+      - Use TypeScript primarily for basic prop types and function signatures
+      - Keep types simple and straightforward
+      - Avoid complex type manipulations
+      - Use 'any' when TypeScript becomes more trouble than it's worth
+
+      UI and Styling
+      - Use Vuetify 3 for UI components
+      - Create a vuetify.js configuration file with a custom theme
+      - Implement responsive design with a mobile-first approach (useDisplay)
+      - Keep styling consistent across components
+      - Use Vuetify's built-in spacing and layout utilities
+
+      Page and Layout Structure
+      - Create a default.vue in layouts directory for main layout
+      - Create index.vue in pages directory for home page
+      - Organize components by feature/module in components directory
+      - Use dynamic imports for lazy loading large components
+      - Keep component hierarchy shallow (max 3 levels deep)
+
+      Additional Best Practices:
+      - Error Handling
+        - Handle errors at the component level where they occur
+        - Use try/catch with simple error messages
+        - Focus on user experience over technical perfection
+
+      - State Management
+        - Use Pinia only for truly global state
+        - Keep store structure simple
+        - Prefer component-level state when possible
+        - Use localStorage for simple persistence needs
+
+      Authentication & Authorization
+      - Implement middleware for route protection
+      - Use Supabase for authentication (@nuxtjs/supabase module)
+      - Implement role-based access control (RBAC)
+
+      Testing
+      - Write unit tests for critical business logic
+      - Use Vitest for unit testing
+      - Use Cypress for E2E testing of key user flows
+      - Focus on testing user interactions and critical paths
+      - Test error handling and edge cases
+
+      Performance
+      - Implement lazy loading for routes and large components
+      - Use proper asset optimization (images, fonts)
+      - Implement caching where beneficial
+      - Monitor and optimize bundle size
+      - Use WebP images with fallbacks
+
+      Security
+      - Use environment variables for sensitive data
+      - Implement rate limiting on API routes
+      - Keep dependencies updated
+      - Validate all user inputs
+      - Use HTTPS in production
+
+      Accessibility
+      - Follow WCAG 2.1 guidelines
+      - Implement proper ARIA attributes
+      - Ensure keyboard navigation
+      - Maintain proper color contrast
+      - Test with screen readers
+
+      Internationalization
+      - Use @nuxtjs/i18n for translations
+      - Implement RTL support where needed
+      - Use number and date formatting
+      - Keep translations in separate files
+
+      Deployment
+      - Use Digital Ocean for deployment
+      - Set up Github Actions for CI/CD
+      - Implement automated testing in pipeline
+      - Use staging environment for testing
+      - Monitor application performance
+
+
+Here's a step-by-step summary of how to implement E2E testing for Vue/Nuxt applications based on the transcript:
+
+Initial Setup
+
+bashCopy# Install required packages
+npm install -D @nuxt/test-utils vitest @vue/test-utils happy-dom @playwright/core
+
+Create Test Directory Structure
+
+
+Create an e2e folder
+Add test files with .test.ts extension (e.g., app.test.ts)
+
+
+Basic HTML Testing Approach
+
+typescriptCopyimport { setup, $fetch } from '@nuxt/test-utils/e2e'
+
+describe('App', async () => {
+  await setup()
+  
+  it('contains number as string', async () => {
+    const html = await $fetch('/')
+    expect(html).toContain('number')
+  })
+})
+
+Advanced Browser Testing with Playwright
+
+typescriptCopyimport { setup, createPage, url } from '@nuxt/test-utils/e2e'
+
+describe('App', async () => {
+  await setup()
+
+  it('tests number generation', async () => {
+    // Create a page instance
+    const page = await createPage()
+    
+    // Navigate to the app
+    await page.goto(url('/'))
+    
+    // Wait for hydration
+    await page.waitForLoadState('networkidle')
+    
+    // Get content and run assertions
+    const numberText = await page.textContent('span')
+    const number = Number(numberText)
+    expect(number).toBeGreaterThan(0)
+    
+    // Test interactions
+    await page.click('button')
+    const newNumberText = await page.textContent('span')
+    expect(newNumberText).not.toBe(numberText)
+  })
+})
+
+Important Testing Considerations
+
+
+Use await setup() to properly initialize the Nuxt instance
+Always wait for page hydration before testing
+Use meaningful selectors (preferably data-test-ids)
+Verify both positive and negative test cases
+Ensure tests can fail appropriately
+
+
+Additional Setup Requirements
+
+
+Ensure Playwright browsers are installed:
+
+bashCopynpx playwright install chromium
+
+Best Practices
+
+Use page.waitForLoadState('networkidle') before testing
+Structure tests logically (setup, action, assertion)
+Test real user interactions rather than implementation details
+Use meaningful test descriptions that explain the expected behavior

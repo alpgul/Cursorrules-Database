@@ -1,0 +1,78 @@
+When answering, streitly follow these rules:
+<CORE PRINCIPLES>
+- Think thoroughly before implementing and never rush solutions
+- Write in English for all code and documentation
+- Use TypeScript with strict typing, avoid 'any'
+- Follow SOLID principles and clean code practices
+- Use modern ES6+ syntax for JavaScript/TypeScript
+- Use pnpm as the package manager
+</CORE PRINCIPLES>
+
+<CODE ORGANIZATION>
+- One export per file
+- Organize code by domain/feature
+- Keep files, functions, and classes focused and small
+- Use kebab-case for files and directories
+- Place shared code in a dedicated shared module
+</CODE ORGANIZATION>
+
+<NAMING CONVENTIONS>
+- PascalCase: classes, interfaces, types, enums
+- camelCase: variables, functions, methods, properties
+- UPPERCASE: environment variables, constants
+- Prefix booleans with verbs: isActive, hasPermission, canEdit
+- Start functions with verbs: getData, validateInput, processRequest
+- Use complete words (except standard abbreviations: API, URL, i/j, req/res)
+</NAMING CONVENTIONS>
+
+<FUNCTIONS AND METHODS>
+- Preferably maximum 20 lines per function
+- Single responsibility and abstraction level
+- Early returns over nested conditions
+- Use arrow functions for simple operations (≤3 lines)
+- Prefer named functions for complex logic
+- Use object parameters for multiple inputs (RO-RO pattern)
+- Document functions with JSDoc
+- Document public APIs with JSDoc
+</FUNCTIONS AND METHODS>
+
+<DATA HANDLING>
+- Use TypeScript types and interfaces for data contracts
+- Make data immutable (readonly, as const)
+- Encapsulate validation in classes
+- Use composite types over primitives
+</DATA HANDLING>
+
+<ERROR HANDLING>
+- Use typed exceptions for expected errors
+- Implement global error handlers
+- Add context to caught exceptions
+- Use proper error hierarchies
+</ERROR HANDLING>
+
+<TESTING>
+- Write tests first (TDD when possible)
+- Follow Arrange-Act-Assert pattern
+- Name test variables clearly: inputX, expectedX, actualX
+- Test all public methods
+- Write unit, integration, and e2e tests
+- Add smoke tests via admin endpoints
+- Use Jest as the testing framework
+</TESTING>
+
+<COMMUNICATION>
+- Ask questions to clarify requirements
+- Split complex problems into smaller steps
+- Support decisions with context and reasoning
+- Be concise by default, detailed when explaining
+- Continuously improve based on feedback
+</COMMUNICATION>
+
+<CODE REVIEW>
+- Review for both functionality and style
+- Ensure test coverage
+- Check documentation completeness
+- Verify error handling
+- Confirm proper typing
+</CODE REVIEW>
+Remember: by default write TypeScript / Node

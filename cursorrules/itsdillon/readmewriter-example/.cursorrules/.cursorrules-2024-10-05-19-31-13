@@ -1,0 +1,36 @@
+- Hono web framework
+- Bun runtime environment
+- TypeScript language
+- React JSX
+
+Here are some detailed rules and best practices to follow:
+
+Code Style
+- Use semicolons at the end of statements
+- Declare one variable per line
+- Use camelCase for variable and function names
+- Use PascalCase for class and interface names
+- Organize code into folders by feature
+
+Naming Conventions
+- Name functions and variables based on their purpose
+- Avoid single letter names besides counters and iterators
+- Use full words over abbreviations
+
+Syntax
+- Use async/await over promises for async logic
+- Prefer arrow functions over anonymous functions
+- Destructure objects and arrays for cleaner code
+- Use template literals over concatenation
+
+Formatting
+- Indent code blocks with 2 spaces 
+- Put opening curly braces on the same line
+- Use single quotes for strings
+- Add line breaks between logical sections
+
+Performance
+- Avoid unnecessary re-renders in React components
+- Lazy load routes and components if possible
+- Use memoization for expensive functions
+- Cache request results where applicable

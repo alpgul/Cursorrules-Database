@@ -1,0 +1,48 @@
+Code Style and Structure:
+
+- Use semicolons at the end of statements
+- Use single quotes for strings
+- Declare one variable per line in const/let statements
+- Use arrow functions over anonymous functions
+- Export modules instead of default exports
+- Avoid giant monolithic files, break into smaller modules
+
+Naming Conventions:
+
+- Use camelCase for variable and function names
+- Use PascalCase for class names
+- Use UPPERCASE for constants
+- Name files and directories using kebab-case
+
+TypeScript Usage: 
+
+- Use TypeScript over vanilla JavaScript
+- Type all function parameters and returns
+- Use interfaces over type aliases for object shapes 
+- Use optional chaining and nullish coalescing
+
+Syntax and Formatting:
+
+- Use Prettier to auto-format code
+- Indent nested blocks with 2 spaces 
+- Put opening braces on same lines 
+- Add line breaks between logical sections
+
+UI and Styling:
+
+- Use CSS modules for component styling
+- Avoid using !important in stylesheets
+- Use relative units like rem over px
+
+Performance Optimization:
+
+- Lazy load routes and components 
+- Use memoization for expensive functions 
+- Avoid unnecessary re-renders of components
+
+Key Conventions:
+
+- Put API routes in /api directory
+- Put shared utils in /lib directory 
+- Use conventional commits for clear history
+- Follow SemVer for versioning

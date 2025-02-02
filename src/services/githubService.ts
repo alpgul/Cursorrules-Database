@@ -46,12 +46,34 @@ class GitHubService {
    */
   public async searchCode(query: string): Promise<any> {
     try {
-      const response = await this.octokit.search.code({
-        q: query,
-        per_page:3,
-      });
-      Logger.info(`GitHub kod araması tamamlandı: ${query}`);
-      return response.data.items;
+      let allItems:any[] = [];
+      let page = 1;
+      // GitHub API kalan istek sayısını kontrol et
+      const rateLimit = await this.octokit.rateLimit.get();
+      const remainingRequests = rateLimit.data.resources.code_search?.remaining||1;
+      
+      // Her sayfa başına 1 istek kullanıldığı için, kalan istek sayısını geçmeyecek şekilde maxPages belirle
+      const maxPages = Math.min(9, remainingRequests-1); // En fazla 10 sayfa olacak şekilde sınırla
+      
+      Logger.info(`Kalan GitHub API istek sayısı: ${remainingRequests}, Kullanılacak sayfa sayısı: ${maxPages}`);
+
+      while (page <= maxPages) {
+        const response = await this.octokit.search.code({
+          q: query,
+          per_page: 100,
+          page: page
+        });
+
+        allItems = [...allItems, ...response.data.items];
+        if (response.data.incomplete_results || response.data.items.length < 100) {
+          break;
+        }
+
+        page++;
+      }
+
+      Logger.info(`GitHub kod araması tamamlandı: ${query}, Toplam sonuç: ${allItems.length}`);
+      return allItems;
     } catch (error) {
       Logger.error(`GitHub kod arama hatası: ${query}`, error);
       throw error;

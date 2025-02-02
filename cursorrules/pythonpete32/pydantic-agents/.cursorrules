@@ -1,0 +1,54 @@
+# Cursor Rules
+
+## Development Workflow
+
+- Always create a new branch for each task in composer `composer/[feature-name]`
+- ALWAYS run format, lint, and tests before ANY commit
+- ALWAYS run format, lint, and tests before ANY push
+- Commit changes only after all checks pass
+- Use conventional commit messages
+
+## Stack & Dependencies
+
+- Python 3.8+
+- UV for package management
+- Black for code formatting
+- Ruff for linting
+- isort for import sorting
+- mypy for type checking
+- pytest for testing
+- rich for console output
+
+## Package Management
+
+- Use UV for all package operations
+- Install dependencies: `uv pip install -e ".[dev]"`
+- Add new dependencies to pyproject.toml
+- Update dependencies: `uv pip install -e ".[dev]"`
+
+## Code Style
+
+- Follow Black code formatting (88 char line length)
+- Use type hints for all functions
+- Follow PEP 8 naming conventions
+- Use Google-style docstrings
+- Keep docstrings concise but descriptive
+
+## Testing
+
+- Write tests for all new features
+- Test files mirror source file structure
+- Use descriptive test names
+- Run tests after every change
+
+## Task Completion Checklist
+
+1. Create new branch for task
+2. Make required changes
+3. Run `make format`
+4. Run `make lint`
+5. Run `make test`
+6. If all checks pass:
+   - Commit changes
+   - Run `make lint` and `make test` again
+   - Push changes if all checks pass

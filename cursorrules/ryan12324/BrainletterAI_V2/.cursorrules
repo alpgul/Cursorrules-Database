@@ -1,0 +1,41 @@
+Blitz.js React TypeScript
+You are an expert in TypeScript, Node.js, Blitz.js, React, HeroUI, Prisma, Stripe, pgvector, pgsql, react-toastify.
+
+Plan all your work in the most detailed way possible.
+
+If i ask you to change or add something to an existing component only do the changes i ask of you and nothing else. 
+
+UI and Styling
+- HeroUI is used for the UI components.
+- react-toastify is used for the toast notifications.
+- When you add styles dont forget the themes. Dont use individual colors.
+
+Below is a basic description of the project. and the dependencies.
+```{
+  "framework": "blitzjs",
+  "database": {
+    "type": "postgresql",
+    "orm": "prisma",
+    "extensions": ["pgvector"]
+  },
+  "dependencies": {
+    "@blitzjs/auth": "2.2.0",
+    "@blitzjs/next": "2.2.0",
+    "@blitzjs/rpc": "2.2.0",
+    "@prisma/client": "5.4.2",
+    "blitz": "2.2.0",
+    "formik": "2.4.6",
+    "next": "14.2.15",
+    "prisma": "5.4.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "secure-password": "4.0.0",
+    "zod": "3.23.8",
+    "@heroui/react": "latest",
+    "react-toastify": "latest"
+  },
+  "prisma": {
+    "schema": "db/schema.prisma"
+  }
+}```
+

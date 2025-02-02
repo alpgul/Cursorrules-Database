@@ -1,0 +1,170 @@
+{
+  "rules": {
+    "context_initialization": {
+      "description": "プロジェクトコンテキストの初期化",
+      "steps": [
+        "以下のファイルを順番に読み込み、プロジェクトの文脈を理解する:",
+        "1. .notes/README.md - ドキュメント構成の説明",
+        "2. .notes/00_project/overview.md - プロジェクトの目的と要件",
+        "3. .notes/00_project/structure.md - プロジェクト構造定義",
+        "4. .notes/10_tasks/list.md - タスク一覧と進捗",
+        "5. .notes/20_meetings/notes.md - ミーティング記録",
+        "6. .notes/10_tasks/templates/order.md - タスク指示書テンプレート"
+      ],
+      "file_roles": {
+        ".notes/README.md": "ドキュメント体系の全体像と使用方法",
+        ".notes/00_project/overview.md": "プロジェクトの目的、スコープ、要件の定義",
+        ".notes/00_project/structure.md": "プロジェクトの物理的構造と各要素の説明",
+        ".notes/10_tasks/list.md": "タスクの管理と進捗状況の追跡",
+        ".notes/20_meetings/notes.md": "ミーティングでの決定事項と進捗報告",
+        ".notes/10_tasks/templates/order.md": "個別タスクの実行指示書の標準フォーマット"
+      }
+    },
+    "documentation_driven": {
+      "description": "ドキュメント駆動開発の原則",
+      "enabled": true,
+      "workflow": [
+        {
+          "phase": "計画",
+          "steps": [
+            ".notes/00_project/overview.md でプロジェクトの目的と要件を確認",
+            ".notes/10_tasks/list.md で関連するタスクの依存関係を確認",
+            ".notes/00_project/structure.md でコードの配置場所を確認"
+          ]
+        },
+        {
+          "phase": "実装",
+          "steps": [
+            ".notes/10_tasks/templates/order.md に基づいてタスクを文書化",
+            ".notes/20_meetings/notes.md の決定事項を参照",
+            ".notes/10_tasks/list.md に実装中の変更を記録"
+          ]
+        },
+        {
+          "phase": "レビュー",
+          "steps": [
+            ".notes/00_project/overview.md の要件との整合性確認",
+            ".notes/00_project/structure.md の規約との整合性確認",
+            ".notes/20_meetings/notes.md に変更内容を記録"
+          ]
+        }
+      ]
+    },
+    "project_tracking": {
+      "description": "プロジェクト追跡と目標の整合性",
+      "enabled": true,
+      "rules": [
+        {
+          "description": "ドキュメント更新の優先順位:",
+          "files": [
+            {
+              "path": ".notes/10_tasks/list.md",
+              "timing": "タスクステータスの変更時",
+              "priority": "high"
+            },
+            {
+              "path": ".notes/20_meetings/notes.md",
+              "timing": "決定事項発生時",
+              "priority": "high"
+            },
+            {
+              "path": ".notes/00_project/overview.md",
+              "timing": "要件や仕様の変更時",
+              "priority": "medium"
+            },
+            {
+              "path": ".notes/00_project/structure.md",
+              "timing": "構造変更時",
+              "priority": "medium"
+            }
+          ]
+        }
+      ]
+    },
+    "operational_protocol": {
+      "description": "タスクへのアプローチ方法",
+      "before_action": [
+        ".notes/00_project/structure.md でのディレクトリ構造の確認",
+        ".notes/00_project/overview.md の要件確認",
+        "既存の類似ファイルの有無の確認",
+        ".notes/10_tasks/list.md でのタスク分析",
+        ".notes/10_tasks/templates/order.md に基づくタスク文書化"
+      ],
+      "during_action": [
+        ".notes/10_tasks/list.md の進捗更新",
+        ".notes/20_meetings/notes.md への記録",
+        "コードレビューコメントの記録"
+      ],
+      "after_action": [
+        "ドキュメントの更新確認",
+        "変更の影響範囲の文書化",
+        ".notes/00_project/structure.md の更新"
+      ]
+    },
+    "safety_requirements": [
+      "ドキュメントと実装の一貫性を維持",
+      "変更履歴の明確な記録",
+      "セキュリティ考慮事項の遵守",
+      "既存ファイルの編集前の確認事項",
+      {
+        "description": "ファイル編集の安全性確保",
+        "steps": [
+          "1. 編集対象のディレクトリ構造の確認",
+          "2. 既存の類似ファイルの検索",
+          "3. 編集すべき既存ファイルの特定",
+          "4. 新規ファイル作成の必要性の検証"
+        ],
+        "validation": [
+          "ディレクトリ構造が .notes/00_project/structure.md と一致していることを確認",
+          "類似の機能や目的を持つファイルが存在しないことを確認",
+          "新規ファイル作成が本当に必要か、既存ファイルの修正で対応可能でないかを確認"
+        ],
+        "warnings": [
+          "安易な新規ファイル作成は重複や整合性の問題を引き起こす可能性がある",
+          "既存ファイルの修正を優先し、新規作成は最後の手段とする"
+        ]
+      }
+    ],
+    "priorities": [
+      {
+        "source": ".notes/",
+        "weight": 1.0,
+        "description": "ドキュメントの整合性を最優先"
+      }
+    ],
+    "modes": {
+      "base": {
+        "description": "定例タスク用"
+      },
+      "enhanced": {
+        "description": "複雑な問題に対応するため"
+      }
+    },
+    "project_directives": {
+      "name": "[project_name]",
+      "ai_first": true,
+      "prompt_templates": {
+        "setup": {
+          "description": "プロジェクトの初期設定",
+          "template": "@project setup\n目的: [目的]\n\n手順:\n1. プロジェクト概要の定義\n2. 開発環境の構築\n3. 初期タスクの作成"
+        },
+        "task": {
+          "description": "タスクの作成",
+          "template": "@task create\nタスク: [タスク名]\n説明: [説明]\n優先度: [high/medium/low]\n担当者: [@username]"
+        },
+        "code": {
+          "description": "コードの生成",
+          "template": "@code generate\n機能: [機能名]\n入力:\n  - [入力1]\n  - [入力2]\n出力: [期待される出力]\n制約:\n  - [制約1]\n  - [制約2]"
+        },
+        "test": {
+          "description": "テストの生成",
+          "template": "@test generate\n対象: [機能名]\nシナリオ:\n  - [ケース1]\n  - [ケース2]\n期待結果:\n  - [結果1]\n  - [結果2]"
+        },
+        "review": {
+          "description": "コードレビュー",
+          "template": "@code review\n対象: [ファイル]\n観点:\n  - コードの品質\n  - パフォーマンス\n  - セキュリティ\n  - テストカバレッジ"
+        }
+      }
+    }
+  }
+}

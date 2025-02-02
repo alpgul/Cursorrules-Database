@@ -1,0 +1,39 @@
+Here are some recommended best practices for working with this code:
+
+Code Style and Structure:
+- Use TypeScript for type safety and tooling
+- Structure code into small, single-purpose functions
+- Prefer async/await over promises for async logic
+- Use JSX for declarative UI code
+
+Naming Conventions: 
+- Use camelCase for variable and function names
+- Use PascalCase for component names
+- Name functions and variables based on their purpose
+
+TypeScript Usage:
+- Annotate function parameters and returns with types 
+- Use interfaces and types for data models
+- Enable strict mode for compile-time checks
+
+Syntax and Formatting:  
+- Use Prettier to auto-format code
+- Favor single quotes for strings
+- Use semicolons at ends of statements  
+
+UI and Styling:
+- Use CSS Modules for component-scoped styles
+- Prefer styled-components over plain CSS
+- Use UI library like Material UI for components
+
+Performance Optimization:  
+- Lazy load routes and components 
+- Use memoization for expensive functions
+- Check for unnecessary re-renders with React.memo
+
+Key Conventions:
+- Follow Hono conventions for routing and controllers
+- Use bun for bundling and deployment
+- Enable source maps for debugging  
+
+Let me know if you need any clarification or have additional questions!

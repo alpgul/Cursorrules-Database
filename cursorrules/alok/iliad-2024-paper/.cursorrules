@@ -1,0 +1,20 @@
+goal: write a paper on lean 4 for [ILIAD](https://www.iliadconference.com/)
+
+It's in NeurIPS format.
+
+Avoid pointlessly academic tone, and pay attention to stress position. Omit needless words.
+
+Use "I" instead of "we", since I'm the only human author. Sorry, AI, they don't allow me to list you as an author.
+
+Emphasize Lean's strong interaction with AI, since it can check any specification. There's an asymmetry between specification and implementation, and Lean acts as a rigid skeleton for AI's flexible intuition.
+
+Give code samples.
+
+Compare and constrast with Rust. Rust's unsafe blocks allow isolating dangerous assumptions, but Lean can go further and allow isolating and verifying arbitrary assumptions.
+
+The biggest problem in programming is not bugs, it's complexity. Lean's formal verification makes it easier to reason about large codebases in a bulletproof way, so it scales.
+
+Emphasize that Lean is a programming language AND a theorem prover, and that the interaction between the two is key to its success. It is implemented in itself, and it is fast. 
+
+(In personality theory terms, focus on the Ni and Si aspects, since I tend to give Se scattershot info with Ni focus behind it.)
+

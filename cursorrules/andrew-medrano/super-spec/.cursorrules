@@ -1,0 +1,147 @@
+# Project Instructions
+
+Use the project specification and guidelines as you build the app.
+
+Write the complete code for every step. Do not get lazy.
+
+Your goal is to completely finish whatever I ask for.
+
+## Overview
+
+This is an IDE for ideas.
+
+## Tech Stack
+
+- Frontend: Next.js 13 with TypeScript
+- Styling: Tailwind CSS
+- State Management: React Server Components
+- UI Components: Server and Client Components as appropriate
+
+## Project Structure
+
+### General Structure
+
+```
+/
+├── app/                    # Next.js app directory
+│   ├── layout.tsx         # Root layout
+│   ├── page.tsx           # Home page
+│   └── _components/       # Route-specific components
+├── components/            # Shared components
+├── types/                 # TypeScript types
+├── scripts/              # Python scripts for XML processing
+├── docs/                 # Architecture documentation
+├── public/               # Static assets
+└── styles/               # Global styles
+```
+
+## Rules
+
+Follow these rules when building the project.
+
+### General Rules
+
+- Each file must begin with an "AI Context" comment describing its purpose
+- Keep files small and single-purpose
+- Use `@` to import anything from the project unless otherwise specified
+- Use kebab case for all files and folders unless otherwise specified
+- Document core architecture decisions in /docs
+
+#### Env Rules
+
+- If you update environment variables, update the `.env.example` file
+- All environment variables should go in `.env.local`
+- Do not expose environment variables to the frontend
+- Use `NEXT_PUBLIC_` prefix for environment variables that need to be accessed from the frontend
+- You may import environment variables in server actions and components by using `process.env.VARIABLE_NAME`
+
+#### Type Rules
+
+Follow these rules when working with types.
+
+- When importing types, use `@/types`
+- Name files like `example-types.ts`
+- All types should go in `types`
+- Make sure to export the types in `types/index.ts`
+- Keep TypeScript strict to encourage type safety
+- Prefer interfaces over type aliases
+
+An example of a type:
+
+`types/actions-types.ts`
+```ts
+export type ActionState<T> = { isSuccess: true; message: string; data: T } | { isSuccess: false; message: string; data?: never };
+```
+
+And exporting it:
+
+`types/index.ts`
+```ts
+export * from "./actions-types";
+```
+
+### Frontend Rules
+
+Follow these rules when working on the frontend.
+
+It uses Next.js, Tailwind, and Server/Client Components.
+
+#### General Rules
+
+- Use `lucide-react` for icons
+- Use Tailwind CSS for styling, referencing the tailwind.config.js
+
+#### Components
+
+- Use divs instead of other html tags unless otherwise specified
+- Separate the main parts of a component's html with an extra blank line for visual spacing
+- Use actions, not queries, in the app
+- Always tag a component with either `use server` or `use client` at the top, including layouts and pages
+- Use PascalCase for React components and TypeScript interfaces
+
+##### Organization
+
+- All components be named using kebab case like `example-component.tsx` unless otherwise specified
+- Put components in `/_components` in the route if one-off components
+- Put components in `/components` from the root if shared components
+
+##### Data Fetching
+
+- Fetch data in server components and pass the data down as props to client components
+- Use server actions from `/actions` to mutate data
+
+##### Server Components
+
+- Use `"use server"` at the top of the file
+- Implement Suspense for asynchronous data fetching to show loading states while data is being fetched
+- If no asynchronous logic is required for a given server component, you do not need to wrap the component in `<Suspense>`
+- If asynchronous fetching is required, use a `<Suspense>` boundary and a fallback to indicate a loading state
+
+Example of a server layout:
+
+```tsx
+"use server";
+
+export default async function ExampleServerLayout({ children }: { children: React.ReactNode }) {
+  return children;
+}
+```
+
+##### Client Components
+
+- Use `"use client"` at the top of the file
+- Client components can safely rely on props passed down from server components
+
+Example of a client component:
+
+```tsx
+"use client";
+
+interface ExampleClientComponentProps {
+  initialData: any[];
+}
+
+export default function ExampleClientComponent({ initialData }: ExampleClientComponentProps) {
+  return <div>{initialData.length} items</div>;
+}
+``` 

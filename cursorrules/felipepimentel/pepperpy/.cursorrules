@@ -1,0 +1,183 @@
+# Cursor Rules for PepperPy Monorepo
+
+## General Guidelines
+
+- **Monorepo Philosophy**:  
+  The structure is designed to support modularity and scalability. Every package or tool must have a clear purpose and follow the established structure.
+
+- **Python Version Compatibility**:  
+  - Code must target Python `3.12` or higher.
+  - Use modern syntax and features:
+    - Replace `Union[X, Y]` with `X | Y`.
+    - Replace `Optional[X]` with `X | None`.
+    - Use `list[X]`, `dict[K, V]`, and `tuple[X, ...]` natively.
+
+- **Code Ownership**:  
+  - Each `packages/<package_name>` directory must have clear ownership (e.g., a team or maintainer assigned in `CODEOWNERS`).
+
+---
+
+## Directory-Specific Rules
+
+### Rules for `packages/`
+
+- **Purpose**: Contains all modularized components of the project.
+- **Mandatory Files**:
+  - `pyproject.toml` for package configuration.
+  - `README.md` describing:
+    - Package purpose.
+    - How to install or use the package.
+  - `tests/` directory with both unit and integration tests.
+
+- **Versioning**:
+  - Include a `__version__.py` or define the version in the `pyproject.toml`.
+  - Follow Semantic Versioning (`MAJOR.MINOR.PATCH`).
+
+- **Imports and Structure**:
+  - Use relative imports within the package (`from .module import X`).
+  - Avoid circular dependencies by moving shared logic to `pepperpy-core`.
+
+---
+
+### Rules for `scripts/`
+
+- **Purpose**: Helper scripts for automating repetitive tasks.
+- **Best Practices**:
+  - All scripts must be executable via `python scripts/<script_name>.py`.
+  - Document the purpose of each script in the header comment.
+  - Scripts must be modular and reusable across packages.
+  - Avoid hardcoding paths; use environment variables or config files.
+
+---
+
+### Rules for `tools/`
+
+- **Purpose**: Contains reusable internal tools or utilities for maintenance.
+- **Standards**:
+  - Tools must have minimal dependencies.
+  - Include clear usage documentation in the source code and/or a `README.md`.
+  - Avoid duplicating functionality already covered by external libraries.
+
+---
+
+## Dependency Management
+
+- **Centralized and Modular Dependencies**:
+  - Shared dependencies are defined in the root `pyproject.toml`.
+  - Package-specific dependencies should be isolated to the package's `pyproject.toml`.
+
+- **Extras and Optional Groups**:
+  - Use `[tool.poetry.extras]` to group optional dependencies logically.
+  - Examples:
+    ```toml
+    [tool.poetry.extras]
+    ai = ["torch", "transformers"]
+    db = ["sqlalchemy", "psycopg2"]
+    ```
+
+- **Dependency Updates**:
+  - Regularly update dependencies and ensure compatibility using tools like `poetry lock`.
+
+---
+
+## Testing Standards
+
+- **Test Organization**:
+  - Each package must include a `tests/` directory.
+  - Integration tests spanning multiple packages should reside in `tests/` at the root level.
+
+- **Test Frameworks**:
+  - Use `pytest` as the primary test framework.
+  - Enforce the use of `pytest-cov` for coverage reporting.
+
+- **Best Practices**:
+  - Test functions should follow `test_<functionality>.py` naming convention.
+  - Always mock external calls using `unittest.mock` or similar libraries.
+
+---
+
+## CI/CD Best Practices
+
+- **Pipeline Design**:
+  - Pipelines must support selective builds (e.g., build and test only affected packages).
+  - Use caching mechanisms for dependencies to speed up builds.
+
+- **Required CI Steps**:
+  - Linting (`ruff check .`).
+  - Formatting (`black .`).
+  - Type checking (`mypy .`).
+  - Unit tests (`pytest` with coverage).
+
+- **Deployment Rules**:
+  - Only publish packages that have changed.
+  - Publish packages to PyPI using `poetry publish`.
+
+- **Examples**:
+  ```yaml
+  jobs:
+    build:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/setup-python@v5
+          with:
+            python-version: '3.12'
+        - run: poetry install
+        - run: poetry run pytest --cov
+  ```
+
+---
+
+## Code Quality Standards
+
+- **Linting**:
+  - Use `ruff` for enforcing style and catching errors.
+  - Ensure `ruff` is configured for all packages in the `pyproject.toml`.
+
+- **Formatting**:
+  - Code must follow `black` formatting rules.
+  - Enforce formatting checks in CI pipelines.
+
+- **Static Type Checks**:
+  - Type checking is mandatory using `mypy`.
+  - All public methods and functions must include type annotations.
+
+- **Pre-commit Hooks**:
+  - Configure pre-commit hooks to automate linting, formatting, and type checking.
+
+---
+
+## Documentation Standards
+
+- **Package Documentation**:
+  - Each package must include a `README.md` covering:
+    - Purpose of the package.
+    - Installation and usage instructions.
+    - Any relevant examples.
+
+- **Code Documentation**:
+  - Use Google-style docstrings for all public APIs.
+  - Examples:
+    ```python
+    """
+    Function to calculate the sum of two numbers.
+
+    Args:
+        a (int): The first number.
+        b (int): The second number.
+
+    Returns:
+        int: The sum of the two numbers.
+    """
+    ```
+
+---
+
+## Environment Configuration
+
+- **Environment Files**:
+  - `.env` files must follow a standard format and include only non-sensitive defaults.
+  - Provide a `.env.sample` file for documentation purposes.
+
+- **Containerization**:
+  - Docker must be used for containerizing the development and production environment.
+  - Maintain `Dockerfile` and `docker-compose.yml` with best practices for scalability and maintainability.

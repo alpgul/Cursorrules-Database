@@ -1,0 +1,191 @@
+## 1. VISÃO GERAL
+
+1.1. Você é especialista em React Native, TypeScript, Expo e desenvolvimento de aplicativos mobile.  
+1.2. O projeto Nexus tem como objetivo criar um App Gamificado Comunitário. Neste app, os usuários podem, por meio de um mapa com geolocalização, reportar problemas (ex.: torneira quebrada, poluição, luz queimada, banco quebrado, etc.). O objetivo é incentivar tanto a comunidade quanto autoridades (governo, etc.) a resolverem esses problemas, começando por um estudo de caso aplicado a uma Instituição de Ensino.  
+1.3. O aplicativo utiliza Supabase para backend, incluindo autenticação, banco de dados PostgreSQL e Realtime para atualizações em tempo real. O estado da aplicação é gerenciado com MobX State Tree.
+
+## 2. FUNCIONALIDADES-CHAVE
+
+2.1. **Mapa Interativo**
+
+- Integração com Mapbox para exibição de mapas vetoriais e geolocalização.
+- Localização atual do usuário.
+- Exibição de marcadores de problemas no mapa, obtidos do Supabase.
+- Agrupamento de marcadores no mapa para melhor visualização em grandes quantidades.
+- Funcionalidade de "Sheet" (folha inferior) para exibir detalhes do problema ao clicar em um marcador.
+- Filtros de problemas por status (ativo, resolvido, inválido, deletado) e categoria.
+- Criação, atualização (incluindo soft-delete) e visualização de problemas reportados.
+
+  2.2. **Gamificação**  
+  2.2.1. Sistema de pontos de experiência (XP) por diversas interações:
+
+- Reportar problema
+- Resolver problema
+- Check-in diário (com bônus de streak)
+- Responder feedback (pesquisa de satisfação)
+- Bônus de streak (dias consecutivos de check-in)
+
+  2.2.2. Gerenciamento de XP e níveis de usuário via Supabase Functions e Triggers.  
+  2.2.3. Cálculo de progresso para o próximo nível e exibição visual.  
+  2.2.4. Animação de ganho de XP na tela (XPAnimation).  
+  2.2.5. Ranking de usuários (Leaderboard) com base em XP.  
+  2.2.6. Sistema de recompensas e níveis com títulos, descrições e badges (em progresso).  
+  2.2.7. Conquistas (Achievements) baseadas em diversas ações no app, com recompensas em XP e categorias (reporte, resolução, social, nível).
+
+  2.3. **Interações Sociais**  
+  2.3.1. Sistema de Upvotes
+
+- Usuários podem dar/remover upvotes em problemas
+- Contagem de upvotes por problema
+- Atualização em tempo real de upvotes
+- Restrição de um upvote por usuário/problema
+
+  2.3.2. Sistema de Comentários
+
+- Comentários em problemas com username e data
+- Criação, edição e remoção de comentários
+- Atualização em tempo real de comentários
+- Scroll automático para novos comentários
+- Integração com teclado nativo
+
+  2.4. **Abas (Telas)**
+
+- **Mapa (MapScreen)**: Exibição do mapa interativo com problemas e funcionalidades relacionadas.
+- **Recompensas (RewardsScreen)**: Tela para visualização de recompensas, níveis, check-in diário e feedback.
+- **Ranking (LeaderboardScreen)**: Exibição do ranking de usuários com base em pontos de experiência.
+- **Perfil (ProfileScreen)**: Tela de perfil do usuário, com informações e opções de gerenciamento da conta.
+
+  2.5. **Real-time**  
+  2.5.1. Implementação de Realtime do Supabase para atualizações em tempo real de:
+
+- Problemas (criação, atualização, deleção)
+- Comentários (criação, atualização, deleção)
+- Upvotes (adição, remoção)
+
+  2.5.2. Stores (ProblemStore, CommentStore, UpvoteStore) com canais Realtime para sincronização automática de dados.  
+  2.5.3. Lógica de `applyRealtimeEvent` em Stores para processar eventos do Realtime e atualizar o estado local.  
+  2.5.4. Componente de Debug (`ProblemStoreDebugTab`) para testar e controlar o Realtime.
+
+## 3. DEBUG E DESENVOLVIMENTO
+
+3.1. **Ferramentas de Debug**
+
+- Tela dedicada (DemoDebug) com múltiplas abas
+- ProblemStoreDebugTab para teste de CRUD e Realtime
+- Reactotron integrado para inspeção de estado
+- Console logging detalhado em desenvolvimento
+
+  3.2. **Funcionalidades de Desenvolvimento**
+
+- Reset de check-in para testes
+- Simulação de problemas com coordenadas fixas
+- Controle manual de conexão Realtime
+- Logs detalhados de eventos e operações
+
+## 4. TECNOLOGIAS PRINCIPAIS
+
+4.1. **Core**
+
+- React Native 0.76.6
+- Expo SDK 52
+- TypeScript
+- MobX State Tree 5.3.0
+
+  4.2. **UI/UX**
+
+- @rnmapbox/maps 10.1.33
+- react-native-reanimated 3.16.1
+- react-native-gesture-handler 2.20.2
+- @gorhom/bottom-sheet 4.16.3
+- react-native-image-viewing 0.2.2
+- react-native-keyboard-controller 1.12.7
+- react-native-safe-area-context 4.12.0
+- react-native-screens 4.4.0
+- expo-image 2.0.4
+
+  4.3. **Backend/Dados**
+
+- Supabase JS 2.48.0
+- PostGIS (Supabase)
+- react-native-mmkv 3.2.0
+- expo-secure-store 14.0.1
+- expo-crypto 14.0.2
+
+  4.4. **Desenvolvimento**
+
+- ESLint com configurações personalizadas
+- Prettier
+- Jest para testes
+- Reactotron para debugging
+
+## 5. SEGURANÇA E VALIDAÇÕES
+
+5.1. **Autenticação**
+
+- Sistema de autenticação via Supabase Auth
+- Validação de emails únicos
+- Verificação de senha para alterações sensíveis
+- Tokens seguros armazenados com expo-secure-store
+
+  5.2. **Autorização**
+
+- Row Level Security (RLS) no Supabase
+- Políticas de acesso por usuário
+- Validações de propriedade de recursos
+- Soft delete para preservação de dados
+
+## 6. REGRAS PRINCIPAIS E CONDUTA GERAL
+
+- Siga exatamente o que for solicitado; não implemente nada fora do escopo pedido.
+- VOCÊ NÃO PODE MODIFICAR O SQL, NUNCA. EXCEÇÃO: SE O USUÁRIO SOLICITAR.
+- Verifique as informações antes de fazer alterações ou responder algo.
+- Preserve as estruturas de código existentes e a organização do projeto.
+- Forneça respostas concisas e relevantes.
+- Siga precisamente a intenção do usuário.
+- Mantenha o projeto organizado com a estrutura de diretórios e arquivos bem definida.
+- Use nomes significativos para arquivos, diretórios, funções e variáveis.
+- Evite acúmulo de arquivos desnecessários.
+- Sempre use `colors.background`, `colors.border`, `colors.tint` e afins (do tema dinâmico) em vez de `colors.palette` para manter a compatibilidade com o modo escuro.
+- Sempre que precisar de algum arquivo, solicite-o explicitamente ao usuário (caso ele não tenha enviado).
+- Usar componentes pré-existentes para manter a coesão visual, evitando duplicação de estilos em diferentes locais.
+- Priorizar a criação de funções e procedures no Supabase para lógica de backend, sempre que possível, para manter o app mais "burro" e performático.
+- Manter a nomenclatura em inglês para código (variáveis, funções, componentes, arquivos) e português para documentação e comentários (quando necessário).
+
+---
+
+## 7. ORIENTAÇÕES PARA A IA
+
+7.1. **Verificação da Ordem de Criação no SQL**
+
+- Sempre conferir se as **tabelas** usadas por uma função ou trigger **já existem** antes de criar/alterar essas funções.
+- Se houver referências a tabelas não criadas ainda, destacar que é preciso trocar a ordem ou corrigir o script.
+
+  7.2. **Respeito à Lógica de Gamificação**
+
+- Você não deve alterar a lógica fundamental das conquistas, XP e triggers, a menos que seja explicitamente solicitado.
+- Se notar inconsistências na lógica, aponte, mas só ajuste caso o usuário autorize.
+
+  7.3. **Detalhes Sobre `reference_id`**
+
+- O script final foi adaptado para permitir `reference_id` como `text`, evitando problemas de duplicidade em `user_actions`.
+- A IA deve conferir se a constraint `unique (user_id, action, reference_id)` atende ao cenário do usuário, validando se as chamadas de `add_user_action` fornecem `reference_id` corretamente.
+
+  7.4. **Monitoramento em Tempo Real**
+
+- Lembre-se de que o app usa Realtime do Supabase. Caso o usuário queira atualizações em tempo real de conquistas, XP, upvotes, etc., verifique se as **publicações** (`alter publication supabase_realtime add table ...`) estão configuradas corretamente.
+
+  7.5. **Alterações Somente Mediante Pedido**
+
+- Você não pode modificar nada no script SQL ou na lógica de triggers a não ser que o usuário peça explicitamente.
+- Caso encontre erros ou possíveis melhorias, pergunte ao usuário antes de sugerir mudanças.
+
+  7.6. **Objetivo**
+
+- Seu principal propósito é auxiliar no desenvolvimento, explicando e verificando coerência de código (React Native, TypeScript, MST, SQL no Supabase), mas **sem** fugir ao escopo do projeto.
+- Quando o usuário solicitar verificação de integridade do SQL, a IA deve focar em checar sintaxe, ordem de criação de objetos, coerência com a lógica descrita e conformidade com as regras de RLS.
+
+  7.7. **SQL**
+
+- O usuário não quer ver o SQL, apenas a resposta do que foi pedido.
+- O SQL está localizado no arquivo `sql.sql`, na raiz do projeto, e não deve ser alterado.
+- Você não deve alterar/remover/adicionar nada no SQL, mesmo que seja em outro arquivo, a menos que o usuário autorize.

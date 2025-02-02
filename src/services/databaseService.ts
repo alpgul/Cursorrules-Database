@@ -127,6 +127,7 @@ class DatabaseService {
 
       const jsonData = JSON.stringify({
         id: this.database.id,
+        size: this.database.size,
         apisearch: Array.from(allData.entries())
       }, null, 2);
 

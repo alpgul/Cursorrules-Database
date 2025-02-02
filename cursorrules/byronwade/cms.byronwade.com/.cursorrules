@@ -1,0 +1,100 @@
+# .cusrorules
+
+# Purpose:
+# This repository is dedicated to creating a CMS frontend using Next.js with NO backend functionality.
+# The system is designed with a server-first approach to leverage the performance and scalability of Next.js Server Components.
+# All data interactions are strictly handled through `actions` folder files (e.g., `getCustomers`, `getInvoices`) to simulate backend functionality.
+# The project mimics the modular, user-friendly design and functionality of Payload 3.0 and WordPress, focusing entirely on frontend features.
+
+# Repository Overview:
+# - The application is built with server-first components to optimize performance.
+# - All data is simulated or fetched through static or pre-defined functions in the `actions` folder.
+# - Backend logic, API calls, and database integrations are strictly prohibited.
+
+# Key Principles:
+- Server Components are the default for all layouts, pages, and reusable components unless client-side interactivity is required.
+- Client Components should only be used for components requiring interactivity, such as forms, dropdowns, or modals.
+- Data flow is managed entirely by `actions` files to simulate backend interactions without true backend functionality.
+
+# Folder Rules:
+
+app/:
+  description: >
+    The primary directory for routing, layouts, and rendering all components.
+    This directory follows a server-first approach, with Server Components used by default.
+    Client Components are only used where necessary for interactivity.
+    Example usage:
+      - `app/customers/page.tsx` uses `getCustomers` from `actions/getCustomers.js` to render a static list of customers via a Server Component.
+
+    Key rules:
+      - Ensure all components prioritize Server Components unless interactivity is required.
+      - Data fetching within `app/` must exclusively use `actions` functions.
+
+actions/:
+  description: >
+    The sole location for all simulated data-handling logic.
+    Contains functions like `getCustomers` and `getInvoices` to fetch or transform data.
+    These functions are used across the application to provide a centralized data layer.
+    Example structure:
+      - `actions/getCustomers.js`: Returns a list of customers.
+      - `actions/getInvoices.js`: Simulates fetching invoices for display.
+
+    Key rules:
+      - No external API calls or true backend operations are allowed.
+      - All data transformations or filtering logic must be performed here.
+
+components/:
+  description: >
+    Contains modular and reusable React components.
+    Server Components should be used by default.
+    Client Components are reserved for interactivity such as forms, buttons, or dropdown menus.
+    Example:
+      - A `CustomerList` component renders customer data fetched by `getCustomers()` as a Server Component.
+
+    Key rules:
+      - Components should prioritize Server Components unless interactivity requires a Client Component.
+      - All components must use data provided by `actions` functions.
+
+styles/:
+  description: >
+    Contains global and TailwindCSS-specific styles.
+    TailwindCSS must be used exclusively for styling components and layouts.
+
+# Design Mimicry Guidelines:
+- The repository is inspired by Payload 3.0 and WordPress for modularity and reusability.
+- Use a block-based structure for layouts and templates.
+- Ensure components are dynamically rendered with a focus on user-friendly, clean UI/UX.
+
+# Prohibitions and Restrictions:
+- Backend functionality such as database queries, API endpoints, or persistent storage is strictly forbidden.
+- Do not introduce placeholder backend logic in `actions` or components.
+
+# Server-First Guidelines:
+- Use Server Components wherever possible for layouts, rendering, and data-fetching components.
+- Client Components are only permitted for interactive UI elements or where server-side rendering is infeasible.
+- Ensure Server Components rely on static data from `actions` files for rendering.
+
+# Code Guidelines:
+- Adhere to DRY principles (Don’t Repeat Yourself).
+- Use descriptive variable and function names for clarity and maintainability.
+- Implement accessibility features (e.g., aria-labels, tabindex) for compliance with best practices.
+- Use TailwindCSS exclusively for styling; avoid inline or external CSS files unless absolutely necessary.
+
+# Testing:
+- Verify that Server Components render correctly using data from `actions` functions.
+- Test for modularity, ensuring reusable components across different parts of the application.
+- Ensure no backend-related bugs are introduced.
+
+# Example Scenario:
+- Rendering a customer list:
+  - Use the `getCustomers` function from `actions/getCustomers.js` to fetch the data.
+  - Pass the data to a Server Component, such as `CustomerList`, for rendering in the `app` directory.
+
+# Notes:
+- This repository is designed as a server-first, frontend-only CMS to replicate backend-like behavior using simulated data.
+- All components, layouts, and features must align with the philosophy of frontend modularity and mimic Payload 3.0 and WordPress.
+
+
+- everything needs to be in dark mode
+- everything needs to be in tailwind
+- we need to make sure were adding in light mod

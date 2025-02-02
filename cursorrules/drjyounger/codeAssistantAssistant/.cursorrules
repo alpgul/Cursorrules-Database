@@ -1,0 +1,70 @@
+1. Project Overview
+Goal: Assist a beginner developer to build an a.i. coding assistant.
+
+The user will provide the coding assistant with all the Jira ticket details by pasting in a Jira ticket number.  The assistant will also be given a large file that contains concatentated files related to the Jira ticking implemenation.  
+
+There is a checkbox-based file directory tree navigation UI that allows the user to select the files that are relevant to the ticket to be included in the concatenation.  
+
+There are also a number of additional reference files that can optionally be included in the prompt that is sent via api call to the LLM.
+
+Because you are working with a beginner code, always be explicit and detailed about which files to change, how to change them, and where exactly the files are located.
+
+The project is a multi-step wizard:
+
+# STEP 1 # 
+
+Jira Ticket - pasting in a Jira ticket number to retrieve the entire ticket details.  It should be possible to include and reference multiple tickets by separating them with commas.  The contents of all Jira indicated would be retrieved and included in the LLM prompt.
+
+# STEP 2 # 
+
+Selective File Concatenation - using a checkbox-based file directory tree navigation UI to navigate locally and select all the files that are relevant to the ticket and pull request. 
+1.  Allow the user to enter a root directory path as a starting point
+2.  Display the full file directory tree starting from the root directory, with checkboxes beside each file and subdirectory
+3.  Allow selective checking of the boxes to include in the concatenation
+4.  When checking the box beside a folder, it should include everything in that folder, including sub-folders and files
+5. When "Next" is clicked, the system then concatenates all the selected files, according to the logic rules outlined in the program
+6.  It should have an easy-to-use UI
+
+Note: We're selecting local files and folders to concatenate into the markdown file.  So the concatention is a local tree navigation with checkboxes.
+
+# STEP 3 # 
+
+Select Additional Files needed for context - such as coding standards, DB schema, or any other reference material.
+
+# STEP 4 # 
+
+Submit - submitting all the data to the LLM for analysis and development of a highly-detailed action plan for ipmlementing the Jira tickets in a way that passes code review and accpetance criteria.  The submitted api call to the LLM includes a system prompt which instructs the LLM, along with the Jira ticket details, the concatenated file, and any additional files needed for context.
+
+# STEP 5 # 
+
+The detailed action plan is returned to the user, with specific instructions for each file that needs to be changed, where the files are located, and what the changes should be.
+
+# Key Objectives #
+
+Fetch Context Automatically
+Pull Jira ticket information based on the ticket number.
+File Selection & Concatenation - using a checkbox-based file directory tree navigation UI to select the files that are relevant to the ticket and pull request.  Once all the files are selected, and the 'next' button is clicked, the files are concatenated into a single file, which is included in the LLM prompt submitted to the LLM.
+
+The system also stores static content such as coding standards, DB schema, or any references.  These optional context files are listed in Step 3, and if checked, they are included in the LLM prompt submitted to the LLM.
+
+2. Tech Stack
+
+The project will initially be run locally on localhost, and will be deployed to AWS later.  The project will be React/Typescript based and use the Google Gemini Flash model according to this code snippet:
+
+==start snippet===
+from google import genai
+
+client = genai.Client(api_key="GEMINI_API_KEY")
+
+response = client.models.generate_content(model='gemini-2.0-flash-exp', contents='How does AI work?')
+print(response.text)
+==end snippet===
+ LLM API.
+
+Authentication & Authorization
+
+Jira api authentication
+Google Gemini LLM API authentication
+
+
+

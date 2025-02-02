@@ -1,0 +1,90 @@
+# Cursor Rules
+
+## General Cursor Files
+
+! Use `@.cursorrules` to track rules
+! Use `@.cursorfiles` to track files
+! Use `@.cursortasks` to track tasks
+! Use `@.cursorignore` to track ignored files
+
+## General Principles
+- Use clear, actionable descriptions
+- Prioritize tasks with urgency and importance
+- Break down complex tasks into smaller, manageable steps
+
+## Cursor Notation
+- `!` = High Priorit
+- `*` = In Progress
+- `?` = Needs Clarification
+- `~` = Blocked/Waiting
+- `✓` = Completed
+- `>` = Delegated/Assigned
+
+### Example Syntax
+
+! Implement core feature
+* Refactor authentication module
+? Clarify API endpoint requirements
+~ Waiting on external dependency
+✓ Completed minor bug fix
+> Assigned to team member
+
+## Task Lifecycle
+- Start with a clear, concise task description
+- Add context and specific requirements
+- Track dependencies and blockers
+- Update status regularly
+
+## Best Practices
+- Review and update tasks frequently
+- Use consistent formatting
+- Keep tasks specific and measurable
+- Include estimated time or complexity
+- Link to relevant documentation or tickets
+
+## Project-Specific Notes
+- Home Assistant runs in `homeassistant` Docker container
+- Project located at `/config/custom_components/aurora_sound_to_light`
+- Volume-mounted for direct file synchronization
+
+## Tasks File @.cursortasks Guidelines
+
+### Purpose
+- Comprehensive project tracking document
+- High-level overview of project progress
+- Serves as a roadmap and status tracker
+
+### When to Review
+- Before starting new development cycles
+
+### When to Update
+- After completing significant milestones
+- When adding new features or components
+- Adjusting project scope
+- Reflecting changes in project priorities
+- After completing new features and tests, update @README.md if needed
+
+### Update Best Practices
+- Use checkboxes `[ ]` and `[x]` for tracking
+- Add detailed subtasks
+- Include estimated timelines
+- Mark completed items
+- Add context for complex tasks
+- Use emoji for visual categorization
+
+### Notation Recommendations
+- `🚀` = Project Milestones
+- `🎯` = Core Components
+- `🎨` = Design/UI Tasks
+- `🧪` = Testing
+- `📚` = Documentation
+- `🔄` = Optimization
+- `🐛` = Bug Tracking
+- `🔒` = Security Tasks
+
+### Tracking Workflow
+1. Break down large tasks into smaller, manageable items
+2. Prioritize tasks using cursor notation
+3. Update status regularly
+4. Maintain clear, actionable descriptions
+5. Link to relevant issues or pull requests

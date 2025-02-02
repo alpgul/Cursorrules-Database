@@ -1,0 +1,17 @@
+These rules enforce:
+
+- Use of TypeScript for all components and modules
+- Consistent naming conventions (PascalCase for components and modules, camelCase for variables and functions)
+- React functional components should be done with the latest conventions
+- Proper import/export structure
+- Don't forget "use client" for dynamic components
+- Use of Tailwind CSS for styling
+- Consistent use of Tailwind CSS classes
+- When changing tailwind classes, make sure you keep the previews classes to not delete what was done before
+- Use of React hooks correctly
+- Consistent use of React hooks
+- When asked to change something, only change that. Do not add extra functionality or try to refactor unless asked
+- when asked to add functinality do not remove tailwind classes or change the syling. Unless specified
+- Dont add explicit return types unless necesary. Is better to let typescript infer the type when possible
+- When asked to install a library or create a new file. everything inside the client folder. forget about the server folder. Don't install things on the root. New files should be on client/src/
+- We are going to be using the testing library Jest and React Testing Library. Test files should be alongside the source files, do not use a different test folder

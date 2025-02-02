@@ -1,0 +1,47 @@
+### Code Style and Structure:
+- Use consistent indentation (e.g., 2 spaces or 4 spaces) throughout the codebase.
+- Prefer arrow functions over function expressions for concise code.
+- Use meaningful variable and function names to enhance code readability.
+- Group related functionality together to improve code maintainability.
+- Avoid unnecessary comments that only restate the code.
+
+### Naming Conventions:
+- Use camelCase for variable and function names.
+- Use PascalCase for class names.
+- Prefix interfaces with an "I" (e.g., `interface IUser`).
+- Use descriptive names that convey the purpose of the entity.
+
+### TypeScript Usage:
+- Enable the `strict` compiler option to catch common errors at compile time.
+- Utilize type annotations for function parameters and return types.
+- Leverage interfaces to define complex data structures.
+- Use enums for a set of related constants.
+- Prefer `const` and `let` over `var` for variable declarations.
+
+### Syntax and Formatting:
+- Use single quotes for string literals consistently.
+- Prefer template literals (`) for string interpolation when possible.
+- Use destructuring for object and array assignments to simplify code.
+- Avoid unnecessary parentheses in arrow function parameters when there is only one parameter.
+- Use semicolons at the end of statements for consistency.
+
+### UI and Styling:
+- If applicable, follow a consistent UI design system or component library.
+- Separate UI logic from business logic for better maintainability.
+- Utilize CSS preprocessors like SASS or LESS for styling if needed.
+- Optimize images and assets for faster loading times.
+- Implement responsive design principles for a better user experience.
+
+### Performance Optimization:
+- Minimize the use of unnecessary dependencies to reduce bundle size.
+- Implement lazy loading for components or modules that are not immediately required.
+- Use server-side rendering or static site generation for faster initial page loads.
+- Optimize network requests by bundling API calls or using caching mechanisms.
+- Profile and analyze performance using tools like Lighthouse or Chrome DevTools.
+
+### Key Conventions:
+- Follow a consistent file structure and naming convention across the project.
+- Document code using JSDoc comments for better code understanding.
+- Use version control effectively with clear commit messages and branching strategies.
+- Write unit tests for critical functionality to ensure code reliability.
+- Regularly refactor and optimize code to maintain code quality and performance.

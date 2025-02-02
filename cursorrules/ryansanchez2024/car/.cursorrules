@@ -1,0 +1,23 @@
+# Car Project
+
+## Description
+
+We are working on a robotics project wherecar will be able to navigate autonomously using a combination of sensors and actuators.
+
+## The Team
+
+**Ryan Sanchez** is a 11th grader from Atlanta, GA. He is interested in robotics and building, beginning to apply to colleges so wants some impressive projects to show off. **Ian Watts** is a 26 year old mechanical engineer and programmer who's Ryan's mentor, working with him weekly on this project.
+
+## Components at our Disposal
+
+**Arduino Uno R4 WiF**
+
+**Sensors**: ultrasonic, 10 DOF IMU (gyro, accelerometer, magnetometer, barometric pressure for altitude), Potentiometer, Soil moisture, Photoresistor, Thermistor, Tilt switch, PIR motion sensor, Humiture sensor, MFRC522 module, GY-87 IMU module
+
+**Inputs**: RFID, joystick, Keypad
+
+**Lights**: LCD1602 OLED, LED, RGB LED, WS2812 RGB 8 LEDs Strip, 7-segment Display, OLED Display Module
+
+**Sounds**: Active Buzzer, Passive Buzzer, Speaker
+
+**Motors**: DC motor (broken), Servo, Step motor, DC water pump

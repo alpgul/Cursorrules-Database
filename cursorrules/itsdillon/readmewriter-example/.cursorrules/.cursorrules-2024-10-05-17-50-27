@@ -1,0 +1,42 @@
+Code Style and Structure
+- Use functional and declarative patterns over imperative code 
+- Favor small, pure, reusable functions over large classes
+- Structure code in a flat architecture with feature folders
+- Export reusable logic into /lib folder, import into pages
+- Keep components small and focused on one purpose
+
+Naming Conventions 
+- Use camelCase for variable and function names
+- Use PascalCase for component names
+- Name components after their feature/purpose
+- Name helper modules based on functionality 
+
+TypeScript Usage
+- Type all component props, state, and functions
+- Use TypeScript generics for reusable types  
+- Type external API responses
+- Use utility types like Partial and Required
+
+Syntax and Formatting
+- Use Prettier to enforce consistent formatting
+- Favor arrow functions over verbose function syntax
+- Destructure props in functional components
+- Use trailing commas in objects and arrays
+
+UI and Styling
+- Stick to Radix and Tailwind CSS for styling
+- Avoid nested selectors for simplicity
+- Use Radix primitive components over custom ones
+- Prefix global CSS classes with "global-"
+
+Performance 
+- Lazy load downstream pages with dynamic SSG
+- Enable incremental static regeneration 
+- Use React Server Components where possible 
+- Load large page data client-side with SWR  
+
+Key Next.js Conventions
+- Use App Router for routing with dynamic params 
+- Handle data fetching in getRouteData hook 
+- Put shared layout in app/layout.tsx component
+- Export route modules from /app/routes folder

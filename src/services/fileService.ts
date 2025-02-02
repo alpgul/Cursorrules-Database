@@ -58,7 +58,7 @@ class FileService {
       
       if (!await FileManager.exists(filePath)) {
         // CSV başlık satırını oluştur
-        csvContent = 'NAME;PATH;Owner Name;Repository Name;URL;Size(KB);Timestamp\n';
+        csvContent = 'NAME,PATH,Owner Name,Repository Name,URL,Size(KB),Timestamp\n';
       }
 
       // APISearch verilerini CSV formatında ekle
@@ -66,7 +66,7 @@ class FileService {
         Logger.error('CSV dosyası yazma hatası - APISearch tipinde veri yok');
         return false;
       }
-      csvContent += `${content.name};${content.path};${content.ownerName};${content.repositoryName};${content.htmlUrl}; ${content.size} KB;${content.timestamp}\n`;
+      csvContent += `${content.name},${content.path},${content.ownerName},${content.repositoryName},${content.htmlUrl},${content.size} KB,${content.timestamp}\n`;
       await FileManager.appendFile(filePath, csvContent);
       Logger.info(`CSV dosyası yazıldı: ${fileName}`);
       return true;

@@ -1,0 +1,120 @@
+// Backend Development Standards
+
+// API Design
+- RESTful Endpoints:
+  * Use proper HTTP methods
+  * Implement proper status codes
+  * Follow resource naming conventions
+  * Support proper filtering
+  * Implement pagination
+- Response Format:
+  {
+    "success": boolean,
+    "data": {
+      "items": T[],
+      "metadata": {
+        "total": number,
+        "page": number,
+        "pageSize": number
+      }
+    },
+    "error": {
+      "code": string,
+      "message": string,
+      "details": any
+    }
+  }
+
+// Service Layer
+- Business Logic:
+  * Implement domain-driven design
+  * Use service layer pattern
+  * Handle proper validation
+  * Implement proper error handling
+  * Follow SOLID principles
+- Data Access:
+  * Use repository pattern
+  * Implement unit of work
+  * Handle transactions
+  * Implement proper caching
+  * Follow query optimization
+
+// Error Handling
+class AppError extends Error {
+  constructor(
+    message: string,
+    public statusCode: number,
+    public code: string,
+    public details?: any
+  ) {
+    super(message)
+    this.name = this.constructor.name
+    Error.captureStackTrace(this, this.constructor)
+  }
+}
+
+// Error Types
+- Domain Errors:
+  * ValidationError: 400
+  * AuthenticationError: 401
+  * AuthorizationError: 403
+  * NotFoundError: 404
+  * ConflictError: 409
+  * BusinessError: 422
+  * ServerError: 500
+
+// Database Patterns
+- Query Optimization:
+  * Use proper indexes
+  * Implement query caching
+  * Handle N+1 problems
+  * Use proper joins
+  * Monitor query performance
+- Data Management:
+  * Implement migrations
+  * Handle data versioning
+  * Implement soft deletes
+  * Manage constraints
+  * Handle relationships
+
+// Middleware
+- Request Pipeline:
+  * Authentication
+  * Authorization
+  * Validation
+  * Rate limiting
+  * Request logging
+- Response Pipeline:
+  * Compression
+  * CORS handling
+  * Error formatting
+  * Response logging
+  * Cache headers
+
+// Background Jobs
+- Job Processing:
+  * Use proper queuing
+  * Handle retries
+  * Implement timeouts
+  * Monitor job status
+  * Handle failures
+- Scheduling:
+  * Use proper scheduling
+  * Handle timezone issues
+  * Monitor execution
+  * Handle overlapping
+  * Implement logging
+
+// API Documentation
+- OpenAPI/Swagger:
+  * Document all endpoints
+  * Include examples
+  * Document errors
+  * Show authentication
+  * Include schemas
+- Implementation:
+  * Use TypeScript decorators
+  * Generate documentation
+  * Keep docs updated
+  * Include postman collections
+  * Document breaking changes 

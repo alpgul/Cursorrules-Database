@@ -5,11 +5,11 @@ import Network from "../utils/network";
 import Validation from "../utils/validation";
 
 export default async function codeSearch() {
+  const serviceManager = ServiceManager.getInstance();
+  const githubService = serviceManager.getGithubService();
+  const fileService = serviceManager.getFileService();
+  const databaseService = serviceManager.getDatabaseService();
   try {
-    const serviceManager = ServiceManager.getInstance();
-    const githubService = serviceManager.getGithubService();
-    const fileService = serviceManager.getFileService();
-    const databaseService = serviceManager.getDatabaseService();
     await databaseService.readFromJson();
     if (await githubService.testConnection()) {
       const searchResult = await githubService.searchCode(
@@ -17,15 +17,19 @@ export default async function codeSearch() {
       );
       if (Validation.validateArray(searchResult)) {
         for (let i = 0; i < searchResult.length; i++) {
-          if ( !databaseService.has(searchResult[i].repository.full_name+"/"+searchResult[i].path) && Validation.validateSearchItem(searchResult[i]).isValid ) {
+          if ( searchResult[i].repository.owner.login!=="alpgul" && !databaseService.has(searchResult[i].repository.full_name+"/"+searchResult[i].path) &&  Validation.validateSearchItem(searchResult[i]).isValid ) {
             const downloadUrl = `https://raw.githubusercontent.com/${
               searchResult[i].repository.full_name
             }/${new URL(searchResult[i].url).searchParams.get("ref")}/${
               searchResult[i].path
             }`;
-            const downloadResult = await Network.download(downloadUrl);
-            if (
-              downloadResult.size > 1 &&
+            try {
+              const downloadResult = await Network.download(downloadUrl);
+            
+              if (
+                downloadResult.size > 1 &&
+
+
               downloadResult.buffer instanceof Buffer
             ) {
               const item = databaseService.write(
@@ -40,6 +44,9 @@ export default async function codeSearch() {
                 );
                 fileService.writeCSV(item);
               }
+            }} catch (error) {
+              Logger.error(`Dosya indirme hatası (${downloadUrl}):`, error);
+              continue;
             }
           }
         }
@@ -47,6 +54,7 @@ export default async function codeSearch() {
       }
     }
   } catch (error) {
+    await databaseService.writeToJson();
     Logger.error('Kod arama hatası:', error);
   }
 }

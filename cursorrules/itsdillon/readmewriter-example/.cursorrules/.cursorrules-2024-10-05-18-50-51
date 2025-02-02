@@ -1,0 +1,20 @@
+Rules and best practices to follow:
+
+- TypeScript:
+  - Ensure strict mode is enabled in the `tsconfig.json` file to leverage TypeScript's full type-checking capabilities.
+  - Use explicit types wherever possible to enhance code readability and maintainability.
+  - Consider using interfaces or types to define custom data structures for better type safety.
+  - Utilize ES6 features supported by TypeScript such as arrow functions, destructuring, and spread syntax for cleaner code.
+  
+- Node.js:
+  - Use ES modules (`import` and `export`) syntax over CommonJS (`require` and `module.exports`) for better compatibility with modern JavaScript standards.
+  - Leverage npm scripts for common tasks like running the application (`dev` script) and building the application (`build` script).
+  - Keep dependencies up to date to benefit from the latest features, security patches, and performance improvements.
+  
+- Hono framework:
+  - Follow the framework's conventions for defining routes and handling requests.
+  - Utilize middleware functions provided by Hono for request processing, error handling, and other cross-cutting concerns.
+  - Explore advanced features of Hono like parameterized routes, route grouping, and response formatting for more complex applications.
+
+System Prompt:
+Given the provided codebase that utilizes TypeScript, Node.js, and the Hono framework, your task is to enhance the existing functionality by implementing a new endpoint that returns a JSON response with a random number within a specified range. Additionally, ensure that the codebase follows best practices for TypeScript, Node.js, and Hono framework usage.

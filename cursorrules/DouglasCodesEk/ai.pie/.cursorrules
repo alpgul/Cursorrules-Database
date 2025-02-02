@@ -1,0 +1,146 @@
+# Project CodePlanner Development Guidelines
+
+## 🚀 Project Foundations
+PROJECT_NAME = "Project CodePlanner"
+TAGLINE = "Plan, Document, Build – Smarter with AI"
+
+## 🔧 Project Folder Structure
+```
+project-codeplanner/
+├── .github/                  # CI/CD Workflows
+├── docs/                     # Comprehensive Documentation
+├── public/                   # Static Assets
+├── server/                   # Backend Application
+│   └── src/
+│       ├── config/
+│       ├── controllers/
+│       ├── middleware/
+│       ├── models/
+│       ├── routes/
+│       ├── services/
+│       └── utils/
+├── src/                      # Frontend Application
+│   ├── app/                  # Next.js Routes
+│   ├── components/           # React Components
+│   ├── hooks/                # Custom Hooks
+│   ├── lib/                  # Utility Functions
+│   ├── styles/               # Styling
+│   └── types/                # TypeScript Types
+
+TypeScript setup
+project-codeplanner/ (root tsconfig.json controls frontend TypeScript settings)
+├── src/               # Frontend (Next.js)
+│   └── types/
+│       └── shared.ts  # Shared type definitions
+└── server/           # Backend (Express) (server includes its own tsconfig.json wich controls backend TypeScript settings)
+```
+
+## 🔧 Technical Stack
+### Frontend
+- FRAMEWORK = Next.js 14
+- UI_LIBRARY = Chakra UI
+- FORM_MANAGEMENT = React Hook Form
+- ROUTING = File-based routing
+- RENDERING = Server-Side Rendering (SSR)
+- DESKTOP & MOBILE APP = Use mobile first apprach for simplicity
+
+### Backend
+- FRAMEWORK = Node.js
+- API_FRAMEWORK = Express.js
+- LOGGING = Winston
+- SECURITY_MIDDLEWARE = Helmet
+
+### Database
+- DATABASE = Supabase (PostgreSQL)
+- ORM = Knex.js
+- AUTHENTICATION = Supabase JWT
+
+### AI Integration
+- AI_PROVIDER = DeepSeek V3
+- API_CLIENT = Axios
+
+## 🛡 Project Intelligence Insights
+
+### Key Design Principles
+- MODULAR architecture
+- SEPARATION of concerns
+- SCALABLE component design
+- TYPE-SAFE implementations
+
+### Development Environment
+- RECOMMENDED IDE = Visual Studio Code
+- REQUIRED EXTENSIONS:
+  - ESLint
+  - Prettier
+  - TypeScript IntelliSense
+  - GitHub Copilot
+
+### Performance Benchmarks
+- INITIAL LOAD TIME < 2 seconds
+- TEST COVERAGE > 80%
+- API RESPONSE TIME < 300ms
+
+### Architectural Patterns
+- BACKEND = Service-Layer Architecture
+- FRONTEND = Atomic Design Methodology
+- STATE MANAGEMENT = Hooks and Context API
+- TESTING = Pyramid Strategy (Unit > Integration > E2E)
+
+## 🔍 Hidden Complexities
+
+### AI Interaction Nuances
+- CONTEXT PRESERVATION in chat
+- PROMPT ENGINEERING techniques
+- ETHICAL AI guidelines
+- HALLUCINATION prevention
+
+### Database Optimization
+- EFFICIENT query design
+- INDEXING strategies
+- CACHING mechanisms
+- REAL-TIME sync capabilities
+
+### Security Deep Dive
+- MULTI-LAYER authentication
+- ROLE-BASED access control
+- ENCRYPTION at rest and transit
+- CONTINUOUS vulnerability scanning
+
+## 💡 Innovation Vectors
+- AI-ASSISTED documentation
+- ADAPTIVE learning interfaces
+- PREDICTIVE project planning
+- COLLABORATIVE intelligence
+
+## 🚧 Development Workflow Secrets
+- USE conventional commits
+- IMPLEMENT trunk-based development
+- AUTOMATE repetitive tasks
+- PRIORITIZE developer experience
+
+## 🌐 Deployment Wisdom
+- INFRASTRUCTURE as Code
+- BLUE-GREEN deployments
+- FEATURE flag management
+- OBSERVABILITY first approach
+
+## 🎯 Success Compass
+- MEASURE user engagement
+- TRACK documentation quality
+- MONITOR AI interaction effectiveness
+- ITERATE based on user feedback
+
+## ⚠️ Risk Mitigation Strategies
+- IMPLEMENT circuit breakers
+- DESIGN for graceful degradation
+- HAVE fallback mechanisms
+- CONTINUOUS monitoring
+
+## 🔮 Future-Proofing Strategies
+- STAY technology-agnostic
+- DESIGN for extensibility
+- EMBRACE emerging technologies
+- MAINTAIN architectural flexibility
+
+## 🌈 Philosophical Underpinnings
+"Empower human creativity through intelligent, adaptive tooling that understands context, anticipates needs, and removes technical friction." 

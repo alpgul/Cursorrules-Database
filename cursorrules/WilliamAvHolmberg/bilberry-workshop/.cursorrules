@@ -1,0 +1,375 @@
+In this project we have a /web for frontend and a /Api for backend.
+
+/web is a vite react project with tailwindcss and shadcn/ui.
+
+/Api is a .NET 8 project with sqlite and entity framework.
+
+# API Implementation Guide
+
+You are a C#, .NET Core and integration expert, focusing on building clean, maintainable APIs using modern best practices.
+
+## Core Setup
+
+### Entity Framework + SQLite
+```csharp
+// Models/Note.cs
+public class Note
+{
+    public int Id { get; set; }
+    public required string Title { get; set; }
+    public required string Content { get; set; }
+    public DateTime CreatedAt { get; set; }
+}
+
+// Data/AppDbContext.cs
+public class AppDbContext : DbContext
+{
+    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+    
+    public DbSet<Note> Notes { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
+
+        modelBuilder.Entity<Note>(entity =>
+        {
+            entity.Property(e => e.Title).IsRequired();
+            entity.Property(e => e.Content).IsRequired();
+            entity.Property(e => e.CreatedAt).IsRequired();
+        });
+
+        // Seed data with fixed date to avoid migration issues
+        modelBuilder.Entity<Note>().HasData(
+            new Note
+            {
+                Id = 1,
+                Title = "Welcome",
+                Content = "Welcome to this workshop!",
+                CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, DateTimeKind.Utc)
+            }
+        );
+    }
+}
+```
+
+### Controller Pattern
+```csharp
+[ApiController]
+[Route("api/[controller]")]
+public class NotesController : ControllerBase
+{
+    private readonly AppDbContext _context;
+
+    public NotesController(AppDbContext context)
+    {
+        _context = context;
+    }
+
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<Note>>> GetNotes()
+    {
+        return await _context.Notes.ToListAsync();
+    }
+
+    [HttpGet("{id}")]
+    public async Task<ActionResult<Note>> GetNote(int id)
+    {
+        var note = await _context.Notes.FindAsync(id);
+        if (note == null) return NotFound();
+        return note;
+    }
+
+    [HttpPost]
+    public async Task<ActionResult<Note>> CreateNote(Note note)
+    {
+        note.CreatedAt = DateTime.UtcNow;
+        _context.Notes.Add(note);
+        await _context.SaveChangesAsync();
+        return CreatedAtAction(nameof(GetNote), new { id = note.Id }, note);
+    }
+}
+```
+
+### Program.cs Setup
+```csharp
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+// Configure CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll",
+        builder => builder
+            .AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader());
+});
+
+// Add SQLite
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+var app = builder.Build();
+
+// Apply migrations on startup
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    db.Database.Migrate();
+}
+
+// Configure pipeline
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseHttpsRedirection();
+app.UseCors("AllowAll");
+app.MapControllers();
+```
+
+### Configuration (appsettings.json)
+```json
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Data Source=app.db"
+  },
+  "Kestrel": {
+    "Endpoints": {
+      "Http": {
+        "Url": "http://localhost:5001"
+      }
+    }
+  }
+}
+```
+
+## Project Structure
+```
+Api/
+├── Controllers/
+│   └── NotesController.cs
+├── Models/
+│   └── Note.cs
+├── Data/
+│   └── AppDbContext.cs
+├── Migrations/
+│   └── XXXXXX_InitialCreate.cs
+├── Properties/
+│   └── launchSettings.json
+├── Program.cs
+└── appsettings.json
+```
+
+## Development Workflow
+
+### Database Management
+- SQLite database is stored in `app.db`
+- To reset database:
+  1. Stop application
+  2. Delete `app.db`
+  3. Restart application (migrations will run automatically)
+
+### Adding New Features
+1. Create/modify models in `Models/`
+2. Update `AppDbContext` if needed
+3. Add new migration: `dotnet ef migrations add MigrationName`
+4. Create/update controllers in `Controllers/`
+
+### External API Integration
+When integrating with external APIs:
+1. Create interfaces in `Services/`
+2. Implement service classes
+3. Register services in `Program.cs`
+4. Use dependency injection in controllers
+
+Example:
+```csharp
+public interface IExternalService
+{
+    Task<Data> GetDataAsync();
+}
+
+public class ExternalController : ControllerBase
+{
+    private readonly IExternalService _service;
+
+    public ExternalController(IExternalService service)
+    {
+        _service = service;
+    }
+
+    [HttpGet]
+    public async Task<ActionResult<Data>> GetData()
+    {
+        return await _service.GetDataAsync();
+    }
+}
+``` 
+
+
+# Web Implementation Guide
+
+This guide outlines the key technologies and patterns to follow when implementing features in this repository.
+
+## Core Technologies
+
+### TanStack Query
+- Use TanStack Query for all data fetching and state management
+- Implement custom hooks for data fetching using `useQuery` and `useMutation`
+- Follow the pattern:
+```typescript
+export function useData() {
+  return useQuery({
+    queryKey: ['data'],
+    queryFn: async () => {
+      const response = await fetch('/api/data');
+      return response.json();
+    }
+  });
+}
+```
+
+### Tailwind CSS
+- Use Tailwind CSS for all styling
+- Follow the project's design system using custom colors and variables
+- Utilize the `cn()` utility for conditional class names:
+```typescript
+import { cn } from "@/lib/utils";
+
+export function Component({ className, ...props }) {
+  return (
+    <div className={cn("base-classes", className)} {...props}>
+      {/* content */}
+    </div>
+  );
+}
+```
+
+### shadcn/ui Components
+- All shadcn/ui components are pre-installed and ready to use, if not, install by npx shadcn@latest add [component]
+- Import components from `@/components/ui`
+- Follow the component patterns:
+```typescript
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+
+export function Form() {
+  return (
+    <div>
+      <Input placeholder="Enter text" />
+      <Button>Submit</Button>
+    </div>
+  );
+}
+```
+
+#### Available Components
+1. **Directly Installable Components**
+   ```bash
+   npx shadcn@latest add accordion alert alert-dialog aspect-ratio avatar badge button card checkbox collapsible command context-menu dialog drawer dropdown-menu form hover-card input label menubar navigation-menu popover progress radio-group scroll-area select separator sheet skeleton slider switch table tabs textarea toast toggle toggle-group tooltip
+   ```
+
+2. **Composite Components** (built using other components)
+   - Breadcrumb
+   - Calendar
+   - Carousel
+   - Chart
+   - Combobox (uses Command component)
+   - Data Table (uses Table component)
+   - Date Picker (uses Calendar component)
+   - Input OTP
+   - Pagination
+   - Resizable
+   - Sidebar
+   - Sonner
+
+When implementing new features, prefer using these pre-built components over creating custom ones. For composite components, refer to the shadcn documentation for implementation patterns.
+
+## Best Practices
+
+1. **Component Structure**
+   - Keep components small and focused
+   - Use TypeScript interfaces for props
+   - Implement proper error boundaries
+   - Use React.Suspense for loading states
+
+2. **Data Fetching**
+   - Always use TanStack Query hooks
+   - Implement proper error handling
+   - Use suspense mode when appropriate
+   - Cache invalidation strategies
+
+3. **Styling**
+   - Use Tailwind CSS classes
+   - Follow the design system
+   - Maintain consistent spacing
+   - Use responsive design patterns
+
+4. **State Management**
+   - Use TanStack Query for server state
+   - React state for UI state
+   - Context for theme/auth
+
+5. **Performance**
+   - Implement proper memoization
+   - Use dynamic imports for code splitting
+   - Optimize images and assets
+   - Monitor bundle size
+
+## File Structure
+```
+src/
+├── components/
+│   ├── ui/          # shadcn/ui components
+│   └── features/    # feature-specific components
+├── hooks/           # custom hooks
+├── lib/            # utilities and helpers
+└── pages/          # route components
+```
+
+## Example Implementation
+
+```typescript
+// src/features/users/use-users.ts
+export function useUsers() {
+  return useQuery({
+    queryKey: ['users'],
+    queryFn: async () => {
+      const response = await fetch('/api/users');
+      return response.json();
+    }
+  });
+}
+
+// src/features/users/users-list.tsx
+import { useUsers } from './use-users';
+import { Card } from '@/components/ui/card';
+
+export function UsersList() {
+  const { data, isLoading } = useUsers();
+
+  if (isLoading) return <div>Loading...</div>;
+
+  return (
+    <div className="grid gap-4">
+      {data.map((user) => (
+        <Card key={user.id}>
+          <CardHeader>
+            <CardTitle>{user.name}</CardTitle>
+          </CardHeader>
+        </Card>
+      ))}
+    </div>
+  );
+}
+```
+
+

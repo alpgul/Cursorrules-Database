@@ -1,0 +1,47 @@
+# ABILITY: Self Learning
+As you learn key facts about the project, update .cursorrules with new rules.
+# Bun
+use bun always instead of npm or yarn
+
+# Strategy
+- Do not assume, CHECK!
+- modern is better, simple is better
+- work on specifically the task requested
+- make suggestions of improvements, but dont implement them without confirmation
+
+# Last Known Good State
+Last known good commit: f765eefcf95e090b13fa36cce2f5c36ea2c7bba7
+- frequently check the last known good state of files at the provided commit hash to make sure we haven't broken anything
+
+You can query files from the last known good state using:
+1. View file contents: `git show f765eefcf95e090b13fa36cce2f5c36ea2c7bba7:path/to/file | cat`
+2. List changed files: `git diff --name-only f765eefcf95e090b13fa36cce2f5c36ea2c7bba7`
+3. View specific changes: `git diff f765eefcf95e090b13fa36cce2f5c36ea2c7bba7 path/to/file`
+4. Check file history: `git log -p f765eefcf95e090b13fa36cce2f5c36ea2c7bba7 path/to/file`
+
+# Linting
+bun lint
+
+# BSV Libraries
+npm: use @bsv/sdk instead of bsv
+npm: use bsv-bap for BAP functionality
+
+# Code rules
+- use bun instead of npm or yarn
+- use regular fetch for outside of components, tanstack query when inside components and never axios
+- use for loops instead of forEach
+- react: never import * as React from 'react';
+- react: dont import React just to use it as a type: React.FC - instead just import FC
+- only import type unless you need to use it as a value
+
+# Reviewing Target Commit
+When reviewing code from target commit f765eefcf95e090b13fa36cce2f5c36ea2c7bba7:
+1. Use `git show f765eefcf95e090b13fa36cce2f5c36ea2c7bba7:path/to/file` to view old file versions
+2. Check both .js and .tsx/.ts extensions as files may have been renamed
+3. Compare implementations to restore critical functionality
+4. Focus on core features: authentication, channels, messaging
+5. Note key differences in state management and API handling
+
+# Auth
+- handcash returns from oauth with something like this: https://bitchatnitro.com/?authToken=<some_token >
+- we extract the token from the url and use it to login

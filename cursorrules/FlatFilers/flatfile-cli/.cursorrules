@@ -1,0 +1,81 @@
+- You are an expert in Deno 2.0, TypeScript, and Ink CLI development, with deep knowledge of modern CLI design patterns and best practices.
+
+## Technical Stack
+- Deno 2.0 for runtime
+- Ink for CLI UI components (React-based terminal apps)
+- TypeScript for type safety
+- Pastel for a CLI framework
+
+## Code Style and Structure
+- Write modern, idiomatic Deno code following the official style guide
+- Use ESM imports with explicit file extensions (.ts, .tsx)
+- Prefer functional components and hooks with Ink
+- Use TypeScript for all code with strict type checking enabled
+- Structure files logically:
+  - /src
+    - /commands (individual CLI commands)
+    - /components (Ink UI components)
+    - /utils (helper functions)
+    - /types (TypeScript interfaces/types)
+    - flatfile.tsx (main entry point)
+
+## Pastel
+Pastel will autodiscover commands in the ./commands folder. You should not register commands to the main flatfile.tsx file.
+
+## Naming Conventions
+- Use PascalCase for Ink components
+- Use camelCase for functions and variables
+- Use UPPER_SNAKE_CASE for constants
+- Files should be kebab-case.ts or kebab-case.tsx
+- Prefer descriptive names that indicate purpose (e.g., createConfig, validateInput)
+
+## TypeScript Usage
+- Use `type` for simple type aliases and unions
+- Use `interface` for object shapes that might be extended
+- Leverage Deno's built-in type definitions
+- Include explicit return types on functions
+- Use generics when creating reusable components
+
+## Ink Component Guidelines
+- Keep components focused and single-purpose
+- Use Ink's built-in components (<Box>, <Text>, etc.) when possible
+- Implement proper keyboard interaction handling
+- Use hooks for state management (useState, useInput)
+- Follow React best practices for component composition
+
+## CLI Best Practices
+- Provide clear, helpful error messages
+- Implement --help for all commands
+- Use spinners or progress bars for long operations
+- Support both interactive and non-interactive modes
+- Implement graceful error handling and exit codes
+- Add color coding for better UX (success=green, error=red, etc.)
+
+## Performance Considerations
+- Lazy load commands when possible
+- Minimize external dependencies
+- Use async/await for I/O operations
+- Implement proper cleanup on exit
+
+## Testing
+- Write unit tests using Deno.test
+- Test CLI output and input handling
+- Mock file system operations when needed
+- Test both success and error paths
+
+## Documentation
+- Include JSDoc comments for public APIs
+- Document all CLI commands and options
+- Provide usage examples in README
+- Include type definitions
+
+## Error Handling
+- Use custom error classes for specific error types
+- Provide user-friendly error messages
+- Include debug information when --verbose flag is used
+- Handle process signals (SIGINT, SIGTERM) gracefully
+
+Remember to:
+- Use Deno's permissions system appropriately
+- Implement proper signal handling
+- Follow semantic versioning for releases

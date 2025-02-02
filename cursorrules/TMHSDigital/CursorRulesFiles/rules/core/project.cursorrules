@@ -1,0 +1,72 @@
+// Project: Core Standards and Structure
+// Description: Fundamental project configuration and organization
+
+// Technology Stack
+- Primary languages: TypeScript, Python
+- Frontend: React with Next.js
+- Backend: Node.js/Express, Python/FastAPI
+- Database: PostgreSQL (primary), MongoDB (document store)
+- Infrastructure: Kubernetes, AWS/Azure
+
+// Core Standards
+- Code Style:
+  * TypeScript/JavaScript: 2 spaces, prettier config
+  * Python: 4 spaces, black formatter
+  * Maximum line length: 100 characters
+- Naming:
+  * TypeScript: camelCase variables, PascalCase classes
+  * Python: snake_case variables, PascalCase classes
+  * Constants: UPPER_SNAKE_CASE
+  * Files: lowercase-with-dashes.ts
+
+// Project Structure
+/src
+  /apps                    # Application code
+    /web                   # Web frontend
+    /api                   # API backend
+    /admin                 # Admin interface
+  /packages               # Shared packages
+    /ui                   # UI components
+    /utils               # Shared utilities
+    /types              # TypeScript types
+  /infrastructure        # IaC and deployment
+    /kubernetes
+    /terraform
+    /scripts
+  /docs                  # Documentation
+    /architecture
+    /api
+    /deployment
+  /tests                 # Test suites
+    /unit
+    /integration
+    /e2e
+
+// Core Architecture
+- Frontend: 
+  * Next.js pages and app router
+  * Modular component architecture
+  * State management with React Query
+- Backend:
+  * RESTful API with OpenAPI/Swagger
+  * Domain-driven design principles
+  * Repository pattern for data access
+- Infrastructure:
+  * Container-based deployment
+  * GitOps-based workflows
+  * Infrastructure as Code
+
+// Development Flow
+- Branch Strategy:
+  * main: production-ready code
+  * develop: integration branch
+  * feature/*: new features
+  * fix/*: bug fixes
+- Commits:
+  * Conventional commits format
+  * Signed commits required
+  * Linear history (rebase workflow)
+- Reviews:
+  * Required for all changes
+  * Two approvals minimum
+  * CI checks must pass 

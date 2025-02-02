@@ -1,0 +1,46 @@
+# Pablo Astrobot API
+
+### 🎯 **Goals:**
+1. Set up a Fastify server within Firebase Cloud Functions.
+2. Implement API routes for the chatbot and OCR functionalities:
+   - `POST /api/analyze/ocr`: Use Tesseract.js to extract text from uploaded images.
+   - `POST /api/analyze/vision`: Use OpenAI Vision API for advanced image analysis.
+   - `POST /api/report/generate`: Generate and return a report based on OCR/OpenAI data.
+3. Configure routes with proper JSON schema validation.
+4. Enable file uploads using `@fastify/multipart`.
+5. Store uploaded images in Firebase Storage (if needed).
+6. Load environment variables from `.env` for API keys and configuration.
+7. Add error handling and logging for each route.
+8. Document the API endpoints using Swagger (`@fastify/swagger`).
+9. Ensure CORS is enabled for cross-origin requests.
+10. Provide a basic example of deployment to Firebase Functions.
+
+### ⚙️ **Instructions:**
+1. Set up a basic Fastify server in `app.js`.
+2. Register CORS, Multipart, and Swagger plugins.
+3. Add route registration for OCR, Vision API, and Report generation.
+4. Create controllers for each route with asynchronous handlers.
+5. Ensure environment variables (e.g., OpenAI API Key) are loaded from `.env`.
+6. Add proper error handling for all routes.
+7. Configure `index.js` to expose the Fastify app as a Firebase Cloud Function.
+8. Test the API locally using ThunderClient or Firebase local emulator.
+9. Deploy the application using `firebase deploy --only functions`.
+
+### 📊 **Sample API Endpoints:**
+- `POST /api/analyze/ocr` → Extract text from an uploaded image.
+- `POST /api/analyze/vision` → Analyze images using OpenAI Vision API.
+- `POST /api/report/generate` → Generate reports based on OCR/OpenAI data.
+
+### 🔑 **Additional Notes:**
+- Include validation schemas for incoming requests.
+- Ensure secrets (API keys) are not hardcoded but securely accessed via `.env`.
+- Document all endpoints using Swagger UI.
+- Test error scenarios for each route (e.g., invalid images, missing parameters).
+
+### 🚀 **Next Steps:**
+1. Implement the server logic based on this structure.
+2. Test endpoints locally using ThunderClient.
+3. Deploy the application to Firebase Functions.
+4. Verify functionality via deployed endpoints.
+
+Make sure the deployment is optimized for Firebase's cold start behavior.

@@ -1,0 +1,31 @@
+### About project
+Wishflow React Native - this is a react native library for wishflow.dev
+WishFlow - this is in-app feedback and feature request management system
+
+### Project structure
+- src/ - source code
+-- components/ - react native components
+-- config/ - configuration
+-- constants/ - constants
+-- hooks/ - react native hooks
+-- types/ - typescript types
+-- utils/ - utility functions
+-- index.ts - entry point
+- example/ - example project not used in production (for testing purposes)
+- lib/ - build output
+- package.json - project configuration
+- 
+### Ignore folders
+node_modules
+lib
+example
+
+### Rules
+- All new components should be added to the components folder
+- All new hooks should be added to the hooks folder
+- All new types should be added to the types folder
+- All new utils should be added to the utils folder
+- All new constants should be added to the constants folder
+- All new configuration should be added to the config folder
+- Generate commit messages should be short and descriptive
+- All new files should be added to the index.ts file

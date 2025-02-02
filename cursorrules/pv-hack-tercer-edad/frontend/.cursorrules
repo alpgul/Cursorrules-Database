@@ -1,0 +1,74 @@
+# PDR: Sistema de Gestión de Cuidados para Pacientes
+
+## 1. Descripción del Producto
+Sistema integral para la gestión y seguimiento de pacientes que facilita la comunicación entre cuidadores, familiares y médicos.
+
+## 2. Objetivos del Producto
+- Mejorar la coordinación entre cuidadores y familiares
+- Facilitar el seguimiento de tareas y actividades del paciente
+- Permitir un monitoreo eficiente del estado del paciente
+- Mantener un registro médico actualizado
+
+## 3. Usuarios Objetivo
+### Roles Principales:
+- Cuidador
+- Familiar
+- Médico
+
+## 4. Requerimientos Funcionales
+
+### 4.1 Autenticación y Registro
+- Sistema de registro con usuario y contraseña
+- Gestión de roles y permisos por tipo de usuario
+
+### 4.2 Gestión de Pacientes
+- Ficha de onboarding para información del paciente
+- Sistema de observaciones y mediciones (texto y fotos)
+- Carga y gestión de recetas médicas
+
+### 4.3 Sistema de Tareas
+- Checklist de actividades para el paciente
+- Marcado de tareas completadas
+- Sistema de deadlines para tareas
+- Alertas automáticas para tareas vencidas
+
+### 4.4 Sistema de Notificaciones
+- Notificaciones configurables para familiares
+- Opción para activar/desactivar notificaciones
+- Alertas de actividades pendientes
+
+### 4.5 Visualización de Información
+- Vista rápida de actividades del paciente
+- Interfaz de consulta en lenguaje natural
+- Dashboard de estado general del paciente
+
+## 5. Requerimientos No Funcionales
+
+### 5.1 Usabilidad
+- Interfaz intuitiva y fácil de usar
+- Acceso rápido a funciones principales
+- Diseño responsive para diferentes dispositivos
+
+### 5.2 Seguridad
+- Encriptación de datos sensibles
+- Autenticación segura
+- Cumplimiento con regulaciones de datos médicos
+
+### 5.3 Rendimiento
+- Tiempo de respuesta < 2 segundos
+- Disponibilidad 24/7
+- Backup automático de datos
+
+## 6. Métricas de Éxito
+- Tasa de adopción por usuarios
+- Porcentaje de tareas completadas a tiempo
+- Satisfacción de usuarios
+- Tiempo promedio de respuesta del sistema
+
+
+## 8. Timeline Estimado
+### Fase 1 (MVP)
+- Sistema de registro y autenticación
+- Gestión básica de pacientes
+- Checklist de tareas
+å

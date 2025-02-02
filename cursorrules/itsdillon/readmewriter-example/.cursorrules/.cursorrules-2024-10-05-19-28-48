@@ -1,0 +1,26 @@
+Rules and best practices:
+1. **Code Style**:
+   - Use camelCase for variable and function names.
+   - Use PascalCase for class names.
+   - Use meaningful and descriptive names for variables, functions, and classes.
+   - Follow a consistent code style throughout the codebase.
+
+2. **Naming Conventions**:
+   - Name files with meaningful names that describe their purpose.
+   - Use lowercase for file names and separate words with hyphens or underscores.
+   - Avoid using generic names like `index.ts` for files unless it's an entry point.
+
+3. **Syntax**:
+   - Use ES6 import/export syntax for module loading.
+   - Utilize arrow functions for concise anonymous function definitions.
+   - Take advantage of TypeScript's type system to provide type annotations for variables and function parameters.
+
+4. **Formatting**:
+   - Maintain consistent indentation (e.g., 2 spaces or 4 spaces) throughout the codebase.
+   - Use single quotes for string literals unless interpolating values.
+   - Ensure proper spacing around operators and keywords for improved readability.
+
+5. **Performance Optimization**:
+   - Avoid unnecessary computations or function calls within performance-critical code sections.
+   - Consider caching values or results if they are reused multiple times to reduce redundant calculations.
+   - Profile and benchmark critical sections of the code to identify potential performance bottlenecks and optimize accordingly.

@@ -1,0 +1,229 @@
+Every time you choose to apply a rule(s), explicitly state the rule(s) in the output. You can abbreviate the rule description to a single word or phrase (e.g., “(Rule: naming-conventions)”).
+
+## Dynamic Variable Generation
+
+**Instruction:** Dynamically create and fill in these variables as relevant to your project context. Some examples include:
+
+- {LANGUAGES} (e.g., "TypeScript, Python, Go")
+- {TECH_STACK} (e.g., "React, Tailwind, Express, Supabase")
+- {TECH_STACK_COMMAND_EXAMPLES} (e.g., "npx shadcn@latest add dropdown-menu", "npx supabase ...")
+- {DB_SCHEMA_CHANGES} (SQL statements if needed)
+- {CURRENT_TASKS} (optional usage)
+
+You may add or remove placeholders as needed. Always list which placeholders you are actually using and fill them in with context-based values.
+
+## Project Context
+
+Booth Pub is a professional photo booth rental service website that combines photography and bartending services for events. The platform aims to:
+
+- Showcase premium photo booth rental services
+- Allow potential clients to request quotes
+- Display service packages and pricing
+- Provide an elegant, modern user experience
+- Handle booking management through Supabase
+
+Target users:
+
+- Event planners
+- Wedding couples
+- Corporate event organizers
+- Party hosts
+
+## Code Style and Structure
+
+1. Write concise, technical code in **TypeScript** and **Astro** with clear, accurate examples.
+2. Use functional and declarative programming patterns. Avoid classes unless clearly beneficial.
+3. Prefer iteration and modularization over code duplication.
+4. Use descriptive variable names (e.g., isLoading, hasError) that describe purpose or state.
+5. Add comments explaining _why_ and _how_, not just _what_.
+6. Structure your repository in a logical hierarchy.
+
+   **Note**: The following is an **example** folder structure often used in JS/TS projects. If your chosen language or framework differs (e.g., Rust, Python), adapt these guidelines accordingly:
+
+   ```{LANGUAGES}
+   src/
+     components/   # Shared or reusable UI components
+     context/      # Context definitions (if using React or similar)
+     hooks/        # Custom hooks or reusable logic
+     utils/        # Helper functions
+     lib/          # Shared libraries
+     pages/        # Page-level code
+     types/        # Shared types/interfaces
+   ```
+
+7. If using a monorepo, maintain consistent folder conventions across packages.
+8. For each function, provide an explicit return type (if in a typed language).
+9. Avoid try/catch unless you need to handle or translate errors for clarity.
+
+## Tech Stack
+
+```{LANGUAGES}
+{TECH_STACK}
+```
+
+1. Automatically select or generate the **{TECH_STACK}** based on user context or preference.
+2. Insert relevant command examples in **{TECH_STACK_COMMAND_EXAMPLES}** if applicable:
+
+   ```{LANGUAGES}
+   {TECH_STACK_COMMAND_EXAMPLES}
+   ```
+
+3. If a database service is used (like Supabase), add advanced rules:
+   - Check if a table or column exists before referencing it.
+   - Use WITH CHECK for INSERT policies.
+   - If table/field is missing, output the SQL in **{DB_SCHEMA_CHANGES}**.
+
+4. Example tech stack:
+
+   ```yaml
+   Frontend:
+   - Astro (Static Site Generator)
+   - React (Interactive Components)
+   - TypeScript
+   - Tailwind CSS
+   - Shadcn UI
+   - Lucide Icons
+   Backend:
+   - Supabase
+       - Authentication
+       - PostgreSQL Database
+       - Storage
+       - Row Level Security
+   ```
+
+5. Example tech stack command examples:
+
+   ```bash
+   # Initial Setup
+   npm create astro@latest
+   npx astro add react
+   npx astro add tailwind
+   # Add Shadcn UI Components
+   npx shadcn-ui@latest init
+   npx shadcn-ui@latest add button
+   npx shadcn-ui@latest add form
+   # Supabase Setup
+   npx supabase init
+   npx supabase start
+   ```
+
+## Naming Conventions
+
+- Lowercase with dashes for directories (`components/form-wizard`).
+- Favor named exports for components/utilities.
+- PascalCase for component files (`VisaForm.tsx`).
+- camelCase for utility files (`formValidator.ts`).
+- Prefer interfaces over enums or complex unions if using typed languages.
+
+## Context System
+
+You are an engineer who periodically loses memory of the project. Maintain these files in `client_docs/`:
+
+`productContext.md`:
+
+- Why we're building this 
+- Core user problems/solutions 
+- Key workflows 
+- Product direction and priorities 
+
+`activeContext.md`:
+
+- Current focus/issues 
+- Recent changes 
+- Active files 
+- Next steps 
+- Always reference or update for conflicts 
+
+(This is your source of truth for any conflicts) 
+
+`systemPatterns.md`:
+
+- High-level architecture 
+- Core technical patterns 
+- Data flow 
+- Key technical decisions 
+
+`developmentWorkflow.md`:
+
+- How we work on this specific project 
+- Testing patterns 
+- Release process 
+- Project-specific standards 
+
+`operationalContext.md`:
+
+- How the system runs 
+- Error handling patterns 
+- Infrastructure details 
+- Performance requirements 
+
+`projectBoundaries.md`:
+
+- Technical constraints 
+- Scale requirements 
+- Hard limitations 
+- Non-negotiables 
+
+`techContext.md`:
+
+- Core technologies used 
+- Integration patterns 
+- Key libraries/frameworks 
+- Infrastructure choices 
+- Technical constraints 
+- Development environment 
+
+`currentTasks.md`:
+
+this one is different from the others, it is a list of tasks that are currently in progress.
+this will be updated when i ask it to be updated or referenced.
+
+- Explanation of what need to be achieved 
+- Explanation of what is already achieved 
+- Explanation of what is blocked 
+- Explanation of what is in progress 
+- Explanation of what is next 
+- Functions, pages, components, types, etc. already created for that task
+- When a task is completed, add a ✅ in front of the task.
+- When a task is blocked, add a ❌ in front of the task.
+- When a task is in progress, add a ⚙️ in front of the task.
+- When a task is not started, add a ⚠️ in front of the task.
+- Update these statuses throughout the conversation if tasks complete, are blocked, or get started.
+
+### Context System Rules
+
+**Important:** Always reflect updates in the relevant context files, noting the last updated date at the top.
+
+Each file should:
+
+- Focus on high-level understanding over technical details
+- Explain why decisions were made
+- Cross-reference other files when needed
+- Stay current with project changes; ALWAYS note the last updated date at the top of these context files when making updates
+- Automatically suggest additions for llm rule files (such as `.cursorrules` files) where best practices are used during the generation
+
+
+## Reasoning & Example Usage
+
+1. **Think through the problem carefully before drafting code**; provide reasoning steps before final conclusions or results.  
+2. **If an example is complex, consider using placeholders** (e.g., `[EXAMPLE PLACEHOLDER]`) to illustrate structure without overwhelming detail.  
+3. **If the user’s request is counterproductive**, politely seek clarification or propose a refined approach.  
+4. **Never start examples with the conclusion.** Reverse the order to show reasoning first, then the final output.  
+
+## Guidance for Handling User Requests
+
+1. If the user suggests an approach that may degrade code quality or add complications, request clarification or propose an alternative.
+2. If the user is ambiguous, ask clarifying questions or explicitly state assumptions.
+3. **If examples are too large**, use partial examples or placeholders.  
+4. Always mention which rule you’re applying (e.g., “(Rule: code-structure)”).
+5. Strive for clarity over brevity when in conflict.
+
+## Brand Colors
+
+```typescript
+const BRAND_COLORS = {
+  navy: '#2F505F',    // Primary
+  orange: '#D75E1F',  // Secondary
+  cream: '#F9CC9A'    // Accent
+};
+```

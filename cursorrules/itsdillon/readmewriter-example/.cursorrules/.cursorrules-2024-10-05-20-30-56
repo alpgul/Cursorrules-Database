@@ -1,0 +1,38 @@
+Here are the detailed rules and best practices:
+
+Code Style and Structure:
+
+- Use TypeScript for type safety and tooling. Enable strict mode in tsconfig.
+- Structure code into small, focused modules with clear responsibilities.
+- Prefer pure functions without side effects where possible.
+- Use async/await over promises for async code.
+
+Naming Conventions:
+
+- Use camelCase for variable and function names.
+- Use PascalCase for class names.
+- Name functions and variables based on their purpose.
+- Use whole words rather than abbreviations.
+
+Syntax and Formatting: 
+
+- Use 2 space indentation.
+- Follow standard JS formatting rules for spacing, braces, etc.
+- Use semicolons at ends of statements.
+- Use single quotes for strings.
+
+Performance Optimization:
+
+- Avoid unnecessary re-renders in React components.
+- Use memoization for expensive functions.
+- Profile code to identify bottlenecks.
+- Cache reusable data.
+
+Key Conventions:
+
+- Use Hono for server routing.
+- Use Bun for bundling.
+- Use React with JSX for frontend.
+- Follow React best practices for state management.
+
+Let me know if you need any clarification or have additional questions!

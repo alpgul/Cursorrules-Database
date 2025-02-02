@@ -1,0 +1,39 @@
+# Cursor AI Configuration
+
+## General Project Context
+
+This is a React-Native project that follows these principles:
+
+- use TypeScript
+- initialized with Infinite Red Ignite starter boilerplate
+- should use ignite-cli to generate new screens, components, etc.
+- will be used with reactotron for debugging
+- we should take advantge of reactotron to add custom log messages, view network requests, inspect state etc
+- uses expo router for navigation with typescript
+- When using a component that is typically imported from React-Native like Button, Text, etc import the one from @/components folder if one exists by the same name
+- i18n resource files are used for copy within the app. We only care about Engilsh right now so the copy should be in `@/i18n/en.ts`. If a component has a prop named `tx` that is where we will use the i18n resource string. For example:
+
+```tsx
+<Text tx="welcomeScreen:exciting" />
+```
+
+## Code Style Preferences
+
+When generating or modifying code:
+
+- Use explicit type annotations
+- Follow clean code principles
+- Include comprehensive error handling
+- Try to avoid hard coded colors and size values. Use the `spacing` values specified in `src/theme/spacing.ts` when possible.
+- for styling use convention where we add the styles to the bottom of the file and styles are pre-fixed with $ and used ThemedStyle type like the common styling pattern below
+
+```tsx
+import { ThemedStyle } from "@/theme"
+import { useAppTheme } from "@/utils/useAppTheme"
+
+const { themed, theme } = useAppTheme()
+
+const $welcomeHeading: ThemedStyle<TextStyle> = ({ spacing }) => ({
+  marginBottom: spacing.md,
+})
+```

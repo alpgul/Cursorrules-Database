@@ -1,0 +1,140 @@
+# project g-tin. Fast OpenSource AI for everyone, anywhere, anytime.
+
+## What is g-tin?
+
+g-tin stands for groq Tauri Intelligence. and its pronounced "ge-tin" (as in "get in").
+g-tin brings AI power to everyone's fingertips!
+Open-source AI app designed for any device! Windows, MacOS, Linux, iOS, Android, and web!
+Leveraging groq's fast inference capabilities and the best open-source AI models, g-tin is the perfect tool for getting things done!
+
+## How does it work?
+
+g-tin uses groq's API to power its AI. Groq is a company that provides fast, private, and secure AI models and services.
+
+## How do I get started?
+
+simply get the app from the releases page and run it!
+no sign up required!
+no subscription required!
+no credit card required!
+no strings attached!
+no catch!
+no kidding!
+
+## future of g-tin
+
+I plan to make g-tin a tool that everyone can use to get things done on any device.
+
+## how can i help?
+
+- spread the word!
+- ask for features!
+- report any issues!
+- contribute to the code!
+
+## thank you! Let's make AI great again!
+
+g-tin is a tauri v2 app, that means its native apps with webview2 frontend and rust backend and is cross platform.
+
+always use the @tauri v2 docs
+
+g-tin uses tauri v2 with Next.js and typescript and rust.
+
+latest tauri v2
+
+always use typescript
+
+always correct any linting errors
+
+always go step by step. when I ask for a new feature or bug fix, never do it all at once. just do one thing at a time. ask me to proceed to the next step always. this way I can tell you if the step is not done or I need to fix linting errors or if you haven't done what I had in mind.
+
+Project structure:
+
+next.js typescript is the frontend and src-tauri is the rust backend.
+
+its a app route next.js app so use the app router folder structure.
+
+don't forget to use 'use client'; for when you use client side react hooks like useState, useEffect, etc.
+
+always use tailwindcss and shadcn ui.
+
+always use the latest tauri v2 docs.
+
+always use the latest version of next.js.
+
+always use the latest version of typescript.
+
+always use the latest version of rust.
+
+GUIDANCE FOR YOU:
+
+You are an expert in developing desktop applications using Tauri with Next.js and TypeScript for the frontend.
+
+Key Principles:
+- Write clear, technical responses with precise examples for Tauri, Next.js, and TypeScript.
+- Prioritize type safety and utilize TypeScript features effectively.
+- Follow best practices for Tauri application development, including security considerations.
+- Implement responsive and efficient UIs using Next.js's reactive paradigm.
+- Ensure smooth communication between the Tauri frontend and external backend services.
+
+Frontend (Tauri + Next.js + TypeScript + TailWindCSS + shadcn ):
+- Use Next.js's component-based architecture for modular and reusable UI elements.
+- Leverage TypeScript for strong typing and improved code quality.
+- Utilize Tauri's APIs for native desktop integration (file system access, system tray, etc.).
+- Implement proper state management using Next.js stores or other state management solutions if needed.
+- Use Next.js's built-in reactivity for efficient UI updates.
+- Follow Next.js's naming conventions (PascalCase for components, camelCase for variables and functions).
+
+Communication with Backend:
+- Use Axios for HTTP requests from the Tauri frontend to the external backend.
+- Implement proper error handling for network requests and responses.
+- Use TypeScript interfaces to define the structure of data sent and received.
+- Consider implementing a simple API versioning strategy for future-proofing.
+- Handle potential CORS issues when communicating with the backend.
+
+Security:
+- Follow Tauri's security best practices, especially when dealing with IPC and native API access.
+- Implement proper input validation and sanitization on the frontend.
+- Use HTTPS for all communications with external services.
+- Implement proper authentication and authorization mechanisms if required.
+- Be cautious when using Tauri's allowlist feature, only exposing necessary APIs.
+
+Performance Optimization:
+- Optimize Next.js components for efficient rendering and updates.
+- Use lazy loading for components and routes where appropriate.
+- Implement proper caching strategies for frequently accessed data.
+- Utilize Tauri's performance features, such as resource optimization and app size reduction.
+
+Testing:
+- Write unit tests for Next.js components using testing libraries like Jest and Testing Library.
+- Implement end-to-end tests for critical user flows using tools like Playwright or Cypress.
+- Test Tauri-specific features and APIs thoroughly.
+- Implement proper mocking for API calls and external dependencies in tests.
+
+Build and Deployment:
+- Use Vite for fast development and optimized production builds of the Next.js app.
+- Leverage Tauri's built-in updater for seamless application updates.
+- Implement proper environment configuration for development, staging, and production.
+- Use Tauri's CLI tools for building and packaging the application for different platforms.
+
+Key Conventions:
+1. Follow a consistent code style across the project (e.g., use Prettier).
+2. Use meaningful and descriptive names for variables, functions, and components.
+3. Write clear and concise comments, focusing on why rather than what.
+4. Maintain a clear project structure separating UI components, state management, and API communication.
+
+Dependencies:
+- Tauri
+- Next.js
+- TypeScript
+- Vite
+- Axios
+
+Refer to official documentation for Tauri, Next.js, TypeScript and Rust for best practices and up-to-date APIs.
+
+Note on Backend Communication:
+
+When working with the external Rust backend:
+- Ensure proper error handling for potential backend failures or slow responses.
+- Consider implementing retry mechanisms for failed requests.
+- Use appropriate data serialization methods when sending/receiving complex data structures.

@@ -1,0 +1,220 @@
+# MDC Files Integration Rules
+
+The following MDC files must be used according to their specific purposes:
+
+1. **DARSA Mode (@darsa-with-modes.mdc)**
+   - Apply quantum-level intelligence processing
+   - Follow the complete interaction protocol
+   - Maintain perfect contextual awareness
+   - Execute parallel analysis for all problems
+   - Follow the implementation methodology
+
+2. **Development Standards (@development-standard.mdc)**
+   - Follow core technical requirements strictly
+   - Adhere to architecture standards
+   - Implement database intelligence practices
+   - Maintain documentation excellence
+   - Apply frontend and backend mastery principles
+
+3. **Error Prevention (@error-prevention.mdc)**
+   - Implement all validation & safety measures
+   - Follow strict avoidance rules
+   - Apply comprehensive error boundaries
+   - Maintain perfect error logging
+   - Execute proper recovery mechanisms
+
+4. **Web Development (@web-development.mdc)**
+   - Follow all web development rules
+   - Implement responsive design principles
+   - Optimize for web performance
+   - Follow API documentation standards
+   - Maintain cross-browser compatibility
+
+5. **Planning (@plan.mdc)**
+   - Follow the mode switching protocol
+   - Maintain plan/act mode separation
+   - Execute information gathering
+   - Validate assumptions with confidence scores
+   - Follow the planning methodology
+
+# Core Rules
+
+You have two modes of operation:
+
+1. Plan mode - You will work with the user to define a plan, you will gather all the information you need to make the changes but will not make any changes
+2. Act mode - You will make changes to the codebase based on the plan
+
+- You start in plan mode and will not move to act mode until the plan is approved by the user.
+- You will print `# Mode: PLAN` when in plan mode and `# Mode: ACT` when in act mode at the beginning of each response.
+- Unless the user explicity asks you to move to act mode, by typing `ACT` you will stay in plan mode.
+- You will move back to plan mode after every response and when the user types `PLAN`.
+- If the user asks you to take an action while in plan mode you will remind them that you are in plan mode and that they need to approve the plan first.
+- When in plan mode always output the full updated plan in every response.
+
+# Development Standards
+
+1. **Core Technical Requirements**
+   - Use pnpm exclusively for package management
+   - Follow Next.js 14+ App Router best practices
+   - Use shadcn/ui components with custom theming
+   - Implement mobile-first design principles
+   - Use dark theme only with orange brand color
+   - Maintain TypeScript type safety
+   - Use Zod for form validation
+   - Implement Zustand for state management
+   - Ensure Supabase integration compliance
+   - Use Google OAuth exclusively for authentication
+
+2. **Architecture Standards**
+   - Follow component-based architecture
+   - Implement proper error boundaries
+   - Use server and client components correctly
+   - Follow REST API best practices
+   - Implement proper data fetching strategies
+   - Use proper caching mechanisms
+   - Follow proper folder structure
+   - Implement proper routing strategies
+   - Use proper state management patterns
+   - Follow proper security practices
+
+3. **MVP Feature Focus**
+   - Authentication System:
+     - Google OAuth integration
+     - Role-based access control
+     - User profile management
+   - Product Management:
+     - Category management (4 categories)
+     - Product CRUD operations
+     - Variant system
+     - Add-ons system
+   - Order System:
+     - Cart functionality
+     - Order placement
+     - Payment processing
+     - Order tracking
+   - Store Operations:
+     - Store hours management
+     - Order status management
+     - Inventory tracking
+
+4. **Error Prevention**
+   - Implement comprehensive error boundaries
+   - Validate all inputs
+   - Handle edge cases
+   - Implement proper error logging
+   - Use proper error recovery
+   - Implement proper fallbacks
+   - Handle async operations safely
+   - Maintain proper resource cleanup
+   - Handle browser compatibility
+   - Follow security best practices
+
+5. **Web Development Guidelines**
+   - Ensure responsive design
+   - Optimize performance
+   - Follow accessibility standards
+   - Use semantic HTML
+   - Implement proper SEO
+   - Follow proper CSS methodology
+   - Use proper image optimization
+   - Implement proper loading states
+   - Follow proper UI/UX patterns
+   - Use proper animation patterns
+
+6. **Database & Schema Rules**
+   - Follow Prisma schema best practices
+   - Implement proper migrations
+   - Use proper indexing
+   - Follow proper data relationships
+   - Implement proper constraints
+   - Use proper data validation
+   - Follow proper backup strategies
+   - Implement proper security policies
+   - Use proper query optimization
+   - Follow proper data integrity rules
+
+7. **UI/UX Guidelines**
+   - Follow mobile-first approach
+   - Use dark theme consistently
+   - Apply orange brand color properly
+   - Use proper typography
+   - Follow proper spacing
+   - Implement proper animations
+   - Use proper loading states
+   - Follow proper feedback patterns
+   - Use proper error states
+   - Implement proper success states
+
+8. **Performance Standards**
+   - Optimize bundle size
+   - Implement code splitting
+   - Use proper lazy loading
+   - Optimize images
+   - Implement proper caching
+   - Use proper prefetching
+   - Follow proper optimization patterns
+   - Monitor performance metrics
+   - Use proper CDN
+   - Implement proper compression
+
+9. **Security Implementation**
+   - Follow proper authentication flow
+   - Implement proper authorization
+   - Use proper data encryption
+   - Follow proper input validation
+   - Implement proper XSS prevention
+   - Use proper CSRF protection
+   - Follow proper security headers
+   - Implement proper rate limiting
+   - Use proper error handling
+   - Follow proper security logging
+
+10. **Documentation Requirements**
+    - Maintain clear code comments
+    - Follow proper JSDoc standards
+    - Update README files
+    - Document API endpoints
+    - Maintain changelog
+    - Document component usage
+    - Follow proper git commits
+    - Document setup procedures
+    - Maintain deployment docs
+    - Document testing procedures
+
+# Implementation Rules
+
+1. **Development Process**
+   - Start with core functionality
+   - Follow MVP requirements strictly
+   - Implement basic security first
+   - Focus on essential features
+   - Keep interfaces simple
+   - Ensure mobile responsiveness
+   - Maintain clear documentation
+   - Implement proper error handling
+   - Add loading states
+   - Provide user feedback
+
+2. **Code Quality**
+   - Write clean, maintainable code
+   - Follow DRY principles
+   - Use proper naming conventions
+   - Implement proper testing
+   - Follow code style guide
+   - Use proper commenting
+   - Follow proper git workflow
+   - Implement proper reviews
+   - Maintain code quality
+   - Follow best practices
+
+3. **Future Considerations**
+   - Plan for scalability
+   - Consider future features
+   - Implement proper versioning
+   - Plan for updates
+   - Consider maintenance
+   - Plan for monitoring
+   - Consider analytics
+   - Plan for backups
+   - Consider security updates
+   - Plan for performance optimization

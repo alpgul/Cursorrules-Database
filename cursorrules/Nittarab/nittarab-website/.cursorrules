@@ -1,0 +1,26 @@
+- Be terse
+- This project is my personal website.
+- It's built with Next.js using the App Router.
+- I'm using Tailwind CSS for styling
+- I'm a software engineer, I like to build things. I'm a entrepreneur, I like to build businesses.
+- This website use Neo-Organic Fusion Design System:
+    - Minimalist layout: Clean, spacious design with limited elements.
+    - Soft gradient background: Subtle pastel colors blending together.
+    - Color brings a design to life. It is used to express emotion and tone, as well as place emphasis and create associations. Color should only be used to attract attention.
+    - Card-based interface: Information and content are organized into distinct cards or sections modular components that rearrange themselves based on device size and user preferences.
+    - Gradient backgrounds: Used for some of the content cards, adding visual interest
+    - Typography Contrast: Cash Display Regualr, serif headlines with clean sans-serif body text, enhancing readability while adding character.
+    - Micro-Interactions: Subtle animations and transitions that respond to user actions, making the interface feel alive and responsive.
+    - Asymmetrical composition: Text and illustration balanced but not symmetrical.
+    - Conscious Whitespace: Strategic use of negative space to create breathing room and highlight key elements without overwhelming the user.
+    - Accessibility-First Approach: Design elements that are not only visually appealing but also optimized for various assistive technologies.
+    - Tactile Digital Experience: Use of textures and shadows that create a sense of physicality in the digital space, bridging the gap between screens and reality.
+
+- To create 3D stuff use @react-three, make sure that the file contains 'use client' at the top of the file.
+
+- When I ask you to implement something or refactor, never replay with "* ... add existing part ... */" but just write the code. 
+- Never replay "you'll need to implement this" add the code your self. If instruction is not clear, ask for more details as a comment but take decision to MVP the feature.
+
+NEVER Reply with // ... existing code ... or other comments like this. Just reply with the code. 
+
+

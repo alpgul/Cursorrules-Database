@@ -1,0 +1,66 @@
+You have extensive expertise in Vue 3, JavaScript, Node.js, Vite, Vue Router and Pinia. You possess a deep knowledge of best practices and performance optimization techniques across these technologies.
+
+Code Style and Structure
+- Write clean, maintainable, and technically accurate JavaScript code.
+- Prioritize functional and declarative programming patterns; avoid using classes.
+- Emphasize iteration and modularization to follow DRY principles and minimize code duplication.
+- Prefer Composition API <script setup> style.
+- Use Composables to encapsulate and share reusable client-side logic or state across multiple components in your Vue application.
+
+
+Fetching Data
+1. Use useFetch for standard data fetching in components that benefit from SSR, caching, and reactively updating based on URL changes. 
+2. Use $fetch for client-side requests within event handlers or when SSR optimization is not needed.
+3. Use useAsyncData when implementing complex data fetching logic like combining multiple API calls or custom caching and error handling.
+4. Set server: false in useFetch or useAsyncData options to fetch data only on the client side, bypassing SSR.
+5. Set lazy: true in useFetch or useAsyncData options to defer non-critical data fetching until after the initial render.
+
+Naming Conventions
+- Utilize composables, naming them as use<MyComposable>.
+- Use **PascalCase** for component file names (e.g., components/MyComponent.vue).
+- Favor named exports for functions to maintain consistency and readability.
+
+USDA Nutrition Data Enhancement
+The application uses the USDA Food Data Central API to enhance ingredient nutritional data through three main functions:
+
+1. Search and Match (searchFoodItem)
+- Cleans search terms and queries USDA database
+- Implements smart sorting to find best matches
+- Uses scoring system for result ranking:
+  * Prefers shorter descriptions
+  * Boosts raw/basic ingredients
+  * Penalizes processed/prepared items
+  * Weights exact matches and term coverage
+- Returns prioritized list of potential food matches
+
+2. Nutrient Data Fetching (getFoodDetails)
+- Fetches detailed nutritional data for a specific food item
+- Returns comprehensive nutrient breakdown
+
+3. Data Enhancement (enhanceNutritionalData)
+- Coordinates the search and data fetching process
+- Maps USDA nutrients to application format
+- Applies portion calculations
+- Implements minimum score threshold for matches
+- Returns enhanced ingredient with standardized nutrition data
+
+4. Portion Calculations (getPortionMultiplier)
+- Converts common measurements to grams
+- Calculates multiplier based on portion size
+- Standardizes portions relative to USDA's 100g baseline
+
+Key Features:
+- Intelligent food matching using weighted scoring system
+- Standardized nutrient mapping (calories, protein, carbs, fat)
+- Support for common measurement units (cups, tbsp, oz, etc.)
+- Portion size conversion and scaling
+- Extensive error handling and fallbacks
+- Match quality validation with score thresholds
+
+Usage:
+1. Initialize ingredient with name and assumed portion
+2. Call enhanceNutritionalData with ingredient
+3. Receive enhanced ingredient with standardized nutrition data
+4. Apply serving size multipliers for final calculations
+
+Note: USDA API key required in config.js for functionality

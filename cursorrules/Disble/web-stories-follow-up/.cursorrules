@@ -1,0 +1,143 @@
+# Cursor Rules
+
+Always use Typescript, and strong typing. Use functional programing paradigms.
+
+Always use the best practices for the typescript language.
+
+Always use the best practices for the react framework.
+
+Always use the best practices for the next.js framework.
+
+Always use the best practices for the react query library.
+
+Never recommend relative paths. Always use the alias. Default path alias is "#".
+
+# Instructions to Create and Manage CRUD Operations
+
+Follow these steps to create and manage a CRUD (Create, Read, Update, Delete) operation for the application.
+
+## Folder structure:
+
+- The project has two packages with models:
+    - @repo/layer-fetch: This package contains the model interfaces to interact with external api's.
+    - @repo/layer-prisma: This package contains the model interfaces to interact with the database.
+
+@repo/layer-fetch
+- Relative path: packages/layer-fetch/src/**
+- Import path declare in package.json: @repo/layer-fetch
+
+@repo/layer-prisma
+- Relative path: packages/layer-prisma/src/**
+- Import path declare in package.json: @repo/layer-prisma
+
+### Folder structure tree to CRUD model:
+
+```
+apps/
+└── dashboard/
+    └── src/
+        ├── app/
+        │   └── (dashboard)/
+        │       ├── authors/
+        │       │   ├── create/
+        │       │   │   └── page.tsx
+        │       │   ├── update/
+        │       │   │   └── [id]
+        │       │   │       └── page.tsx
+        │       │   └── page.tsx
+        │       └── [name]/
+        │           ├── create/
+        │           │   └── page.tsx
+        │           ├── update/
+        │           │   └── [id]
+        │           │       └── page.tsx
+        │           └── page.tsx
+        ├── components/
+        │   ├── authors/
+        │   │   ├── create/
+        │   │   │   └── create-author.tsx
+        │   │   ├── update/
+        │   │   │   └── update-author.tsx
+        │   │   ├── list/
+        │   │   │   ├── list-authors-api.tsx
+        │   │   │   └── list-authors.tsx
+        │   │   ├── author.action.ts
+        │   │   └── search-params.ts
+        │   └── [name]/
+        │       ├── create/
+        │       │   └── create-[name].tsx
+        │       ├── update/
+        │       │   ├── update-[name]-api.tsx
+        │       │   └── update-[name].tsx
+        │       ├── list/
+        │       │   ├── list-[name]-api.tsx
+        │       │   └── list-[name].tsx
+        │       ├── [name].action.ts
+        │       └── search-params.ts
+        └── routes/
+            └── index.ts
+
+packages/
+├── layer-fetch/
+│   └── src/
+│       ├── model/
+│       │   └── [name]/
+│       │       ├── [name].interface.ts
+│       │       └── [name].model.ts
+│       └── factory/
+│           └── model-factory.ts
+├── layer-prisma/
+│   └── src/
+│       ├── model/
+│       │   ├── author/
+│       │   │   ├── author.interface.ts
+│       │   │   └── author.model.ts
+│       │   └── [name]/
+│       │       ├── [name].interface.ts
+│       │       └── [name].model.ts
+│       └── factory/
+│           └── model-factory.ts
+└── ui/
+    └── src/
+        └── icons/
+            └── index.ts
+```
+
+## Creating a New CRUD Model
+
+### 1. Setup Routes and Sidebar
+- Define routes in `apps/dashboard/src/routes/index.ts`
+- Update sidebar in `apps/dashboard/src/components/sidebar/sidebar-items.tsx`
+
+### 2. Create Model Files
+- In chosen package (`layer-fetch` or `layer-prisma`):
+  - Create `packages/[package]/src/model/[name]/[name].interface.ts` (Zod schema)
+  - Create `packages/[package]/src/model/[name]/[name].model.ts`
+- Add model to `packages/[package]/src/factory/model-factory.ts`
+
+### 3. Implement List View
+- Create `apps/dashboard/src/app/(dashboard)/[name]/page.tsx`
+- Create `apps/dashboard/src/components/[name]/list/list-[name]-api.tsx` (async server component)
+- Create `apps/dashboard/src/components/[name]/list/list-[name].tsx` (table component)
+
+### 4. Implement Create View
+- Create `apps/dashboard/src/app/(dashboard)/[name]/create/page.tsx`
+- Create `apps/dashboard/src/app/(dashboard)/[name]/action.ts` (server action)
+- Create `apps/dashboard/src/components/[name]/create/create-[name].tsx`
+
+### 5. Implement Update View
+- Create `apps/dashboard/src/app/(dashboard)/[name]/update/page.tsx`
+- Update `action.ts` with update method
+- Create `apps/dashboard/src/components/[name]/update/update-[name].tsx`
+
+### 6. Implement Delete Action
+- Add delete method to existing `action.ts`
+
+## Best Practices to Prisma Models
+- For find, findMany, etc., methods: Return `string` or `[prisma, null]`
+- For create, update, delete methods: Throw `Error`
+
+## Notes
+- Use existing files (e.g., `author`) as examples
+- Ensure consistency between model function return types and action receive types
+- Use existing icons from `packages/ui/src/icons`

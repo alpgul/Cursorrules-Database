@@ -1,0 +1,63 @@
+<rule>
+When checking if something is `null` or `undefined` in JavaScript/TypeScript, use `== null` and `!= null` explicitly, like so:
+```
+const value = map.get(key);
+if (value == null) {
+  return;
+}
+```
+
+Only use the "check if truthy/falsy" form when explicitly handling non-null falsy values:
+```
+const value = map.get(key);
+// Also guard against falsy values like `0` or empty string in addition to `null`/`undefined`.
+if (!value) {
+  return;
+}
+```
+</rule>
+
+<rule>
+The error variable in a try/catch should be named `err`.
+</rule>
+
+<rule>
+When working with `vitest`:
+- Prefer `.toStrictEqual()` over `.toEqual()`.
+- Always use `expect`, `onTestFinished`, and `onTestFailed` from the test context instead of module imports.
+</rule>
+
+<rule>
+The `tsconfig` has `noUncheckedIndexedAccess: true`, so always account for `undefined` values when doing indexed accesses on objects/arrays.
+</rule>
+
+<rule>
+Prefer arrow functions when defining anonymous functions.
+</rule>
+
+<rule>
+Instead of using drizzle's `inArray`, use `safeInArray` imported  from '$lib/server/db/util' instead.
+</rule>
+
+<rule>
+When writing HTML (including in components), use Tailwind CSS.
+</rule>
+
+<rule>
+When importing from '$lib/db/schema' or '$lib/route', use namespace imports like so:
+```
+import * as s from '$lib/db/schema';
+import * as r from '$lib/route';
+```
+</rule>
+
+<rule>
+When importing from a built-in Node.js module, use the 'node:' prefix, like so:
+```
+import { Readable } from 'node:stream';
+```
+</rule>
+
+<rule>
+When converting an iterable to an array, prefer `[...iterable]` over `Array.from(iterable)`
+</rule>

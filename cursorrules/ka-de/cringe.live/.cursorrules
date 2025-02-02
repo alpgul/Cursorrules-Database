@@ -1,0 +1,201 @@
+# Rules
+
+---
+
+## Writing Markdown
+
+---
+
+- In Markdown, fenced code blocks should be surrounded by blank lines
+
+### Example of a properly formatted fenced code block
+
+   ```md
+   1. Example of a properly formatted fenced code block
+
+      ```bash
+      echo "Like this!"
+      ```
+
+   ```
+
+## Frontmatter
+
+### Aliases
+
+- For translated content, only the English (en) version should have `/docs` root aliases. Other language versions should only have their language-specific aliases (e.g. `/ja/docs` for Japanese)
+
+#### Example of a properly formatted aliases in the frontmatter
+
+```yaml
+<!-- For the English version -->
+
+---
+title: "Tracking Training Changes"
+description: "Guide to keeping track of changes during LoRA training using automated scripts"
+summary: "Learn how to use automated scripts to organize and track your LoRA training process, including managing model versions, backing up configurations, and maintaining clean training workspaces."
+weight: 8
+bookToC: false
+bookFlatSection: false
+aliases:
+  - /en/docs/yiff_toolkit/lora_training/Tracking-Training-Changes/
+  - /en/docs/yiff_toolkit/lora_training/Tracking-Training-Changes
+  - /en/docs/yiff_toolkit/lora_training/Tracking_Training_Changes/
+  - /en/docs/yiff_toolkit/lora_training/Tracking_Training_Changes
+  - "/en/docs/yiff_toolkit/lora_training/Tracking Training Changes/"
+  - "/en/docs/yiff_toolkit/lora_training/Tracking Training Changes"
+  - /docs/yiff_toolkit/lora_training/Tracking-Training-Changes/
+  - /docs/yiff_toolkit/lora_training/Tracking-Training-Changes
+  - /docs/yiff_toolkit/lora_training/Tracking_Training_Changes/
+  - /docs/yiff_toolkit/lora_training/Tracking_Training_Changes
+  - "/docs/yiff_toolkit/lora_training/Tracking Training Changes/"
+  - "/docs/yiff_toolkit/lora_training/Tracking Training Changes"
+---
+
+<!-- For the Hungarian version -->
+
+---
+title: "Tanítási Változások Követése"
+description: "Útmutató a LoRA tanítás során történő változások követéséhez automatizált szkriptek segítségével"
+summary: "Ismerje meg, hogyan használhat automatizált szkripteket a LoRA tanítási folyamat rendszerezéséhez és követéséhez, beleértve a modellverziók kezelését, a konfigurációk biztonsági mentését és a tiszta tanítási munkakörnyezet fenntartását."
+weight: 8
+bookToC: false
+bookFlatSection: false
+aliases:
+  - /hu/docs/yiff_toolkit/lora_training/Tracking-Training-Changes/
+  - /hu/docs/yiff_toolkit/lora_training/Tracking-Training-Changes
+  - /hu/docs/yiff_toolkit/lora_training/Tracking_Training_Changes/
+  - /hu/docs/yiff_toolkit/lora_training/Tracking_Training_Changes
+  - "/hu/docs/yiff_toolkit/lora_training/Tracking Training Changes/"
+  - "/hu/docs/yiff_toolkit/lora_training/Tracking Training Changes"
+---
+```
+
+## Hugo Templates
+
+- Ignore linter errors for Hugo template syntax like `{{ . | safeJS }}` within `<script>` tags - these are valid Hugo template expressions
+
+## SCSS/CSS Styling
+
+### File Organization
+
+- SCSS partials should be prefixed with an underscore (e.g. `_blurhash.scss`)
+- All SCSS partials should be imported in `_main.scss`
+- Each component should have its own SCSS partial file
+- Global styles and variables should be in `_main.scss`
+
+### Import Order
+
+The import order in `_main.scss` should be:
+
+1. Variables and mixins
+2. Base styles
+3. Components
+4. Utilities
+5. Third-party styles
+
+Example:
+
+```scss
+// Variables and mixins first
+@import "variables";
+@import "mixins";
+
+// Base styles
+@import "defaults";
+@import "fonts";
+
+// Components
+@import "markdown";
+@import "shortcodes";
+@import "images";
+
+// Utilities
+@import "utils";
+@import "print";
+
+// Third-party
+@import "blurhash";
+```
+
+### Naming Conventions
+
+- Use kebab-case for class names (e.g. `image-container`)
+- Prefix classes with component name for scoping (e.g. `book-menu`, `book-toc`)
+- Use BEM-like naming for modifiers (e.g. `book-menu--collapsed`)
+
+### Media Queries
+
+- Define breakpoints as variables in `_main.scss`
+- Use mobile-first approach
+- Include media queries within the component styles
+
+Example:
+
+```scss
+.component {
+  // Mobile styles first
+  width: 100%;
+  
+  // Then tablet
+  @media screen and (min-width: $tablet-breakpoint) {
+    width: 50%;
+  }
+  
+  // Then desktop
+  @media screen and (min-width: $desktop-breakpoint) {
+    width: 33.33%;
+  }
+}
+```
+
+### Performance
+
+- Avoid deeply nested selectors (max 3 levels)
+- Use CSS Grid and Flexbox for layouts
+- Minimize use of `!important`
+- Use CSS variables for theme colors and values that change with user preferences
+
+Example:
+
+```scss
+// Good
+.image-container {
+  .blur-hash {
+    width: 100%;
+  }
+}
+
+// Bad - too deeply nested
+.container {
+  .wrapper {
+    .image {
+      .blur-hash {
+        width: 100%;
+      }
+    }
+  }
+}
+```
+
+### Theme Variables
+
+- Define theme variables in `:root`
+- Use semantic naming for variables
+- Include both light and dark theme values
+
+Example:
+
+```scss
+:root {
+  // Light theme
+  --body-background: #ffffff;
+  --body-font-color: #000000;
+  
+  // Dark theme
+  @media (prefers-color-scheme: dark) {
+    --body-background: #1a1a1a;
+    --body-font-color: #ffffff;
+  }
+}
+```

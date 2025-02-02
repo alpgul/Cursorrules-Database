@@ -1,0 +1,54 @@
+Code Style and Structure:
+
+- Use semicolons at the end of statements
+- Use single quotes for strings
+- Use camelCase for variable and function names
+- Organize code into folders by feature/domain
+- Export modules instead of using default exports
+
+Naming Conventions:
+
+- Use descriptive names for variables and functions 
+- Use camelCase for variables and functions
+- Use PascalCase for class names
+- Prefix global constants with GLOBAL_
+- Suffix interfaces with Interface
+
+TypeScript Usage:  
+
+- Use TypeScript for type safety
+- Add explicit types for function parameters and returns
+- Use type aliases for complex types 
+- Use interfaces for contracts between modules
+- Use utility types like Partial and Required where applicable
+
+Syntax and Formatting:
+
+- Indent code with 2 spaces (no tabs)
+- Open curly braces go on the same line
+- Use single line formatting for simple code
+- Add line breaks between logical sections
+- Print width of 100 characters per line
+
+UI and Styling:
+
+- Use JSX for templating with React
+- Keep component files colocated with CSS/SCSS
+- Use BEM methodology for naming CSS classes
+- Avoid using ids for styling
+- Use CSS modules for component-scoped styling
+
+Performance Optimization:
+
+- Avoid unnecessary re-renders in React
+- Use memoization for expensive functions 
+- Lazy load routes and components
+- Use Bun's build tooling for production optimizations
+
+Key Conventions:
+
+- Barrel index files to simplify imports
+- Use environment variables for secrets
+- Validate input data
+- Handle errors gracefully
+- Write tests for critical flows
