@@ -1,0 +1,29 @@
+1. Use TypeScript for type safety. Add types for function parameters and returns.
+
+2. Structure files by feature instead of by file type. Group together route handlers, models, controllers, etc.
+
+3. Use camelCase for variable and function names.
+
+4. Use descriptive names for variables and functions. Avoid single letters.
+
+5. Format the code consistently with Prettier.
+
+6. Use Hono's router for clean route definitions. Avoid complex nested route logic. 
+
+7. Keep components simple and reusable. Extract reusable logic into custom hooks.
+
+8. Use React's JSX for cleaner component markup.
+
+9. Modularize code by features. Avoid large monolithic files. 
+
+10. Add error handling for API and database calls.
+
+11. Add logging for debugging issues and tracking metrics.
+
+12. Follow separation of concerns. Put business logic in services, UI in components, etc.
+
+13. Optimize images, use compression, lazy load when possible.
+
+14. Use React.memo and useCallback for better performance.
+
+15. Split code into environments for better dev/prod optimizations.

@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 672,
+  "size": 734,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -9408,6 +9408,874 @@
         "htmlUrl": "https://github.com/KyrosDigital/kyros-business-ontology/blob/9a71dc18f00d1188c8174c2abc185848a8c99d66/.cursorrules",
         "size": 1.15,
         "timestamp": "2025-01-30T19:05:00.588Z"
+      }
+    ],
+    [
+      "Wox-launcher/Wox/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Wox-launcher/Wox/7ff5127ee87ce4b333ccf47552a538adf21ebd49/.cursorrules",
+        "repositoryId": 15315789,
+        "path": "Wox-launcher/Wox/.cursorrules",
+        "ownerName": "Wox-launcher",
+        "repositoryName": "Wox",
+        "htmlUrl": "https://github.com/Wox-launcher/Wox/blob/7ff5127ee87ce4b333ccf47552a538adf21ebd49/.cursorrules",
+        "size": 1.46,
+        "timestamp": "2025-02-02T20:05:29.917Z"
+      }
+    ],
+    [
+      "manifoldmarkets/manifold/knowledge.cursorrules",
+      {
+        "name": "knowledge.cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/manifoldmarkets/manifold/e5c6d733049400811df4e135927a757dcf8779cc/knowledge.cursorrules",
+        "repositoryId": 433321004,
+        "path": "manifoldmarkets/manifold/knowledge.cursorrules",
+        "ownerName": "manifoldmarkets",
+        "repositoryName": "manifold",
+        "htmlUrl": "https://github.com/manifoldmarkets/manifold/blob/e5c6d733049400811df4e135927a757dcf8779cc/knowledge.cursorrules",
+        "size": 15.54,
+        "timestamp": "2025-02-02T20:05:30.007Z"
+      }
+    ],
+    [
+      "twentyhq/twenty/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/twentyhq/twenty/4b9414a0022c7a3b02bda24336073f3dd8f75648/.cursorrules",
+        "repositoryId": 572984571,
+        "path": "twentyhq/twenty/.cursorrules",
+        "ownerName": "twentyhq",
+        "repositoryName": "twenty",
+        "htmlUrl": "https://github.com/twentyhq/twenty/blob/4b9414a0022c7a3b02bda24336073f3dd8f75648/.cursorrules",
+        "size": 2.54,
+        "timestamp": "2025-02-02T20:05:30.471Z"
+      }
+    ],
+    [
+      "salvo-rs/salvo-cli/templates/classic/mongodb/.cursorrules.liquid",
+      {
+        "name": ".cursorrules.liquid",
+        "downloadUrl": "https://raw.githubusercontent.com/salvo-rs/salvo-cli/c90fba5afcbcb5ed5d91482de0938305bbc8262f/templates/classic/mongodb/.cursorrules.liquid",
+        "repositoryId": 694134365,
+        "path": "salvo-rs/salvo-cli/templates/classic/mongodb/.cursorrules.liquid",
+        "ownerName": "salvo-rs",
+        "repositoryName": "salvo-cli",
+        "htmlUrl": "https://github.com/salvo-rs/salvo-cli/blob/c90fba5afcbcb5ed5d91482de0938305bbc8262f/templates/classic/mongodb/.cursorrules.liquid",
+        "size": 6.89,
+        "timestamp": "2025-02-02T20:05:30.783Z"
+      }
+    ],
+    [
+      "heyxyz/hey/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/heyxyz/hey/9ab8d088d2e79f6524db7c63c0ea38299ddcc3bd/.cursorrules",
+        "repositoryId": 471728341,
+        "path": "heyxyz/hey/.cursorrules",
+        "ownerName": "heyxyz",
+        "repositoryName": "hey",
+        "htmlUrl": "https://github.com/heyxyz/hey/blob/9ab8d088d2e79f6524db7c63c0ea38299ddcc3bd/.cursorrules",
+        "size": 4.22,
+        "timestamp": "2025-02-02T20:05:31.573Z"
+      }
+    ],
+    [
+      "assafelovic/gpt-researcher/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/assafelovic/gpt-researcher/ad14a5efed5552f28e9119387578c79fb1b8073c/.cursorrules",
+        "repositoryId": 639835356,
+        "path": "assafelovic/gpt-researcher/.cursorrules",
+        "ownerName": "assafelovic",
+        "repositoryName": "gpt-researcher",
+        "htmlUrl": "https://github.com/assafelovic/gpt-researcher/blob/ad14a5efed5552f28e9119387578c79fb1b8073c/.cursorrules",
+        "size": 5.8,
+        "timestamp": "2025-02-02T20:05:32.382Z"
+      }
+    ],
+    [
+      "manifoldmarkets/manifold/mani/knowledge.cursorrules",
+      {
+        "name": "knowledge.cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/manifoldmarkets/manifold/e5c6d733049400811df4e135927a757dcf8779cc/mani/knowledge.cursorrules",
+        "repositoryId": 433321004,
+        "path": "manifoldmarkets/manifold/mani/knowledge.cursorrules",
+        "ownerName": "manifoldmarkets",
+        "repositoryName": "manifold",
+        "htmlUrl": "https://github.com/manifoldmarkets/manifold/blob/e5c6d733049400811df4e135927a757dcf8779cc/mani/knowledge.cursorrules",
+        "size": 1.86,
+        "timestamp": "2025-02-02T20:05:33.021Z"
+      }
+    ],
+    [
+      "samuelclay/NewsBlur/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/samuelclay/NewsBlur/f4b68a5610f3eba8ce685a6d92902d65f667d115/.cursorrules",
+        "repositoryId": 101248,
+        "path": "samuelclay/NewsBlur/.cursorrules",
+        "ownerName": "samuelclay",
+        "repositoryName": "NewsBlur",
+        "htmlUrl": "https://github.com/samuelclay/NewsBlur/blob/f4b68a5610f3eba8ce685a6d92902d65f667d115/.cursorrules",
+        "size": 1.15,
+        "timestamp": "2025-02-02T20:05:33.309Z"
+      }
+    ],
+    [
+      "dagster-io/dagster/docs/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/dagster-io/dagster/357f918be13bed53e007ccb2d12c09a053b36f27/docs/.cursorrules",
+        "repositoryId": 131619646,
+        "path": "dagster-io/dagster/docs/.cursorrules",
+        "ownerName": "dagster-io",
+        "repositoryName": "dagster",
+        "htmlUrl": "https://github.com/dagster-io/dagster/blob/357f918be13bed53e007ccb2d12c09a053b36f27/docs/.cursorrules",
+        "size": 1.48,
+        "timestamp": "2025-02-02T20:05:33.748Z"
+      }
+    ],
+    [
+      "PatrickJS/awesome-cursorrules/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/.cursorrules",
+        "repositoryId": 858262444,
+        "path": "PatrickJS/awesome-cursorrules/.cursorrules",
+        "ownerName": "PatrickJS",
+        "repositoryName": "awesome-cursorrules",
+        "htmlUrl": "https://github.com/PatrickJS/awesome-cursorrules/blob/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/.cursorrules",
+        "size": 3.74,
+        "timestamp": "2025-02-02T20:05:34.036Z"
+      }
+    ],
+    [
+      "VRSEN/agency-swarm/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/VRSEN/agency-swarm/8bc648e399de9e70ef52f5b3dc36ddf606abb2b2/.cursorrules",
+        "repositoryId": 719367294,
+        "path": "VRSEN/agency-swarm/.cursorrules",
+        "ownerName": "VRSEN",
+        "repositoryName": "agency-swarm",
+        "htmlUrl": "https://github.com/VRSEN/agency-swarm/blob/8bc648e399de9e70ef52f5b3dc36ddf606abb2b2/.cursorrules",
+        "size": 16.27,
+        "timestamp": "2025-02-02T20:05:34.679Z"
+      }
+    ],
+    [
+      "afadil/wealthfolio/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/afadil/wealthfolio/db0d349661017248a1a865d443d51868af0c6687/.cursorrules",
+        "repositoryId": 806618581,
+        "path": "afadil/wealthfolio/.cursorrules",
+        "ownerName": "afadil",
+        "repositoryName": "wealthfolio",
+        "htmlUrl": "https://github.com/afadil/wealthfolio/blob/db0d349661017248a1a865d443d51868af0c6687/.cursorrules",
+        "size": 1.53,
+        "timestamp": "2025-02-02T20:05:35.283Z"
+      }
+    ],
+    [
+      "PatrickJS/awesome-cursorrules/temporal-python-cursorrules/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/temporal-python-cursorrules/.cursorrules",
+        "repositoryId": 858262444,
+        "path": "PatrickJS/awesome-cursorrules/temporal-python-cursorrules/.cursorrules",
+        "ownerName": "PatrickJS",
+        "repositoryName": "awesome-cursorrules",
+        "htmlUrl": "https://github.com/PatrickJS/awesome-cursorrules/blob/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/temporal-python-cursorrules/.cursorrules",
+        "size": 3,
+        "timestamp": "2025-02-02T20:05:35.375Z"
+      }
+    ],
+    [
+      "piotrkulpinski/openalternative/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/piotrkulpinski/openalternative/ef65a3043d4c874579cc73a15443c3d5bdf280b0/.cursorrules",
+        "repositoryId": 764555401,
+        "path": "piotrkulpinski/openalternative/.cursorrules",
+        "ownerName": "piotrkulpinski",
+        "repositoryName": "openalternative",
+        "htmlUrl": "https://github.com/piotrkulpinski/openalternative/blob/ef65a3043d4c874579cc73a15443c3d5bdf280b0/.cursorrules",
+        "size": 3.23,
+        "timestamp": "2025-02-02T20:05:35.684Z"
+      }
+    ],
+    [
+      "MultiQC/MultiQC/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/MultiQC/MultiQC/c17519d117cc87173b7c8f546749df79fffb591e/.cursorrules",
+        "repositoryId": 40187375,
+        "path": "MultiQC/MultiQC/.cursorrules",
+        "ownerName": "MultiQC",
+        "repositoryName": "MultiQC",
+        "htmlUrl": "https://github.com/MultiQC/MultiQC/blob/c17519d117cc87173b7c8f546749df79fffb591e/.cursorrules",
+        "size": 6.29,
+        "timestamp": "2025-02-02T20:05:35.970Z"
+      }
+    ],
+    [
+      "PatrickJS/awesome-cursorrules/rules/htmx-django-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/htmx-django-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 858262444,
+        "path": "PatrickJS/awesome-cursorrules/rules/htmx-django-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "PatrickJS",
+        "repositoryName": "awesome-cursorrules",
+        "htmlUrl": "https://github.com/PatrickJS/awesome-cursorrules/blob/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/htmx-django-cursorrules-prompt-file/.cursorrules",
+        "size": 1.07,
+        "timestamp": "2025-02-02T20:05:36.517Z"
+      }
+    ],
+    [
+      "PatrickJS/awesome-cursorrules/rules/htmx-go-fiber-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/htmx-go-fiber-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 858262444,
+        "path": "PatrickJS/awesome-cursorrules/rules/htmx-go-fiber-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "PatrickJS",
+        "repositoryName": "awesome-cursorrules",
+        "htmlUrl": "https://github.com/PatrickJS/awesome-cursorrules/blob/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/htmx-go-fiber-cursorrules-prompt-file/.cursorrules",
+        "size": 1.03,
+        "timestamp": "2025-02-02T20:05:36.794Z"
+      }
+    ],
+    [
+      "PatrickJS/awesome-cursorrules/rules/qwik-tailwind-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/qwik-tailwind-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 858262444,
+        "path": "PatrickJS/awesome-cursorrules/rules/qwik-tailwind-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "PatrickJS",
+        "repositoryName": "awesome-cursorrules",
+        "htmlUrl": "https://github.com/PatrickJS/awesome-cursorrules/blob/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/qwik-tailwind-cursorrules-prompt-file/.cursorrules",
+        "size": 1.28,
+        "timestamp": "2025-02-02T20:05:36.963Z"
+      }
+    ],
+    [
+      "PatrickJS/awesome-cursorrules/rules/typescript-clasp-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/typescript-clasp-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 858262444,
+        "path": "PatrickJS/awesome-cursorrules/rules/typescript-clasp-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "PatrickJS",
+        "repositoryName": "awesome-cursorrules",
+        "htmlUrl": "https://github.com/PatrickJS/awesome-cursorrules/blob/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/typescript-clasp-cursorrules-prompt-file/.cursorrules",
+        "size": 2.57,
+        "timestamp": "2025-02-02T20:05:37.856Z"
+      }
+    ],
+    [
+      "PatrickJS/awesome-cursorrules/rules/solidjs-tailwind-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/solidjs-tailwind-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 858262444,
+        "path": "PatrickJS/awesome-cursorrules/rules/solidjs-tailwind-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "PatrickJS",
+        "repositoryName": "awesome-cursorrules",
+        "htmlUrl": "https://github.com/PatrickJS/awesome-cursorrules/blob/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/solidjs-tailwind-cursorrules-prompt-file/.cursorrules",
+        "size": 1.1,
+        "timestamp": "2025-02-02T20:05:38.072Z"
+      }
+    ],
+    [
+      "PatrickJS/awesome-cursorrules/rules/typescript-nextjs-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/typescript-nextjs-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 858262444,
+        "path": "PatrickJS/awesome-cursorrules/rules/typescript-nextjs-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "PatrickJS",
+        "repositoryName": "awesome-cursorrules",
+        "htmlUrl": "https://github.com/PatrickJS/awesome-cursorrules/blob/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/typescript-nextjs-cursorrules-prompt-file/.cursorrules",
+        "size": 2.37,
+        "timestamp": "2025-02-02T20:05:38.540Z"
+      }
+    ],
+    [
+      "PatrickJS/awesome-cursorrules/rules/github-code-quality-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/github-code-quality-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 858262444,
+        "path": "PatrickJS/awesome-cursorrules/rules/github-code-quality-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "PatrickJS",
+        "repositoryName": "awesome-cursorrules",
+        "htmlUrl": "https://github.com/PatrickJS/awesome-cursorrules/blob/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/github-code-quality-cursorrules-prompt-file/.cursorrules",
+        "size": 3.29,
+        "timestamp": "2025-02-02T20:05:38.952Z"
+      }
+    ],
+    [
+      "PatrickJS/awesome-cursorrules/rules/python-github-setup-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/python-github-setup-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 858262444,
+        "path": "PatrickJS/awesome-cursorrules/rules/python-github-setup-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "PatrickJS",
+        "repositoryName": "awesome-cursorrules",
+        "htmlUrl": "https://github.com/PatrickJS/awesome-cursorrules/blob/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/python-github-setup-cursorrules-prompt-file/.cursorrules",
+        "size": 4.6,
+        "timestamp": "2025-02-02T20:05:39.236Z"
+      }
+    ],
+    [
+      "PatrickJS/awesome-cursorrules/rules/java-springboot-jpa-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/java-springboot-jpa-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 858262444,
+        "path": "PatrickJS/awesome-cursorrules/rules/java-springboot-jpa-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "PatrickJS",
+        "repositoryName": "awesome-cursorrules",
+        "htmlUrl": "https://github.com/PatrickJS/awesome-cursorrules/blob/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/java-springboot-jpa-cursorrules-prompt-file/.cursorrules",
+        "size": 4.52,
+        "timestamp": "2025-02-02T20:05:39.333Z"
+      }
+    ],
+    [
+      "PatrickJS/awesome-cursorrules/rules/python-cursorrules-prompt-file-best-practices/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/python-cursorrules-prompt-file-best-practices/.cursorrules",
+        "repositoryId": 858262444,
+        "path": "PatrickJS/awesome-cursorrules/rules/python-cursorrules-prompt-file-best-practices/.cursorrules",
+        "ownerName": "PatrickJS",
+        "repositoryName": "awesome-cursorrules",
+        "htmlUrl": "https://github.com/PatrickJS/awesome-cursorrules/blob/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/python-cursorrules-prompt-file-best-practices/.cursorrules",
+        "size": 1.83,
+        "timestamp": "2025-02-02T20:05:39.902Z"
+      }
+    ],
+    [
+      "PatrickJS/awesome-cursorrules/rules/angular-novo-elements-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/angular-novo-elements-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 858262444,
+        "path": "PatrickJS/awesome-cursorrules/rules/angular-novo-elements-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "PatrickJS",
+        "repositoryName": "awesome-cursorrules",
+        "htmlUrl": "https://github.com/PatrickJS/awesome-cursorrules/blob/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/angular-novo-elements-cursorrules-prompt-file/.cursorrules",
+        "size": 6.01,
+        "timestamp": "2025-02-02T20:05:40.189Z"
+      }
+    ],
+    [
+      "PatrickJS/awesome-cursorrules/rules/ascii-simulation-game-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/ascii-simulation-game-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 858262444,
+        "path": "PatrickJS/awesome-cursorrules/rules/ascii-simulation-game-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "PatrickJS",
+        "repositoryName": "awesome-cursorrules",
+        "htmlUrl": "https://github.com/PatrickJS/awesome-cursorrules/blob/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/ascii-simulation-game-cursorrules-prompt-file/.cursorrules",
+        "size": 4.6,
+        "timestamp": "2025-02-02T20:05:40.560Z"
+      }
+    ],
+    [
+      "PatrickJS/awesome-cursorrules/rules/nextjs-react-tailwind-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/nextjs-react-tailwind-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 858262444,
+        "path": "PatrickJS/awesome-cursorrules/rules/nextjs-react-tailwind-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "PatrickJS",
+        "repositoryName": "awesome-cursorrules",
+        "htmlUrl": "https://github.com/PatrickJS/awesome-cursorrules/blob/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/nextjs-react-tailwind-cursorrules-prompt-file/.cursorrules",
+        "size": 3.89,
+        "timestamp": "2025-02-02T20:05:40.631Z"
+      }
+    ],
+    [
+      "PatrickJS/awesome-cursorrules/rules/react-styled-components-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/react-styled-components-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 858262444,
+        "path": "PatrickJS/awesome-cursorrules/rules/react-styled-components-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "PatrickJS",
+        "repositoryName": "awesome-cursorrules",
+        "htmlUrl": "https://github.com/PatrickJS/awesome-cursorrules/blob/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/react-styled-components-cursorrules-prompt-file/.cursorrules",
+        "size": 1.04,
+        "timestamp": "2025-02-02T20:05:41.689Z"
+      }
+    ],
+    [
+      "PatrickJS/awesome-cursorrules/rules/tailwind-react-firebase-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/tailwind-react-firebase-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 858262444,
+        "path": "PatrickJS/awesome-cursorrules/rules/tailwind-react-firebase-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "PatrickJS",
+        "repositoryName": "awesome-cursorrules",
+        "htmlUrl": "https://github.com/PatrickJS/awesome-cursorrules/blob/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/tailwind-react-firebase-cursorrules-prompt-file/.cursorrules",
+        "size": 3.64,
+        "timestamp": "2025-02-02T20:05:41.753Z"
+      }
+    ],
+    [
+      "PatrickJS/awesome-cursorrules/rules/nodejs-mongodb-cursorrules-prompt-file-tutorial/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/nodejs-mongodb-cursorrules-prompt-file-tutorial/.cursorrules",
+        "repositoryId": 858262444,
+        "path": "PatrickJS/awesome-cursorrules/rules/nodejs-mongodb-cursorrules-prompt-file-tutorial/.cursorrules",
+        "ownerName": "PatrickJS",
+        "repositoryName": "awesome-cursorrules",
+        "htmlUrl": "https://github.com/PatrickJS/awesome-cursorrules/blob/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/nodejs-mongodb-cursorrules-prompt-file-tutorial/.cursorrules",
+        "size": 1.95,
+        "timestamp": "2025-02-02T20:05:42.035Z"
+      }
+    ],
+    [
+      "PatrickJS/awesome-cursorrules/rules/vue-3-nuxt-3-development-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/vue-3-nuxt-3-development-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 858262444,
+        "path": "PatrickJS/awesome-cursorrules/rules/vue-3-nuxt-3-development-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "PatrickJS",
+        "repositoryName": "awesome-cursorrules",
+        "htmlUrl": "https://github.com/PatrickJS/awesome-cursorrules/blob/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/vue-3-nuxt-3-development-cursorrules-prompt-file/.cursorrules",
+        "size": 1.93,
+        "timestamp": "2025-02-02T20:05:42.313Z"
+      }
+    ],
+    [
+      "PatrickJS/awesome-cursorrules/rules/tailwind-shadcn-ui-integration-cursorrules-prompt-/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/tailwind-shadcn-ui-integration-cursorrules-prompt-/.cursorrules",
+        "repositoryId": 858262444,
+        "path": "PatrickJS/awesome-cursorrules/rules/tailwind-shadcn-ui-integration-cursorrules-prompt-/.cursorrules",
+        "ownerName": "PatrickJS",
+        "repositoryName": "awesome-cursorrules",
+        "htmlUrl": "https://github.com/PatrickJS/awesome-cursorrules/blob/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/tailwind-shadcn-ui-integration-cursorrules-prompt-/.cursorrules",
+        "size": 1.07,
+        "timestamp": "2025-02-02T20:05:42.383Z"
+      }
+    ],
+    [
+      "PatrickJS/awesome-cursorrules/rules/typescript-nodejs-nextjs-react-ui-css-cursorrules-/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/typescript-nodejs-nextjs-react-ui-css-cursorrules-/.cursorrules",
+        "repositoryId": 858262444,
+        "path": "PatrickJS/awesome-cursorrules/rules/typescript-nodejs-nextjs-react-ui-css-cursorrules-/.cursorrules",
+        "ownerName": "PatrickJS",
+        "repositoryName": "awesome-cursorrules",
+        "htmlUrl": "https://github.com/PatrickJS/awesome-cursorrules/blob/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/typescript-nodejs-nextjs-react-ui-css-cursorrules-/.cursorrules",
+        "size": 1.75,
+        "timestamp": "2025-02-02T20:05:42.940Z"
+      }
+    ],
+    [
+      "PatrickJS/awesome-cursorrules/rules/python-fastapi-best-practices-cursorrules-prompt-f/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/python-fastapi-best-practices-cursorrules-prompt-f/.cursorrules",
+        "repositoryId": 858262444,
+        "path": "PatrickJS/awesome-cursorrules/rules/python-fastapi-best-practices-cursorrules-prompt-f/.cursorrules",
+        "ownerName": "PatrickJS",
+        "repositoryName": "awesome-cursorrules",
+        "htmlUrl": "https://github.com/PatrickJS/awesome-cursorrules/blob/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/python-fastapi-best-practices-cursorrules-prompt-f/.cursorrules",
+        "size": 2.42,
+        "timestamp": "2025-02-02T20:05:43.214Z"
+      }
+    ],
+    [
+      "PatrickJS/awesome-cursorrules/rules/typescript-shadcn-ui-nextjs-cursorrules-prompt-fil/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/typescript-shadcn-ui-nextjs-cursorrules-prompt-fil/.cursorrules",
+        "repositoryId": 858262444,
+        "path": "PatrickJS/awesome-cursorrules/rules/typescript-shadcn-ui-nextjs-cursorrules-prompt-fil/.cursorrules",
+        "ownerName": "PatrickJS",
+        "repositoryName": "awesome-cursorrules",
+        "htmlUrl": "https://github.com/PatrickJS/awesome-cursorrules/blob/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/typescript-shadcn-ui-nextjs-cursorrules-prompt-fil/.cursorrules",
+        "size": 1.96,
+        "timestamp": "2025-02-02T20:05:43.849Z"
+      }
+    ],
+    [
+      "PatrickJS/awesome-cursorrules/rules/html-tailwind-css-javascript-cursorrules-prompt-fi/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/html-tailwind-css-javascript-cursorrules-prompt-fi/.cursorrules",
+        "repositoryId": 858262444,
+        "path": "PatrickJS/awesome-cursorrules/rules/html-tailwind-css-javascript-cursorrules-prompt-fi/.cursorrules",
+        "ownerName": "PatrickJS",
+        "repositoryName": "awesome-cursorrules",
+        "htmlUrl": "https://github.com/PatrickJS/awesome-cursorrules/blob/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/html-tailwind-css-javascript-cursorrules-prompt-fi/.cursorrules",
+        "size": 1.22,
+        "timestamp": "2025-02-02T20:05:43.933Z"
+      }
+    ],
+    [
+      "PatrickJS/awesome-cursorrules/rules/graphical-apps-development-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/graphical-apps-development-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 858262444,
+        "path": "PatrickJS/awesome-cursorrules/rules/graphical-apps-development-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "PatrickJS",
+        "repositoryName": "awesome-cursorrules",
+        "htmlUrl": "https://github.com/PatrickJS/awesome-cursorrules/blob/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/graphical-apps-development-cursorrules-prompt-file/.cursorrules",
+        "size": 2.82,
+        "timestamp": "2025-02-02T20:05:44.345Z"
+      }
+    ],
+    [
+      "PatrickJS/awesome-cursorrules/rules/react-nextjs-ui-development-cursorrules-prompt-fil/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/react-nextjs-ui-development-cursorrules-prompt-fil/.cursorrules",
+        "repositoryId": 858262444,
+        "path": "PatrickJS/awesome-cursorrules/rules/react-nextjs-ui-development-cursorrules-prompt-fil/.cursorrules",
+        "ownerName": "PatrickJS",
+        "repositoryName": "awesome-cursorrules",
+        "htmlUrl": "https://github.com/PatrickJS/awesome-cursorrules/blob/867da0c98fb8498cb1b92db507acc1ccccd6a6f5/rules/react-nextjs-ui-development-cursorrules-prompt-fil/.cursorrules",
+        "size": 1.27,
+        "timestamp": "2025-02-02T20:05:44.438Z"
+      }
+    ],
+    [
+      "Openpanel-dev/openpanel/apps/public/content/articles/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Openpanel-dev/openpanel/a2b74a9b4d0dae87ff3be6d1a491b75b6dc3a29b/apps/public/content/articles/.cursorrules",
+        "repositoryId": 765049188,
+        "path": "Openpanel-dev/openpanel/apps/public/content/articles/.cursorrules",
+        "ownerName": "Openpanel-dev",
+        "repositoryName": "openpanel",
+        "htmlUrl": "https://github.com/Openpanel-dev/openpanel/blob/a2b74a9b4d0dae87ff3be6d1a491b75b6dc3a29b/apps/public/content/articles/.cursorrules",
+        "size": 1.78,
+        "timestamp": "2025-02-02T20:05:45.013Z"
+      }
+    ],
+    [
+      "itsdillon/readmewriter-example/.cursorrules/.cursorrules-2024-10-05-17-15-26",
+      {
+        "name": ".cursorrules-2024-10-05-17-15-26",
+        "downloadUrl": "https://raw.githubusercontent.com/itsdillon/readmewriter-example/d7538e8a58357b69f212f310690c3e000cab8eea/.cursorrules/.cursorrules-2024-10-05-17-15-26",
+        "repositoryId": 826510457,
+        "path": "itsdillon/readmewriter-example/.cursorrules/.cursorrules-2024-10-05-17-15-26",
+        "ownerName": "itsdillon",
+        "repositoryName": "readmewriter-example",
+        "htmlUrl": "https://github.com/itsdillon/readmewriter-example/blob/d7538e8a58357b69f212f310690c3e000cab8eea/.cursorrules/.cursorrules-2024-10-05-17-15-26",
+        "size": 1.02,
+        "timestamp": "2025-02-02T20:05:45.527Z"
+      }
+    ],
+    [
+      "0J27VWx/UNi57cV7lgY/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/0J27VWx/UNi57cV7lgY/3f8af426344bcfaabe0d8caedbdb4842eb37bf42/.cursorrules",
+        "repositoryId": 836684704,
+        "path": "0J27VWx/UNi57cV7lgY/.cursorrules",
+        "ownerName": "0J27VWx",
+        "repositoryName": "UNi57cV7lgY",
+        "htmlUrl": "https://github.com/0J27VWx/UNi57cV7lgY/blob/3f8af426344bcfaabe0d8caedbdb4842eb37bf42/.cursorrules",
+        "size": 2.54,
+        "timestamp": "2025-02-02T20:05:45.639Z"
+      }
+    ],
+    [
+      "gZAk7CIb/O5h8iv3mY/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/gZAk7CIb/O5h8iv3mY/348715c0e7c72446da23e3aa6b42b8b3b8d8d9f6/.cursorrules",
+        "repositoryId": 890293791,
+        "path": "gZAk7CIb/O5h8iv3mY/.cursorrules",
+        "ownerName": "gZAk7CIb",
+        "repositoryName": "O5h8iv3mY",
+        "htmlUrl": "https://github.com/gZAk7CIb/O5h8iv3mY/blob/348715c0e7c72446da23e3aa6b42b8b3b8d8d9f6/.cursorrules",
+        "size": 2.54,
+        "timestamp": "2025-02-02T20:05:45.739Z"
+      }
+    ],
+    [
+      "0ExDVV5A/TBj6YYdY/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/0ExDVV5A/TBj6YYdY/755567c82eab530c6a079287facb1b75d8826b2d/.cursorrules",
+        "repositoryId": 890324091,
+        "path": "0ExDVV5A/TBj6YYdY/.cursorrules",
+        "ownerName": "0ExDVV5A",
+        "repositoryName": "TBj6YYdY",
+        "htmlUrl": "https://github.com/0ExDVV5A/TBj6YYdY/blob/755567c82eab530c6a079287facb1b75d8826b2d/.cursorrules",
+        "size": 2.54,
+        "timestamp": "2025-02-02T20:05:46.058Z"
+      }
+    ],
+    [
+      "h5J0XZD8/VzWgmiqY/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/h5J0XZD8/VzWgmiqY/6264215107bd134a605062d3b8d9dc665deac335/.cursorrules",
+        "repositoryId": 890437962,
+        "path": "h5J0XZD8/VzWgmiqY/.cursorrules",
+        "ownerName": "h5J0XZD8",
+        "repositoryName": "VzWgmiqY",
+        "htmlUrl": "https://github.com/h5J0XZD8/VzWgmiqY/blob/6264215107bd134a605062d3b8d9dc665deac335/.cursorrules",
+        "size": 2.54,
+        "timestamp": "2025-02-02T20:05:46.372Z"
+      }
+    ],
+    [
+      "aorT59w/W1yPuFKY/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/aorT59w/W1yPuFKY/46f94c019f2fe6026dbae7cfaec5b1e134a4e2f2/.cursorrules",
+        "repositoryId": 836679192,
+        "path": "aorT59w/W1yPuFKY/.cursorrules",
+        "ownerName": "aorT59w",
+        "repositoryName": "W1yPuFKY",
+        "htmlUrl": "https://github.com/aorT59w/W1yPuFKY/blob/46f94c019f2fe6026dbae7cfaec5b1e134a4e2f2/.cursorrules",
+        "size": 4.22,
+        "timestamp": "2025-02-02T20:05:46.669Z"
+      }
+    ],
+    [
+      "zQwVNB/Q5Bn3Uj7Y/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/zQwVNB/Q5Bn3Uj7Y/1f3c0bfedb058bc44c11eda0c09341790c03a753/.cursorrules",
+        "repositoryId": 836655457,
+        "path": "zQwVNB/Q5Bn3Uj7Y/.cursorrules",
+        "ownerName": "zQwVNB",
+        "repositoryName": "Q5Bn3Uj7Y",
+        "htmlUrl": "https://github.com/zQwVNB/Q5Bn3Uj7Y/blob/1f3c0bfedb058bc44c11eda0c09341790c03a753/.cursorrules",
+        "size": 4.22,
+        "timestamp": "2025-02-02T20:05:46.760Z"
+      }
+    ],
+    [
+      "ms3IFYv/VwrEZtBffY/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ms3IFYv/VwrEZtBffY/c0738025f0758a5e44bb22c7751ee7482b6891c5/.cursorrules",
+        "repositoryId": 890293551,
+        "path": "ms3IFYv/VwrEZtBffY/.cursorrules",
+        "ownerName": "ms3IFYv",
+        "repositoryName": "VwrEZtBffY",
+        "htmlUrl": "https://github.com/ms3IFYv/VwrEZtBffY/blob/c0738025f0758a5e44bb22c7751ee7482b6891c5/.cursorrules",
+        "size": 4.22,
+        "timestamp": "2025-02-02T20:05:46.892Z"
+      }
+    ],
+    [
+      "G79tjU/RIek3H60Y/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/G79tjU/RIek3H60Y/ec40b774608e3b5235990f005b061ba6e9827658/.cursorrules",
+        "repositoryId": 890293571,
+        "path": "G79tjU/RIek3H60Y/.cursorrules",
+        "ownerName": "G79tjU",
+        "repositoryName": "RIek3H60Y",
+        "htmlUrl": "https://github.com/G79tjU/RIek3H60Y/blob/ec40b774608e3b5235990f005b061ba6e9827658/.cursorrules",
+        "size": 4.22,
+        "timestamp": "2025-02-02T20:05:47.019Z"
+      }
+    ],
+    [
+      "devhaemin/codernetes/src/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/devhaemin/codernetes/3764db34a7452959928b206d6372a9f3bdc5661a/src/.cursorrules",
+        "repositoryId": 901735308,
+        "path": "devhaemin/codernetes/src/.cursorrules",
+        "ownerName": "devhaemin",
+        "repositoryName": "codernetes",
+        "htmlUrl": "https://github.com/devhaemin/codernetes/blob/3764db34a7452959928b206d6372a9f3bdc5661a/src/.cursorrules",
+        "size": 3.74,
+        "timestamp": "2025-02-02T20:05:48.464Z"
+      }
+    ],
+    [
+      "santiagogilv/App-Portfolio/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/santiagogilv/App-Portfolio/ff78707c777d118c89c44207ba66fa90e62bb79e/.cursorrules",
+        "repositoryId": 890652406,
+        "path": "santiagogilv/App-Portfolio/.cursorrules",
+        "ownerName": "santiagogilv",
+        "repositoryName": "App-Portfolio",
+        "htmlUrl": "https://github.com/santiagogilv/App-Portfolio/blob/ff78707c777d118c89c44207ba66fa90e62bb79e/.cursorrules",
+        "size": 1.53,
+        "timestamp": "2025-02-02T20:05:49.573Z"
+      }
+    ],
+    [
+      "marcusrbrown/gpt/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/marcusrbrown/gpt/cb0985b3be3a9a58d7d63b4e6daf5f2d70c1d95b/.cursorrules",
+        "repositoryId": 726038792,
+        "path": "marcusrbrown/gpt/.cursorrules",
+        "ownerName": "marcusrbrown",
+        "repositoryName": "gpt",
+        "htmlUrl": "https://github.com/marcusrbrown/gpt/blob/cb0985b3be3a9a58d7d63b4e6daf5f2d70c1d95b/.cursorrules",
+        "size": 5.28,
+        "timestamp": "2025-02-02T20:05:50.992Z"
+      }
+    ],
+    [
+      "Crypto-Jaguars/Revo-Marketplace/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Crypto-Jaguars/Revo-Marketplace/a9fe3b393270904363a14ea7ddf10d33e3d78474/.cursorrules",
+        "repositoryId": 902227340,
+        "path": "Crypto-Jaguars/Revo-Marketplace/.cursorrules",
+        "ownerName": "Crypto-Jaguars",
+        "repositoryName": "Revo-Marketplace",
+        "htmlUrl": "https://github.com/Crypto-Jaguars/Revo-Marketplace/blob/a9fe3b393270904363a14ea7ddf10d33e3d78474/.cursorrules",
+        "size": 2.6,
+        "timestamp": "2025-02-02T20:05:51.614Z"
+      }
+    ],
+    [
+      "samzhu/spring-ai-studio/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/samzhu/spring-ai-studio/8f62ec58cf0d8a52861036d152c6face3c43368e/.cursorrules",
+        "repositoryId": 925037416,
+        "path": "samzhu/spring-ai-studio/.cursorrules",
+        "ownerName": "samzhu",
+        "repositoryName": "spring-ai-studio",
+        "htmlUrl": "https://github.com/samzhu/spring-ai-studio/blob/8f62ec58cf0d8a52861036d152c6face3c43368e/.cursorrules",
+        "size": 1.01,
+        "timestamp": "2025-02-02T20:05:52.226Z"
+      }
+    ],
+    [
+      "LuyNagda/transcendence/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/LuyNagda/transcendence/772b4b2f78787983eb1b44716ebfabe7d358abcb/.cursorrules",
+        "repositoryId": 823148645,
+        "path": "LuyNagda/transcendence/.cursorrules",
+        "ownerName": "LuyNagda",
+        "repositoryName": "transcendence",
+        "htmlUrl": "https://github.com/LuyNagda/transcendence/blob/772b4b2f78787983eb1b44716ebfabe7d358abcb/.cursorrules",
+        "size": 5.62,
+        "timestamp": "2025-02-02T20:05:53.017Z"
+      }
+    ],
+    [
+      "H-Genie/mood-diary/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/H-Genie/mood-diary/7206f04294ccd7806bc8d29607969470b8665081/.cursorrules",
+        "repositoryId": 926097689,
+        "path": "H-Genie/mood-diary/.cursorrules",
+        "ownerName": "H-Genie",
+        "repositoryName": "mood-diary",
+        "htmlUrl": "https://github.com/H-Genie/mood-diary/blob/7206f04294ccd7806bc8d29607969470b8665081/.cursorrules",
+        "size": 2,
+        "timestamp": "2025-02-02T20:05:54.382Z"
+      }
+    ],
+    [
+      "ronaldeddings/overseer/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ronaldeddings/overseer/7555ceb52c6b37952da53bf985ffce73b999e022/.cursorrules",
+        "repositoryId": 925876602,
+        "path": "ronaldeddings/overseer/.cursorrules",
+        "ownerName": "ronaldeddings",
+        "repositoryName": "overseer",
+        "htmlUrl": "https://github.com/ronaldeddings/overseer/blob/7555ceb52c6b37952da53bf985ffce73b999e022/.cursorrules",
+        "size": 9.88,
+        "timestamp": "2025-02-02T20:05:56.729Z"
+      }
+    ],
+    [
+      "turbotobias/boil/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/turbotobias/boil/18e52045988175ea332d40deb7c01c76b5540052/.cursorrules",
+        "repositoryId": 919339407,
+        "path": "turbotobias/boil/.cursorrules",
+        "ownerName": "turbotobias",
+        "repositoryName": "boil",
+        "htmlUrl": "https://github.com/turbotobias/boil/blob/18e52045988175ea332d40deb7c01c76b5540052/.cursorrules",
+        "size": 2.42,
+        "timestamp": "2025-02-02T20:06:02.464Z"
+      }
+    ],
+    [
+      "felipepimentel/daggerverse/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/felipepimentel/daggerverse/f9e7fad8a8b2d1b67cdf970879c22969a8b23658/.cursorrules",
+        "repositoryId": 907615622,
+        "path": "felipepimentel/daggerverse/.cursorrules",
+        "ownerName": "felipepimentel",
+        "repositoryName": "daggerverse",
+        "htmlUrl": "https://github.com/felipepimentel/daggerverse/blob/f9e7fad8a8b2d1b67cdf970879c22969a8b23658/.cursorrules",
+        "size": 6.74,
+        "timestamp": "2025-02-02T20:06:06.808Z"
+      }
+    ],
+    [
+      "In-Self-Improvement/weekly-app/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/In-Self-Improvement/weekly-app/5250d82868ac83c86d85c0b6df2e6bc1b6303ded/.cursorrules",
+        "repositoryId": 897372744,
+        "path": "In-Self-Improvement/weekly-app/.cursorrules",
+        "ownerName": "In-Self-Improvement",
+        "repositoryName": "weekly-app",
+        "htmlUrl": "https://github.com/In-Self-Improvement/weekly-app/blob/5250d82868ac83c86d85c0b6df2e6bc1b6303ded/.cursorrules",
+        "size": 1.74,
+        "timestamp": "2025-02-02T20:06:17.713Z"
+      }
+    ],
+    [
+      "miklevin/pipulate/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/miklevin/pipulate/e8674f549b1017609d2e25a8403bd42670fbf88a/.cursorrules",
+        "repositoryId": 856623001,
+        "path": "miklevin/pipulate/.cursorrules",
+        "ownerName": "miklevin",
+        "repositoryName": "pipulate",
+        "htmlUrl": "https://github.com/miklevin/pipulate/blob/e8674f549b1017609d2e25a8403bd42670fbf88a/.cursorrules",
+        "size": 12.96,
+        "timestamp": "2025-02-02T20:06:21.093Z"
+      }
+    ],
+    [
+      "183461750/doc-record/_docs/tools/softs/cursor/rules/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/183461750/doc-record/0a1728b3e7a5e6a30d159219b5e835206826efba/_docs/tools/softs/cursor/rules/.cursorrules",
+        "repositoryId": 776382753,
+        "path": "183461750/doc-record/_docs/tools/softs/cursor/rules/.cursorrules",
+        "ownerName": "183461750",
+        "repositoryName": "doc-record",
+        "htmlUrl": "https://github.com/183461750/doc-record/blob/0a1728b3e7a5e6a30d159219b5e835206826efba/_docs/tools/softs/cursor/rules/.cursorrules",
+        "size": 1.5,
+        "timestamp": "2025-02-02T20:06:22.357Z"
       }
     ]
   ]
