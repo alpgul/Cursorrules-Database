@@ -1,0 +1,27 @@
+Here are some rules for adapting to this codebase:
+
+- Use Hono for the web server and routing. Define routes with .get() or .post() methods on the Hono app instance.
+
+- Hono supports React JSX rendering out of the box. Use JSX in route handlers rather than plain text.
+
+- TypeScript is preferred for type safety. Add types for function parameters and returns where possible.
+
+- Export a default Hono app instance to integrate the server into other code.
+
+- Put helper functions like getRandomInt() in /lib folder and import them.
+
+- Use Bun for bundling, builds and development. Start dev server with `bun run` and build with `bun build`.
+
+- Enable strict TypeScript checking and React JSX support in tsconfig.json.
+
+- Use semantic versioning and type definitions for third party module imports.
+
+- Structure code into modules and components for reusability.
+
+- Favor readable variable and function names over short abbreviations.
+
+- Format code consistently with spacing for readability. Avoid unnecessary nesting.
+
+- Check for performance optimizations like avoiding unnecessary re-renders.
+
+Let me know if you need any clarification or have additional questions!

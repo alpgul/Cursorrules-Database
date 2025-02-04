@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 734,
+  "size": 762,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -10276,6 +10276,398 @@
         "htmlUrl": "https://github.com/183461750/doc-record/blob/0a1728b3e7a5e6a30d159219b5e835206826efba/_docs/tools/softs/cursor/rules/.cursorrules",
         "size": 1.5,
         "timestamp": "2025-02-02T20:06:22.357Z"
+      }
+    ],
+    [
+      "wp-graphql/wp-graphql/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/wp-graphql/wp-graphql/a0051928c9350aacf3681f9126b53fb78736df4c/.cursorrules",
+        "repositoryId": 72453516,
+        "path": "wp-graphql/wp-graphql/.cursorrules",
+        "ownerName": "wp-graphql",
+        "repositoryName": "wp-graphql",
+        "htmlUrl": "https://github.com/wp-graphql/wp-graphql/blob/a0051928c9350aacf3681f9126b53fb78736df4c/.cursorrules",
+        "size": 5.7,
+        "timestamp": "2025-02-04T08:14:18.424Z"
+      }
+    ],
+    [
+      "elie222/inbox-zero/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/elie222/inbox-zero/2ef6278f6216bf7bf1acfc62bd4d0a2d05e7ac09/.cursorrules",
+        "repositoryId": 665613753,
+        "path": "elie222/inbox-zero/.cursorrules",
+        "ownerName": "elie222",
+        "repositoryName": "inbox-zero",
+        "htmlUrl": "https://github.com/elie222/inbox-zero/blob/2ef6278f6216bf7bf1acfc62bd4d0a2d05e7ac09/.cursorrules",
+        "size": 7.01,
+        "timestamp": "2025-02-04T08:14:18.743Z"
+      }
+    ],
+    [
+      "itsdillon/readmewriter-example/.cursorrules/.cursorrules-2024-10-05-17-33-11",
+      {
+        "name": ".cursorrules-2024-10-05-17-33-11",
+        "downloadUrl": "https://raw.githubusercontent.com/itsdillon/readmewriter-example/d7538e8a58357b69f212f310690c3e000cab8eea/.cursorrules/.cursorrules-2024-10-05-17-33-11",
+        "repositoryId": 826510457,
+        "path": "itsdillon/readmewriter-example/.cursorrules/.cursorrules-2024-10-05-17-33-11",
+        "ownerName": "itsdillon",
+        "repositoryName": "readmewriter-example",
+        "htmlUrl": "https://github.com/itsdillon/readmewriter-example/blob/d7538e8a58357b69f212f310690c3e000cab8eea/.cursorrules/.cursorrules-2024-10-05-17-33-11",
+        "size": 1.14,
+        "timestamp": "2025-02-04T08:14:20.088Z"
+      }
+    ],
+    [
+      "syntaxfm/website/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/syntaxfm/website/66b3f58378453657ebe60410c13c110abe823d1d/.cursorrules",
+        "repositoryId": 94822475,
+        "path": "syntaxfm/website/.cursorrules",
+        "ownerName": "syntaxfm",
+        "repositoryName": "website",
+        "htmlUrl": "https://github.com/syntaxfm/website/blob/66b3f58378453657ebe60410c13c110abe823d1d/.cursorrules",
+        "size": 6.27,
+        "timestamp": "2025-02-04T08:14:24.746Z"
+      }
+    ],
+    [
+      "raphaelmansuy/code2prompt/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/raphaelmansuy/code2prompt/699eae91a5bf67dc5ab6df23fd1b2c665eb20034/.cursorrules",
+        "repositoryId": 774161409,
+        "path": "raphaelmansuy/code2prompt/.cursorrules",
+        "ownerName": "raphaelmansuy",
+        "repositoryName": "code2prompt",
+        "htmlUrl": "https://github.com/raphaelmansuy/code2prompt/blob/699eae91a5bf67dc5ab6df23fd1b2c665eb20034/.cursorrules",
+        "size": 1.71,
+        "timestamp": "2025-02-04T08:14:25.107Z"
+      }
+    ],
+    [
+      "liam-hq/liam/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/liam-hq/liam/9983a66af080d1c07b3a5ffb84f7aaafd3017237/.cursorrules",
+        "repositoryId": 839216423,
+        "path": "liam-hq/liam/.cursorrules",
+        "ownerName": "liam-hq",
+        "repositoryName": "liam",
+        "htmlUrl": "https://github.com/liam-hq/liam/blob/9983a66af080d1c07b3a5ffb84f7aaafd3017237/.cursorrules",
+        "size": 2.18,
+        "timestamp": "2025-02-04T08:14:25.839Z"
+      }
+    ],
+    [
+      "different-ai/file-organizer-2000/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/different-ai/file-organizer-2000/d2d64ea37ff103eaf2f64d54ad1d5b13d7fd35cb/.cursorrules",
+        "repositoryId": 689765175,
+        "path": "different-ai/file-organizer-2000/.cursorrules",
+        "ownerName": "different-ai",
+        "repositoryName": "file-organizer-2000",
+        "htmlUrl": "https://github.com/different-ai/file-organizer-2000/blob/d2d64ea37ff103eaf2f64d54ad1d5b13d7fd35cb/.cursorrules",
+        "size": 17.64,
+        "timestamp": "2025-02-04T08:14:27.349Z"
+      }
+    ],
+    [
+      "agentjido/jido/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/agentjido/jido/6b5647a8e8ecbf465895639de39067f65fefd128/.cursorrules",
+        "repositoryId": 903999320,
+        "path": "agentjido/jido/.cursorrules",
+        "ownerName": "agentjido",
+        "repositoryName": "jido",
+        "htmlUrl": "https://github.com/agentjido/jido/blob/6b5647a8e8ecbf465895639de39067f65fefd128/.cursorrules",
+        "size": 9.77,
+        "timestamp": "2025-02-04T08:14:27.679Z"
+      }
+    ],
+    [
+      "maidsafe/autonomi/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/maidsafe/autonomi/4d9da49e5f1b985930de4e5cfd93091ad30a02f3/.cursorrules",
+        "repositoryId": 614205944,
+        "path": "maidsafe/autonomi/.cursorrules",
+        "ownerName": "maidsafe",
+        "repositoryName": "autonomi",
+        "htmlUrl": "https://github.com/maidsafe/autonomi/blob/4d9da49e5f1b985930de4e5cfd93091ad30a02f3/.cursorrules",
+        "size": 1.93,
+        "timestamp": "2025-02-04T08:14:28.741Z"
+      }
+    ],
+    [
+      "transloadit/node-sdk/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/transloadit/node-sdk/542ce00c7cc18850de95b38c4d8955db04a234c7/.cursorrules",
+        "repositoryId": 20471349,
+        "path": "transloadit/node-sdk/.cursorrules",
+        "ownerName": "transloadit",
+        "repositoryName": "node-sdk",
+        "htmlUrl": "https://github.com/transloadit/node-sdk/blob/542ce00c7cc18850de95b38c4d8955db04a234c7/.cursorrules",
+        "size": 1.16,
+        "timestamp": "2025-02-04T08:14:29.423Z"
+      }
+    ],
+    [
+      "riclolsen/json-scada/src/custom-developments/basic_bargraph/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/riclolsen/json-scada/92a9d0d759c5159a075f475ec497a7d2771eccea/src/custom-developments/basic_bargraph/.cursorrules",
+        "repositoryId": 283773580,
+        "path": "riclolsen/json-scada/src/custom-developments/basic_bargraph/.cursorrules",
+        "ownerName": "riclolsen",
+        "repositoryName": "json-scada",
+        "htmlUrl": "https://github.com/riclolsen/json-scada/blob/92a9d0d759c5159a075f475ec497a7d2771eccea/src/custom-developments/basic_bargraph/.cursorrules",
+        "size": 1.54,
+        "timestamp": "2025-02-04T08:14:29.749Z"
+      }
+    ],
+    [
+      "MetaMask/delegation-framework/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/MetaMask/delegation-framework/eb34cd7302261b6cd5513d50eda6dda446d4403c/.cursorrules",
+        "repositoryId": 823822789,
+        "path": "MetaMask/delegation-framework/.cursorrules",
+        "ownerName": "MetaMask",
+        "repositoryName": "delegation-framework",
+        "htmlUrl": "https://github.com/MetaMask/delegation-framework/blob/eb34cd7302261b6cd5513d50eda6dda446d4403c/.cursorrules",
+        "size": 14.35,
+        "timestamp": "2025-02-04T08:14:30.828Z"
+      }
+    ],
+    [
+      "Wafris/wafris-rb/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Wafris/wafris-rb/67e95880ace5d6015eb47af9ee0d092403173875/.cursorrules",
+        "repositoryId": 578210150,
+        "path": "Wafris/wafris-rb/.cursorrules",
+        "ownerName": "Wafris",
+        "repositoryName": "wafris-rb",
+        "htmlUrl": "https://github.com/Wafris/wafris-rb/blob/67e95880ace5d6015eb47af9ee0d092403173875/.cursorrules",
+        "size": 2.6,
+        "timestamp": "2025-02-04T08:14:31.578Z"
+      }
+    ],
+    [
+      "rknell/dart_queue/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/rknell/dart_queue/abb82486f877ab505987c569016dc7a1ef8cb7cd/.cursorrules",
+        "repositoryId": 246947020,
+        "path": "rknell/dart_queue/.cursorrules",
+        "ownerName": "rknell",
+        "repositoryName": "dart_queue",
+        "htmlUrl": "https://github.com/rknell/dart_queue/blob/abb82486f877ab505987c569016dc7a1ef8cb7cd/.cursorrules",
+        "size": 2.18,
+        "timestamp": "2025-02-04T08:14:33.290Z"
+      }
+    ],
+    [
+      "jpmorgan-payments/embedded-finance/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/jpmorgan-payments/embedded-finance/466a295f1ebaca03073b59191083aaef7f93f397/.cursorrules",
+        "repositoryId": 647807226,
+        "path": "jpmorgan-payments/embedded-finance/.cursorrules",
+        "ownerName": "jpmorgan-payments",
+        "repositoryName": "embedded-finance",
+        "htmlUrl": "https://github.com/jpmorgan-payments/embedded-finance/blob/466a295f1ebaca03073b59191083aaef7f93f397/.cursorrules",
+        "size": 10.36,
+        "timestamp": "2025-02-04T08:14:34.006Z"
+      }
+    ],
+    [
+      "deeeed/expo-audio-stream/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/deeeed/expo-audio-stream/033492c05bf9435e99987a84da3104436fd07b96/.cursorrules",
+        "repositoryId": 789289961,
+        "path": "deeeed/expo-audio-stream/.cursorrules",
+        "ownerName": "deeeed",
+        "repositoryName": "expo-audio-stream",
+        "htmlUrl": "https://github.com/deeeed/expo-audio-stream/blob/033492c05bf9435e99987a84da3104436fd07b96/.cursorrules",
+        "size": 5.71,
+        "timestamp": "2025-02-04T08:14:34.995Z"
+      }
+    ],
+    [
+      "different-ai/hypr-v0/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/different-ai/hypr-v0/b64747509c8f519ead8a85a2be1fd7c247674762/.cursorrules",
+        "repositoryId": 883825890,
+        "path": "different-ai/hypr-v0/.cursorrules",
+        "ownerName": "different-ai",
+        "repositoryName": "hypr-v0",
+        "htmlUrl": "https://github.com/different-ai/hypr-v0/blob/b64747509c8f519ead8a85a2be1fd7c247674762/.cursorrules",
+        "size": 18.26,
+        "timestamp": "2025-02-04T08:14:37.107Z"
+      }
+    ],
+    [
+      "WordPressBugBounty/plugins-wp-graphql/wp-graphql/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/WordPressBugBounty/plugins-wp-graphql/4d6a285d71440c79aefbf1bdd9d3a25bb50190fc/wp-graphql/.cursorrules",
+        "repositoryId": 861241696,
+        "path": "WordPressBugBounty/plugins-wp-graphql/wp-graphql/.cursorrules",
+        "ownerName": "WordPressBugBounty",
+        "repositoryName": "plugins-wp-graphql",
+        "htmlUrl": "https://github.com/WordPressBugBounty/plugins-wp-graphql/blob/4d6a285d71440c79aefbf1bdd9d3a25bb50190fc/wp-graphql/.cursorrules",
+        "size": 5.7,
+        "timestamp": "2025-02-04T08:14:39.891Z"
+      }
+    ],
+    [
+      "magnum/wordpress/wp-content/plugins/wp-graphql/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/magnum/wordpress/e03c02b3163edfd4b4ad7828258fb941f5ff01da/wp-content/plugins/wp-graphql/.cursorrules",
+        "repositoryId": 423549795,
+        "path": "magnum/wordpress/wp-content/plugins/wp-graphql/.cursorrules",
+        "ownerName": "magnum",
+        "repositoryName": "wordpress",
+        "htmlUrl": "https://github.com/magnum/wordpress/blob/e03c02b3163edfd4b4ad7828258fb941f5ff01da/wp-content/plugins/wp-graphql/.cursorrules",
+        "size": 5.7,
+        "timestamp": "2025-02-04T08:14:40.230Z"
+      }
+    ],
+    [
+      "kahnu044/wordpress-docker/WebSite/wp-content/plugins/wp-graphql/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/kahnu044/wordpress-docker/1329655483233e3a2967bbbcd30dccfef7c99773/WebSite/wp-content/plugins/wp-graphql/.cursorrules",
+        "repositoryId": 590448508,
+        "path": "kahnu044/wordpress-docker/WebSite/wp-content/plugins/wp-graphql/.cursorrules",
+        "ownerName": "kahnu044",
+        "repositoryName": "wordpress-docker",
+        "htmlUrl": "https://github.com/kahnu044/wordpress-docker/blob/1329655483233e3a2967bbbcd30dccfef7c99773/WebSite/wp-content/plugins/wp-graphql/.cursorrules",
+        "size": 5.7,
+        "timestamp": "2025-02-04T08:14:40.574Z"
+      }
+    ],
+    [
+      "BrahmVanH/united-way-wp-plugins/wp-graphql/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/BrahmVanH/united-way-wp-plugins/d5eb2cf0da8a43fb23b9efc3685c9513d4eef790/wp-graphql/.cursorrules",
+        "repositoryId": 905532581,
+        "path": "BrahmVanH/united-way-wp-plugins/wp-graphql/.cursorrules",
+        "ownerName": "BrahmVanH",
+        "repositoryName": "united-way-wp-plugins",
+        "htmlUrl": "https://github.com/BrahmVanH/united-way-wp-plugins/blob/d5eb2cf0da8a43fb23b9efc3685c9513d4eef790/wp-graphql/.cursorrules",
+        "size": 5.7,
+        "timestamp": "2025-02-04T08:14:40.912Z"
+      }
+    ],
+    [
+      "riclolsen/json-scada/src/custom-developments/advanced_dashboard/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/riclolsen/json-scada/92a9d0d759c5159a075f475ec497a7d2771eccea/src/custom-developments/advanced_dashboard/.cursorrules",
+        "repositoryId": 283773580,
+        "path": "riclolsen/json-scada/src/custom-developments/advanced_dashboard/.cursorrules",
+        "ownerName": "riclolsen",
+        "repositoryName": "json-scada",
+        "htmlUrl": "https://github.com/riclolsen/json-scada/blob/92a9d0d759c5159a075f475ec497a7d2771eccea/src/custom-developments/advanced_dashboard/.cursorrules",
+        "size": 1.54,
+        "timestamp": "2025-02-04T08:14:42.266Z"
+      }
+    ],
+    [
+      "riclolsen/json-scada/src/custom-developments/transformer_with_command/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/riclolsen/json-scada/92a9d0d759c5159a075f475ec497a7d2771eccea/src/custom-developments/transformer_with_command/.cursorrules",
+        "repositoryId": 283773580,
+        "path": "riclolsen/json-scada/src/custom-developments/transformer_with_command/.cursorrules",
+        "ownerName": "riclolsen",
+        "repositoryName": "json-scada",
+        "htmlUrl": "https://github.com/riclolsen/json-scada/blob/92a9d0d759c5159a075f475ec497a7d2771eccea/src/custom-developments/transformer_with_command/.cursorrules",
+        "size": 1.54,
+        "timestamp": "2025-02-04T08:14:42.572Z"
+      }
+    ],
+    [
+      "deeeed/universe/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/deeeed/universe/bcffd8cb97c2e805b25a9625db6e4456a0aa0fa8/.cursorrules",
+        "repositoryId": 777083677,
+        "path": "deeeed/universe/.cursorrules",
+        "ownerName": "deeeed",
+        "repositoryName": "universe",
+        "htmlUrl": "https://github.com/deeeed/universe/blob/bcffd8cb97c2e805b25a9625db6e4456a0aa0fa8/.cursorrules",
+        "size": 5.71,
+        "timestamp": "2025-02-04T08:14:42.912Z"
+      }
+    ],
+    [
+      "SolomonAIEngineering/core-enterprise/clients/core-smb/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/SolomonAIEngineering/core-enterprise/8131f78d70b67a8791946bc16d616d8699003908/clients/core-smb/.cursorrules",
+        "repositoryId": 906058881,
+        "path": "SolomonAIEngineering/core-enterprise/clients/core-smb/.cursorrules",
+        "ownerName": "SolomonAIEngineering",
+        "repositoryName": "core-enterprise",
+        "htmlUrl": "https://github.com/SolomonAIEngineering/core-enterprise/blob/8131f78d70b67a8791946bc16d616d8699003908/clients/core-smb/.cursorrules",
+        "size": 3.48,
+        "timestamp": "2025-02-04T08:15:07.497Z"
+      }
+    ],
+    [
+      "epsilon-records/audiokit/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/epsilon-records/audiokit/0e12f799a971c8b6bf72f3d135e1ac229b6de95b/.cursorrules",
+        "repositoryId": 926083801,
+        "path": "epsilon-records/audiokit/.cursorrules",
+        "ownerName": "epsilon-records",
+        "repositoryName": "audiokit",
+        "htmlUrl": "https://github.com/epsilon-records/audiokit/blob/0e12f799a971c8b6bf72f3d135e1ac229b6de95b/.cursorrules",
+        "size": 2.14,
+        "timestamp": "2025-02-04T08:15:14.119Z"
+      }
+    ],
+    [
+      "suzukalight/cursor-rules-todoapp/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/suzukalight/cursor-rules-todoapp/b2a52a3e133ab5abcabc6826b1f29e377f08e01c/.cursorrules",
+        "repositoryId": 922066034,
+        "path": "suzukalight/cursor-rules-todoapp/.cursorrules",
+        "ownerName": "suzukalight",
+        "repositoryName": "cursor-rules-todoapp",
+        "htmlUrl": "https://github.com/suzukalight/cursor-rules-todoapp/blob/b2a52a3e133ab5abcabc6826b1f29e377f08e01c/.cursorrules",
+        "size": 14.23,
+        "timestamp": "2025-02-04T08:15:15.916Z"
+      }
+    ],
+    [
+      "shoff/code_reviewer/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/shoff/code_reviewer/4f1e65645665f2956f8d0d28cbf35e1e38dc5a70/.cursorrules",
+        "repositoryId": 926830898,
+        "path": "shoff/code_reviewer/.cursorrules",
+        "ownerName": "shoff",
+        "repositoryName": "code_reviewer",
+        "htmlUrl": "https://github.com/shoff/code_reviewer/blob/4f1e65645665f2956f8d0d28cbf35e1e38dc5a70/.cursorrules",
+        "size": 5.11,
+        "timestamp": "2025-02-04T08:15:21.163Z"
       }
     ]
   ]
