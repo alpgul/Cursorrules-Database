@@ -1,0 +1,140 @@
+You are an expert in TypeScript, Node.js, Vite, React, Shadcn UI, Radix UI, Tailwind, and microservices architecture for payment orchestration platforms.
+
+Code Style and Structure
+- Write concise, technical TypeScript code with accurate examples.
+- Use functional and declarative programming patterns; avoid classes.
+- Prefer iteration and modularization over code duplication.
+- Use descriptive variable names with auxiliary verbs (e.g., isLoading, hasError).
+- Structure files: exported component, subcomponents, helpers, static content, types.
+
+Naming Conventions
+- Use lowercase with dashes for directories (e.g., components/auth-wizard).
+- Favor named exports for components.
+- Use PascalCase for component names, interfaces, and types.
+- Use camelCase for functions and variables.
+
+TypeScript Usage
+- Use TypeScript for all code; prefer interfaces over types.
+- Avoid enums; use const objects or discriminated unions instead.
+- Use functional components with TypeScript interfaces for props.
+
+Syntax and Formatting
+- Use the "function" keyword for pure functions.
+- Avoid unnecessary curly braces in conditionals; use concise syntax for simple statements.
+- Use declarative JSX.
+
+UI and Styling
+- Use Shadcn UI, Radix, and Tailwind for components and styling.
+- Implement responsive design with Tailwind CSS; use a mobile-first approach.
+
+Code Splitting and Lazy Loading
+- Use React's `lazy` function for dynamic imports of components.
+- Wrap lazily loaded components with React's `Suspense` component.
+- Provide a fallback UI (e.g., loading spinner) for `Suspense` while components are loading.
+- Split code at the route level for optimal performance.
+
+Performance Optimization
+- Use Vite's code splitting features for optimal loading.
+- Implement lazy loading for components and routes.
+- Use dynamic imports for non-critical components.
+- Optimize images: use WebP format, include size data, implement lazy loading.
+
+Vite and React Setup
+- Utilize Vite's fast HMR (Hot Module Replacement) for development.
+- Use Vite's built-in optimizations for production builds.
+- Implement environment variables using Vite's .env files.
+
+Microservices Architecture
+- Design stateless services that can scale horizontally.
+- Use API Gateway (Apollo Server with Express) for request routing and authentication.
+- Implement individual services (User, Transaction, Provider, Account, Payout, Webhook) using FastAPI.
+- Use PostgreSQL with Supabase for the database layer.
+- Implement message queues (Apache Kafka) for asynchronous communication between services.
+
+State Management
+- Use Redux with Redux Toolkit for global state management.
+- Utilize React Query for server state management.
+- Use React hooks (useState, useReducer) for local component state.
+
+API Design
+- Follow RESTful principles for API design.
+- Implement versioning in the URL (e.g., /api/v1/).
+- Use JWT with OAuth2 for authentication.
+- Implement rate limiting at the API Gateway level.
+
+Testing
+- Write unit tests using Vitest (Vite's recommended testing framework).
+- Implement integration tests with Supertest.
+- Use Cypress for end-to-end testing.
+- Aim for a minimum of 80% test coverage.
+
+Security
+- Implement HTTPS for all communications.
+- Use parameterized queries to prevent SQL injection.
+- Sanitize all user inputs.
+- Implement CSRF protection and secure HTTP headers.
+
+Error Handling and Logging
+- Implement a global error boundary in React for the frontend.
+- Use centralized error handling middleware for backend services.
+- Implement structured logging using ELK Stack (Elasticsearch, Logstash, Kibana).
+
+Deployment and DevOps
+- Use Docker for containerization.
+- Implement Kubernetes for container orchestration.
+- Set up CI/CD pipelines using GitLab CI/CD.
+- Maintain separate environments for development, staging, and production.
+
+Documentation
+- Use OpenAPI (Swagger) for API documentation.
+- Implement JSDoc for TypeScript code documentation.
+- Create and maintain architecture diagrams using Draw.io.
+
+Monitoring and Observability
+- Implement Elastic APM for application performance monitoring.
+- Use Prometheus with Grafana for metrics and dashboards.
+- Implement distributed tracing using OpenTelemetry.
+
+Best Practices
+- Follow SOLID principles in your code design.
+- Conduct regular code reviews.
+- Keep dependencies up to date.
+- Use feature flags for gradual rollouts of new features.
+
+Accessibility and Internationalization
+- Follow WCAG 2.1 guidelines for accessibility.
+- Implement internationalization using react-i18next.
+
+Version Control
+- Use Git for version control.
+- Follow GitFlow branching strategy.
+- Adhere to Conventional Commits for commit messages.
+
+Code Quality
+- Use ESLint for linting.
+- Implement Prettier for code formatting.
+- Leverage TypeScript's static type checking.
+
+Microservices Architecture
+- Decompose the system into loosely coupled, independently deployable services
+- Minimize dependencies between services to reduce complexity
+- Use asynchronous communication (e.g. message queues) to decouple services
+- Aim for stateless services that can scale horizontally
+
+API Design
+- Follow RESTful principles for a clean, intuitive API surface
+- Use appropriate HTTP methods and status codes
+- Minimize over-fetching and under-fetching of data with well-defined resources
+- Implement caching and rate limiting to optimize performance
+
+Code Modularity
+- Break code into small, reusable functions and components
+Minimize coupling between modules
+- Use pure functions without side effects where possible
+- Leverage TypeScript interfaces to define clear contracts
+
+Performance Optimization
+- Lazy load non-critical resources to minimize initial bundle size
+- Implement caching at various layers (database, API, client)
+- Optimize expensive operations like large data transfers or complex computations
+- Monitor and profile the system to identify performance bottlenecks
