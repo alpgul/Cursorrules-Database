@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 787,
+  "size": 808,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -11018,6 +11018,300 @@
         "htmlUrl": "https://github.com/jackmhny/awesome-rank/blob/82520ea0387282a87e20e87348118ee7a35f6f16/.cursorrules",
         "size": 2.92,
         "timestamp": "2025-02-07T08:14:25.052Z"
+      }
+    ],
+    [
+      "mediar-ai/screenpipe/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/mediar-ai/screenpipe/d45a2bbbcc50a08d3e686ef627dd85921c695970/.cursorrules",
+        "repositoryId": 817326197,
+        "path": "mediar-ai/screenpipe/.cursorrules",
+        "ownerName": "mediar-ai",
+        "repositoryName": "screenpipe",
+        "htmlUrl": "https://github.com/mediar-ai/screenpipe/blob/d45a2bbbcc50a08d3e686ef627dd85921c695970/.cursorrules",
+        "size": 1.55,
+        "timestamp": "2025-02-10T08:14:25.047Z"
+      }
+    ],
+    [
+      "browserbase/playbook/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/browserbase/playbook/4e73a7dbc038435c19969d70896c8650a6c80172/.cursorrules",
+        "repositoryId": 904410122,
+        "path": "browserbase/playbook/.cursorrules",
+        "ownerName": "browserbase",
+        "repositoryName": "playbook",
+        "htmlUrl": "https://github.com/browserbase/playbook/blob/4e73a7dbc038435c19969d70896c8650a6c80172/.cursorrules",
+        "size": 4.69,
+        "timestamp": "2025-02-10T08:14:31.592Z"
+      }
+    ],
+    [
+      "msfeldstein/just/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/msfeldstein/just/b276a89fd8b7eb186a2a78504ea53682661082db/.cursorrules",
+        "repositoryId": 752533404,
+        "path": "msfeldstein/just/.cursorrules",
+        "ownerName": "msfeldstein",
+        "repositoryName": "just",
+        "htmlUrl": "https://github.com/msfeldstein/just/blob/b276a89fd8b7eb186a2a78504ea53682661082db/.cursorrules",
+        "size": 1.05,
+        "timestamp": "2025-02-10T08:14:34.120Z"
+      }
+    ],
+    [
+      "chevyphillip/nba-data-fetcher/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/chevyphillip/nba-data-fetcher/b79ccc8f9955bad6871ce637ab85dedca69b0356/.cursorrules",
+        "repositoryId": 929644088,
+        "path": "chevyphillip/nba-data-fetcher/.cursorrules",
+        "ownerName": "chevyphillip",
+        "repositoryName": "nba-data-fetcher",
+        "htmlUrl": "https://github.com/chevyphillip/nba-data-fetcher/blob/b79ccc8f9955bad6871ce637ab85dedca69b0356/.cursorrules",
+        "size": 9.24,
+        "timestamp": "2025-02-10T08:14:34.648Z"
+      }
+    ],
+    [
+      "AlexanderHS/countdown_maths_solver/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/AlexanderHS/countdown_maths_solver/621a468d4c2e002c4ebf51f575f295a7a2e3807f/.cursorrules",
+        "repositoryId": 809163300,
+        "path": "AlexanderHS/countdown_maths_solver/.cursorrules",
+        "ownerName": "AlexanderHS",
+        "repositoryName": "countdown_maths_solver",
+        "htmlUrl": "https://github.com/AlexanderHS/countdown_maths_solver/blob/621a468d4c2e002c4ebf51f575f295a7a2e3807f/.cursorrules",
+        "size": 2.54,
+        "timestamp": "2025-02-10T08:14:34.930Z"
+      }
+    ],
+    [
+      "mathewlewallen/Ready-To-Deploy-SaaS-Template/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/mathewlewallen/Ready-To-Deploy-SaaS-Template/25bb3766f8af4fe73768b4108cdc05cd94799a53/.cursorrules",
+        "repositoryId": 929391620,
+        "path": "mathewlewallen/Ready-To-Deploy-SaaS-Template/.cursorrules",
+        "ownerName": "mathewlewallen",
+        "repositoryName": "Ready-To-Deploy-SaaS-Template",
+        "htmlUrl": "https://github.com/mathewlewallen/Ready-To-Deploy-SaaS-Template/blob/25bb3766f8af4fe73768b4108cdc05cd94799a53/.cursorrules",
+        "size": 2.94,
+        "timestamp": "2025-02-10T08:14:38.013Z"
+      }
+    ],
+    [
+      "russmckendrick/discogs-scraper/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/russmckendrick/discogs-scraper/f48535f7d51b332adaabf2dcf35a8a2c76c5a18a/.cursorrules",
+        "repositoryId": 628573108,
+        "path": "russmckendrick/discogs-scraper/.cursorrules",
+        "ownerName": "russmckendrick",
+        "repositoryName": "discogs-scraper",
+        "htmlUrl": "https://github.com/russmckendrick/discogs-scraper/blob/f48535f7d51b332adaabf2dcf35a8a2c76c5a18a/.cursorrules",
+        "size": 13.1,
+        "timestamp": "2025-02-10T08:14:38.259Z"
+      }
+    ],
+    [
+      "abhiksark/Abhik-Portfolio/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/abhiksark/Abhik-Portfolio/62467cb9668e0693e23537e8a7c13659c3008453/.cursorrules",
+        "repositoryId": 420574968,
+        "path": "abhiksark/Abhik-Portfolio/.cursorrules",
+        "ownerName": "abhiksark",
+        "repositoryName": "Abhik-Portfolio",
+        "htmlUrl": "https://github.com/abhiksark/Abhik-Portfolio/blob/62467cb9668e0693e23537e8a7c13659c3008453/.cursorrules",
+        "size": 1.53,
+        "timestamp": "2025-02-10T08:14:39.131Z"
+      }
+    ],
+    [
+      "RummerLab/jodierummer/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/RummerLab/jodierummer/bbbde965702b941fac0a624d4aee60e3e7ef6d16/.cursorrules",
+        "repositoryId": 725963076,
+        "path": "RummerLab/jodierummer/.cursorrules",
+        "ownerName": "RummerLab",
+        "repositoryName": "jodierummer",
+        "htmlUrl": "https://github.com/RummerLab/jodierummer/blob/bbbde965702b941fac0a624d4aee60e3e7ef6d16/.cursorrules",
+        "size": 3.09,
+        "timestamp": "2025-02-10T08:14:39.236Z"
+      }
+    ],
+    [
+      "seniya/home-malrang/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/seniya/home-malrang/52cfd2c209568dcbdfc7d529ae6bfeeadb773b5a/.cursorrules",
+        "repositoryId": 645655173,
+        "path": "seniya/home-malrang/.cursorrules",
+        "ownerName": "seniya",
+        "repositoryName": "home-malrang",
+        "htmlUrl": "https://github.com/seniya/home-malrang/blob/52cfd2c209568dcbdfc7d529ae6bfeeadb773b5a/.cursorrules",
+        "size": 3.66,
+        "timestamp": "2025-02-10T08:14:39.397Z"
+      }
+    ],
+    [
+      "imaadmalikkk/WebAppTemplate/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/imaadmalikkk/WebAppTemplate/875ac180fc151352584b42755cd68b29172c64ae/.cursorrules",
+        "repositoryId": 929094387,
+        "path": "imaadmalikkk/WebAppTemplate/.cursorrules",
+        "ownerName": "imaadmalikkk",
+        "repositoryName": "WebAppTemplate",
+        "htmlUrl": "https://github.com/imaadmalikkk/WebAppTemplate/blob/875ac180fc151352584b42755cd68b29172c64ae/.cursorrules",
+        "size": 2.87,
+        "timestamp": "2025-02-10T08:14:40.341Z"
+      }
+    ],
+    [
+      "Canopie-Club/canopie-clubhouse/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Canopie-Club/canopie-clubhouse/162aa5a4a7fc815ecddfe7a8c3a2235040d28706/.cursorrules",
+        "repositoryId": 847000171,
+        "path": "Canopie-Club/canopie-clubhouse/.cursorrules",
+        "ownerName": "Canopie-Club",
+        "repositoryName": "canopie-clubhouse",
+        "htmlUrl": "https://github.com/Canopie-Club/canopie-clubhouse/blob/162aa5a4a7fc815ecddfe7a8c3a2235040d28706/.cursorrules",
+        "size": 2.91,
+        "timestamp": "2025-02-10T08:14:41.430Z"
+      }
+    ],
+    [
+      "fuhaooo/bnb/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/fuhaooo/bnb/c4034d50d489db878000bca64773030675ae7001/.cursorrules",
+        "repositoryId": 929831257,
+        "path": "fuhaooo/bnb/.cursorrules",
+        "ownerName": "fuhaooo",
+        "repositoryName": "bnb",
+        "htmlUrl": "https://github.com/fuhaooo/bnb/blob/c4034d50d489db878000bca64773030675ae7001/.cursorrules",
+        "size": 4.88,
+        "timestamp": "2025-02-10T08:14:41.702Z"
+      }
+    ],
+    [
+      "BethCNC/rachel_lee_patient_advocay_website/accessibility.cursorrules",
+      {
+        "name": "accessibility.cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/BethCNC/rachel_lee_patient_advocay_website/f44c301d9b28ee16141c77ca99940f4660c700d5/accessibility.cursorrules",
+        "repositoryId": 928624771,
+        "path": "BethCNC/rachel_lee_patient_advocay_website/accessibility.cursorrules",
+        "ownerName": "BethCNC",
+        "repositoryName": "rachel_lee_patient_advocay_website",
+        "htmlUrl": "https://github.com/BethCNC/rachel_lee_patient_advocay_website/blob/f44c301d9b28ee16141c77ca99940f4660c700d5/accessibility.cursorrules",
+        "size": 6.17,
+        "timestamp": "2025-02-10T08:14:42.058Z"
+      }
+    ],
+    [
+      "carmandale/PfizerOutdoCancer/.cursor/SwiftUI.cursorrules",
+      {
+        "name": "SwiftUI.cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/carmandale/PfizerOutdoCancer/6c6907dbfa8f6f210d4b27bf13e3c376460a629c/.cursor/SwiftUI.cursorrules",
+        "repositoryId": 906362711,
+        "path": "carmandale/PfizerOutdoCancer/.cursor/SwiftUI.cursorrules",
+        "ownerName": "carmandale",
+        "repositoryName": "PfizerOutdoCancer",
+        "htmlUrl": "https://github.com/carmandale/PfizerOutdoCancer/blob/6c6907dbfa8f6f210d4b27bf13e3c376460a629c/.cursor/SwiftUI.cursorrules",
+        "size": 1.47,
+        "timestamp": "2025-02-10T08:14:42.190Z"
+      }
+    ],
+    [
+      "carmandale/PfizerOutdoCancer/.cursor/Animation2D.cursorrules",
+      {
+        "name": "Animation2D.cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/carmandale/PfizerOutdoCancer/6c6907dbfa8f6f210d4b27bf13e3c376460a629c/.cursor/Animation2D.cursorrules",
+        "repositoryId": 906362711,
+        "path": "carmandale/PfizerOutdoCancer/.cursor/Animation2D.cursorrules",
+        "ownerName": "carmandale",
+        "repositoryName": "PfizerOutdoCancer",
+        "htmlUrl": "https://github.com/carmandale/PfizerOutdoCancer/blob/6c6907dbfa8f6f210d4b27bf13e3c376460a629c/.cursor/Animation2D.cursorrules",
+        "size": 1.15,
+        "timestamp": "2025-02-10T08:14:42.394Z"
+      }
+    ],
+    [
+      "ethpandaops/lab/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ethpandaops/lab/8a7c8db04509167cc3896563c440f59c1a9baf82/.cursorrules",
+        "repositoryId": 913642880,
+        "path": "ethpandaops/lab/.cursorrules",
+        "ownerName": "ethpandaops",
+        "repositoryName": "lab",
+        "htmlUrl": "https://github.com/ethpandaops/lab/blob/8a7c8db04509167cc3896563c440f59c1a9baf82/.cursorrules",
+        "size": 3.23,
+        "timestamp": "2025-02-10T08:14:42.488Z"
+      }
+    ],
+    [
+      "while-basic/v1/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/while-basic/v1/f0ca9417cc154e9e77bcea03e59bc9924c732f98/.cursorrules",
+        "repositoryId": 917318781,
+        "path": "while-basic/v1/.cursorrules",
+        "ownerName": "while-basic",
+        "repositoryName": "v1",
+        "htmlUrl": "https://github.com/while-basic/v1/blob/f0ca9417cc154e9e77bcea03e59bc9924c732f98/.cursorrules",
+        "size": 3.49,
+        "timestamp": "2025-02-10T08:14:43.259Z"
+      }
+    ],
+    [
+      "masaengineer/parts-sync-app/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/masaengineer/parts-sync-app/ef7d16fa62e543f44726d5a9c58409d26d108f6a/.cursorrules",
+        "repositoryId": 895082795,
+        "path": "masaengineer/parts-sync-app/.cursorrules",
+        "ownerName": "masaengineer",
+        "repositoryName": "parts-sync-app",
+        "htmlUrl": "https://github.com/masaengineer/parts-sync-app/blob/ef7d16fa62e543f44726d5a9c58409d26d108f6a/.cursorrules",
+        "size": 8.49,
+        "timestamp": "2025-02-10T08:14:43.528Z"
+      }
+    ],
+    [
+      "pribardi/custom_minecraft/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/pribardi/custom_minecraft/3c967821683aeeccca756906da2a12a318e9f7b1/.cursorrules",
+        "repositoryId": 929464817,
+        "path": "pribardi/custom_minecraft/.cursorrules",
+        "ownerName": "pribardi",
+        "repositoryName": "custom_minecraft",
+        "htmlUrl": "https://github.com/pribardi/custom_minecraft/blob/3c967821683aeeccca756906da2a12a318e9f7b1/.cursorrules",
+        "size": 5.39,
+        "timestamp": "2025-02-10T08:14:44.197Z"
+      }
+    ],
+    [
+      "nanzhipro/SimpleVapor/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/nanzhipro/SimpleVapor/92ca66cfec16f6549ebecb9a0a14829861b53282/.cursorrules",
+        "repositoryId": 929179868,
+        "path": "nanzhipro/SimpleVapor/.cursorrules",
+        "ownerName": "nanzhipro",
+        "repositoryName": "SimpleVapor",
+        "htmlUrl": "https://github.com/nanzhipro/SimpleVapor/blob/92ca66cfec16f6549ebecb9a0a14829861b53282/.cursorrules",
+        "size": 3.79,
+        "timestamp": "2025-02-10T08:14:44.714Z"
       }
     ]
   ]

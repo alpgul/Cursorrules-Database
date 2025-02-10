@@ -1,0 +1,318 @@
+# Accessibility Standards for Rachel Lee Advocacy Website
+
+## WCAG 2.1 AA Compliance
+
+### Perceivable
+1. Text Alternatives
+   ```html
+   <!-- All images require alt text -->
+   <img src="image.jpg" alt="Descriptive text">
+   
+   <!-- Complex images require extended descriptions -->
+   <figure>
+     <img src="complex.jpg" alt="Brief description">
+     <figcaption>Extended description</figcaption>
+   </figure>
+   ```
+
+2. Time-based Media
+   ```html
+   <!-- Video requirements -->
+   <video>
+     <source src="video.mp4" type="video/mp4">
+     <track kind="captions" src="captions.vtt">
+     <track kind="descriptions" src="descriptions.vtt">
+   </video>
+   
+   <!-- Audio requirements -->
+   <audio>
+     <source src="audio.mp3" type="audio/mpeg">
+     <track kind="captions" src="transcript.vtt">
+   </audio>
+   ```
+
+3. Adaptable Content
+   ```html
+   <!-- Semantic structure -->
+   <article>
+     <h1>Main Title</h1>
+     <section>
+       <h2>Section Title</h2>
+       <p>Content</p>
+     </section>
+   </article>
+   ```
+
+4. Distinguishable
+   ```css
+   /* Color contrast requirements */
+   :root {
+     --text-color: #333333;      /* 4.5:1 minimum contrast */
+     --heading-color: #1B365D;   /* 4.5:1 minimum contrast */
+     --link-color: #45818E;      /* 4.5:1 minimum contrast */
+   }
+   ```
+
+### Operable
+
+1. Keyboard Navigation
+   ```jsx
+   // All interactive elements must be keyboard accessible
+   const InteractiveComponent = () => {
+     const handleKeyPress = (e) => {
+       if (e.key === 'Enter' || e.key === ' ') {
+         // Handle interaction
+       }
+     };
+     
+     return (
+       <div
+         role="button"
+         tabIndex={0}
+         onKeyPress={handleKeyPress}
+         onClick={handleClick}
+       >
+         Interactive Element
+       </div>
+     );
+   };
+   ```
+
+2. Timing
+   ```jsx
+   // Adjustable timing settings
+   const TimedComponent = () => {
+     const [timeLimit, setTimeLimit] = useState(defaultTime);
+     
+     return (
+       <div>
+         <button onClick={() => setTimeLimit(timeLimit * 2)}>
+           Extend Time
+         </button>
+       </div>
+     );
+   };
+   ```
+
+3. Navigation
+   ```html
+   <!-- Clear navigation structure -->
+   <nav aria-label="Main navigation">
+     <ul role="menubar">
+       <li role="menuitem"><a href="#home">Home</a></li>
+       <li role="menuitem"><a href="#services">Services</a></li>
+     </ul>
+   </nav>
+   ```
+
+### Understandable
+
+1. Reading Level
+   ```html
+   <!-- Content guidelines -->
+   <article>
+     <h1>Clear, Concise Heading</h1>
+     <p>
+       <!-- Use plain language -->
+       <!-- Short paragraphs -->
+       <!-- Bullet points for lists -->
+     </p>
+   </article>
+   ```
+
+2. Predictable
+   ```css
+   /* Consistent styling */
+   .button {
+     /* Standard button styles */
+   }
+   
+   .button:hover,
+   .button:focus {
+     /* Consistent interaction styles */
+   }
+   ```
+
+3. Input Assistance
+   ```html
+   <!-- Form requirements -->
+   <form>
+     <label for="name">Name</label>
+     <input
+       id="name"
+       type="text"
+       aria-required="true"
+       aria-describedby="name-help"
+     >
+     <div id="name-help">Please enter your full name</div>
+   </form>
+   ```
+
+## ADHD/Autism-Friendly Design
+
+### Visual Design
+```css
+/* Clean, distraction-free layout */
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #ffffff;
+}
+
+/* Clear visual hierarchy */
+.section {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+```
+
+### Content Structure
+```html
+<!-- Progressive disclosure -->
+<details>
+  <summary>Click to expand section</summary>
+  <div class="content">
+    <!-- Detailed content -->
+  </div>
+</details>
+
+<!-- Clear sections -->
+<section class="content-block">
+  <h2>Section Title</h2>
+  <div class="progress-indicator">
+    <!-- Progress visualization -->
+  </div>
+  <div class="content">
+    <!-- Section content -->
+  </div>
+</section>
+```
+
+### Interactive Features
+```jsx
+// Progress tracking
+const ProgressTracker = () => {
+  return (
+    <div role="progressbar" aria-valuenow={progress}>
+      <div class="visual-progress"></div>
+      <div class="text-progress">Step {current} of {total}</div>
+    </div>
+  );
+};
+
+// Save progress
+const SaveProgress = () => {
+  return (
+    <button onClick={saveState}>
+      Save Progress
+      <span class="icon" aria-hidden="true">💾</span>
+    </button>
+  );
+};
+```
+
+## Audio Integration
+
+### Audio Controls
+```jsx
+const AudioPlayer = () => {
+  return (
+    <div class="audio-controls">
+      <button aria-label="Play audio">
+        <span class="icon">▶️</span>
+      </button>
+      <div class="volume-control">
+        <label for="volume">Volume</label>
+        <input
+          type="range"
+          id="volume"
+          min="0"
+          max="100"
+          aria-label="Volume control"
+        />
+      </div>
+    </div>
+  );
+};
+```
+
+### Transcripts
+```html
+<!-- Audio content transcripts -->
+<div class="audio-content">
+  <audio src="content.mp3" controls></audio>
+  <details>
+    <summary>View Transcript</summary>
+    <div class="transcript">
+      <!-- Transcript content -->
+    </div>
+  </details>
+</div>
+```
+
+## Testing Requirements
+
+### Automated Testing
+```javascript
+// Required tests
+describe('Accessibility', () => {
+  test('WCAG compliance', () => {
+    // Run automated WCAG tests
+  });
+  
+  test('Keyboard navigation', () => {
+    // Test keyboard interactions
+  });
+  
+  test('Screen reader compatibility', () => {
+    // Test screen reader output
+  });
+});
+```
+
+### Manual Testing
+1. Screen reader testing
+2. Keyboard navigation
+3. Color contrast verification
+4. Content readability
+5. Audio functionality
+6. Interactive feature usability
+
+## Documentation Requirements
+
+### Accessibility Features
+```markdown
+# Accessibility Documentation
+
+## Available Features
+- Screen reader support
+- Keyboard navigation
+- High contrast mode
+- Audio descriptions
+- Progress saving
+- Adjustable timing
+
+## Implementation Guidelines
+[Detailed guidelines for each feature]
+```
+
+### User Guide
+```markdown
+# User Guide
+
+## Accessibility Options
+- How to enable features
+- Keyboard shortcuts
+- Audio controls
+- Display adjustments
+- Progress tracking
+``` 
