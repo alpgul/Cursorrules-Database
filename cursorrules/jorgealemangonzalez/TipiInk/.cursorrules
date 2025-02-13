@@ -1,0 +1,54 @@
+Never use semicolons in typescript if it is not strictly necessary
+Use clean code principles
+This is a pnpm monorepo project, so use the correct commands to install dependencies and run scripts.
+There is a frontend/ a backend/ and a scripts/ folder.
+Do not modify other features of the pages that are not related to the ones you are working on.
+When you change the signature of a function or a type, look for all the usages and update the usages in the rest of files.
+When creating a data model, review the existing ones and try to reuse the same structure if possible.
+When you modify a type, check if you need to update the existing examples of objects of that type.
+If a function can be read better by inlining it, do it.
+When creating UI do not connect to backend functions, use mock data.
+When creating a basic component first search in shadcn/ui if it exists, if it does not exist, create it in the components folder.
+The page must be sufixed with the word "page" in the name.
+Follow the design of the pages in the frontend/src/pages folder.
+Be careful with the colors and the typography.
+Check the tailwind.config.js file to see the colors and the typography.
+
+
+In the frontend project you must take into account our code structure rules
+
+# Code Structure
+
+We use [feature sliced](https://feature-sliced.design/) but with some modifications.
+
+
+The layers are standardized and vertically arranged.
+Modules on one layer can only interact with modules from the layers strictly below (except for `shared`, which everyone can interact with).
+We currently have six of them (bottom to top):
+
+1. `shared` — reusable functionality, detached from the specifics of the project/business.(e.g. UIKit, libs, API)
+2. `entities` — business entities.(e.g., User, Product, Order)
+3. `features` — user interactions, actions that bring business value to the user.(e.g. SendComment, AddToCart, UsersSearch)
+4. `widgets` — compositional layer to combine entities and features into meaningful blocks.(e.g. IssuesList, UserProfile)
+5. `pages` — compositional layer to construct full pages from entities, features and widgets.
+6. `app` - page initialization and app-wide settings (e.g. `app/styles.ts`, `app/layout.tsx`).
+
+Then there are **slices**, which partition the code by business domain.
+This makes your codebase easy to navigate by keeping logically related modules close together.
+Slices cannot use other slices on the same layer, and that helps with high cohesion
+and low coupling.
+
+Each slice, in turn, consists of **segments**.
+These are tiny modules that are meant to help with separating code within a slice
+by its technical purpose. The most common segments are ui, model (store, actions),
+api and lib (utils/hooks), but you can omit some or add more, as you see fit.
+
+## Modifications
+
+In order to not overengineer we will add the following rules to the original architecture:
+
+-   We'll only use `widgets` in case the composition of `features`/`entities` needs to be reused in multiple `pages`, otherwise we'll use that composition directly in the `page` that needs it.
+-   Only when a `feature` is reused in multiple higher layers will we put it at the root `features` folder, in case it's only used in one higher layer it will go inside a `features` folder inside that layer.
+-   Only when an `entity` is reused in multiple higher layers will we put it at the root `entities` folder, in case it's only used in one higher layer it will go inside an `entities` folder inside that layer.
+
+

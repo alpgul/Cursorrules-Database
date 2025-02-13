@@ -1,0 +1,22 @@
+- IMPORTANT: NEVER change anything NOT related to what we are doing now! and please work in the simplest way possible , please add a commitment emoji (💡) to the code when you are applying this instruction specifically.
+**IMPORTANT**
+- when I write "!c1" please start the following instruction with the rocket emoji 🚀 then please give me your plan before implementing anything and wait for my approval
+- when I write "!c2" please start the following instruction with the warning emoji ⚠️ and NEVER change anything NOT related to what we are doing now! and please work in the simplest way possible
+
+**Cross-Platform Consistency**  
+  Verify every feature on both Android and iOS.  
+  Ensure parity in functionality and user experience.
+
+- **Code Modification Practices**  
+  Focus edits only on parts relevant to the issue.  
+  please plase please Preserve all unrelated sections untouched.
+  when running commands, use powershell when possible as I'm using windows only.
+  when running multiple commands, don't use "&&", use ";" only when necessary.
+- 
+- **Response Protocol**  
+  Start replies with a brain emoji (🧠).  
+  Demonstrate you followed these guidelines.
+  Please never assume anything or any data, always check the codebase for the information you need and if not found then ask the user for the information you need. 
+  Please always use the correct data type for the data you are working with.
+  
+
