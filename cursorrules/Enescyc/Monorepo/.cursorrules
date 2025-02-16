@@ -1,0 +1,406 @@
+# Development Rules and Best Practices
+
+!!!! IMPORTANT !!!!
+WHEN YOU CREATE A NEW FILE, YOU MUST ADD IT TO THE PROJECT STRUCTURE
+WHEN YOU CREATE A NEW PACKAGE, YOU MUST ADD IT TO THE MONOREPO STRUCTURE
+WHEN YOU CREATE A NEW TYPE,INTERFACE,ENUM, ETC. YOU MUST ADD IT TO THE TYPES PACKAGE
+
+## 1. Architecture & Project Structure
+
+### Monorepo Structure
+```typescript
+apps/
+├── web/                 # Ana web uygulaması (Next.js)
+|--- api/                # API (NestJS)
+packages/
+├── ui/                 # Shared UI components
+├── config/             # Shared configurations
+├── types/             # Shared TypeScript types
+└── utils/             # Shared utilities
+```
+
+### Frontend (Next.js)
+```typescript
+// Directory Structure
+src/
+  ├── app/                 # App router pages
+  │   ├── (auth)/         # Auth group routes
+  │   ├── (dashboard)/    # Dashboard group routes
+  │   └── api/            # API routes
+  ├── components/         # React components
+  │   ├── ui/            # Reusable UI components
+  │   └── features/      # Feature-specific components
+  ├── lib/               # Shared libraries
+  ├── hooks/             # Custom hooks
+  ├── types/             # TypeScript types
+  ├── styles/            # Global styles
+  ├── utils/             # Utility functions
+  └── store/             # State management
+
+// Component Structure Rules
+- One component per file
+- Use named exports
+- Separate logic from UI
+- Keep components focused and small
+- Use composition over inheritance
+```
+
+### Backend (NestJS)
+```typescript
+// Directory Structure
+src/
+  ├── modules/           # Feature modules
+  │   ├── auth/
+  │   ├── users/
+  │   └── words/
+  ├── common/           # Shared resources
+  │   ├── decorators/
+  │   ├── filters/
+  │   ├── guards/
+  │   └── interceptors/
+  ├── config/          # Configuration
+  └── shared/          # Shared utilities
+
+// Module Structure Rules
+- One module per feature
+- Keep modules independent
+- Use dependency injection
+- Follow single responsibility
+```
+
+## 2. Coding Standards
+
+### TypeScript Rules
+```typescript
+// Use strict type checking
+{
+  "compilerOptions": {
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true
+  }
+}
+
+// Type definitions
+type Props = {
+  readonly data: Data;    // Immutable props
+  onAction: (id: string) => void;  // Function types
+}
+
+// Use enums for fixed values
+enum Status {
+  PENDING = 'pending',
+  ACTIVE = 'active',
+  INACTIVE = 'inactive'
+}
+
+// Avoid any
+// ❌ Bad
+const data: any = getData();
+
+// ✅ Good
+interface Data {
+  id: string;
+  name: string;
+}
+const data: Data = getData();
+```
+
+### Component Rules
+```typescript
+// ❌ Bad - Props spreading
+const Component = (props: any) => {
+  return <div {...props} />
+}
+
+// ✅ Good - Explicit props
+interface ComponentProps {
+  title: string;
+  onClick: () => void;
+}
+
+const Component: React.FC<ComponentProps> = ({ title, onClick }) => {
+  return <div onClick={onClick}>{title}</div>
+}
+
+// Use custom hooks for complex logic
+const useCustomHook = () => {
+  const [state, setState] = useState<State>();
+  
+  useEffect(() => {
+    // Side effects
+  }, []);
+
+  return { state, setState };
+}
+```
+
+## 3. SOLID Principles
+
+### Single Responsibility
+```typescript
+// ❌ Bad
+class UserService {
+  getUser() {}
+  sendEmail() {}
+  updateDatabase() {}
+}
+
+// ✅ Good
+class UserService {
+  getUser() {}
+}
+
+class EmailService {
+  sendEmail() {}
+}
+
+class DatabaseService {
+  updateDatabase() {}
+}
+```
+
+### Open/Closed
+```typescript
+// ❌ Bad
+class Rectangle {
+  calculate(type: string) {
+    if (type === 'area') return this.width * this.height;
+    if (type === 'perimeter') return 2 * (this.width + this.height);
+  }
+}
+
+// ✅ Good
+interface Shape {
+  calculate(): number;
+}
+
+class Area implements Shape {
+  calculate() { return this.width * this.height; }
+}
+
+class Perimeter implements Shape {
+  calculate() { return 2 * (this.width + this.height); }
+}
+```
+
+## 4. Performance Guidelines
+
+### Frontend
+```typescript
+// Use React.memo for expensive components
+const ExpensiveComponent = React.memo(({ data }) => {
+  return <div>{/* Complex rendering */}</div>
+});
+
+// Optimize images
+export const Image = () => (
+  <Image
+    src="/image.jpg"
+    alt="Description"
+    width={500}
+    height={300}
+    loading="lazy"
+  />
+);
+
+// Use dynamic imports
+const DynamicComponent = dynamic(() => import('./Component'));
+```
+
+### Backend
+```typescript
+// Use caching
+@Injectable()
+export class CacheService {
+  private cache = new Map();
+
+  get(key: string) {
+    if (!this.cache.has(key)) {
+      const data = this.fetchData(key);
+      this.cache.set(key, data);
+    }
+    return this.cache.get(key);
+  }
+}
+
+// Optimize queries
+@Entity()
+class User {
+  @ManyToOne(() => Profile, { lazy: true })
+  profile: Profile;
+}
+```
+
+## 5. State Management
+
+### Frontend Rules
+```typescript
+// Use hooks for local state
+const [state, setState] = useState<State>();
+
+// Use context for shared state
+const AppContext = createContext<AppState>(null);
+
+// Use Zustand for global state
+const useStore = create<Store>((set) => ({
+  data: null,
+  setData: (data) => set({ data })
+}));
+```
+
+## 6. Error Handling
+
+### Frontend
+```typescript
+// Global error boundary
+class ErrorBoundary extends React.Component {
+  componentDidCatch(error: Error) {
+    logError(error);
+  }
+  
+  render() {
+    return this.props.children;
+  }
+}
+
+// API error handling
+const fetchData = async () => {
+  try {
+    const response = await api.get('/data');
+    return response.data;
+  } catch (error) {
+    handleError(error);
+  }
+};
+```
+
+### Backend
+```typescript
+// Global exception filter
+@Catch()
+export class GlobalExceptionFilter implements ExceptionFilter {
+  catch(exception: unknown, host: ArgumentsHost) {
+    // Handle error
+  }
+}
+
+// Custom exceptions
+export class CustomException extends HttpException {
+  constructor() {
+    super('Message', HttpStatus.BAD_REQUEST);
+  }
+}
+```
+
+## 7. Testing Guidelines
+
+### Frontend
+```typescript
+// Component testing
+describe('Component', () => {
+  it('renders correctly', () => {
+    render(<Component />);
+    expect(screen.getByText('text')).toBeInTheDocument();
+  });
+});
+
+// Hook testing
+test('useCustomHook', () => {
+  const { result } = renderHook(() => useCustomHook());
+  act(() => {
+    result.current.update();
+  });
+  expect(result.current.value).toBe(expected);
+});
+```
+
+### Backend
+```typescript
+// Service testing
+describe('Service', () => {
+  it('should return data', async () => {
+    const result = await service.getData();
+    expect(result).toBeDefined();
+  });
+});
+
+// E2E testing
+describe('API', () => {
+  it('/GET endpoint', () => {
+    return request(app.getHttpServer())
+      .get('/endpoint')
+      .expect(200);
+  });
+});
+```
+
+## 8. Security Rules
+
+```typescript
+// XSS Prevention
+const dangerousHTML = sanitizeHTML(content);
+
+// CSRF Protection
+app.use(csurf());
+
+// Rate Limiting
+@UseGuards(ThrottlerGuard)
+@Throttle(10, 60)
+async getData() {}
+
+// Input Validation
+class CreateUserDto {
+  @IsString()
+  @MinLength(2)
+  @MaxLength(20)
+  name: string;
+}
+```
+
+## 9. API Design Rules
+
+```typescript
+// RESTful endpoints
+GET     /api/resources
+POST    /api/resources
+GET     /api/resources/:id
+PUT     /api/resources/:id
+DELETE  /api/resources/:id
+
+// Response format
+interface ApiResponse<T> {
+  data: T;
+  meta?: {
+    page: number;
+    total: number;
+  };
+  error?: {
+    code: string;
+    message: string;
+  };
+}
+```
+
+## 10. Documentation Requirements
+
+```typescript
+// Component documentation
+/**
+ * @component Button
+ * @description A reusable button component
+ * @example
+ * <Button variant="primary" onClick={() => {}}>
+ *   Click me
+ * </Button>
+ */
+
+// API documentation
+/**
+ * @api {post} /users Create user
+ * @apiName CreateUser
+ * @apiGroup Users
+ * @apiParam {String} name User's name
+ * @apiSuccess {Object} user Created user
+ */
+```

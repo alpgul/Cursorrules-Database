@@ -1,0 +1,36 @@
+---
+# Usage:
+# This file defines rules for generating commit messages.
+# Add to it as needed for new types of changes or formatting preferences.
+
+rules:
+  commit_message:
+    format: "{type}({scope}): {description}"
+    types:
+      - feat
+      - refactor
+      - chore
+      - teach
+      - a11y
+      - config
+      - seo
+      - security
+      - fix
+    scopes:
+      - yaml
+      - js
+      - html
+      - assets
+    description:
+      case: lower
+      tense: active
+    examples:
+      - "feat(yaml): create initial commit message format rules"
+      - "refactor(js): update sun emoji from ☀️ to 🌞 in theme toggle"
+      - "chore(yaml): fix yaml linting issues"
+      - "teach(js): enhance comments for clarity"
+      - "a11y(html): add aria-current to active nav link"
+      - "config(yaml): add config type to commit message rules"
+      - "seo(html): add site name to page title with standard format"
+      - "security(html): add noscript warning for javascript-disabled browsers"
+      - "fix(html): correct social media preview image urls"

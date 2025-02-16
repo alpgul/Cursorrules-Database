@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 853,
+  "size": 877,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -11942,6 +11942,342 @@
         "htmlUrl": "https://github.com/nehiljain/demodrive.tech/blob/e6f388c2e6e24f24315211a26f0d9a728e7332b4/.cursorrules",
         "size": 8.02,
         "timestamp": "2025-02-13T08:14:42.971Z"
+      }
+    ],
+    [
+      "zaneriley/personal-site/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/zaneriley/personal-site/b509fb8dba87c947c93b0e9b6eaf1ad0fbb6bbf9/.cursorrules",
+        "repositoryId": 80476162,
+        "path": "zaneriley/personal-site/.cursorrules",
+        "ownerName": "zaneriley",
+        "repositoryName": "personal-site",
+        "htmlUrl": "https://github.com/zaneriley/personal-site/blob/b509fb8dba87c947c93b0e9b6eaf1ad0fbb6bbf9/.cursorrules",
+        "size": 3.73,
+        "timestamp": "2025-02-16T08:12:47.558Z"
+      }
+    ],
+    [
+      "marcusrbrown/renovate-config/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/marcusrbrown/renovate-config/5742cb373fd89d7b68c2f8081708e3e0c5348b11/.cursorrules",
+        "repositoryId": 488107977,
+        "path": "marcusrbrown/renovate-config/.cursorrules",
+        "ownerName": "marcusrbrown",
+        "repositoryName": "renovate-config",
+        "htmlUrl": "https://github.com/marcusrbrown/renovate-config/blob/5742cb373fd89d7b68c2f8081708e3e0c5348b11/.cursorrules",
+        "size": 4.69,
+        "timestamp": "2025-02-16T08:12:47.796Z"
+      }
+    ],
+    [
+      "ndendic/jupy-juce/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ndendic/jupy-juce/b1fc835d77d128009a0a81d6ed107bf1d9060de4/.cursorrules",
+        "repositoryId": 910162940,
+        "path": "ndendic/jupy-juce/.cursorrules",
+        "ownerName": "ndendic",
+        "repositoryName": "jupy-juce",
+        "htmlUrl": "https://github.com/ndendic/jupy-juce/blob/b1fc835d77d128009a0a81d6ed107bf1d9060de4/.cursorrules",
+        "size": 3.19,
+        "timestamp": "2025-02-16T08:12:48.075Z"
+      }
+    ],
+    [
+      "kevin-kidd/dishify/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/kevin-kidd/dishify/5afedaa1344e7fd37d357714e764a5eac2a54a05/.cursorrules",
+        "repositoryId": 850105456,
+        "path": "kevin-kidd/dishify/.cursorrules",
+        "ownerName": "kevin-kidd",
+        "repositoryName": "dishify",
+        "htmlUrl": "https://github.com/kevin-kidd/dishify/blob/5afedaa1344e7fd37d357714e764a5eac2a54a05/.cursorrules",
+        "size": 4.62,
+        "timestamp": "2025-02-16T08:12:48.544Z"
+      }
+    ],
+    [
+      "beverm2391/teenyagent-v2/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/beverm2391/teenyagent-v2/9306698accaccc47375a568d27ac1fb7ef04cdb7/.cursorrules",
+        "repositoryId": 913540346,
+        "path": "beverm2391/teenyagent-v2/.cursorrules",
+        "ownerName": "beverm2391",
+        "repositoryName": "teenyagent-v2",
+        "htmlUrl": "https://github.com/beverm2391/teenyagent-v2/blob/9306698accaccc47375a568d27ac1fb7ef04cdb7/.cursorrules",
+        "size": 7.18,
+        "timestamp": "2025-02-16T08:12:49.137Z"
+      }
+    ],
+    [
+      "ericmjl/api-key-precommit/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ericmjl/api-key-precommit/909bc9c5c3c987e95729fcb149d3761465088dba/.cursorrules",
+        "repositoryId": 902900446,
+        "path": "ericmjl/api-key-precommit/.cursorrules",
+        "ownerName": "ericmjl",
+        "repositoryName": "api-key-precommit",
+        "htmlUrl": "https://github.com/ericmjl/api-key-precommit/blob/909bc9c5c3c987e95729fcb149d3761465088dba/.cursorrules",
+        "size": 1.71,
+        "timestamp": "2025-02-16T08:12:49.305Z"
+      }
+    ],
+    [
+      "marcusrbrown/ha-config/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/marcusrbrown/ha-config/611bd4306cdb04faf914bd745c30196ec5b653d1/.cursorrules",
+        "repositoryId": 670485609,
+        "path": "marcusrbrown/ha-config/.cursorrules",
+        "ownerName": "marcusrbrown",
+        "repositoryName": "ha-config",
+        "htmlUrl": "https://github.com/marcusrbrown/ha-config/blob/611bd4306cdb04faf914bd745c30196ec5b653d1/.cursorrules",
+        "size": 4.45,
+        "timestamp": "2025-02-16T08:12:49.748Z"
+      }
+    ],
+    [
+      "educlopez/gamedev/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/educlopez/gamedev/a9138321eee0da6fd710eb889e341ffb6a78474a/.cursorrules",
+        "repositoryId": 591977743,
+        "path": "educlopez/gamedev/.cursorrules",
+        "ownerName": "educlopez",
+        "repositoryName": "gamedev",
+        "htmlUrl": "https://github.com/educlopez/gamedev/blob/a9138321eee0da6fd710eb889e341ffb6a78474a/.cursorrules",
+        "size": 6.33,
+        "timestamp": "2025-02-16T08:12:49.957Z"
+      }
+    ],
+    [
+      "betagouv/france-chaleur-urbaine/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/betagouv/france-chaleur-urbaine/5c32eec8df872f8a783dba9cc104f0a149db7514/.cursorrules",
+        "repositoryId": 375059919,
+        "path": "betagouv/france-chaleur-urbaine/.cursorrules",
+        "ownerName": "betagouv",
+        "repositoryName": "france-chaleur-urbaine",
+        "htmlUrl": "https://github.com/betagouv/france-chaleur-urbaine/blob/5c32eec8df872f8a783dba9cc104f0a149db7514/.cursorrules",
+        "size": 2.9,
+        "timestamp": "2025-02-16T08:12:51.402Z"
+      }
+    ],
+    [
+      "jabaltorres/web-fun/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/jabaltorres/web-fun/31f93f3138b50472df73389afa21318fc9ca4473/.cursorrules",
+        "repositoryId": 38092830,
+        "path": "jabaltorres/web-fun/.cursorrules",
+        "ownerName": "jabaltorres",
+        "repositoryName": "web-fun",
+        "htmlUrl": "https://github.com/jabaltorres/web-fun/blob/31f93f3138b50472df73389afa21318fc9ca4473/.cursorrules",
+        "size": 1.82,
+        "timestamp": "2025-02-16T08:12:51.817Z"
+      }
+    ],
+    [
+      "yasinuslu/nepjua/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/yasinuslu/nepjua/45004d1f1d5e6e9f675fa0ae5f33d6e2aec9f08b/.cursorrules",
+        "repositoryId": 648403177,
+        "path": "yasinuslu/nepjua/.cursorrules",
+        "ownerName": "yasinuslu",
+        "repositoryName": "nepjua",
+        "htmlUrl": "https://github.com/yasinuslu/nepjua/blob/45004d1f1d5e6e9f675fa0ae5f33d6e2aec9f08b/.cursorrules",
+        "size": 4.67,
+        "timestamp": "2025-02-16T08:12:52.016Z"
+      }
+    ],
+    [
+      "recoupable/Recoup-Agent-APIs/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/recoupable/Recoup-Agent-APIs/cfbfaff16f82c584c049f4af38103e7589f7d82a/.cursorrules",
+        "repositoryId": 897972550,
+        "path": "recoupable/Recoup-Agent-APIs/.cursorrules",
+        "ownerName": "recoupable",
+        "repositoryName": "Recoup-Agent-APIs",
+        "htmlUrl": "https://github.com/recoupable/Recoup-Agent-APIs/blob/cfbfaff16f82c584c049f4af38103e7589f7d82a/.cursorrules",
+        "size": 8.95,
+        "timestamp": "2025-02-16T08:12:52.416Z"
+      }
+    ],
+    [
+      "zhy3213/cursor-playground/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/zhy3213/cursor-playground/a449b28034b71db08bc792476c2f42be866a32ff/.cursorrules",
+        "repositoryId": 932559924,
+        "path": "zhy3213/cursor-playground/.cursorrules",
+        "ownerName": "zhy3213",
+        "repositoryName": "cursor-playground",
+        "htmlUrl": "https://github.com/zhy3213/cursor-playground/blob/a449b28034b71db08bc792476c2f42be866a32ff/.cursorrules",
+        "size": 7.69,
+        "timestamp": "2025-02-16T08:12:52.822Z"
+      }
+    ],
+    [
+      "All-Out-Games/office-simulator/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/All-Out-Games/office-simulator/0e0ec18d1cfbd9333b9f837298b35f5a653c2f73/.cursorrules",
+        "repositoryId": 850175921,
+        "path": "All-Out-Games/office-simulator/.cursorrules",
+        "ownerName": "All-Out-Games",
+        "repositoryName": "office-simulator",
+        "htmlUrl": "https://github.com/All-Out-Games/office-simulator/blob/0e0ec18d1cfbd9333b9f837298b35f5a653c2f73/.cursorrules",
+        "size": 3.36,
+        "timestamp": "2025-02-16T08:12:53.590Z"
+      }
+    ],
+    [
+      "atreib/talk-to-documents/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/atreib/talk-to-documents/d2b46cda7928ca1b26708552ad8ab8a5acd48e75/.cursorrules",
+        "repositoryId": 932892813,
+        "path": "atreib/talk-to-documents/.cursorrules",
+        "ownerName": "atreib",
+        "repositoryName": "talk-to-documents",
+        "htmlUrl": "https://github.com/atreib/talk-to-documents/blob/d2b46cda7928ca1b26708552ad8ab8a5acd48e75/.cursorrules",
+        "size": 7.39,
+        "timestamp": "2025-02-16T08:12:55.508Z"
+      }
+    ],
+    [
+      "opendidac/opendidac/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/opendidac/opendidac/a9a8bf71f9e8dd7447a75f8ac278007b68c4c444/.cursorrules",
+        "repositoryId": 528527660,
+        "path": "opendidac/opendidac/.cursorrules",
+        "ownerName": "opendidac",
+        "repositoryName": "opendidac",
+        "htmlUrl": "https://github.com/opendidac/opendidac/blob/a9a8bf71f9e8dd7447a75f8ac278007b68c4c444/.cursorrules",
+        "size": 4.13,
+        "timestamp": "2025-02-16T08:12:57.765Z"
+      }
+    ],
+    [
+      "sweatpotato13/erinn.me/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/sweatpotato13/erinn.me/c7428ab624e1fdc32e0245da8c76e181a2dad38c/.cursorrules",
+        "repositoryId": 874521366,
+        "path": "sweatpotato13/erinn.me/.cursorrules",
+        "ownerName": "sweatpotato13",
+        "repositoryName": "erinn.me",
+        "htmlUrl": "https://github.com/sweatpotato13/erinn.me/blob/c7428ab624e1fdc32e0245da8c76e181a2dad38c/.cursorrules",
+        "size": 2.67,
+        "timestamp": "2025-02-16T08:12:59.788Z"
+      }
+    ],
+    [
+      "axjasf/NeverEatAlone/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/axjasf/NeverEatAlone/180ff0b08cdffe3ec612b7472c9d4871f0cf7675/.cursorrules",
+        "repositoryId": 930544738,
+        "path": "axjasf/NeverEatAlone/.cursorrules",
+        "ownerName": "axjasf",
+        "repositoryName": "NeverEatAlone",
+        "htmlUrl": "https://github.com/axjasf/NeverEatAlone/blob/180ff0b08cdffe3ec612b7472c9d4871f0cf7675/.cursorrules",
+        "size": 3.54,
+        "timestamp": "2025-02-16T08:13:00.366Z"
+      }
+    ],
+    [
+      "tkosht/windsurf_dev/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/tkosht/windsurf_dev/05a0f832993ddc869c31a7b2699ff65959022a49/.cursorrules",
+        "repositoryId": 933446446,
+        "path": "tkosht/windsurf_dev/.cursorrules",
+        "ownerName": "tkosht",
+        "repositoryName": "windsurf_dev",
+        "htmlUrl": "https://github.com/tkosht/windsurf_dev/blob/05a0f832993ddc869c31a7b2699ff65959022a49/.cursorrules",
+        "size": 3.27,
+        "timestamp": "2025-02-16T08:13:00.553Z"
+      }
+    ],
+    [
+      "Monochromat1c/fcu-ams-new/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Monochromat1c/fcu-ams-new/50d263505b81c8511a706464975bf4114e572aba/.cursorrules",
+        "repositoryId": 852717466,
+        "path": "Monochromat1c/fcu-ams-new/.cursorrules",
+        "ownerName": "Monochromat1c",
+        "repositoryName": "fcu-ams-new",
+        "htmlUrl": "https://github.com/Monochromat1c/fcu-ams-new/blob/50d263505b81c8511a706464975bf4114e572aba/.cursorrules",
+        "size": 5.59,
+        "timestamp": "2025-02-16T08:13:01.868Z"
+      }
+    ],
+    [
+      "Enescyc/Monorepo/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Enescyc/Monorepo/ec4f9089ebb904f171f150e331ee58120faf5fd9/.cursorrules",
+        "repositoryId": 915854591,
+        "path": "Enescyc/Monorepo/.cursorrules",
+        "ownerName": "Enescyc",
+        "repositoryName": "Monorepo",
+        "htmlUrl": "https://github.com/Enescyc/Monorepo/blob/ec4f9089ebb904f171f150e331ee58120faf5fd9/.cursorrules",
+        "size": 7.83,
+        "timestamp": "2025-02-16T08:13:12.425Z"
+      }
+    ],
+    [
+      "glassmonkey/agent-worker/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/glassmonkey/agent-worker/a1f26778e993a67f1e76102a15b57b1de8561da6/.cursorrules",
+        "repositoryId": 930034354,
+        "path": "glassmonkey/agent-worker/.cursorrules",
+        "ownerName": "glassmonkey",
+        "repositoryName": "agent-worker",
+        "htmlUrl": "https://github.com/glassmonkey/agent-worker/blob/a1f26778e993a67f1e76102a15b57b1de8561da6/.cursorrules",
+        "size": 1.17,
+        "timestamp": "2025-02-16T08:13:12.840Z"
+      }
+    ],
+    [
+      "oricha/Dev-Blueprint/rules/cursor-rules/java-springboot-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/oricha/Dev-Blueprint/c536bcbd95cfd77b6dd411966a9f9f6efc9ca924/rules/cursor-rules/java-springboot-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 487232879,
+        "path": "oricha/Dev-Blueprint/rules/cursor-rules/java-springboot-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "oricha",
+        "repositoryName": "Dev-Blueprint",
+        "htmlUrl": "https://github.com/oricha/Dev-Blueprint/blob/c536bcbd95cfd77b6dd411966a9f9f6efc9ca924/rules/cursor-rules/java-springboot-cursorrules-prompt-file/.cursorrules",
+        "size": 11.49,
+        "timestamp": "2025-02-16T08:13:13.441Z"
+      }
+    ],
+    [
+      "torischuyler/eos-lesson-plans/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/torischuyler/eos-lesson-plans/4049e03aeeebc4df5b8e36523f27af8f8eec65df/.cursorrules",
+        "repositoryId": 920343216,
+        "path": "torischuyler/eos-lesson-plans/.cursorrules",
+        "ownerName": "torischuyler",
+        "repositoryName": "eos-lesson-plans",
+        "htmlUrl": "https://github.com/torischuyler/eos-lesson-plans/blob/4049e03aeeebc4df5b8e36523f27af8f8eec65df/.cursorrules",
+        "size": 1.03,
+        "timestamp": "2025-02-16T08:13:14.022Z"
       }
     ]
   ]
