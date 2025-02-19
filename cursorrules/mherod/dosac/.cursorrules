@@ -1,0 +1,382 @@
+# Project Configuration Rules
+
+## Package Management
+- Use pnpm exclusively for package management
+- Node.js version: >= 18.0.0
+- Keep pnpm-lock.yaml in version control
+
+## Git Workflow
+- Conventional commits required
+- Pre-commit hooks must not be skipped
+- All changes must be reviewed before staging
+- Maximum commit message length: 100 characters
+
+## Code Style
+- TypeScript strict mode enabled
+- ESLint configuration must be followed
+- Tailwind CSS for styling
+- Next.js 14+ conventions
+  - App Router required
+  - Partial Prerendering (PPR) enabled where beneficial:
+    - Configure with `ppr: 'incremental'` in `next.config.js`
+    - Add `export const experimental_ppr = true` to pages that benefit from PPR
+    - Ideal for routes with mixed static/dynamic content
+    - Consider for high-traffic pages with cacheable content
+
+## JSDoc Documentation
+1. **Required Documentation**
+   - Function declarations
+   - Method definitions
+   - Class declarations
+   - Public API functions and methods
+   - Exported utilities and helpers
+
+2. **Documentation Format**
+   ```typescript
+   /**
+    * Brief description of what the function/class does
+    * @param paramName - Description of the parameter
+    * @returns Description of what is returned
+    */
+   ```
+
+3. **Documentation Rules**
+   - All public functions must have JSDoc comments
+   - Parameter descriptions are required
+   - Return value descriptions are required
+   - Types are inferred from TypeScript (no need to specify)
+   - Use present tense in descriptions
+   - Keep descriptions concise but clear
+   - Document side effects when present
+   - Document thrown errors when applicable
+
+4. **Component Documentation**
+   - Document props using TypeScript interfaces
+   - Document state management approach
+   - Document side effects and cleanup
+   - Document event handlers
+   - Example:
+   ```typescript
+   interface ButtonProps {
+     /** The text content to display in the button */
+     label: string;
+     /** Called when the button is clicked */
+     onClick: () => void;
+   }
+
+   /**
+    * A reusable button component with consistent styling
+    */
+   export function Button({ label, onClick }: ButtonProps) {
+     // ...
+   }
+   ```
+
+5. **Hook Documentation**
+   - Document hook purpose and usage
+   - Document dependencies array items
+   - Document cleanup functions
+   - Document state updates
+   - Example:
+   ```typescript
+   /**
+    * Manages caption state and provides update functions
+    * @param initialText - The initial caption text
+    * @returns Object containing caption state and update functions
+    */
+   export function useCaptionState(initialText: string) {
+     // ...
+   }
+   ```
+
+6. **API Route Documentation**
+   - Document request parameters
+   - Document response format
+   - Document error responses
+   - Document authentication requirements
+   - Example:
+   ```typescript
+   /**
+    * Retrieves frame data for a specific episode
+    * @param request - The incoming request object
+    * @param params - Route parameters containing episodeId
+    * @returns Frame data object or 404 if not found
+    */
+   export async function GET(
+     request: Request,
+     { params }: { params: { episodeId: string } }
+   ) {
+     // ...
+   }
+   ```
+
+## Development Practices
+- Feature branches required
+- Pull requests required for main branch
+- Tests required for new features
+- Documentation updates required for changes
+
+## Project Structure
+- /app - Next.js app router pages
+- /components - React components
+- /lib - Utility functions and shared code
+- /hooks - Custom React hooks
+- /public - Static assets
+
+## Dependencies
+- Next.js canary (15.2.0-canary.33)
+- React 18+
+- TypeScript 5+
+- Tailwind CSS
+- shadcn/ui components
+
+## Subtitle File Structure
+- Two VTT formats maintained:
+  - Base format (s##e##.vtt)
+  - Named format (s##e##-names.vtt)
+- Base format characteristics:
+  - More verbose with ~1800 lines per episode
+  - Splits overlapping dialogue into separate timestamp blocks
+  - Uses additional line breaks for readability
+- Named format characteristics:
+  - More compact with ~1700 lines per episode
+  - Includes speaker labels (e.g., "MALCOLM:", "HUGH:")
+  - Groups related dialogue under single timestamps
+  - Combines overlapping dialogue under speaker labels
+- Both formats must:
+  - Use WebVTT standard formatting
+  - Maintain identical timestamps
+  - Preserve all dialogue content
+  - Start with "WEBVTT" header
+
+## Frame Extraction Structure
+- Located in `/public/frames/{episodeId}/`
+- Each timestamp has its own directory named by timestamp (e.g., "05-31-360" for "05:31.360")
+- Each timestamp directory contains:
+  - `frame-blank.jpg` - Original frame at exact timestamp
+  - `frame-blank2.jpg` - Frame captured 1 second after timestamp
+  - `speech.txt` - Plain text of the subtitles
+- Frame characteristics:
+  - Extracted using ffmpeg at exact timestamps from VTT
+  - Second frame captured exactly 1 second after first frame
+  - Both frames use identical scaling (500px width)
+  - JPEG format for all images
+- Processing:
+  - Frames are only extracted once and cached
+  - Both frames must exist for a timestamp to be considered complete
+  - Speech text is always synchronized with VTT content
+
+## Code Review Practices
+- Always check both component definition AND usage
+- Review state management in parent components
+- Verify default values in both props and state initialization
+- When fixing UI issues:
+  - Check the entire component chain
+  - Review state management at each level
+  - Don't assume defaults are being used without verification
+- Document findings and learnings for team reference 
+
+## Next.js Route Handlers
+
+1. **Route Parameters**
+   - Route params are always a Promise
+   - Correct type: `{ params: Promise<{ paramName: string }> }`
+   - Must await params before use:
+   ```typescript
+   export async function GET(
+     request: NextRequest,
+     { params }: { params: Promise<{ paramName: string }> }
+   ) {
+     const resolvedParams = await params;
+     // Use resolvedParams.paramName
+   }
+   ``` 
+
+## Character Profile Maintenance
+
+1. **Profile Structure**
+   - All profiles must include:
+     ```typescript
+     {
+       name: string;          // Display name with titles
+       shortName: string;     // Informal first name/nickname
+       fullName: string;      // Complete formal name with all titles
+       description: string;   // Brief role summary
+       department: Department;
+       role: Role;
+       personal?: {
+         age?: number;
+         birthYear?: number;
+         family?: {
+           spouse?: boolean | { name: string; occupation?: string };
+           children?: boolean;
+           siblings?: boolean;
+           nieces?: boolean;
+         };
+         background?: {
+           education?: string;
+           party?: string;
+           affiliation?: string;
+           career?: string[];
+           interests?: string[];
+         };
+         relationships?: {
+           past?: string[];
+           present?: string[];
+         };
+       };
+       details: string[];     // Chronological list of character details
+     }
+     ```
+
+2. **Name Formatting**
+   - MPs: "The Right Honourable [Name] MP"
+   - Lords: "The Right Honourable the Lord [Name] of [Place]"
+   - Doctors: "Dr. [Full Name]"
+   - Use consistent title abbreviations (Rt Hon, Dr, MP)
+
+3. **Department and Role Assignment**
+   - Characters must be assigned to primary department even if they appear in multiple
+   - Role must reflect most senior position held
+   - Update department/role when character's position changes
+   - Use appropriate constants from DEPARTMENTS and ROLES
+
+4. **Career Timeline**
+   - Include series numbers for role changes (e.g., "Series 1-3")
+   - Use "present" suffix for ongoing roles
+   - List positions chronologically in career array
+   - Note transitions between Opposition and Government
+
+5. **Personal Details**
+   - Include age if known
+   - Add birth year if confirmed
+   - Document relationships with other characters
+   - Include educational background when available
+   - List special interests and skills
+
+6. **Details Array Guidelines**
+   - Maintain chronological order
+   - Start with origin/background
+   - Follow with career progression
+   - Include key relationships and events
+   - End with character traits/personality
+   - Maximum 30 detail entries per character
+
+7. **Political Affiliations**
+   - Always specify party membership
+   - Include government/opposition status
+   - Note any party faction alignments
+   - Document changes in allegiance
+
+8. **Relationship Documentation**
+   - Cross-reference relationships between characters
+   - Include dates/series for relationship changes
+   - Note professional and personal relationships
+   - Document rivalries and alliances
+
+9. **Image Requirements**
+   - Store character images in /public/characters/
+   - Use consistent naming: [shortname].jpg
+   - Maintain 1:1 aspect ratio
+   - Minimum resolution: 500x500px
+   - Maximum file size: 200KB
+
+10. **Profile Updates**
+    - Review profiles after each episode addition
+    - Update career progression as needed
+    - Add new relationships and events
+    - Maintain chronological accuracy
+    - Cross-reference with other characters
+
+11. **Quality Control**
+    - Verify all dates and series numbers
+    - Check consistency with episode content
+    - Validate relationship cross-references
+    - Ensure proper title formatting
+    - Review department/role assignments
+    - Avoid subjective adjectives in descriptions (e.g., "feared", "inept", "highly competent")
+    - Use neutral, factual language for character roles and relationships
+    - Prefer official titles over colloquial terms (e.g., "Deputy Communications Director" vs "enforcer")
+
+12. **Profile Page Layout**
+    - Group characters by department
+    - Sub-group by role within departments
+    - Show full details on individual pages
+    - Include relationship network diagram
+    - Display career timeline visualization <cursor-tools Integration>
+# Instructions
+Use the following commands to get AI assistance:
+
+**Web Search:**
+`cursor-tools web "<your question>"` - Get answers from the web using Perplexity AI (e.g., `cursor-tools web "latest weather in London"`)
+when using web for complex queries suggest writing the output to a file somewhere like local-research/<query summary>.md.
+
+**Repository Context:**
+`cursor-tools repo "<your question>"` - Get context-aware answers about this repository using Google Gemini (e.g., `cursor-tools repo "explain authentication flow"`)
+
+**Documentation Generation:**
+`cursor-tools doc [options]` - Generate comprehensive documentation for this repository (e.g., `cursor-tools doc --output docs.md`)
+when using doc for remote repos suggest writing the output to a file somewhere like local-docs/<repo-name>.md.
+
+**GitHub Information:**
+`cursor-tools github pr [number]` - Get the last 10 PRs, or a specific PR by number (e.g., `cursor-tools github pr 123`)
+`cursor-tools github issue [number]` - Get the last 10 issues, or a specific issue by number (e.g., `cursor-tools github issue 456`)
+
+**Browser Automation (Stateless):**
+`cursor-tools browser open <url> [options]` - Open a URL and capture page content, console logs, and network activity (e.g., `cursor-tools browser open "https://example.com" --html`)
+`cursor-tools browser act "<instruction>" --url=<url> [options]` - Execute actions on a webpage using natural language instructions (e.g., `cursor-tools browser act "Click Login" --url=https://example.com`)
+`cursor-tools browser observe "<instruction>" --url=<url> [options]` - Observe interactive elements on a webpage and suggest possible actions (e.g., `cursor-tools browser observe "interactive elements" --url=https://example.com`)
+`cursor-tools browser extract "<instruction>" --url=<url> [options]` - Extract data from a webpage based on natural language instructions (e.g., `cursor-tools browser extract "product names" --url=https://example.com/products`)
+
+**Notes on Browser Commands:**
+- All browser commands are stateless: each command starts with a fresh browser instance and closes it when done.
+- When using `--connect-to`, special URL values are supported:
+  - `current`: Use the existing page without reloading
+  - `reload-current`: Use the existing page and refresh it (useful in development)
+- Multi step workflows involving state or combining multiple actions are supported in the `act` command using the pipe (|) separator (e.g., `cursor-tools browser act "Click Login | Type 'user@example.com' into email | Click Submit" --url=https://example.com`)
+- Video recording is available for all browser commands using the `--video=<directory>` option. This will save a video of the entire browser interaction at 1280x720 resolution. The video file will be saved in the specified directory with a timestamp.
+- DO NOT ask browser act to "wait" for anything, the wait command is currently disabled in Stagehand.
+
+**Tool Recommendations:**
+- `cursor-tools web` is best for general web information not specific to the repository.
+- `cursor-tools repo` is ideal for repository-specific questions, planning, code review and debugging.
+- `cursor-tools doc` generates documentation for local or remote repositories.
+- `cursor-tools browser` is useful for testing and debugging web apps.
+
+**Running Commands:**
+1. **Installed version:** Use `cursor-tools <command>` (if in PATH) or `npm exec cursor-tools "<command>"`, `yarn cursor-tools "<command>"`, `pnpm cursor-tools "<command>"`.
+2. **Without installation:** Use `npx -y cursor-tools@latest "<command>"` or `bunx -y cursor-tools@latest "<command>"`.
+
+**General Command Options (Supported by all commands):**
+--model=<model name>: Specify an alternative AI model to use
+--max-tokens=<number>: Control response length
+--save-to=<file path>: Save command output to a file (in *addition* to displaying it)
+--help: View all available options (help is not fully implemented yet)
+
+**Documentation Command Options:**
+--from-github=<GitHub username>/<repository name>[@<branch>]: Generate documentation for a remote GitHub repository
+
+**GitHub Command Options:**
+--from-github=<GitHub username>/<repository name>[@<branch>]: Access PRs/issues from a specific GitHub repository
+
+**Browser Command Options (for 'open', 'act', 'observe', 'extract'):**
+--console: Capture browser console logs (enabled by default, use --no-console to disable)
+--html: Capture page HTML content
+--network: Capture network activity (enabled by default, use --no-network to disable)
+--screenshot=<file path>: Save a screenshot of the page
+--timeout=<milliseconds>: Set navigation timeout (default: 30000ms)
+--viewport=<width>x<height>: Set viewport size (e.g., 1280x720). When using --connect-to, viewport is only changed if this option is explicitly provided
+--headless: Run browser in headless mode (default: true)
+--no-headless: Show browser UI (non-headless mode) for debugging
+--connect-to=<port>: Connect to existing Chrome instance
+--wait=<duration or selector>: Wait after page load (e.g., '5s', '#element-id', 'selector:.my-class')
+--video=<directory>: Save a video recording of the browser interaction to the specified directory (1280x720 resolution). Not available when using --connect-to
+
+**Additional Notes:**
+- For detailed information, see `node_modules/cursor-tools/README.md` (if installed locally).
+- Configuration is in `cursor-tools.config.json` (or `~/.cursor-tools/config.json`).
+- API keys are loaded from `.cursor-tools.env` (or `~/.cursor-tools/.env`).
+- Browser commands require separate installation of Playwright: `npm install --save-dev playwright` or `npm install -g playwright`.
+- **Remember:** You're part of a team of superhuman expert AIs. Work together to solve complex problems.
+<!-- cursor-tools-version: 0.5.0 -->
+</cursor-tools Integration>

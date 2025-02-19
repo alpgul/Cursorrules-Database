@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 877,
+  "size": 895,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -12278,6 +12278,258 @@
         "htmlUrl": "https://github.com/torischuyler/eos-lesson-plans/blob/4049e03aeeebc4df5b8e36523f27af8f8eec65df/.cursorrules",
         "size": 1.03,
         "timestamp": "2025-02-16T08:13:14.022Z"
+      }
+    ],
+    [
+      "Vagabonds-Labs/cofiblocks/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Vagabonds-Labs/cofiblocks/bd32258e40507c406316a1047d7ab966a78376d4/.cursorrules",
+        "repositoryId": 847993691,
+        "path": "Vagabonds-Labs/cofiblocks/.cursorrules",
+        "ownerName": "Vagabonds-Labs",
+        "repositoryName": "cofiblocks",
+        "htmlUrl": "https://github.com/Vagabonds-Labs/cofiblocks/blob/bd32258e40507c406316a1047d7ab966a78376d4/.cursorrules",
+        "size": 3.43,
+        "timestamp": "2025-02-19T08:14:53.038Z"
+      }
+    ],
+    [
+      "RobRoyce/ros_to_markdown/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/RobRoyce/ros_to_markdown/16c62f5474fe23958adaedf6eaadb74067992342/.cursorrules",
+        "repositoryId": 910965462,
+        "path": "RobRoyce/ros_to_markdown/.cursorrules",
+        "ownerName": "RobRoyce",
+        "repositoryName": "ros_to_markdown",
+        "htmlUrl": "https://github.com/RobRoyce/ros_to_markdown/blob/16c62f5474fe23958adaedf6eaadb74067992342/.cursorrules",
+        "size": 1.46,
+        "timestamp": "2025-02-19T08:14:56.406Z"
+      }
+    ],
+    [
+      "kazuph/remix-ginnan-stack/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/kazuph/remix-ginnan-stack/d0941aae2520cb8c8d73b66c740ca6c584c1dd62/.cursorrules",
+        "repositoryId": 897371982,
+        "path": "kazuph/remix-ginnan-stack/.cursorrules",
+        "ownerName": "kazuph",
+        "repositoryName": "remix-ginnan-stack",
+        "htmlUrl": "https://github.com/kazuph/remix-ginnan-stack/blob/d0941aae2520cb8c8d73b66c740ca6c584c1dd62/.cursorrules",
+        "size": 2.63,
+        "timestamp": "2025-02-19T08:14:58.505Z"
+      }
+    ],
+    [
+      "AIXCap/rss-website/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/AIXCap/rss-website/a1c455bccd3ba50ba6c85c748db84e89701ca241/.cursorrules",
+        "repositoryId": 885697413,
+        "path": "AIXCap/rss-website/.cursorrules",
+        "ownerName": "AIXCap",
+        "repositoryName": "rss-website",
+        "htmlUrl": "https://github.com/AIXCap/rss-website/blob/a1c455bccd3ba50ba6c85c748db84e89701ca241/.cursorrules",
+        "size": 1.84,
+        "timestamp": "2025-02-19T08:14:59.157Z"
+      }
+    ],
+    [
+      "penkzhou/twitter-enhanced/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/penkzhou/twitter-enhanced/dc278d33a50c8c5a7beec514858f9048ff4c4483/.cursorrules",
+        "repositoryId": 837807494,
+        "path": "penkzhou/twitter-enhanced/.cursorrules",
+        "ownerName": "penkzhou",
+        "repositoryName": "twitter-enhanced",
+        "htmlUrl": "https://github.com/penkzhou/twitter-enhanced/blob/dc278d33a50c8c5a7beec514858f9048ff4c4483/.cursorrules",
+        "size": 3.74,
+        "timestamp": "2025-02-19T08:14:59.324Z"
+      }
+    ],
+    [
+      "ozma-io/ozma/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ozma-io/ozma/2bf2da60f7a15c374c992ab74a9d00d7df6445e0/.cursorrules",
+        "repositoryId": 820712495,
+        "path": "ozma-io/ozma/.cursorrules",
+        "ownerName": "ozma-io",
+        "repositoryName": "ozma",
+        "htmlUrl": "https://github.com/ozma-io/ozma/blob/2bf2da60f7a15c374c992ab74a9d00d7df6445e0/.cursorrules",
+        "size": 1.05,
+        "timestamp": "2025-02-19T08:15:00.632Z"
+      }
+    ],
+    [
+      "lacymorrow/v2/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/lacymorrow/v2/879b511f07edf6746e77abfa0c65e750f523fe15/.cursorrules",
+        "repositoryId": 923520507,
+        "path": "lacymorrow/v2/.cursorrules",
+        "ownerName": "lacymorrow",
+        "repositoryName": "v2",
+        "htmlUrl": "https://github.com/lacymorrow/v2/blob/879b511f07edf6746e77abfa0c65e750f523fe15/.cursorrules",
+        "size": 5.89,
+        "timestamp": "2025-02-19T08:15:07.626Z"
+      }
+    ],
+    [
+      "Alwurts/Chatsemble/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Alwurts/Chatsemble/8d32f50b06fb1fe620f3da095a798a335e8211f7/.cursorrules",
+        "repositoryId": 930484065,
+        "path": "Alwurts/Chatsemble/.cursorrules",
+        "ownerName": "Alwurts",
+        "repositoryName": "Chatsemble",
+        "htmlUrl": "https://github.com/Alwurts/Chatsemble/blob/8d32f50b06fb1fe620f3da095a798a335e8211f7/.cursorrules",
+        "size": 3.28,
+        "timestamp": "2025-02-19T08:15:09.062Z"
+      }
+    ],
+    [
+      "Broccode/acci/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Broccode/acci/b8a35c96cab3dfb1ee22bda79b78110b2585d881/.cursorrules",
+        "repositoryId": 929495271,
+        "path": "Broccode/acci/.cursorrules",
+        "ownerName": "Broccode",
+        "repositoryName": "acci",
+        "htmlUrl": "https://github.com/Broccode/acci/blob/b8a35c96cab3dfb1ee22bda79b78110b2585d881/.cursorrules",
+        "size": 14.59,
+        "timestamp": "2025-02-19T08:15:11.020Z"
+      }
+    ],
+    [
+      "yaotutu/sync-message/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/yaotutu/sync-message/7b60c5aa181e6d1a3ce4f903caffdefb379a0a83/.cursorrules",
+        "repositoryId": 914297966,
+        "path": "yaotutu/sync-message/.cursorrules",
+        "ownerName": "yaotutu",
+        "repositoryName": "sync-message",
+        "htmlUrl": "https://github.com/yaotutu/sync-message/blob/7b60c5aa181e6d1a3ce4f903caffdefb379a0a83/.cursorrules",
+        "size": 10.1,
+        "timestamp": "2025-02-19T08:15:13.500Z"
+      }
+    ],
+    [
+      "FleurieBlumune/PyRogue/.cursor/rules/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/FleurieBlumune/PyRogue/2286333e7dc31a851bade5b657b4a87d14c01e39/.cursor/rules/.cursorrules",
+        "repositoryId": 925832314,
+        "path": "FleurieBlumune/PyRogue/.cursor/rules/.cursorrules",
+        "ownerName": "FleurieBlumune",
+        "repositoryName": "PyRogue",
+        "htmlUrl": "https://github.com/FleurieBlumune/PyRogue/blob/2286333e7dc31a851bade5b657b4a87d14c01e39/.cursor/rules/.cursorrules",
+        "size": 1.95,
+        "timestamp": "2025-02-19T08:15:14.999Z"
+      }
+    ],
+    [
+      "shrithan1/macro/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/shrithan1/macro/5be24c07bdbec996863f52c03ec4091ec0e8da7f/.cursorrules",
+        "repositoryId": 933056050,
+        "path": "shrithan1/macro/.cursorrules",
+        "ownerName": "shrithan1",
+        "repositoryName": "macro",
+        "htmlUrl": "https://github.com/shrithan1/macro/blob/5be24c07bdbec996863f52c03ec4091ec0e8da7f/.cursorrules",
+        "size": 2.67,
+        "timestamp": "2025-02-19T08:15:15.664Z"
+      }
+    ],
+    [
+      "farfarawaylabs/bernstein_ai_framework/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/farfarawaylabs/bernstein_ai_framework/500abfa14c51579b6ad2c7809bf47d6969bc9f95/.cursorrules",
+        "repositoryId": 928895858,
+        "path": "farfarawaylabs/bernstein_ai_framework/.cursorrules",
+        "ownerName": "farfarawaylabs",
+        "repositoryName": "bernstein_ai_framework",
+        "htmlUrl": "https://github.com/farfarawaylabs/bernstein_ai_framework/blob/500abfa14c51579b6ad2c7809bf47d6969bc9f95/.cursorrules",
+        "size": 1.65,
+        "timestamp": "2025-02-19T08:15:17.197Z"
+      }
+    ],
+    [
+      "darenmalfait/nerdfishui/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/darenmalfait/nerdfishui/a94629824fbba78be0b123993a2be52fd230bc26/.cursorrules",
+        "repositoryId": 614930631,
+        "path": "darenmalfait/nerdfishui/.cursorrules",
+        "ownerName": "darenmalfait",
+        "repositoryName": "nerdfishui",
+        "htmlUrl": "https://github.com/darenmalfait/nerdfishui/blob/a94629824fbba78be0b123993a2be52fd230bc26/.cursorrules",
+        "size": 1.93,
+        "timestamp": "2025-02-19T08:15:17.407Z"
+      }
+    ],
+    [
+      "kevinold/next-ai-starter/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/kevinold/next-ai-starter/74122069484a955ff7e3b050ceb98d76fadad008/.cursorrules",
+        "repositoryId": 934879326,
+        "path": "kevinold/next-ai-starter/.cursorrules",
+        "ownerName": "kevinold",
+        "repositoryName": "next-ai-starter",
+        "htmlUrl": "https://github.com/kevinold/next-ai-starter/blob/74122069484a955ff7e3b050ceb98d76fadad008/.cursorrules",
+        "size": 3.37,
+        "timestamp": "2025-02-19T08:15:19.111Z"
+      }
+    ],
+    [
+      "ByteAtATime/scrapyard-sv-frontend/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ByteAtATime/scrapyard-sv-frontend/ba883667d07d08744c4f8bdcd41abb85b5e7721e/.cursorrules",
+        "repositoryId": 928562753,
+        "path": "ByteAtATime/scrapyard-sv-frontend/.cursorrules",
+        "ownerName": "ByteAtATime",
+        "repositoryName": "scrapyard-sv-frontend",
+        "htmlUrl": "https://github.com/ByteAtATime/scrapyard-sv-frontend/blob/ba883667d07d08744c4f8bdcd41abb85b5e7721e/.cursorrules",
+        "size": 14.11,
+        "timestamp": "2025-02-19T08:15:22.152Z"
+      }
+    ],
+    [
+      "mherod/dosac/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/mherod/dosac/16f56deaad3ab1332872e64bb265c45edee8b997/.cursorrules",
+        "repositoryId": 921751180,
+        "path": "mherod/dosac/.cursorrules",
+        "ownerName": "mherod",
+        "repositoryName": "dosac",
+        "htmlUrl": "https://github.com/mherod/dosac/blob/16f56deaad3ab1332872e64bb265c45edee8b997/.cursorrules",
+        "size": 15.43,
+        "timestamp": "2025-02-19T08:15:24.521Z"
+      }
+    ],
+    [
+      "Niell007/project-soundmaster-v3/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Niell007/project-soundmaster-v3/58a313af2166f079e4aa25b75765491eecaf0559/.cursorrules",
+        "repositoryId": 934796315,
+        "path": "Niell007/project-soundmaster-v3/.cursorrules",
+        "ownerName": "Niell007",
+        "repositoryName": "project-soundmaster-v3",
+        "htmlUrl": "https://github.com/Niell007/project-soundmaster-v3/blob/58a313af2166f079e4aa25b75765491eecaf0559/.cursorrules",
+        "size": 7.49,
+        "timestamp": "2025-02-19T08:15:24.799Z"
       }
     ]
   ]
