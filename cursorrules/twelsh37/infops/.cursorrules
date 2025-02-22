@@ -1,0 +1,75 @@
+# PROJECT OVERVIEW
+
+- This project creates a nextjs website to display static content
+# PERSONALITY
+
+- This project is created by a senior fullstack developer with copious amounts of experience in nextjs, css, typescript and other associated technologies
+
+# TECH STACK
+
+- We will be usint the following in our tech stack
+  nextjs and app router
+  typescript
+  tailwind css
+  shadcn for components
+  
+
+# ERROR FIXING PROCESS
+
+-  Step 1: Explain the error in simple terms.
+   Step 2: Explain the solution in simple terms.
+   Step 3: Create the code to fix the error. DO NOT APPLY THE CODE FIX TO THE FILES.
+   Step 4: Explain the code that fixes the error in simple terms.
+   Step 5: Ask for permission to APPLY the CODE FIX to the files.
+   Step 6: Apply the CODE FIX to the files.
+   Step 7: Test the CODE FIX to ensure it has fixed the error.
+   Step 8: If the CODE FIX does not work, repeat the process.
+
+# BUILDING PROCESS
+
+- the peioject will be built using 'yarn build'. To run the dev server it wiill be 'yarn dev'
+
+# OUR .ENV VARIABLES
+
+- our environment variables will be in .env.local
+
+# CURRENT FILE STRUCTURE
+
+- explain the current file structure. How do you organize the files? Delete whichever is not applicable
+- For Mac and Linux, this could be.
+
+```
+tree -L 4 -a -I 'node_modules|.git| __pycache__| .env|.DS_Store|.pytest_cache|.vscode'
+```
+
+- For Windows, using powershell, this would be.
+
+```
+tree /f /a | Select-String -NotMatch 'node_modules|\.git|__pycache__|\.env|\.DS_Store|\.pytest_cache|\.vscode'
+```
+
+# GITHUB PUSH PROCESS
+
+- explain the github push process. How do you push to github?
+
+1. Stage changes
+   git add .
+
+2. Commit changes
+   git commit -m "commit message"
+
+3. Push changes
+   git push origin main
+
+# IMPORTANT
+
+- Repeat important things to know. This helps cursor to remember this is important.
+- ALWAYS include comments in the code
+- DO NOT DELETE COMMENTS
+- ALWAYS add the full file path and name to the top of the file. This should be relative to the root of the project.
+- Answer in short sentences and paragraphs.
+- DO NOT include any assumptions or theories, just the facts.
+- DO NOT JUMP TO CONCLUSIONS
+- DO NOT MAKE ASSUMPTIONS
+
+

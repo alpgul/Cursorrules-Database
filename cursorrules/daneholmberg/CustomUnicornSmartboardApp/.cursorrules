@@ -1,0 +1,168 @@
+{
+  "project": {
+    "name": "Unicorn Smartboard iOS App",
+    "description": "iOS app for a unicorn smartboard detecting darts & sending bluetooth signals",
+    "note": "Always update .cursorrules with any changes to directory structure.",
+    "scoringNote": "Non-standard scoring allowed (e.g. doubles/triples in Around the World).",
+    "packageManager": "yarn"
+  },
+  "bestPractices": {
+    "react": [
+      "Use functional components with hooks",
+      "Use useMemo for heavy computations",
+      "Use useCallback for handlers",
+      "Prefer pure components",
+      "Local state for UI, context for shared state"
+    ],
+    "expo": [
+      "Utilize SDK features and APIs",
+      "Use asset system for images/fonts",
+      "Implement proper error handling",
+      "Use push notifications"
+    ]
+  },
+  "structure": {
+    "directories": {
+      "screens": [
+        "X01GameScreen.js",
+        "AroundTheWorldGameScreen.js",
+        "HalveItGameScreen.js",
+        "PostGameScreen.js"
+      ],
+      "components": {
+        "gameSpecific": {
+          "main": [
+            "X01Dartboard.js",
+            "DartDisplay.js",
+            "HitHistory.js",
+            "HalveItDartboard.js"
+          ],
+          "endGameStats": [
+            "X01EndGameStats.js",
+            "AroundTheWorldEndGameStats.js",
+            "HalveItEndGameStats.js"
+          ]
+        }
+      },
+      "gameEngine": [
+        "BaseGameEngine.js",
+        "X01GameEngine.js",
+        "AroundTheWorldGameEngine.js",
+        "HalveItGameEngine.js",
+        "TurnManager.js"
+      ],
+      "context": [
+        "DartboardContext.js",
+        "GameContext.js"
+      ],
+      "hooks": [
+        "useSmartboard.js",
+        "useGameState.js"
+      ],
+      "constants": [
+        "gameModes.js",
+        "scoring.js",
+        "boardSegments.js"
+      ],
+      "theme": [
+        "theme.js"
+      ],
+      "utils": [
+        "scoring.js",
+        "validation.js",
+        "formatting.js"
+      ],
+      "styles": [
+        "gameStyles.js"
+      ],
+      "errors": [
+        "GameErrors.js",
+        "ConnectionErrors.js"
+      ],
+      "database": {
+        "root": [
+          "index.js",
+          "connection.js"
+        ],
+        "schema": [
+          "core.js",
+          "games.js",
+          "migrations.js"
+        ],
+        "models": {
+          "core": [
+            "players.js",
+            "matches.js",
+            "gameTypes.js"
+          ],
+          "games": [
+            "x01.js",
+            "aroundTheWorld.js",
+            "halveIt.js"
+          ]
+        },
+        "types": [
+          "database.ts"
+        ]
+      }
+    }
+  },
+  "style": {
+    "quotes": "single",
+    "semicolons": true,
+    "maxLineLength": 100,
+    "indent": 2,
+    "trailingComma": "es5",
+    "componentOrder": [
+      "imports",
+      "types",
+      "hooks",
+      "effects",
+      "handlers",
+      "render"
+    ],
+    "imports": [
+      "react",
+      "expo",
+      "context",
+      "screens",
+      "components",
+      "hooks",
+      "constants",
+      "utils",
+      "styles",
+      "types"
+    ],
+    "prevent": {
+      "inlineStyles": "Use StyleSheet.create (dynamic values allowed)",
+      "varKeyword": "Use let/const",
+      "magicNumbers": "Use constants (except 0, 1, -1)",
+      "nestedCallbacks": "Max depth 2, prefer async/await"
+    }
+  },
+  "naming": {
+    "components": "PascalCase",
+    "functions": "camelCase",
+    "constants": "UPPER_SNAKE_CASE"
+  },
+  "gameEngine": {
+    "inheritance": "extend BaseGameEngine",
+    "methods": [
+      "handleThrow",
+      "undoLastThrow",
+      "getGameState"
+    ]
+  },
+  "theme": {
+    "required": [
+      "colors",
+      "spacing",
+      "borderRadius",
+      "elevation"
+    ]
+  },
+  "testing": {
+    "things to remember": "Always evaluate carefully if a test is failing because of a bug or because the test is improperly written. DO NOT ALWAYS JUST CHANGE THE TEST WITH THE ASSUMPTION THE BUG IS IN THE TEST AND NOT THE CODE."
+  },
+  "documentation": "Document classes, methods, configs, and state choices"
+}
