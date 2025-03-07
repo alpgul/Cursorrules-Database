@@ -1,0 +1,154 @@
+# 项目编码规范
+
+# 文件命名规范
+files:
+  # React 组件文件
+  components:
+    pattern: "^[A-Z][a-zA-Z]*\\.jsx?$"
+    location: "src/components/"
+    examples: ["TimeFilter.jsx", "DataCard.jsx"]
+  
+  # 路由文件
+  routes:
+    pattern: "^[a-z]+[A-Za-z]*\\.js$"
+    location: "src/routes/"
+    examples: ["powerForecast.js", "powerStats.js"]
+  
+  # 工具函数文件
+  utils:
+    pattern: "^[a-z]+[A-Za-z]*\\.js$"
+    location: "src/utils/"
+    examples: ["timeFormat.js", "dataProcess.js"]
+
+# JavaScript/React 代码规范
+javascript:
+  # 缩进规则
+  indent:
+    style: spaces
+    size: 2
+  
+  # 命名规范
+  naming:
+    components: "^[A-Z][a-zA-Z]*$"  # React 组件使用大驼峰
+    functions: "^[a-z][a-zA-Z]*$"   # 函数使用小驼峰
+    constants: "^[A-Z][A-Z_]*$"     # 常量使用大写下划线
+    hooks: "^use[A-Z][a-zA-Z]*$"    # Hooks 使用 use 前缀
+  
+  # 导入顺序
+  imports:
+    order:
+      - react
+      - external-libraries
+      - components
+      - utils
+      - styles
+
+# SQL 规范
+sql:
+  # 字段命名
+  fields:
+    pattern: "^[一-龥a-zA-Z_][一-龥a-zA-Z0-9_]*$"
+    max_length: 50
+    specific_fields:
+      - name: "日期"
+        type: "DATE"
+        required: true
+      - name: "时间"
+        type: "TIME"
+        required: true
+      - name: "日前水电含抽蓄发电出力预测_MW"
+        type: "DECIMAL(10,2)"
+      - name: "日前各交易时段负荷预测_MW"
+        type: "DECIMAL(10,2)"
+  
+  # 数据类型
+  types:
+    numeric_precision: 10
+    numeric_scale: 2
+    varchar_max: 255
+
+# API 规范
+api:
+  # URL 规范
+  url:
+    base: "/api"
+    pattern: "^/api/[a-z-]+(/[a-z-]+)*$"
+  
+  # 具体接口定义
+  endpoints:
+    power_forecast:
+      path: "/power-forecast"
+      methods: ["GET"]
+      params:
+        - name: "startTime"
+          type: "string"
+          format: "HH:mm"
+          required: false
+        - name: "endTime"
+          type: "string"
+          format: "HH:mm"
+          required: false
+    power_stats:
+      path: "/power-forecast/stats"
+      methods: ["GET"]
+      params:
+        - name: "date"
+          type: "string"
+          format: "YYYY-MM-DD"
+          required: true
+
+# 性能规范
+performance:
+  # 响应时间限制
+  response_time:
+    api: 500  # 毫秒
+    page_load: 2000  # 毫秒
+    chart_render: 1000  # 毫秒
+  
+  # 数据限制
+  data_limits:
+    query_records: 1000
+    chart_points: 500
+
+# 注释规范
+comments:
+  # 组件注释
+  component:
+    required:
+      - 组件描述
+      - 参数说明
+      - 返回值说明
+    template: |
+      /**
+       * 组件描述
+       * @param {type} name - 参数说明
+       * @returns {type} 返回值说明
+       */
+  
+  # 函数注释
+  function:
+    required:
+      - 函数用途
+      - 参数说明
+      - 返回值说明
+    template: |
+      /**
+       * 函数用途
+       * @param {type} name - 参数说明
+       * @returns {type} 返回值说明
+       */
+
+# 依赖版本约束
+dependencies:
+  versions:
+    frontend:
+      react: "^18.0.0"
+      react_router: "^6.0.0"
+      chart.js: "^4.0.0"
+      antd: "^5.0.0"
+    backend:
+      node: "^16.0.0"
+      express: "^4.0.0"
+      sequelize: "^6.0.0"
+      mysql2: "^2.0.0"
+       

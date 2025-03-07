@@ -1,0 +1,470 @@
+## Go General Guidelines
+
+### Basic Principles
+
+- Use English for all code and documentation.
+- Always specify the type of each variable and function (parameters and return value).
+- Avoid using `interface{}` unless absolutely necessary.
+- Define appropriate structs and interfaces.
+- Use GoDoc comments for public functions, methods, and types.
+- Maintain consistent spacing and formatting using `gofmt`.
+- One export per file where possible.
+
+### Nomenclature
+
+- Use PascalCase for exported functions, types, and structs.
+- Use camelCase for variables, functions, and methods.
+- Use kebab-case for file and directory names.
+- Use UPPERCASE for environment variables.
+- Avoid magic numbers; define constants using `const`.
+- Prefix boolean variables with verbs: `is`, `has`, `can`, etc.
+- Use full words instead of abbreviations, except for standard ones like `API`, `URL`, etc.
+- Common abbreviations:
+- `ctx` for context
+- `req`, `res` for request and response
+- `err` for errors
+
+### Functions
+
+- Keep functions short and focused (preferably < 20 lines).
+- Name functions with a verb and an object.
+- Boolean-returning functions: `IsX`, `HasX`, `CanX`, etc.
+- Procedures: `ExecuteX`, `SaveX`, `ProcessX`, etc.
+- Reduce nested blocks by using early returns and helper functions.
+- Prefer higher-order functions (`map`, `filter`) over loops when applicable.
+- Use default values instead of checking for nil.
+- Reduce parameter count using structs for inputs and outputs.
+- Maintain a single level of abstraction per function.
+
+### Data
+
+- Avoid excessive use of primitive types; encapsulate data in structs.
+- Use immutability where possible.
+- Use `const` for unchanging literals.
+- Use pointers where mutability is required.
+- Avoid validating data in functions; use dedicated validator functions or middleware.
+
+### Structs and Interfaces
+
+- Follow SOLID principles.
+- Favor composition over inheritance.
+- Use interfaces to define contracts, but avoid unnecessary abstraction.
+- Keep structs small and focused:
+- Fewer than 10 fields where possible.
+- Limit the number of exported methods.
+- Use method receivers (`func (s *Struct) Method()`) when mutation is required.
+
+### Error Handling
+
+- Use Go's error handling idioms (`if err != nil`)
+- Return errors instead of panicking unless it's truly exceptional.
+- Use custom error types when additional context is needed.
+- Log errors appropriately and avoid excessive verbosity.
+
+### Testing
+
+- Use `testing` package for unit tests.
+- Follow the Arrange-Act-Assert pattern.
+- Use table-driven tests where applicable.
+- Name test variables descriptively (`inputX`, `mockX`, `actualX`, `expectedX`).
+- Write unit tests for each exported function.
+- Mock dependencies using interfaces where necessary.
+- Write integration tests for HTTP handlers and services.
+- Use `httptest` package for API testing.
+
+## Specific to Echo Framework
+
+### Basic Principles
+
+- Use a modular architecture.
+- Encapsulate the API in modules:
+- One package per domain.
+- Handlers for HTTP endpoints.
+- DTOs for request validation.
+- Services for business logic.
+- Repositories for data persistence.
+- Use Echo's built-in middleware for logging, recovery, and security.
+- Use dependency injection for services and repositories.
+- Implement request validation using `echo.Bind` and `validator` package.
+
+### API Structure
+
+- Define routes in a centralized location.
+- Use middleware for authentication, logging, and error handling.
+- Return structured JSON responses with proper status codes.
+- Use service layer to handle business logic.
+- Implement repository layer for database interactions.
+- Use Go context (`context.Context`) for request lifecycle management.
+
+### Error Handling
+
+- Use Echo's error handlers for centralized error responses.
+- Return structured JSON errors with meaningful messages.
+- Log errors appropriately to track issues.
+
+### Testing
+
+- Use `httptest` for handler testing.
+- Write tests for each route, service, and repository.
+- Use mocks for database and external dependencies.
+- Perform end-to-end tests for major API flows.
+- Ensure proper handling of request validation and error scenarios.
+
+## Go Chat Application Guidelines
+
+### Basic Principles
+
+- Use English for all code and documentation.
+- Always specify the type of each variable and function (parameters and return value).
+- Avoid using `interface{}` unless absolutely necessary.
+- Define appropriate structs and interfaces.
+- Use GoDoc comments for public functions, methods, and types.
+- Maintain consistent spacing and formatting using `gofmt`.
+- One service implementation per file.
+- Every component must have corresponding tests.
+
+### Nomenclature
+
+- Use PascalCase for exported functions, types, and structs.
+- Use camelCase for variables, functions, and methods.
+- Use kebab-case for file and directory names.
+- Use UPPERCASE for environment variables.
+- Avoid magic numbers; define constants using `const`.
+- Prefix boolean variables with verbs: `is`, `has`, `can`, etc.
+- Use full words instead of abbreviations, except for standard ones like `API`, `URL`, etc.
+- Common abbreviations:
+  - `ctx` for context
+  - `req`, `res` for request and response
+  - `err` for errors
+  - `svc` for service
+  - `repo` for repository
+
+### gRPC Service Implementation
+
+- Each service should have its own package under `internal/`.
+- Implement each service interface in a separate file.
+- Use dependency injection for service dependencies.
+- Follow the interface segregation principle.
+- Use middleware for common functionality (auth, logging, etc.).
+- Handle context cancellation appropriately.
+- Implement proper error handling with gRPC status codes.
+
+### gRPC Best Practices
+
+- Service Design:
+  - Define clear service boundaries
+  - Use unary RPCs for simple request/response
+  - Use server streaming for large dataset responses
+  - Use client streaming for batched requests
+  - Use bidirectional streaming for real-time communication
+  - Keep services focused and cohesive
+
+- Error Handling:
+  - Use standard gRPC status codes appropriately
+  - Include detailed error messages in development
+  - Sanitize error details in production
+  - Implement proper error propagation
+  - Handle deadline exceeded errors
+  - Implement proper retry logic
+
+- Performance:
+  - Use connection pooling
+  - Implement proper load balancing
+  - Use keepalive settings appropriately
+  - Configure appropriate timeouts
+  - Implement proper flow control
+  - Use compression when appropriate
+
+- Security:
+  - Use TLS for all connections
+  - Implement proper authentication
+  - Use interceptors for authorization
+  - Validate all incoming messages
+  - Implement rate limiting
+  - Use secure credential management
+
+- Metadata Handling:
+  - Use consistent metadata keys
+  - Propagate request IDs
+  - Include trace information
+  - Handle authentication tokens
+  - Implement proper metadata validation
+
+- Testing:
+  - Test all service methods
+  - Mock gRPC clients/servers
+  - Test streaming behavior
+  - Test error conditions
+  - Test timeouts and cancellations
+  - Use proper test doubles
+
+- Monitoring:
+  - Implement proper metrics collection
+  - Monitor RPC latencies
+  - Track error rates
+  - Monitor stream lifetimes
+  - Implement proper logging
+  - Use proper tracing
+
+- Protocol Buffer Design:
+  - Use proper message naming
+  - Define reusable message types
+  - Use appropriate field types
+  - Implement proper versioning
+  - Use well-defined enums
+  - Follow protobuf style guide
+
+- Client Implementation:
+  - Use proper connection management
+  - Implement proper retry logic
+  - Handle service discovery
+  - Use proper timeout settings
+  - Implement proper cleanup
+  - Handle connection state changes
+
+- Server Implementation:
+  - Use proper graceful shutdown
+  - Handle concurrent requests
+  - Implement proper resource cleanup
+  - Use proper worker pools
+  - Handle backpressure
+  - Implement health checks
+
+### Functions and Methods
+
+- Keep functions short and focused (preferably < 20 lines).
+- Name functions with a verb and an object.
+- Boolean-returning functions: `IsX`, `HasX`, `CanX`, etc.
+- Service methods: `CreateX`, `UpdateX`, `DeleteX`, `GetX`, `ListX`, etc.
+- Stream methods: `StreamX`, `WatchX`, `SubscribeToX`, etc.
+- Reduce nested blocks by using early returns and helper functions.
+- Use default values instead of checking for nil.
+- Reduce parameter count using structs for inputs and outputs.
+- Maintain a single level of abstraction per function.
+
+### Data Layer
+
+- Use repository pattern for data access.
+- Each entity should have its own repository.
+- Use transactions where appropriate.
+- Implement proper connection pooling.
+- Handle database errors appropriately.
+- Use prepared statements for repeated queries.
+- Implement proper indexing strategies.
+
+### Concurrency and Streaming
+
+- Use ants pool for managing goroutines:
+  - Initialize pool with fixed capacity in main.go
+  - Use nonblocking submission when appropriate
+  - Handle panic recovery in worker functions
+  - Implement proper cleanup on shutdown
+  - Monitor pool metrics (running workers, waiting tasks)
+
+- Pool Configuration:
+  - Set appropriate pool size based on workload
+  - Enable nonblocking mode for high-throughput scenarios
+  - Configure proper expiry time for workers
+  - Implement graceful shutdown handling
+
+- Task Management:
+  - Use worker func wrapper pattern for common tasks
+  - Implement proper error handling in worker functions
+  - Monitor task execution time
+  - Handle task timeouts appropriately
+  - Use context for task cancellation
+
+- Pool Usage Guidelines:
+  - Reuse pools instead of creating new ones
+  - Monitor pool capacity and adjust as needed
+  - Implement proper error handling for task submission
+  - Use pool for CPU-intensive tasks
+  - Avoid pool for I/O-bound operations
+
+- Performance Considerations:
+  - Benchmark different pool sizes
+  - Monitor memory usage
+  - Track goroutine creation/destruction
+  - Implement proper metrics collection
+  - Use pprof for profiling when needed
+
+- Stream Processing:
+  - Use pool for message processing tasks
+  - Implement proper backpressure handling
+  - Monitor stream processing latency
+  - Handle stream errors appropriately
+  - Implement proper cleanup for streams
+
+### Error Handling
+
+- Use gRPC status codes consistently.
+- Return detailed error messages when appropriate.
+- Implement proper error wrapping.
+- Log errors with appropriate context.
+- Use custom error types when needed.
+- Handle panics in streaming operations.
+
+### Testing Requirements
+
+- Every package must have _test.go files.
+- Minimum test coverage: 80%.
+- Use table-driven tests where applicable.
+- Test both success and error cases.
+- Mock external dependencies (DB, Redis, etc.).
+- Test stream handling thoroughly.
+- Follow this test structure:
+  ```go
+  func TestX(t *testing.T) {
+      // ARRANGE
+      // Prepare test data and dependencies
+      
+      // ACT
+      // Call the function/method being tested
+      
+      // ASSERT
+      // Verify the results
+  }
+  ```
+
+### Integration Testing
+
+- Test full service flows.
+- Use docker-compose for integration tests.
+- Test database interactions.
+- Test Redis operations.
+- Test streaming functionality.
+- Test concurrent operations.
+- Test error scenarios.
+
+### Performance Testing
+
+- Benchmark critical paths.
+- Test with realistic data volumes.
+- Test concurrent connections.
+- Test streaming performance.
+- Monitor memory usage.
+- Test connection pooling.
+
+### Security
+
+- Implement proper authentication.
+- Validate all inputs.
+- Use secure token generation.
+- Implement rate limiting.
+- Use secure password hashing.
+- Implement proper session management.
+- Use TLS for connections.
+
+### Documentation
+
+- Document all exported types and functions.
+- Include examples in documentation.
+- Document error conditions.
+- Document configuration options.
+- Document deployment requirements.
+- Keep documentation up to date.
+
+### Logging and Monitoring
+
+- Use structured logging.
+- Include request IDs in logs.
+- Log appropriate error context.
+- Implement proper metrics.
+- Monitor service health.
+- Track performance metrics.
+
+### Configuration
+
+- Use environment variables for configuration.
+- Implement proper config validation.
+- Use reasonable defaults.
+- Document all config options.
+- Support different environments.
+- Implement proper secrets management.
+
+### Repository Structure
+
+```
+.
+├── cmd
+│   └── server
+│       └── main.go
+├── internal
+│   ├── config
+│   │   ├── config.go
+│   │   └── config_test.go
+│   ├── db
+│   │   ├── postgres.go
+│   │   ├── postgres_test.go
+│   │   ├── redis.go
+│   │   └── redis_test.go
+│   ├── middleware
+│   │   ├── auth.go
+│   │   └── auth_test.go
+│   ├── search
+│   │   └── elastic.go
+│   ├── services
+│   │   ├── auth
+│   │   │   ├── service.go
+│   │   │   ├── service_test.go
+│   │   │   ├── repository.go
+│   │   │   └── repository_test.go
+│   │   ├── user
+│   │   │   ├── service.go
+│   │   │   ├── service_test.go
+│   │   │   ├── repository.go
+│   │   │   └── repository_test.go
+│   │   ├── channel
+│   │   │   ├── service.go
+│   │   │   ├── service_test.go
+│   │   │   ├── repository.go
+│   │   │   └── repository_test.go
+│   │   ├── message
+│   │   │   ├── service.go
+│   │   │   ├── service_test.go
+│   │   │   ├── repository.go
+│   │   │   └── repository_test.go
+│   │   ├── file
+│   │   │   ├── service.go
+│   │   │   ├── service_test.go
+│   │   │   ├── repository.go
+│   │   │   └── repository_test.go
+│   │   └── call
+│   │       ├── service.go
+│   │       ├── service_test.go
+│   │       ├── repository.go
+│   │       └── repository_test.go
+│   └── utils
+│       ├── crypto
+│       │   └── crypto.go
+│       └── validator
+│           └── validator.go
+├── pkg
+│   └── proto
+│       └── chat
+│           └── v1
+│               ├── chat.pb.go
+│               └── chat_grpc.pb.go
+├── scripts
+│   └── migrations
+│       ├── 000001_create_auth_tables.up.sql
+│       └── 000001_create_auth_tables.down.sql
+├── deployments
+│   ├── docker
+│   │   └── Dockerfile
+│   └── k8s
+│       └── deployment.yaml
+├── docker-compose.yml
+├── go.mod
+├── go.sum
+└── README.md
+```
+
+### Commit Guidelines
+
+- Write clear commit messages.
+- Include tests with feature commits.
+- Keep commits focused and atomic.
+- Reference issues in commits.
+- Follow semantic versioning.
+- Update documentation with changes.

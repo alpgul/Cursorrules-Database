@@ -1,0 +1,196 @@
+# Project Rules for Express.js REST API with Clean Architecture
+
+This .cursorrules file provides instructions for Cursor AI to tailor its behavior when working on this project. The project uses the following technologies:
+
+- **Framework:** Express.js
+- **Language:** TypeScript
+- **Database:** MongoDB
+- **ORM:** Mongoose
+- **Testing:** Jest with 100% coverage requirement
+- **Documentation:** Swagger/OpenAPI
+- **Real-time:** Socket.IO
+- **Security:** Helmet, rate limiting, etc.
+- **Validation:** Joi/Zod
+- **Package Manager:** npm/yarn
+
+## General Principles
+
+- All code must be written in TypeScript with strict mode enabled.
+- Follow clean architecture principles with clear separation of concerns.
+- Always use named exports instead of default exports.
+- Implement comprehensive request/response type definitions.
+- Maintain 100% test coverage for all components.
+- Implement proper error handling and validation throughout the application.
+- Secure the API using best practices and security middleware.
+
+## Clean Architecture Structure
+
+The project follows a clean architecture pattern with the following layers:
+
+### src/domain
+- Contains business logic and domain entities
+- Includes interfaces that define the contracts for repositories
+- Independent of any framework or external dependency
+
+### src/application
+- Contains use cases (application services)
+- Implements business rules that require domain entities
+- Orchestrates the flow of data to and from entities
+
+### src/infrastructure
+- Contains implementations of interfaces defined in the domain layer
+- Includes database models, ORM configurations, external services, etc.
+- Framework-dependent code should be isolated here
+
+### src/interfaces
+- Contains controllers, routes, middleware, and adapters
+- Handles HTTP requests and responses
+- Transforms data between the application layer and clients
+
+### src/config
+- Contains configuration settings
+- Environment variables setup
+- Application constants
+
+## Technologies
+
+- **Express.js:** Use Express.js as the web framework for building REST APIs.
+- **TypeScript:** Use TypeScript with strict mode enabled. Avoid using `any` type; always specify types.
+- **MongoDB/Mongoose:** Use MongoDB as the database with Mongoose as the ODM. Define schema and models with proper TypeScript interfaces.
+- **Jest:** Use Jest for unit, integration, and e2e testing with 100% coverage requirement.
+- **Socket.IO:** Use Socket.IO for real-time communication when needed.
+- **Helmet:** Implement Helmet for HTTP header security.
+- **Joi/Zod:** Use for request validation and data sanitization.
+- **Swagger/OpenAPI:** Document all API endpoints with proper request/response schemas.
+
+## Coding Standards
+
+- **Prettier**: All code must be formatted according to the rules defined in the project's `.prettierrc` file.
+- **ESLint**: All code must comply with the ESLint rules defined in the `.eslintrc.json` file and must not contain any errors or warnings.
+- **Strict Compliance**: Any warnings or errors from Prettier or ESLint are not acceptable. Suggested code must fully adhere to these standards.
+
+### Variable and Function Naming
+
+- Use camelCase for variable and function names.
+- Use PascalCase for class and interface names.
+- Use UPPER_SNAKE_CASE for constants.
+
+## File Structure
+
+The project follows a clean architecture file structure under the `src/` directory. Below is the detailed organization:
+
+### src/domain
+- **entities/**: Business domain entities
+  - `<entity>.ts`: Entity definition
+  - `<entity>.types.ts`: TypeScript types for the entity
+- **repositories/**: Repository interfaces
+  - `<entity>Repository.interface.ts`: Repository interface for a specific entity
+- **services/**: Domain service interfaces
+  - `<service>.interface.ts`: Service interface definition
+
+### src/application
+- **use-cases/**: Application use cases organized by feature
+  - `<feature>/`
+    - `<use-case>.ts`: Implementation of a specific use case
+    - `<use-case>.types.ts`: Types for use case input/output
+    - `<use-case>.test.ts`: Unit tests for the use case
+- **services/**: Application services
+  - `<service>.ts`: Service implementation
+  - `<service>.types.ts`: Types for the service
+  - `<service>.test.ts`: Tests for the service
+- **dto/**: Data Transfer Objects
+  - `<entity>.dto.ts`: DTO definitions for a specific entity
+
+### src/infrastructure
+- **database/**: Database related code
+  - `connection.ts`: Database connection setup
+  - `models/`: Mongoose models
+    - `<entity>.model.ts`: Mongoose schema and model
+    - `<entity>.model.test.ts`: Tests for the model
+  - `repositories/`: Repository implementations
+    - `<entity>Repository.ts`: Implementation of repository interfaces
+    - `<entity>Repository.test.ts`: Tests for the repository
+- **services/**: External service implementations
+  - `<service>/`
+    - `<service>.ts`: Service implementation
+    - `<service>.test.ts`: Tests for the service
+- **websocket/**: Socket.IO implementation
+  - `socket.ts`: Socket connection setup
+  - `handlers/`: Socket event handlers
+    - `<handler>.ts`: Handler implementation
+    - `<handler>.test.ts`: Tests for the handler
+
+### src/interfaces
+- **http/**: HTTP-related code
+  - `routes/`: API routes organized by feature
+    - `<feature>.routes.ts`: Route definitions
+    - `index.ts`: Exports all routes
+  - `controllers/`: Request handlers
+    - `<feature>/`
+      - `<controller>.ts`: Controller implementation
+      - `<controller>.test.ts`: Tests for the controller
+  - `middleware/`: Express middleware
+    - `auth.middleware.ts`: Authentication middleware
+    - `validation.middleware.ts`: Request validation middleware
+    - `error.middleware.ts`: Error handling middleware
+  - `validators/`: Request validators
+    - `<entity>.validator.ts`: Validation schemas
+- **websocket/**: WebSocket event handlers
+  - `events/`: Event definitions
+  - `handlers/`: Event handlers
+
+### src/config
+- `environment.ts`: Environment variable configuration
+- `database.ts`: Database configuration
+- `server.ts`: Server configuration
+- `logger.ts`: Logging configuration
+- `swagger.ts`: API documentation configuration
+
+### src/utils
+- **helpers/**: Helper functions
+  - `<helper>.ts`: Helper implementation
+  - `<helper>.test.ts`: Tests for the helper
+- **types/**: Common TypeScript types
+  - `common.types.ts`: Shared type definitions
+  - `request.types.ts`: Request type definitions
+  - `response.types.ts`: Response type definitions
+- **errors/**: Custom error classes
+  - `application-error.ts`: Base error class
+  - `<specific>-error.ts`: Specific error classes
+
+### Root files
+- `server.ts`: Application entry point
+- `app.ts`: Express application setup
+- `jest.config.js`: Jest configuration
+- `package.json`: Project dependencies and scripts
+- `tsconfig.json`: TypeScript configuration
+
+## Guidelines for Cursor AI
+
+- **File Creation**: When generating new code, create new files according to the file structure described above.
+- **No Modifications**: Do not modify existing files unless necessary for integration.
+- **TypeScript**: All new code must be written in TypeScript with appropriate type definitions.
+- **Named Exports**: Always use named exports instead of default exports.
+- **Testing**: Include test files for all components with 100% coverage goal.
+- **Documentation**: Document all API endpoints using OpenAPI/Swagger.
+- **Validation**: Implement request validation for all endpoints.
+- **Error Handling**: Implement proper error handling throughout the application.
+- **Security**: Implement security best practices and middleware.
+
+## Specific Implementation Guidelines
+
+### Controllers
+- Controllers should be thin and focused on handling HTTP requests/responses
+- Extract business logic to use cases/services
+- Proper error handling and status codes
+- Example:
+```typescript
+export const createUser = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+  try {
+    const userData: CreateUserDto = req.body;
+    const result = await createUserUseCase.execute(userData);
+    res.status(201).json(result);
+  } catch (error) {
+    next(error);
+  }
+};
