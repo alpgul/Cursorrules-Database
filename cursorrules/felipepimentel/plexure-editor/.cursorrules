@@ -1,0 +1,514 @@
+# Swagger Editor UI Generator
+
+## Technology Guidelines
+
+### Development
+
+1. Use **Vite** for web servers and project scaffolding.
+2. Prefer **Node.js scripts** over shell scripts for better cross-platform compatibility.
+3. Utilize JavaScript-based libraries and databases (e.g., SQLite, `@supabase/supabase-js`) only when necessary and justified.
+4. Validate all structural changes against the predefined structure file (`STRUCTURE.md`) before generating or modifying code. Additionally, ensure no existing file has a similar name by performing a similarity or semantic check against the current project files to avoid redundancy or confusion. Use automated scripts or CI/CD pipelines to ensure that the project structure complies with the defined standards, minimizing manual intervention and reducing errors.
+5. Do not create or use unnecessary dependencies, libraries, or files. Before creating any new file, verify its necessity and ensure no similar file exists in the project to avoid duplication or confusion.
+6. All code, instructions, and documentation generated must be in **English**, ensuring consistency and readability across the project.
+
+### UI and Design
+
+1. Use **React + TypeScript** with **Tailwind CSS** for styling.
+2. Incorporate `lucide-react` for icons and graphical elements only when needed.
+3. Ensure designs are:
+   - **Responsive**
+   - **Accessible**, meeting **WCAG standards**
+   - **Mobile-first**
+4. Use valid placeholder image URLs from **Unsplash** directly in the `src` attribute.
+5. Reuse existing styles and components to maintain consistency and avoid duplication. During development, first check the `src/components/` directory for existing solutions that meet your requirements. If creating a new component is unavoidable, ensure it is modular, adheres to existing design patterns, and follows the established naming conventions. For example, instead of creating duplicate button styles, extend the existing `Button` component by passing additional props to handle unique scenarios.
+
+### Project Structure
+
+#### Directory Structure [P0]
+
+```
+src/
+├── components/          # Reusable components
+│   ├── ui/              # Basic UI components
+│   ├── forms/           # Form-specific components
+│   └── navigation/      # Navigation components
+├── features/            # Application-specific features
+│   ├── feature_name/    # Feature-specific directories
+│   │   ├── hooks/       # Feature hooks
+│   │   └── utils/       # Feature utilities
+├── views/               # Application pages
+│   ├── PageName/        # Page-specific directories
+│   │   ├── index.tsx    # Page composition
+│   │   └── sections/    # Page sections
+└── utils/               # General-purpose utilities
+```
+
+#### Guidelines
+
+1. **Components (********`src/components/`********)**
+
+   - Reusable and independent.
+   - Grouped by domain (`ui`, `forms`, `navigation`).
+   - Flat structure, no nested `components` subfolders.
+
+2. **Features (********`src/features/`********)**
+
+   - Encapsulate specific application logic.
+   - May include `hooks` and `utils` specific to the feature.
+
+3. **Views (********`src/views/`********)**
+
+   - Organize by pages.
+   - Use `sections/` for complex page layouts.
+
+#### Principles [P0]
+
+1. **Simplicity**
+
+   - Prefer flat structures.
+   - Avoid deep nesting.
+   - Use clear, descriptive names.
+
+2. **Organization**
+
+   - Components by domain.
+   - Features by functionality.
+   - Views by page.
+
+3. **Reusability**
+
+   - Build reusable components.
+   - Encapsulate logic in features.
+   - Compose views using existing elements.
+
+#### Anti-Patterns [P0]
+
+❌ **Avoid**
+
+- Deeply nested directories.
+- Unnecessary subfolders.
+- Mixing unrelated responsibilities.
+
+✅ **Prefer**
+
+- Clear separation of concerns.
+- Descriptive and specific naming.
+- Maintaining consistency with the `project-structure.yaml`.
+
+### Response Standards
+
+#### Format
+
+1. Provide responses in **valid markdown**.
+2. Avoid HTML unless necessary for specific styling or layout (e.g., `<div>`, `<code>`).
+3. All content, including comments, should be written in **English**.
+
+#### Quality
+
+1. Ensure code is **production-ready**, polished, and professional.
+2. Deliver solutions that are functional, unique, and visually appealing.
+3. Always include complete solutions: file structures, configuration files, and execution instructions.
+
+#### Artifacts
+
+1. Each response must include:
+   - All necessary files (e.g., JSX, CSS, configuration).
+   - A step-by-step guide to install and execute the solution.
+   - Dependencies managed via `package.json`.
+
+### Best Practices
+
+#### Code
+
+1. Write clean, maintainable, and strictly typed **TypeScript** code (avoid `any`).
+2. Use `React.FC` for functional components with well-defined props.
+3. Document all components and functions using **JSDoc** for better maintainability.
+4. Ensure code adheres to the **project structure file** guidelines.
+5. Reuse existing components and utilities. Do not create new components, utilities, or logic without verifying the absence of an existing solution.
+
+#### Performance
+
+1. Use memoization techniques (`React.memo`, `useMemo`, `useCallback`) to reduce unnecessary re-renders. Memoization is particularly beneficial in scenarios where components depend on complex computations, reusable callback functions, or static props in large lists or frequent re-rendering contexts, such as rendering table rows or dynamically updating forms.
+2. Dynamically import non-critical components to minimize the initial bundle size. For example, use React's `lazy` and `Suspense`:
+
+```tsx
+import React, { Suspense } from 'react';
+
+const LazyComponent = React.lazy(() => import('./LazyComponent'));
+
+const App = () => (
+  <Suspense fallback={<div>Loading...</div>}>
+    <LazyComponent />
+  </Suspense>
+);
+
+export default App;
+```
+
+3. Debounce or throttle resource-intensive operations like API calls and form validations.
+
+### Next Steps / Improvements
+
+#### Continuous Improvement
+
+1. After completing a feature or implementation, provide recommendations for future improvements or extensions:
+   - Adding new components, pages, or features that enhance user experience.
+   - Optimizing performance further, such as preloading assets or refining database queries.
+   - Enhancing documentation for developers and end-users.
+
+#### Maintainability and Evolution
+
+1. Refactor repetitive code into reusable utilities or components.
+2. Adopt emerging technologies that align with the project (e.g., new React features, AI-driven enhancements).
+3. Validate and document all significant architectural changes.
+
+#### Scalability
+
+1. Recommendations for handling larger datasets or traffic spikes.
+2. Proposals for modularizing services or transitioning to microfrontends if needed.
+3. Use the `project-structure.yaml` file as a blueprint for scaling architecture and ensuring consistency in multi-team environments.
+
+## Expected Output
+
+By following this prompt, all generated solutions will:
+
+1. Adhere to modern web development standards and best practices.
+2. Be production-ready, visually appealing, and fully functional.
+3. Include clear next steps to ensure continuous improvement and evolution of the project.
+4. Avoid unnecessary libraries, files, and dependencies to keep the project lean and maintainable.
+5. Support seamless integration and scalability for future requirements.
+
+### File and Directory Naming [P0]
+
+1. **File Naming**
+   - Use **PascalCase** for all React component files (`.tsx`, `.jsx`)
+   - Use **camelCase** for utility files (`.ts`, `.js`)
+   - Use **kebab-case** for configuration files
+   - Examples:
+     ```
+     ✅ Button.tsx, UserProfile.tsx, useAuth.ts
+     ❌ button.tsx, user-profile.tsx, use-auth.ts
+     ```
+
+2. **Directory Structure**
+   - Use **kebab-case** for directory names
+   - Group related components in feature directories
+   - Keep flat structure when possible
+   - Examples:
+     ```
+     ✅ src/components/ui/Button.tsx
+     ✅ src/features/auth/LoginForm.tsx
+     ❌ src/components/ui/button/Button.tsx
+     ❌ src/components/UI/Button.tsx
+     ```
+
+3. **Component Organization**
+   - Avoid component duplication across directories
+   - Keep related components together
+   - Use subdirectories only when necessary for organization
+   - Examples:
+     ```
+     ✅ src/components/sidebar/
+         ├── Sidebar.tsx
+         └── right/
+             ├── RightSidebar.tsx
+             └── RightSidebarManager.tsx
+     
+     ❌ src/components/
+         ├── navigation/Sidebar.tsx
+         └── sidebar/Sidebar.tsx
+     ```
+
+4. **Import Conventions**
+   - Prefer absolute imports using path aliases
+   - Group imports by type (React, external, internal)
+   - Examples:
+     ```typescript
+     // External imports
+     import React from 'react';
+     import { motion } from 'framer-motion';
+     
+     // Internal imports - absolute paths
+     import { Button } from '@/components/ui/Button';
+     import { useAuth } from '@/hooks/useAuth';
+     
+     // Internal imports - relative paths (only for same directory)
+     import { type ButtonProps } from './types';
+     import { buttonVariants } from './variants';
+     
+     // 5. Asset imports
+     import logo from '@/assets/logo.svg';
+     ```
+
+### Anti-Patterns [P0]
+
+❌ **Avoid**
+- Duplicate component files or directories
+- Mixed case conventions in file/directory names
+- Deep nesting of components
+- Multiple components in single file
+- Generic component names (e.g., `Container.tsx`, `Wrapper.tsx`)
+
+✅ **Prefer**
+- Single responsibility components
+- Clear, descriptive naming
+- Flat directory structure
+- Feature-based organization
+- Consistent naming conventions
+
+### Imports and Dependencies [P0]
+
+1. **Import Organization**
+   ```typescript
+   // 1. React and framework imports
+   import React from 'react';
+   import { useRouter } from 'next/router';
+   
+   // 2. External library imports
+   import { motion } from 'framer-motion';
+   import { format } from 'date-fns';
+   
+   // 3. Internal absolute imports
+   import { Button } from '@/components/ui/Button';
+   import { useAuth } from '@/hooks/useAuth';
+   
+   // 4. Internal relative imports
+   import { type ButtonProps } from './types';
+   import { buttonVariants } from './variants';
+   
+   // 5. Asset imports
+   import logo from '@/assets/logo.svg';
+   ```
+
+2. **Path Aliases**
+   - Use `@/` prefix for absolute imports from src directory
+   - Configure path aliases in `tsconfig.json`
+   - Example:
+     ```json
+     {
+       "compilerOptions": {
+         "baseUrl": ".",
+         "paths": {
+           "@/*": ["src/*"]
+         }
+       }
+     }
+     ```
+
+### Component File Structure [P0]
+
+1. **File Organization**
+   ```typescript
+   // 1. Imports (organized as specified above)
+   
+   // 2. Types/Interfaces
+   interface ButtonProps {
+     variant?: 'primary' | 'secondary';
+     size?: 'sm' | 'md' | 'lg';
+   }
+   
+   // 3. Component
+   export const Button: React.FC<ButtonProps> = ({
+     variant = 'primary',
+     size = 'md',
+     ...props
+   }) => {
+     // Component logic
+   };
+   
+   // 4. Styles (if not using CSS modules)
+   const styles = {
+     // ...
+   };
+   ```
+
+### Code Simplicity and Maintainability [P0]
+
+1. **Keyboard Shortcuts**
+   - Reserve common shortcuts for standard operations:
+     ```
+     Ctrl+F: Find/Search
+     Ctrl+H: Replace
+     Ctrl+S: Save
+     Ctrl+Z: Undo
+     Ctrl+Y: Redo
+     Ctrl+C/V/X: Copy/Paste/Cut
+     F3: Find Next
+     Shift+F3: Find Previous
+     ```
+   - Use Ctrl+Shift combinations for custom operations:
+     ```
+     Ctrl+Shift+F: Format
+     Ctrl+Shift+P: Command Palette
+     ```
+   - Document all shortcuts in component props and tooltips
+
+2. **State Management**
+   - Prefer hooks over class components
+   - Keep state close to where it's used
+   - Use composition over inheritance
+   - Example:
+     ```typescript
+     // ❌ Avoid
+     const [state1, setState1] = useState();
+     const [state2, setState2] = useState();
+     const [state3, setState3] = useState();
+     
+     // ✅ Prefer
+     const [formState, setFormState] = useState({
+       field1: '',
+       field2: '',
+       field3: ''
+     });
+     ```
+
+3. **Component Complexity**
+   - Maximum of 200 lines per component file
+   - Extract complex logic into custom hooks
+   - Split large components into smaller, focused ones
+   - Example:
+     ```typescript
+     // ❌ Avoid
+     const ComplexComponent = () => {
+       // 300+ lines of mixed concerns
+     };
+     
+     // ✅ Prefer
+     const ComplexComponent = () => {
+       const logic = useComplexLogic();
+       return (
+         <>
+           <HeaderSection {...logic} />
+           <ContentSection {...logic} />
+           <FooterSection {...logic} />
+         </>
+       );
+     };
+     ```
+
+4. **Editor Integration**
+   - Use Monaco Editor features directly instead of reimplementing:
+     ```typescript
+     // ❌ Avoid
+     const customSearch = () => {
+       // Custom search implementation
+     };
+     
+     // ✅ Prefer
+     editor.trigger('search', 'actions.find', null);
+     ```
+   - Leverage built-in commands and actions
+   - Extend existing functionality rather than replacing it
+
+5. **Toolbar Organization**
+   - Group related actions with separators
+   - Use consistent icon sizes (16px default)
+   - Follow standard order:
+     ```
+     1. View Controls (Preview, Split)
+     2. Search Actions
+     3. Edit Actions (Undo, Redo)
+     4. File Actions (Save, Format)
+     5. Settings/Config
+     ```
+
+6. **Error Handling and Validation**
+   - Provide immediate feedback
+   - Use type-safe error handling
+   - Example:
+     ```typescript
+     // ❌ Avoid
+     try {
+       doSomething();
+     } catch (e) {
+       console.error(e);
+     }
+     
+     // ✅ Prefer
+     try {
+       doSomething();
+     } catch (e) {
+       if (e instanceof ValidationError) {
+         showValidationError(e.message);
+       } else {
+         reportError(e);
+       }
+     }
+     ```
+
+7. **Performance Optimization**
+   - Memoize only when necessary
+   - Use virtualization for large lists
+   - Example:
+     ```typescript
+     // ❌ Avoid - unnecessary memoization
+     const SimpleComponent = React.memo(() => <div>Hello</div>);
+     
+     // ✅ Prefer - memoize only complex computations
+     const ComplexList = React.memo(({ items }) => (
+       <VirtualList items={items} />
+     ));
+     ```
+
+8. **Code Generation Guidelines**
+   - Generate complete, working solutions
+   - Include all necessary imports
+   - Add TypeScript types
+   - Example:
+     ```typescript
+     // ❌ Avoid
+     const Component = () => {
+       // Missing imports
+       // Missing types
+       return <div />;
+     };
+     
+     // ✅ Prefer
+     import React from 'react';
+     import { cn } from '@/lib/utils';
+     
+     interface ComponentProps {
+       className?: string;
+     }
+     
+     export const Component: React.FC<ComponentProps> = ({
+       className
+     }) => {
+       return <div className={cn('base-styles', className)} />;
+     };
+     ```
+
+9. **Documentation**
+   - Document non-obvious code
+   - Include JSDoc for public APIs
+   - Example:
+     ```typescript
+     /**
+      * Formats YAML content according to OpenAPI standards.
+      * @param content - The YAML content to format
+      * @returns Formatted YAML string
+      * @throws {ValidationError} If content is invalid
+      */
+     export function formatYAML(content: string): string {
+       // Implementation
+     }
+     ```
+
+10. **Testing Considerations**
+    - Write testable code
+    - Avoid direct DOM manipulation
+    - Use data-testid for test selectors
+    - Example:
+      ```typescript
+      // ❌ Avoid
+      onClick={() => document.querySelector('.item').click()};
+      
+      // ✅ Prefer
+      <Button
+        data-testid="action-button"
+        onClick={handleClick}
+      >
+        Action
+      </Button>
+      ```
+

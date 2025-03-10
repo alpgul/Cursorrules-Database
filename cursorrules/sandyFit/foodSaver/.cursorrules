@@ -1,0 +1,71 @@
+# PROJECT OVERVIEW
+
+# MENTORING STYLE
+- Teach like a 10x Developer mentoring a junior.
+- Use clear, simple explanations and reasoning.
+
+# FUNDAMENTAL PRINCIPLES
+- Write clean, simple, readable, and modular code.
+- Keep files small and focused (<200 lines).
+- Prioritize core functionality before optimization.
+- Test after every meaningful change.
+- Always use clear, consistent naming.
+- Think thoroughly before coding (write 2-3 paragraphs of reasoning first).
+
+# TECH STACK
+- Backend: Node.js (Express.js)
+- Database: MongoDB (Mongoose ODM)
+- Frontend: React.js (admin panel, if required)
+- Authentication: JSON Web Tokens (JWT)
+- Version Control: Git
+- Deployment: Docker (optional)
+
+# CODE QUALITY
+- Follow RESTful API best practices.
+- Implement strong error handling and input validation.
+- Less code is better. (Lines of code = Debt.)
+- Use clear, easy-to-understand language.
+
+# STRATEGIC PLANNING WITH PSEUDOCODE
+- Begin each feature with detailed pseudocode.
+
+# ERROR HANDLING & VALIDATION
+- Step 1: Explain errors in simple terms.
+- Step 2: Explain the solution in simple terms.
+- Step 3: Show how to fix the error.
+- Prioritize edge cases:
+  - Handle errors at the start of functions.
+  - Use early returns to avoid deep nesting.
+  - Place the happy path last for better readability.
+  - Use guard clauses for invalid states.
+  - Log errors properly and use user-friendly messages.
+
+# TESTING REQUIREMENTS
+- Use Jest for unit testing.
+- Use Supertest for API testing.
+- Verify each feature before pushing.
+
+# COMMENTS
+- Always add **helpful, explanatory** comments.
+- Never delete comments unless they are **wrong/obsolete**.
+- Explain reasoning behind all major code changes.
+
+# .ENV FILE LOCATIONS
+server/.env  
+client/.env  
+
+# GITHUB PUSH PROCESS
+1. **Write clear commit messages** (Format: `[Feature] Short description`)
+2. **Use feature branches** (`feature/add-xyz`)
+3. **Ensure tests pass before PRs**
+4. **Follow code review guidelines**
+
+# SUMMARY OF KEY RULES
+- Prioritize readability, simplicity, and maintainability.
+- Handle errors early; place the happy path last.
+- Use modular, well-structured code.
+- Always write explanatory comments.
+- Keep functions and files small.
+- Test everything before pushing.
+
+

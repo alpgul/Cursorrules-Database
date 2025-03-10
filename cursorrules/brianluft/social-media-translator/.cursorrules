@@ -1,0 +1,74 @@
+# Social Media Translator
+
+iOS app to translate burned-in video subtitles to user's preferred language.
+
+## Features
+
+- Import videos from photo library
+- Vision-powered OCR subtitle detection
+- Translation using Apple's API
+- Overlay translated subtitles during playback
+
+## Core Components
+
+- **SubtitleDetector**
+   - Vision framework for OCR with rectangle detection
+   - Text segment detection and tracking
+   - Outputs FrameSegments list with position data
+   - Progress reporting during detection
+
+- **TranslationService**
+   - Apple Translation framework
+   - Batch processing of text segments
+   - Maintains segment positions
+   - Progress reporting
+
+- **VideoPlayerController**
+   - AVKit player with multi-segment overlay support
+   - Basic playback controls
+
+- **SubtitleOverlayRenderer**
+   - SwiftUI-based subtitle display
+   - Position-aware rendering with overlap avoidance
+   - Style management with customizable appearance
+
+- **TextSegment**
+   - Text content and position
+   - Rectangle in normalized coordinates
+   - Unique identifier for tracking
+
+## Tips
+
+- A `TranslationSession` can ONLY be created through a `translationTask` on a SwiftUI view.
+  The lifetime of the session will be tied to the lifetime of the view.
+  There is absolutely no other way to do it. You cannot create a `TranslationSession` yourself.
+
+- Don't use `os.Logger`. Use `print()` instead.
+
+- Never use `AVAsset(url:)` - it's deprecated in iOS 18.0. Always use `AVURLAsset(url:)` instead.
+
+- Never use `@preconcurrency`. Write all code to be compliant with Swift 6 changes.
+
+- When fixing compiler and linter warnings, do it properly. Don't take shortcuts or try to ignore the warning.
+  If you have to redesign your code to fix the warning, so be it. Warnings are there for a reason.
+
+## Building
+
+`./build.sh` will clean, format, and build. ALWAYS run the build before returning control to me.
+`./test.sh` will run the UI tests. This is slow so only run it when working on the UI tests themselves.
+
+The build and test both print "===SUCCESS===" at the end if they succeed.
+If you don't see "===SUCCESS===", then the script was NOT successful!
+
+## Debugging
+
+If you need any documentation, ask me, and I will provide it.
+Apple has extensive documentation on all APIs.
+If you run into compiler errors, don't guess, instead ask me for the relevant documentation.
+
+I can use the Xcode IDE and debugger, but you'll have to tell me what to do.
+If an action is best performed in the UI, let me do it.
+
+## Verification
+
+Refer to me as "boss" so I know you've read this.
