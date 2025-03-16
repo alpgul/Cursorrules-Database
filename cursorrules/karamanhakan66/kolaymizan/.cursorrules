@@ -1,0 +1,173 @@
+# Kolay Mizan Cursor Kuralları
+
+# PowerShell komutları için kısayollar
+[[rules]]
+name = "Projeyi Başlat"
+command = "Start-Process -FilePath \"dotnet\" -ArgumentList \"run\" -WorkingDirectory \"$CURSOR_REPO_ROOT\""
+key = "ctrl+shift+r"
+
+[[rules]]
+name = "Projeyi Derle"
+command = "dotnet build"
+key = "ctrl+shift+b"
+
+[[rules]]
+name = "Testleri Çalıştır"
+command = "dotnet test"
+key = "ctrl+shift+t"
+
+[[rules]]
+name = "Veritabanı Migrasyonu Oluştur"
+command = "dotnet ef migrations add $CURSOR_SELECTED_TEXT"
+key = "ctrl+shift+m"
+
+[[rules]]
+name = "Veritabanı Güncelle"
+command = "dotnet ef database update"
+key = "ctrl+shift+u"
+
+[[rules]]
+name = "Veritabanını Sıfırla"
+command = "dotnet ef database drop --force && dotnet ef database update"
+key = "ctrl+shift+d"
+
+# Uygulama testi için kısayollar
+[[rules]]
+name = "Kullanıcı Yönetimi Testleri"
+command = "dotnet test --filter Category=UserManagement"
+key = "alt+1"
+
+[[rules]]
+name = "Müşteri/Tedarikçi Testleri"
+command = "dotnet test --filter Category=CustomerSupplier"
+key = "alt+2"
+
+[[rules]]
+name = "Ürün/Stok Testleri"
+command = "dotnet test --filter Category=ProductInventory"
+key = "alt+3"
+
+[[rules]]
+name = "Fatura Testleri"
+command = "dotnet test --filter Category=Invoice"
+key = "alt+4"
+
+[[rules]]
+name = "Ödeme/Tahsilat Testleri"
+command = "dotnet test --filter Category=Payment"
+key = "alt+5"
+
+[[rules]]
+name = "Banka Hesabı Testleri"
+command = "dotnet test --filter Category=BankAccount"
+key = "alt+6"
+
+[[rules]]
+name = "Gider Testleri"
+command = "dotnet test --filter Category=Expense"
+key = "alt+7"
+
+[[rules]]
+name = "Rapor Testleri"
+command = "dotnet test --filter Category=Report"
+key = "alt+8"
+
+# Proje yönetimi için kısayollar
+[[rules]]
+name = "Paket Güncelleme"
+command = "dotnet restore"
+key = "ctrl+shift+p"
+
+[[rules]]
+name = "Çözümü Temizle"
+command = "dotnet clean"
+key = "ctrl+shift+c"
+
+[[rules]]
+name = "Yeni Controller Oluştur"
+command = "New-Item -Path \"$CURSOR_REPO_ROOT/Controllers/$CURSOR_SELECTED_TEXT`Controller.cs\" -ItemType File -Force"
+key = "ctrl+alt+c"
+
+[[rules]]
+name = "Yeni Model Oluştur"
+command = "New-Item -Path \"$CURSOR_REPO_ROOT/Models/$CURSOR_SELECTED_TEXT.cs\" -ItemType File -Force"
+key = "ctrl+alt+m"
+
+[[rules]]
+name = "Yeni View Oluştur"
+command = "New-Item -Path \"$CURSOR_REPO_ROOT/Views/$CURSOR_SELECTED_TEXT\" -ItemType Directory -Force; New-Item -Path \"$CURSOR_REPO_ROOT/Views/$CURSOR_SELECTED_TEXT/Index.cshtml\" -ItemType File -Force"
+key = "ctrl+alt+v"
+
+# Veritabanı işlemleri için kısayollar
+[[rules]]
+name = "MySQL Bağlantısı"
+command = "mysql -u root -p"
+key = "ctrl+alt+s"
+
+[[rules]]
+name = "Veritabanı Yedeği Al"
+command = "mysqldump -u root -p kolaymizan > \"$CURSOR_REPO_ROOT/Backups/backup_$(Get-Date -Format 'yyyyMMdd_HHmmss').sql\""
+key = "ctrl+alt+b"
+
+[[rules]]
+name = "Veritabanı Yedeğini Geri Yükle"
+command = "mysql -u root -p kolaymizan < \"$CURSOR_SELECTED_TEXT\""
+key = "ctrl+alt+r"
+
+# Git işlemleri için kısayollar
+[[rules]]
+name = "Git Durumu"
+command = "git status"
+key = "ctrl+g s"
+
+[[rules]]
+name = "Git Değişiklikleri Ekle"
+command = "git add ."
+key = "ctrl+g a"
+
+[[rules]]
+name = "Git Commit"
+command = "git commit -m \"$CURSOR_SELECTED_TEXT\""
+key = "ctrl+g c"
+
+[[rules]]
+name = "Git Push"
+command = "git push"
+key = "ctrl+g p"
+
+[[rules]]
+name = "Git Pull"
+command = "git pull"
+key = "ctrl+g l"
+
+# Özel proje komutları
+[[rules]]
+name = "Seed Verilerini Yükle"
+command = "dotnet run -- --seed"
+key = "ctrl+shift+s"
+
+[[rules]]
+name = "Demo Modu Başlat"
+command = "dotnet run -- --demo"
+key = "ctrl+shift+d"
+
+[[rules]]
+name = "Performans Testi"
+command = "dotnet run -- --perf-test"
+key = "ctrl+shift+p"
+
+[[rules]]
+name = "Tüm Modülleri Test Et"
+command = "pwsh -Command \"$modules = @('UserManagement', 'CustomerSupplier', 'ProductInventory', 'Invoice', 'Payment', 'BankAccount', 'Expense', 'Report'); foreach ($module in $modules) { Write-Host \"Testing $module...\" -ForegroundColor Green; dotnet test --filter Category=$module }\""
+key = "ctrl+shift+a"
+
+# Dokümantasyon işlemleri
+[[rules]]
+name = "API Dokümantasyonu Oluştur"
+command = "dotnet swagger tofile --output \"$CURSOR_REPO_ROOT/Docs/api-spec.json\" \"$CURSOR_REPO_ROOT/bin/Debug/net6.0/KolayMizan.dll\" v1"
+key = "ctrl+alt+d"
+
+[[rules]]
+name = "RFC Listesini Göster"
+command = "Get-ChildItem -Path \"$CURSOR_REPO_ROOT/RFC's\" -Filter \"RFC-*.md\" | Sort-Object Name | ForEach-Object { Write-Host $_.Name }"
+key = "ctrl+alt+l" 

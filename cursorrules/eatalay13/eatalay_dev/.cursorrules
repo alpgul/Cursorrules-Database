@@ -1,0 +1,44 @@
+Next.js Tailwind CSS TypeScript, bu teknolojileri kullanarak projeyi geliştir.
+Bunların dışında ui için harici bir paket kullanma. Tailwind CSS ile kendin yaz.
+
+Page.tsx dosyalarını olabildiğince sade tut. İçeriğini container componenti ile yap.
+
+Arayüz nesnelerini component olarak ayrı ayrı yaz. Olabildiğince DRY kod yaz.
+Arayüz componentlerini olabildiğince küçük componentler haline getir.
+Mümkün oldukça Server Component kullan.
+
+Veritabanı gibi işlemleri server componenti ile yap. Server Actions kullan.
+Server Actions dosyalarını lib/actions klasöründe ayrı ayrı yaz.
+
+Arayüzün herhangi bir bölümünün kodunu değiştirmek istediğinde, kodun tamamını değil, sadece değiştirmek istediğin bölümün kodunu yaz.
+
+Herhangi bir yerde kullanıcak ui nesnelerini component/ui klasöründe ayrı ayrı yaz.
+
+Daha önce yazılmış importları bozma.
+
+Kod yazarken SOLID prensiplerini dikkate al.
+
+Kodun okunabilirliğini sağlamaya çalış.
+
+Proje dosya yapısını dikkate al.
+
+Proje dosya yapısı:
+
+- app
+- components
+    - layout
+    - ui
+- containers
+- lib
+    - repositories
+    - services
+    - actions
+    - contexts
+    - hooks
+    - utils
+- public
+- styles
+- types
+
+
+
