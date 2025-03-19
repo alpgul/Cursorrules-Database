@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 1090,
+  "size": 1106,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -15260,6 +15260,230 @@
         "htmlUrl": "https://github.com/NIHILncunia/remix-tutorial-router/blob/cf04ddfa9ed98b2e8ae6126ae3b890b686c48056/.cursorrules",
         "size": 1.54,
         "timestamp": "2025-03-16T08:13:52.971Z"
+      }
+    ],
+    [
+      "jay6697117/we-drawing-nuxt/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/jay6697117/we-drawing-nuxt/bb5799c4c25272e84aac3e97923724ff7297db1d/.cursorrules",
+        "repositoryId": 932100820,
+        "path": "jay6697117/we-drawing-nuxt/.cursorrules",
+        "ownerName": "jay6697117",
+        "repositoryName": "we-drawing-nuxt",
+        "htmlUrl": "https://github.com/jay6697117/we-drawing-nuxt/blob/bb5799c4c25272e84aac3e97923724ff7297db1d/.cursorrules",
+        "size": 3.55,
+        "timestamp": "2025-03-19T08:15:24.415Z"
+      }
+    ],
+    [
+      "0xQuan93/Project89-Arsenal/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/0xQuan93/Project89-Arsenal/224a7806a3e31e2fb71a55036e3b6593545e83eb/.cursorrules",
+        "repositoryId": 935288151,
+        "path": "0xQuan93/Project89-Arsenal/.cursorrules",
+        "ownerName": "0xQuan93",
+        "repositoryName": "Project89-Arsenal",
+        "htmlUrl": "https://github.com/0xQuan93/Project89-Arsenal/blob/224a7806a3e31e2fb71a55036e3b6593545e83eb/.cursorrules",
+        "size": 21.83,
+        "timestamp": "2025-03-19T08:15:24.631Z"
+      }
+    ],
+    [
+      "bichikim/web/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/bichikim/web/682b26a501ee1de8dc4ccfd49998bf455216ed34/.cursorrules",
+        "repositoryId": 296346329,
+        "path": "bichikim/web/.cursorrules",
+        "ownerName": "bichikim",
+        "repositoryName": "web",
+        "htmlUrl": "https://github.com/bichikim/web/blob/682b26a501ee1de8dc4ccfd49998bf455216ed34/.cursorrules",
+        "size": 2.05,
+        "timestamp": "2025-03-19T08:15:25.068Z"
+      }
+    ],
+    [
+      "PatrickJS/awesome-cursorrules/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/19e4f60f44b9296f604a9221ef4851868cd78faf/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 858262444,
+        "path": "PatrickJS/awesome-cursorrules/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "PatrickJS",
+        "repositoryName": "awesome-cursorrules",
+        "htmlUrl": "https://github.com/PatrickJS/awesome-cursorrules/blob/19e4f60f44b9296f604a9221ef4851868cd78faf/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "size": 7.64,
+        "timestamp": "2025-03-19T08:15:26.475Z"
+      }
+    ],
+    [
+      "allthingslinux/tux/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/allthingslinux/tux/4ded8b1f1bd9482c7d64207d7ad711b58ccfca15/.cursorrules",
+        "repositoryId": 724754781,
+        "path": "allthingslinux/tux/.cursorrules",
+        "ownerName": "allthingslinux",
+        "repositoryName": "tux",
+        "htmlUrl": "https://github.com/allthingslinux/tux/blob/4ded8b1f1bd9482c7d64207d7ad711b58ccfca15/.cursorrules",
+        "size": 5.89,
+        "timestamp": "2025-03-19T08:15:26.674Z"
+      }
+    ],
+    [
+      "skgsergio/tinypot/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/skgsergio/tinypot/c0725e2ff7b0075259c0bd4eeb895adf1a24de0c/.cursorrules",
+        "repositoryId": 760483505,
+        "path": "skgsergio/tinypot/.cursorrules",
+        "ownerName": "skgsergio",
+        "repositoryName": "tinypot",
+        "htmlUrl": "https://github.com/skgsergio/tinypot/blob/c0725e2ff7b0075259c0bd4eeb895adf1a24de0c/.cursorrules",
+        "size": 21.26,
+        "timestamp": "2025-03-19T08:15:27.694Z"
+      }
+    ],
+    [
+      "PatrickJS/awesome-cursorrules/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/19e4f60f44b9296f604a9221ef4851868cd78faf/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 858262444,
+        "path": "PatrickJS/awesome-cursorrules/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "PatrickJS",
+        "repositoryName": "awesome-cursorrules",
+        "htmlUrl": "https://github.com/PatrickJS/awesome-cursorrules/blob/19e4f60f44b9296f604a9221ef4851868cd78faf/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "size": 2.32,
+        "timestamp": "2025-03-19T08:15:31.627Z"
+      }
+    ],
+    [
+      "PatrickJS/awesome-cursorrules/rules/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/19e4f60f44b9296f604a9221ef4851868cd78faf/rules/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 858262444,
+        "path": "PatrickJS/awesome-cursorrules/rules/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "PatrickJS",
+        "repositoryName": "awesome-cursorrules",
+        "htmlUrl": "https://github.com/PatrickJS/awesome-cursorrules/blob/19e4f60f44b9296f604a9221ef4851868cd78faf/rules/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+        "size": 6.25,
+        "timestamp": "2025-03-19T08:15:31.784Z"
+      }
+    ],
+    [
+      "nickdesjardins/civalgo-punch/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/nickdesjardins/civalgo-punch/bd7e741720b3d5d85d3a8333f6b619f23ee5b866/.cursorrules",
+        "repositoryId": 950980365,
+        "path": "nickdesjardins/civalgo-punch/.cursorrules",
+        "ownerName": "nickdesjardins",
+        "repositoryName": "civalgo-punch",
+        "htmlUrl": "https://github.com/nickdesjardins/civalgo-punch/blob/bd7e741720b3d5d85d3a8333f6b619f23ee5b866/.cursorrules",
+        "size": 7.71,
+        "timestamp": "2025-03-19T08:15:32.729Z"
+      }
+    ],
+    [
+      "yansircc/payload-builder/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/yansircc/payload-builder/4e6e6a07e865719fd3277ca668ad4c0b4ac1fd06/.cursorrules",
+        "repositoryId": 920649205,
+        "path": "yansircc/payload-builder/.cursorrules",
+        "ownerName": "yansircc",
+        "repositoryName": "payload-builder",
+        "htmlUrl": "https://github.com/yansircc/payload-builder/blob/4e6e6a07e865719fd3277ca668ad4c0b4ac1fd06/.cursorrules",
+        "size": 2.77,
+        "timestamp": "2025-03-19T08:15:32.965Z"
+      }
+    ],
+    [
+      "Kabi10/Cursor/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Kabi10/Cursor/45de4cc6121a48d219e854b87d4f4501cd0f0249/.cursorrules",
+        "repositoryId": 942370179,
+        "path": "Kabi10/Cursor/.cursorrules",
+        "ownerName": "Kabi10",
+        "repositoryName": "Cursor",
+        "htmlUrl": "https://github.com/Kabi10/Cursor/blob/45de4cc6121a48d219e854b87d4f4501cd0f0249/.cursorrules",
+        "size": 1.66,
+        "timestamp": "2025-03-19T08:15:35.872Z"
+      }
+    ],
+    [
+      "JameWade/minesweeper/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/JameWade/minesweeper/4e0850cafda96c14fc70fa98a8dfa1f243ecdacd/.cursorrules",
+        "repositoryId": 942132292,
+        "path": "JameWade/minesweeper/.cursorrules",
+        "ownerName": "JameWade",
+        "repositoryName": "minesweeper",
+        "htmlUrl": "https://github.com/JameWade/minesweeper/blob/4e0850cafda96c14fc70fa98a8dfa1f243ecdacd/.cursorrules",
+        "size": 4.38,
+        "timestamp": "2025-03-19T08:15:38.175Z"
+      }
+    ],
+    [
+      "pasilastbot/ai_training/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/pasilastbot/ai_training/1ec87307d35f8bcc2c5e74712ba592e43dd9dcbc/.cursorrules",
+        "repositoryId": 799841673,
+        "path": "pasilastbot/ai_training/.cursorrules",
+        "ownerName": "pasilastbot",
+        "repositoryName": "ai_training",
+        "htmlUrl": "https://github.com/pasilastbot/ai_training/blob/1ec87307d35f8bcc2c5e74712ba592e43dd9dcbc/.cursorrules",
+        "size": 11.97,
+        "timestamp": "2025-03-19T08:15:39.569Z"
+      }
+    ],
+    [
+      "jonesrussell/gimbal/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/jonesrussell/gimbal/8663ca3a0d21dcd3927d0f9d694ed12b4756d2f3/.cursorrules",
+        "repositoryId": 723553070,
+        "path": "jonesrussell/gimbal/.cursorrules",
+        "ownerName": "jonesrussell",
+        "repositoryName": "gimbal",
+        "htmlUrl": "https://github.com/jonesrussell/gimbal/blob/8663ca3a0d21dcd3927d0f9d694ed12b4756d2f3/.cursorrules",
+        "size": 2.6,
+        "timestamp": "2025-03-19T08:15:44.719Z"
+      }
+    ],
+    [
+      "alextm0/mentoring-app/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/alextm0/mentoring-app/e008d4ed5b8fe171a1c453edeeed0d28a28adefd/.cursorrules",
+        "repositoryId": 897572131,
+        "path": "alextm0/mentoring-app/.cursorrules",
+        "ownerName": "alextm0",
+        "repositoryName": "mentoring-app",
+        "htmlUrl": "https://github.com/alextm0/mentoring-app/blob/e008d4ed5b8fe171a1c453edeeed0d28a28adefd/.cursorrules",
+        "size": 2.3,
+        "timestamp": "2025-03-19T08:15:46.785Z"
+      }
+    ],
+    [
+      "jackalopelabs/bonsai/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/jackalopelabs/bonsai/3de3d2228fc3b94270aa2fc56eb5b5735ad815bf/.cursorrules",
+        "repositoryId": 949198060,
+        "path": "jackalopelabs/bonsai/.cursorrules",
+        "ownerName": "jackalopelabs",
+        "repositoryName": "bonsai",
+        "htmlUrl": "https://github.com/jackalopelabs/bonsai/blob/3de3d2228fc3b94270aa2fc56eb5b5735ad815bf/.cursorrules",
+        "size": 9.6,
+        "timestamp": "2025-03-19T08:15:50.186Z"
       }
     ]
   ]

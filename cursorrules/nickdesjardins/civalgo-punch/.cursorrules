@@ -1,0 +1,154 @@
+
+
+  You are an expert in TypeScript, Node.js, Next.js App Router, React, Supabase, Shadcn UI and Tailwind.
+  
+  Code Style and Structure
+  - Write concise, technical TypeScript code with accurate examples.
+  - Use functional and declarative programming patterns; avoid classes.
+  - Prefer iteration and modularization over code duplication.
+  - Use descriptive variable names with auxiliary verbs (e.g., isLoading, hasError).
+  - Structure files: exported component, subcomponents, helpers, static content, types.
+  
+  Naming Conventions
+  - Use lowercase with dashes for directories (e.g., components/auth-wizard).
+  - Favor named exports for components.
+  
+  TypeScript Usage
+  - Use TypeScript for all code; prefer interfaces over types.
+  - Avoid enums; use maps instead.
+  - Use functional components with TypeScript interfaces.
+  
+  Syntax and Formatting
+  - Use the "function" keyword for pure functions.
+  - Avoid unnecessary curly braces in conditionals; use concise syntax for simple statements.
+  
+  UI and Styling
+  - Use Shadcn UI, and Tailwind for components and styling.
+  - Implement responsive design with Tailwind CSS; use a mobile-first approach.
+  
+  Performance Optimization
+  - Minimize 'use client', 'useEffect', and 'setState'; favor React Server Components (RSC).
+  - Wrap client components in Suspense with fallback.
+  - Use dynamic loading for non-critical components.
+  - Optimize images: use WebP format, include size data, implement lazy loading.
+  
+  Key Conventions
+  - Use 'nuqs' for URL search parameter state management.
+  - Optimize Web Vitals (LCP, CLS, FID).
+  - Limit 'use client':
+    - Favor server components and Next.js SSR.
+    - Use only for Web API access in small components.
+    - Avoid for data fetching or state management.
+  
+  Follow Next.js docs for Data Fetching, Rendering, and Routing.
+  
+The Project:
+Fullstack Web Developer Homework
+Introduction: Shape Up & How We Work
+At Civalgo, we follow the
+Shape Up
+methodology to break down projects into well-defined problems with open-ended solutions. Instead of rigid requirements, we provide pitches that outline the problem, the appetite (time we want to invest), key elements but most of the solution specifics are left open for interpretation.
+For this assignment, we want to see
+how you think and structure your solution
+, not just if it “works.” You’ll need to make decisions about
+data modeling, real-time updates, and user experience
+while keeping scope in check.
+We work with a modern full-stack setup:
+Frontend:
+React, Next.js, TypeScript
+Backend:
+Node.js, GraphQL/REST
+Database:
+PostgreSQL
+Infrastructure:
+Docker
+You
+don’t need to use every part of our stack
+—what matters is a solid, maintainable implementation that solves the problem effectively.
+Fullstack Web Developer Homework 1
+Shape: Worker Check-In System
+1. Problem
+Construction site supervisors need
+real-time visibility
+into which workers are present on-site. Paper logs and manual check-ins create delays, errors, and compliance issues.
+Safety Concern: In an emergency, supervisors need an accurate list of who is present.
+Compliance: Some sites require attendance logs for legal and insurance purposes.
+Operational Needs: Workforce planning depends on knowing who has arrived and left.
+Currently, many sites rely on physical punch-in machines where workers swipe a badge or enter a code at a terminal. While functional, these machines present several challenges:
+Limited Accessibility: Workers must be physically present at the machine, leading to bottlenecks during shift changes.
+Hardware Failures: Malfunctions or connectivity issues can prevent check-ins, causing delays.
+Lack of Real-Time Visibility: Data from punch-in machines is often processed in batches rather than being instantly available.
+Maintenance & Costs: These machines require regular servicing, and replacements can be expensive.
+A software solution would eliminate hardware dependency, provide instant updates, and allow workers to check in from any connected device, enhancing efficiency, accuracy, and flexibility.
+2. Appetite
+This project should be
+completed within 4 hours
+. Given this constraint, we want a
+functional prototype
+that covers the core needs.
+Fullstack Web Developer Homework 2
+3. Proposed Solution
+A
+web-based system
+where:1.
+Workers check in and out when they arrive and leave.2.
+Supervisors see a live dashboard of currently on-site workers.3.
+Check-in/out events are recorded for future reference.
+Core Features
+Check-in / Check-out Mechanism
+Workers enter their name and site ID to check in.
+The system records their timestamp and marks them as on-site.
+When they check out, they are removed from the live list but the event is logged.
+Live Worker Dashboard
+Supervisors can see a list of workers currently checked in.
+The list updates in real-time when a worker checks in or out.
+Historical Check-in / Check-out Page
+Store check-in/check-out events (timestamped) in a database.
+(
+Nice-to-have) Ability to filter per worker, date or site ID.
+Minimal Authentication
+Simple way to differentiate workers from supervisors.
+(
+Nice-to-have) Authentication can be lightweight—not a full user management system.
+4. Rabbit Holes (Where You Could Get Stuck)
+Since we have a
+4-hour appetite
+, we want to avoid spending too much time on unnecessary complexity. Here are areas where you might get stuck:
+Fullstack Web Developer Homework 3
+Over-Engineering Authentication
+A full login system with OAuth, JWT tokens, and role management is not necessary. A basic approach to differentiate workers and supervisors is enough. Avoid building full user registration and login or use external authentication providers unless you really think you have time to.
+Polishing the UI Too Much
+A clean UI is important, but the focus should be on functionality rather than design perfection. Avoid, pixel-perfect styling or unnecessary animations. You can use existing component libraries for your work.
+5. No-Gos (What We Are Explicitly Avoiding)
+To keep scope under control, these features are NOT part of this MVP:
+Mobile App Development – This is a web-based MVP only. No need to build a separate mobile app.
+Multi-Site Management – Assume a worker works on a single construction site at a time. No need to build multi-location support.
+Offline Support – Workers must be online to check in/out. No need to handle local storage or sync mechanisms.
+Complex Permission Systems – No need for role-based access control.
+Hardware Integration – No RFID scanners, GPS tracking, or physical turnstiles.
+Fullstack Web Developer Homework 4
+Where to Start ?
+Your project, your decisions
+We haven’t prescribed every detail—this is intentional. We want to see your approach to:
+Data modeling → How should check-in/check-out events be structured?
+Real-time updates → What method would you use?
+Authentication method → What’s the simplest way to differentiate worker vs. supervisor views given the constraints?
+UI/UX decisions → How should the UI handle potential errors ?
+The goal isn’t to implement everything—but to think through trade-offs and focus on the essentials.
+Deliverables
+GitHub Repository
+– Share a link to your project.
+README
+– Briefly explain:
+How to run the project.
+Code and design decisions you made.
+Features you left out and why.
+Features that could be added in future iterations (outside of the No-Gos).
+A Short Video
+– Walk through your implementation (~5 min).
+Final Thoughts
+The goal of this assignment is to see
+how you approach the problem, make decisions, and structure your code
+, not to build a production-ready system.
+We are more interested in a clear, maintainable approach than in seeing every possible feature implemented. Focus on the core functionality, and if time allows, feel free to tackle some nice-to-haves. Looking forward to your solution.
+Fullstack Web Developer Homework 5
