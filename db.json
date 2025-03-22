@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 1106,
+  "size": 1125,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -15484,6 +15484,272 @@
         "htmlUrl": "https://github.com/jackalopelabs/bonsai/blob/3de3d2228fc3b94270aa2fc56eb5b5735ad815bf/.cursorrules",
         "size": 9.6,
         "timestamp": "2025-03-19T08:15:50.186Z"
+      }
+    ],
+    [
+      "lolinux2002/dressmeup.ai/.cursorrules.txt",
+      {
+        "name": ".cursorrules.txt",
+        "downloadUrl": "https://raw.githubusercontent.com/lolinux2002/dressmeup.ai/7e02e84c5e14a7b4dded71251fa23df125d30b2c/.cursorrules.txt",
+        "repositoryId": 949136845,
+        "path": "lolinux2002/dressmeup.ai/.cursorrules.txt",
+        "ownerName": "lolinux2002",
+        "repositoryName": "dressmeup.ai",
+        "htmlUrl": "https://github.com/lolinux2002/dressmeup.ai/blob/7e02e84c5e14a7b4dded71251fa23df125d30b2c/.cursorrules.txt",
+        "size": 4.5,
+        "timestamp": "2025-03-22T08:13:05.160Z"
+      }
+    ],
+    [
+      "Pataco80/next-radix-shadcn-theme/.cursorrules.md",
+      {
+        "name": ".cursorrules.md",
+        "downloadUrl": "https://raw.githubusercontent.com/Pataco80/next-radix-shadcn-theme/3aba54c4ed8be56dfaca7beb680d279c9f183128/.cursorrules.md",
+        "repositoryId": 942865083,
+        "path": "Pataco80/next-radix-shadcn-theme/.cursorrules.md",
+        "ownerName": "Pataco80",
+        "repositoryName": "next-radix-shadcn-theme",
+        "htmlUrl": "https://github.com/Pataco80/next-radix-shadcn-theme/blob/3aba54c4ed8be56dfaca7beb680d279c9f183128/.cursorrules.md",
+        "size": 2.12,
+        "timestamp": "2025-03-22T08:13:05.430Z"
+      }
+    ],
+    [
+      "jburchel/mobilize/.cursorrules.md",
+      {
+        "name": ".cursorrules.md",
+        "downloadUrl": "https://raw.githubusercontent.com/jburchel/mobilize/b81e0449e76c40650ca87136054363648af27b2d/.cursorrules.md",
+        "repositoryId": 950778360,
+        "path": "jburchel/mobilize/.cursorrules.md",
+        "ownerName": "jburchel",
+        "repositoryName": "mobilize",
+        "htmlUrl": "https://github.com/jburchel/mobilize/blob/b81e0449e76c40650ca87136054363648af27b2d/.cursorrules.md",
+        "size": 1.29,
+        "timestamp": "2025-03-22T08:13:05.537Z"
+      }
+    ],
+    [
+      "agentjido/jido_ai/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/agentjido/jido_ai/871c3f609160c5e4bad19eba384f201f153f55a5/.cursorrules",
+        "repositoryId": 904841321,
+        "path": "agentjido/jido_ai/.cursorrules",
+        "ownerName": "agentjido",
+        "repositoryName": "jido_ai",
+        "htmlUrl": "https://github.com/agentjido/jido_ai/blob/871c3f609160c5e4bad19eba384f201f153f55a5/.cursorrules",
+        "size": 10.53,
+        "timestamp": "2025-03-22T08:13:06.973Z"
+      }
+    ],
+    [
+      "sam-goodwin/alchemy/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/sam-goodwin/alchemy/175889fed6efeafdd414146dad17feed29d08eb6/.cursorrules",
+        "repositoryId": 917974798,
+        "path": "sam-goodwin/alchemy/.cursorrules",
+        "ownerName": "sam-goodwin",
+        "repositoryName": "alchemy",
+        "htmlUrl": "https://github.com/sam-goodwin/alchemy/blob/175889fed6efeafdd414146dad17feed29d08eb6/.cursorrules",
+        "size": 12.69,
+        "timestamp": "2025-03-22T08:13:07.069Z"
+      }
+    ],
+    [
+      "utensils/essex/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/utensils/essex/8b1f91d4cf4f369c439bd60362a11ff9a4fd7ed6/.cursorrules",
+        "repositoryId": 130542471,
+        "path": "utensils/essex/.cursorrules",
+        "ownerName": "utensils",
+        "repositoryName": "essex",
+        "htmlUrl": "https://github.com/utensils/essex/blob/8b1f91d4cf4f369c439bd60362a11ff9a4fd7ed6/.cursorrules",
+        "size": 1.04,
+        "timestamp": "2025-03-22T08:13:07.407Z"
+      }
+    ],
+    [
+      "tonionagauzzi/TrafficLight/android.cursorrules",
+      {
+        "name": "android.cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/tonionagauzzi/TrafficLight/c7fac6f078d834ca5acb07afa5024ea32e69455f/android.cursorrules",
+        "repositoryId": 951316556,
+        "path": "tonionagauzzi/TrafficLight/android.cursorrules",
+        "ownerName": "tonionagauzzi",
+        "repositoryName": "TrafficLight",
+        "htmlUrl": "https://github.com/tonionagauzzi/TrafficLight/blob/c7fac6f078d834ca5acb07afa5024ea32e69455f/android.cursorrules",
+        "size": 4.27,
+        "timestamp": "2025-03-22T08:13:09.883Z"
+      }
+    ],
+    [
+      "codeguslabs/thonlabs-services/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/codeguslabs/thonlabs-services/aa3eb13860740a0b24c468f5a9cbe9123a920997/.cursorrules",
+        "repositoryId": 746402852,
+        "path": "codeguslabs/thonlabs-services/.cursorrules",
+        "ownerName": "codeguslabs",
+        "repositoryName": "thonlabs-services",
+        "htmlUrl": "https://github.com/codeguslabs/thonlabs-services/blob/aa3eb13860740a0b24c468f5a9cbe9123a920997/.cursorrules",
+        "size": 3.37,
+        "timestamp": "2025-03-22T08:13:12.077Z"
+      }
+    ],
+    [
+      "alecpos/sentimentModel/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/alecpos/sentimentModel/f869431c8fa7dc3d553091036388b6824b12a65c/.cursorrules",
+        "repositoryId": 951367608,
+        "path": "alecpos/sentimentModel/.cursorrules",
+        "ownerName": "alecpos",
+        "repositoryName": "sentimentModel",
+        "htmlUrl": "https://github.com/alecpos/sentimentModel/blob/f869431c8fa7dc3d553091036388b6824b12a65c/.cursorrules",
+        "size": 5.43,
+        "timestamp": "2025-03-22T08:13:13.540Z"
+      }
+    ],
+    [
+      "YongJiBus/YongJiBus-iOS/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/YongJiBus/YongJiBus-iOS/bbfe6088fbf70c3e1d46bd5a89520dc6720a62bd/.cursorrules",
+        "repositoryId": 768434428,
+        "path": "YongJiBus/YongJiBus-iOS/.cursorrules",
+        "ownerName": "YongJiBus",
+        "repositoryName": "YongJiBus-iOS",
+        "htmlUrl": "https://github.com/YongJiBus/YongJiBus-iOS/blob/bbfe6088fbf70c3e1d46bd5a89520dc6720a62bd/.cursorrules",
+        "size": 2.31,
+        "timestamp": "2025-03-22T08:13:16.305Z"
+      }
+    ],
+    [
+      "kanishkdan/tron-game/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/kanishkdan/tron-game/e77cf22b94d4686d600bf610254985e9278a20a2/.cursorrules",
+        "repositoryId": 950241911,
+        "path": "kanishkdan/tron-game/.cursorrules",
+        "ownerName": "kanishkdan",
+        "repositoryName": "tron-game",
+        "htmlUrl": "https://github.com/kanishkdan/tron-game/blob/e77cf22b94d4686d600bf610254985e9278a20a2/.cursorrules",
+        "size": 2.55,
+        "timestamp": "2025-03-22T08:13:17.452Z"
+      }
+    ],
+    [
+      "ledihildawan/learn-programming-languages-and-frameworks/wemake-main/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ledihildawan/learn-programming-languages-and-frameworks/7bc48f6734a80a788b6cb4ee7226a848ab6c71b5/wemake-main/.cursorrules",
+        "repositoryId": 190373873,
+        "path": "ledihildawan/learn-programming-languages-and-frameworks/wemake-main/.cursorrules",
+        "ownerName": "ledihildawan",
+        "repositoryName": "learn-programming-languages-and-frameworks",
+        "htmlUrl": "https://github.com/ledihildawan/learn-programming-languages-and-frameworks/blob/7bc48f6734a80a788b6cb4ee7226a848ab6c71b5/wemake-main/.cursorrules",
+        "size": 2.23,
+        "timestamp": "2025-03-22T08:13:18.146Z"
+      }
+    ],
+    [
+      "nicodoggie/bastion-falls/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/nicodoggie/bastion-falls/1165ecebc52061882a1ed0193de5d858e486541f/.cursorrules",
+        "repositoryId": 641295636,
+        "path": "nicodoggie/bastion-falls/.cursorrules",
+        "ownerName": "nicodoggie",
+        "repositoryName": "bastion-falls",
+        "htmlUrl": "https://github.com/nicodoggie/bastion-falls/blob/1165ecebc52061882a1ed0193de5d858e486541f/.cursorrules",
+        "size": 1.28,
+        "timestamp": "2025-03-22T08:13:19.249Z"
+      }
+    ],
+    [
+      "1PlJi/AlN5cVHY/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/1PlJi/AlN5cVHY/06a53efe1a9e4bfc8b42df44c11000b56ca9d705/.cursorrules",
+        "repositoryId": 890280991,
+        "path": "1PlJi/AlN5cVHY/.cursorrules",
+        "ownerName": "1PlJi",
+        "repositoryName": "AlN5cVHY",
+        "htmlUrl": "https://github.com/1PlJi/AlN5cVHY/blob/06a53efe1a9e4bfc8b42df44c11000b56ca9d705/.cursorrules",
+        "size": 2.34,
+        "timestamp": "2025-03-22T08:13:19.341Z"
+      }
+    ],
+    [
+      "IlyaGulya/crowdin-cli-standalone/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/IlyaGulya/crowdin-cli-standalone/447a01b2724b4183902a31d239fb7161d380155b/.cursorrules",
+        "repositoryId": 940476633,
+        "path": "IlyaGulya/crowdin-cli-standalone/.cursorrules",
+        "ownerName": "IlyaGulya",
+        "repositoryName": "crowdin-cli-standalone",
+        "htmlUrl": "https://github.com/IlyaGulya/crowdin-cli-standalone/blob/447a01b2724b4183902a31d239fb7161d380155b/.cursorrules",
+        "size": 4.49,
+        "timestamp": "2025-03-22T08:13:19.795Z"
+      }
+    ],
+    [
+      "z2721110/rapidocr-tool/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/z2721110/rapidocr-tool/7f9ec9012e21661dcc07c99ab1368f6389d5d004/.cursorrules",
+        "repositoryId": 937923892,
+        "path": "z2721110/rapidocr-tool/.cursorrules",
+        "ownerName": "z2721110",
+        "repositoryName": "rapidocr-tool",
+        "htmlUrl": "https://github.com/z2721110/rapidocr-tool/blob/7f9ec9012e21661dcc07c99ab1368f6389d5d004/.cursorrules",
+        "size": 7.41,
+        "timestamp": "2025-03-22T08:13:21.382Z"
+      }
+    ],
+    [
+      "Hojunwei/picture-test/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Hojunwei/picture-test/161beecb0a7f613bfc00f1e3afd18c09bea566fb/.cursorrules",
+        "repositoryId": 899594249,
+        "path": "Hojunwei/picture-test/.cursorrules",
+        "ownerName": "Hojunwei",
+        "repositoryName": "picture-test",
+        "htmlUrl": "https://github.com/Hojunwei/picture-test/blob/161beecb0a7f613bfc00f1e3afd18c09bea566fb/.cursorrules",
+        "size": 2.36,
+        "timestamp": "2025-03-22T08:13:21.497Z"
+      }
+    ],
+    [
+      "rvohealth/healthlinkportal-app/backend/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/rvohealth/healthlinkportal-app/32b5cbddf351d5efb1f3f977b219ce7f76dc671d/backend/.cursorrules",
+        "repositoryId": 928465246,
+        "path": "rvohealth/healthlinkportal-app/backend/.cursorrules",
+        "ownerName": "rvohealth",
+        "repositoryName": "healthlinkportal-app",
+        "htmlUrl": "https://github.com/rvohealth/healthlinkportal-app/blob/32b5cbddf351d5efb1f3f977b219ce7f76dc671d/backend/.cursorrules",
+        "size": 4.09,
+        "timestamp": "2025-03-22T08:13:22.154Z"
+      }
+    ],
+    [
+      "chengazhen/awesome-cursorrules/docs/rules/next-type-llm/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/chengazhen/awesome-cursorrules/699cac8bba3c6c4b23a95d50838a0b469f01ef09/docs/rules/next-type-llm/.cursorrules",
+        "repositoryId": 921030179,
+        "path": "chengazhen/awesome-cursorrules/docs/rules/next-type-llm/.cursorrules",
+        "ownerName": "chengazhen",
+        "repositoryName": "awesome-cursorrules",
+        "htmlUrl": "https://github.com/chengazhen/awesome-cursorrules/blob/699cac8bba3c6c4b23a95d50838a0b469f01ef09/docs/rules/next-type-llm/.cursorrules",
+        "size": 2.55,
+        "timestamp": "2025-03-22T08:13:23.226Z"
       }
     ]
   ]
