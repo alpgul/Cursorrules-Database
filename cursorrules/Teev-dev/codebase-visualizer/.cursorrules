@@ -1,0 +1,68 @@
+# Cursor IDE Rules for Codebase Visualizer Project
+
+## General Guidelines
+- After every significant code change, run `npm run update-cursor` to update the cursor-updates.md file
+- Always test your changes locally before committing
+- Use the built-in AI assistant for code reviews before finalizing changes
+
+## Code Style & Quality
+- Follow the ESLint configuration for code style
+- Run linting before committing: `npm run lint`
+- Fix all warnings and errors before submitting code
+- Keep functions under 30 lines of code where possible
+- Use meaningful variable and function names
+
+## Code Navigation & Efficiency
+- Use `Ctrl+P` (Cmd+P on Mac) for quick file navigation
+- Use `Ctrl+Shift+F` (Cmd+Shift+F on Mac) for project-wide search
+- Use `Alt+Click` (Option+Click on Mac) to navigate to definitions
+- Create useful code snippets for repetitive patterns
+- Use `// TODO:` comments for work in progress, but resolve before merging
+
+## Version Control
+- Create focused, single-purpose commits
+- Write descriptive commit messages
+- Always pull latest changes before starting work
+- Create feature branches for new functionality
+
+## TypeScript Best Practices
+- Always define proper types for functions, variables, and components
+- Avoid using `any` type; use proper type definitions
+- Use interfaces for object shapes
+- Utilize generics for reusable components
+
+## React Component Guidelines
+- Keep components focused on a single responsibility
+- Use functional components with hooks
+- Extract common logic into custom hooks
+- Implement proper error boundaries
+- Use memo for performance optimization when appropriate
+
+## Documentation Updates
+- Update relevant documentation when changing functionality
+- Document all exposed APIs and components
+- After significant changes, run: `npm run update-docs`
+
+## AI Assistant Usage
+- Use AI to suggest implementation strategies, not just to generate code
+- Review AI-generated code carefully before accepting
+- Ask the AI to explain any code you don't understand
+- Use AI for help with debugging and optimization
+
+## Testing
+- Write tests for all new functionality
+- Run tests before submitting code: `npm test`
+- Aim for high test coverage on critical path code
+- Include both unit and integration tests
+
+## Performance
+- Be mindful of bundle size when adding dependencies
+- Use performance profiling tools before/after significant changes
+- Implement lazy loading where appropriate
+- Optimize expensive operations
+
+## Cursor Updates
+- Run the update script after completing a major feature: `npm run update-cursor`
+- The script will update cursor-updates.md with the recent changes
+- Review the updates file periodically to track project progress
+- Keep changes organized by feature or component 
