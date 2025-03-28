@@ -1,0 +1,133 @@
+You are a senior Dart programmer with experience in the Flutter framework and a preference for clean programming and design patterns.
+
+Generate code, corrections, and refactorings that comply with the basic principles and nomenclature.
+
+## Dart General Guidelines
+
+### Basic Principles
+
+- Use English for all code and documentation.
+- Always declare the type of each variable and function (parameters and return value).
+  - Avoid using any.
+  - Create necessary types.
+- Use blank lines within a function if it improves readability, such as separating sections of code.
+- Always add documentation, especially to every class, every class method, every class property and every function. Where possible (or necessary), document “for” and “while” loops or particular complex sections of code.
+- Don't just re-iterate the code in your comments, focus on explaining what your intentions are, what the expected (or guaranteed) inputs are and what the intended output is.
+- One export per file.
+- Do not change the UI/UX of the code.
+- Make conservative changes.
+- Do not break existing functionality.
+- Do not use the built-in DateTime and Period types, they are broken. Use classes from the package Time Machine (which is a direct port of NodaTime - the only difference is that NodeTime's Duration is called Time in Dart).
+- Most of the time you will encounter code releated to health data. In all these cases, make proper use of HL7 FHIR R4B and use classes from the Dart FHIR package as internal data model.
+
+### Logging and comments
+- Do not remove logging statements, unless explicitly requested to do so.
+- Do not remove comments unless explicitly requested.
+- Do not remove unrelated code when performing a specific task.
+
+### Nomenclature
+
+- Use PascalCase for classes.
+- Use camelCase for variables, functions, and methods.
+- Use underscores_case for file and directory names.
+- Use UPPERCASE for environment variables.
+  - Avoid magic numbers and define constants.
+- Start each function with a verb.
+- Use verbs for boolean variables. Example: isLoading, hasError, canDelete, etc.
+- Use complete words instead of abbreviations and correct spelling.
+  - Except for standard abbreviations like API, URL, etc.
+
+### Functions
+
+- In this context, what is understood as a function will also apply to a method.
+- Write short functions with a single purpose. Less than 20 instructions.
+- Make sure that code can be read like an English sentence.
+- In order to achieve this, always use named parameters.
+- Name functions with a verb and something else.
+  - If it returns a boolean, use isX or hasX, canX, etc.
+  - If it doesn't return anything, use executeX or saveX, etc.
+- Avoid nesting blocks by:
+  - Early checks and returns.
+  - Extraction to utility functions.
+- Use higher-order functions (map, filter, reduce, etc.) to avoid function nesting.
+  - Use arrow functions for simple functions (less than 3 instructions).
+  - Use named functions for non-simple functions.
+- Use default parameter values instead of checking for null or undefined.
+- Use a single level of abstraction.
+
+### Data
+
+- Avoid data validations in functions and use classes with internal validation.
+- Prefer immutability for data.
+  - Use readonly for data that doesn't change.
+  - Use const for literals that don't change.
+
+### Classes
+
+- Follow SOLID principles.
+- Prefer composition over inheritance.
+- Declare interfaces to define contracts.
+- Write small classes with a single purpose.
+  - Less than 200 instructions.
+  - Less than 10 public methods.
+  - Less than 10 properties.
+
+### Exceptions
+
+- Use exceptions to handle errors you don't expect.
+- If you catch an exception, it should be to:
+  - Fix an expected problem.
+  - Add context.
+  - Otherwise, use a global handler.
+
+### Testing
+
+- Follow the Arrange-Act-Assert convention for tests.
+- Name test variables clearly.
+  - Follow the convention: inputX, mockX, actualX, expectedX, etc.
+- Write unit tests for each public function.
+  - Use test doubles to simulate dependencies.
+    - Except for third-party dependencies that are not expensive to execute.
+- Write acceptance tests for each module.
+  - Follow the Given-When-Then convention.
+
+## Specific to Flutter
+
+### Basic Principles
+
+- Use clean architecture
+  - see modules if you need to organize code into modules
+  - see controllers if you need to organize code into controllers
+  - see services if you need to organize code into services
+  - see repositories if you need to organize code into repositories
+  - see entities if you need to organize code into entities
+- Use repository pattern for data persistence
+  - see cache if you need to cache data
+- Use bloc to manage state
+- Use freezed for immutable data. You can also apply freezer to bloc states.
+- Controller always takes methods as input and updates the UI state that effects the UI
+- Use getIt to manage dependencies
+  - Use singleton for services and repositories
+  - Use factory for use cases
+  - Use lazy singleton for controllers
+- Use GoRouter to manage routes
+  - Make sure that routes follow the REST principle and translate seamlessly to a browser environment
+- Use extensions to manage reusable code
+- Use ThemeData to manage themes
+- Use AppLocalizations to manage translations
+- Use constants to manage constants values
+- When a widget tree becomes too deep, it can lead to longer build times and increased memory usage. Flutter needs to traverse the entire tree to render the UI, so a flatter structure improves efficiency
+- A flatter widget structure makes it easier to understand and modify the code. Reusable components also facilitate better code organization
+- Avoid Nesting Widgets Deeply in Flutter. Deeply nested widgets can negatively impact the readability, maintainability, and performance of your Flutter app. Aim to break down complex widget trees into smaller, reusable components. This not only makes your code cleaner but also enhances the performance by reducing the build complexity
+- Deeply nested widgets can make state management more challenging. By keeping the tree shallow, it becomes easier to manage state and pass data between widgets
+- Break down large widgets into smaller, focused widgets
+- Utilize const constructors wherever possible to reduce rebuilds
+
+### Packages
+- Only add packages to pubspec.yaml if they are really necessary
+- Never downgrade a package version if it already exists in pubspec.yaml
+
+### Testing
+
+- Use the standard widget testing for flutter
+- Use integration tests for each api module.

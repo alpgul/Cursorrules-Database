@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 1144,
+  "size": 1159,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -16016,6 +16016,216 @@
         "htmlUrl": "https://github.com/paulpham157/paul-s-cursor-rules/blob/3e4ea96c16aafcb073027172d521dcea4e404fee/framework_rules/rules/angular-typescript-cursorrules-prompt-file/.cursorrules",
         "size": 1.31,
         "timestamp": "2025-03-25T08:16:10.135Z"
+      }
+    ],
+    [
+      "gpt-cmdr/ras-commander/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/gpt-cmdr/ras-commander/0e8d2adef855a3baffff298a746d35eda998a0bb/.cursorrules",
+        "repositoryId": 853014710,
+        "path": "gpt-cmdr/ras-commander/.cursorrules",
+        "ownerName": "gpt-cmdr",
+        "repositoryName": "ras-commander",
+        "htmlUrl": "https://github.com/gpt-cmdr/ras-commander/blob/0e8d2adef855a3baffff298a746d35eda998a0bb/.cursorrules",
+        "size": 17.21,
+        "timestamp": "2025-03-28T08:15:53.531Z"
+      }
+    ],
+    [
+      "mgrossmann/libmyrtx/.cursorrules.md",
+      {
+        "name": ".cursorrules.md",
+        "downloadUrl": "https://raw.githubusercontent.com/mgrossmann/libmyrtx/0f675f0b3a37929dbdc6f5655fef5bdf2400514e/.cursorrules.md",
+        "repositoryId": 954057474,
+        "path": "mgrossmann/libmyrtx/.cursorrules.md",
+        "ownerName": "mgrossmann",
+        "repositoryName": "libmyrtx",
+        "htmlUrl": "https://github.com/mgrossmann/libmyrtx/blob/0f675f0b3a37929dbdc6f5655fef5bdf2400514e/.cursorrules.md",
+        "size": 1.24,
+        "timestamp": "2025-03-28T08:15:55.888Z"
+      }
+    ],
+    [
+      "evoleen/cursorrules/flutter_dart.cursorrules",
+      {
+        "name": "flutter_dart.cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/evoleen/cursorrules/6506efeae0d07304c4cfaa24ae125d9a5e5ec272/flutter_dart.cursorrules",
+        "repositoryId": 934207856,
+        "path": "evoleen/cursorrules/flutter_dart.cursorrules",
+        "ownerName": "evoleen",
+        "repositoryName": "cursorrules",
+        "htmlUrl": "https://github.com/evoleen/cursorrules/blob/6506efeae0d07304c4cfaa24ae125d9a5e5ec272/flutter_dart.cursorrules",
+        "size": 6.36,
+        "timestamp": "2025-03-28T08:15:56.104Z"
+      }
+    ],
+    [
+      "shuaijiumei/openrca_leadboard/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/shuaijiumei/openrca_leadboard/50c6a99ce14b49f6aa89a84221953a0f34090e69/.cursorrules",
+        "repositoryId": 955338098,
+        "path": "shuaijiumei/openrca_leadboard/.cursorrules",
+        "ownerName": "shuaijiumei",
+        "repositoryName": "openrca_leadboard",
+        "htmlUrl": "https://github.com/shuaijiumei/openrca_leadboard/blob/50c6a99ce14b49f6aa89a84221953a0f34090e69/.cursorrules",
+        "size": 3.37,
+        "timestamp": "2025-03-28T08:15:59.966Z"
+      }
+    ],
+    [
+      "sweetandsourkiss/wemake/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/sweetandsourkiss/wemake/6f4eecd275feda9fd684df7d7625ff124b033ad6/.cursorrules",
+        "repositoryId": 936112848,
+        "path": "sweetandsourkiss/wemake/.cursorrules",
+        "ownerName": "sweetandsourkiss",
+        "repositoryName": "wemake",
+        "htmlUrl": "https://github.com/sweetandsourkiss/wemake/blob/6f4eecd275feda9fd684df7d7625ff124b033ad6/.cursorrules",
+        "size": 2.18,
+        "timestamp": "2025-03-28T08:16:00.388Z"
+      }
+    ],
+    [
+      "wojiangkuanglong/react-fresh-starter/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/wojiangkuanglong/react-fresh-starter/82dc44dfeb6cf058204251484c60912a7b4f358a/.cursorrules",
+        "repositoryId": 751145601,
+        "path": "wojiangkuanglong/react-fresh-starter/.cursorrules",
+        "ownerName": "wojiangkuanglong",
+        "repositoryName": "react-fresh-starter",
+        "htmlUrl": "https://github.com/wojiangkuanglong/react-fresh-starter/blob/82dc44dfeb6cf058204251484c60912a7b4f358a/.cursorrules",
+        "size": 2.17,
+        "timestamp": "2025-03-28T08:16:01.894Z"
+      }
+    ],
+    [
+      "yuheng0330/windsurf-project/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/yuheng0330/windsurf-project/195eab3c6bbc0f3737ab815497f6ce9da6e6e60e/.cursorrules",
+        "repositoryId": 955799783,
+        "path": "yuheng0330/windsurf-project/.cursorrules",
+        "ownerName": "yuheng0330",
+        "repositoryName": "windsurf-project",
+        "htmlUrl": "https://github.com/yuheng0330/windsurf-project/blob/195eab3c6bbc0f3737ab815497f6ce9da6e6e60e/.cursorrules",
+        "size": 1.23,
+        "timestamp": "2025-03-28T08:16:02.538Z"
+      }
+    ],
+    [
+      "adexltd/mcp-google-suite/.cursor/rules/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/adexltd/mcp-google-suite/5f8ac78bbf16b9a9b1eb766f512d49cd320b857c/.cursor/rules/.cursorrules",
+        "repositoryId": 954425065,
+        "path": "adexltd/mcp-google-suite/.cursor/rules/.cursorrules",
+        "ownerName": "adexltd",
+        "repositoryName": "mcp-google-suite",
+        "htmlUrl": "https://github.com/adexltd/mcp-google-suite/blob/5f8ac78bbf16b9a9b1eb766f512d49cd320b857c/.cursor/rules/.cursorrules",
+        "size": 9.47,
+        "timestamp": "2025-03-28T08:16:02.739Z"
+      }
+    ],
+    [
+      "SlyyCooper/cursorrules-architect/tests/tests_input/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/SlyyCooper/cursorrules-architect/1b8ad985d2fd1b380194e94aef663c259e913daf/tests/tests_input/.cursorrules",
+        "repositoryId": 896599737,
+        "path": "SlyyCooper/cursorrules-architect/tests/tests_input/.cursorrules",
+        "ownerName": "SlyyCooper",
+        "repositoryName": "cursorrules-architect",
+        "htmlUrl": "https://github.com/SlyyCooper/cursorrules-architect/blob/1b8ad985d2fd1b380194e94aef663c259e913daf/tests/tests_input/.cursorrules",
+        "size": 15.13,
+        "timestamp": "2025-03-28T08:16:03.380Z"
+      }
+    ],
+    [
+      "feelsuegood/imake/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/feelsuegood/imake/b8b0af48a0f00ece65a574d553504a9f15716d1d/.cursorrules",
+        "repositoryId": 955731626,
+        "path": "feelsuegood/imake/.cursorrules",
+        "ownerName": "feelsuegood",
+        "repositoryName": "imake",
+        "htmlUrl": "https://github.com/feelsuegood/imake/blob/b8b0af48a0f00ece65a574d553504a9f15716d1d/.cursorrules",
+        "size": 2.18,
+        "timestamp": "2025-03-28T08:16:04.276Z"
+      }
+    ],
+    [
+      "joshua-rdrgz/portfolio/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/joshua-rdrgz/portfolio/a08d5359aeee1ac89a05639a618bcf05d189d315/.cursorrules",
+        "repositoryId": 868352134,
+        "path": "joshua-rdrgz/portfolio/.cursorrules",
+        "ownerName": "joshua-rdrgz",
+        "repositoryName": "portfolio",
+        "htmlUrl": "https://github.com/joshua-rdrgz/portfolio/blob/a08d5359aeee1ac89a05639a618bcf05d189d315/.cursorrules",
+        "size": 2.7,
+        "timestamp": "2025-03-28T08:16:06.384Z"
+      }
+    ],
+    [
+      "rayman546/davinci3-wiki/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/rayman546/davinci3-wiki/4e738b78f64b34c415c5f5a828ead8160664c254/.cursorrules",
+        "repositoryId": 946920175,
+        "path": "rayman546/davinci3-wiki/.cursorrules",
+        "ownerName": "rayman546",
+        "repositoryName": "davinci3-wiki",
+        "htmlUrl": "https://github.com/rayman546/davinci3-wiki/blob/4e738b78f64b34c415c5f5a828ead8160664c254/.cursorrules",
+        "size": 19.74,
+        "timestamp": "2025-03-28T08:16:07.617Z"
+      }
+    ],
+    [
+      "chipnxv/midday-main/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/chipnxv/midday-main/72bd375c5c1fa1e1c5425151ddc4c154cc2f824c/.cursorrules",
+        "repositoryId": 943270702,
+        "path": "chipnxv/midday-main/.cursorrules",
+        "ownerName": "chipnxv",
+        "repositoryName": "midday-main",
+        "htmlUrl": "https://github.com/chipnxv/midday-main/blob/72bd375c5c1fa1e1c5425151ddc4c154cc2f824c/.cursorrules",
+        "size": 3.48,
+        "timestamp": "2025-03-28T08:16:09.827Z"
+      }
+    ],
+    [
+      "SlyyCooper/cursorrules-architect/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/SlyyCooper/cursorrules-architect/1b8ad985d2fd1b380194e94aef663c259e913daf/.cursorrules",
+        "repositoryId": 896599737,
+        "path": "SlyyCooper/cursorrules-architect/.cursorrules",
+        "ownerName": "SlyyCooper",
+        "repositoryName": "cursorrules-architect",
+        "htmlUrl": "https://github.com/SlyyCooper/cursorrules-architect/blob/1b8ad985d2fd1b380194e94aef663c259e913daf/.cursorrules",
+        "size": 10.1,
+        "timestamp": "2025-03-28T08:16:10.687Z"
+      }
+    ],
+    [
+      "chenweichiang/AI-Tools-ThreadsPoster/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/chenweichiang/AI-Tools-ThreadsPoster/8010f47bcf3ae98c32cb363624c8cdc8f5dcfa31/.cursorrules",
+        "repositoryId": 951946817,
+        "path": "chenweichiang/AI-Tools-ThreadsPoster/.cursorrules",
+        "ownerName": "chenweichiang",
+        "repositoryName": "AI-Tools-ThreadsPoster",
+        "htmlUrl": "https://github.com/chenweichiang/AI-Tools-ThreadsPoster/blob/8010f47bcf3ae98c32cb363624c8cdc8f5dcfa31/.cursorrules",
+        "size": 7.41,
+        "timestamp": "2025-03-28T08:16:14.353Z"
       }
     ]
   ]
