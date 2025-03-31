@@ -1,0 +1,121 @@
+# Next Gen Project - Cursor Rules Configuration
+# This file defines safe boundaries for AI operations
+
+# Project Information
+project_type: "flutter"
+architecture: "very_good_core"
+state_management: ["bloc", "getx"]
+backend: "firebase"
+
+# Protected Paths (Never Auto-Modify)
+protected_paths:
+  - "pubspec.yaml"
+  - "pubspec.lock"
+  - ".dart_tool/"
+  - "android/"
+  - "ios/"
+  - "macos/"
+  - "windows/"
+  - "web/"
+  - ".github/"
+  - "firebase.json"
+  - "*.rules"
+  - "*.indexes.json"
+  - ".firebaserc"
+  - "analysis_options.yaml"
+  - "l10n.yaml"
+  - "lib/firebase_options.dart"
+  - "lib/generated/"
+  - "lib/l10n/"
+
+# Auto-Run Configuration
+auto_run:
+  allowed_operations:
+    - "Format Dart code"
+    - "Fix linter issues"
+    - "Add documentation comments"
+    - "Create new Dart files in lib/"
+    - "Extract widgets to reduce nesting"
+    - "Implement error handling"
+    - "Add const constructors"
+    - "Create unit tests"
+
+  requires_confirmation:
+    - "File deletion or renaming"
+    - "Firebase configuration changes"
+    - "Package version updates"
+    - "Large refactoring operations"
+    - "Database schema changes"
+    - "Security rule modifications"
+    - "Test configuration changes"
+    - "State management pattern changes"
+
+  never_allowed:
+    - "Modify generated files"
+    - "Change version numbers"
+    - "Edit platform-specific code"
+    - "Modify Firebase options"
+    - "Change package dependencies"
+    - "Edit CI/CD workflows"
+    - "Modify git configuration"
+    - "Change security rules"
+
+# Command Configuration
+commands:
+  allowlist:
+    - "format"
+    - "analyze"
+    - "create_file"
+    - "read_file"
+    - "codebase_search"
+    - "grep_search"
+
+  denylist:
+    - "delete_file"
+    - "rm"
+    - "git"
+    - "flutter pub"
+    - "firebase"
+    - "flutterfire"
+
+# File Structure Rules
+structure:
+  lib:
+    - "core/"
+    - "features/"
+    - "shared/"
+    - "utils/"
+    - "models/"
+    - "services/"
+    - "widgets/"
+
+# Code Style Rules
+style:
+  dart:
+    - "Use const constructors where possible"
+    - "Break down widgets over 100 lines"
+    - "Implement proper error handling"
+    - "Add documentation for public APIs"
+    - "Follow very_good_analysis rules"
+
+  firebase:
+    - "Use service layer for Firebase operations"
+    - "Implement proper error handling"
+    - "Never expose Firebase instances directly"
+    - "Use proper security rules"
+
+# Safety Settings
+safety:
+  delete_protection: true
+  mcp_tools_protection: true
+  auto_apply_outside_context: false
+  large_context: false
+
+# Documentation Requirements
+documentation:
+  required_for:
+    - "Public APIs"
+    - "Complex widgets"
+    - "Service methods"
+    - "State management classes"
+    - "Firebase operations"

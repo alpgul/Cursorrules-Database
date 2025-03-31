@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 1159,
+  "size": 1170,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -16226,6 +16226,160 @@
         "htmlUrl": "https://github.com/chenweichiang/AI-Tools-ThreadsPoster/blob/8010f47bcf3ae98c32cb363624c8cdc8f5dcfa31/.cursorrules",
         "size": 7.41,
         "timestamp": "2025-03-28T08:16:14.353Z"
+      }
+    ],
+    [
+      "comphy-lab/Viscoelastic3D/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/comphy-lab/Viscoelastic3D/e90e3f93768b8bd6940659984a07e05ebaf04b20/.cursorrules",
+        "repositoryId": 874384071,
+        "path": "comphy-lab/Viscoelastic3D/.cursorrules",
+        "ownerName": "comphy-lab",
+        "repositoryName": "Viscoelastic3D",
+        "htmlUrl": "https://github.com/comphy-lab/Viscoelastic3D/blob/e90e3f93768b8bd6940659984a07e05ebaf04b20/.cursorrules",
+        "size": 2.3,
+        "timestamp": "2025-03-31T08:16:42.948Z"
+      }
+    ],
+    [
+      "yeahydq/infoshareApp/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/yeahydq/infoshareApp/5264f8f10049803470bd8eb2fd2ac2fe29d4548b/.cursorrules",
+        "repositoryId": 948040249,
+        "path": "yeahydq/infoshareApp/.cursorrules",
+        "ownerName": "yeahydq",
+        "repositoryName": "infoshareApp",
+        "htmlUrl": "https://github.com/yeahydq/infoshareApp/blob/5264f8f10049803470bd8eb2fd2ac2fe29d4548b/.cursorrules",
+        "size": 2.98,
+        "timestamp": "2025-03-31T08:16:54.615Z"
+      }
+    ],
+    [
+      "stegra05/urlaub/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/stegra05/urlaub/a1c40765779c07e725b22e043679a7cd1c1b237b/.cursorrules",
+        "repositoryId": 957531472,
+        "path": "stegra05/urlaub/.cursorrules",
+        "ownerName": "stegra05",
+        "repositoryName": "urlaub",
+        "htmlUrl": "https://github.com/stegra05/urlaub/blob/a1c40765779c07e725b22e043679a7cd1c1b237b/.cursorrules",
+        "size": 2.67,
+        "timestamp": "2025-03-31T08:16:54.816Z"
+      }
+    ],
+    [
+      "chenyuanqi/ios-DeepSeek/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/chenyuanqi/ios-DeepSeek/b723da417e982db1bcd3b3e45f416eafe0bd0269/.cursorrules",
+        "repositoryId": 957416642,
+        "path": "chenyuanqi/ios-DeepSeek/.cursorrules",
+        "ownerName": "chenyuanqi",
+        "repositoryName": "ios-DeepSeek",
+        "htmlUrl": "https://github.com/chenyuanqi/ios-DeepSeek/blob/b723da417e982db1bcd3b3e45f416eafe0bd0269/.cursorrules",
+        "size": 3.75,
+        "timestamp": "2025-03-31T08:16:55.230Z"
+      }
+    ],
+    [
+      "carandev/accounting-manager/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/carandev/accounting-manager/01653f291da67d87577ee0cc006d1a3fdec59b42/.cursorrules",
+        "repositoryId": 953800617,
+        "path": "carandev/accounting-manager/.cursorrules",
+        "ownerName": "carandev",
+        "repositoryName": "accounting-manager",
+        "htmlUrl": "https://github.com/carandev/accounting-manager/blob/01653f291da67d87577ee0cc006d1a3fdec59b42/.cursorrules",
+        "size": 5.74,
+        "timestamp": "2025-03-31T08:16:55.656Z"
+      }
+    ],
+    [
+      "zcking/mcp-server-unifi/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/zcking/mcp-server-unifi/54c5724bffd4764a8f97c20be41c1103aa056ec4/.cursorrules",
+        "repositoryId": 957608316,
+        "path": "zcking/mcp-server-unifi/.cursorrules",
+        "ownerName": "zcking",
+        "repositoryName": "mcp-server-unifi",
+        "htmlUrl": "https://github.com/zcking/mcp-server-unifi/blob/54c5724bffd4764a8f97c20be41c1103aa056ec4/.cursorrules",
+        "size": 1.84,
+        "timestamp": "2025-03-31T08:16:56.573Z"
+      }
+    ],
+    [
+      "sakshamsri4/next_gen/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/sakshamsri4/next_gen/583959f00aa31b664c6bf68cbdd80e6f2432ab6f/.cursorrules",
+        "repositoryId": 956503477,
+        "path": "sakshamsri4/next_gen/.cursorrules",
+        "ownerName": "sakshamsri4",
+        "repositoryName": "next_gen",
+        "htmlUrl": "https://github.com/sakshamsri4/next_gen/blob/583959f00aa31b664c6bf68cbdd80e6f2432ab6f/.cursorrules",
+        "size": 2.64,
+        "timestamp": "2025-03-31T08:16:57.800Z"
+      }
+    ],
+    [
+      "vivirox/astro/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/vivirox/astro/a7677d4dd5a08f73854e01db9a3067008ab1d8ad/.cursorrules",
+        "repositoryId": 950439927,
+        "path": "vivirox/astro/.cursorrules",
+        "ownerName": "vivirox",
+        "repositoryName": "astro",
+        "htmlUrl": "https://github.com/vivirox/astro/blob/a7677d4dd5a08f73854e01db9a3067008ab1d8ad/.cursorrules",
+        "size": 17.61,
+        "timestamp": "2025-03-31T08:16:58.676Z"
+      }
+    ],
+    [
+      "agenciamav/discord-bot-manager/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/agenciamav/discord-bot-manager/6830917849335adbcdcc39800837549a16bcf83f/.cursorrules",
+        "repositoryId": 736049929,
+        "path": "agenciamav/discord-bot-manager/.cursorrules",
+        "ownerName": "agenciamav",
+        "repositoryName": "discord-bot-manager",
+        "htmlUrl": "https://github.com/agenciamav/discord-bot-manager/blob/6830917849335adbcdcc39800837549a16bcf83f/.cursorrules",
+        "size": 1.25,
+        "timestamp": "2025-03-31T08:17:02.669Z"
+      }
+    ],
+    [
+      "GodBoii/imrclabs-website/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/GodBoii/imrclabs-website/830e1267d520c15cc0aca8c5b2dac498e0ba5dfd/.cursorrules",
+        "repositoryId": 955690795,
+        "path": "GodBoii/imrclabs-website/.cursorrules",
+        "ownerName": "GodBoii",
+        "repositoryName": "imrclabs-website",
+        "htmlUrl": "https://github.com/GodBoii/imrclabs-website/blob/830e1267d520c15cc0aca8c5b2dac498e0ba5dfd/.cursorrules",
+        "size": 10.69,
+        "timestamp": "2025-03-31T08:17:06.511Z"
+      }
+    ],
+    [
+      "oaknational/oak-ai-lesson-assistant/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/oaknational/oak-ai-lesson-assistant/bb5c965ac86a7e0c6451b73558d429a447299860/.cursorrules",
+        "repositoryId": 845429398,
+        "path": "oaknational/oak-ai-lesson-assistant/.cursorrules",
+        "ownerName": "oaknational",
+        "repositoryName": "oak-ai-lesson-assistant",
+        "htmlUrl": "https://github.com/oaknational/oak-ai-lesson-assistant/blob/bb5c965ac86a7e0c6451b73558d429a447299860/.cursorrules",
+        "size": 9.67,
+        "timestamp": "2025-03-31T08:17:06.906Z"
       }
     ]
   ]

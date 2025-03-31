@@ -1,0 +1,38 @@
+# Cursor Rules for European Beach Destinations Showcase
+
+## Project Goal
+Create and maintain a website showcasing European beach destinations with a Studio Ghibli aesthetic, using Next.js, Shadcn UI, and Tailwind CSS.
+
+## Tech Stack & Frameworks
+- **Framework:** Next.js (use App Router conventions: `page.tsx`, `layout.tsx`, route groups, dynamic segments `[slug]`).
+- **Language:** TypeScript. Use strong typing, interfaces/types, and modern TypeScript features. Avoid `any` where possible.
+- **UI Library:** Shadcn UI. Prefer using Shadcn components for UI elements (Button, Card, Input, etc.). Import them from `@/components/ui/...`.
+- **Styling:** Tailwind CSS. Use utility classes directly in JSX. Adhere to the defined Ghibli theme in `tailwind.config.js` and `globals.css`. Use Shadcn component variants where appropriate.
+
+## Styling & Aesthetics
+- **Theme:** Strictly follow the Studio Ghibli-inspired theme defined via CSS variables in `globals.css` and configured in `tailwind.config.js`. Use the defined color names (e.g., `primary`, `secondary`, `card`, `muted`).
+- **Visuals:** Aim for soft aesthetics: rounded corners (`rounded-lg`), subtle shadows (`shadow-md`).
+- **Custom Cursor:** Remember the custom cursor applied globally in `globals.css`.
+- **Responsiveness:** Ensure components and layouts are responsive using Tailwind's responsive modifiers (e.g., `md:`, `lg:`).
+
+## Code Style & Structure
+- **Components:** Create functional components using React Hooks. Place reusable components in `/components`. Keep components focused and composable.
+- **File Structure:** Follow the established project structure (see `README.md` or `ARCHITECTURE.md`). Place data structures and fetch logic in `/lib`.
+- **Naming:** Use clear, descriptive names for variables, functions, and components (English preferred for code elements).
+- **Linting:** Adhere to ESLint rules configured in the project.
+- **Comments:** Add comments for complex logic or non-obvious code sections (in English).
+
+## Data Handling
+- **Source:** Destination data is static and located in `lib/data.ts`.
+- **Access:** Use functions like `getDestinationBySlug` from `lib/data.ts` to retrieve data for pages.
+- **Static Generation:** Utilize `generateStaticParams` in dynamic route segments (`[slug]`) for SSG.
+
+## Language Specifics
+- **Code:** Write all code (variables, functions, comments) in English.
+- **UI Text:** Implement all user-facing text content in German, based on the source material provided by the user.
+
+## General
+- When asked to modify existing files, read the relevant context first.
+- Prioritize clarity, maintainability, and adherence to the chosen tech stack and aesthetic.
+- Ask for clarification if requirements are ambiguous.
+
