@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 1170,
+  "size": 1172,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -16380,6 +16380,34 @@
         "htmlUrl": "https://github.com/oaknational/oak-ai-lesson-assistant/blob/bb5c965ac86a7e0c6451b73558d429a447299860/.cursorrules",
         "size": 9.67,
         "timestamp": "2025-03-31T08:17:06.906Z"
+      }
+    ],
+    [
+      "ai-eng-bootcamp-v0/couch_tasks/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ai-eng-bootcamp-v0/couch_tasks/fbe489e6b175326478690540930925bca508fd5b/.cursorrules",
+        "repositoryId": 948820817,
+        "path": "ai-eng-bootcamp-v0/couch_tasks/.cursorrules",
+        "ownerName": "ai-eng-bootcamp-v0",
+        "repositoryName": "couch_tasks",
+        "htmlUrl": "https://github.com/ai-eng-bootcamp-v0/couch_tasks/blob/fbe489e6b175326478690540930925bca508fd5b/.cursorrules",
+        "size": 2.67,
+        "timestamp": "2025-04-01T08:16:01.505Z"
+      }
+    ],
+    [
+      "paulpham157/paul-s-cursor-rules/framework_rules/rules/knative-istio-typesense-gpu-cursorrules-prompt-fil/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/paulpham157/paul-s-cursor-rules/3e4ea96c16aafcb073027172d521dcea4e404fee/framework_rules/rules/knative-istio-typesense-gpu-cursorrules-prompt-fil/.cursorrules",
+        "repositoryId": 953767927,
+        "path": "paulpham157/paul-s-cursor-rules/framework_rules/rules/knative-istio-typesense-gpu-cursorrules-prompt-fil/.cursorrules",
+        "ownerName": "paulpham157",
+        "repositoryName": "paul-s-cursor-rules",
+        "htmlUrl": "https://github.com/paulpham157/paul-s-cursor-rules/blob/3e4ea96c16aafcb073027172d521dcea4e404fee/framework_rules/rules/knative-istio-typesense-gpu-cursorrules-prompt-fil/.cursorrules",
+        "size": 3.02,
+        "timestamp": "2025-04-01T08:16:01.675Z"
       }
     ]
   ]
