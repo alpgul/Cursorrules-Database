@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 1172,
+  "size": 1186,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -16408,6 +16408,202 @@
         "htmlUrl": "https://github.com/paulpham157/paul-s-cursor-rules/blob/3e4ea96c16aafcb073027172d521dcea4e404fee/framework_rules/rules/knative-istio-typesense-gpu-cursorrules-prompt-fil/.cursorrules",
         "size": 3.02,
         "timestamp": "2025-04-01T08:16:01.675Z"
+      }
+    ],
+    [
+      "Cassianvale/LingYaoKeys/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Cassianvale/LingYaoKeys/fce9a0a009aa435b8f875bdd1693c59a85c22fd2/.cursorrules",
+        "repositoryId": 902734351,
+        "path": "Cassianvale/LingYaoKeys/.cursorrules",
+        "ownerName": "Cassianvale",
+        "repositoryName": "LingYaoKeys",
+        "htmlUrl": "https://github.com/Cassianvale/LingYaoKeys/blob/fce9a0a009aa435b8f875bdd1693c59a85c22fd2/.cursorrules",
+        "size": 14.83,
+        "timestamp": "2025-04-04T08:15:27.972Z"
+      }
+    ],
+    [
+      "The-Pocket/Tutorial-Youtube-Made-Simple/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/The-Pocket/Tutorial-Youtube-Made-Simple/6d2688d3b173bf7a68a3f7942022fb91c50d4389/.cursorrules",
+        "repositoryId": 939097851,
+        "path": "The-Pocket/Tutorial-Youtube-Made-Simple/.cursorrules",
+        "ownerName": "The-Pocket",
+        "repositoryName": "Tutorial-Youtube-Made-Simple",
+        "htmlUrl": "https://github.com/The-Pocket/Tutorial-Youtube-Made-Simple/blob/6d2688d3b173bf7a68a3f7942022fb91c50d4389/.cursorrules",
+        "size": 61.3,
+        "timestamp": "2025-04-04T08:15:28.454Z"
+      }
+    ],
+    [
+      "jhonsfran1165/unprice/.cursor/rules/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/jhonsfran1165/unprice/27deb284c77e7ab3ae6f46f8bb9cf4db3c0b3406/.cursor/rules/.cursorrules",
+        "repositoryId": 586760974,
+        "path": "jhonsfran1165/unprice/.cursor/rules/.cursorrules",
+        "ownerName": "jhonsfran1165",
+        "repositoryName": "unprice",
+        "htmlUrl": "https://github.com/jhonsfran1165/unprice/blob/27deb284c77e7ab3ae6f46f8bb9cf4db3c0b3406/.cursor/rules/.cursorrules",
+        "size": 20.56,
+        "timestamp": "2025-04-04T08:15:29.062Z"
+      }
+    ],
+    [
+      "sparesparrow/mcp-project-orchestrator/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/sparesparrow/mcp-project-orchestrator/79e8058d24b9e9989c4cc9dbe3497d7a37b45f19/.cursorrules",
+        "repositoryId": 942719557,
+        "path": "sparesparrow/mcp-project-orchestrator/.cursorrules",
+        "ownerName": "sparesparrow",
+        "repositoryName": "mcp-project-orchestrator",
+        "htmlUrl": "https://github.com/sparesparrow/mcp-project-orchestrator/blob/79e8058d24b9e9989c4cc9dbe3497d7a37b45f19/.cursorrules",
+        "size": 1.84,
+        "timestamp": "2025-04-04T08:15:31.189Z"
+      }
+    ],
+    [
+      "Team293/SpikeScout-Mobile/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Team293/SpikeScout-Mobile/7e6b4c64e383f8105bf0a7e567357edf426746c6/.cursorrules",
+        "repositoryId": 937777136,
+        "path": "Team293/SpikeScout-Mobile/.cursorrules",
+        "ownerName": "Team293",
+        "repositoryName": "SpikeScout-Mobile",
+        "htmlUrl": "https://github.com/Team293/SpikeScout-Mobile/blob/7e6b4c64e383f8105bf0a7e567357edf426746c6/.cursorrules",
+        "size": 3.87,
+        "timestamp": "2025-04-04T08:15:31.434Z"
+      }
+    ],
+    [
+      "rmorehig/forward-previews/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/rmorehig/forward-previews/f7c0b69ffc5234c0bf2414812f49ef29dfebcf95/.cursorrules",
+        "repositoryId": 934238099,
+        "path": "rmorehig/forward-previews/.cursorrules",
+        "ownerName": "rmorehig",
+        "repositoryName": "forward-previews",
+        "htmlUrl": "https://github.com/rmorehig/forward-previews/blob/f7c0b69ffc5234c0bf2414812f49ef29dfebcf95/.cursorrules",
+        "size": 20.56,
+        "timestamp": "2025-04-04T08:15:32.015Z"
+      }
+    ],
+    [
+      "jamesnation/collectopedia/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/jamesnation/collectopedia/17ca9b6abbd46c1d50ec21f52a30964ba4db50ba/.cursorrules",
+        "repositoryId": 864084691,
+        "path": "jamesnation/collectopedia/.cursorrules",
+        "ownerName": "jamesnation",
+        "repositoryName": "collectopedia",
+        "htmlUrl": "https://github.com/jamesnation/collectopedia/blob/17ca9b6abbd46c1d50ec21f52a30964ba4db50ba/.cursorrules",
+        "size": 1.83,
+        "timestamp": "2025-04-04T08:15:32.871Z"
+      }
+    ],
+    [
+      "Vijay-kumar-bantu/chat-app-turbo/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Vijay-kumar-bantu/chat-app-turbo/bf3117fea4f029b92f07f0a9f7b68f42253d9453/.cursorrules",
+        "repositoryId": 951824267,
+        "path": "Vijay-kumar-bantu/chat-app-turbo/.cursorrules",
+        "ownerName": "Vijay-kumar-bantu",
+        "repositoryName": "chat-app-turbo",
+        "htmlUrl": "https://github.com/Vijay-kumar-bantu/chat-app-turbo/blob/bf3117fea4f029b92f07f0a9f7b68f42253d9453/.cursorrules",
+        "size": 2.01,
+        "timestamp": "2025-04-04T08:15:34.514Z"
+      }
+    ],
+    [
+      "devDw-team/ai-driven-development/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/devDw-team/ai-driven-development/6b9419c44b174b6f2627700fedebb013210f41c8/.cursorrules",
+        "repositoryId": 952317243,
+        "path": "devDw-team/ai-driven-development/.cursorrules",
+        "ownerName": "devDw-team",
+        "repositoryName": "ai-driven-development",
+        "htmlUrl": "https://github.com/devDw-team/ai-driven-development/blob/6b9419c44b174b6f2627700fedebb013210f41c8/.cursorrules",
+        "size": 6.4,
+        "timestamp": "2025-04-04T08:15:35.000Z"
+      }
+    ],
+    [
+      "AAlber/replica-nutrient/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/AAlber/replica-nutrient/334e299723b261272c9d7bbe780723189fce5757/.cursorrules",
+        "repositoryId": 959438230,
+        "path": "AAlber/replica-nutrient/.cursorrules",
+        "ownerName": "AAlber",
+        "repositoryName": "replica-nutrient",
+        "htmlUrl": "https://github.com/AAlber/replica-nutrient/blob/334e299723b261272c9d7bbe780723189fce5757/.cursorrules",
+        "size": 7.57,
+        "timestamp": "2025-04-04T08:15:35.301Z"
+      }
+    ],
+    [
+      "YunosukeYoshino/rules/rules/cursor/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/YunosukeYoshino/rules/79bbca2bec1c9e71953d969899b4760b9aaf78f6/rules/cursor/.cursorrules",
+        "repositoryId": 945754030,
+        "path": "YunosukeYoshino/rules/rules/cursor/.cursorrules",
+        "ownerName": "YunosukeYoshino",
+        "repositoryName": "rules",
+        "htmlUrl": "https://github.com/YunosukeYoshino/rules/blob/79bbca2bec1c9e71953d969899b4760b9aaf78f6/rules/cursor/.cursorrules",
+        "size": 1.13,
+        "timestamp": "2025-04-04T08:15:35.547Z"
+      }
+    ],
+    [
+      "hj01857655/CommunityPensionSystem/community-pension-frontend/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/hj01857655/CommunityPensionSystem/cac486e3e7c6a43943e81a874b15bfc1ee97ae37/community-pension-frontend/.cursorrules",
+        "repositoryId": 938796780,
+        "path": "hj01857655/CommunityPensionSystem/community-pension-frontend/.cursorrules",
+        "ownerName": "hj01857655",
+        "repositoryName": "CommunityPensionSystem",
+        "htmlUrl": "https://github.com/hj01857655/CommunityPensionSystem/blob/cac486e3e7c6a43943e81a874b15bfc1ee97ae37/community-pension-frontend/.cursorrules",
+        "size": 5.33,
+        "timestamp": "2025-04-04T08:15:36.066Z"
+      }
+    ],
+    [
+      "abigail830/team-evolve/.cursor/rules/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/abigail830/team-evolve/89cd8d6c8cf4903a19ff4eb1a4efdff060302d81/.cursor/rules/.cursorrules",
+        "repositoryId": 953826494,
+        "path": "abigail830/team-evolve/.cursor/rules/.cursorrules",
+        "ownerName": "abigail830",
+        "repositoryName": "team-evolve",
+        "htmlUrl": "https://github.com/abigail830/team-evolve/blob/89cd8d6c8cf4903a19ff4eb1a4efdff060302d81/.cursor/rules/.cursorrules",
+        "size": 2.2,
+        "timestamp": "2025-04-04T08:15:36.713Z"
+      }
+    ],
+    [
+      "Nu11ified/jgn-auth/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Nu11ified/jgn-auth/41e03e808b0d85a67e391aee3d24f88e7e0cc3bc/.cursorrules",
+        "repositoryId": 938511279,
+        "path": "Nu11ified/jgn-auth/.cursorrules",
+        "ownerName": "Nu11ified",
+        "repositoryName": "jgn-auth",
+        "htmlUrl": "https://github.com/Nu11ified/jgn-auth/blob/41e03e808b0d85a67e391aee3d24f88e7e0cc3bc/.cursorrules",
+        "size": 26.45,
+        "timestamp": "2025-04-04T08:15:39.338Z"
       }
     ]
   ]

@@ -1,0 +1,21 @@
+Use code with caution.
+Cursor用ルールファイル
+参照すべき共通ドキュメント (コード編集と構造に重点)
+@include {
+../../docs/global/coding_conventions.md
+../../docs/structure//*
+../../docs/testing//*
+../../docs/frontend/next/components/design.md
+../../docs/frontend/next/components/patterns.md
+../../docs/backend/api/hono/implementation.md
+../../docs/backend/database/drizzle/schema.md
+../../docs/global/security.md
+}
+
+Cursorへの指示
+- 既存コードの理解と編集を主目的とする。
+- ../../docs/global/coding_conventions.md および ../../docs/structure/project_structure_conventions.md (特にbiome設定) に厳密に従うこと。
+- リファクタリング提案時には、その理由と影響範囲を明確にすること。
+- セキュリティに関する変更 (../../docs/global/security.md) は特に慎重に行い、変更前に必ず確認を求めること。
+- 新しいファイルを作成する場合も、既存の命名規則や構造に従うこと。
+- 型安全性を常に意識し、any型やunknown型の使用を避けること (../../docs/global/coding_conventions.md参照)。

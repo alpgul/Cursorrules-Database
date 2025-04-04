@@ -1,0 +1,38 @@
+# Project Specification & Guidelines
+
+Collectopedia is a web application designed to help users manage their toy collection. It allows users to add, edit, delete, and view details of their toys, as well as fetch current market prices via the eBay API. 
+
+Each toy will have an associated image and separate detail page. 
+
+Stats will track value of time etc. 
+
+## Overview
+
+We're working on Collectopedia. The idea is it's a tracker for your collection of toys, similar to discogs for records or priceharting.com for video games.
+
+## Tech Stack
+
+- Frontend: Next.js, Tailwind, Shadcn, Framer Motion
+- Backend: Supabase, Drizzle, Server Actions
+- Auth: Clerk
+- Payments: Stripe
+
+## Specification
+
+## Guidelines
+
+Follow these rules:
+
+- All components should go in `/components` from the root and be named like `example-component.tsx` unless otherwise specified
+- All actions should go in `/actions` from the root and be named like `example-actions.ts` unless otherwise specified
+- All schemas should go in `/db/schema` from the root and be named like `example-schema.ts` unless otherwise specified
+- All queries should go in `/db/queries` from the root and be named like `example-queries.ts` unless otherwise specified
+
+
+## Building projects
+Never execute a terminal command that starts a development or production server (e.g., npm run dev, npm run preview). Instead, provide the exact command the user should run and instruct them to execute it manually. If testing requires running a local server, ask the user to start it themselves and provide any relevant console logs for debugging.
+
+## Maintaining projects
+When you create a new file, make sure to add a comment at the top of the file with the changes you made.
+
+When you update/make changes to a file, make sure to rewrite the comment at the top of the file with the changes you made. If there is no comment, then add one.
