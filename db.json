@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 1186,
+  "size": 1198,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -16604,6 +16604,174 @@
         "htmlUrl": "https://github.com/Nu11ified/jgn-auth/blob/41e03e808b0d85a67e391aee3d24f88e7e0cc3bc/.cursorrules",
         "size": 26.45,
         "timestamp": "2025-04-04T08:15:39.338Z"
+      }
+    ],
+    [
+      "gym0915/chat2sql/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/gym0915/chat2sql/010b6e47167fa2d41b9df214b9e540f1ba09917b/.cursorrules",
+        "repositoryId": 880241562,
+        "path": "gym0915/chat2sql/.cursorrules",
+        "ownerName": "gym0915",
+        "repositoryName": "chat2sql",
+        "htmlUrl": "https://github.com/gym0915/chat2sql/blob/010b6e47167fa2d41b9df214b9e540f1ba09917b/.cursorrules",
+        "size": 2.17,
+        "timestamp": "2025-04-07T08:16:28.413Z"
+      }
+    ],
+    [
+      "All-Out-Games/cursorrules/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/All-Out-Games/cursorrules/e212ea8018480c15ca4d20cca5bc1ecf38fc43dc/.cursorrules",
+        "repositoryId": 919688172,
+        "path": "All-Out-Games/cursorrules/.cursorrules",
+        "ownerName": "All-Out-Games",
+        "repositoryName": "cursorrules",
+        "htmlUrl": "https://github.com/All-Out-Games/cursorrules/blob/e212ea8018480c15ca4d20cca5bc1ecf38fc43dc/.cursorrules",
+        "size": 3.36,
+        "timestamp": "2025-04-07T08:16:30.376Z"
+      }
+    ],
+    [
+      "colinnielsen/drip-ui/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/colinnielsen/drip-ui/31975a3beb18c0cb972c99f3409a5104d3be0248/.cursorrules",
+        "repositoryId": 813407167,
+        "path": "colinnielsen/drip-ui/.cursorrules",
+        "ownerName": "colinnielsen",
+        "repositoryName": "drip-ui",
+        "htmlUrl": "https://github.com/colinnielsen/drip-ui/blob/31975a3beb18c0cb972c99f3409a5104d3be0248/.cursorrules",
+        "size": 3.38,
+        "timestamp": "2025-04-07T08:16:30.900Z"
+      }
+    ],
+    [
+      "devDw-team/e-invoice-manager/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/devDw-team/e-invoice-manager/7bfd3ed1f6a11c7cc234333732035416ea16a2db/.cursorrules",
+        "repositoryId": 961660964,
+        "path": "devDw-team/e-invoice-manager/.cursorrules",
+        "ownerName": "devDw-team",
+        "repositoryName": "e-invoice-manager",
+        "htmlUrl": "https://github.com/devDw-team/e-invoice-manager/blob/7bfd3ed1f6a11c7cc234333732035416ea16a2db/.cursorrules",
+        "size": 6.4,
+        "timestamp": "2025-04-07T08:16:34.572Z"
+      }
+    ],
+    [
+      "different-ai/note-companion/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/different-ai/note-companion/4183c18d482f28a45080572621439f410036a0d7/.cursorrules",
+        "repositoryId": 689765175,
+        "path": "different-ai/note-companion/.cursorrules",
+        "ownerName": "different-ai",
+        "repositoryName": "note-companion",
+        "htmlUrl": "https://github.com/different-ai/note-companion/blob/4183c18d482f28a45080572621439f410036a0d7/.cursorrules",
+        "size": 3.74,
+        "timestamp": "2025-04-07T08:16:34.998Z"
+      }
+    ],
+    [
+      "kirill-markin/muzzle/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/kirill-markin/muzzle/b1308169b80e631b6786b3ee5aab6b8739b30cc4/.cursorrules",
+        "repositoryId": 503733333,
+        "path": "kirill-markin/muzzle/.cursorrules",
+        "ownerName": "kirill-markin",
+        "repositoryName": "muzzle",
+        "htmlUrl": "https://github.com/kirill-markin/muzzle/blob/b1308169b80e631b6786b3ee5aab6b8739b30cc4/.cursorrules",
+        "size": 1.79,
+        "timestamp": "2025-04-07T08:16:36.972Z"
+      }
+    ],
+    [
+      "hmu332233/study.maker/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/hmu332233/study.maker/b4fb89ebae54b8d2b66210277f2cdb444dfc7be2/.cursorrules",
+        "repositoryId": 930992126,
+        "path": "hmu332233/study.maker/.cursorrules",
+        "ownerName": "hmu332233",
+        "repositoryName": "study.maker",
+        "htmlUrl": "https://github.com/hmu332233/study.maker/blob/b4fb89ebae54b8d2b66210277f2cdb444dfc7be2/.cursorrules",
+        "size": 2.18,
+        "timestamp": "2025-04-07T08:16:40.347Z"
+      }
+    ],
+    [
+      "Sma1lboy/jd-resume-fitter/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Sma1lboy/jd-resume-fitter/3225ba289f4cb8208626716d1e5826aab0dcc45b/.cursorrules",
+        "repositoryId": 959021590,
+        "path": "Sma1lboy/jd-resume-fitter/.cursorrules",
+        "ownerName": "Sma1lboy",
+        "repositoryName": "jd-resume-fitter",
+        "htmlUrl": "https://github.com/Sma1lboy/jd-resume-fitter/blob/3225ba289f4cb8208626716d1e5826aab0dcc45b/.cursorrules",
+        "size": 1.3,
+        "timestamp": "2025-04-07T08:16:42.119Z"
+      }
+    ],
+    [
+      "poseylabs/posey/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/poseylabs/posey/122c1c3bd8505c59a16ecf83cf25edc90985a05c/.cursorrules",
+        "repositoryId": 940331938,
+        "path": "poseylabs/posey/.cursorrules",
+        "ownerName": "poseylabs",
+        "repositoryName": "posey",
+        "htmlUrl": "https://github.com/poseylabs/posey/blob/122c1c3bd8505c59a16ecf83cf25edc90985a05c/.cursorrules",
+        "size": 5.87,
+        "timestamp": "2025-04-07T08:16:42.470Z"
+      }
+    ],
+    [
+      "kirklin/boot-react-native/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/kirklin/boot-react-native/63d02f75ebef11ddbd90ce052e86ab991dfacacf/.cursorrules",
+        "repositoryId": 845382862,
+        "path": "kirklin/boot-react-native/.cursorrules",
+        "ownerName": "kirklin",
+        "repositoryName": "boot-react-native",
+        "htmlUrl": "https://github.com/kirklin/boot-react-native/blob/63d02f75ebef11ddbd90ce052e86ab991dfacacf/.cursorrules",
+        "size": 5.46,
+        "timestamp": "2025-04-07T08:16:42.767Z"
+      }
+    ],
+    [
+      "plugnio/BAWES-ERP/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/plugnio/BAWES-ERP/ec2c11ff42a6b2ff7cc5615d82bee787caa1a464/.cursorrules",
+        "repositoryId": 897370820,
+        "path": "plugnio/BAWES-ERP/.cursorrules",
+        "ownerName": "plugnio",
+        "repositoryName": "BAWES-ERP",
+        "htmlUrl": "https://github.com/plugnio/BAWES-ERP/blob/ec2c11ff42a6b2ff7cc5615d82bee787caa1a464/.cursorrules",
+        "size": 6.5,
+        "timestamp": "2025-04-07T08:16:43.094Z"
+      }
+    ],
+    [
+      "A276056/Time/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/A276056/Time/627c43e75663b32e50b5845df9b2ad1b052a85d1/.cursorrules",
+        "repositoryId": 901371365,
+        "path": "A276056/Time/.cursorrules",
+        "ownerName": "A276056",
+        "repositoryName": "Time",
+        "htmlUrl": "https://github.com/A276056/Time/blob/627c43e75663b32e50b5845df9b2ad1b052a85d1/.cursorrules",
+        "size": 2.36,
+        "timestamp": "2025-04-07T08:16:44.062Z"
       }
     ]
   ]

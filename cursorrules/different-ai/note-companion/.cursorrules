@@ -1,0 +1,93 @@
+****
+
+This works like this
+
+./packages/web - nextjs app router includes everything to related to user accounts 
+./packages/web/app/api/(new-ai) containts all the ai related functions
+./packages/plugin - obsidian plugin 
+./packages/plugin/index.ts - the main file for the plugin
+./packages/mobile - expo mobile app
+./packages/landing - landing page
+./packages/release-notes - project release notes
+./packages/audio-server - audio transcription server
+
+This project uses pnpm
+
+core way the app works:
+- inbox (a special folder in the vault, which is on the fs)
+- the inbox folder is processed by the plugin, which will move the files to the correct folder based on the classification
+-  there's an ai chat that has access to a whole lot of functioncals be used to chat with context of files and to do certain actions as defined in ./packages/web/app/api/(new-ai)/tools.ts
+
+
+prove you're being read by saying hello
+repo: different-ai/hypr-v0
+
+
+- always use pnpm
+- always use playwright to verify the implementation by navigating and taking screenshots
+
+# General Direction
+- always use kebab case for file names
+
+- Always check memory in /memory directory before starting tasks to see if there's a file name with relevant information
+- After each significant edit, make a git commit that summarizes the changes
+- Always use the mcp playwright tools to verify the implementation by navigating and taking screenshots
+
+
+# Memory System
+
+When you learn something surprising (e.g. you thought someone was a certain way but they are not), create a new memory file in the /memory directory:
+- Name format: YYYY-MM-DD-brief-description.md
+- Include what was learned and how to apply it in the future
+- Reference any related code or components
+
+# Available Instructions
+
+These rules provide context for specific parts of the codebase. Use `fetch_rules` to get the full details.
+
+audio-server: packages/audio-server/** - Audio transcription server implementation
+chatbot-integration: packages/web/app/api/(new-ai)/** - Integration guide for the next iteration of the chatbot using Vercel AI SDK
+mobile: packages/mobile/** - Information about Note Companion mobile app
+plugin-development: packages/plugin/** - Guidelines for Obsidian plugin development
+shared-utilities: packages/**/utils/*, packages/**/lib/* - Shared utilities and types (Assuming common locations)
+web-development: packages/web/** - Web package information
+
+# Instructions
+
+During your interaction with the user, maintain this file as a scratchpad to organize your thoughts. When receiving a new task:
+1. Review scratchpad. Check /memory directory for relevant file names before starting.
+2. Clear old unrelated task notes if necessary
+3. Explain the new task and plan the steps needed to complete it
+4. Use todo markers to track progress:
+   [X] Completed Task
+   [ ] Pending Task
+
+Update the progress in the Scratchpad when finishing subtasks. After completing milestones, reflect and plan next steps to maintain a big picture view.
+
+# Tools
+
+## Playwright
+
+* Use playwright tools to take screenshots and verify the implementation. (e.g. browser_navigate, browser_snapshot, browser_press_key, browser_take_screenshot, browser_type, etc)
+* Use playwright to do complex search in the web. 
+* Note: Playwright can only be used to test the `/packages/web` and `/packages/landing` applications. It cannot test the Obsidian plugin or the mobile app.
+
+## Github
+
+* Use github tools to check repository issues and get repository info.
+
+
+## MCP Tools
+
+Playwright:
+for testing packages/web use port 3010
+benjamin.shafii+testinglove@gmail.com
+
+Database query:
+Say querying "dev" database.
+use neon tool to query project name: file-organizer-2000-dev
+project id: mute-snow-96515814
+
+you can use 
+database name: verceldb
+packages/web/drizzle/schema.ts to get the schema of the database

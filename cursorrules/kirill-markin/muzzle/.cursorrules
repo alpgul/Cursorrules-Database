@@ -1,0 +1,48 @@
+# Kirill Markin Website Overview
+
+## Project Setup
+
+This is a Jekyll-based personal website for Kirill Markin. To run locally:
+
+1. Install dependencies: `bundle install`
+2. Run Jekyll: `sudo bundle exec jekyll serve`
+
+## Media Mention Layouts
+
+The website has different article/media mention layout types:
+
+1. **mention-card-text** - Basic text card without thumbnail
+2. **mention-card-text-photo** - Card with text and photo/thumbnail
+3. **mention-card-featured-horizontal** - Large horizontal featured card with content area at bottom left
+
+### Key Files:
+
+- **_data/media_mentions.yml** - Contains all media mention data entries
+- **_includes/media-mentions.html** - Contains the HTML templates for mentions using a case-based structure
+- **assets/css/style.scss** - Contains the CSS styling with each card type having independent, self-contained styles
+
+### Media Card Positioning:
+
+- Large cards (positions 0 and 5 in grid) get special styling
+- Card type is determined by:
+  - Position in the grid
+  - Content type (Video content uses featured-horizontal with video icon)
+  - Whether it has a thumbnail
+  - Any specific render-style specified in the YAML data
+
+### Media Mention Styling:
+
+- Common base styles defined in `.media-mention` class
+- Each layout type has completely independent CSS with clear comments
+- To override the automatic layout selection, use the `render-style` field in the YAML data:
+  ```yaml
+  render-style: text-photo  # or text, featured-horizontal
+  ```
+
+### Media Assets:
+
+- Thumbnails stored in: `data/articles_thumbnails/`
+- Website logos stored in: `data/webstie_logos/`
+- **IMPORTANT:** All thumbnails MUST be in 16:9 aspect ratio
+- For square images, use: `convert image.png -resize WIDTHxHEIGHT^ -gravity center -extent WIDTHxHEIGHT image-16x9.png`
+- Check aspect ratio with: `identify image.png` 
