@@ -1,0 +1,126 @@
+# Meeting Analyzer Project Rules
+
+## Coding Standards
+- Use TypeScript for all new code
+- Follow React functional component pattern with hooks
+- Implement Next.js App Router conventions
+- Use Tailwind CSS for styling
+- Leverage Shadcn/UI components where possible
+- Maintain consistent file structure
+
+## Architecture Patterns
+- Use provider/adapter pattern for external service integration
+- Implement abstract interfaces for all providers
+- Create concrete provider implementations
+- Use feature detection for provider capabilities
+- Support provider fallback mechanisms
+- Follow dependency injection principles
+
+## File Organization
+- `/src` - Main source code directory
+- `/src/app` - Next.js App Router pages and layouts
+- `/src/components` - Reusable React components
+- `/src/lib` - Utility functions and shared code
+- `/src/providers` - Provider interfaces and implementations
+- `/src/integrations` - Integration adapters for third-party services
+- `/src/types` - TypeScript type definitions
+- `/public` - Static assets
+
+## Meeting Interface Structure
+- Four-tab interface for meeting analysis:
+  - Overview Tab: Dynamic relationship mapping with NLP-based weighting
+  - Transcript Tab: Diarized transcription with playback and emotional indicators
+  - Comments Tab: Comments organized by transcript sections with business context
+  - Assistant Tab: AI chat interface for meeting intelligence and coaching
+- Theme-based navigation across meetings
+- Pre-meeting context preparation features
+
+## Naming Conventions
+- Components: PascalCase (e.g., MeetingCard.tsx)
+- Utilities/hooks: camelCase (e.g., useAuth.ts)
+- Files: kebab-case for pages (e.g., meeting-details.tsx)
+- CSS: Follow Tailwind conventions
+- Providers: PascalCase with Provider suffix (e.g., AssemblyAIProvider)
+- Adapters: PascalCase with Adapter suffix (e.g., SalesforceAdapter)
+
+## State Management
+- Use React hooks for component state
+- Leverage Next.js server components where appropriate
+- Use context for shared state when needed
+- Server actions for form submissions
+- Provider context for integration state management
+
+## Authentication
+- Implement Supabase authentication for application users
+- Use OAuth for third-party service integrations
+- Implement secure token management
+- Protected routes for authenticated content
+- Row-level security for database access
+
+## API Integration
+- Use provider/adapter pattern for external services
+- Implement abstract interfaces for each provider type
+- Create concrete implementations for specific services
+- Support feature detection and capability exposure
+- Implement fallback mechanisms for resilience
+- Follow configuration-based provider selection
+- Handle OAuth flows for third-party services
+
+## Visualization System
+- Use D3.js force-directed graphs for relationship visualization
+- Implement NLP-based weighting for topic relationships
+- Create interactive visualization controls
+- Support cross-meeting theme discovery
+- Enable theme evolution timeline visualization
+- Follow accessibility guidelines for interactive elements
+
+## UI/UX Patterns
+- Responsive design for all screen sizes
+- Consistent color scheme from the configured theme
+- Follow Globoix design aesthetic for modern UI
+- Loading states for asynchronous operations
+- Error handling with user-friendly messages
+- Synchronize media playback with transcript timestamps
+- Prioritize guided experience over extensive configuration
+
+## Data Storage
+- Organize by themes across meeting collections
+- Store transcriptions with speaker information
+- Save comments linked to specific transcript sections
+- Implement efficient queries for relationship visualization
+- Track theme evolution over time
+- Store integration connections securely
+- Implement proper caching strategies
+
+## Integration Guidelines
+- Use OAuth for authentication when available
+- Implement secure token storage and refresh
+- Create abstract adapter interfaces for each integration type
+- Support automatic meeting ingestion from platforms
+- Connect meeting insights to CRM opportunities
+- Link calendar data for meeting context
+- Follow rate limiting best practices
+
+## Project Workflow
+- Document new features in memory-bank/
+- Update progress.md with completed tasks
+- Use TypeScript strictly (avoid any type)
+- Maintain accessible UI components
+- Implement automated tests for provider interfaces
+
+## Security Practices
+- No hardcoded credentials
+- Use environment variables for secrets
+- Validate all user inputs
+- Implement proper authorization checks
+- Secure OAuth token storage
+- Isolate data between integrations
+
+## Localization
+- Support Portuguese as the primary language
+- Use translation keys for all user-facing text
+- Maintain consistent terminology across languages
+- Format dates, times, and numbers according to locale
+- Support right-to-left languages in the UI design
+- Enable easy addition of new languages
+- Follow i18n best practices 

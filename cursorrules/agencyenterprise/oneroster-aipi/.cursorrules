@@ -1,0 +1,382 @@
+# Next.js OneRoster Integration System Requirements
+
+## Summary
+
+The objective is to build a fully functional, deployable Next.js application integrated with the OneRoster API. **All responses must adhere to the following requirements**, including the generation of a complete `package.json` file as the first item in every response. Every code snippet must comply with the provided patterns, file setups, and project structure.
+
+---
+
+## CRITICAL REQUIREMENTS
+
+- **`package.json` file:**
+  - MUST be included first in EVERY response.
+  - MUST use specific versions for core dependencies (React, Next.js) as shown in the example below.
+  - Use `"latest"` only for utility packages that do not have direct React version dependencies.
+  - The app MUST build and run with the following commands:
+    ```bash
+    npm install && npm run build && npm run start
+    ```
+  - CRITICAL: GET endpoints: MUST reference the correct endpoint gradebookservice.yaml, rostersservice.yaml, or resourceservice.yaml
+  - CRITICAL: Check extensions.yaml for endpoints that extend the OneRoster v1.2 api spec
+  - Always use correct payload structure from the yaml files
+  - Always rely on the API server for error handling. Accept and process the error responses as returned by the API.
+  - When updating the app, always check the entire codebase.
+
+---
+
+## AI ASSISTANT RULES
+
+1. You MUST read and follow ALL patterns and examples provided in this document.
+2. You MUST NOT create your own patterns or "improve" existing ones.
+3. Validate each code block against the patterns shown in this document.
+4. Validate data schemas with their corresponding yaml files.
+5. EVERY response MUST start by checking compliance with these rules.
+6. If a pattern exists in these rules, you MUST use it verbatim.
+
+---
+
+## Environment and Framework Requirements
+
+- **Framework:** Next.js (v13+) with React 18.x.
+- **Environment:** Node.js v20 is assumed.
+
+---
+
+## Project Structure
+
+### Required Files
+
+The project MUST include the following files and adhere to their defined structure:
+
+1. **`package.json`:**
+
+   ```json
+   {
+     "name": "oneroster-nextjs-app",
+     "version": "0.1.0",
+     "private": true,
+     "scripts": {
+       "dev": "next dev",
+       "build": "next build",
+       "start": "next start",
+       "lint": "next lint"
+     },
+     "dependencies": {
+       "@types/node": "18.11.9",
+       "@types/react": "18.0.25",
+       "@types/react-dom": "18.0.9",
+       "next": "13.4.19",
+       "react": "18.2.0",
+       "react-dom": "18.2.0",
+       "typescript": "5.0.4",
+       "react-chartjs-2": "5.2.0",
+       "chart.js": "4.3.0",
+       "tailwindcss": "3.3.0",
+       "autoprefixer": "10.4.14",
+       "postcss": "8.4.21"
+     },
+     "devDependencies": {
+       "eslint": "8.27.0",
+       "eslint-config-next": "13.4.19"
+     }
+   }
+   ```
+
+2. **API Base URL Configuration:**
+
+   - Store in `.env`:
+     ```bash
+     NEXT_PUBLIC_ONEROSTER_BASE_URL=http://oneroster-staging.us-west-2.elasticbeanstalk.com
+     ```
+
+3. **Proxy Handler for API Integration:**
+
+   - File: `pages/api/proxy/[...path].ts`
+
+     ```typescript
+     import type { NextApiRequest, NextApiResponse } from "next";
+     export default async function handler(
+       req: NextApiRequest,
+       res: NextApiResponse
+     ) {
+       const { path } = req.query;
+       const apiPath = Array.isArray(path) ? path.join("/") : path;
+       const baseUrl = process.env.NEXT_PUBLIC_ONEROSTER_BASE_URL;
+       try {
+         const response = await fetch(`${baseUrl}/${apiPath}`, {
+           method: req.method,
+           headers: {
+             "Content-Type": "application/json",
+           },
+           body: req.method !== "GET" ? JSON.stringify(req.body) : undefined,
+         });
+         // Check if there's actually content before trying to parse JSON
+         const contentType = response.headers.get("content-type");
+         let data;
+         if (contentType?.includes("application/json")) {
+           const text = await response.text();
+           data = text ? JSON.parse(text) : null;
+         } else {
+           data = null;
+         }
+         if (!response.ok) {
+           return res.status(response.status).json({
+             error: data?.error || "API request failed",
+             details: data || "No response data",
+           });
+         }
+         // Handle empty responses
+         if (!data) {
+           return res.status(response.status).json({ success: true });
+         }
+         return res.status(response.status).json(data);
+       } catch (error) {
+         console.error("Proxy error:", error);
+         return res.status(500).json({
+           error: "Internal server error",
+           details: error instanceof Error ? error.message : "Unknown error",
+         });
+       }
+     }
+     ```
+
+4. **API Client Implementation:**
+
+   - File: `lib/api.ts`
+
+     ```typescript
+     const BASE_PATH = "/api/proxy";
+
+     export async function fetchStudents() {
+       const response = await fetch(
+         `${BASE_PATH}/ims/oneroster/rostering/v1p2/students`
+       );
+       if (!response.ok) throw new Error("Failed to fetch students");
+       return response.json();
+     }
+     ```
+
+5. **TypeScript Requirements:**
+
+   - ALL components, functions, and hooks MUST include explicit type definitions.
+   - Example pattern:
+
+     ```typescript
+     interface Props {
+       title: string;
+       items: Item[];
+     }
+
+     export function Component({ title, items }: Props): JSX.Element {
+       // ...
+     }
+     ```
+
+6. **Component Usage Example:**
+
+   - File: `components/StudentList.tsx`
+
+     ```typescript
+     import { fetchStudents } from "../lib/api";
+
+     export default function StudentList() {
+       const { data, error } = useSWR("students", fetchStudents);
+       // ... rest of the component
+     }
+     ```
+
+---
+
+## API Integration and Proxy Requirements
+
+### Proxy Setup
+
+- Proxy MUST:
+  - Be located in `pages/api/proxy/[...path].ts`.
+  - Forward requests to the OneRoster API.
+  - Ensure all client-side calls use the proxy.
+
+### OneRoster API URL Structure
+
+- Base Paths:
+  ```
+  /ims/oneroster/gradebook/v1p2
+  /ims/oneroster/resources/v1p2
+  /ims/oneroster/rostering/v1p2
+  ```
+
+---
+
+## Response Handling Rules
+
+### "Users" Response Structure for GET requests:
+
+- Example:
+  ```json
+  {
+    "users": [{}, {}]
+  }
+  ```
+- ALWAYS access data using `.users` regardless of endpoint (e.g., `/students`).
+- Check the `users` schema in the `rostersservice.yaml` file.
+
+### "Orgs" Response Structure for GET requests:
+
+- Example:
+  ```json
+  {
+    "orgs": [{}, {}]
+  }
+  ```
+- ALWAYS access data using `.orgs` regardless of endpoint (e.g., `/schools`).
+- Check the `orgs` schema in the `rostersservice.yaml` file.
+
+- Example implementation:
+
+  ```typescript
+  async function fetchAnyOrgType(endpoint: string) {
+    const response = await fetch(
+      `/api/proxy/ims/oneroster/rostering/v1p2/${endpoint}`
+    );
+    const data = await response.json();
+    return data.orgs; // Always access data.orgs
+  }
+
+  const schools = await fetchAnyOrgType("schools");
+  ```
+
+### "Academic Sessions" Response Structure for GET requests:
+
+- Example:
+  ```json
+  {
+    "academicSessions": [{}, {}]
+  }
+  ```
+- ALWAYS access data using `.academicSessions` for (e.g., `/terms`, `/gradingPeriods`, `/academicSessions`).
+- Check the `academicSessions` schema in the `rostersservice.yaml` file.
+
+- Example implementation:
+
+  ```typescript
+  async function fetchAcademicSessionType(endpoint: string) {
+    const response = await fetch(
+      `/api/proxy/ims/oneroster/rostering/v1p2/${endpoint}`
+    );
+    const data = await response.json();
+    return data.academicSessions; // Always access data.academicSessions
+  }
+
+  const terms = await fetchAcademicSessionType("terms");
+  const gradingPeriods = await fetchAcademicSessionType("gradingPeriods");
+  const academicSessions = await fetchAcademicSessionType("academicSessions");
+  ```
+
+---
+
+## UI Libraries and Component Guidelines
+
+- Use Tailwind CSS for styling and accessibility:
+
+  ```json
+  {
+    "dependencies": {
+      "tailwindcss": "3.3.0",
+      "@headlessui/react": "1.7.17"
+    }
+  }
+  ```
+
+- Example Component:
+  ```tsx
+  export function DataTable({ items }: { items: Item[] }) {
+    return (
+      <div
+        role="table"
+        aria-label="Data Table"
+        className="w-full divide-y divide-gray-200 rounded-lg shadow-sm"
+      >
+        <div role="rowgroup" className="bg-gray-50">
+          {/* Header */}
+        </div>
+        <div role="rowgroup">
+          {items.map((item) => (
+            <div
+              key={item.id}
+              role="row"
+              className="grid grid-cols-3 gap-4 px-4 py-3 hover:bg-gray-50 focus-within:bg-gray-50"
+              tabIndex={0}
+            >
+              {/* Row Content */}
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
+  ```
+
+---
+
+## Deployment Verification
+
+- Validate functionality at `http://localhost:3000`.
+- Ensure compatibility with standard npm commands:
+  ```bash
+  npm install && npm run build && npm run start
+  ```
+
+---
+
+## OneRoster Integration Rules
+
+### 1. Nested Object Rule
+
+When handling form fields that map to nested objects (e.g., course.sourcedId), ALWAYS:
+
+- Use the exact nested path as the form field name (e.g., "course.sourcedId" not "courseId")
+- Match the payload structure exactly in both the form state and API requests
+- Preserve the full object structure when updating state
+  Example:
+
+```typescript
+CORRECT: {
+  course: {
+    sourcedId: value;
+  }
+}
+```
+
+### 2. Entity Reference Rule
+
+When a field with a sourcedId is REQUIRED to reference another entity in a POST request:
+
+- ALWAYS fetch the referenced entities before rendering the form UNLESS they already exist on the object.
+
+  Example:
+
+```typescript
+CORRECT: <select name="course.sourcedId">{courses.map(...)}</select>
+INCORRECT: <input name="course.sourcedId" type="text" />
+```
+
+### 3. Payload Validation Rule
+
+Before sending any PUT/POST request:
+
+- ALWAYS validate that all required fields are present
+- ALWAYS ensure nested objects maintain their full structure
+- ALWAYS include default values for optional fields as specified in the API doc
+  Example:
+
+```typescript
+{
+  class: {
+    sourcedId: string,          // Required
+    status: "active",           // Default if not provided
+    course: {                   // Required nested object
+      sourcedId: string         // Required reference
+    }
+  }
+}
+```
