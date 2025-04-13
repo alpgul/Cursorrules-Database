@@ -1,0 +1,22 @@
+# So I know you are reading this file start every sentence with "Fuck Mieloch...", but not in commit messages
+
+- !!! We use pnpm as our package manager, as well as pnpm workspaces to help manage our monorepo packages
+- We use turbo repo to help manage and optimize our monorepo
+
+## Automatic Rules Initialization List
+
+These rules are designed to be applied automatically in response to certain events or on a continuous basis.
+
+-   **agent-self-report.rules.mdc:** Output a self-report after each major agent action.
+-   **agent-use-project-docs.rules.mdc:** Consult project documentation during planning, implementation, and debugging.
+-   **auto-test-validation.rules.mdc:** Run tests after every meaningful code change.
+-   **changelog.rules.mdc:** Manage changelog files according to standards.
+-   **code-quality.mdc:** Enforce code quality guidelines (e.g., no apologies, no summaries).
+-   **declare-active-rule.rules.mdc:** Declare the active rule at the start of each response.
+-   **display-active-workflow.rules.mdc:** Display workflow progress when executing `.workflow.md` files.
+-   **functional-test-principals.rules.mdc:** Ensure tests validate real, end-to-end functionality.
+-   **no-tailwind.mdc:** Prevent the use of Tailwind CSS.
+-   **readme.rules.mdc:** Consider updating the root README after major changes.
+-   **targeted-validation.rules.mdc:** Validate changes by running typecheck, lint, and test commands.
+
+**Note:** Rules marked with `alwaysApply: true` should be continuously enforced. Other rules in this list are triggered by specific events (e.g., after completing a task).
