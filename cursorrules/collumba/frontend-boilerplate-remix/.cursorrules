@@ -1,0 +1,133 @@
+{
+  "architecture": "feature-slice-design",
+  "layers": [
+    {
+      "name": "app",
+      "description": "Application layer: global configuration, providers, styles",
+      "can_import_from": [
+        "shared",
+        "entities",
+        "features",
+        "widgets"
+      ]
+    },
+    {
+      "name": "routes",
+      "description": "Routing layer: route components, layouts specific to routes",
+      "can_import_from": [
+        "app",
+        "widgets",
+        "features",
+        "entities",
+        "shared"
+      ]
+    },
+    {
+      "name": "widgets",
+      "description": "Composite UI blocks used on pages",
+      "can_import_from": [
+        "features",
+        "entities",
+        "shared"
+      ]
+    },
+    {
+      "name": "features",
+      "description": "Business logic and UI for specific use cases",
+      "can_import_from": [
+        "entities",
+        "shared"
+      ]
+    },
+    {
+      "name": "entities",
+      "description": "Business entities with their data models and basic UI",
+      "can_import_from": [
+        "shared"
+      ]
+    },
+    {
+      "name": "shared",
+      "description": "Reusable code, UI kit, utilities",
+      "can_import_from": []
+    }
+  ],
+  "patterns": {
+    "feature_structure": {
+      "folders": [
+        "ui",
+        "model",
+        "api",
+        "lib",
+        "config"
+      ],
+      "entry_point": "index.ts"
+    },
+    "entity_structure": {
+      "folders": [
+        "ui",
+        "model",
+        "api",
+        "lib",
+        "config"
+      ],
+      "entry_point": "index.ts"
+    },
+    "shared_structure": {
+      "folders": [
+        "ui",
+        "api",
+        "config",
+        "lib",
+        "types"
+      ],
+      "entry_point": "index.ts"
+    }
+  },
+  "rules": [
+    "Layers can only import from layers defined in their can_import_from array",
+    "A layer cannot import from sibling modules in the same layer",
+    "Features should be isolated and can be composed into widgets or pages",
+    "Always export components and utilities through index.ts files",
+    "Keep feature-specific logic within its feature folder",
+    "UI components should accept data through props rather than accessing global state directly",
+    "All imports between layers and modules must use path aliases instead of relative paths",
+    "Use '@app/', '@routes/', '@widgets/', '@features/', '@entities/', '@shared/' aliases for imports",
+    "Always use existing UI components from the shared layer before creating new ones",
+    "Avoid overriding styles of existing components; use composition and props instead",
+    "Always create tests for new components and features",
+    "Always use the axios library for requests",
+    "Always use the i18next library for translations",
+    "Always use the lucide-react library for icons",
+    "Always use the react-hook-form library for form handling",
+    "Always use the zod library for validation",
+    "Always use the react-query library for data fetching",
+    "Always use the react-router-dom library for routing",
+    "Always use the react-hook-form library for form handling",
+    "Always use the zod library for validation",
+    "Always use the react-query library for data fetching",
+    "Only English texts and comments are allowed in the project",
+    "Never use type any"
+  ],
+  "import_aliases": {
+    "src": "@app"
+  },
+  "tech_stack": {
+    "framework": "remix",
+    "ui_library": "react",
+    "styling": {
+      "name": "tailwindcss",
+      "config": "Should follow design tokens defined in the project"
+    },
+    "state_management": "@tanstack/react-query",
+    "form_handling": "react-hook-form",
+    "validation": "zod",
+    "ui_components": "radix-ui",
+    "i18n": "i18next",
+    "icons": "lucide-react",
+    "testing": "vitest",
+    "linting": "eslint",
+    "formatting": "prettier",
+    "requests": "axios"
+  }
+}

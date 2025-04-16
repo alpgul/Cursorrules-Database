@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 1267,
+  "size": 1274,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -17738,6 +17738,104 @@
         "htmlUrl": "https://github.com/EhHhis/L5t1BAykEbY/blob/439d9ae37b9d58db106faf5236a9a8fa23f4ce1c/.cursorrules",
         "size": 2.34,
         "timestamp": "2025-04-13T08:14:07.554Z"
+      }
+    ],
+    [
+      "alphaonelabs/alphaonelabs-education-website/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/alphaonelabs/alphaonelabs-education-website/e178cda0bd4ba3e1894de0f75adce2639084ce7c/.cursorrules",
+        "repositoryId": 912561977,
+        "path": "alphaonelabs/alphaonelabs-education-website/.cursorrules",
+        "ownerName": "alphaonelabs",
+        "repositoryName": "alphaonelabs-education-website",
+        "htmlUrl": "https://github.com/alphaonelabs/alphaonelabs-education-website/blob/e178cda0bd4ba3e1894de0f75adce2639084ce7c/.cursorrules",
+        "size": 1.91,
+        "timestamp": "2025-04-16T08:16:01.187Z"
+      }
+    ],
+    [
+      "JoniJuntto/BoozeBook/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/JoniJuntto/BoozeBook/95489945792d58769387fe8ad333a3d9169634aa/.cursorrules",
+        "repositoryId": 916861584,
+        "path": "JoniJuntto/BoozeBook/.cursorrules",
+        "ownerName": "JoniJuntto",
+        "repositoryName": "BoozeBook",
+        "htmlUrl": "https://github.com/JoniJuntto/BoozeBook/blob/95489945792d58769387fe8ad333a3d9169634aa/.cursorrules",
+        "size": 1.11,
+        "timestamp": "2025-04-16T08:16:03.455Z"
+      }
+    ],
+    [
+      "collumba/frontend-boilerplate-remix/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/collumba/frontend-boilerplate-remix/9c408724f8582ccbad7642eff5d948a976758079/.cursorrules",
+        "repositoryId": 948719291,
+        "path": "collumba/frontend-boilerplate-remix/.cursorrules",
+        "ownerName": "collumba",
+        "repositoryName": "frontend-boilerplate-remix",
+        "htmlUrl": "https://github.com/collumba/frontend-boilerplate-remix/blob/9c408724f8582ccbad7642eff5d948a976758079/.cursorrules",
+        "size": 3.75,
+        "timestamp": "2025-04-16T08:16:05.355Z"
+      }
+    ],
+    [
+      "awei801122/pos-kiosk/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/awei801122/pos-kiosk/9bc02db75b0c6a04356b5b4f086079df4e1d0866/.cursorrules",
+        "repositoryId": 962829414,
+        "path": "awei801122/pos-kiosk/.cursorrules",
+        "ownerName": "awei801122",
+        "repositoryName": "pos-kiosk",
+        "htmlUrl": "https://github.com/awei801122/pos-kiosk/blob/9bc02db75b0c6a04356b5b4f086079df4e1d0866/.cursorrules",
+        "size": 3.2,
+        "timestamp": "2025-04-16T08:16:06.266Z"
+      }
+    ],
+    [
+      "JustCallMeMin/book-store/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/JustCallMeMin/book-store/9e467fbd2c6db7c57b1541f3f6578373ac510adf/.cursorrules",
+        "repositoryId": 945317447,
+        "path": "JustCallMeMin/book-store/.cursorrules",
+        "ownerName": "JustCallMeMin",
+        "repositoryName": "book-store",
+        "htmlUrl": "https://github.com/JustCallMeMin/book-store/blob/9e467fbd2c6db7c57b1541f3f6578373ac510adf/.cursorrules",
+        "size": 5.27,
+        "timestamp": "2025-04-16T08:16:06.651Z"
+      }
+    ],
+    [
+      "lonchop/cinemapedia_app/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/lonchop/cinemapedia_app/64b4d6bb3d8d57e0e4ddcd10f90c0ae28caf23f7/.cursorrules",
+        "repositoryId": 966400294,
+        "path": "lonchop/cinemapedia_app/.cursorrules",
+        "ownerName": "lonchop",
+        "repositoryName": "cinemapedia_app",
+        "htmlUrl": "https://github.com/lonchop/cinemapedia_app/blob/64b4d6bb3d8d57e0e4ddcd10f90c0ae28caf23f7/.cursorrules",
+        "size": 5.43,
+        "timestamp": "2025-04-16T08:16:09.491Z"
+      }
+    ],
+    [
+      "18Wangu/London_Hackathon_encodeAI/tonk/apps/wheel-of-fate/server/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/18Wangu/London_Hackathon_encodeAI/306ed1439e3c0af7c71d364c040c184c6be985eb/tonk/apps/wheel-of-fate/server/.cursorrules",
+        "repositoryId": 965215552,
+        "path": "18Wangu/London_Hackathon_encodeAI/tonk/apps/wheel-of-fate/server/.cursorrules",
+        "ownerName": "18Wangu",
+        "repositoryName": "London_Hackathon_encodeAI",
+        "htmlUrl": "https://github.com/18Wangu/London_Hackathon_encodeAI/blob/306ed1439e3c0af7c71d364c040c184c6be985eb/tonk/apps/wheel-of-fate/server/.cursorrules",
+        "size": 2.06,
+        "timestamp": "2025-04-16T08:16:13.402Z"
       }
     ]
   ]
