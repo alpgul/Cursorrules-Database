@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 1285,
+  "size": 1292,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -17990,6 +17990,104 @@
         "htmlUrl": "https://github.com/zench2302/friends-meeting/blob/5fe9880dcf3f483808f560ca0a4d08d4a096729f/server/.cursorrules",
         "size": 2.06,
         "timestamp": "2025-04-19T08:13:54.707Z"
+      }
+    ],
+    [
+      "fernando-duarte/econ1500-china-game-vibes/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/fernando-duarte/econ1500-china-game-vibes/95ed813305e59ce1b59e98ac54beb17444bd56f9/.cursorrules",
+        "repositoryId": 969276967,
+        "path": "fernando-duarte/econ1500-china-game-vibes/.cursorrules",
+        "ownerName": "fernando-duarte",
+        "repositoryName": "econ1500-china-game-vibes",
+        "htmlUrl": "https://github.com/fernando-duarte/econ1500-china-game-vibes/blob/95ed813305e59ce1b59e98ac54beb17444bd56f9/.cursorrules",
+        "size": 1.66,
+        "timestamp": "2025-04-22T08:15:57.264Z"
+      }
+    ],
+    [
+      "ppuzio/text-corrector/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ppuzio/text-corrector/561be185152dbe83f098dd03abd2189e425a59c6/.cursorrules",
+        "repositoryId": 968883482,
+        "path": "ppuzio/text-corrector/.cursorrules",
+        "ownerName": "ppuzio",
+        "repositoryName": "text-corrector",
+        "htmlUrl": "https://github.com/ppuzio/text-corrector/blob/561be185152dbe83f098dd03abd2189e425a59c6/.cursorrules",
+        "size": 5.14,
+        "timestamp": "2025-04-22T08:15:57.512Z"
+      }
+    ],
+    [
+      "leen2233/flickture-web/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/leen2233/flickture-web/d47acac88fa538c5c3f40e49bce377ab0b091dad/.cursorrules",
+        "repositoryId": 923609167,
+        "path": "leen2233/flickture-web/.cursorrules",
+        "ownerName": "leen2233",
+        "repositoryName": "flickture-web",
+        "htmlUrl": "https://github.com/leen2233/flickture-web/blob/d47acac88fa538c5c3f40e49bce377ab0b091dad/.cursorrules",
+        "size": 3.82,
+        "timestamp": "2025-04-22T08:15:59.088Z"
+      }
+    ],
+    [
+      "vivi-0124/portfolio/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/vivi-0124/portfolio/5126d07ff940f180a66ce21940e7538cbd4443ca/.cursorrules",
+        "repositoryId": 941280386,
+        "path": "vivi-0124/portfolio/.cursorrules",
+        "ownerName": "vivi-0124",
+        "repositoryName": "portfolio",
+        "htmlUrl": "https://github.com/vivi-0124/portfolio/blob/5126d07ff940f180a66ce21940e7538cbd4443ca/.cursorrules",
+        "size": 2.78,
+        "timestamp": "2025-04-22T08:15:59.378Z"
+      }
+    ],
+    [
+      "thiziszero/Thankschurch/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/thiziszero/Thankschurch/fc88aa1a5e02c36c750c6aac417a5cbe9393b2d8/.cursorrules",
+        "repositoryId": 969233840,
+        "path": "thiziszero/Thankschurch/.cursorrules",
+        "ownerName": "thiziszero",
+        "repositoryName": "Thankschurch",
+        "htmlUrl": "https://github.com/thiziszero/Thankschurch/blob/fc88aa1a5e02c36c750c6aac417a5cbe9393b2d8/.cursorrules",
+        "size": 1.57,
+        "timestamp": "2025-04-22T08:16:04.524Z"
+      }
+    ],
+    [
+      "ultrawideturbodev/ultra-wide-turbo-workspace/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ultrawideturbodev/ultra-wide-turbo-workspace/086c160ff2288a7de0bbfd70d0218b8aad7c7d09/.cursorrules",
+        "repositoryId": 912958846,
+        "path": "ultrawideturbodev/ultra-wide-turbo-workspace/.cursorrules",
+        "ownerName": "ultrawideturbodev",
+        "repositoryName": "ultra-wide-turbo-workspace",
+        "htmlUrl": "https://github.com/ultrawideturbodev/ultra-wide-turbo-workspace/blob/086c160ff2288a7de0bbfd70d0218b8aad7c7d09/.cursorrules",
+        "size": 4.52,
+        "timestamp": "2025-04-22T08:16:06.125Z"
+      }
+    ],
+    [
+      "cktang88/mydevenv/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/cktang88/mydevenv/7911c6ef33d91296a5cc67f8bc5f84c01f6cad64/.cursorrules",
+        "repositoryId": 158294291,
+        "path": "cktang88/mydevenv/.cursorrules",
+        "ownerName": "cktang88",
+        "repositoryName": "mydevenv",
+        "htmlUrl": "https://github.com/cktang88/mydevenv/blob/7911c6ef33d91296a5cc67f8bc5f84c01f6cad64/.cursorrules",
+        "size": 2.72,
+        "timestamp": "2025-04-22T08:16:06.534Z"
       }
     ]
   ]
