@@ -1,0 +1,42 @@
+您是 tampermonkey，typescript，vite，vue3，vueuse, lodash 的专家，对这些技术中的最佳实践和性能优化技术有深刻的了解。
+
+项目背景
+- 115Master 是一个 115 网盘的 Tampermonkey 脚本，旨在提升 `115网盘` 的使用体验。
+
+代码和结构
+ - 用相关示例编写简洁，可维护和技术准确的打字稿代码。
+ - 使用功能和声明性编程模式。
+ - 偏爱迭代和模块化以遵守干燥原则并避免代码重复。
+ - 使用辅助动词使用描述性变量名称（例如，isloading，haserror）。
+ - 系统地组织文件：每个文件应仅包含相关内容，例如导出的组件，子组件，助手，静态内容和类型。
+
+Vue 文件格式
+- 使用 <script setup lang="ts"> 语法
+- 使用 <style module> 语法
+- 在 template 中使用 :class="$style['class-name']" 语法
+- 以 Template、Script、Style 的顺序编写文件
+- 需要拆分 Composition API 的文件，需要拆分到同级 hooks 目录下
+- 需要拆分组件的文件，需要拆分到同级 components 目录下
+- 需要拆分 utils 的文件，需要拆分到同级 utils 目录下
+- 需要拆分 types 的文件，需要拆分到同级 types 目录下
+
+Typescript 类型
+- 使用 'type' 定义类型
+- 非特殊情况，不得使用 ‘any’
+- 非特殊情况，不得使用 ‘unknown’
+- 要运用好泛型定义
+
+UI风格
+- 现代化
+- 简洁
+- 美观
+- 优雅
+
+技术栈
+- tampermonkey
+- pnpm
+- typescript
+- vite
+- vue3
+- vueuse
+- lodash

@@ -1,0 +1,43 @@
+{
+  "rules": [
+    {
+      "name": "SEO Implementation",
+      "description": "Optimize for search engines based on .seo-guidelines.",
+      "sequential": true,
+      "steps": [
+        "Implement structured data (schema markup) for improved search visibility.",
+        "Ensure metadata, Open Graph, and performance optimizations are applied.",
+        "Generate XML sitemap and configure robots.txt for better indexing.",
+        "Verify all optimizations before proceeding to .development-guidelines."
+      ]
+    },
+    {
+      "name": "Development Guidelines Adherence",
+      "description": "Maintain coding standards, performance, and modularity as per .development-guidelines.",
+      "sequential": true,
+      "steps": [
+        "Ensure modular, scalable, and maintainable code.",
+        "Optimize code for performance and scalability.",
+        "Enforce best practices across frontend and backend.",
+        "Perform a final verification before project completion.",
+        "Verify all implementation steps.",
+        "Use memoization for performance optimizations. using useMemo and useCallback and memo",
+        "Arrange imports in a waterfall model",
+        "always use memo for components",
+        "always use useQuery for fetching data ",
+        "always use arrow functions and export the function in the last line of the file if possible as default export",
+        "use Emoji's in error message toast if possible",
+        "always use try catch block for error handling",
+        "Pass the error to the next middleware if it is an unexpected error"
+      ]
+    }
+  ],
+  "ignore": [
+    "node_modules",
+    "dist",
+    "build",
+    ".next",
+    ".env",
+    "pnpm-lock.yaml",
+  ]
+}
