@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 1306,
+  "size": 1310,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -18284,6 +18284,62 @@
         "htmlUrl": "https://github.com/SmartRSS/FeedFathom/blob/291d33471aaa2cc3f07935f7255429f020555013/.cursorrules",
         "size": 1.91,
         "timestamp": "2025-04-25T08:16:15.618Z"
+      }
+    ],
+    [
+      "wasabijiro/supabase-template/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/wasabijiro/supabase-template/c654928705fb28947fd128b0e2ee3331d659438a/.cursorrules",
+        "repositoryId": 952592043,
+        "path": "wasabijiro/supabase-template/.cursorrules",
+        "ownerName": "wasabijiro",
+        "repositoryName": "supabase-template",
+        "htmlUrl": "https://github.com/wasabijiro/supabase-template/blob/c654928705fb28947fd128b0e2ee3331d659438a/.cursorrules",
+        "size": 20.36,
+        "timestamp": "2025-04-28T08:36:05.254Z"
+      }
+    ],
+    [
+      "Reidblaine/MainWebsite/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Reidblaine/MainWebsite/48f545ffd79b77c244ab5cb4826c595342db28cf/.cursorrules",
+        "repositoryId": 969593860,
+        "path": "Reidblaine/MainWebsite/.cursorrules",
+        "ownerName": "Reidblaine",
+        "repositoryName": "MainWebsite",
+        "htmlUrl": "https://github.com/Reidblaine/MainWebsite/blob/48f545ffd79b77c244ab5cb4826c595342db28cf/.cursorrules",
+        "size": 1.8,
+        "timestamp": "2025-04-28T08:36:41.663Z"
+      }
+    ],
+    [
+      "2SSK/dot-files/.cursorrules_learning",
+      {
+        "name": ".cursorrules_learning",
+        "downloadUrl": "https://raw.githubusercontent.com/2SSK/dot-files/6cd8a36eb50dbc294ddee948f4d53e0fead664f1/.cursorrules_learning",
+        "repositoryId": 787811198,
+        "path": "2SSK/dot-files/.cursorrules_learning",
+        "ownerName": "2SSK",
+        "repositoryName": "dot-files",
+        "htmlUrl": "https://github.com/2SSK/dot-files/blob/6cd8a36eb50dbc294ddee948f4d53e0fead664f1/.cursorrules_learning",
+        "size": 2.93,
+        "timestamp": "2025-04-28T08:36:57.218Z"
+      }
+    ],
+    [
+      "tonk-labs/tonk/packages/create/templates/react/src/stores/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/tonk-labs/tonk/3a2251e06ae8fadfb1038d49dc6764305a9dafbc/packages/create/templates/react/src/stores/.cursorrules",
+        "repositoryId": 930902643,
+        "path": "tonk-labs/tonk/packages/create/templates/react/src/stores/.cursorrules",
+        "ownerName": "tonk-labs",
+        "repositoryName": "tonk",
+        "htmlUrl": "https://github.com/tonk-labs/tonk/blob/3a2251e06ae8fadfb1038d49dc6764305a9dafbc/packages/create/templates/react/src/stores/.cursorrules",
+        "size": 7.97,
+        "timestamp": "2025-04-28T08:37:15.748Z"
       }
     ]
   ]
