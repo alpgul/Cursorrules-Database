@@ -1,0 +1,153 @@
+# Car Insurance Application
+
+## Project Structure
+```
+src/
+├── main/
+│   ├── java/
+│   │   └── com/
+│   │       └── carInsurance/
+│   │           └── main/
+│   │               ├── config/         # Configuration classes
+│   │               ├── controller/     # MVC Controllers
+│   │               ├── model/          # Entity classes
+│   │               ├── repository/     # Data access layer
+│   │               └── service/        # Business logic layer
+│   └── resources/
+│       ├── static/                     # Static resources
+│       │   ├── css/                   # Stylesheets
+│       │   └── js/                    # JavaScript files
+│       └── templates/                  # Thymeleaf templates
+│           ├── layout/                # Layout templates
+│           └── app/                   # Application templates
+```
+
+## Technologies
+- Java 21
+- Spring Boot 3.x
+- Spring Security
+- Spring Data JPA
+- Thymeleaf
+- Tailwind CSS
+- MariaDB
+- Maven
+
+## Best Practices
+
+### Java Code
+1. Use Java 21 features:
+   - Pattern matching for switch
+   - Record patterns
+   - Virtual threads
+   - Sequenced collections
+
+2. Naming Conventions:
+   - Classes: PascalCase
+   - Methods/Variables: camelCase
+   - Constants: UPPER_SNAKE_CASE
+   - Packages: lowercase
+
+3. Code Organization:
+   - One class per file
+   - Maximum file length: 500 lines
+   - Maximum method length: 50 lines
+   - Use meaningful names
+
+4. Documentation:
+   - Javadoc for public APIs
+   - Inline comments for complex logic
+   - README.md for project setup
+
+### Spring Boot
+1. Configuration:
+   - Use application.properties for configuration
+   - Use @ConfigurationProperties for type-safe config
+   - Keep sensitive data in environment variables
+
+2. Controllers:
+   - Use @RestController for APIs
+   - Use @Controller for web pages
+   - Keep controllers thin
+   - Use DTOs for data transfer
+
+3. Services:
+   - Implement business logic
+   - Use @Transactional where needed
+   - Handle exceptions appropriately
+
+4. Repositories:
+   - Extend JpaRepository
+   - Use custom queries when needed
+   - Follow naming conventions
+
+### Frontend
+1. Templates:
+   - Use layout inheritance
+   - Keep templates DRY
+   - Use fragments for reusable parts
+
+2. CSS:
+   - Use Tailwind CSS utility classes
+   - Follow mobile-first approach
+   - Maintain consistent spacing
+
+3. JavaScript:
+   - Use ES6+ features
+   - Keep scripts modular
+   - Handle errors gracefully
+
+### Database
+1. Schema:
+   - Use meaningful table names
+   - Follow naming conventions
+   - Use appropriate data types
+
+2. Queries:
+   - Use JPA/Hibernate effectively
+   - Optimize for performance
+   - Use indexes appropriately
+
+### Security
+1. Authentication:
+   - Use Spring Security
+   - Implement proper password hashing
+   - Use CSRF protection
+
+2. Authorization:
+   - Implement role-based access
+   - Secure sensitive endpoints
+   - Validate user input
+
+### Testing
+1. Unit Tests:
+   - Test business logic
+   - Use JUnit 5
+   - Mock dependencies
+
+2. Integration Tests:
+   - Test API endpoints
+   - Test database operations
+   - Use test containers
+
+### Git
+1. Branching:
+   - main: production code
+   - develop: development code
+   - feature/*: new features
+   - bugfix/*: bug fixes
+
+2. Commits:
+   - Use meaningful messages
+   - Follow conventional commits
+   - Keep commits atomic
+
+### Performance
+1. Optimization:
+   - Use connection pooling
+   - Implement caching
+   - Optimize database queries
+
+2. Monitoring:
+   - Use Spring Boot Actuator
+   - Monitor application metrics
+   - Log important events 

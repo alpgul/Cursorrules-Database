@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 1310,
+  "size": 1323,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -18340,6 +18340,188 @@
         "htmlUrl": "https://github.com/tonk-labs/tonk/blob/3a2251e06ae8fadfb1038d49dc6764305a9dafbc/packages/create/templates/react/src/stores/.cursorrules",
         "size": 7.97,
         "timestamp": "2025-04-28T08:37:15.748Z"
+      }
+    ],
+    [
+      "NethermindEth/Agent4rena-agent-template/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/NethermindEth/Agent4rena-agent-template/0260776456a18e07f9e5a493532f8c8eac876b17/.cursorrules",
+        "repositoryId": 955266115,
+        "path": "NethermindEth/Agent4rena-agent-template/.cursorrules",
+        "ownerName": "NethermindEth",
+        "repositoryName": "Agent4rena-agent-template",
+        "htmlUrl": "https://github.com/NethermindEth/Agent4rena-agent-template/blob/0260776456a18e07f9e5a493532f8c8eac876b17/.cursorrules",
+        "size": 1.98,
+        "timestamp": "2025-05-01T08:16:08.651Z"
+      }
+    ],
+    [
+      "drewqt11/IT342-WorkforceHub/frontend-mobile/.cursorrules-mobile",
+      {
+        "name": ".cursorrules-mobile",
+        "downloadUrl": "https://raw.githubusercontent.com/drewqt11/IT342-WorkforceHub/a2bd20d6314fc883a0f7cb142bf173431e1b3f69/frontend-mobile/.cursorrules-mobile",
+        "repositoryId": 927508807,
+        "path": "drewqt11/IT342-WorkforceHub/frontend-mobile/.cursorrules-mobile",
+        "ownerName": "drewqt11",
+        "repositoryName": "IT342-WorkforceHub",
+        "htmlUrl": "https://github.com/drewqt11/IT342-WorkforceHub/blob/a2bd20d6314fc883a0f7cb142bf173431e1b3f69/frontend-mobile/.cursorrules-mobile",
+        "size": 2.68,
+        "timestamp": "2025-05-01T08:16:12.481Z"
+      }
+    ],
+    [
+      "openintegrations/openint/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/openintegrations/openint/82beb10f41b68af8fe112bcd8490c85d338c10ce/.cursorrules",
+        "repositoryId": 831706332,
+        "path": "openintegrations/openint/.cursorrules",
+        "ownerName": "openintegrations",
+        "repositoryName": "openint",
+        "htmlUrl": "https://github.com/openintegrations/openint/blob/82beb10f41b68af8fe112bcd8490c85d338c10ce/.cursorrules",
+        "size": 4.29,
+        "timestamp": "2025-05-01T08:16:12.878Z"
+      }
+    ],
+    [
+      "Zaroganos/medocker/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Zaroganos/medocker/8d952a23b6861a1109aaa0eff35d97fcde09d56e/.cursorrules",
+        "repositoryId": 947571548,
+        "path": "Zaroganos/medocker/.cursorrules",
+        "ownerName": "Zaroganos",
+        "repositoryName": "medocker",
+        "htmlUrl": "https://github.com/Zaroganos/medocker/blob/8d952a23b6861a1109aaa0eff35d97fcde09d56e/.cursorrules",
+        "size": 3.41,
+        "timestamp": "2025-05-01T08:16:14.247Z"
+      }
+    ],
+    [
+      "Fractal-Tess/UniBrainrot/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Fractal-Tess/UniBrainrot/0f9dc7f0a203ca2620f69454f3524869227058d1/.cursorrules",
+        "repositoryId": 974949409,
+        "path": "Fractal-Tess/UniBrainrot/.cursorrules",
+        "ownerName": "Fractal-Tess",
+        "repositoryName": "UniBrainrot",
+        "htmlUrl": "https://github.com/Fractal-Tess/UniBrainrot/blob/0f9dc7f0a203ca2620f69454f3524869227058d1/.cursorrules",
+        "size": 3.6,
+        "timestamp": "2025-05-01T08:16:17.107Z"
+      }
+    ],
+    [
+      "Jithin-Garapati/Open-Screen-Studio/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Jithin-Garapati/Open-Screen-Studio/9dc96b8cd8935f82d88c56e1e3a4bffa0f12437b/.cursorrules",
+        "repositoryId": 909606706,
+        "path": "Jithin-Garapati/Open-Screen-Studio/.cursorrules",
+        "ownerName": "Jithin-Garapati",
+        "repositoryName": "Open-Screen-Studio",
+        "htmlUrl": "https://github.com/Jithin-Garapati/Open-Screen-Studio/blob/9dc96b8cd8935f82d88c56e1e3a4bffa0f12437b/.cursorrules",
+        "size": 5.28,
+        "timestamp": "2025-05-01T08:16:17.763Z"
+      }
+    ],
+    [
+      "The-Pocket/PocketFlow-Tutorial-AI-Paul-Graham/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/The-Pocket/PocketFlow-Tutorial-AI-Paul-Graham/eb304ff3774606a2bdb67cc4065605c4ac2f8ca7/.cursorrules",
+        "repositoryId": 928764251,
+        "path": "The-Pocket/PocketFlow-Tutorial-AI-Paul-Graham/.cursorrules",
+        "ownerName": "The-Pocket",
+        "repositoryName": "PocketFlow-Tutorial-AI-Paul-Graham",
+        "htmlUrl": "https://github.com/The-Pocket/PocketFlow-Tutorial-AI-Paul-Graham/blob/eb304ff3774606a2bdb67cc4065605c4ac2f8ca7/.cursorrules",
+        "size": 61.78,
+        "timestamp": "2025-05-01T08:16:19.884Z"
+      }
+    ],
+    [
+      "tonk-labs/tonk/packages/create/templates/node/instructions/keepsync/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/tonk-labs/tonk/9087a3c06246e271fbf513f4f00944fcac8c2963/packages/create/templates/node/instructions/keepsync/.cursorrules",
+        "repositoryId": 930902643,
+        "path": "tonk-labs/tonk/packages/create/templates/node/instructions/keepsync/.cursorrules",
+        "ownerName": "tonk-labs",
+        "repositoryName": "tonk",
+        "htmlUrl": "https://github.com/tonk-labs/tonk/blob/9087a3c06246e271fbf513f4f00944fcac8c2963/packages/create/templates/node/instructions/keepsync/.cursorrules",
+        "size": 4.26,
+        "timestamp": "2025-05-01T08:16:21.406Z"
+      }
+    ],
+    [
+      "pranjalpruthi/crossroadnew/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/pranjalpruthi/crossroadnew/8f5ec71de85b8fcbe9519809774b92ef8513e6c0/.cursorrules",
+        "repositoryId": 945796371,
+        "path": "pranjalpruthi/crossroadnew/.cursorrules",
+        "ownerName": "pranjalpruthi",
+        "repositoryName": "crossroadnew",
+        "htmlUrl": "https://github.com/pranjalpruthi/crossroadnew/blob/8f5ec71de85b8fcbe9519809774b92ef8513e6c0/.cursorrules",
+        "size": 4.28,
+        "timestamp": "2025-05-01T08:16:22.255Z"
+      }
+    ],
+    [
+      "The-Pocket/PocketFlow-Tutorial-Cold-Email-Personalization/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/The-Pocket/PocketFlow-Tutorial-Cold-Email-Personalization/200903e33e7756a880160f8b7c5d6e5dd51794a6/.cursorrules",
+        "repositoryId": 942917669,
+        "path": "The-Pocket/PocketFlow-Tutorial-Cold-Email-Personalization/.cursorrules",
+        "ownerName": "The-Pocket",
+        "repositoryName": "PocketFlow-Tutorial-Cold-Email-Personalization",
+        "htmlUrl": "https://github.com/The-Pocket/PocketFlow-Tutorial-Cold-Email-Personalization/blob/200903e33e7756a880160f8b7c5d6e5dd51794a6/.cursorrules",
+        "size": 61.78,
+        "timestamp": "2025-05-01T08:16:25.898Z"
+      }
+    ],
+    [
+      "lorine93s/morpho-frontend/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/lorine93s/morpho-frontend/2b6f0e80c0597a8733b485360ef577335329c144/.cursorrules",
+        "repositoryId": 945538812,
+        "path": "lorine93s/morpho-frontend/.cursorrules",
+        "ownerName": "lorine93s",
+        "repositoryName": "morpho-frontend",
+        "htmlUrl": "https://github.com/lorine93s/morpho-frontend/blob/2b6f0e80c0597a8733b485360ef577335329c144/.cursorrules",
+        "size": 1.75,
+        "timestamp": "2025-05-01T08:16:26.307Z"
+      }
+    ],
+    [
+      "pranjalpruthi/arboviromics/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/pranjalpruthi/arboviromics/8f5ec71de85b8fcbe9519809774b92ef8513e6c0/.cursorrules",
+        "repositoryId": 975941608,
+        "path": "pranjalpruthi/arboviromics/.cursorrules",
+        "ownerName": "pranjalpruthi",
+        "repositoryName": "arboviromics",
+        "htmlUrl": "https://github.com/pranjalpruthi/arboviromics/blob/8f5ec71de85b8fcbe9519809774b92ef8513e6c0/.cursorrules",
+        "size": 4.28,
+        "timestamp": "2025-05-01T08:16:26.714Z"
+      }
+    ],
+    [
+      "skavenz/vibe-suite/app2-memorymap/server/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/skavenz/vibe-suite/d23515e45a48f8009d217971fd978955a15511ea/app2-memorymap/server/.cursorrules",
+        "repositoryId": 968784863,
+        "path": "skavenz/vibe-suite/app2-memorymap/server/.cursorrules",
+        "ownerName": "skavenz",
+        "repositoryName": "vibe-suite",
+        "htmlUrl": "https://github.com/skavenz/vibe-suite/blob/d23515e45a48f8009d217971fd978955a15511ea/app2-memorymap/server/.cursorrules",
+        "size": 2.06,
+        "timestamp": "2025-05-01T08:16:26.916Z"
       }
     ]
   ]
