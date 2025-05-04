@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 1323,
+  "size": 1332,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -18522,6 +18522,132 @@
         "htmlUrl": "https://github.com/skavenz/vibe-suite/blob/d23515e45a48f8009d217971fd978955a15511ea/app2-memorymap/server/.cursorrules",
         "size": 2.06,
         "timestamp": "2025-05-01T08:16:26.916Z"
+      }
+    ],
+    [
+      "rize-network/app-studio-web/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/rize-network/app-studio-web/f8c28dee0d60c63a661f6251abca21403307128f/.cursorrules",
+        "repositoryId": 712519796,
+        "path": "rize-network/app-studio-web/.cursorrules",
+        "ownerName": "rize-network",
+        "repositoryName": "app-studio-web",
+        "htmlUrl": "https://github.com/rize-network/app-studio-web/blob/f8c28dee0d60c63a661f6251abca21403307128f/.cursorrules",
+        "size": 24.72,
+        "timestamp": "2025-05-04T08:14:04.075Z"
+      }
+    ],
+    [
+      "TienZe/Toeic-Booster-FE/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/TienZe/Toeic-Booster-FE/866b722a83a83663ec3b57955d1de26b12c50389/.cursorrules",
+        "repositoryId": 949377749,
+        "path": "TienZe/Toeic-Booster-FE/.cursorrules",
+        "ownerName": "TienZe",
+        "repositoryName": "Toeic-Booster-FE",
+        "htmlUrl": "https://github.com/TienZe/Toeic-Booster-FE/blob/866b722a83a83663ec3b57955d1de26b12c50389/.cursorrules",
+        "size": 3.33,
+        "timestamp": "2025-05-04T08:14:06.742Z"
+      }
+    ],
+    [
+      "sarvex/cpp-leetcode/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/sarvex/cpp-leetcode/b407a61bb74f7e0dbf0dc1d5a5e1b9969a78d78b/.cursorrules",
+        "repositoryId": 973402376,
+        "path": "sarvex/cpp-leetcode/.cursorrules",
+        "ownerName": "sarvex",
+        "repositoryName": "cpp-leetcode",
+        "htmlUrl": "https://github.com/sarvex/cpp-leetcode/blob/b407a61bb74f7e0dbf0dc1d5a5e1b9969a78d78b/.cursorrules",
+        "size": 6.56,
+        "timestamp": "2025-05-04T08:14:06.992Z"
+      }
+    ],
+    [
+      "skavenz/vibe-suite/friends-meeting/server/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/skavenz/vibe-suite/d23515e45a48f8009d217971fd978955a15511ea/friends-meeting/server/.cursorrules",
+        "repositoryId": 968784863,
+        "path": "skavenz/vibe-suite/friends-meeting/server/.cursorrules",
+        "ownerName": "skavenz",
+        "repositoryName": "vibe-suite",
+        "htmlUrl": "https://github.com/skavenz/vibe-suite/blob/d23515e45a48f8009d217971fd978955a15511ea/friends-meeting/server/.cursorrules",
+        "size": 2.06,
+        "timestamp": "2025-05-04T08:14:11.506Z"
+      }
+    ],
+    [
+      "S7331331337S/scrapybara-ts-template/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/S7331331337S/scrapybara-ts-template/b8330d8beb2af5f9b375e265ec0a0ba523a5a07a/.cursorrules",
+        "repositoryId": 976976766,
+        "path": "S7331331337S/scrapybara-ts-template/.cursorrules",
+        "ownerName": "S7331331337S",
+        "repositoryName": "scrapybara-ts-template",
+        "htmlUrl": "https://github.com/S7331331337S/scrapybara-ts-template/blob/b8330d8beb2af5f9b375e265ec0a0ba523a5a07a/.cursorrules",
+        "size": 7.48,
+        "timestamp": "2025-05-04T08:14:11.926Z"
+      }
+    ],
+    [
+      "antiwork/flexile/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/antiwork/flexile/765f0b969e4d0e9edb04b76afd25245fa8bde75b/.cursorrules",
+        "repositoryId": 955904085,
+        "path": "antiwork/flexile/.cursorrules",
+        "ownerName": "antiwork",
+        "repositoryName": "flexile",
+        "htmlUrl": "https://github.com/antiwork/flexile/blob/765f0b969e4d0e9edb04b76afd25245fa8bde75b/.cursorrules",
+        "size": 1.2,
+        "timestamp": "2025-05-04T08:14:12.351Z"
+      }
+    ],
+    [
+      "luke-a-thompson/QuickSig/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/luke-a-thompson/QuickSig/26fac3aa12ee966b03c1441527ebf3677b4a90f3/.cursorrules",
+        "repositoryId": 976533192,
+        "path": "luke-a-thompson/QuickSig/.cursorrules",
+        "ownerName": "luke-a-thompson",
+        "repositoryName": "QuickSig",
+        "htmlUrl": "https://github.com/luke-a-thompson/QuickSig/blob/26fac3aa12ee966b03c1441527ebf3677b4a90f3/.cursorrules",
+        "size": 1.77,
+        "timestamp": "2025-05-04T08:14:13.960Z"
+      }
+    ],
+    [
+      "B-Eddie/barcodescan/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/B-Eddie/barcodescan/b7544fb3fbb54a202f5c9d875d24fc398e0418ad/.cursorrules",
+        "repositoryId": 976396327,
+        "path": "B-Eddie/barcodescan/.cursorrules",
+        "ownerName": "B-Eddie",
+        "repositoryName": "barcodescan",
+        "htmlUrl": "https://github.com/B-Eddie/barcodescan/blob/b7544fb3fbb54a202f5c9d875d24fc398e0418ad/.cursorrules",
+        "size": 2.32,
+        "timestamp": "2025-05-04T08:14:14.291Z"
+      }
+    ],
+    [
+      "letsmakeindiagrow/awm-mvp-backend/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/letsmakeindiagrow/awm-mvp-backend/f8add9f7c7553c19041461b5b31a86a498bf39e8/.cursorrules",
+        "repositoryId": 928691968,
+        "path": "letsmakeindiagrow/awm-mvp-backend/.cursorrules",
+        "ownerName": "letsmakeindiagrow",
+        "repositoryName": "awm-mvp-backend",
+        "htmlUrl": "https://github.com/letsmakeindiagrow/awm-mvp-backend/blob/f8add9f7c7553c19041461b5b31a86a498bf39e8/.cursorrules",
+        "size": 2.93,
+        "timestamp": "2025-05-04T08:14:15.035Z"
       }
     ]
   ]
