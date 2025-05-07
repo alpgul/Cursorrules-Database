@@ -1,0 +1,188 @@
+# Python Best Practices for Enterprise-Grade Applications
+
+This document outlines best practices, coding standards, and recommendations for professional Python applications, including tools for testing, monitoring, logging, observability, and file structure.
+
+
+
+
+## File Structure
+
+### Description
+Use a modular and scalable structure for the project.
+
+### Recommended Layout
+```
+app/
+├── core/                     # Core system interfaces and protocols
+│   ├── __init__.py
+│   └── events/              # Event system interfaces
+│       ├── __init__.py      # EventBus protocol
+│       └── models.py        # Core event models
+├── models/                  # Domain models
+│   ├── __init__.py
+│   ├── database.py         # Database functionality
+│   └── recording/          # Recording-related models
+│       ├── __init__.py
+│       └── events.py       # Recording event models
+├── plugins/                # Plugin implementations
+│   └── events/            # Event system plugin
+│       ├── __init__.py
+│       ├── models.py      # Event, EventContext, EventPriority
+│       ├── bus.py         # EventBus implementation
+│       └── persistence.py # Event persistence
+└── tests/                 # Test directory
+    ├── conftest.py
+    ├── test_integration/
+    └── test_unit/
+```
+
+### Directory Responsibilities
+
+#### core/
+- Contains interfaces and protocols that define system contracts
+- No implementation details, only abstract definitions
+- Used to enforce dependency inversion principle
+
+#### models/
+- Contains domain models that represent business entities
+- Pure data structures with minimal business logic
+- Organized by domain concepts (e.g., recording, user, etc.)
+
+#### plugins/
+- Contains concrete implementations of core interfaces
+- Each plugin is a self-contained module
+- Follows dependency injection principles
+
+## Example of an event creation format
+Use the following format to create or validate events:
+
+```
+Event.create(
+    name="transcription_local.completed",
+    data={
+        "recording": original_event.get("recording", {}) if original_event else {},
+        "noise_reduction": original_event.get("noise_reduction", {}) if original_event else {},
+        "transcription": {
+            "status": status,
+            "timestamp": datetime.now(UTC).isoformat(),
+            "recording_id": recording_id,
+            "output_file": output_file,
+            "transcript_paths": transcript_paths,
+            "model": self.get_config("model", "base"),
+            "language": self.get_config("language", "en"),
+            "speaker_labels": {
+                "microphone": speaker_label,
+                "system": system_label
+            }
+        },
+        "metadata": combined_metadata,  # Include metadata in completion event
+        "context": {
+            "correlation_id": correlation_id,
+            "source_plugin": self.name,
+            "metadata": combined_metadata
+        }
+    },
+    correlation_id=correlation_id,
+    source_plugin=self.name,
+    priority=EventPriority.NORMAL
+)
+```
+
+## Architecture Guidelines
+
+### Key Components
+- **Models**: Data structures and database interactions.
+- **Plugins**: Additional functionalities and event handling.
+- **Utils**: Utility functions like logging configuration.
+
+# [PROJECT TITLE] - [SHORT PROJECT DESCRIPTION]
+
+Every time you choose to apply a rule(s), explicitly state the rule(s) in the output. You can abbreviate the rule description to a single word or phrase.
+
+Regardless of the request, think step by step and create a plan before implementing.  Create a plan before each code change iteration within the chat flow.
+
+## Project Stack
+- Python
+- FastAPI
+- Anthropic
+- MongoDB
+
+## Style Guide
+### Base Standards
+- PEP 8
+- Pyright
+- Pylint
+
+### Formatting
+- Indent: 4 spaces
+- Line Length: 79 chars
+- Docstring: Google style
+
+## Code Organization
+### Structure
+- Descriptive names
+- Module headers
+- Logical chunks
+- Error comments
+- Test refs
+
+### Conventions
+#### Naming
+- snake_case (default)
+- PascalCase (classes)
+
+#### Imports
+1. stdlib
+2. third_party
+3. local
+
+#### Limits
+- Function lines: 50
+- Nested blocks: 3
+
+## Testing
+### Tools
+- pytest
+- pytest-cov
+
+### Focus
+- Functionality over implementation
+
+### Patterns
+#### Structure
+- Unit tests mirror src
+- Integration per endpoint
+- Conftest for fixtures
+
+#### Coverage
+- Happy path
+- Error handling
+- Edge cases
+- Database errors
+
+#### Fixtures
+- mock_mongodb
+- test_app
+- test_client
+
+#### Async
+- mark_asyncio
+- async_mock_responses
+
+## Dependency Management
+- Use **poetry** for dependency management
+- Pin dependencies in `pyproject.toml` or `requirements.txt`
+- Regularly audit dependencies for vulnerabilities using:
+  - **safety**
+  - **dependabot**
+
+
+## Git Commits
+- Use conventional commit prefixes (feat:, fix:, etc.)
+- Keep messages concise and reference issues
+
+## Security
+- No secrets in code
+- Validate inputs
+- Encrypt sensitive data
+- Follow OWASP best practices for input validation and authentication
