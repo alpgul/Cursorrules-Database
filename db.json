@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 1351,
+  "size": 1362,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -18914,6 +18914,160 @@
         "htmlUrl": "https://github.com/kocaemre/piguard/blob/c96cd36510d51810c4775129861f4d3e837f3dae/.cursor/rules/.cursorrules",
         "size": 1.86,
         "timestamp": "2025-05-07T08:17:38.090Z"
+      }
+    ],
+    [
+      "joelhooks/joelfit/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/joelhooks/joelfit/8ff60c815b881b3af8ca6a5a8f4787fed7d5d185/.cursorrules",
+        "repositoryId": 915037288,
+        "path": "joelhooks/joelfit/.cursorrules",
+        "ownerName": "joelhooks",
+        "repositoryName": "joelfit",
+        "htmlUrl": "https://github.com/joelhooks/joelfit/blob/8ff60c815b881b3af8ca6a5a8f4787fed7d5d185/.cursorrules",
+        "size": 2.87,
+        "timestamp": "2025-05-10T08:13:55.251Z"
+      }
+    ],
+    [
+      "fabianferno/delta-agent/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/fabianferno/delta-agent/03e6b4a9632a75c4f486d0e5bf5a586895420a79/.cursorrules",
+        "repositoryId": 975444660,
+        "path": "fabianferno/delta-agent/.cursorrules",
+        "ownerName": "fabianferno",
+        "repositoryName": "delta-agent",
+        "htmlUrl": "https://github.com/fabianferno/delta-agent/blob/03e6b4a9632a75c4f486d0e5bf5a586895420a79/.cursorrules",
+        "size": 2.49,
+        "timestamp": "2025-05-10T08:13:57.302Z"
+      }
+    ],
+    [
+      "rogadev/HTML-Wireframes/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/rogadev/HTML-Wireframes/42e571050dee5ea689ea1a3f7bb521a2c6f01149/.cursorrules",
+        "repositoryId": 979537156,
+        "path": "rogadev/HTML-Wireframes/.cursorrules",
+        "ownerName": "rogadev",
+        "repositoryName": "HTML-Wireframes",
+        "htmlUrl": "https://github.com/rogadev/HTML-Wireframes/blob/42e571050dee5ea689ea1a3f7bb521a2c6f01149/.cursorrules",
+        "size": 9.22,
+        "timestamp": "2025-05-10T08:13:59.357Z"
+      }
+    ],
+    [
+      "josedu90/mcp-suiteg/.cursor/rules/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/josedu90/mcp-suiteg/e11bec6a4cd84b6829b0a28175d93438797d4ef1/.cursor/rules/.cursorrules",
+        "repositoryId": 974882612,
+        "path": "josedu90/mcp-suiteg/.cursor/rules/.cursorrules",
+        "ownerName": "josedu90",
+        "repositoryName": "mcp-suiteg",
+        "htmlUrl": "https://github.com/josedu90/mcp-suiteg/blob/e11bec6a4cd84b6829b0a28175d93438797d4ef1/.cursor/rules/.cursorrules",
+        "size": 9.47,
+        "timestamp": "2025-05-10T08:14:00.488Z"
+      }
+    ],
+    [
+      "ya3k/moto-rental/.cursor/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ya3k/moto-rental/40787c1820d6459ce11edfc700ef3a828eff24aa/.cursor/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 977536942,
+        "path": "ya3k/moto-rental/.cursor/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "ya3k",
+        "repositoryName": "moto-rental",
+        "htmlUrl": "https://github.com/ya3k/moto-rental/blob/40787c1820d6459ce11edfc700ef3a828eff24aa/.cursor/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "size": 6.32,
+        "timestamp": "2025-05-10T08:14:00.837Z"
+      }
+    ],
+    [
+      "raisa05/Encode-Tonk/semsync/server/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/raisa05/Encode-Tonk/b2db609282336670e18e7dc294e179aaf98baabf/semsync/server/.cursorrules",
+        "repositoryId": 965309062,
+        "path": "raisa05/Encode-Tonk/semsync/server/.cursorrules",
+        "ownerName": "raisa05",
+        "repositoryName": "Encode-Tonk",
+        "htmlUrl": "https://github.com/raisa05/Encode-Tonk/blob/b2db609282336670e18e7dc294e179aaf98baabf/semsync/server/.cursorrules",
+        "size": 2.06,
+        "timestamp": "2025-05-10T08:14:03.521Z"
+      }
+    ],
+    [
+      "Rajat352/Mindikot/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Rajat352/Mindikot/2ed3c4ede64f85c0f192c3809d9a025f87848d41/.cursorrules",
+        "repositoryId": 980778682,
+        "path": "Rajat352/Mindikot/.cursorrules",
+        "ownerName": "Rajat352",
+        "repositoryName": "Mindikot",
+        "htmlUrl": "https://github.com/Rajat352/Mindikot/blob/2ed3c4ede64f85c0f192c3809d9a025f87848d41/.cursorrules",
+        "size": 4.27,
+        "timestamp": "2025-05-10T08:14:04.010Z"
+      }
+    ],
+    [
+      "skavenz/vibe-suite/app3-vibecalendar/server/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/skavenz/vibe-suite/d23515e45a48f8009d217971fd978955a15511ea/app3-vibecalendar/server/.cursorrules",
+        "repositoryId": 968784863,
+        "path": "skavenz/vibe-suite/app3-vibecalendar/server/.cursorrules",
+        "ownerName": "skavenz",
+        "repositoryName": "vibe-suite",
+        "htmlUrl": "https://github.com/skavenz/vibe-suite/blob/d23515e45a48f8009d217971fd978955a15511ea/app3-vibecalendar/server/.cursorrules",
+        "size": 2.06,
+        "timestamp": "2025-05-10T08:14:04.819Z"
+      }
+    ],
+    [
+      "ian/startupkit/templates/repo/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ian/startupkit/61a25a2fedac2fd7421321eb679a2f66e0d39c38/templates/repo/.cursorrules",
+        "repositoryId": 835732840,
+        "path": "ian/startupkit/templates/repo/.cursorrules",
+        "ownerName": "ian",
+        "repositoryName": "startupkit",
+        "htmlUrl": "https://github.com/ian/startupkit/blob/61a25a2fedac2fd7421321eb679a2f66e0d39c38/templates/repo/.cursorrules",
+        "size": 2.67,
+        "timestamp": "2025-05-10T08:14:04.939Z"
+      }
+    ],
+    [
+      "tonk-labs/tonk/examples/my-world/src/stores/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/tonk-labs/tonk/a004e7b0088ce67fc7785ebfd6912d3cc3de8434/examples/my-world/src/stores/.cursorrules",
+        "repositoryId": 930902643,
+        "path": "tonk-labs/tonk/examples/my-world/src/stores/.cursorrules",
+        "ownerName": "tonk-labs",
+        "repositoryName": "tonk",
+        "htmlUrl": "https://github.com/tonk-labs/tonk/blob/a004e7b0088ce67fc7785ebfd6912d3cc3de8434/examples/my-world/src/stores/.cursorrules",
+        "size": 7.97,
+        "timestamp": "2025-05-10T08:14:05.236Z"
+      }
+    ],
+    [
+      "abutun/Galactic-Striker/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/abutun/Galactic-Striker/190027f47dd66d62d3e141535277c0f7e77db3a0/.cursorrules",
+        "repositoryId": 929972574,
+        "path": "abutun/Galactic-Striker/.cursorrules",
+        "ownerName": "abutun",
+        "repositoryName": "Galactic-Striker",
+        "htmlUrl": "https://github.com/abutun/Galactic-Striker/blob/190027f47dd66d62d3e141535277c0f7e77db3a0/.cursorrules",
+        "size": 4.24,
+        "timestamp": "2025-05-10T08:14:06.149Z"
       }
     ]
   ]
