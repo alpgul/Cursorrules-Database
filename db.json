@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 1363,
+  "size": 1384,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -19082,6 +19082,300 @@
         "htmlUrl": "https://github.com/trilogy-group/MediConsult-jTU25/blob/f688da5835f5c782b15c8e9731687434e069b14b/.cursor/rules/.cursorrules.mdc",
         "size": 2.88,
         "timestamp": "2025-05-13T08:16:58.601Z"
+      }
+    ],
+    [
+      "dprabhua/mayuracoirs/.cursorrules.json",
+      {
+        "name": ".cursorrules.json",
+        "downloadUrl": "https://raw.githubusercontent.com/dprabhua/mayuracoirs/fe5f4b8674ceee3e1ea3609735623ee1306e171b/.cursorrules.json",
+        "repositoryId": 838937387,
+        "path": "dprabhua/mayuracoirs/.cursorrules.json",
+        "ownerName": "dprabhua",
+        "repositoryName": "mayuracoirs",
+        "htmlUrl": "https://github.com/dprabhua/mayuracoirs/blob/fe5f4b8674ceee3e1ea3609735623ee1306e171b/.cursorrules.json",
+        "size": 6.79,
+        "timestamp": "2025-05-16T08:16:35.687Z"
+      }
+    ],
+    [
+      "veranoby/sports-bets/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/veranoby/sports-bets/327146b1e8fec7fd93b2b9e61e68c9feb62164cd/.cursorrules",
+        "repositoryId": 981647858,
+        "path": "veranoby/sports-bets/.cursorrules",
+        "ownerName": "veranoby",
+        "repositoryName": "sports-bets",
+        "htmlUrl": "https://github.com/veranoby/sports-bets/blob/327146b1e8fec7fd93b2b9e61e68c9feb62164cd/.cursorrules",
+        "size": 5.35,
+        "timestamp": "2025-05-16T08:16:37.760Z"
+      }
+    ],
+    [
+      "LeConsulat2/jp-react-nomad/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/LeConsulat2/jp-react-nomad/a8e6c249bdf605f911b2755b5e3a286dfe2b676b/.cursorrules",
+        "repositoryId": 971755414,
+        "path": "LeConsulat2/jp-react-nomad/.cursorrules",
+        "ownerName": "LeConsulat2",
+        "repositoryName": "jp-react-nomad",
+        "htmlUrl": "https://github.com/LeConsulat2/jp-react-nomad/blob/a8e6c249bdf605f911b2755b5e3a286dfe2b676b/.cursorrules",
+        "size": 2.18,
+        "timestamp": "2025-05-16T08:16:38.292Z"
+      }
+    ],
+    [
+      "nghuuan2803/ShoeStoreBlazor/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/nghuuan2803/ShoeStoreBlazor/118aaa55b6ca87327af82de1be4ab653b4b2b6b1/.cursorrules",
+        "repositoryId": 980106122,
+        "path": "nghuuan2803/ShoeStoreBlazor/.cursorrules",
+        "ownerName": "nghuuan2803",
+        "repositoryName": "ShoeStoreBlazor",
+        "htmlUrl": "https://github.com/nghuuan2803/ShoeStoreBlazor/blob/118aaa55b6ca87327af82de1be4ab653b4b2b6b1/.cursorrules",
+        "size": 3.12,
+        "timestamp": "2025-05-16T08:16:38.927Z"
+      }
+    ],
+    [
+      "enochaseks/sideeye/rules/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/enochaseks/sideeye/cd04048cef5e53f98f55bc457b5e097cd1e67680/rules/.cursorrules",
+        "repositoryId": 967432827,
+        "path": "enochaseks/sideeye/rules/.cursorrules",
+        "ownerName": "enochaseks",
+        "repositoryName": "sideeye",
+        "htmlUrl": "https://github.com/enochaseks/sideeye/blob/cd04048cef5e53f98f55bc457b5e097cd1e67680/rules/.cursorrules",
+        "size": 10.79,
+        "timestamp": "2025-05-16T08:16:39.196Z"
+      }
+    ],
+    [
+      "NeuraNotes/NeuralNotes/NeuralNotes/DesingSandbox/Designs/Code/Prototype_1/public/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/NeuraNotes/NeuralNotes/5dbfd01f013b4c8596ebd213c7e7f22a9d9a7064/NeuralNotes/DesingSandbox/Designs/Code/Prototype_1/public/.cursorrules",
+        "repositoryId": 964438800,
+        "path": "NeuraNotes/NeuralNotes/NeuralNotes/DesingSandbox/Designs/Code/Prototype_1/public/.cursorrules",
+        "ownerName": "NeuraNotes",
+        "repositoryName": "NeuralNotes",
+        "htmlUrl": "https://github.com/NeuraNotes/NeuralNotes/blob/5dbfd01f013b4c8596ebd213c7e7f22a9d9a7064/NeuralNotes/DesingSandbox/Designs/Code/Prototype_1/public/.cursorrules",
+        "size": 1.94,
+        "timestamp": "2025-05-16T08:16:39.706Z"
+      }
+    ],
+    [
+      "jcoh3n/42AMIS/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/jcoh3n/42AMIS/25f49a123918d6062b71673ab7066c6668cedf28/.cursorrules",
+        "repositoryId": 983398693,
+        "path": "jcoh3n/42AMIS/.cursorrules",
+        "ownerName": "jcoh3n",
+        "repositoryName": "42AMIS",
+        "htmlUrl": "https://github.com/jcoh3n/42AMIS/blob/25f49a123918d6062b71673ab7066c6668cedf28/.cursorrules",
+        "size": 1.9,
+        "timestamp": "2025-05-16T08:16:40.054Z"
+      }
+    ],
+    [
+      "peewilliam/PVP-RPG/memory-bank/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/peewilliam/PVP-RPG/3a2237f5eb4de9c2c865d4a37c934afe06efa35e/memory-bank/.cursorrules",
+        "repositoryId": 966327941,
+        "path": "peewilliam/PVP-RPG/memory-bank/.cursorrules",
+        "ownerName": "peewilliam",
+        "repositoryName": "PVP-RPG",
+        "htmlUrl": "https://github.com/peewilliam/PVP-RPG/blob/3a2237f5eb4de9c2c865d4a37c934afe06efa35e/memory-bank/.cursorrules",
+        "size": 12.75,
+        "timestamp": "2025-05-16T08:16:40.181Z"
+      }
+    ],
+    [
+      "marcodavidd020/Clothing-Ecommerce/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/marcodavidd020/Clothing-Ecommerce/e7aef478871f8072c4ff383a8e71f4ecc1a440d9/.cursorrules",
+        "repositoryId": 980526821,
+        "path": "marcodavidd020/Clothing-Ecommerce/.cursorrules",
+        "ownerName": "marcodavidd020",
+        "repositoryName": "Clothing-Ecommerce",
+        "htmlUrl": "https://github.com/marcodavidd020/Clothing-Ecommerce/blob/e7aef478871f8072c4ff383a8e71f4ecc1a440d9/.cursorrules",
+        "size": 2.78,
+        "timestamp": "2025-05-16T08:16:40.879Z"
+      }
+    ],
+    [
+      "dev-muhus/superpiccell-website/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/dev-muhus/superpiccell-website/fca9b75bd880dea894604d26da07bc68f2866f95/.cursorrules",
+        "repositoryId": 885238490,
+        "path": "dev-muhus/superpiccell-website/.cursorrules",
+        "ownerName": "dev-muhus",
+        "repositoryName": "superpiccell-website",
+        "htmlUrl": "https://github.com/dev-muhus/superpiccell-website/blob/fca9b75bd880dea894604d26da07bc68f2866f95/.cursorrules",
+        "size": 4.6,
+        "timestamp": "2025-05-16T08:16:41.741Z"
+      }
+    ],
+    [
+      "sing1ee/perplexityai/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/sing1ee/perplexityai/9bd925a19ea79291b3ab233a2f45b1f3b886cb0b/.cursorrules",
+        "repositoryId": 966465929,
+        "path": "sing1ee/perplexityai/.cursorrules",
+        "ownerName": "sing1ee",
+        "repositoryName": "perplexityai",
+        "htmlUrl": "https://github.com/sing1ee/perplexityai/blob/9bd925a19ea79291b3ab233a2f45b1f3b886cb0b/.cursorrules",
+        "size": 3.05,
+        "timestamp": "2025-05-16T08:16:42.220Z"
+      }
+    ],
+    [
+      "seemslegit42/cauldron-app/app/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/seemslegit42/cauldron-app/2bc47e24562857d1e431aadb2862d72445906dbe/app/.cursorrules",
+        "repositoryId": 982654772,
+        "path": "seemslegit42/cauldron-app/app/.cursorrules",
+        "ownerName": "seemslegit42",
+        "repositoryName": "cauldron-app",
+        "htmlUrl": "https://github.com/seemslegit42/cauldron-app/blob/2bc47e24562857d1e431aadb2862d72445906dbe/app/.cursorrules",
+        "size": 2.55,
+        "timestamp": "2025-05-16T08:16:42.343Z"
+      }
+    ],
+    [
+      "menotey/menotey-api/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/menotey/menotey-api/48574e1e4be9c1c9ffe9ae904c3f146f0c142eab/.cursorrules",
+        "repositoryId": 732773609,
+        "path": "menotey/menotey-api/.cursorrules",
+        "ownerName": "menotey",
+        "repositoryName": "menotey-api",
+        "htmlUrl": "https://github.com/menotey/menotey-api/blob/48574e1e4be9c1c9ffe9ae904c3f146f0c142eab/.cursorrules",
+        "size": 1.52,
+        "timestamp": "2025-05-16T08:16:42.486Z"
+      }
+    ],
+    [
+      "jaivial/tourtovalencia/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/jaivial/tourtovalencia/2e7529c895dac0737ab8e06960a466e4a3cac1da/.cursorrules",
+        "repositoryId": 900932173,
+        "path": "jaivial/tourtovalencia/.cursorrules",
+        "ownerName": "jaivial",
+        "repositoryName": "tourtovalencia",
+        "htmlUrl": "https://github.com/jaivial/tourtovalencia/blob/2e7529c895dac0737ab8e06960a466e4a3cac1da/.cursorrules",
+        "size": 5.06,
+        "timestamp": "2025-05-16T08:16:42.741Z"
+      }
+    ],
+    [
+      "Debora-k/wemake/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Debora-k/wemake/f725510ae25bd318e58403d34539d52d7faccf09/.cursorrules",
+        "repositoryId": 919843787,
+        "path": "Debora-k/wemake/.cursorrules",
+        "ownerName": "Debora-k",
+        "repositoryName": "wemake",
+        "htmlUrl": "https://github.com/Debora-k/wemake/blob/f725510ae25bd318e58403d34539d52d7faccf09/.cursorrules",
+        "size": 2.23,
+        "timestamp": "2025-05-16T08:16:42.873Z"
+      }
+    ],
+    [
+      "benzino98/plaschema/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/benzino98/plaschema/47f8f0bb87e2f878d376a5314584d2ef33d70cbc/.cursorrules",
+        "repositoryId": 976570567,
+        "path": "benzino98/plaschema/.cursorrules",
+        "ownerName": "benzino98",
+        "repositoryName": "plaschema",
+        "htmlUrl": "https://github.com/benzino98/plaschema/blob/47f8f0bb87e2f878d376a5314584d2ef33d70cbc/.cursorrules",
+        "size": 2.62,
+        "timestamp": "2025-05-16T08:16:43.727Z"
+      }
+    ],
+    [
+      "Tishleric/uikitxv2/memory-bank/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Tishleric/uikitxv2/57bfb3d2edf40f046fdfab38bcc5a71556ab8298/memory-bank/.cursorrules",
+        "repositoryId": 973895283,
+        "path": "Tishleric/uikitxv2/memory-bank/.cursorrules",
+        "ownerName": "Tishleric",
+        "repositoryName": "uikitxv2",
+        "htmlUrl": "https://github.com/Tishleric/uikitxv2/blob/57bfb3d2edf40f046fdfab38bcc5a71556ab8298/memory-bank/.cursorrules",
+        "size": 1.63,
+        "timestamp": "2025-05-16T08:16:44.596Z"
+      }
+    ],
+    [
+      "ledihildawan/learn-programming-languages-and-frameworks/01-testing/wemake-main/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ledihildawan/learn-programming-languages-and-frameworks/d8e8ad8bc812ccbe2f6f4f7471bfa92955ede36b/01-testing/wemake-main/.cursorrules",
+        "repositoryId": 190373873,
+        "path": "ledihildawan/learn-programming-languages-and-frameworks/01-testing/wemake-main/.cursorrules",
+        "ownerName": "ledihildawan",
+        "repositoryName": "learn-programming-languages-and-frameworks",
+        "htmlUrl": "https://github.com/ledihildawan/learn-programming-languages-and-frameworks/blob/d8e8ad8bc812ccbe2f6f4f7471bfa92955ede36b/01-testing/wemake-main/.cursorrules",
+        "size": 2.23,
+        "timestamp": "2025-05-16T08:16:46.124Z"
+      }
+    ],
+    [
+      "QuotaWish/leaves-word/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/QuotaWish/leaves-word/45187d7247a10a62fc288e6be6610eba3b078c11/.cursorrules",
+        "repositoryId": 928780653,
+        "path": "QuotaWish/leaves-word/.cursorrules",
+        "ownerName": "QuotaWish",
+        "repositoryName": "leaves-word",
+        "htmlUrl": "https://github.com/QuotaWish/leaves-word/blob/45187d7247a10a62fc288e6be6610eba3b078c11/.cursorrules",
+        "size": 4.94,
+        "timestamp": "2025-05-16T08:16:46.503Z"
+      }
+    ],
+    [
+      "musudik/ywc-portal/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/musudik/ywc-portal/1bc18920fea7e708d6bd155facd1f4eb02c759f0/.cursorrules",
+        "repositoryId": 982408478,
+        "path": "musudik/ywc-portal/.cursorrules",
+        "ownerName": "musudik",
+        "repositoryName": "ywc-portal",
+        "htmlUrl": "https://github.com/musudik/ywc-portal/blob/1bc18920fea7e708d6bd155facd1f4eb02c759f0/.cursorrules",
+        "size": 1.1,
+        "timestamp": "2025-05-16T08:16:47.318Z"
+      }
+    ],
+    [
+      "kaye2512/hoops/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/kaye2512/hoops/a2bc5aac16b273f8a3d5b392cdf2c47a816a2e54/.cursorrules",
+        "repositoryId": 905489404,
+        "path": "kaye2512/hoops/.cursorrules",
+        "ownerName": "kaye2512",
+        "repositoryName": "hoops",
+        "htmlUrl": "https://github.com/kaye2512/hoops/blob/a2bc5aac16b273f8a3d5b392cdf2c47a816a2e54/.cursorrules",
+        "size": 2.65,
+        "timestamp": "2025-05-16T08:16:47.830Z"
       }
     ]
   ]

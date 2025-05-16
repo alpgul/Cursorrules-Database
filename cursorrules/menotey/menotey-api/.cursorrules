@@ -1,0 +1,65 @@
+version: 1
+
+collections:
+  users:
+    rules:
+      read: true
+      create: true
+      update: auth.id == id
+      delete: false
+
+  polls:
+    rules:
+      read: true
+      create: auth != null
+      update: auth.id == doc.createdBy.id
+      delete: auth.id == doc.createdBy.id
+
+  votes:
+    rules:
+      read: auth != null
+      create: |
+        auth != null &&
+        doc.user.id == auth.id &&
+        isDemographicsSafe(doc.demographics) &&
+        isEligibleToVote(doc.poll.id, doc.demographics)
+      update: false
+      delete: false
+
+  comments:
+    rules:
+      read: true
+      create: auth != null && doc.user.id == auth.id
+      update: auth.id == doc.user.id
+      delete: auth.id == doc.user.id
+
+  settings:
+    rules:
+      read: auth.id == doc.user.id
+      create: auth.id == doc.user.id
+      update: auth.id == doc.user.id
+      delete: false
+
+functions:
+  isDemographicsSafe(demo):
+    return demo == null || (
+      typeof demo == 'map' &&
+      Object.keys(demo).every(key =>
+        typeof key == 'string' &&
+        (
+          typeof demo[key] == 'string' ||
+          typeof demo[key] == 'int' ||
+          typeof demo[key] == 'bool'
+        )
+      )
+    )
+
+  isEligibleToVote(pollId, demo):
+    let poll = get(/polls/$(pollId));
+    let cond = poll.eligibility;
+    return cond == null || (
+      (cond.gender == null || cond.gender == demo.gender) &&
+      (cond.region == null || cond.region == demo.region) &&
+      (cond.ageMin == null || demo.age >= cond.ageMin) &&
+      (cond.ageMax == null || demo.age <= cond.ageMax)
+    )

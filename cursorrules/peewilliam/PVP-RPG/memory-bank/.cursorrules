@@ -1,0 +1,268 @@
+# Regras e Convenções do Projeto MMORPG Topdown Isométrico
+
+## Organização do Mundo
+- O mundo possui 200x200 unidades, dividido em biomas: SPAWN, FOREST_NORTH, FOREST_WEST, MOUNTAINS, PLAINS, SWAMP, RUINS
+- Cada bioma tem densidade e escala própria para árvores, rochas e arbustos
+- Objetos do mundo não se sobrepõem (verificação de colisão na geração)
+- Casas, cercas e estruturas especiais estão removidas temporariamente
+
+## Spawns de Monstros
+- Áreas de spawn distribuídas por bioma, com diferentes quantidades, níveis e tempos de respawn
+- Apenas goblins implementados no momento
+- Respawn automático e balanceado por região
+
+## Interface do Cliente
+- Exibe FPS e ping em tempo real no canto superior esquerdo
+
+## Sistema de Colisão
+- Implementado para evitar sobreposição de objetos do mundo
+- Cada entidade possui raio de colisão específico
+
+## Arquitetura
+- MCP (Model-Controller-Presenter) consolidado
+- Sincronização eficiente de entidades próximas ao jogador
+- Cliente envia comandos, servidor executa lógica
+
+## Próximos Passos
+- Implementar sistema de combate (dano, morte, XP)
+- Reavaliar retorno de casas/cercas e estruturas especiais
+- Adicionar novos tipos de monstros
+- Melhorar feedback visual e efeitos
+
+## Padrões de Comunicação
+
+### Eventos de Rede
+- Todos os eventos utilizam o formato `categoria:ação` (ex: `player:move`, `monster:spawn`)
+- Eventos são definidos no arquivo `shared/constants/gameConstants.js`
+- Fluxo de comunicação segue o padrão "cliente envia comando, servidor processa e retorna estado"
+
+### Fluxo de Sincronização de Jogadores
+1. **Conexão Inicial**: Servidor envia ID único via `player:init`
+2. **Notificação de Novos Jogadores**: Servidor notifica todos via `player:joined`
+3. **Sincronização de Jogadores Existentes**: Servidor envia informações via `player:existing`
+4. **Comandos de Movimento**:
+   - Cliente envia comandos (não posições) via `player:move`
+   - Servidor atualiza posição, calcula rotação e notifica todos via `player:moved`
+5. **Desconexão**: Servidor notifica todos via `player:disconnected`
+
+### Sincronização de Entidades do Mundo
+1. **Inicialização do Mundo**: Servidor envia todos os objetos do mundo e monstros via `world:init`
+2. **Atualizações do Mundo**: Servidor envia apenas entidades próximas ao jogador via `world:update`
+3. **Processamento de Entidades**: Cliente usa presenters específicos para cada tipo de entidade:
+   - `MonsterPresenter` para monstros
+   - `WorldObjectPresenter` para objetos do mundo
+
+## Padrões de Arquitetura
+
+### MCP (Model-Controller-Presenter)
+- **Model**: No servidor, contém toda a lógica de jogo e o estado das entidades
+- **Controller**: No servidor, interpreta inputs e orquestra lógica de alto nível
+- **Presenter**: No cliente, responsável apenas pela renderização e inputs
+
+### Regra de Servidor Autoritativo
+- O servidor é a única fonte de verdade para o estado do jogo
+- O cliente envia apenas intenções/comandos, nunca posições finais
+- Toda lógica de jogo, colisão e validação acontece no servidor
+
+## Convenções de Código
+
+### Estrutura de Arquivos
+- `/client`: Todo código do lado do cliente
+- `/server`: Todo código do lado do servidor
+- `/shared`: Código e constantes compartilhadas
+
+### Padrões de Robustez
+- Sempre validar dados recebidos antes de processá-los
+- Utilizar try/catch para lidar com exceções em funções críticas
+- Tratar erros de forma explícita para evitar crashes
+- Validar valores numéricos para evitar NaN
+
+### Tratamento de Eventos Assíncronos
+- Todos os handlers de eventos do geckos.io devem ser tratados com try/catch
+- Logs de erro devem ser descritivos para facilitar depuração
+
+## Padrões de Implementação
+
+### Renderização com Three.js
+- Câmera isométrica usando OrthographicCamera
+- Cada tipo de entidade possui sua própria representação visual:
+  - Jogadores: cubos azuis com cone verde indicando direção
+  - Monstros: cubos vermelhos com cone laranja indicando direção
+  - Árvores: cilindro marrom (tronco) com cone verde (copa)
+  - Rochas: esfera irregular cinza
+  - Arbustos: esfera verde
+  - Casas: cubo com telhado triangular
+  - Cercas: caixa fina e comprida
+- A câmera segue o jogador mantendo vista isométrica
+
+### Movimento
+- Movimento baseado em velocidade e não em posições absolutas
+- Velocidade padrão definida em PLAYER.SPEED
+- Inputs são processados a cada frame, mas posições são atualizadas pelo servidor
+- Movimentação é relativa à orientação da câmera isométrica:
+  - W (para frente): move na direção (x-1, z-1)
+  - S (para trás): move na direção (x+1, z+1)
+  - A (para esquerda): move na direção (x-1, z+1)
+  - D (para direita): move na direção (x+1, z-1)
+
+### Rotação
+- Rotação do personagem é calculada pelo servidor com base na direção do movimento
+- A direção de movimento determina o ângulo de rotação em incrementos de 45 graus (8 direções)
+- Em visão isométrica, os ângulos de rotação são ajustados para que o personagem aponte na direção oposta ao movimento:
+  - W (frente): mover para Noroeste, apontar para Sudeste (1.25π radianos)
+  - S (trás): mover para Sudeste, apontar para Noroeste (0.25π radianos)
+  - A (esquerda): mover para Sudoeste, apontar para Nordeste (1.75π radianos)
+  - D (direita): mover para Nordeste, apontar para Sudoeste (0.75π radianos)
+  - W+D: mover para Norte, apontar para Sul (1.0π radianos)
+  - W+A: mover para Oeste, apontar para Leste (1.5π radianos)
+  - S+D: mover para Leste, apontar para Oeste (0.5π radianos)
+  - S+A: mover para Sul, apontar para Norte (0.0π radianos)
+- O servidor envia a rotação calculada junto com a atualização de posição
+- O mouse será usado apenas para apontar habilidades, não para rotacionar o personagem
+
+### Sistema de Colisão
+- Implementado pelo `CollisionSystem` no servidor
+- Usa camadas de colisão (layers) para definir quais entidades colidem entre si
+- Matriz de colisão define interações: jogadores colidem com monstros e objetos do mundo, mas não entre si
+- Raios de colisão específicos para cada tipo de entidade:
+  - Jogadores: 0.5 unidades
+  - Monstros: 0.6 unidades
+  - Objetos do mundo: variável por tipo (árvores: 0.8, rochas: 1.2, etc.)
+- Resolução de colisão empurra entidades para fora umas das outras
+- Sistema de depuração via variável de ambiente `DEBUG_COLLISIONS`
+
+### Sistema de Spawn de Monstros
+- Gerenciado pelo `SpawnSystem` no servidor
+- Áreas de spawn têm parâmetros configuráveis:
+  - ID único da área
+  - Tipo de monstro
+  - Posição central e raio
+  - Número máximo de monstros
+  - Nível mínimo e máximo dos monstros
+  - Tempo de respawn
+- Inicialização do servidor cria imediatamente todos os monstros em todas as áreas
+- Quando um monstro morre, o método `die()` notifica o GameWorld, que agenda o respawn
+- Respawn ocorre após o tempo configurado, criando um novo monstro em posição aleatória dentro da área original
+- Sistema de segurança verifica periodicamente se o número correto de monstros está em cada área
+
+### Sincronização de Estado
+- O loop do servidor roda a 20 ticks por segundo (50ms)
+- Atualizações de estado são enviadas apenas quando houver mudanças
+- Estado do mundo é enviado apenas para entidades próximas ao jogador (otimização)
+
+### Sistema de Combate
+- CombatSystem gerencia todas as interações de dano
+- Diferentes tipos de habilidades (projétil, área, zona, mobilidade)
+- Quatro habilidades implementadas:
+  1. Bola de Fogo (projétil): ID 1
+  2. Teleporte (mobilidade): ID 2  
+  3. Estacas de Gelo (área + slow): ID 3
+  4. Chuva de Meteoros (zona de dano contínuo): ID 4
+- Dano tem multiplicadores baseados no tipo de entidade
+- Zonas de dano processam ticks em intervalos regulares
+
+### DamageZone
+- Criada por habilidades como Chuva de Meteoros
+- Aplica dano em ticks regulares (tickInterval)
+- Usa um loop `while` para processar múltiplos ticks se deltaTime for grande
+- Mantém controle de entidades já atingidas no tick atual (alreadyHit)
+- É removida automaticamente após a duração
+
+## Arquivos Importantes
+
+### Servidor
+- **server/src/index.js**: Inicialização do servidor e handlers de eventos
+- **server/src/models/GameWorld.js**: Coordenação de todos os sistemas
+- **server/src/models/Player.js**: Estado e comportamento do jogador
+- **server/src/models/Monster.js**: IA e comportamento dos monstros
+- **server/src/models/DamageZone.js**: Zonas de dano contínuo
+- **server/src/models/Projectile.js**: Projéteis e colisão
+- **server/src/systems/CombatSystem.js**: Processamento de dano e habilidades
+- **server/src/systems/CollisionSystem.js**: Detecção e resolução de colisões
+- **server/src/systems/SpawnSystem.js**: Spawns e respawns de monstros
+
+### Cliente
+- **client/src/main.js**: Inicialização do cliente
+- **client/src/GameClient.js**: Lógica principal do cliente
+- **client/src/presenters/PlayerPresenter.js**: Renderização de jogadores
+- **client/src/presenters/MonsterPresenter.js**: Renderização de monstros
+- **client/src/presenters/WorldObjectPresenter.js**: Renderização de objetos do mundo
+- **client/src/UI/HUD.js**: Interface do usuário
+- **client/src/skills/SkillManager.js**: Gerenciamento de habilidades no cliente
+
+### Compartilhado
+- **shared/constants/gameConstants.js**: Constantes compartilhadas
+- **shared/skills/skillsConfig.js**: Configuração de habilidades
+
+## Convenções Importantes
+
+### Ciclo de Vida
+- Loop do jogo roda a 20 ticks por segundo (50ms)
+- GameWorld.update() chama todos os sistemas
+- Projeteis e zonas de dano são atualizadas pelo CombatSystem
+- Colisões são resolvidas após movimento e antes da sincronização
+
+### Depuração
+- Logs categorizados por sistema em formato `[SISTEMA] Mensagem`
+- DEBUG_COLLISIONS = true para visualizar colisões
+- Logs extensivos para rastreamento de habilidades e zonas de dano
+
+### IDs e Referências
+- Usar ABILITY_IDS do gameConstants.js para referência de habilidades
+- Verificar tipos de monstros via constantes MONSTERS
+- Validar todos os IDs antes de processar
+
+### Otimizações
+- Enviar apenas entidades próximas aos jogadores
+- Limitar atualizações desnecessárias
+- Usar deltaTime para cálculos independentes de FPS
+
+## Dicas para Modificações
+
+### Adicionar Nova Habilidade
+1. Adicionar configuração em skillsConfig.js
+2. Adicionar ID em ABILITY_IDS no gameConstants.js
+3. Implementar lógica no CombatSystem.processAbilityUse
+4. Adicionar visual no cliente
+
+### Modificar DamageZone
+- Garantir que o loop `while` seja usado para processamento de ticks
+- Certificar-se de limpar o set alreadyHit após cada tick
+- Usar logs detalhados para depuração
+
+### Implementar Novos Efeitos de Status
+1. Adicionar definição no gameConstants.js
+2. Implementar aplicação no CombatSystem
+3. Adicionar métodos em Monster e Player para processar o efeito
+4. Implementar feedback visual no cliente
+
+## Lembretes de Cuidados
+- Testar habilidades em diferentes situações (solo, múltiplos alvos)
+- Verificar consistência de dano com multiplicadores
+- Garantir que eventos de rede sejam enviados corretamente
+- Verificar sincronização de cooldowns e custos de mana
+- Validar todos os inputs antes do processamento 
+
+# Padrões e Regras de HUD/XP
+- Sempre sincronizar level, xp, nextLevelXp e name entre servidor e cliente em todos os eventos relevantes (JOINED, EXISTING, MOVED, RESPAWN, LEVEL_UP)
+- Cliente deve atualizar player.userData e HUD imediatamente ao receber eventos do servidor
+- HUD central utiliza SVG com polígono de fundo cinza translúcido e stroke dourado dinâmico para XP
+- Progresso de XP controlado via stroke-dasharray e stroke-dashoffset
+- Padrão: HUD nunca deve mostrar valores undefined; fallback visual sempre presente
+- Decisão: clareza visual e feedback imediato são prioridade no HUD
+- Fundo da borda de XP sempre visível, mesmo sem progresso
+- Correção de bugs: garantir que HUD reflete progresso de XP desde o início do jogo 
+
+# Padrão de exibição de nomes na UI
+- Sempre exibir nomes de monstros e entidades na UI usando o campo NAME localizado da configuração, nunca o identificador interno/código.
+- Garantir localização e clareza para o jogador.
+- Exemplo: 'Zumbi da Névoa Negra' para BLACK_MIST_ZOMBIE.
+
+## Padrão: Multi-Entry Vite com Middleware Customizado
+- Quando o projeto exige múltiplos pontos de entrada (ex: landing page institucional e SPA do jogo), usar Vite com root na raiz do projeto.
+- Implementar plugin/middleware customizado no Vite para:
+  - Servir `index.html` da raiz em `/` (landing page, institucional, etc)
+  - Servir `client/index.html` em `/play` (SPA do jogo)
+  - Middleware faz alias de `/src/*` para `/client/src/*` para garantir que assets JS/CSS funcionem sem alterar caminhos no HTML
+- Não duplicar arquivos nem criar gambiarras; manter build limpo e roteamento flexível.
+- Documentar sempre que esse padrão for adotado, incluindo exemplos de configuração e motivação. 
