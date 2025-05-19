@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 1384,
+  "size": 1399,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -19376,6 +19376,216 @@
         "htmlUrl": "https://github.com/kaye2512/hoops/blob/a2bc5aac16b273f8a3d5b392cdf2c47a816a2e54/.cursorrules",
         "size": 2.65,
         "timestamp": "2025-05-16T08:16:47.830Z"
+      }
+    ],
+    [
+      "FearnDreams/MLRide/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/FearnDreams/MLRide/f518d72f684e5fdfe0976f41d7ffc63cffe57f7d/.cursorrules",
+        "repositoryId": 918644326,
+        "path": "FearnDreams/MLRide/.cursorrules",
+        "ownerName": "FearnDreams",
+        "repositoryName": "MLRide",
+        "htmlUrl": "https://github.com/FearnDreams/MLRide/blob/f518d72f684e5fdfe0976f41d7ffc63cffe57f7d/.cursorrules",
+        "size": 8.01,
+        "timestamp": "2025-05-19T08:18:35.583Z"
+      }
+    ],
+    [
+      "ZuchGuillotine/hruf/cursorrules.cursorrules",
+      {
+        "name": "cursorrules.cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ZuchGuillotine/hruf/85208ca834aef5fb23a4780f81a2dde109edc154/cursorrules.cursorrules",
+        "repositoryId": 923150351,
+        "path": "ZuchGuillotine/hruf/cursorrules.cursorrules",
+        "ownerName": "ZuchGuillotine",
+        "repositoryName": "hruf",
+        "htmlUrl": "https://github.com/ZuchGuillotine/hruf/blob/85208ca834aef5fb23a4780f81a2dde109edc154/cursorrules.cursorrules",
+        "size": 3.22,
+        "timestamp": "2025-05-19T08:18:38.311Z"
+      }
+    ],
+    [
+      "MitchellRyrie-evanBuck/Ryrie-notion/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/MitchellRyrie-evanBuck/Ryrie-notion/83aa82287a9af3bad673f16486ccdd0ca5e48295/.cursorrules",
+        "repositoryId": 896898848,
+        "path": "MitchellRyrie-evanBuck/Ryrie-notion/.cursorrules",
+        "ownerName": "MitchellRyrie-evanBuck",
+        "repositoryName": "Ryrie-notion",
+        "htmlUrl": "https://github.com/MitchellRyrie-evanBuck/Ryrie-notion/blob/83aa82287a9af3bad673f16486ccdd0ca5e48295/.cursorrules",
+        "size": 2.48,
+        "timestamp": "2025-05-19T08:18:39.558Z"
+      }
+    ],
+    [
+      "shynnobi/vite-powerflow/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/shynnobi/vite-powerflow/fcfdc147b6a3dd02659875dbec05ba8efbbfca1d/.cursorrules",
+        "repositoryId": 948731187,
+        "path": "shynnobi/vite-powerflow/.cursorrules",
+        "ownerName": "shynnobi",
+        "repositoryName": "vite-powerflow",
+        "htmlUrl": "https://github.com/shynnobi/vite-powerflow/blob/fcfdc147b6a3dd02659875dbec05ba8efbbfca1d/.cursorrules",
+        "size": 4.42,
+        "timestamp": "2025-05-19T08:18:40.541Z"
+      }
+    ],
+    [
+      "divaxi/front-end-zmp-do-an/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/divaxi/front-end-zmp-do-an/a15e17478ebc66e4701a20f54644aa387215c5b3/.cursorrules",
+        "repositoryId": 985200298,
+        "path": "divaxi/front-end-zmp-do-an/.cursorrules",
+        "ownerName": "divaxi",
+        "repositoryName": "front-end-zmp-do-an",
+        "htmlUrl": "https://github.com/divaxi/front-end-zmp-do-an/blob/a15e17478ebc66e4701a20f54644aa387215c5b3/.cursorrules",
+        "size": 4.15,
+        "timestamp": "2025-05-19T08:18:40.718Z"
+      }
+    ],
+    [
+      "maitty8879/Duduu/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/maitty8879/Duduu/10261985a55038097e43a26b2d91a716f0a71557/.cursorrules",
+        "repositoryId": 971816289,
+        "path": "maitty8879/Duduu/.cursorrules",
+        "ownerName": "maitty8879",
+        "repositoryName": "Duduu",
+        "htmlUrl": "https://github.com/maitty8879/Duduu/blob/10261985a55038097e43a26b2d91a716f0a71557/.cursorrules",
+        "size": 18.48,
+        "timestamp": "2025-05-19T08:18:42.865Z"
+      }
+    ],
+    [
+      "archedark/prompt-partner/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/archedark/prompt-partner/09622fc4b108afb9023a6a3874d3de99ec61e4e6/.cursorrules",
+        "repositoryId": 936312601,
+        "path": "archedark/prompt-partner/.cursorrules",
+        "ownerName": "archedark",
+        "repositoryName": "prompt-partner",
+        "htmlUrl": "https://github.com/archedark/prompt-partner/blob/09622fc4b108afb9023a6a3874d3de99ec61e4e6/.cursorrules",
+        "size": 3.74,
+        "timestamp": "2025-05-19T08:18:45.611Z"
+      }
+    ],
+    [
+      "1232209/MultiEnvApp/.cursor/rules/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/1232209/MultiEnvApp/80485b7b6d7bf32fcfda486a3bcae65c85a9a99c/.cursor/rules/.cursorrules",
+        "repositoryId": 983337815,
+        "path": "1232209/MultiEnvApp/.cursor/rules/.cursorrules",
+        "ownerName": "1232209",
+        "repositoryName": "MultiEnvApp",
+        "htmlUrl": "https://github.com/1232209/MultiEnvApp/blob/80485b7b6d7bf32fcfda486a3bcae65c85a9a99c/.cursor/rules/.cursorrules",
+        "size": 2.78,
+        "timestamp": "2025-05-19T08:18:47.173Z"
+      }
+    ],
+    [
+      "plusbeauxjours/makers/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/plusbeauxjours/makers/080a2fbeaa13fb57d27c2f8d6f1bb7c807620543/.cursorrules",
+        "repositoryId": 958449130,
+        "path": "plusbeauxjours/makers/.cursorrules",
+        "ownerName": "plusbeauxjours",
+        "repositoryName": "makers",
+        "htmlUrl": "https://github.com/plusbeauxjours/makers/blob/080a2fbeaa13fb57d27c2f8d6f1bb7c807620543/.cursorrules",
+        "size": 2.18,
+        "timestamp": "2025-05-19T08:18:47.904Z"
+      }
+    ],
+    [
+      "seongbae15/imake/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/seongbae15/imake/c755afac81a23a5d33b168066a2ffd35a4a59e17/.cursorrules",
+        "repositoryId": 971484396,
+        "path": "seongbae15/imake/.cursorrules",
+        "ownerName": "seongbae15",
+        "repositoryName": "imake",
+        "htmlUrl": "https://github.com/seongbae15/imake/blob/c755afac81a23a5d33b168066a2ffd35a4a59e17/.cursorrules",
+        "size": 2.18,
+        "timestamp": "2025-05-19T08:18:48.120Z"
+      }
+    ],
+    [
+      "kyu1204/wemake/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/kyu1204/wemake/d6b31c10a3a8b671e4802e084b84a57f6651f173/.cursorrules",
+        "repositoryId": 957991846,
+        "path": "kyu1204/wemake/.cursorrules",
+        "ownerName": "kyu1204",
+        "repositoryName": "wemake",
+        "htmlUrl": "https://github.com/kyu1204/wemake/blob/d6b31c10a3a8b671e4802e084b84a57f6651f173/.cursorrules",
+        "size": 2.18,
+        "timestamp": "2025-05-19T08:18:48.365Z"
+      }
+    ],
+    [
+      "enochaseks/sideeye-backend/rules/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/enochaseks/sideeye-backend/840690acb949279d9c828642ab6fbc8e47ff359c/rules/.cursorrules",
+        "repositoryId": 967359266,
+        "path": "enochaseks/sideeye-backend/rules/.cursorrules",
+        "ownerName": "enochaseks",
+        "repositoryName": "sideeye-backend",
+        "htmlUrl": "https://github.com/enochaseks/sideeye-backend/blob/840690acb949279d9c828642ab6fbc8e47ff359c/rules/.cursorrules",
+        "size": 10.79,
+        "timestamp": "2025-05-19T08:18:48.595Z"
+      }
+    ],
+    [
+      "Roasted-Codes/Dedi/dedi-bot-simple/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Roasted-Codes/Dedi/f276ec7e72af52e3a7c1af2f22b44f196c06de64/dedi-bot-simple/.cursorrules",
+        "repositoryId": 953122405,
+        "path": "Roasted-Codes/Dedi/dedi-bot-simple/.cursorrules",
+        "ownerName": "Roasted-Codes",
+        "repositoryName": "Dedi",
+        "htmlUrl": "https://github.com/Roasted-Codes/Dedi/blob/f276ec7e72af52e3a7c1af2f22b44f196c06de64/dedi-bot-simple/.cursorrules",
+        "size": 9.75,
+        "timestamp": "2025-05-19T08:18:52.940Z"
+      }
+    ],
+    [
+      "asm2212/pro/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/asm2212/pro/8564733621cf2582ea51e116392b1994367b353a/.cursorrules",
+        "repositoryId": 832473058,
+        "path": "asm2212/pro/.cursorrules",
+        "ownerName": "asm2212",
+        "repositoryName": "pro",
+        "htmlUrl": "https://github.com/asm2212/pro/blob/8564733621cf2582ea51e116392b1994367b353a/.cursorrules",
+        "size": 1.96,
+        "timestamp": "2025-05-19T08:18:55.448Z"
+      }
+    ],
+    [
+      "sinjikoro/family_coin_app/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/sinjikoro/family_coin_app/a8b891437371a9629b384c70d8bd92362d8e9b77/.cursorrules",
+        "repositoryId": 959307274,
+        "path": "sinjikoro/family_coin_app/.cursorrules",
+        "ownerName": "sinjikoro",
+        "repositoryName": "family_coin_app",
+        "htmlUrl": "https://github.com/sinjikoro/family_coin_app/blob/a8b891437371a9629b384c70d8bd92362d8e9b77/.cursorrules",
+        "size": 2.94,
+        "timestamp": "2025-05-19T08:18:57.747Z"
       }
     ]
   ]

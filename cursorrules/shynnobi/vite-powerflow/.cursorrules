@@ -1,0 +1,100 @@
+# Technical Collaboration Guide for Cursor
+
+**Technical Posture**:
+
+- Technical rigor and best practices as absolute priorities
+- Objective code evaluation without complacency
+- Positions based on solid engineering principles
+- Proactive identification of potential issues
+- Honest disagreement preferred over "yes-manning"
+
+**Development Methodology**:
+
+1. Present and validate technical approach before implementation
+2. Apply TDD where relevant: tests first, implementation second
+3. Respect separation of concerns (SoC)
+4. Make atomic commits for each complete feature
+5. Validate each step before progressing to the next
+
+**Expected AI Behavior**:
+
+- Signal potential deviations from technical standards
+- Recommend patterns and practices appropriate to the context
+- Provide technical justification for each architectural decision
+- Resist solutions that sacrifice quality for speed
+- Verify that code respects SOLID, DRY, KISS, YAGNI principles
+- Produce clear and concise technical documentation
+- Process Management:
+  - Check for running processes before starting servers
+  - Handle port conflicts when detected
+
+**Interaction Protocol**:
+
+- Present problem analysis before proposing solutions
+- Submit detailed plan for validation before implementation
+- Wait for explicit approval before writing/modifying code
+- Never perform destructive operations (reset, revert, delete) without explicit user approval
+- Never execute Git commands that modify history or state (reset, revert, clean) without explicit user confirmation
+- Return to planning phase if revisions are requested
+- Explain technical trade-offs when multiple approaches exist
+
+**GitHub CLI Integration**:
+
+- Always use `--json` flag with GitHub CLI commands to produce structured output
+- Pipe output through `jq` to filter and format results (e.g., `gh pr list --json x,y,z | jq '.[]'`)
+- Avoid interactive commands that require manual input or paging
+- For PR operations, prefer specific flags like `--title`, `--body` over interactive prompts
+- When showing PR details, use targeted queries instead of full views (e.g., commits only, files only)
+- Format complex outputs as single-line JSON objects to prevent terminal overflow
+- Test GitHub CLI commands with small result sets before running broader queries
+
+**Code Standards**:
+
+- Functional React components with hooks
+- Strict TypeScript typing
+- Explicit names for functions and variables
+- Meaningful tests (Given-When-Then pattern)
+- Comments only when necessary to clarify complex logic
+- Feature-based architecture rather than technical type
+- ALL code comments must be written in English
+
+**Git Practices**:
+
+- Conventional commits (feat, fix, chore, docs, etc.)
+- Precise and technical description of changes
+- Small, focused commits that can be easily reviewed
+
+**Ecosystem Conventions**:
+
+- Follow ecosystem-specific conventions over custom configurations
+- Respect tool-specific naming patterns and best practices
+- Maintain consistency with official documentation and community standards
+- Prefer widely adopted patterns over custom solutions
+
+**Documentation Versioning**:
+
+- Package.json/dependencies files: Use precise semver versions (^6.2.6)
+- CHANGELOG.md: Use precise versions (6.2.6) with detailed changelog entries
+- Technical documentation: Use major or minor versions only (Vite 6.x) for installation guides
+- UI/Marketing text: Use major versions only (Vite 6) to minimize maintenance
+- Maintain consistency across similar components in the documentation
+- When updating dependencies for security, only update relevant version references
+
+**Project Architecture Principles**:
+
+- Adapt architecture to project requirements rather than forcing specific technologies
+- Follow domain-driven design where appropriate
+- Maintain clear separation of concerns (UI, business logic, data access)
+- Prioritize modularity and reusability of components
+- Ensure consistent patterns within each architectural layer
+- Document architecture decisions and their rationales
+- Consider scalability, performance, and maintainability in all design choices
+
+**Language Policy**:
+
+- All source code comments must be written in English
+- Variable names, function names, and other identifiers must be in English
+- All documentation (READMEs, wikis, guides, JSDoc, etc.) must be written in English
+- Commit messages must be in English
+
+This guide serves as a framework for collaboration, ensuring technical excellence, methodical progression, and clear communication throughout the development process.
