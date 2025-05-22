@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 1399,
+  "size": 1422,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -19586,6 +19586,328 @@
         "htmlUrl": "https://github.com/sinjikoro/family_coin_app/blob/a8b891437371a9629b384c70d8bd92362d8e9b77/.cursorrules",
         "size": 2.94,
         "timestamp": "2025-05-19T08:18:57.747Z"
+      }
+    ],
+    [
+      "alexander-turner/TurnTrout.com/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/alexander-turner/TurnTrout.com/07c1c4bfbee156ce5fe3f37e784c8f9b20c7b2de/.cursorrules",
+        "repositoryId": 779839635,
+        "path": "alexander-turner/TurnTrout.com/.cursorrules",
+        "ownerName": "alexander-turner",
+        "repositoryName": "TurnTrout.com",
+        "htmlUrl": "https://github.com/alexander-turner/TurnTrout.com/blob/07c1c4bfbee156ce5fe3f37e784c8f9b20c7b2de/.cursorrules",
+        "size": 4.02,
+        "timestamp": "2025-05-22T08:16:40.811Z"
+      }
+    ],
+    [
+      "ShiXiangYu1/real-time-data-warehouse/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ShiXiangYu1/real-time-data-warehouse/013ed0c7105608e4b16f2ac39f46689b28b48e21/.cursorrules",
+        "repositoryId": 986721598,
+        "path": "ShiXiangYu1/real-time-data-warehouse/.cursorrules",
+        "ownerName": "ShiXiangYu1",
+        "repositoryName": "real-time-data-warehouse",
+        "htmlUrl": "https://github.com/ShiXiangYu1/real-time-data-warehouse/blob/013ed0c7105608e4b16f2ac39f46689b28b48e21/.cursorrules",
+        "size": 4.05,
+        "timestamp": "2025-05-22T08:16:51.275Z"
+      }
+    ],
+    [
+      "componentProject/vue-component/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/componentProject/vue-component/a950dadf554fd4882a98aff26742627f76facb86/.cursorrules",
+        "repositoryId": 917601967,
+        "path": "componentProject/vue-component/.cursorrules",
+        "ownerName": "componentProject",
+        "repositoryName": "vue-component",
+        "htmlUrl": "https://github.com/componentProject/vue-component/blob/a950dadf554fd4882a98aff26742627f76facb86/.cursorrules",
+        "size": 3.44,
+        "timestamp": "2025-05-22T08:16:51.841Z"
+      }
+    ],
+    [
+      "rl0425/portfolio-2024/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/rl0425/portfolio-2024/36b13f6f6b58ae5d4e2512573a9847369df93c11/.cursorrules",
+        "repositoryId": 904651402,
+        "path": "rl0425/portfolio-2024/.cursorrules",
+        "ownerName": "rl0425",
+        "repositoryName": "portfolio-2024",
+        "htmlUrl": "https://github.com/rl0425/portfolio-2024/blob/36b13f6f6b58ae5d4e2512573a9847369df93c11/.cursorrules",
+        "size": 22.21,
+        "timestamp": "2025-05-22T08:16:53.966Z"
+      }
+    ],
+    [
+      "cursor-home/cursor-rules/resources/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/cursor-home/cursor-rules/d71015a2f845e6b18634379f576bd507a0556879/resources/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 987021729,
+        "path": "cursor-home/cursor-rules/resources/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "cursor-home",
+        "repositoryName": "cursor-rules",
+        "htmlUrl": "https://github.com/cursor-home/cursor-rules/blob/d71015a2f845e6b18634379f576bd507a0556879/resources/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "size": 7.64,
+        "timestamp": "2025-05-22T08:16:55.092Z"
+      }
+    ],
+    [
+      "lukemelnik/lukemelnik.co/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/lukemelnik/lukemelnik.co/133c3590f8060a67505e2ba1eb0f2d3098d46a9b/.cursorrules",
+        "repositoryId": 926725109,
+        "path": "lukemelnik/lukemelnik.co/.cursorrules",
+        "ownerName": "lukemelnik",
+        "repositoryName": "lukemelnik.co",
+        "htmlUrl": "https://github.com/lukemelnik/lukemelnik.co/blob/133c3590f8060a67505e2ba1eb0f2d3098d46a9b/.cursorrules",
+        "size": 4.53,
+        "timestamp": "2025-05-22T08:16:56.311Z"
+      }
+    ],
+    [
+      "cursor-home/cursor-rules/resources/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/cursor-home/cursor-rules/d71015a2f845e6b18634379f576bd507a0556879/resources/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 987021729,
+        "path": "cursor-home/cursor-rules/resources/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "cursor-home",
+        "repositoryName": "cursor-rules",
+        "htmlUrl": "https://github.com/cursor-home/cursor-rules/blob/d71015a2f845e6b18634379f576bd507a0556879/resources/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "size": 2.32,
+        "timestamp": "2025-05-22T08:16:57.092Z"
+      }
+    ],
+    [
+      "cursor-home/cursor-rules/resources/rules/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/cursor-home/cursor-rules/d71015a2f845e6b18634379f576bd507a0556879/resources/rules/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 987021729,
+        "path": "cursor-home/cursor-rules/resources/rules/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "cursor-home",
+        "repositoryName": "cursor-rules",
+        "htmlUrl": "https://github.com/cursor-home/cursor-rules/blob/d71015a2f845e6b18634379f576bd507a0556879/resources/rules/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+        "size": 6.25,
+        "timestamp": "2025-05-22T08:16:57.293Z"
+      }
+    ],
+    [
+      "cursor-home/cursor-rules/resources/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/cursor-home/cursor-rules/d71015a2f845e6b18634379f576bd507a0556879/resources/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "repositoryId": 987021729,
+        "path": "cursor-home/cursor-rules/resources/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "ownerName": "cursor-home",
+        "repositoryName": "cursor-rules",
+        "htmlUrl": "https://github.com/cursor-home/cursor-rules/blob/d71015a2f845e6b18634379f576bd507a0556879/resources/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "size": 3.59,
+        "timestamp": "2025-05-22T08:16:57.492Z"
+      }
+    ],
+    [
+      "rehan-ali-mahomed/virga-plateform/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/rehan-ali-mahomed/virga-plateform/b2dd4de1b5bcf5352d039fa7d4d26c3c09b06745/.cursorrules",
+        "repositoryId": 911667454,
+        "path": "rehan-ali-mahomed/virga-plateform/.cursorrules",
+        "ownerName": "rehan-ali-mahomed",
+        "repositoryName": "virga-plateform",
+        "htmlUrl": "https://github.com/rehan-ali-mahomed/virga-plateform/blob/b2dd4de1b5bcf5352d039fa7d4d26c3c09b06745/.cursorrules",
+        "size": 2.01,
+        "timestamp": "2025-05-22T08:16:58.106Z"
+      }
+    ],
+    [
+      "cursor-home/cursor-rules/resources/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/cursor-home/cursor-rules/d71015a2f845e6b18634379f576bd507a0556879/resources/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 987021729,
+        "path": "cursor-home/cursor-rules/resources/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "cursor-home",
+        "repositoryName": "cursor-rules",
+        "htmlUrl": "https://github.com/cursor-home/cursor-rules/blob/d71015a2f845e6b18634379f576bd507a0556879/resources/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "size": 6.32,
+        "timestamp": "2025-05-22T08:16:58.304Z"
+      }
+    ],
+    [
+      "cursor-home/cursor-rules/resources/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/cursor-home/cursor-rules/d71015a2f845e6b18634379f576bd507a0556879/resources/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 987021729,
+        "path": "cursor-home/cursor-rules/resources/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "cursor-home",
+        "repositoryName": "cursor-rules",
+        "htmlUrl": "https://github.com/cursor-home/cursor-rules/blob/d71015a2f845e6b18634379f576bd507a0556879/resources/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+        "size": 2.78,
+        "timestamp": "2025-05-22T08:16:58.470Z"
+      }
+    ],
+    [
+      "SweSri07/RubiksCubeSolver/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/SweSri07/RubiksCubeSolver/824301ec0fef35ab942ecf63aa2b1b24ba46eef6/.cursorrules",
+        "repositoryId": 986343261,
+        "path": "SweSri07/RubiksCubeSolver/.cursorrules",
+        "ownerName": "SweSri07",
+        "repositoryName": "RubiksCubeSolver",
+        "htmlUrl": "https://github.com/SweSri07/RubiksCubeSolver/blob/824301ec0fef35ab942ecf63aa2b1b24ba46eef6/.cursorrules",
+        "size": 1.93,
+        "timestamp": "2025-05-22T08:17:00.022Z"
+      }
+    ],
+    [
+      "wesselgrift/svelte-boilerplate/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/wesselgrift/svelte-boilerplate/3c469c24b5792e629c37a9fef7d68a72df7b00a6/.cursorrules",
+        "repositoryId": 922986387,
+        "path": "wesselgrift/svelte-boilerplate/.cursorrules",
+        "ownerName": "wesselgrift",
+        "repositoryName": "svelte-boilerplate",
+        "htmlUrl": "https://github.com/wesselgrift/svelte-boilerplate/blob/3c469c24b5792e629c37a9fef7d68a72df7b00a6/.cursorrules",
+        "size": 1.28,
+        "timestamp": "2025-05-22T08:17:00.931Z"
+      }
+    ],
+    [
+      "truncgil/dekupix/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/truncgil/dekupix/c1f94e678c2308171e0b131744fa6008e00269d9/.cursorrules",
+        "repositoryId": 986586547,
+        "path": "truncgil/dekupix/.cursorrules",
+        "ownerName": "truncgil",
+        "repositoryName": "dekupix",
+        "htmlUrl": "https://github.com/truncgil/dekupix/blob/c1f94e678c2308171e0b131744fa6008e00269d9/.cursorrules",
+        "size": 4.22,
+        "timestamp": "2025-05-22T08:17:01.149Z"
+      }
+    ],
+    [
+      "mttk2004/laureth/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/mttk2004/laureth/5b8806b8912cca0a2a11e5512e8162ce04003f46/.cursorrules",
+        "repositoryId": 981855962,
+        "path": "mttk2004/laureth/.cursorrules",
+        "ownerName": "mttk2004",
+        "repositoryName": "laureth",
+        "htmlUrl": "https://github.com/mttk2004/laureth/blob/5b8806b8912cca0a2a11e5512e8162ce04003f46/.cursorrules",
+        "size": 4.82,
+        "timestamp": "2025-05-22T08:17:01.337Z"
+      }
+    ],
+    [
+      "KunaiCat/js-stadium/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/KunaiCat/js-stadium/72395bc8bd1e8c7ead9ac7a5003a090d041d7a18/.cursorrules",
+        "repositoryId": 985147100,
+        "path": "KunaiCat/js-stadium/.cursorrules",
+        "ownerName": "KunaiCat",
+        "repositoryName": "js-stadium",
+        "htmlUrl": "https://github.com/KunaiCat/js-stadium/blob/72395bc8bd1e8c7ead9ac7a5003a090d041d7a18/.cursorrules",
+        "size": 2.29,
+        "timestamp": "2025-05-22T08:17:01.620Z"
+      }
+    ],
+    [
+      "codeslw/backend-world-wide/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/codeslw/backend-world-wide/22678037eebd9c6f05e5152b9d43504386213b7e/.cursorrules",
+        "repositoryId": 945725712,
+        "path": "codeslw/backend-world-wide/.cursorrules",
+        "ownerName": "codeslw",
+        "repositoryName": "backend-world-wide",
+        "htmlUrl": "https://github.com/codeslw/backend-world-wide/blob/22678037eebd9c6f05e5152b9d43504386213b7e/.cursorrules",
+        "size": 13.07,
+        "timestamp": "2025-05-22T08:17:03.419Z"
+      }
+    ],
+    [
+      "RAhsencicek/phamora_backend/.cursor/rules/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/RAhsencicek/phamora_backend/0fa09c039d866f3372a2f064f77e4c99ec546409/.cursor/rules/.cursorrules",
+        "repositoryId": 973834311,
+        "path": "RAhsencicek/phamora_backend/.cursor/rules/.cursorrules",
+        "ownerName": "RAhsencicek",
+        "repositoryName": "phamora_backend",
+        "htmlUrl": "https://github.com/RAhsencicek/phamora_backend/blob/0fa09c039d866f3372a2f064f77e4c99ec546409/.cursor/rules/.cursorrules",
+        "size": 6.68,
+        "timestamp": "2025-05-22T08:17:05.018Z"
+      }
+    ],
+    [
+      "N95Ryan/Lift-Up-back/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/N95Ryan/Lift-Up-back/3dc711c470a8df39579cf2e704c2bba5172787fa/.cursorrules",
+        "repositoryId": 986345055,
+        "path": "N95Ryan/Lift-Up-back/.cursorrules",
+        "ownerName": "N95Ryan",
+        "repositoryName": "Lift-Up-back",
+        "htmlUrl": "https://github.com/N95Ryan/Lift-Up-back/blob/3dc711c470a8df39579cf2e704c2bba5172787fa/.cursorrules",
+        "size": 3.16,
+        "timestamp": "2025-05-22T08:17:05.213Z"
+      }
+    ],
+    [
+      "Vladimir123123123/rust-template/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Vladimir123123123/rust-template/4c2ea5a84bd92c52aeced9abcd0986fe0603da8e/.cursorrules",
+        "repositoryId": 986223123,
+        "path": "Vladimir123123123/rust-template/.cursorrules",
+        "ownerName": "Vladimir123123123",
+        "repositoryName": "rust-template",
+        "htmlUrl": "https://github.com/Vladimir123123123/rust-template/blob/4c2ea5a84bd92c52aeced9abcd0986fe0603da8e/.cursorrules",
+        "size": 4.21,
+        "timestamp": "2025-05-22T08:17:07.617Z"
+      }
+    ],
+    [
+      "truncgil/dekupix2/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/truncgil/dekupix2/901786081116a5bddbb6900da81ac084ddd1368e/.cursorrules",
+        "repositoryId": 986727001,
+        "path": "truncgil/dekupix2/.cursorrules",
+        "ownerName": "truncgil",
+        "repositoryName": "dekupix2",
+        "htmlUrl": "https://github.com/truncgil/dekupix2/blob/901786081116a5bddbb6900da81ac084ddd1368e/.cursorrules",
+        "size": 4.22,
+        "timestamp": "2025-05-22T08:17:08.846Z"
+      }
+    ],
+    [
+      "cursor-home/cursor-rules/resources/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/cursor-home/cursor-rules/d71015a2f845e6b18634379f576bd507a0556879/resources/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "repositoryId": 987021729,
+        "path": "cursor-home/cursor-rules/resources/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "ownerName": "cursor-home",
+        "repositoryName": "cursor-rules",
+        "htmlUrl": "https://github.com/cursor-home/cursor-rules/blob/d71015a2f845e6b18634379f576bd507a0556879/resources/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "size": 4.92,
+        "timestamp": "2025-05-22T08:17:09.026Z"
       }
     ]
   ]

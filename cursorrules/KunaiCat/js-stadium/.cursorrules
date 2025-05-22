@@ -1,0 +1,54 @@
+# Cursor Rules for js-stadium Project
+
+## Code Style Preferences
+- Follow PEP 8 guidelines for Python code
+- Maximum line length of 79 characters
+- Use 4 spaces for indentation (no tabs)
+- Add docstrings to all modules, classes, functions, and methods
+- Use type annotations for all function parameters and return values
+- Place each import on a separate line
+- Group imports in the following order: standard library, related third party, local application imports
+- End files with a single newline character
+
+## Naming Conventions
+- Use snake_case for variable and function names
+- Use PascalCase for class names
+- Use UPPERCASE for constants
+- Use leading underscore for private functions (though the main algorithm has been renamed to "knapsack")
+
+## Documentation Standards
+- Module docstrings should describe the purpose of the module
+- Class docstrings should describe the purpose of the class and list important attributes
+- Function docstrings should follow the format:
+  - Brief description
+  - Args section for parameters
+  - Returns section for return values
+- Include specific types in docstrings when type annotations are not enough
+- Add comments for complex logic or algorithms
+
+## Project-Specific Patterns
+- The knapsack algorithm optimizes for maximum weight within a budget
+- JSON is used for storing item data
+- Performance measurement is tracked using the time module
+- The main function loads data and runs multiple test cases
+- Sorting items by efficiency improves algorithm performance
+- A maximum of 10 items is enforced for any inventory
+
+## Repository Structure
+- Python implementation files at the root level
+- JSON data files at the root level
+- Memory bank for documentation in the memory-bank directory
+- No test directory yet (to be added)
+
+## Development Workflow
+- Fix linting issues before adding new features
+- Document code thoroughly with docstrings
+- Update memory bank when making significant changes
+- Test algorithm with multiple budget scenarios
+- Track performance metrics for optimization
+
+## Known Challenges
+- The knapsack algorithm has exponential time complexity
+- The project name (js-stadium) suggests JavaScript, but the implementation is in Python
+- The algorithm currently only supports single-objective optimization
+- JSON data processing may have performance implications with large datasets 

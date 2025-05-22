@@ -1,0 +1,108 @@
+
+## 🎯 Prompt: Flutter Uygulaması – *Dekupix* (U²-Net TFLite ile Arka Plan Silme)
+
+```
+Uygulamanın adı: Dekupix
+
+Uygulamanın amacı:
+Dekupix, kullanıcıların seçtikleri görsellerin arka planını tamamen cihaz üstünde (offline) otomatik olarak kaldırmalarını sağlar. Bu işlem, U²-Net (U^2-Net) derin öğrenme modeli kullanılarak gerçekleştirilir ve model TensorFlow Lite (TFLite) formatında çalıştırılır. Uygulama Flutter ile geliştirilmiştir ve hem mobil (iOS, Android) hem de masaüstü/web platformlarında çalışabilir.
+
+Hedef platformlar:
+- Android
+- iOS
+- Web (indirebilir sonuçlar, WebAssembly alternatifiyle)
+- macOS
+- Windows
+
+Teknolojiler:
+- Flutter (cross-platform UI)
+- Riverpod (state management)
+- TensorFlow Lite (TFLite) – U²-Net modeli ile segmentasyon
+- MVVM yazılım mimarisi
+- Material UI theming
+
+Uygulama ekranları:
+1. Başlangıç ekranı: Uygulama hakkında kısa bilgi ve "Fotoğraf Yükle" butonu
+2. İşleme ekranı: Seçilen görselin arka planı kaldırılır, kullanıcı sonuçları önizler
+3. Paylaş/İndir ekranı: İşlenmiş görsel kaydedilir veya paylaşılır
+
+Ana özellikler:
+- Offline çalışır, internet gerekmez
+- Fotoğraf seçme veya kamera ile çekme
+- Arka planı yüksek doğrulukla silme
+- Sonuçları PNG olarak şeffaf arka planla kaydetme
+- Paylaşma ve galeriye kaydetme seçenekleri
+- Tüm platformlarda aynı kod tabanı ile çalışır
+
+---
+
+Kodlama kuralları ve yapısı:
+
+### Software Architecture
+- MVVM (Model View ViewModel) yapısı uygulanacaktır.
+- Uygulamanın iş mantığı ViewModel'de, UI bileşenleri View'da, veri sınıfları Models altında tutulacaktır.
+
+### Directory structure:
+```
+
+/lib/
+├── main.dart
+├── models/                // Veri modelleri (örneğin: image\_result.dart)
+├── viewmodels/            // State yönetimi (örneğin: image\_processor\_viewmodel.dart)
+├── views/
+│   ├── screens/           // Uygulama ekranları (örneğin: home\_screen.dart)
+│   └── widgets/           // Reusable widgetlar (örneğin: loading\_indicator.dart)
+├── services/              // TFLite modeli işleten sınıflar (örneğin: image\_processing\_service.dart)
+├── utils/                 // Yardımcı fonksiyonlar ve sabitler (örneğin: file\_utils.dart)
+├── assets/
+│   └── models/            // U²-Net'in .tflite modeli burada
+
+````
+
+### Code style:
+- Dosya ve klasör adları: snake_case
+- Class adları: UpperCamelCase
+- Değişken ve metodlar: lowerCamelCase
+- Satırlar 80 karakteri geçmemeli
+- Her kontrol yapısı (`if`, `for`, `while`) süslü parantezle (`{}`) yazılmalı
+- `const` yapılar uygun yerde kullanılmalı
+- StatelessWidget mümkün olan her yerde tercih edilmeli
+- `ThemeData` ile tek tip UI teması uygulanmalı
+- Tüm UI Material bileşenleri kullanılarak yazılmalı
+- Type safety zorunlu: tüm değişkenlerde açık tür tanımları yapılmalı
+
+### State management:
+- Riverpod kullanılmalı
+- İşlem akışı ViewModel üzerinden yürütülmeli
+
+### Dosya içeriği örneği:
+```dart
+// /lib/viewmodels/image_processor_viewmodel.dart
+final imageProcessorProvider = StateNotifierProvider((ref) => ImageProcessorViewModel());
+
+class ImageProcessorViewModel extends StateNotifier<AsyncValue<ImageResult>> {
+  ...
+}
+````
+
+---
+
+### Uygulamanın açıklama metni (App Store / Play Store için):
+
+> **Dekupix** ile fotoğraflarınızdan arka planı anında kaldırın! Üstelik internet gerekmeden, tamamen cihaz üstünde çalışır. Gelişmiş yapay zekâ destekli U²-Net modeliyle yüksek doğruluklu kesme işlemi yapın, PNG olarak kaydedin veya doğrudan paylaşın. Tüm cihazlarınızda aynı deneyim!
+
+---
+
+Geliştirici notu:
+
+* Uygulama tamamen offline çalışacağı için `.tflite` modeli asset olarak dahil edilecek.
+* Flutter Web için alternatif olarak `js` ile dıştan TensorFlow\.js/ONNX.js üzerinden U²-Net çalıştırılabilir.
+
+```
+
+---
+
+Bu prompt'u `CursorRules`, `Cursor`, `AI co-pilot`, `Copilot Chat` gibi kod asistanlarında kullanabilir, hatta doğrudan proje oluşturma motorlarında (FlutterFlow, VeryGood CLI, Mason, vb.) kullanarak iskeleti çıkartabilirsin.
+
+İstersen bu yapıya uygun olarak projenin iskeletini de hemen oluşturabilirim. Devam edeyim mi?
+```
