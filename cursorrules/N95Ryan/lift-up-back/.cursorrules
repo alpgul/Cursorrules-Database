@@ -1,0 +1,52 @@
+{
+  "rules": [
+    {
+      "name": "Global Standards",
+      "prompt": "Always write code that is as simple, clean, and optimized as possible. Avoid unnecessary dependencies and abstractions. Comments should always be written in French for business logic and English for technical details."
+    },
+    {
+      "name": "Folder Architecture Rule",
+      "prompt": "Follow this folder architecture: /config for configuration, /controllers for request handlers, /models for data structures, /routes for API endpoints, /middlewares for request processing, /utils for helper functions. Keep imports clean and relative."
+    },
+    {
+      "name": "Go Best Practices",
+      "prompt": "Write idiomatic Go code following standard conventions. Use interfaces for better testability. Implement proper error handling. Use context for request cancellation. Keep functions small and focused."
+    },
+    {
+      "name": "API Design",
+      "prompt": "Follow RESTful principles for API design. Use proper HTTP methods and status codes. Implement proper request validation. Document API endpoints with clear comments. Use consistent response formats."
+    },
+    {
+      "name": "Database",
+      "prompt": "Use Supabase for data storage. Implement proper data validation. Use transactions when necessary. Handle database errors appropriately. Keep database queries optimized."
+    },
+    {
+      "name": "Authentication",
+      "prompt": "Use Supabase JWT for authentication. Implement proper token validation. Use middleware for protected routes. Handle authentication errors gracefully."
+    },
+    {
+      "name": "Error Handling",
+      "prompt": "Implement proper error handling and logging. Use custom error types when necessary. Return meaningful error messages to clients. Log errors with appropriate context."
+    },
+    {
+      "name": "Testing",
+      "prompt": "Write unit tests for critical business logic. Use table-driven tests when appropriate. Mock external dependencies. Test error cases. Keep test coverage high."
+    },
+    {
+      "name": "Performance",
+      "prompt": "Optimize database queries. Use proper caching strategies. Implement rate limiting. Monitor and optimize response times. Handle concurrent requests properly."
+    },
+    {
+      "name": "Security",
+      "prompt": "Implement proper input validation. Use prepared statements for database queries. Handle sensitive data appropriately. Implement proper CORS policies. Follow security best practices."
+    },
+    {
+      "name": "Commit Messages",
+      "prompt": "When asked for a commit message, provide it in a snippet format that can be directly copied. Follow Conventional Commits format: type(scope): description. Use feat for new features, fix for bug fixes, chore for maintenance, docs for documentation, refactor for code refactoring. Include a bullet-point list of changes in the description when relevant."
+    },
+    {
+      "name": "Documentation",
+      "prompt": "Always follow the official documentation for each technology used. For Supabase, refer to https://supabase.com/docs. For Go, refer to https://golang.org/doc/. For Gin, refer to https://gin-gonic.com/docs/. Keep code aligned with the latest best practices from these sources."
+    }
+  ]
+} 
