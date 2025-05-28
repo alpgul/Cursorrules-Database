@@ -1,0 +1,79 @@
+# About This Project
+
+This project is a monorepo that contains all of the packages that make up our SaaS starter kit. It is a Laravel
+application that requires all of our packages and contains demos of many of them. Each subdirectory of the packages
+directory is a stand-alone PHP package, hosted on GitHub (we use Git Subtree Split to keep them up to date with our
+work here).
+
+When working on a feature within this project, make sure that you are working in the most appropriate directory within
+the packages/ directory unless you are building out demo material within the app itself.
+
+When doing any work within a subdirectory of packages, if you reference any classes or components within another
+subdirectory of packages, make sure that the composer.json of the package you are working on requires the package on
+which you are depending.
+
+We are trying to keep each package as narrowly focused as possible. Here are some important guidelines:
+
+1. Do not duplicate functionality between packages. If functionality that you require exists in another package, use it
+and make sure that the package you are working on is set up to require the package that contains the functionality.
+
+2. When there might be multiple implementations of something (such as using different third party providers), the
+package should simply provide contracts. Each implementation should live within its own package that contains everything
+required to fulfill all of those contracts.
+
+Do not work beyond the scope of any request. Keep your changes small. We prefer to iterate with small changes over
+making large sweeping changes.
+
+# Lessons Learned
+
+Working with Verbs Events:
+1. Event Creation:
+   - NEVER use `new Event()` to create events manually
+   - NEVER set event properties directly after creation
+   - ALWAYS use static methods `fire()` or `commit()` with named arguments
+   - Example: `UserCreated::fire(name: 'John', email: 'john@example.com')`
+
+2. Event Handling:
+   - Use `commit()` when you need the result from the event's handle() method
+   - Use `fire()` when you don't need the result (void methods)
+   - Example with commit: `$user = UserCreated::commit(name: 'John', email: 'john@example.com')`
+   - Example with fire: `EmailVerificationNotificationSent::fire(user_id: $user->id)`
+
+3. Testing Events:
+   - ALWAYS use `Verbs::commitImmediately()` in test setup to ensure events are processed immediately
+   - When testing events, use the same static methods as in production code
+   - Don't mix Laravel events with Verbs events in tests
+   - Example test setup:
+     ```php
+     beforeEach(function () {
+         Verbs::commitImmediately();
+     });
+     ```
+
+4. Event Naming and Structure:
+   - Name event classes in past tense (they represent things that happened)
+   - Good: `UserCreated`, `EmailVerificationNotificationSent`
+   - Bad: `CreateUser`, `SendEmailVerificationNotification`
+   - Use constructor property promotion for required properties
+   - Use named arguments for clarity and maintainability
+
+5. Event Best Practices:
+   - Keep events focused and single-purpose
+   - Handle side effects in the event's handle() method
+   - Use state management through the apply() method
+   - Validate inputs within the handle() method
+   - Use custom exceptions for domain-specific errors
+
+Code Style and Architecture:
+- Prefer direct actions over Laravel's event system. Instead of dispatching Laravel events that are handled by listeners, perform the actions directly in Verbs events. This makes the code more explicit and easier to follow.
+- Example: Instead of `event(new Registered($user))` which triggers a listener to send a verification email, directly call `$user->notify(new VerifyEmail)` in the Verbs event.
+- All git commit messages should be single line to avoid issues with command execution and readability.
+
+Creating Draft PRs:
+- Save PR description to a temporary file (e.g., `pr_description.txt`)
+- Use GitHub CLI to create a draft PR: `gh pr create --draft --title "title" --body-file pr_description.txt`
+- Clean up by removing the temporary file after PR is created
+- This workflow makes it easy to prepare and edit the PR description before submitting
+
+# Scratch Pad
+

@@ -1,0 +1,47 @@
+- Always respond in Korean
+- Write commit and comments in Korean
+- Follow the user's requirements carefully & to the letter.
+- First think step-by-step - describe your plan for what to build in pseudocode, written out in great detail.
+- Confirm, then write code!
+- Always write correct, up to date, bug free, fully functional and working, secure, performant and efficient code.
+- Focus on readability over being performant.
+- Fully implement all requested functionality.
+- Leave NO todo's, placeholders or missing pieces.
+- Ensure code is complete! Verify thoroughly finalized.
+- Include all required imports, and ensure proper naming of key components.
+- Be concise. Minimize any other prose.
+
+- Git Flow 브랜치 전략:
+   - feature/*, fix/*: dev 브랜치에서 생성
+   - hotfix/*: main/master 브랜치에서 생성
+   - release/*: dev 브랜치에서 생성
+
+- 명령어 그룹화 원칙:
+   - 관련된 명령어들을 하나의 세트로 묶어서 제안
+   - 예: git status → git add → git commit을 한 번에 제안
+   - 단순 정보 확인 명령어는 설명 없이 바로 제안
+
+- 개발 워크플로우:
+   - 새 기능/수정 작업 시 적절한 브랜치 전략 제안
+   - 커밋 전 변경사항 확인 및 정리 과정 포함
+   - 의미있는 커밋 메시지 생성 (한글)
+
+- 커밋 및 푸시 프로세스:
+   - 현재 브랜치에서 커밋할지 새 브랜치 생성할지 확인
+   - 새 브랜치 생성 시 Git Flow 규칙 적용
+   - 커밋 메시지는 한글로 작성하되 명확하고 구체적으로
+   - 푸시 후 PR 생성 여부 확인
+
+- PR 생성 프로세스:
+   - 브랜치 타입에 따른 베이스 브랜치 설정:
+     * feature/fix/release → dev
+     * hotfix → main/master
+   - 변경사항 기반 PR 제목 생성
+   - .pr-description.md 임시 파일로 PR 본문 작성
+   - GitHub CLI로 PR 생성 후 임시 파일 삭제
+   - 간단한 문서 작업이나 workflow 작업일 경우 skip-ci 라벨을 부여
+
+- 효율성 개선:
+   - git status, ls, pwd 같은 정보 확인 명령어는 설명 없이 바로 제안
+   - 연관된 명령어들을 세트로 묶어서 한 번에 실행 제안
+   - 불필요한 설명 최소화, 바로 실행 가능한 명령어 제공

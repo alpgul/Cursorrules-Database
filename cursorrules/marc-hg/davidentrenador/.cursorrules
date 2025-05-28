@@ -1,0 +1,59 @@
+# David Entrenador - Cursor Rules
+
+## Dark Theme Color Specifications
+
+### Primary Colors
+- **Background**: Use `bg-black` for main sections and dark backgrounds
+- **Text**: Use `text-white` for primary text on dark backgrounds
+- **Brand Red**: Use `text-red-700` for accents, highlights, and brand elements
+- **Brand Red Hover**: Use `hover:bg-red-800` for interactive elements
+
+### Secondary Colors
+- **Card Backgrounds**: Use `bg-gray-900` for card containers and secondary backgrounds
+- **Border Colors**: Use `border-gray-800` for subtle borders
+- **Secondary Text**: Use `text-gray-300` for secondary text content
+- **Muted Text**: Use `text-gray-400` for less important text
+
+### Button Styling
+- **Primary Button**: `bg-red-700 text-white hover:bg-red-800`
+- **Secondary Button**: `bg-transparent border-2 border-white text-white hover:bg-white hover:text-red-700`
+- **Button Effects**: Always include `transition-colors transform hover:scale-105 duration-200`
+
+### Section Backgrounds
+- **Main Sections**: `bg-black` for primary content areas
+- **Accent Sections**: `bg-red-800` for highlighted sections (like Planning section)
+- **Card Sections**: `bg-gray-900` for testimonials, features, etc.
+
+### Typography
+- **Headings**: `text-white` with optional `text-red-700` accents for keywords
+- **Body Text**: `text-white` for primary content, `text-gray-300` for secondary
+- **Links**: `text-red-700 hover:text-red-600`
+
+### Icons and Graphics
+- **Icon Colors**: `text-red-700` for primary icons
+- **Star Ratings**: `text-yellow-500` for review stars
+- **Decorative Elements**: Use red gradients `from-red-700 to-red-900`
+
+### Layout Consistency
+- **Container**: Always use `container mx-auto` for content width
+- **Padding**: Use `py-16 px-8` for section spacing
+- **Margins**: Use `mb-4`, `mb-8`, `mb-12`, `mb-16` for consistent vertical spacing
+
+### Animation and Transitions
+- **Hover Effects**: Include `transition-all duration-200` or `transition-colors`
+- **Scale Effects**: Use `transform hover:scale-105` for interactive elements
+- **Opacity Transitions**: Use `transition-all duration-700` for fade-in effects
+
+## Design Principles
+1. Maintain dark theme consistency across all components
+2. Use red (#dc2626 / red-700) as the primary brand color
+3. Ensure sufficient contrast for accessibility
+4. Keep animations smooth and professional
+5. Use consistent spacing and typography scales
+
+## Component Guidelines
+- All new sections should follow the dark theme pattern
+- Icons should be red (#dc2626) on dark backgrounds
+- Text should be white or light gray on dark backgrounds
+- Buttons should follow the established red/white color scheme
+- Cards and containers should use gray-900 backgrounds with gray-800 borders 
