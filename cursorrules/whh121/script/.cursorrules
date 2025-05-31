@@ -1,0 +1,546 @@
+# Flink应用工程开发规则
+# =====================================
+
+## 🎯 项目概述
+这是一个企业级Apache Flink应用工程，包含多个实时数据处理项目：
+- **kafka2doris**: Kafka到Doris的流处理管道
+- **mysql2doris**: MySQL到Doris的CDC和批处理同步
+- 完整的监控和告警系统
+- 标准化的项目结构和配置管理
+
+## 📋 代码规范
+
+### 项目结构规范
+1. **标准化目录结构**
+   ```
+   flink_app/
+   ├── [项目名]/
+   │   ├── README.md              # 项目详细文档
+   │   ├── scripts/               # SQL脚本和Shell脚本
+   │   ├── configs/               # 配置文件
+   │   ├── logs/                  # 日志文件
+   │   ├── docs/                  # 项目文档
+   │   ├── tests/                 # 测试文件
+   │   └── checkpoints/           # Flink检查点存储
+   ```
+
+2. **文件命名规范**
+   - **生产环境SQL**: `{source}_to_{target}_production.sql`
+   - **测试SQL**: 放入 `tests/` 目录，命名为 `test_*.sql`
+   - **监控脚本**: `*_monitor.py` 或 `*_monitor.sh`
+   - **配置脚本**: `setup_*.sh`
+
+### SQL文件规范
+1. **生产环境配置**
+   - 禁用 `SET sql-client.execution.result-mode=TABLEAU;` （仅用于调试）
+   - 必须包含完整的checkpoint配置
+   - 使用固定延迟重启策略: `restart-strategy = fixed-delay`
+   - 设置合理的超时时间和重试次数
+
+2. **检查点配置 (项目独立)**
+   ```sql
+   -- 使用项目独立的相对路径
+   SET 'state.checkpoints.dir' = 'file://./flink_app/[项目名]/checkpoints';
+   SET 'execution.checkpointing.interval' = '60s';
+   SET 'execution.checkpointing.mode' = 'EXACTLY_ONCE';
+   SET 'execution.checkpointing.timeout' = '600s';
+   SET 'state.backend' = 'filesystem';
+   ```
+
+3. **字段类型映射**
+   ```
+   MySQL → Flink 类型映射：
+   - bigint → BIGINT
+   - int/tinyint → INT
+   - varchar/text → STRING  
+   - datetime/timestamp → TIMESTAMP(3)
+   - decimal → DECIMAL(10,2)
+   
+   Kafka JSON → Flink 类型映射：
+   - number → BIGINT/INT/DECIMAL
+   - string → STRING
+   - timestamp → TIMESTAMP(3)
+   - boolean → BOOLEAN
+   ```
+
+4. **表结构验证**
+   - 在编写SQL前必须验证真实的数据库表结构
+   - 使用 `DESCRIBE table_name` 或脚本获取准确schema
+   - 字段名和类型必须与源表完全匹配
+
+### Python脚本规范
+1. **编码和导入**
+   ```python
+   #!/usr/bin/env python3
+   # -*- coding: utf-8 -*-
+   ```
+
+2. **日志配置**
+   - 必须同时输出到文件和控制台
+   - 使用统一的日志格式: `%(asctime)s - %(levelname)s - %(message)s`
+   - 日志文件存放在项目的 `logs/` 目录
+   - 按天切割: `monitor_YYYYMMDD.log`
+
+3. **异常处理**
+   - 所有外部调用必须包含异常处理
+   - 网络请求设置合理的timeout (30秒)
+   - 失败时发送告警通知
+   - 最大重试次数: 3次
+
+4. **告警集成**
+   - 统一使用飞书机器人webhook: `https://open.larksuite.com/open-apis/bot/v2/hook/3bb8fac6-6a02-498e-804f-48b1b38a6089`
+   - 成功和失败都要有通知
+   - 告警消息包含时间戳和详细错误信息
+   - 避免重复告警 (使用状态文件)
+
+### Shell脚本规范
+1. **脚本头部**
+   ```bash
+   #!/bin/bash
+   # 脚本描述和用途
+   # 作者和更新时间
+   ```
+
+2. **路径处理**
+   ```bash
+   # 使用动态路径检测
+   SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+   PROJECT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
+   ```
+
+3. **错误处理**
+   - 使用 `set -e` 遇错即停
+   - 重要操作前检查前置条件
+   - 提供清晰的错误信息
+
+## 🗂️ 配置管理
+
+### 🔄 数据同步方式严格执行规则 (重要)
+**核心原则: 配置驱动，严格执行**
+
+1. **同步方式定义**
+   - **batch (增量同步)**: 基于时间戳或ID的增量轮询同步
+   - **stream (实时同步)**: 实时流处理，MySQL必须使用CDC (Change Data Capture)
+
+2. **严格执行要求**
+   - 当配置文件指定 `sync_mode: stream` 时，**必须严格使用流处理方式**
+   - MySQL source 配置为 stream 时，**只能使用 mysql-cdc 连接器**
+   - **禁止**因为缺少连接器或环境问题而擅自改变同步方式
+   - **禁止**将stream配置降级为batch处理
+
+3. **执行前强制检查**
+   ```bash
+   # 必须验证以下条件后才能执行
+   - [ ] 检查配置文件中的sync_mode设置
+   - [ ] 如果是stream模式，验证mysql-cdc连接器是否可用
+   - [ ] 如果连接器缺失，必须先安装连接器，不得改变同步方式
+   - [ ] 配置验证通过后才能执行SQL
+   ```
+
+4. **错误处理原则**
+   - 如果stream模式缺少必要连接器，应该**停止执行并报告缺失**
+   - 提供明确的连接器安装指导
+   - 不得静默降级为其他同步方式
+   - 必须在日志中明确记录配置验证结果
+
+5. **配置文件验证**
+   ```yaml
+   # 示例配置验证
+   dataflow:
+     sync_mode: stream  # 严格执行stream模式
+     source:
+       type: mysql-cdc  # stream模式必须指定cdc
+   ```
+
+### 环境配置
+1. **MySQL连接**
+   - 生产库: `xme-prod-rds-content.chkycqw22fzd.ap-southeast-1.rds.amazonaws.com:3306`
+   - 用户: `content-ro` / 密码: `k5**^k12o`
+   - 数据库: `content_data_20250114`
+
+2. **Kafka集群 (AWS MSK)**
+   ```
+   b-1.xmeprodlog.o53475.c3.kafka.ap-southeast-1.amazonaws.com:9092
+   b-2.xmeprodlog.o53475.c3.kafka.ap-southeast-1.amazonaws.com:9092  
+   b-3.xmeprodlog.o53475.c3.kafka.ap-southeast-1.amazonaws.com:9092
+   ```
+
+3. **Doris集群**
+   - 生产: `172.31.0.82:8030` / `root` / `JzyZqbx!309`
+   - 测试: `10.10.41.243:8030` / `root` / `doris@123`
+
+### 标准Checkpoint配置
+```sql
+SET 'execution.checkpointing.interval' = '60s';
+SET 'execution.checkpointing.mode' = 'EXACTLY_ONCE';
+SET 'execution.checkpointing.timeout' = '600s';
+SET 'state.backend' = 'filesystem';
+SET 'restart-strategy' = 'fixed-delay';
+SET 'restart-strategy.fixed-delay.attempts' = '3';
+SET 'restart-strategy.fixed-delay.delay' = '30s';
+```
+
+## 📊 监控规范
+
+### 监控指标
+1. **Flink集群健康状态** - HTTP API检查
+2. **作业运行状态** - RUNNING/FAILED/CANCELED状态监控
+3. **Kafka消费延迟** - 实时lag监控 (kafka2doris)
+4. **MySQL CDC延迟** - binlog位点监控 (mysql2doris)
+5. **Doris写入成功率** - 写入性能和错误监控
+6. **数据同步延迟** - 端到端延迟监控
+
+### 监控频率
+- **kafka2doris**: 60秒间隔检查
+- **mysql2doris**: 5分钟健康检查，15分钟完整监控
+- **集群状态**: 每次检查都验证
+
+### 告警策略
+- **立即告警**: 作业失败、集群异常
+- **恢复通知**: 自动重启成功
+- **定期报告**: 同步完成状态
+- **状态管理**: 避免重复告警
+
+### 监控脚本要求
+- 检查间隔可配置
+- 最大失败次数: 3次
+- 自动重启能力
+- 完整的日志记录
+- 状态文件管理
+
+## 🚀 部署规范
+
+### 生产部署检查清单
+- [ ] SQL文件schema验证完成
+- [ ] 去除调试模式配置 (`TABLEAU` 模式)
+- [ ] 检查点路径配置正确 (项目独立相对路径)
+- [ ] 告警webhook配置正确
+- [ ] 监控脚本权限设置正确 (`chmod +x`)
+- [ ] 日志目录可写
+- [ ] 网络连接测试通过
+- [ ] 项目README.md文档完整
+
+### 启动命令标准
+```bash
+# Flink集群
+cd /opt/flink && ./bin/start-cluster.sh
+
+# kafka2doris流处理作业
+cd /home/ubuntu/work/script
+flink sql-client -f flink_app/kafka2doris/scripts/kafka_to_doris_production.sql
+
+# mysql2doris CDC作业
+flink sql-client -f flink_app/mysql2doris/scripts/mysql_sync.sql
+
+# 监控脚本
+cd flink_app/kafka2doris && ./scripts/start_monitor.sh start
+cd flink_app/mysql2doris && ./scripts/setup_monitor_cron.sh
+```
+
+## 🐛 故障排查
+
+### 常见问题
+1. **Schema不匹配**: 使用脚本验证真实表结构
+2. **连接失败**: 检查网络和认证信息
+3. **Checkpoint失败**: 检查路径权限和磁盘空间
+4. **内存不足**: 调整TaskManager配置
+5. **Kafka消费延迟**: 检查分区数和并行度配置
+6. **Doris写入失败**: 检查表结构和数据格式
+
+### 日志位置
+- **Flink日志**: `/opt/flink/log/`
+- **项目监控日志**: `flink_app/[项目名]/logs/monitor_*.log`
+- **项目同步日志**: `flink_app/[项目名]/logs/*_sync.log`
+- **检查点**: `flink_app/[项目名]/checkpoints/`
+
+### 调试工具
+```bash
+# 检查Flink作业状态
+flink list
+curl http://localhost:8081/jobs
+
+# 检查Kafka连通性
+kafka-console-consumer --bootstrap-server [broker] --topic [topic] --from-beginning
+
+# 检查MySQL连通性
+mysql -h [host] -P [port] -u [user] -p
+
+# 检查Doris连通性
+mysql -h [host] -P 9030 -u [user] -p
+```
+
+## 📝 文档维护
+
+### README.md要求
+- 每个SQL文件的状态标记 (✅ 可用 / ⚠️ 测试中 / ❌ 废弃)
+- 详细的使用说明和部署步骤
+- 完整的配置参数说明
+- 故障排除指南
+- 环境配置和依赖说明
+
+### 代码注释
+- SQL文件必须包含用途、状态、注意事项
+- Python脚本必须有类和方法的文档字符串
+- 关键配置项必须有注释说明
+- Shell脚本必须有操作说明
+
+## 🔒 安全规范
+
+### 敏感信息
+- 密码使用占位符或环境变量
+- 生产配置不提交到版本控制
+- 日志中不输出敏感信息
+- 使用 `.gitignore` 忽略敏感文件
+
+### 权限控制
+- 脚本文件设置合适的执行权限 (`chmod +x`)
+- 日志文件限制访问权限
+- 检查点目录权限控制
+- 配置文件只读权限
+
+## 📈 性能优化
+
+### Flink调优
+- 根据数据量调整并行度
+- 优化缓冲区大小和内存配置
+- 设置合理的checkpoint间隔 (60s)
+- 监控资源使用情况
+
+### 数据库优化
+- 使用分区提高查询效率
+- 批量写入优化
+- 连接池配置
+- 索引优化建议
+
+### Kafka优化
+- 分区数与并行度匹配
+- 合理的批量大小
+- 消费者组配置
+- 监控消费延迟
+
+## 🔄 项目管理
+
+### 添加新项目
+1. 创建标准目录结构
+2. 复制模板文件和配置
+3. 更新主README.md
+4. 配置独立检查点路径
+5. 编写项目文档
+
+### 版本控制
+- 使用语义化版本号
+- 重要变更记录在CHANGELOG
+- 标记文件状态 (生产/测试/废弃)
+- 定期清理废弃文件
+
+### 测试规范
+- 所有SQL脚本提供测试版本
+- 监控脚本包含单元测试
+- 部署前完整功能测试
+- 性能基准测试
+
+---
+## �� 更新记录
+- **2025-05-29**: 添加数据同步方式严格执行规则 - 配置驱动，禁止降级
+- **2025-05-29**: 创建配置验证器 config_validator.py - 强制检查stream/batch模式
+- **2025-05-29**: 建立分离模板系统开发规范
+- **2025-05-29**: 完善Schema检测和字段格式要求
+- **2025-05-29**: 标准化partition_day字段生成规则
+- **2025-05-28**: 重构为flink_app工程，支持多项目管理
+- **2025-05-28**: 实现项目独立检查点管理
+- **2025-05-27**: 完善kafka2doris和mysql2doris项目规范
+- **2025-05-27**: 更新监控和告警系统规范
+
+# Flink分离模板系统开发规则
+# ================================
+
+## 🎯 项目概述
+这是基于Jinja2的Flink分离模板系统，实现配置、逻辑、模板的完全分离。
+核心特性：环境差异化管理、真实Schema检测、高度可扩展的模板引擎。
+
+## 📋 模板开发规范
+
+### 1. SQL格式规范
+- **字段格式**: 每个字段必须单独一行，提高可读性和维护性
+- **Schema一致性**: source和sink的column必须与真实数据库表schema保持完全一致
+- **分区字段**: sink表必须包含partition_day字段，从source表的created_at提取，格式"yyyy-MM-dd"
+
+```sql
+-- ✅ 正确格式 - 字段分行
+CREATE TABLE source_user_interests (
+    id BIGINT COMMENT '主键ID',
+    user_id BIGINT COMMENT '用户ID',
+    interest_type STRING COMMENT '兴趣类型',
+    created_at TIMESTAMP(3) COMMENT '创建时间'
+);
+
+-- ❌ 错误格式 - 字段在一行
+CREATE TABLE source_user_interests (    id BIGINT COMMENT '主键ID',    user_id BIGINT COMMENT '用户ID');
+```
+
+### 2. 模板结构规范
+```
+flink_app/configs/
+├── environments/          # 环境配置（prod/test/dev）
+├── jobs/                 # 作业逻辑定义
+├── templates/            # Jinja2 SQL模板
+├── template_generator.py # 模板生成器
+└── schema_detector.py    # Schema检测器
+```
+
+### 3. 环境配置规范
+- **完全分离**: 环境配置、作业逻辑、SQL模板独立管理
+- **特殊表配置**: 支持user_interests等表的独立数据库连接配置
+- **差异化管理**: prod/test/dev环境独立配置文件
+
+```yaml
+# environments/prod.yaml
+sources:
+  mysql:
+    # 通用配置
+    host: "xme-prod-rds-content.chkycqw22fzd.ap-southeast-1.rds.amazonaws.com"
+    
+    # 特殊表配置
+    user_interests:
+      host: "xme-prod-rds-analysis-readonly.chkycqw22fzd.ap-southeast-1.rds.amazonaws.com"
+      username: "prod-bigdata-user-interests"
+      password: "Dd4.fD3DFDk4.9cc"
+      database: "content_behavior"
+```
+
+### 4. Schema检测规范
+- **真实连接**: 优先使用schema_detector.py连接真实数据库获取表结构
+- **降级策略**: 连接失败时使用默认schema，确保生成器不中断
+- **类型映射**: MySQL类型精确映射到Flink类型
+
+```python
+# MySQL → Flink 类型映射
+'bigint' → 'BIGINT'
+'varchar/text' → 'STRING'  
+'datetime/timestamp' → 'TIMESTAMP(3)'
+'decimal' → 'DECIMAL(10,2)'
+```
+
+### 5. Jinja2模板规范
+- **模板继承**: 使用`{% include %}`实现模板复用
+- **条件判断**: 使用`{% if %}`处理环境差异
+- **变量替换**: 使用`{{ variable }}`进行动态替换
+- **循环处理**: 使用`{% for %}`遍历字段列表
+
+```jinja2
+{# 字段生成 - 每个字段分行 #}
+CREATE TABLE {{ source_table_name }} (
+{%- for field in schema.source_fields %}
+    {{ field.name }} {{ field.flink_type }}
+    {%- if field.comment %} COMMENT '{{ field.comment }}'{% endif %}
+    {%- if not loop.last %},{% endif %}
+
+{%- endfor %}
+);
+```
+
+### 6. 分区字段生成规范
+- **目标表**: 必须包含partition_day STRING字段
+- **INSERT语句**: 必须生成DATE_FORMAT(created_at, 'yyyy-MM-dd') AS partition_day
+- **字段位置**: partition_day放在目标表字段列表最后
+
+```sql
+-- Doris目标表
+CREATE TABLE sink_target_table (
+    id BIGINT COMMENT '主键ID',
+    user_id BIGINT COMMENT '用户ID',
+    created_at TIMESTAMP(3) COMMENT '创建时间',
+    partition_day STRING COMMENT '分区日期字段，格式yyyy-MM-dd'
+);
+
+-- INSERT语句
+INSERT INTO sink_target_table
+SELECT 
+    id,
+    user_id,
+    created_at,
+    DATE_FORMAT(created_at, 'yyyy-MM-dd') AS partition_day
+FROM source_table;
+```
+
+## 🔧 开发工具使用
+
+### 模板生成命令
+```bash
+# MySQL CDC到Doris (生产环境)
+python3 template_generator.py \
+  --job mysql2doris \
+  --env prod \
+  --source-table user_interests \
+  --target-table xme_ods_user_rds_user_interests_di \
+  --source-db behavior \
+  --target-db ods
+
+# Kafka到Doris (测试环境)  
+python3 template_generator.py \
+  --job kafka2doris \
+  --env test \
+  --source-topic client_cold_start \
+  --target-table client_cold_start_test
+```
+
+### Schema检测测试
+```bash
+# 测试schema检测器
+python3 schema_detector.py
+```
+
+## 🚀 质量检查清单
+
+### 生成SQL检查
+- [ ] 字段格式：每个字段单独一行
+- [ ] Schema一致性：与真实表结构匹配
+- [ ] 分区字段：包含partition_day且逻辑正确
+- [ ] 配置正确：连接信息、认证信息无误
+- [ ] 模板变量：所有{{}}都已正确替换
+
+### 模板开发检查  
+- [ ] Jinja2语法：条件、循环、包含语法正确
+- [ ] 变量引用：避免undefined变量错误
+- [ ] 字段遍历：使用loop.last正确处理逗号
+- [ ] 注释完整：模板用途和参数说明清晰
+
+## 🐛 常见问题解决
+
+### 1. 字段格式问题
+```jinja2
+{# 确保字段分行显示 #}
+{%- for field in schema.source_fields %}
+    {{ field.name }} {{ field.flink_type }}
+    {%- if field.comment %} COMMENT '{{ field.comment }}'{% endif %}
+    {%- if not loop.last %},{% endif %}
+
+{%- endfor %}
+```
+
+### 2. Schema检测失败
+- 检查网络连接和数据库认证
+- 确保pymysql已安装：`pip3 install pymysql`
+- 验证配置文件中的连接信息
+
+### 3. 模板变量未替换
+- 检查变量名拼写
+- 确认变量在模板上下文中存在
+- 使用{% if variable %}做条件检查
+
+## 📝 文件命名规范
+- 环境配置：`{env}.yaml` (prod.yaml, test.yaml, dev.yaml)
+- 作业定义：`{job_type}.yaml` (mysql2doris.yaml, kafka2doris.yaml)  
+- SQL模板：`{component}.sql.jinja2` (mysql_cdc_source.sql.jinja2)
+- 生成SQL：`{job_name}_{env}.sql` (mysql2doris_user_interests_prod.sql)
+
+## 🔄 更新记录
+- **2025-05-29**: 添加数据同步方式严格执行规则 - 配置驱动，禁止降级
+- **2025-05-29**: 创建配置验证器 config_validator.py - 强制检查stream/batch模式
+- **2025-05-29**: 建立分离模板系统开发规范
+- **2025-05-29**: 完善Schema检测和字段格式要求
+- **2025-05-29**: 标准化partition_day字段生成规则
+- **2025-05-28**: 重构为flink_app工程，支持多项目管理
+- **2025-05-28**: 实现项目独立检查点管理
+- **2025-05-27**: 完善kafka2doris和mysql2doris项目规范
+- **2025-05-27**: 更新监控和告警系统规范 

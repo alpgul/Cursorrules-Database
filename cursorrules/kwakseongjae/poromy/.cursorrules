@@ -1,0 +1,1024 @@
+<!-- PROJECT_STRUCTURE_START -->
+
+## 📋 Project Structure
+
+### 🔧 Project Info
+- **Name**: poromy-front
+- **Version**: 0.1.0
+- **Package Manager**: pnpm
+- **Framework**: Next.js (App Router)
+- **Language**: TypeScript
+
+### 📁 Directory Structure
+
+```
+📁 public/
+  📁 public/fonts/
+  📁 public/icons/
+  📁 public/images/
+    📁 public/images/company/
+    📁 public/images/position/
+  📁 public/prompts/
+    📁 public/prompts/company/
+      📄 public/prompts/company/gs_construction.md
+      📄 public/prompts/company/hana_bank.md
+      📄 public/prompts/company/hanwha_solutions.md
+      📄 public/prompts/company/hyundai_motors.md
+      📄 public/prompts/company/kakao.md
+      📄 public/prompts/company/krafton.md
+      📄 public/prompts/company/lg_electronics.md
+      📄 public/prompts/company/naver.md
+      📄 public/prompts/company/samsung_display.md
+      📄 public/prompts/company/samsung_sdi.md
+      📄 public/prompts/company/samsung_sds.md
+      📄 public/prompts/company/sk_hynix.md
+    📁 public/prompts/position/
+      📄 public/prompts/position/1.md
+      📄 public/prompts/position/10.md
+      📄 public/prompts/position/100.md
+      📄 public/prompts/position/101.md
+      📄 public/prompts/position/102.md
+      📄 public/prompts/position/103.md
+      📄 public/prompts/position/104.md
+      📄 public/prompts/position/105.md
+      📄 public/prompts/position/106.md
+      📄 public/prompts/position/107.md
+      📄 public/prompts/position/108.md
+      📄 public/prompts/position/109.md
+      📄 public/prompts/position/11.md
+      📄 public/prompts/position/110.md
+      📄 public/prompts/position/111.md
+      📄 public/prompts/position/112.md
+      📄 public/prompts/position/113.md
+      📄 public/prompts/position/114.md
+      📄 public/prompts/position/115.md
+      📄 public/prompts/position/116.md
+      📄 public/prompts/position/117.md
+      📄 public/prompts/position/118.md
+      📄 public/prompts/position/119.md
+      📄 public/prompts/position/12.md
+      📄 public/prompts/position/120.md
+      📄 public/prompts/position/121.md
+      📄 public/prompts/position/122.md
+      📄 public/prompts/position/123.md
+      📄 public/prompts/position/124.md
+      📄 public/prompts/position/125.md
+      📄 public/prompts/position/126.md
+      📄 public/prompts/position/127.md
+      📄 public/prompts/position/128.md
+      📄 public/prompts/position/129.md
+      📄 public/prompts/position/13.md
+      📄 public/prompts/position/130.md
+      📄 public/prompts/position/14.md
+      📄 public/prompts/position/15.md
+      📄 public/prompts/position/16.md
+      📄 public/prompts/position/17.md
+      📄 public/prompts/position/18.md
+      📄 public/prompts/position/19.md
+      📄 public/prompts/position/2.md
+      📄 public/prompts/position/20.md
+      📄 public/prompts/position/21.md
+      📄 public/prompts/position/22.md
+      📄 public/prompts/position/23.md
+      📄 public/prompts/position/24.md
+      📄 public/prompts/position/25.md
+      📄 public/prompts/position/26.md
+      📄 public/prompts/position/27.md
+      📄 public/prompts/position/28.md
+      📄 public/prompts/position/29.md
+      📄 public/prompts/position/3.md
+      📄 public/prompts/position/30.md
+      📄 public/prompts/position/31.md
+      📄 public/prompts/position/32.md
+      📄 public/prompts/position/33.md
+      📄 public/prompts/position/34.md
+      📄 public/prompts/position/35.md
+      📄 public/prompts/position/36.md
+      📄 public/prompts/position/37.md
+      📄 public/prompts/position/38.md
+      📄 public/prompts/position/39.md
+      📄 public/prompts/position/4.md
+      📄 public/prompts/position/40.md
+      📄 public/prompts/position/41.md
+      📄 public/prompts/position/42.md
+      📄 public/prompts/position/43.md
+      📄 public/prompts/position/44.md
+      📄 public/prompts/position/45.md
+      📄 public/prompts/position/46.md
+      📄 public/prompts/position/47.md
+      📄 public/prompts/position/48.md
+      📄 public/prompts/position/49.md
+      📄 public/prompts/position/5.md
+      📄 public/prompts/position/50.md
+      📄 public/prompts/position/51.md
+      📄 public/prompts/position/52.md
+      📄 public/prompts/position/53.md
+      📄 public/prompts/position/54.md
+      📄 public/prompts/position/55.md
+      📄 public/prompts/position/56.md
+      📄 public/prompts/position/57.md
+      📄 public/prompts/position/58.md
+      📄 public/prompts/position/59.md
+      📄 public/prompts/position/6.md
+      📄 public/prompts/position/60.md
+      📄 public/prompts/position/61.md
+      📄 public/prompts/position/62.md
+      📄 public/prompts/position/63.md
+      📄 public/prompts/position/64.md
+      📄 public/prompts/position/65.md
+      📄 public/prompts/position/66.md
+      📄 public/prompts/position/67.md
+      📄 public/prompts/position/68.md
+      📄 public/prompts/position/69.md
+      📄 public/prompts/position/7.md
+      📄 public/prompts/position/70.md
+      📄 public/prompts/position/71.md
+      📄 public/prompts/position/72.md
+      📄 public/prompts/position/73.md
+      📄 public/prompts/position/74.md
+      📄 public/prompts/position/75.md
+      📄 public/prompts/position/76.md
+      📄 public/prompts/position/77.md
+      📄 public/prompts/position/78.md
+      📄 public/prompts/position/79.md
+      📄 public/prompts/position/8.md
+      📄 public/prompts/position/80.md
+      📄 public/prompts/position/81.md
+      📄 public/prompts/position/82.md
+      📄 public/prompts/position/83.md
+      📄 public/prompts/position/84.md
+      📄 public/prompts/position/85.md
+      📄 public/prompts/position/86.md
+      📄 public/prompts/position/87.md
+      📄 public/prompts/position/88.md
+      📄 public/prompts/position/89.md
+      📄 public/prompts/position/9.md
+      📄 public/prompts/position/90.md
+      📄 public/prompts/position/91.md
+      📄 public/prompts/position/92.md
+      📄 public/prompts/position/93.md
+      📄 public/prompts/position/94.md
+      📄 public/prompts/position/95.md
+      📄 public/prompts/position/96.md
+      📄 public/prompts/position/97.md
+      📄 public/prompts/position/98.md
+      📄 public/prompts/position/99.md
+  📁 public/svg/
+    📁 public/svg/company/
+📁 scripts/
+  📄 scripts/generate-data.js
+  📄 scripts/structure-injector.ts
+  📄 scripts/update-cursorrules.js
+📁 src/
+  📁 src/app/
+    📁 src/app/403/
+      📄 src/app/403/page.tsx
+    📁 src/app/account/
+      📄 src/app/account/page.tsx
+    📁 src/app/admin/
+      📁 src/app/admin/add-test-users/
+      📄 src/app/admin/page.tsx
+    📁 src/app/api/
+      📁 src/app/api/admin/
+      📁 src/app/api/auth/
+      📁 src/app/api/create-profile/
+      📁 src/app/api/email/
+      📁 src/app/api/image-proxy/
+      📁 src/app/api/inquiry/
+      📁 src/app/api/link-preview/
+      📁 src/app/api/prompts/
+      📁 src/app/api/update-profile/
+    📁 src/app/auth/
+      📁 src/app/auth/callback/
+    📁 src/app/company/
+      📁 src/app/company/[id]/
+      📄 src/app/company/page.tsx
+    📁 src/app/guide/
+      📁 src/app/guide/[type]/
+      📄 src/app/guide/page.tsx
+    📁 src/app/inquiry/
+      📁 src/app/inquiry/[id]/
+      📁 src/app/inquiry/new/
+      📄 src/app/inquiry/page.tsx
+    📁 src/app/login/
+      📄 src/app/login/page.tsx
+    📁 src/app/position/
+      📁 src/app/position/[id]/
+      📄 src/app/position/page.tsx
+      📄 src/app/position/PositionContent.tsx
+    📁 src/app/role/
+      📁 src/app/role/[name]/
+      📄 src/app/role/page.tsx
+    📁 src/app/rss/
+      📄 src/app/rss/route.ts
+    📁 src/app/signup/
+      📄 src/app/signup/page.tsx
+    📁 src/app/verify-email/
+      📄 src/app/verify-email/page.tsx
+    📄 src/app/layout.tsx
+    📄 src/app/page.tsx
+  📁 src/assets/
+    📁 src/assets/icons/
+      📄 src/assets/icons/BuildingsIcon.tsx
+      📄 src/assets/icons/BulbIcon.tsx
+      📄 src/assets/icons/CheckIcon.tsx
+      📄 src/assets/icons/ChevronIcon.tsx
+      📄 src/assets/icons/CopyIcon.tsx
+      📄 src/assets/icons/CopyLinkIcon.tsx
+      📄 src/assets/icons/DisabledBulbIcon.tsx
+      📄 src/assets/icons/DisabledHamburgerIcon.tsx
+      📄 src/assets/icons/EditIcon.tsx
+      📄 src/assets/icons/ExclamationIcon.tsx
+      📄 src/assets/icons/HamburgerIcon.tsx
+      📄 src/assets/icons/HelpIcon.tsx
+      📄 src/assets/icons/LinkIcon.tsx
+      📄 src/assets/icons/LogoIcon.tsx
+      📄 src/assets/icons/PersonIcon.tsx
+      📄 src/assets/icons/SalesIcon.tsx
+    📄 src/assets/index.ts
+  📁 src/components/
+    📁 src/components/analytics/
+      📄 src/components/analytics/EngagementTracker.tsx
+    📁 src/components/common/
+      📄 src/components/common/HelpModal.tsx
+      📄 src/components/common/NotificationMessage.tsx
+      📄 src/components/common/PromptContainer.tsx
+      📄 src/components/common/SearchBar.tsx
+    📁 src/components/company/
+      📄 src/components/company/CompanyCarousel.tsx
+    📁 src/components/home/
+      📄 src/components/home/HomeCarousel.tsx
+      📄 src/components/home/HomeContainer.tsx
+      📄 src/components/home/HomeInquiry.tsx
+      📄 src/components/home/Section.tsx
+      📄 src/components/home/SectionHeader.tsx
+    📁 src/components/inquiry/
+      📄 src/components/inquiry/AnswerForm.tsx
+      📄 src/components/inquiry/HomeInquiryCard.tsx
+      📄 src/components/inquiry/InquiryCard.tsx
+      📄 src/components/inquiry/InquiryCarousel.tsx
+      📄 src/components/inquiry/InquiryList.tsx
+      📄 src/components/inquiry/InquiryProcessModal.tsx
+    📁 src/components/modal/
+      📄 src/components/modal/ProfileModal.tsx
+    📁 src/components/navigation/
+      📄 src/components/navigation/Navbar.tsx
+      📄 src/components/navigation/Sidebar.tsx
+    📁 src/components/position/
+      📄 src/components/position/JobList.tsx
+    📁 src/components/ui/
+      📄 src/components/ui/Dialog.tsx
+    📄 src/components/ClientRedirect.tsx
+    📄 src/components/CustomCursor.tsx
+    📄 src/components/DeviceAwarePositionView.tsx
+    📄 src/components/GoogleAnalytics.tsx
+    📄 src/components/LinkPreview.tsx
+    📄 src/components/LinkPreviewThumbnail.tsx
+  📁 src/constants/
+    📄 src/constants/company.data.ts
+    📄 src/constants/job.data.ts
+    📄 src/constants/seo-keywords.ts
+  📁 src/contexts/
+    📄 src/contexts/CursorContext.tsx
+    📄 src/contexts/SupabaseContext.tsx
+  📁 src/emails/
+    📄 src/emails/answer-notification.tsx
+    📄 src/emails/inquiry-notification.tsx
+    📄 src/emails/verification.tsx
+  📁 src/hooks/
+    📄 src/hooks/useEmblaCarousel.ts
+    📄 src/hooks/useIsMobile.ts
+  📁 src/lib/
+    📄 src/lib/gtag.ts
+    📄 src/lib/supabase-client.ts
+    📄 src/lib/supabase-server.ts
+    📄 src/lib/utils.ts
+  📁 src/types/
+    📄 src/types/company.ts
+    📄 src/types/ga.d.ts
+    📄 src/types/inquiry.ts
+    📄 src/types/job.ts
+    📄 src/types/markdown.d.ts
+    📄 src/types/supabase.ts
+    📄 src/types/svg.d.ts
+  📁 src/utils/
+    📄 src/utils/crypto.ts
+    📄 src/utils/date.ts
+    📄 src/utils/device.ts
+    📄 src/utils/image.ts
+    📄 src/utils/prompt.ts
+  📄 src/middleware.ts
+📄 frontend-design-guideline.md
+📄 next-env.d.ts
+📄 next-sitemap.config.js
+📄 next.config.ts
+📄 package.json
+📄 pnpm-lock.yaml
+📄 README.md
+📄 tsconfig.json
+```
+
+### 🎯 Guidelines
+- Follow Domain-Driven Design (DDD) under `src/domains/`
+- Keep shared components in `src/components/`
+- Use TypeScript for type safety
+- Implement error boundaries and loading states
+- Follow the frontend design guidelines
+
+### 🔗 Key Conventions
+- Use barrel exports (index.ts) for clean imports
+- Prefer composition over props drilling
+- Keep components focused and single-responsibility
+- Abstract complex logic into custom hooks
+- Use descriptive names for better readability
+
+<!-- PROJECT_STRUCTURE_END -->
+
+# Frontend Design Guideline
+
+This document summarizes key frontend design principles and rules, showcasing
+recommended patterns. Follow these guidelines when writing frontend code.
+
+# Readability
+
+Improving the clarity and ease of understanding code.
+
+## Naming Magic Numbers
+
+**Rule:** Replace magic numbers with named constants for clarity.
+
+**Reasoning:**
+
+- Improves clarity by giving semantic meaning to unexplained values.
+- Enhances maintainability.
+
+#### Recommended Pattern:
+
+```typescript
+const ANIMATION_DELAY_MS = 300
+
+async function onLikeClick() {
+  await postLike(url)
+  await delay(ANIMATION_DELAY_MS) // Clearly indicates waiting for animation
+  await refetchPostLike()
+}
+```
+
+## Abstracting Implementation Details
+
+**Rule:** Abstract complex logic/interactions into dedicated components/HOCs.
+
+**Reasoning:**
+
+- Reduces cognitive load by separating concerns.
+- Improves readability, testability, and maintainability of components.
+
+#### Recommended Pattern 1: Auth Guard
+
+(Login check abstracted to a wrapper/guard component)
+
+```tsx
+// App structure
+function App() {
+  return (
+    <AuthGuard>
+      {' '}
+      {/* Wrapper handles auth check */}
+      <LoginStartPage />
+    </AuthGuard>
+  )
+}
+
+// AuthGuard component encapsulates the check/redirect logic
+function AuthGuard({ children }) {
+  const status = useCheckLoginStatus()
+  useEffect(() => {
+    if (status === 'LOGGED_IN') {
+      location.href = '/home'
+    }
+  }, [status])
+
+  // Render children only if not logged in, otherwise render null (or loading)
+  return status !== 'LOGGED_IN' ? children : null
+}
+
+// LoginStartPage is now simpler, focused only on login UI/logic
+function LoginStartPage() {
+  // ... login related logic ONLY ...
+  return <>{/* ... login related components ... */}</>
+}
+```
+
+#### Recommended Pattern 2: Dedicated Interaction Component
+
+(Dialog logic abstracted into a dedicated `InviteButton` component)
+
+```tsx
+export function FriendInvitation() {
+  const { data } = useQuery(/* ... */)
+
+  return (
+    <>
+      {/* Use the dedicated button component */}
+      <InviteButton name={data.name} />
+      {/* ... other UI ... */}
+    </>
+  )
+}
+
+// InviteButton handles the confirmation flow internally
+function InviteButton({ name }) {
+  const handleClick = async () => {
+    const canInvite = await overlay.openAsync(({ isOpen, close }) => (
+      <ConfirmDialog
+        title={`Share with ${name}`}
+        // ... dialog setup ...
+      />
+    ))
+
+    if (canInvite) {
+      await sendPush()
+    }
+  }
+
+  return <Button onClick={handleClick}>Invite</Button>
+}
+```
+
+## Separating Code Paths for Conditional Rendering
+
+**Rule:** Separate significantly different conditional UI/logic into distinct
+components.
+
+**Reasoning:**
+
+- Improves readability by avoiding complex conditionals within one component.
+- Ensures each specialized component has a clear, single responsibility.
+
+#### Recommended Pattern:
+
+(Separate components for each role)
+
+```tsx
+function SubmitButton() {
+  const isViewer = useRole() === 'viewer'
+
+  // Delegate rendering to specialized components
+  return isViewer ? <ViewerSubmitButton /> : <AdminSubmitButton />
+}
+
+// Component specifically for the 'viewer' role
+function ViewerSubmitButton() {
+  return <TextButton disabled>Submit</TextButton>
+}
+
+// Component specifically for the 'admin' (or non-viewer) role
+function AdminSubmitButton() {
+  useEffect(() => {
+    showAnimation() // Animation logic isolated here
+  }, [])
+
+  return <Button type="submit">Submit</Button>
+}
+```
+
+## Simplifying Complex Ternary Operators
+
+**Rule:** Replace complex/nested ternaries with `if`/`else` or IIFEs for
+readability.
+
+**Reasoning:**
+
+- Makes conditional logic easier to follow quickly.
+- Improves overall code maintainability.
+
+#### Recommended Pattern:
+
+(Using an IIFE with `if` statements)
+
+```typescript
+const status = (() => {
+  if (ACondition && BCondition) return 'BOTH'
+  if (ACondition) return 'A'
+  if (BCondition) return 'B'
+  return 'NONE'
+})()
+```
+
+## Reducing Eye Movement (Colocating Simple Logic)
+
+**Rule:** Colocate simple, localized logic or use inline definitions to reduce
+context switching.
+
+**Reasoning:**
+
+- Allows top-to-bottom reading and faster comprehension.
+- Reduces cognitive load from context switching (eye movement).
+
+#### Recommended Pattern A: Inline `switch`
+
+```tsx
+function Page() {
+  const user = useUser()
+
+  // Logic is directly visible here
+  switch (user.role) {
+    case 'admin':
+      return (
+        <div>
+          <Button disabled={false}>Invite</Button>
+          <Button disabled={false}>View</Button>
+        </div>
+      )
+    case 'viewer':
+      return (
+        <div>
+          <Button disabled={true}>Invite</Button> {/* Example for viewer */}
+          <Button disabled={false}>View</Button>
+        </div>
+      )
+    default:
+      return null
+  }
+}
+```
+
+#### Recommended Pattern B: Colocated simple policy object
+
+```tsx
+function Page() {
+  const user = useUser()
+  // Simple policy defined right here, easy to see
+  const policy = {
+    admin: { canInvite: true, canView: true },
+    viewer: { canInvite: false, canView: true },
+  }[user.role]
+
+  // Ensure policy exists before accessing properties if role might not match
+  if (!policy) return null
+
+  return (
+    <div>
+      <Button disabled={!policy.canInvite}>Invite</Button>
+      <Button disabled={!policy.canView}>View</Button>
+    </div>
+  )
+}
+```
+
+## Naming Complex Conditions
+
+**Rule:** Assign complex boolean conditions to named variables.
+
+**Reasoning:**
+
+- Makes the _meaning_ of the condition explicit.
+- Improves readability and self-documentation by reducing cognitive load.
+
+#### Recommended Pattern:
+
+(Conditions assigned to named variables)
+
+```typescript
+const matchedProducts = products.filter((product) => {
+  // Check if product belongs to the target category
+  const isSameCategory = product.categories.some(
+    (category) => category.id === targetCategory.id
+  )
+
+  // Check if any product price falls within the desired range
+  const isPriceInRange = product.prices.some(
+    (price) => price >= minPrice && price <= maxPrice
+  )
+
+  // The overall condition is now much clearer
+  return isSameCategory && isPriceInRange
+})
+```
+
+**Guidance:** Name conditions when the logic is complex, reused, or needs unit
+testing. Avoid naming very simple, single-use conditions.
+
+# Predictability
+
+Ensuring code behaves as expected based on its name, parameters, and context.
+
+## Standardizing Return Types
+
+**Rule:** Use consistent return types for similar functions/hooks.
+
+**Reasoning:**
+
+- Improves code predictability; developers can anticipate return value shapes.
+- Reduces confusion and potential errors from inconsistent types.
+
+#### Recommended Pattern 1: API Hooks (React Query)
+
+```typescript
+// Always return the Query object
+import { useQuery, UseQueryResult } from '@tanstack/react-query'
+
+// Assuming fetchUser returns Promise<UserType>
+function useUser(): UseQueryResult<UserType, Error> {
+  const query = useQuery({ queryKey: ['user'], queryFn: fetchUser })
+  return query
+}
+
+// Assuming fetchServerTime returns Promise<Date>
+function useServerTime(): UseQueryResult<Date, Error> {
+  const query = useQuery({
+    queryKey: ['serverTime'],
+    queryFn: fetchServerTime,
+  })
+  return query
+}
+```
+
+#### Recommended Pattern 2: Validation Functions
+
+(Using a consistent type, ideally a Discriminated Union)
+
+```typescript
+type ValidationResult = { ok: true } | { ok: false; reason: string }
+
+function checkIsNameValid(name: string): ValidationResult {
+  if (name.length === 0) return { ok: false, reason: 'Name cannot be empty.' }
+  if (name.length >= 20)
+    return { ok: false, reason: 'Name cannot be longer than 20 characters.' }
+  return { ok: true }
+}
+
+function checkIsAgeValid(age: number): ValidationResult {
+  if (!Number.isInteger(age))
+    return { ok: false, reason: 'Age must be an integer.' }
+  if (age < 18) return { ok: false, reason: 'Age must be 18 or older.' }
+  if (age > 99) return { ok: false, reason: 'Age must be 99 or younger.' }
+  return { ok: true }
+}
+
+// Usage allows safe access to 'reason' only when ok is false
+const nameValidation = checkIsNameValid(name)
+if (!nameValidation.ok) {
+  console.error(nameValidation.reason)
+}
+```
+
+## Revealing Hidden Logic (Single Responsibility)
+
+**Rule:** Avoid hidden side effects; functions should only perform actions
+implied by their signature (SRP).
+
+**Reasoning:**
+
+- Leads to predictable behavior without unintended side effects.
+- Creates more robust, testable code through separation of concerns (SRP).
+
+#### Recommended Pattern:
+
+```typescript
+// Function *only* fetches balance
+async function fetchBalance(): Promise<number> {
+  const balance = await http.get<number>('...')
+  return balance
+}
+
+// Caller explicitly performs logging where needed
+async function handleUpdateClick() {
+  const balance = await fetchBalance() // Fetch
+  logging.log('balance_fetched') // Log (explicit action)
+  await syncBalance(balance) // Another action
+}
+```
+
+## Using Unique and Descriptive Names (Avoiding Ambiguity)
+
+**Rule:** Use unique, descriptive names for custom wrappers/functions to avoid
+ambiguity.
+
+**Reasoning:**
+
+- Avoids ambiguity and enhances predictability.
+- Allows developers to understand specific actions (e.g., adding auth) directly
+  from the name.
+
+#### Recommended Pattern:
+
+```typescript
+// In httpService.ts - Clearer module name
+import { http as httpLibrary } from '@some-library/http'
+
+export const httpService = {
+  // Unique module name
+  async getWithAuth(url: string) {
+    // Descriptive function name
+    const token = await fetchToken()
+    return httpLibrary.get(url, {
+      headers: { Authorization: `Bearer ${token}` },
+    })
+  },
+}
+
+// In fetchUser.ts - Usage clearly indicates auth
+import { httpService } from './httpService'
+export async function fetchUser() {
+  // Name 'getWithAuth' makes the behavior explicit
+  return await httpService.getWithAuth('...')
+}
+```
+
+# Cohesion
+
+Keeping related code together and ensuring modules have a well-defined, single
+purpose.
+
+## Considering Form Cohesion
+
+**Rule:** Choose field-level or form-level cohesion based on form requirements.
+
+**Reasoning:**
+
+- Balances field independence (field-level) vs. form unity (form-level).
+- Ensures related form logic is appropriately grouped based on requirements.
+
+#### Recommended Pattern (Field-Level Example):
+
+```tsx
+// Each field uses its own `validate` function
+import { useForm } from 'react-hook-form'
+
+export function Form() {
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm({
+    /* defaultValues etc. */
+  })
+
+  const onSubmit = handleSubmit((formData) => {
+    console.log('Form submitted:', formData)
+  })
+
+  return (
+    <form onSubmit={onSubmit}>
+      <div>
+        <input
+          {...register('name', {
+            validate: (value) =>
+              value.trim() === '' ? 'Please enter your name.' : true, // Example validation
+          })}
+          placeholder="Name"
+        />
+        {errors.name && <p>{errors.name.message}</p>}
+      </div>
+      <div>
+        <input
+          {...register('email', {
+            validate: (value) =>
+              /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)
+                ? true
+                : 'Invalid email address.', // Example validation
+          })}
+          placeholder="Email"
+        />
+        {errors.email && <p>{errors.email.message}</p>}
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  )
+}
+```
+
+#### Recommended Pattern (Form-Level Example):
+
+```tsx
+// A single schema defines validation for the whole form
+import * as z from 'zod'
+import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+
+const schema = z.object({
+  name: z.string().min(1, 'Please enter your name.'),
+  email: z.string().min(1, 'Please enter your email.').email('Invalid email.'),
+})
+
+export function Form() {
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm({
+    resolver: zodResolver(schema),
+    defaultValues: { name: '', email: '' },
+  })
+
+  const onSubmit = handleSubmit((formData) => {
+    console.log('Form submitted:', formData)
+  })
+
+  return (
+    <form onSubmit={onSubmit}>
+      <div>
+        <input {...register('name')} placeholder="Name" />
+        {errors.name && <p>{errors.name.message}</p>}
+      </div>
+      <div>
+        <input {...register('email')} placeholder="Email" />
+        {errors.email && <p>{errors.email.message}</p>}
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  )
+}
+```
+
+**Guidance:** Choose **field-level** for independent validation, async checks,
+or reusable fields. Choose **form-level** for related fields, wizard forms, or
+interdependent validation.
+
+## Organizing Code by Feature/Domain
+
+**Rule:** Organize directories by feature/domain, not just by code type.
+
+**Reasoning:**
+
+- Increases cohesion by keeping related files together.
+- Simplifies feature understanding, development, maintenance, and deletion.
+
+#### Recommended Pattern:
+
+(Organized by feature/domain)
+
+```
+src/
+├── components/ # Shared/common components
+├── hooks/      # Shared/common hooks
+├── utils/      # Shared/common utils
+├── domains/
+│   ├── user/
+│   │   ├── components/
+│   │   │   └── UserProfileCard.tsx
+│   │   ├── hooks/
+│   │   │   └── useUser.ts
+│   │   └── index.ts # Optional barrel file
+│   ├── product/
+│   │   ├── components/
+│   │   │   └── ProductList.tsx
+│   │   ├── hooks/
+│   │   │   └── useProducts.ts
+│   │   └── ...
+│   └── order/
+│       ├── components/
+│       │   └── OrderSummary.tsx
+│       ├── hooks/
+│       │   └── useOrder.ts
+│       └── ...
+└── App.tsx
+```
+
+## Relating Magic Numbers to Logic
+
+**Rule:** Define constants near related logic or ensure names link them clearly.
+
+**Reasoning:**
+
+- Improves cohesion by linking constants to the logic they represent.
+- Prevents silent failures caused by updating logic without updating related
+  constants.
+
+#### Recommended Pattern:
+
+```typescript
+// Constant clearly named and potentially defined near animation logic
+const ANIMATION_DELAY_MS = 300
+
+async function onLikeClick() {
+  await postLike(url)
+  // Delay uses the constant, maintaining the link to the animation
+  await delay(ANIMATION_DELAY_MS)
+  await refetchPostLike()
+}
+```
+
+_Ensure constants are maintained alongside the logic they depend on or clearly
+named to show the relationship._
+
+# Coupling
+
+Minimizing dependencies between different parts of the codebase.
+
+## Balancing Abstraction and Coupling (Avoiding Premature Abstraction)
+
+**Rule:** Avoid premature abstraction of duplicates if use cases might diverge;
+prefer lower coupling.
+
+**Reasoning:**
+
+- Avoids tight coupling from forcing potentially diverging logic into one
+  abstraction.
+- Allowing some duplication can improve decoupling and maintainability when
+  future needs are uncertain.
+
+#### Guidance:
+
+Before abstracting, consider if the logic is truly identical and likely to
+_stay_ identical across all use cases. If divergence is possible (e.g.,
+different pages needing slightly different behavior from a shared hook like
+`useOpenMaintenanceBottomSheet`), keeping the logic separate initially (allowing
+duplication) can lead to more maintainable, decoupled code. Discuss trade-offs
+with the team. _[No specific 'good' code example here, as the recommendation is
+situational awareness rather than a single pattern]._
+
+## Scoping State Management (Avoiding Overly Broad Hooks)
+
+**Rule:** Break down broad state management into smaller, focused
+hooks/contexts.
+
+**Reasoning:**
+
+- Reduces coupling by ensuring components only depend on necessary state slices.
+- Improves performance by preventing unnecessary re-renders from unrelated state
+  changes.
+
+#### Recommended Pattern:
+
+(Focused hooks, low coupling)
+
+```typescript
+// Hook specifically for cardId query param
+import { useQueryParam, NumberParam } from 'use-query-params'
+import { useCallback } from 'react'
+
+export function useCardIdQueryParam() {
+  // Assuming 'query' provides the raw param value
+  const [cardIdParam, setCardIdParam] = useQueryParam('cardId', NumberParam)
+
+  const setCardId = useCallback(
+    (newCardId: number | undefined) => {
+      setCardIdParam(newCardId, 'replaceIn') // Or 'push' depending on desired history behavior
+    },
+    [setCardIdParam]
+  )
+
+  // Provide a stable return tuple
+  return [cardIdParam ?? undefined, setCardId] as const
+}
+
+// Separate hook for date range, etc.
+// export function useDateRangeQueryParam() { /* ... */ }
+```
+
+Components now only import and use `useCardIdQueryParam` if they need `cardId`,
+decoupling them from date range state, etc.
+
+## Eliminating Props Drilling with Composition
+
+**Rule:** Use Component Composition instead of Props Drilling.
+
+**Reasoning:**
+
+- Significantly reduces coupling by eliminating unnecessary intermediate
+  dependencies.
+- Makes refactoring easier and clarifies data flow in flatter component trees.
+
+#### Recommended Pattern:
+
+```tsx
+import React, { useState } from 'react'
+
+// Assume Modal, Input, Button, ItemEditList components exist
+
+function ItemEditModal({ open, items, recommendedItems, onConfirm, onClose }) {
+  const [keyword, setKeyword] = useState('')
+
+  // Render children directly within Modal, passing props only where needed
+  return (
+    <Modal open={open} onClose={onClose}>
+      {/* Input and Button rendered directly */}
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          marginBottom: '1rem',
+        }}
+      >
+        <Input
+          value={keyword}
+          onChange={(e) => setKeyword(e.target.value)} // State managed here
+          placeholder="Search items..."
+        />
+        <Button onClick={onClose}>Close</Button>
+      </div>
+      {/* ItemEditList rendered directly, gets props it needs */}
+      <ItemEditList
+        keyword={keyword} // Passed directly
+        items={items} // Passed directly
+        recommendedItems={recommendedItems} // Passed directly
+        onConfirm={onConfirm} // Passed directly
+      />
+    </Modal>
+  )
+}
+
+// The intermediate ItemEditBody component is eliminated, reducing coupling.
+```
