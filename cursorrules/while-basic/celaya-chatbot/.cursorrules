@@ -1,0 +1,122 @@
+{
+  "version": "1.0",
+  "language": {
+    "typescript": {
+      "fileExtensions": [".ts", ".tsx"],
+      "importOrder": [
+        "^react$",
+        "^react-dom.*$",
+        "^next.*$",
+        "^@vercel/.*$",
+        "^ai$",
+        "^@radix-ui/.*$",
+        "^prosemirror-.*$",
+        "^@/components/.*$",
+        "^@/lib/.*$",
+        "^@/hooks/.*$",
+        "^[./]"
+      ],
+      "componentStructure": {
+        "order": [
+          "imports",
+          "types",
+          "interfaces",
+          "constants",
+          "component",
+          "exports"
+        ]
+      }
+    }
+  },
+  "formatting": {
+    "indentStyle": "space",
+    "indentSize": 2,
+    "lineWidth": 80,
+    "quoteStyle": {
+      "typescript": "single",
+      "json": "double"
+    },
+    "semicolons": "always",
+    "trailingComma": "all"
+  },
+  "components": {
+    "directory": "components",
+    "naming": {
+      "pattern": "kebab-case",
+      "exceptions": ["ui"]
+    },
+    "structure": {
+      "ui": "components/ui",
+      "icons": "components/icons.tsx",
+      "shared": "components"
+    }
+  },
+  "paths": {
+    "aliases": {
+      "@": ".",
+      "@/components": "./components",
+      "@/lib": "./lib",
+      "@/hooks": "./hooks"
+    }
+  },
+  "ignore": [
+    "node_modules",
+    ".next",
+    "public",
+    ".vercel",
+    "lib/db/migrations"
+  ],
+  "rules": {
+    "typescript": {
+      "noExplicitAny": "off",
+      "useFragmentSyntax": "warn",
+      "noUnusedImports": "warn",
+      "useArrayLiterals": "warn",
+      "noNewSymbol": "warn"
+    },
+    "a11y": {
+      "useHtmlLang": "warn",
+      "noHeaderScope": "warn",
+      "useValidAriaRole": {
+        "level": "warn",
+        "ignoreNonDom": false,
+        "allowInvalidRoles": ["none", "text"]
+      }
+    },
+    "nextjs": {
+      "clientComponents": {
+        "directive": "'use client'",
+        "location": "top",
+        "required": true
+      },
+      "hydration": {
+        "preventMismatch": {
+          "dateHandling": "useEffect",
+          "windowChecks": "useEffect",
+          "randomValues": "useEffect",
+          "dynamicClassNames": "warn"
+        },
+        "suppressWarning": {
+          "enabled": false,
+          "message": "suppressHydrationWarning should only be used when necessary"
+        }
+      },
+      "serverComponents": {
+        "defaultServer": true,
+        "asyncComponents": "preferred"
+      }
+    },
+    "react": {
+      "hooks": {
+        "dependencies": "error",
+        "exhaustiveDeps": "warn",
+        "rulesOfHooks": "error"
+      },
+      "performance": {
+        "useMemo": "recommended",
+        "useCallback": "recommended",
+        "reactMemo": "selective"
+      }
+    }
+  }
+} 

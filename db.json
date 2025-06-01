@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 1526,
+  "size": 1547,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -21364,6 +21364,300 @@
         "htmlUrl": "https://github.com/kavenio/vibe-suite/blob/d23515e45a48f8009d217971fd978955a15511ea/friends-meeting/server/.cursorrules",
         "size": 2.06,
         "timestamp": "2025-05-31T08:14:49.780Z"
+      }
+    ],
+    [
+      "apsquared/lg-agents/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/apsquared/lg-agents/1810115d3ac8c704bf36aff84d0d89efe2213b08/.cursorrules",
+        "repositoryId": 912552187,
+        "path": "apsquared/lg-agents/.cursorrules",
+        "ownerName": "apsquared",
+        "repositoryName": "lg-agents",
+        "htmlUrl": "https://github.com/apsquared/lg-agents/blob/1810115d3ac8c704bf36aff84d0d89efe2213b08/.cursorrules",
+        "size": 2.8,
+        "timestamp": "2025-06-01T08:15:02.318Z"
+      }
+    ],
+    [
+      "neoscaffold/neoscaffold/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/neoscaffold/neoscaffold/ad04d77e1155aba783f09f04d5ddab4fe908ddc6/.cursorrules",
+        "repositoryId": 900169683,
+        "path": "neoscaffold/neoscaffold/.cursorrules",
+        "ownerName": "neoscaffold",
+        "repositoryName": "neoscaffold",
+        "htmlUrl": "https://github.com/neoscaffold/neoscaffold/blob/ad04d77e1155aba783f09f04d5ddab4fe908ddc6/.cursorrules",
+        "size": 3.54,
+        "timestamp": "2025-06-01T08:15:03.192Z"
+      }
+    ],
+    [
+      "koltanl/arch-install/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/koltanl/arch-install/6c6d7403114d1c106cc9e7e8c2c64d38a3c98000/.cursorrules",
+        "repositoryId": 893274567,
+        "path": "koltanl/arch-install/.cursorrules",
+        "ownerName": "koltanl",
+        "repositoryName": "arch-install",
+        "htmlUrl": "https://github.com/koltanl/arch-install/blob/6c6d7403114d1c106cc9e7e8c2c64d38a3c98000/.cursorrules",
+        "size": 3.47,
+        "timestamp": "2025-06-01T08:15:15.546Z"
+      }
+    ],
+    [
+      "while-basic/celaya-chatbot/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/while-basic/celaya-chatbot/ceed5d3530b79dbc1109aa519cca0e490262e718/.cursorrules",
+        "repositoryId": 910599550,
+        "path": "while-basic/celaya-chatbot/.cursorrules",
+        "ownerName": "while-basic",
+        "repositoryName": "celaya-chatbot",
+        "htmlUrl": "https://github.com/while-basic/celaya-chatbot/blob/ceed5d3530b79dbc1109aa519cca0e490262e718/.cursorrules",
+        "size": 2.6,
+        "timestamp": "2025-06-01T08:15:15.993Z"
+      }
+    ],
+    [
+      "Falkicon/FARM/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Falkicon/FARM/6fc536b4467c7ce348156b601f1f850ad76ec7ab/.cursorrules",
+        "repositoryId": 901142808,
+        "path": "Falkicon/FARM/.cursorrules",
+        "ownerName": "Falkicon",
+        "repositoryName": "FARM",
+        "htmlUrl": "https://github.com/Falkicon/FARM/blob/6fc536b4467c7ce348156b601f1f850ad76ec7ab/.cursorrules",
+        "size": 1.46,
+        "timestamp": "2025-06-01T08:15:16.261Z"
+      }
+    ],
+    [
+      "ll7/robot_sf_ll7/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ll7/robot_sf_ll7/91263b0a79844b427d3ab825e8a4b7c1b26eba8e/.cursorrules",
+        "repositoryId": 756324725,
+        "path": "ll7/robot_sf_ll7/.cursorrules",
+        "ownerName": "ll7",
+        "repositoryName": "robot_sf_ll7",
+        "htmlUrl": "https://github.com/ll7/robot_sf_ll7/blob/91263b0a79844b427d3ab825e8a4b7c1b26eba8e/.cursorrules",
+        "size": 1.48,
+        "timestamp": "2025-06-01T08:15:16.510Z"
+      }
+    ],
+    [
+      "wonny1945/pokemon-gacha/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/wonny1945/pokemon-gacha/a251ea73e2fc27aaf544cc88db0e3d1ed1e57dc2/.cursorrules",
+        "repositoryId": 859925089,
+        "path": "wonny1945/pokemon-gacha/.cursorrules",
+        "ownerName": "wonny1945",
+        "repositoryName": "pokemon-gacha",
+        "htmlUrl": "https://github.com/wonny1945/pokemon-gacha/blob/a251ea73e2fc27aaf544cc88db0e3d1ed1e57dc2/.cursorrules",
+        "size": 5.11,
+        "timestamp": "2025-06-01T08:15:16.767Z"
+      }
+    ],
+    [
+      "aleromano92/aleromano.com/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/aleromano92/aleromano.com/9e26da8d450530e046ea46b64387fca3282ccefc/.cursorrules",
+        "repositoryId": 906578022,
+        "path": "aleromano92/aleromano.com/.cursorrules",
+        "ownerName": "aleromano92",
+        "repositoryName": "aleromano.com",
+        "htmlUrl": "https://github.com/aleromano92/aleromano.com/blob/9e26da8d450530e046ea46b64387fca3282ccefc/.cursorrules",
+        "size": 3.1,
+        "timestamp": "2025-06-01T08:15:17.022Z"
+      }
+    ],
+    [
+      "fastcmsdomain/asystencikai/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/fastcmsdomain/asystencikai/d51f50786d6ae55ea3749efc138cbfd5302293de/.cursorrules",
+        "repositoryId": 888179846,
+        "path": "fastcmsdomain/asystencikai/.cursorrules",
+        "ownerName": "fastcmsdomain",
+        "repositoryName": "asystencikai",
+        "htmlUrl": "https://github.com/fastcmsdomain/asystencikai/blob/d51f50786d6ae55ea3749efc138cbfd5302293de/.cursorrules",
+        "size": 27.58,
+        "timestamp": "2025-06-01T08:15:17.266Z"
+      }
+    ],
+    [
+      "olafjanssen/synthpub/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/olafjanssen/synthpub/34ab988e8fff84473a581335e739c529c4e2be25/.cursorrules",
+        "repositoryId": 884784130,
+        "path": "olafjanssen/synthpub/.cursorrules",
+        "ownerName": "olafjanssen",
+        "repositoryName": "synthpub",
+        "htmlUrl": "https://github.com/olafjanssen/synthpub/blob/34ab988e8fff84473a581335e739c529c4e2be25/.cursorrules",
+        "size": 2.64,
+        "timestamp": "2025-06-01T08:15:17.467Z"
+      }
+    ],
+    [
+      "yosefserkez/mailpals/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/yosefserkez/mailpals/bbb71af81ed071606522b9d9554644fabe94bfb3/.cursorrules",
+        "repositoryId": 870278867,
+        "path": "yosefserkez/mailpals/.cursorrules",
+        "ownerName": "yosefserkez",
+        "repositoryName": "mailpals",
+        "htmlUrl": "https://github.com/yosefserkez/mailpals/blob/bbb71af81ed071606522b9d9554644fabe94bfb3/.cursorrules",
+        "size": 2.68,
+        "timestamp": "2025-06-01T08:15:17.665Z"
+      }
+    ],
+    [
+      "paul-pham-157/paul-s-cursor-rules/1/framework_rules/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/paul-pham-157/paul-s-cursor-rules/ec5487f1eafd382f975dec3c627eba33d2e1654f/1/framework_rules/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 953767927,
+        "path": "paul-pham-157/paul-s-cursor-rules/1/framework_rules/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "paul-pham-157",
+        "repositoryName": "paul-s-cursor-rules",
+        "htmlUrl": "https://github.com/paul-pham-157/paul-s-cursor-rules/blob/ec5487f1eafd382f975dec3c627eba33d2e1654f/1/framework_rules/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+        "size": 7.48,
+        "timestamp": "2025-06-01T08:15:26.235Z"
+      }
+    ],
+    [
+      "victorgulchenko/VibeForge/src/app/data/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/victorgulchenko/VibeForge/c7082d3c41e96b02f5b7d0cbf0d8d4c1ed8a31bb/src/app/data/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 993298262,
+        "path": "victorgulchenko/VibeForge/src/app/data/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "victorgulchenko",
+        "repositoryName": "VibeForge",
+        "htmlUrl": "https://github.com/victorgulchenko/VibeForge/blob/c7082d3c41e96b02f5b7d0cbf0d8d4c1ed8a31bb/src/app/data/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "size": 7.64,
+        "timestamp": "2025-06-01T08:15:27.734Z"
+      }
+    ],
+    [
+      "victorgulchenko/VibeForge/src/app/data/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/victorgulchenko/VibeForge/c7082d3c41e96b02f5b7d0cbf0d8d4c1ed8a31bb/src/app/data/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 993298262,
+        "path": "victorgulchenko/VibeForge/src/app/data/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "victorgulchenko",
+        "repositoryName": "VibeForge",
+        "htmlUrl": "https://github.com/victorgulchenko/VibeForge/blob/c7082d3c41e96b02f5b7d0cbf0d8d4c1ed8a31bb/src/app/data/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "size": 2.32,
+        "timestamp": "2025-06-01T08:15:29.763Z"
+      }
+    ],
+    [
+      "victorgulchenko/VibeForge/src/app/data/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/victorgulchenko/VibeForge/c7082d3c41e96b02f5b7d0cbf0d8d4c1ed8a31bb/src/app/data/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "repositoryId": 993298262,
+        "path": "victorgulchenko/VibeForge/src/app/data/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "ownerName": "victorgulchenko",
+        "repositoryName": "VibeForge",
+        "htmlUrl": "https://github.com/victorgulchenko/VibeForge/blob/c7082d3c41e96b02f5b7d0cbf0d8d4c1ed8a31bb/src/app/data/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "size": 3.59,
+        "timestamp": "2025-06-01T08:15:29.942Z"
+      }
+    ],
+    [
+      "paul-pham-157/paul-s-cursor-rules/1/framework_rules/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/paul-pham-157/paul-s-cursor-rules/ec5487f1eafd382f975dec3c627eba33d2e1654f/1/framework_rules/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 953767927,
+        "path": "paul-pham-157/paul-s-cursor-rules/1/framework_rules/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "paul-pham-157",
+        "repositoryName": "paul-s-cursor-rules",
+        "htmlUrl": "https://github.com/paul-pham-157/paul-s-cursor-rules/blob/ec5487f1eafd382f975dec3c627eba33d2e1654f/1/framework_rules/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+        "size": 2.78,
+        "timestamp": "2025-06-01T08:15:30.541Z"
+      }
+    ],
+    [
+      "victorgulchenko/VibeForge/src/app/data/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/victorgulchenko/VibeForge/c7082d3c41e96b02f5b7d0cbf0d8d4c1ed8a31bb/src/app/data/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 993298262,
+        "path": "victorgulchenko/VibeForge/src/app/data/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "victorgulchenko",
+        "repositoryName": "VibeForge",
+        "htmlUrl": "https://github.com/victorgulchenko/VibeForge/blob/c7082d3c41e96b02f5b7d0cbf0d8d4c1ed8a31bb/src/app/data/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+        "size": 7.48,
+        "timestamp": "2025-06-01T08:15:30.716Z"
+      }
+    ],
+    [
+      "sworcjusz/FishGame/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/sworcjusz/FishGame/68e5c5d20f099939ed8390913847d2c86c97a318/.cursorrules",
+        "repositoryId": 993864087,
+        "path": "sworcjusz/FishGame/.cursorrules",
+        "ownerName": "sworcjusz",
+        "repositoryName": "FishGame",
+        "htmlUrl": "https://github.com/sworcjusz/FishGame/blob/68e5c5d20f099939ed8390913847d2c86c97a318/.cursorrules",
+        "size": 9.04,
+        "timestamp": "2025-06-01T08:15:32.563Z"
+      }
+    ],
+    [
+      "jlee1201/smart_home/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/jlee1201/smart_home/52f21ac757c98b2954ae78b49bfe8c5cc0cf93d2/.cursorrules",
+        "repositoryId": 933437720,
+        "path": "jlee1201/smart_home/.cursorrules",
+        "ownerName": "jlee1201",
+        "repositoryName": "smart_home",
+        "htmlUrl": "https://github.com/jlee1201/smart_home/blob/52f21ac757c98b2954ae78b49bfe8c5cc0cf93d2/.cursorrules",
+        "size": 5.82,
+        "timestamp": "2025-06-01T08:15:33.193Z"
+      }
+    ],
+    [
+      "eekrain/ai-i18n-generator/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/eekrain/ai-i18n-generator/db423eb5fdb4b37d0132cfc7ca3d0144eb9fb0f3/.cursorrules",
+        "repositoryId": 994000163,
+        "path": "eekrain/ai-i18n-generator/.cursorrules",
+        "ownerName": "eekrain",
+        "repositoryName": "ai-i18n-generator",
+        "htmlUrl": "https://github.com/eekrain/ai-i18n-generator/blob/db423eb5fdb4b37d0132cfc7ca3d0144eb9fb0f3/.cursorrules",
+        "size": 1.96,
+        "timestamp": "2025-06-01T08:15:37.815Z"
+      }
+    ],
+    [
+      "victorgulchenko/VibeForge/src/app/data/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/victorgulchenko/VibeForge/c7082d3c41e96b02f5b7d0cbf0d8d4c1ed8a31bb/src/app/data/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "repositoryId": 993298262,
+        "path": "victorgulchenko/VibeForge/src/app/data/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "ownerName": "victorgulchenko",
+        "repositoryName": "VibeForge",
+        "htmlUrl": "https://github.com/victorgulchenko/VibeForge/blob/c7082d3c41e96b02f5b7d0cbf0d8d4c1ed8a31bb/src/app/data/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "size": 4.92,
+        "timestamp": "2025-06-01T08:15:38.648Z"
       }
     ]
   ]

@@ -1,0 +1,56 @@
+# TypeScript configuration settings for target version, module type, and class field behavior.
+
+## TypeScript Configuration
+
+- **Target:** ES2022
+- **Module:** ESNext
+- **Define For Class Fields:** true
+
+#Shell configuration settings for different operating systems.
+
+## Shell Configuration
+
+- **Windows:** cmd
+- **Linux:** bash
+- **Darwin (macOS):** bash
+
+# Project structure details including type, framework, UI, backend, language, and architecture.
+
+## Project Structure
+
+- **Type:** web-app
+- **Framework:** fast-element@2.0
+- **UI:** fluent-web-components@3.0
+- **Backend:** fastify@4.0
+- **Language:** typescript@5.0
+- **Architecture:** monorepo
+
+# Core development principles emphasizing a web-first approach, strict typing, performance, and accessibility.
+
+## Development Principles
+
+- **Web First:** true
+- **Type Strict:** true
+- **Performance:** true
+- **Accessibility:** true
+
+# Development tools configuration including bundler, testing, linting, and documentation generators.
+
+## Development Tools
+
+- **Bundler:** vite@5.0
+- **Testing:** vitest@1.0
+- **Linting:** eslint@8.0, prettier@3.0
+- **Documentation:** typedoc@0.25
+
+# Documentation references for web component libraries and standards.
+
+## Documentation References
+
+- **FAST Element Documentation:** @Introduction
+- **FAST Element API:** @API Documentation
+- **Fluent Web Components:** @GitHub Repository
+- **Fluent NPM Package:** @NPM Package
+- **MDN Web Components:** @MDN Docs
+- **W3C Web Standards:** @W3C Standards
+
