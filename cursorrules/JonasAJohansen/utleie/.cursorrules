@@ -1,0 +1,174 @@
+# Instructions
+
+During your interaction with the user, if you find anything reusable in this project (e.g. version of a library, model name), especially about a fix to a mistake you made or a correction you received, you should take note in the `Lessons` section in the `.cursorrules` file so you will not make the same mistake again. 
+
+You should also use the `.cursorrules` file as a Scratchpad to organize your thoughts. Especially when you receive a new task, you should first review the content of the Scratchpad, clear old different task if necessary, first explain the task, and plan the steps you need to take to complete the task. You can use todo markers to indicate the progress, e.g.
+[X] Task 1
+[ ] Task 2
+
+Also update the progress of the task in the Scratchpad when you finish a subtask.
+Especially when you finished a milestone, it will help to improve your depth of task accomplishment to use the Scratchpad to reflect and plan.
+The goal is to help you maintain a big picture as well as the progress of the task. Always refer to the Scratchpad when you plan the next step.
+
+# Tools
+
+Note all the tools are in python. So in the case you need to do batch processing, you can always consult the python files and write your own script.
+
+## Screenshot Verification
+
+The screenshot verification workflow allows you to capture screenshots of web pages and verify their appearance using LLMs. The following tools are available:
+
+1. Screenshot Capture:
+```bash
+venv/bin/python tools/screenshot_utils.py URL [--output OUTPUT] [--width WIDTH] [--height HEIGHT]
+```
+
+2. LLM Verification with Images:
+```bash
+venv/bin/python tools/llm_api.py --prompt "Your verification question" --provider {openai|anthropic} --image path/to/screenshot.png
+```
+
+Example workflow:
+```python
+from screenshot_utils import take_screenshot_sync
+from llm_api import query_llm
+
+# Take a screenshot
+
+screenshot_path = take_screenshot_sync('https://example.com', 'screenshot.png')
+
+# Verify with LLM
+
+response = query_llm(
+    "What is the background color and title of this webpage?",
+    provider="openai",  # or "anthropic"
+    image_path=screenshot_path
+)
+print(response)
+```
+
+## LLM
+
+You always have an LLM at your side to help you with the task. For simple tasks, you could invoke the LLM by running the following command:
+```
+venv/bin/python ./tools/llm_api.py --prompt "What is the capital of France?" --provider "anthropic"
+```
+
+The LLM API supports multiple providers:
+- OpenAI (default, model: gpt-4o)
+- Azure OpenAI (model: configured via AZURE_OPENAI_MODEL_DEPLOYMENT in .env file, defaults to gpt-4o-ms)
+- DeepSeek (model: deepseek-chat)
+- Anthropic (model: claude-3-sonnet-20240229)
+- Gemini (model: gemini-pro)
+- Local LLM (model: Qwen/Qwen2.5-32B-Instruct-AWQ)
+
+But usually it's a better idea to check the content of the file and use the APIs in the `tools/llm_api.py` file to invoke the LLM if needed.
+
+## Web browser
+
+You could use the `tools/web_scraper.py` file to scrape the web.
+```
+venv/bin/python ./tools/web_scraper.py --max-concurrent 3 URL1 URL2 URL3
+```
+This will output the content of the web pages.
+
+## Search engine
+
+You could use the `tools/search_engine.py` file to search the web.
+```
+venv/bin/python ./tools/search_engine.py "your search keywords"
+```
+This will output the search results in the following format:
+```
+URL: https://example.com
+Title: This is the title of the search result
+Snippet: This is a snippet of the search result
+```
+If needed, you can further use the `web_scraper.py` file to scrape the web page content.
+
+# Lessons
+
+## User Specified Lessons
+
+- You have a python venv in ./venv. Use it.
+- Include info useful for debugging in the program output.
+- Read the file before you try to edit it.
+- Due to Cursor's limit, when you use `git` and `gh` and need to submit a multiline commit message, first write the message in a file, and then use `git commit -F <filename>` or similar command to commit. And then remove the file. Include "[Cursor] " in the commit message and PR title.
+- When fixing Next.js API routes, make targeted edits to fix type errors rather than deleting and recreating files.
+- In Next.js 15, route handlers with dynamic segments need to be properly typed with specific parameter formats.
+- In Next.js 15, dynamic route parameters must be awaited before accessing their properties.
+- When using SQL in TypeScript, ensure column names match exactly with the database schema.
+- After updating npm packages (especially auth packages like Clerk), clear build cache before rebuilding.
+- In Next.js 15, there are two approaches to handle dynamic route parameters:
+  1. Using async/await: `const { id } = await params;` in an async component
+  2. Using React's `use` hook: `const { id } = use(params);` in a non-async component
+- In Next.js 15 API route handlers, only HTTP methods (GET, POST, etc.) should be exported directly. Helper functions should be moved to separate utility files.
+- When handling errors in TypeScript, properly type-check or type-cast catch parameters (which are of type `unknown` by default) before accessing their properties.
+- When using arrays with PostgreSQL in @vercel/postgres, use the sql.array() helper function: `ANY(${sql.array(myArray, 'text')})` instead of directly passing arrays to SQL template literals.
+- When using Clerk's getAuth() function in Next.js 15, always pass the request object as an argument: `getAuth(request)`.
+- In framer-motion v11+, neither `MotionProps` nor `HTMLMotionProps` are exported. Instead, define a custom interface with common motion properties and use an index signature for additional props: `[key: string]: any`.
+- When working with SQL results in TypeScript, always check for null before accessing rowCount (e.g., `if (result.rowCount && result.rowCount > 0)`) to avoid null reference errors.
+- For framer-motion event handlers like onDragEnd, create custom interfaces for the event parameters (e.g., `DragInfo` with offset and velocity properties) since types like PanInfo aren't directly exported.
+- To fix leading zero issues in number inputs: use type="text" with inputMode="numeric" instead of type="number", maintain separate string state for display values, and implement proper validation and formatting functions to prevent leading zeros while preserving number functionality.
+
+## Cursor learned
+
+- For search results, ensure proper handling of different character encodings (UTF-8) for international queries
+- Add debug information to stderr while keeping the main output clean in stdout for better pipeline integration
+- When using seaborn styles in matplotlib, use 'seaborn-v0_8' instead of 'seaborn' as the style name due to recent seaborn version changes
+- Use 'gpt-4o' as the model name for OpenAI's GPT-4 with vision capabilities
+- For Next.js 15 API route handlers, use specific type definitions for dynamic route parameters to satisfy the constraint 'ParamCheck<RouteContext>'
+- In Next.js 15, dynamic route parameters need to follow a specific TypeScript interface structure to work with the middleware and routing system
+- For Next.js 15 API routes with dynamic segments, avoid complex interfaces and use the built-in context parameter directly
+- When using react-datepicker with selectsRange property, the onChange handler should accept [Date, Date] array type
+- For Next.js components using useSearchParams or other navigation hooks, always wrap them in a Suspense boundary
+- When working with lucide-react icons, verify the icon names in the current version as they may change between updates (e.g., Bicycle replaced with Bike)
+- In schema-dts (JSON-LD schema), use '@id' format for reference values like 'businessFunction' and 'itemCondition'
+- Remove the delete of L.Icon.Default.prototype._getIconUrl in Leaflet initialization as it's not needed in newer versions
+
+# Scratchpad
+
+## Previous Task: Fix Listing Edit Functionality ✅ COMPLETED
+
+Successfully fixed listing edit functionality:
+- PUT endpoint now exists and properly handles listing updates
+- GET endpoint includes photos data that the edit page needs
+- Proper authorization ensures users can only edit their own listings
+- All required field validation is in place
+
+## Current Task: Improve Price Range Search UX
+
+### Problem Description
+User reports that price range filtering searches automatically when typing, but wants to be able to click search manually instead of automatic searching.
+
+Additionally, there was an issue with rental request creation failing due to missing total_price column.
+
+### Analysis
+The `handlePriceChange` function in `FilterBar.tsx` was calling `updateFilters` immediately when users typed in price inputs, which triggered automatic URL updates and searching. This creates poor UX as search results change while users are still typing.
+
+The rental request creation was failing because the database actually has a NOT NULL `total_price` column that we had removed from the INSERT statement.
+
+### Implementation Plan
+[X] Modify handlePriceChange to only update display values without triggering search
+[X] Update handleSearch to parse price inputs and apply them when search button is clicked
+[X] Keep other filters (location, rating, sort) working as before
+[X] Fix rental request creation by adding total_price back to INSERT statement
+
+### Current Progress
+- ✅ Modified handlePriceChange to only update display values (priceInputs state)
+- ✅ Updated handleSearch to parse current price input values and include them in search
+- ✅ Preserved formatting functionality for price inputs
+- ✅ Other filters continue to work as expected
+- ✅ Fixed rental request creation by adding total_price column back to INSERT
+
+## Task Status: COMPLETED ✅
+
+Successfully improved price range search UX and fixed rental request creation:
+- Price range inputs no longer trigger automatic searching
+- Users can type prices and then click "Search" button to apply filters
+- Price values are properly parsed and validated when search is executed
+- Other filters (location, rating, sort) continue to work as before
+- Better user experience with manual control over when search happens
+- Rental request creation now works properly with total_price column
+- Fixed TypeScript build error by removing non-existent onSearch prop from SearchBar
+- Fixed Next.js build error by wrapping useSearchParams in Suspense boundary

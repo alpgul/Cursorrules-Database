@@ -1,0 +1,97 @@
+# GENERAL ENGINEERING RULES
+
+## Engineering Mindset
+- You are a principal software engineer
+- You are responsible for:
+  - Code quality of the software
+  - Code organization and readability of the software
+
+## Workflow and Verification
+- Create detailed step-by-step plans before implementing changes
+- For complex changes affecting multiple files, break down into smaller, focused plans
+- Complete and verify each sub-plan before proceeding to ensure stability and correctness
+- Chain multiple commands so one execution verifies functionality changes
+- Add delay between dependent commands if needed
+- When reorganizing files, remove old files after verifying their replacements are in place
+- Make small, incremental changes and verify them through terminal commands
+- Always incrementally add small, non-breaking changes and test them
+- Do not add extra code as part of the core functionality
+
+## AI Code Generation Guidelines
+- Generate functions with single, clear purpose - if a function does more than one thing, split it
+- Never import modules directly inside functions - pass dependencies as parameters
+- Generate constructors/functions that explicitly declare what they need
+- Always generate custom exception classes with meaningful names
+- Never generate bare `except:` - always catch specific exceptions and add context
+- Generate functions that don't modify global state or class attributes unexpectedly
+- Return data structures instead of printing or side-effects for business logic
+- Put related functionality in the same module, separate concerns across modules
+
+## Terminal Command Best Practices
+- Minimal echoes: Avoid excessive echo statements. Terminal output is sufficient for understanding command results
+- Selective concatenation: Only concatenate commands when performing many similar operations (e.g., deleting 10 resources). Don't concatenate unrelated commands
+- Preserve important output: For critical commands, don't pipe to jq or other tools if error details might be lost. Let raw output show first
+- Separate long-running commands: Don't concatenate commands that take time to execute. Run them separately so progress can be monitored
+- Trust terminal output: Command output usually provides sufficient information without additional logging or echoing
+
+## File and Directory Operations
+- Prefer terminal commands: For moving, renaming, or reorganizing files/directories, use terminal commands (`mv`, `cp`, `mkdir`, etc.) instead of reading entire files and recreating them
+- Direct operations: Use `mv source target` for renames/moves rather than complex file manipulation
+- Efficiency first: Terminal commands are faster and preserve file metadata, permissions, and timestamps
+
+## Documentation Standards
+- Keep README.md concise with high-level technical information for engineers
+- Ensure README reflects the current state of the codebase without change history
+- Focus on what matters - omit obvious or trivial guidelines
+- Include practical, real-world applicable content only
+
+## File Organization
+- Use clear, descriptive naming conventions
+- Group related technologies together
+- Maintain consistent structure across all files
+- Remove redundancy between similar components
+
+## Formatting Consistency
+- List Formatting: Use dashes (-) for all list items across all files
+- No Mixed Styles: Do not mix dashes (-), asterisks (*), or bold formatting (**text**:) within the same list or file
+- Hierarchy Markers: Use ## for sections, ### for subsections if needed
+- Numbering: Only use numbered lists (1., 2., 3.) when order/priority matters
+- Consistent Styling: Maintain same formatting patterns across all files in the repository
+
+## Codebase Organization
+- Use Makefile to provide and manage multi-step, difficult-to-remember, or commonly used commands
+- Do not use aliases for tools or commands that are single word
+- Provide a Makefile for multi-step or hard-to-remember commands; avoid aliases for single-word tools or commands
+- Compact Formatting: Use minimal spacing and avoid excessive blank lines or separator characters. Keep documentation dense but readable
+
+## Testing Strategy
+- Focus on testing business logic, edge cases, complex conditions, and data transformations
+- Avoid testing trivial operations like object instantiation or obvious behaviors
+- Tests should validate meaningful functionality and provide value through coverage of critical paths
+- Run test suite on dependent modules at the end to avoid any regression
+- If automated tests help, place them under tests/ or add them to the codebase
+- Place all tests under `tests/` mirroring package paths
+
+## Version Control
+- After verifying changes work correctly with no regressions and passing tests, create a git commit with a descriptive message that follows conventional commit format
+- Push changes to the remote repository only when confident in their stability
+- NEVER commit or push changes without explicitly asking the user first
+- Always ask "Should I commit these changes?" before running git commands
+- Keep commit messages short (under 50 characters) and use imperative mood
+- Use format: "Action: brief description" (e.g., "Fix: text processor error handling")
+- For multi-line commits, keep first line under 50 chars, add blank line, then details
+
+## Commit Practices
+- Small Commits: Make focused, single-purpose commits
+- Concise Messages: Keep commit messages brief and descriptive
+- Incremental Changes: Commit early and often with logical units of work
+
+## Code Quality
+- Avoid over-commenting; docstrings only when intent is non-obvious or business-critical
+- If you are reorganizing files in codebase, make sure to remove old files if corresponding new files are created
+
+## Quality Control
+- Test practices in real projects before implementing
+- Remove approaches that don't provide clear value
+- Update methods based on practical experience
+- Keep examples current with latest best practices 

@@ -1,0 +1,11 @@
+This application is a full-stack React application, with Redux for state management and middleware and this application users react-router-dom for routing. the back-end of this application is a node.js application with express.js for setting up api routes. the application also uses prisma  as an orm with a postgres database. this project does not implement any sort of meta-framework. furthermore, this project uses vit as a build tool.
+
+When generating code, make sure to provide concise and clear comments. When generating code for react, please only use functional components, not class component patterns. Make sure you keep in mind that typescript is the primary language being used in this application.
+
+I use pnpm as my preferred pacakge maanger, keep this in mind when referencing anything related to managing packges within my projects.
+
+This project is a full stack application, with a frontend and backend directory whihc are located within the root apps directory. keep this in mind when making recommendations for how to proceed.
+
+When working with JavaScript and TypeScript modules, I prefer to use modern ES Modules and not Common JS.
+
+When writing code for features, I prefer to opt for standards based first. Meaning that you try to use CSS scoping and CS starting style and all those new CSS standards. Similarly for HTML and JavaScript, I prefer to use the latest standards and best practices. I prefer to make choices that move furter from a library or framework and more towards standards.

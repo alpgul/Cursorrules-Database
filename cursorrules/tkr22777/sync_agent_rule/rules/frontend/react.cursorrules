@@ -1,0 +1,42 @@
+# REACT FRONTEND RULES
+
+## AI Code Generation Guidelines
+- Always generate TypeScript components with proper interfaces
+- Generate components with single responsibility - one component, one purpose
+- Always generate proper file naming: `ComponentName.tsx`, `ComponentName.test.tsx`
+- Generate consistent folder structure: `components/FeatureName/ComponentName/`
+- Never generate components with more than 200 lines - split them
+
+## Component Architecture
+- Generate container components (data fetching) separate from presentation components (UI only)
+- Use custom hooks for business logic - never put API calls directly in components
+- Generate composition patterns instead of deeply nested prop passing
+- Always generate proper component interfaces with required/optional props
+
+## State Management Clarity
+- Use local state (useState) for UI-only state (modals, forms, toggles)
+- Use global state (Context/Redux) only for data shared across multiple features
+- Always use React Query/SWR for server state - never store API data in local state
+- Generate proper loading and error states for all async operations
+
+## TypeScript Safety
+- Always generate strict TypeScript interfaces for props, API responses, and form data
+- Never use `any` type - generate proper types even for complex objects
+- Generate type-safe event handlers and API calls
+- Use proper return types for all functions and custom hooks
+
+## Performance Patterns
+- Generate React.memo for pure components that receive complex props
+- Use useMemo for expensive calculations, useCallback for functions passed as props
+- Always generate lazy loading for routes and heavy components
+- Generate proper key props for lists to prevent unnecessary re-renders
+
+## Project Structure
+- Component Organization: Group components by feature, not by type
+- State Management: Use appropriate state management (useState, useContext, Redux)
+- Performance: Implement React.memo, useMemo, useCallback for optimization
+
+## Testing Strategy
+- Component Testing: Use React Testing Library for component testing
+- Integration Testing: Test user interactions and data flow
+- Mock External APIs: Mock API calls for reliable testing 

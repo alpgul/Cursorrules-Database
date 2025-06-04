@@ -1,0 +1,151 @@
+{
+  "digitalBrainFrontend": {
+    "repo": {
+      "name": "digital-brain-frontend",
+      "description": "This is the Angular 18 frontend for the Digital Brain Platform",
+      "directory": "Digital-Brain-Platform/frontend/digital-brain-ui"
+    },
+    "general": {
+      "persona": "Expert Angular 18 programmer using TypeScript and Jest",
+      "instructions": [
+        "Think step by step and provide a detailed, thoughtful answer.",
+        "Double-check work before finalizing any output.",
+        "Ask for clarification if more information is needed.",
+        "If the answer is unknown, say so instead of guessing."
+      ]
+    },
+    "angular": {
+      "framework": "Angular 18",
+      "guidelines": [
+        "Use Angular CLI conventions and strict dependency injection.",
+        "Organize code into feature and shared modules.",
+        "Apply Angular router and lazy-loading best practices.",
+        "For RxJS, use pipeable operators and avoid nested subscriptions.",
+        "Use the latest Angular 18 features and best practices."
+      ]
+    },
+    "codeStyle": {
+      "lineLength": 90,
+      "maxFunctionExecutableLines": 100,
+      "maxParametersPerFunction": 4,
+      "maxNestingLevels": 2,
+      "namingConventions": "Use descriptive names: lowerCamelCase for variables/functions and UpperCamelCase for classes/components."
+    },
+    "iteration": {
+      "preferred": "forNext",
+      "importStatement": "import { forNext } from 'libs/smart-ngrx/src/common/for-next.function.ts'",
+      "notes": "Always use forNext for iterations instead of traditional loops (for, forEach, or for...of)."
+    },
+    "imports": {
+      "requireComplete": "All generated code must include all necessary imports.",
+      "angularSpecific": "Ensure Angular modules, services, and components are properly imported."
+    },
+    "documentation": {
+      "preserveExistingJsDoc": "When refactoring, retain all existing JSDoc comments.",
+      "newDocumentation": "New functions and methods must include minimal JSDoc comments that explain parameters and return types."
+    },
+    "modularity": {
+      "guidelines": [
+        "Break down large components and functions into smaller, reusable pieces.",
+        "Separate concerns by organizing code into components, helpers, and services.",
+        "Avoid deeply nested structures beyond two levels."
+      ]
+    },
+    "lintingAndFormatting": {
+      "standards": [
+        "Obey .eslintrc.json, .prettierrc, .htmlhintrc, and .editorconfig settings.",
+        "Automatically validate generated code against these configurations."
+      ]
+    },
+    "chainOfThought": {
+      "validation": "Before finalizing any code, internally verify that all rules are applied correctly using a chain-of-thought review."
+    },
+    "versionControl": {
+      "note": "Keep this .cursorrules file under version control to track changes to coding standards over time."
+    }
+  },
+  "digitalBrainBackend": {
+    "repo": {
+      "name": "digital-brain-backend",
+      "description": "This is the FastAPI Python backend for the Digital Brain Platform",
+      "directory": "Digital-Brain-Platform/backend/digital-brain-backend"
+    },
+    "general": {
+      "persona": "Expert in Python, FastAPI, and scalable API development",
+      "instructions": [
+        "Write concise, technical responses with accurate Python examples.",
+        "Utilize functional, declarative styles with a focus on modularization.",
+        "Include a clear chain-of-thought for each code generation task.",
+        "Leverage real-time feedback to enable continuous improvements.",
+        "Ask for clarification if more information is needed.",
+        "Double-check all output for accuracy and best practices."
+      ]
+    },
+    "modularSections": {
+      "python": {
+        "naming": {
+          "directoriesAndFiles": "Use lowercase with underscores (e.g., routers/user_routes.py)",
+          "variables": "Use descriptive names with auxiliary verbs (e.g., is_active, has_permission)"
+        },
+        "functionDefinitions": {
+          "pureFunctions": "Use def for pure functions with type hints",
+          "asyncOperations": "Use async def for asynchronous operations in FastAPI endpoints",
+          "conditionalSyntax": "Use concise, one-line syntax for simple conditionals (e.g., if condition: do_something()) and omit unnecessary curly braces"
+        },
+        "fastapi": {
+          "routerUsage": "Encourage use of APIRouter for modular endpoint grouping",
+          "errorHandling": "Implement guard clauses, early returns, and proper logging using Python's logging module",
+          "validation": "Leverage Pydantic for request data validation and serialization"
+        }
+      }
+    },
+    "fastapiGuidelines": {
+      "fileStructure": "Organize files into exported router, sub-routes, utilities, static content, and types (models, schemas)",
+      "inputValidation": "Prefer Pydantic models (v2) over raw dictionaries",
+      "routeDefinitions": "Use declarative route definitions with clear return type annotations",
+      "dependencyInjection": "Rely on FastAPI's dependency injection system for managing state and shared resources",
+      "lifespanManagement": "Prefer lifespan context managers over multiple @app.on_event decorators for startup/shutdown events",
+      "middleware": [
+        "Use middleware for logging, error monitoring, and performance optimization",
+        "Implement centralized exception handling using HTTPException and custom error handlers"
+      ]
+    },
+    "chainOfThought": {
+      "validation": "Every generated code block must include a succinct chain-of-thought summary that explains the reasoning and step-by-step validations applied."
+    },
+    "dynamicFeedback": {
+      "enabled": true,
+      "description": "Collect real-time performance metrics and agent feedback to enable rule evolution",
+      "feedbackCycle": "Review and update the guidelines quarterly based on user insights and system performance"
+    },
+    "errorHandlingAndValidation": {
+      "principles": [
+        "Implement guard clauses at the start of functions",
+        "Use early returns to minimize nested logic",
+        "Incorporate structured logging to track application behavior",
+        "Place the happy path last for improved readability",
+        "Implement proper error logging and user-friendly error messages",
+        "Utilize custom error types or error factories for consistent error handling"
+      ]
+    },
+    "performanceOptimization": {
+      "asyncIO": "Prioritize using async functions to minimize blocking I/O during API calls",
+      "caching": "Implement caching for frequently accessed data",
+      "serialization": "Optimize data processing with Pydantic models",
+      "metrics": "Prioritize API performance metrics such as response time, latency, and throughput"
+    },
+    "versionControl": {
+      "note": "Track this file under version control to integrate iterative improvements and developer feedback"
+    },
+    "meta": {
+      "lastUpdated": "2025-02-08",
+      "version": "1.0.0",
+      "contributors": [
+        "Ian Tharp"
+      ]
+    }
+  }
+}
+
+
+
