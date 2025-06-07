@@ -1,0 +1,102 @@
+## Code Style
+
+- Follow PEP 8 guidelines rigorously.
+- Use **black** for code formatting with a line length of 88.
+- Always use **double quotes** for strings, unless single quotes are explicitly required.
+- Use **type hints** for all function parameters and return types:
+  - Avoid `Any` where possible.
+  - Prefer explicit typing over generic or ambiguous annotations.
+- Always use **async/await** for I/O-bound operations.
+- Use list comprehensions instead of `map` or `filter` for readability.
+- Avoid wildcard imports (e.g., `from module import *`).
+- Follow the principle of least privilege:
+  - Use the most restrictive permissions and scopes for variables and functions.
+
+## Documentation
+
+- Ensure **docstrings** for all public APIs, including functions, classes, and modules.
+- Use **Google-style docstring format** consistently.
+- Include **type annotations** in docstrings, even if redundant with type hints.
+- Provide **at least one usage example** for any function with complex behavior or parameters.
+- Keep documentation **synchronized** with code changes.
+
+## Testing
+
+- Write **unit tests** for all new code, covering both happy paths and edge cases.
+- Maintain **test coverage above 90%**.
+- Use **pytest** for testing and ensure compatibility with **pytest-asyncio** for async tests.
+- Mock external dependencies to avoid side effects.
+- Always validate inputs and outputs in test cases.
+
+## Security
+
+- Never hard-code sensitive information such as secrets, passwords, or API keys.
+- Use **environment variables** and `.env` files for configuration, with appropriate parsing.
+- Validate all **inputs** rigorously to prevent injection attacks or unexpected behaviors.
+- Sanitize data before processing or storage.
+- Implement **exception handling** with detailed and user-friendly error messages.
+
+## Dependencies
+
+- Use **Poetry** for dependency management:
+  - Pin versions for all dependencies to ensure reproducibility.
+  - Regularly check for updates and resolve potential conflicts proactively.
+  - Avoid unnecessary dependencies to minimize the attack surface.
+
+## Git Workflow
+
+- Adhere to **semantic versioning** for releases.
+- Use **conventional commits** for clear and standardized commit messages.
+- Branch strategy:
+  - Create `feature/` branches for new features.
+  - Use `hotfix/` branches for bug fixes.
+- Require **code review** for all pull requests.
+
+## Error Handling
+
+- Define and use **custom exceptions** in a centralized `exceptions.py` module.
+- Log errors with meaningful context to facilitate debugging.
+- Include detailed error messages with actionable suggestions when feasible.
+- Handle **edge cases** explicitly to avoid unexpected behaviors.
+
+## Performance
+
+- Use **async I/O** where applicable for non-blocking operations.
+- Profile code to identify and resolve bottlenecks.
+- Cache repetitive or expensive operations where performance gains are measurable.
+- Write efficient and resource-conscious algorithms.
+
+## Code Organization
+
+- Follow **clean architecture** principles to ensure modularity.
+- Use **dependency injection** to decouple components and enhance testability.
+- Adhere to **SOLID principles**:
+  - Single Responsibility
+  - Open/Closed
+  - Liskov Substitution
+  - Interface Segregation
+  - Dependency Inversion
+- Limit module size; ensure each module has a single, focused purpose.
+
+## Quality Checks
+
+- Run **mypy** for static type checking.
+- Use **ruff** for linting:
+  - Set `--fix` to auto-correct minor issues during development.
+- Ensure all quality checks pass before merging code.
+
+## AI Assistant Rules
+
+- Generate code with **type hints** and ensure compatibility with **mypy**.
+- Avoid generating incomplete implementations:
+  - Include function signatures, docstrings, and placeholder logic as needed.
+- Prefer **async implementations** where applicable.
+- Incorporate **comprehensive error handling**.
+- Write **modular and reusable** code.
+- Optimize generated code for **performance**.
+- Always include **unit tests** for generated functions.
+- Validate generated code against **ruff** linting.
+- Follow the exact **project structure** to maintain consistency.
+- **Automatically execute linting checks (e.g., ruff)** after every change to ensure compliance:
+  - Provide feedback if violations are detected and attempt to auto-fix where possible.
+- Ensure all generated or modified code is **ready for production** and passes lint checks without manual intervention.

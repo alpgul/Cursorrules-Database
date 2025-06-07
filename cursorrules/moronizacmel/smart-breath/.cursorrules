@@ -1,0 +1,76 @@
+# Cursor AI Rules
+
+## Development Environment
+- **Operating System**: Windows
+- **Preferred Shell**: PowerShell
+- **Editor**: Cursor
+
+## Technology Stack
+
+### Database
+- **ORM**: Prisma
+- Use Prisma commands for migrations and schema generation
+- Prefer TypeScript for model definitions
+- Common commands: `npx prisma generate`, `npx prisma migrate dev`, `npx prisma studio`
+
+### UI/Frontend
+- **Component Library**: shadcn/ui
+- Use shadcn components as base for the interface
+- Implement dark mode when appropriate
+- Follow shadcn design conventions
+- Use Tailwind CSS for custom styles
+
+### Terminal Commands
+- **Use PowerShell** for all terminal commands
+- Avoid bash/zsh specific commands
+- Use PowerShell syntax for environment variables and scripts
+- Prefer `npm` or `yarn` for package management
+
+## Code Conventions
+
+### TypeScript/JavaScript
+- Use TypeScript when possible
+- Prefer arrow functions
+- Use ES6 imports/exports
+- Implement strict types
+
+### React/Next.js
+- Use functional components with hooks
+- Implement Server Components when appropriate
+- Follow Next.js 13+ patterns (App Router)
+
+### Prisma
+- Define models with clear relationships
+- Use enums for predefined values
+- Implement validations in the schema
+- Prefer transactions for complex operations
+
+## Suggested Project Structure
+```
+/
+├── prisma/
+│   ├── schema.prisma
+│   └── migrations/
+├── src/
+│   ├── app/
+│   ├── components/
+│   │   └── ui/ (shadcn components)
+│   ├── lib/
+│   └── types/
+├── public/
+└── package.json
+```
+
+## Common Commands (PowerShell)
+- Install dependencies: `npm install` or `yarn install`
+- Run development: `npm run dev` or `yarn dev`
+- Prisma Studio: `npx prisma studio`
+- Generate Prisma client: `npx prisma generate`
+- Create migration: `npx prisma migrate dev --name migration_name`
+- Install shadcn component: `npx shadcn-ui@latest add button`
+
+## Response Preferences
+- Provide commands in PowerShell syntax
+- Include code examples with Prisma and shadcn when relevant
+- Suggest appropriate shadcn components for UI functionalities
+- Explain integrations between Prisma and frontend application 
