@@ -1,0 +1,283 @@
+# Valorix Project Intelligence - .cursorrules
+
+## 🎯 Project Context
+Valorix is an enterprise-grade company evaluation platform using AI and blockchain, with a multi-agent ecosystem of 23 specialized agents. The system achieved a 99.5/100 technical score after comprehensive refactoring.
+
+## 🏗️ Architecture Patterns
+
+### Agent Structure
+All agents follow the modular pattern established during the January 2026 refactoring:
+```
+agent_name/
+├── __init__.py          # Public exports
+├── types.py             # Enums and type definitions
+├── models/              # Pydantic models
+├── services/            # Business logic modules
+├── utils/               # Utilities and helpers
+└── agent_name.py        # Main orchestrator (< 200 lines)
+```
+
+### Module Guidelines
+- **Maximum lines per file**: 200 (strict limit)
+- **Single Responsibility**: Each module has ONE clear purpose
+- **Async by default**: All agent methods use async/await
+- **Error handling**: Try/except with proper logging
+- **Type hints**: Required for all functions
+
+### Import Pattern
+```python
+# Correct absolute imports (avoid circular dependencies)
+from api.assessment.services.agents.base_agent import BaseAgent
+from api.core.services.some_service import SomeService
+
+# NOT: from assessment.services... (causes import errors)
+```
+
+## 🔧 Technical Stack
+
+### Core Dependencies
+- **Python**: 3.13+
+- **FastAPI**: Backend framework
+- **Pydantic**: Data validation
+- **SQLAlchemy**: ORM (1.4.50)
+- **pandas**: 2.2.3 (data processing)
+- **numpy**: 2.2.6 (calculations)
+- **Next.js**: 15.3.2 (frontend)
+- **React**: 19 RC (with React Compiler)
+
+### Critical Agents
+1. **FinancialExtractionAgent**: FEC processing, ratios
+2. **StrategicAnalysisAgent**: SWOT, recommendations
+3. **ReportGenerationAgent**: Multi-format reports
+4. **DeepSeekAgent**: AI predictions (fallback mode)
+5. **RiskAssessmentAgent**: Comprehensive risk analysis
+
+## 📋 Code Standards
+
+### Python Conventions
+```python
+# Standard agent method signature
+async def process_action(self, action: str, params: Dict[str, Any]) -> Dict[str, Any]:
+    """Process specific agent action."""
+    try:
+        if action == "analyze":
+            return await self._analyze(params)
+        # ... other actions
+    except Exception as e:
+        logger.error(f"Error in {action}: {e}")
+        return {"error": str(e), "action": action}
+```
+
+### Logging Pattern
+```python
+import logging
+logger = logging.getLogger(__name__)
+
+# Use structured logging
+logger.info(f"Processing {entity_type} for company {company_id}")
+logger.error(f"Failed to {action}: {str(e)}")
+```
+
+### Error Handling
+```python
+# Always return structured responses
+try:
+    result = await process()
+    return {"success": True, "data": result}
+except ValidationError as e:
+    return {"success": False, "error": "validation_error", "details": str(e)}
+except Exception as e:
+    logger.error(f"Unexpected error: {e}")
+    return {"success": False, "error": "internal_error"}
+```
+
+## 🚀 Performance Optimizations
+
+### Database Queries
+- Use `(SELECT auth.uid())` instead of `auth.uid()` in RLS policies
+- Avoid N+1 queries with proper joins
+- Index foreign keys and frequently queried columns
+- Batch operations when possible
+
+### Agent Performance
+- Lazy load heavy dependencies
+- Use connection pooling for external APIs
+- Implement caching for expensive calculations
+- Process data in chunks for large datasets
+
+## 🔍 Common Issues & Solutions
+
+### Import Circular Dependencies
+**Problem**: `from assessment.services.agents.base_agent import BaseAgent`
+**Solution**: Use absolute imports: `from api.assessment.services.agents.base_agent import BaseAgent`
+
+### Large Agent Files
+**Problem**: Agent files > 600 lines become unmaintainable
+**Solution**: Refactor into modular structure with specialized sub-modules
+
+### Memory Issues with Large Data
+**Problem**: Loading entire datasets in memory
+**Solution**: Use generators and process in chunks
+
+## 📊 Testing Strategy
+
+### Test Structure
+```
+tests/
+├── unit/
+│   ├── agents/
+│   │   └── test_agent_name.py
+│   └── services/
+├── integration/
+│   └── test_agent_workflows.py
+└── e2e/
+    └── test_full_evaluation.py
+```
+
+### Test Coverage Targets
+- Unit tests: 90%+ per module
+- Integration tests: 85%+ per agent
+- E2E tests: Critical business workflows
+
+## 🔄 Workflow Patterns
+
+### Agent Orchestration
+```python
+# OrchestratorAgent manages workflow
+workflow = {
+    "extract": FinancialExtractionAgent,
+    "analyze": StrategicAnalysisAgent,
+    "assess_risk": RiskAssessmentAgent,
+    "generate_report": ReportGenerationAgent
+}
+```
+
+### Data Flow
+1. Raw data → Extraction agents
+2. Extracted data → Analysis agents
+3. Analysis results → Assessment agents
+4. Assessment results → Report generation
+5. Reports → Distribution/Storage
+
+## 🔐 Security Patterns
+
+### Authentication
+- Use Supabase Auth for user management
+- JWT tokens for API authentication
+- Role-based access control (RBAC)
+
+### Data Protection
+- Encrypt sensitive data at rest
+- Use HTTPS for all communications
+- Implement rate limiting
+- Validate all inputs with Pydantic
+
+## 🎨 Frontend Patterns
+
+### Component Structure
+```typescript
+// Use functional components with TypeScript
+export const ComponentName: FC<Props> = ({ prop1, prop2 }) => {
+  // Hooks at the top
+  const [state, setState] = useState<StateType>();
+  
+  // Effects after hooks
+  useEffect(() => {
+    // Effect logic
+  }, [dependencies]);
+  
+  // Handlers before return
+  const handleAction = useCallback(() => {
+    // Handler logic
+  }, [dependencies]);
+  
+  return <div>{/* JSX */}</div>;
+};
+```
+
+### State Management
+- Use React Context for global state
+- Local state with useState/useReducer
+- Server state with React Query/SWR
+- Form state with React Hook Form
+
+## 📝 Documentation Standards
+
+### Code Documentation
+```python
+class AgentName(BaseAgent):
+    """
+    Agent description and purpose.
+    
+    Capabilities:
+    - Capability 1
+    - Capability 2
+    
+    Integration: External services used
+    """
+```
+
+### API Documentation
+- Use docstrings for all public methods
+- Document parameter types and returns
+- Include usage examples
+- Note any side effects
+
+## 🔄 Git Workflow
+
+### Branch Naming
+- `feature/agent-name-enhancement`
+- `fix/import-circular-dependency`
+- `refactor/modularize-agent-name`
+- `docs/update-agent-documentation`
+
+### Commit Messages
+- `feat: Add risk assessment benchmarking`
+- `fix: Resolve circular import in FEC agent`
+- `refactor: Modularize PredictionAnalysisAgent`
+- `docs: Update memory-bank with refactoring`
+
+## 🎯 Project Evolution
+
+### Recent Achievements
+1. Resolved critical import circular dependencies
+2. Refactored 3 priority agents into 33 modules
+3. Created comprehensive RiskAssessmentAgent
+4. Achieved 99.5/100 technical score
+
+### Current Status (December 2024)
+1. **API Audit Completed**: Architecture analysis revealed excellent modular design
+2. **Violations Identified**: 7 files >200 lines requiring refactoring
+3. **Priority Targets**: deepseek_service.py (706L), agent orchestrator (326L), validators (3 files)
+4. **Architecture Score**: 85/100 (excellent foundation, minor compliance issues)
+
+### Next Priorities
+1. **Phase 1 Refactoring**: deepseek_service.py modularization (prompts/, analyzers/, methods/)
+2. **Agent Orchestrator**: Decompose into registry, workflow_manager, orchestrator components
+3. **Validators Separation**: Split input/compliance/format validators into specialized modules
+4. **Unit tests**: 90%+ coverage for refactored modules
+5. **API documentation**: OpenAPI/Swagger for all services
+
+## 💡 Key Learnings
+
+### Architecture
+- Modular design dramatically improves maintainability
+- Clear separation of concerns reduces complexity
+- Proper import paths prevent circular dependencies
+- Async patterns essential for performance
+
+### Refactoring Strategy
+- Start with the largest/most complex agents
+- Create specialized sub-modules by functionality
+- Maintain backward compatibility during transition
+- Test thoroughly at each step
+
+### Performance
+- Profile before optimizing
+- Cache expensive computations
+- Use appropriate data structures
+- Monitor memory usage in production
+
+---
+
+Remember: The goal is a maintainable, scalable, and performant system that can evolve with business needs while maintaining the highest standards of code quality.
