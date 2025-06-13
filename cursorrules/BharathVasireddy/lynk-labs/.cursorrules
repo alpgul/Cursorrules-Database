@@ -1,0 +1,329 @@
+# LYNK LABS - CURSOR AI RULES
+# Critical Instructions for Consistent Development
+
+## 🎯 CORE PRINCIPLES
+
+### 1. NEVER REMOVE EXISTING FUNCTIONALITY
+- NEVER delete or break existing working features
+- Always extend, never replace unless explicitly requested
+- If refactoring is needed, maintain backward compatibility
+- Always preserve existing API endpoints and data structures
+
+### 2. FOLLOW DOCUMENTATION STRICTLY
+- ALWAYS reference PROJECT_STRUCTURE.md before creating new files
+- ALWAYS follow DESIGN_SYSTEM.md for UI components
+- ALWAYS check API_DOCUMENTATION.md for endpoint consistency
+- ALWAYS follow DEVELOPMENT_GUIDE.md task sequence
+
+### 3. ERROR HANDLING PROTOCOL
+- When encountering errors, FIRST check this .cursorrules file
+- If error is not documented here, solve it and ASK USER to add solution to .cursorrules
+- NEVER ignore TypeScript errors - fix them immediately
+- Always include try-catch blocks for async operations
+- Always validate input data before processing
+
+## 🏗 TECH STACK REQUIREMENTS
+
+### Frontend (Next.js 14)
+```typescript
+// REQUIRED: App Router structure
+src/app/
+├── (auth)/           # Auth group routes
+├── (dashboard)/      # Dashboard group routes  
+├── api/              # API routes
+├── globals.css       # Global styles
+└── layout.tsx        # Root layout
+```
+
+### Database (Prisma + PostgreSQL)
+```typescript
+// REQUIRED: Always use Prisma for database operations
+// NEVER write raw SQL queries
+// Always use transactions for multi-table operations
+const result = await prisma.$transaction([
+  prisma.table1.create({...}),
+  prisma.table2.update({...})
+]);
+```
+
+### Authentication (NextAuth.js)
+```typescript
+// REQUIRED: Always check authentication status
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/lib/auth";
+
+export async function GET() {
+  const session = await getServerSession(authOptions);
+  if (!session) {
+    return new Response("Unauthorized", { status: 401 });
+  }
+}
+```
+
+## 🎨 UI/UX REQUIREMENTS
+
+### 1. Component Structure
+```typescript
+// REQUIRED: Component template
+import { cn } from "@/lib/utils";
+
+interface ComponentProps {
+  className?: string;
+  // ... other props
+}
+
+export function Component({ className, ...props }: ComponentProps) {
+  return (
+    <div className={cn("base-classes", className)} {...props}>
+      {/* component content */}
+    </div>
+  );
+}
+```
+
+### 2. Styling Rules
+- ALWAYS use Tailwind CSS classes
+- NEVER use inline styles or CSS modules
+- Use shadcn/ui components as base
+- Follow mobile-first responsive design
+- Use semantic HTML elements
+
+### 3. Form Handling
+```typescript
+// REQUIRED: Use React Hook Form + Zod
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+
+const schema = z.object({
+  // schema definition
+});
+
+const form = useForm({
+  resolver: zodResolver(schema),
+});
+```
+
+## 🔄 URL-BASED ROUTING REQUIREMENTS
+
+### 1. Page Structure
+```typescript
+// REQUIRED: Every page must be URL-based with proper metadata
+export const metadata: Metadata = {
+  title: "Page Title - Lynk Labs",
+  description: "Page description"
+};
+
+export default function Page({ params, searchParams }: PageProps) {
+  // page content
+}
+```
+
+### 2. API Routes
+```typescript
+// REQUIRED: RESTful API structure
+// GET /api/tests - List all tests
+// GET /api/tests/[id] - Get specific test
+// POST /api/tests - Create test
+// PUT /api/tests/[id] - Update test
+// DELETE /api/tests/[id] - Delete test
+
+export async function GET(request: NextRequest) {
+  try {
+    // implementation
+    return NextResponse.json(data);
+  } catch (error) {
+    return NextResponse.json(
+      { error: "Internal server error" },
+      { status: 500 }
+    );
+  }
+}
+```
+
+## 🔐 SECURITY REQUIREMENTS
+
+### 1. Input Validation
+```typescript
+// REQUIRED: Always validate inputs
+import { z } from "zod";
+
+const inputSchema = z.object({
+  email: z.string().email(),
+  phone: z.string().regex(/^\+?[1-9]\d{1,14}$/),
+});
+
+const validatedData = inputSchema.parse(input);
+```
+
+### 2. Authentication Checks
+```typescript
+// REQUIRED: Protect all sensitive routes
+import { verifyAuth } from "@/lib/auth-utils";
+
+export async function POST(request: NextRequest) {
+  const user = await verifyAuth(request);
+  if (!user) {
+    return new Response("Unauthorized", { status: 401 });
+  }
+}
+```
+
+## 📊 DATABASE REQUIREMENTS
+
+### 1. Schema Management
+```prisma
+// REQUIRED: Always include these fields in models
+model BaseModel {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  isActive  Boolean  @default(true)
+}
+```
+
+### 2. Query Optimization
+```typescript
+// REQUIRED: Always include relevant relations
+const order = await prisma.order.findUnique({
+  where: { id },
+  include: {
+    user: true,
+    orderItems: {
+      include: {
+        test: true
+      }
+    },
+    homeVisit: true
+  }
+});
+```
+
+## 🚨 COMMON ERROR SOLUTIONS
+
+### 1. TypeScript Errors
+```typescript
+// ERROR: Property 'x' does not exist on type 'y'
+// SOLUTION: Define proper interfaces
+interface UserProfile {
+  id: string;
+  name: string;
+  email: string;
+  // ... other properties
+}
+```
+
+### 2. Prisma Errors
+```typescript
+// ERROR: Record not found
+// SOLUTION: Always handle null cases
+const user = await prisma.user.findUnique({ where: { id } });
+if (!user) {
+  return NextResponse.json(
+    { error: "User not found" },
+    { status: 404 }
+  );
+}
+```
+
+### 3. Authentication Errors
+```typescript
+// ERROR: Session not available
+// SOLUTION: Always check session existence
+const session = await getServerSession(authOptions);
+if (!session?.user?.id) {
+  redirect("/auth/signin");
+}
+```
+
+## 📝 DEVELOPMENT WORKFLOW
+
+### 1. Before Creating New Features
+1. Check PROJECT_STRUCTURE.md for file organization
+2. Check API_DOCUMENTATION.md for endpoint patterns
+3. Check DESIGN_SYSTEM.md for component usage
+4. Create types in appropriate .d.ts files
+
+### 2. Code Quality Checklist
+- [ ] TypeScript errors resolved
+- [ ] Proper error handling implemented
+- [ ] Input validation added
+- [ ] Authentication checks in place
+- [ ] Database queries optimized
+- [ ] UI components follow design system
+- [ ] Mobile responsive design
+- [ ] Accessibility attributes added
+
+### 3. Testing Requirements
+```typescript
+// REQUIRED: Add tests for all new features
+import { describe, it, expect } from '@jest/globals';
+
+describe('Feature Name', () => {
+  it('should work correctly', async () => {
+    // test implementation
+  });
+});
+```
+
+## 🔧 PERFORMANCE REQUIREMENTS
+
+### 1. Database Optimization
+- Always use appropriate indexes
+- Implement pagination for large datasets
+- Use database-level filtering instead of JavaScript filtering
+
+### 2. Frontend Optimization
+- Use Next.js Image component for images
+- Implement lazy loading for components
+- Use React.memo for expensive components
+- Implement proper caching strategies
+
+## 📞 EMERGENCY PROTOCOLS
+
+### If Code Breaks:
+1. Check console for specific error messages
+2. Check this .cursorrules file for solutions
+3. Revert to last working commit if needed
+4. ASK USER to update .cursorrules with new solution
+
+### If New Error Occurs:
+1. Document the error and solution
+2. Ask user to add to .cursorrules
+3. Update API_DOCUMENTATION.md if API-related
+4. Update DEVELOPMENT_GUIDE.md if process-related
+
+## ⚡ QUICK REFERENCE
+
+### File Creation Pattern:
+```
+components/ui/[component-name].tsx
+components/forms/[form-name].tsx
+src/app/[route]/page.tsx
+src/app/api/[endpoint]/route.ts
+lib/[utility-name].ts
+types/[type-name].d.ts
+```
+
+### Import Order:
+1. React/Next.js imports
+2. Third-party library imports
+3. Internal component imports
+4. Utility imports
+5. Type imports
+
+### Commit Message Format:
+```
+feat: add new test booking feature
+fix: resolve payment gateway integration
+docs: update API documentation
+style: improve responsive design
+refactor: optimize database queries
+```
+
+## 🎯 REMEMBER:
+- CONSISTENCY IS KEY
+- NEVER BREAK EXISTING FUNCTIONALITY
+- ALWAYS FOLLOW THE DOCUMENTATION
+- ASK FOR CLARIFICATION WHEN UNSURE
+- UPDATE DOCUMENTATION WHEN ADDING NEW FEATURES 

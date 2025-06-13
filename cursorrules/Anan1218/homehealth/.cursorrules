@@ -1,0 +1,234 @@
+# HomeHealth Project Rules
+
+## Tech Stack & Environment
+- **Language**: Python 3.x (backend), TypeScript/JavaScript (frontend)
+- **Backend**: FastAPI with uvicorn ASGI server
+- **Frontend**: React.js with Vite, TypeScript
+- **Database**: Supabase (PostgreSQL)
+- **Voice API**: VAPI for voice interactions and AI-powered conversations
+- **Testing**: pytest (Python), vitest (frontend)
+- **Package Management**: pip/requirements.txt (Python), npm (Node.js)
+- **Containerization**: Docker & Docker Compose
+- **Deployment**: Render, Vercel
+- **OS**: macOS with Zsh shell
+
+## Architecture & Patterns
+- **Use SOLID Principles** - Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion
+- **Feature-Based Architecture** - Organize code by features, not layers
+- **Clean Architecture** - Separate domain, infrastructure, and presentation layers
+- **Repository Pattern** - Abstract data access with repositories
+- **Dependency Injection** - Use FastAPI's dependency injection system
+- **Async/Await** - Prefer async patterns in Python for I/O operations
+
+## VAPI Voice Integration
+- **Real-time Communication** - Use VAPI for voice-based health consultations and interactions
+- **WebRTC Integration** - Leverage WebRTC for low-latency voice communication
+- **Assistant Configuration** - Define voice assistants with healthcare-specific prompts and workflows
+- **Call Management** - Handle inbound/outbound calls, call routing, and session management
+- **Voice Data Processing** - Process and store voice interaction data securely
+- **Health Context** - Integrate voice interactions with patient data and health records
+
+## Development Workflow
+- **Write tests first, then code** - TDD approach
+- **Run tests and update code until tests pass**
+- **Use Docker for development and testing when available**
+- **Use parallel tool calls for efficiency**
+- **Clean up temporary files after tasks**
+- **Verify changes with both unit and integration tests**
+
+## Code Standards
+- **Python**: Use type hints, async/await, Pydantic models
+- **Frontend**: Use TypeScript, proper component organization
+- **REST API**: Follow REST conventions for endpoints
+- **Environment Variables**: Use .env files for configuration
+- **Error Handling**: Comprehensive error handling with proper HTTP status codes
+- **Logging**: Use structured logging for debugging
+
+## Strong Typing Specification (Python)
+**Mandatory for scalability and maintainability**
+
+### Type Annotations
+- **All functions and methods** MUST have type hints for parameters and return values
+- **Class attributes** MUST be type annotated using `typing` or dataclasses
+- **Variable declarations** SHOULD be type annotated when type inference is unclear
+- **No `Any` type** unless absolutely necessary with justification comments
+
+### Type Checking Tools
+- **mypy**: Use strict mode with `--strict` flag
+- **Configuration**: mypy.ini with strict settings required
+- **CI Integration**: Type checking must pass in CI/CD pipeline
+- **IDE Integration**: Enable real-time type checking in development
+
+### Advanced Type Features
+- **Generic Types**: Use `TypeVar` and `Generic` for reusable components
+- **Protocol Classes**: Define interfaces using `typing.Protocol`
+- **Union Types**: Use `Union` or `|` (Python 3.10+) for multiple valid types
+- **Optional Types**: Use `Optional[T]` or `T | None` for nullable values
+- **Literal Types**: Use `Literal` for specific string/int values
+- **Final Types**: Use `Final` for constants and immutable values
+
+### Pydantic Integration
+- **Data Models**: All data models MUST inherit from `BaseModel`
+- **Request/Response**: Use Pydantic schemas for API input/output validation
+- **Configuration**: Use Pydantic settings for application configuration
+- **Field Validation**: Leverage Pydantic validators for business rules
+
+### Type Safety Patterns
+```python
+# Function signatures
+async def get_user(user_id: int, include_inactive: bool = False) -> User | None:
+    pass
+
+# Class definitions
+class UserRepository(Protocol):
+    async def find_by_id(self, user_id: int) -> User | None: ...
+    async def save(self, user: User) -> User: ...
+
+# Generic types
+T = TypeVar('T', bound=BaseModel)
+class Repository(Generic[T]):
+    async def save(self, entity: T) -> T: ...
+
+# Literal types for constants
+UserRole = Literal['admin', 'user', 'guest']
+```
+
+### Mandatory Type Checking Rules
+- **No implicit Any**: Functions without type hints are forbidden
+- **Return types**: All functions must declare return types explicitly
+- **Error handling**: Exception types must be specific, not bare `except`
+- **Container types**: Use `list[str]` not `list`, `dict[str, int]` not `dict`
+- **Import types**: Use `from __future__ import annotations` for forward references
+
+### Type Documentation
+- **Complex types**: Document complex generic types with docstrings
+- **Type aliases**: Create type aliases for complex union types
+- **Module-level types**: Define shared types at module level for reuse
+
+## Project Structure
+```
+homehealth/
+├── backend/           # FastAPI backend
+│   ├── app/
+│   │   ├── features/  # Feature-based modules
+│   │   ├── core/      # Core configuration
+│   │   └── main.py    # FastAPI app entry point
+│   ├── tests/         # pytest test suite
+│   └── requirements.txt
+├── frontend/          # React + Vite frontend
+│   ├── src/
+│   │   ├── features/  # Feature-based UI components
+│   │   └── shared/    # Shared utilities
+│   └── package.json
+├── shared/            # Shared types and utilities
+└── docker-compose.yml # Container orchestration
+```
+
+## Feature Organization
+Each feature should follow this structure:
+```
+features/feature_name/
+├── models.py          # Data models
+├── schemas.py         # Pydantic schemas
+├── repository.py      # Data access layer
+├── service.py         # Business logic
+├── router.py          # API endpoints
+└── tests/             # Feature-specific tests
+```
+
+### VAPI-Specific Features
+For voice-related features, include additional components:
+```
+features/voice_feature/
+├── models.py          # Voice session, call records models
+├── schemas.py         # VAPI request/response schemas
+├── repository.py      # Voice data persistence
+├── service.py         # Voice processing logic
+├── router.py          # Voice API endpoints
+├── assistants.py      # VAPI assistant configurations
+├── webhooks.py        # VAPI webhook handlers
+└── tests/             # Voice feature tests
+```
+
+## Docker Usage
+- **Development**: Use `docker-compose up --build` for full stack
+- **Testing**: Run tests in containers when possible
+- **Production**: Use Dockerfile.prod for optimized builds
+- **Ports**: Frontend (5173), Backend (8000)
+
+## Environment Variables
+Required environment variables:
+- `SUPABASE_URL` - Supabase project URL
+- `SUPABASE_ANON_KEY` - Supabase anonymous key
+- `SUPABASE_SERVICE_ROLE_KEY` - Supabase service role key
+- `VAPI_API_KEY` - VAPI API key for voice interactions
+- `VAPI_PHONE_NUMBER_ID` - VAPI phone number ID (if using phone calls)
+- `VITE_API_URL` - Frontend API URL (for production)
+- `VITE_SUPABASE_URL` - Frontend Supabase URL
+- `VITE_SUPABASE_ANON_KEY` - Frontend Supabase key
+- `VITE_VAPI_PUBLIC_KEY` - VAPI public key for frontend integration
+
+## Common Commands
+```bash
+# Development
+docker-compose up --build          # Start full stack
+cd backend && python -m pytest     # Run backend tests
+cd backend && mypy app/             # Run type checking
+cd frontend && npm run test        # Run frontend tests
+cd frontend && npm run build       # Build frontend
+
+# Local development (without Docker)
+cd backend && uvicorn app.main:app --reload
+cd frontend && npm run dev
+
+# Type checking and testing workflow
+cd backend && mypy app/ && python -m pytest  # Type check then test
+cd backend && mypy --strict app/    # Strict type checking
+
+# Health checks
+curl http://localhost:8000/health   # Backend health
+curl http://localhost:5173         # Frontend
+```
+
+## Deployment
+- **Primary**: Render (full stack deployment)
+- **Alternative**: Vercel (frontend) + Render (backend)
+- **Configuration**: render.yaml and vercel.json included
+- **Scripts**: Use ./scripts/deploy.sh for automated deployment
+
+## Dependencies
+- **Backend**: FastAPI, Supabase, Pydantic, pytest, uvicorn, mypy
+- **Frontend**: React, Vite, TypeScript, Supabase client, vitest
+- **Voice Integration**: VAPI SDK, WebRTC for real-time voice communication
+- **Type Checking**: mypy (strict mode), types-* packages for third-party libraries
+- **Keep Supabase core** - Used for database, not just auth
+
+## Testing Strategy
+- **Unit Tests**: Test individual functions and classes
+- **Integration Tests**: Test API endpoints and database interactions
+- **Coverage**: Aim for high test coverage
+- **Parallel Execution**: Run tests in parallel when possible
+- **Fixtures**: Use pytest fixtures for test data setup
+
+## Security
+- **API Keys**: Store in environment variables
+- **CORS**: Configure properly for production
+- **HTTPS**: Use in production environments
+- **Input Validation**: Use Pydantic for request validation
+- **Rate Limiting**: Consider implementing for production
+- **VAPI Security**: Validate webhook signatures, secure voice data transmission
+- **Health Data**: Ensure HIPAA compliance for voice-based health interactions
+- **Voice Privacy**: Implement proper consent and data retention policies
+
+## Documentation
+- **API Docs**: Auto-generated with FastAPI at /docs
+- **Type Hints**: Comprehensive type annotations
+- **Docstrings**: Document complex functions and classes
+- **README**: Keep project documentation updated
+- **Architecture Decisions**: Document significant changes
+
+## Git & Version Control
+- **Commits**: Use descriptive commit messages
+- **Branches**: Feature branches for new development
+- **Tags**: Use semantic versioning for releases
+- **History**: Keep git history clean with meaningful commits 

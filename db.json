@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 1646,
+  "size": 1665,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -23044,6 +23044,272 @@
         "htmlUrl": "https://github.com/wasgeurtjeNL/zynlo-helpdesk-fixed/blob/c289d53392ee1d943ed23cacb173f98b2350f34e/.cursorrules",
         "size": 13.5,
         "timestamp": "2025-06-10T08:17:59.853Z"
+      }
+    ],
+    [
+      "jdrbc/podly_pure_podcasts/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/jdrbc/podly_pure_podcasts/2cd3be00231fa35726e08ac3cbc7b176a4c0c1e4/.cursorrules",
+        "repositoryId": 803617631,
+        "path": "jdrbc/podly_pure_podcasts/.cursorrules",
+        "ownerName": "jdrbc",
+        "repositoryName": "podly_pure_podcasts",
+        "htmlUrl": "https://github.com/jdrbc/podly_pure_podcasts/blob/2cd3be00231fa35726e08ac3cbc7b176a4c0c1e4/.cursorrules",
+        "size": 1.32,
+        "timestamp": "2025-06-13T08:16:42.017Z"
+      }
+    ],
+    [
+      "AquaWallet/aqua-wallet/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/AquaWallet/aqua-wallet/923daeebe76336e4ba626c3b1748820fde9d8187/.cursorrules",
+        "repositoryId": 743008963,
+        "path": "AquaWallet/aqua-wallet/.cursorrules",
+        "ownerName": "AquaWallet",
+        "repositoryName": "aqua-wallet",
+        "htmlUrl": "https://github.com/AquaWallet/aqua-wallet/blob/923daeebe76336e4ba626c3b1748820fde9d8187/.cursorrules",
+        "size": 4.05,
+        "timestamp": "2025-06-13T08:16:43.057Z"
+      }
+    ],
+    [
+      "R44VC0RP/agenda.dev/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/R44VC0RP/agenda.dev/17132506fc8905e85482d62f5674d0d796470bfc/.cursorrules",
+        "repositoryId": 969797727,
+        "path": "R44VC0RP/agenda.dev/.cursorrules",
+        "ownerName": "R44VC0RP",
+        "repositoryName": "agenda.dev",
+        "htmlUrl": "https://github.com/R44VC0RP/agenda.dev/blob/17132506fc8905e85482d62f5674d0d796470bfc/.cursorrules",
+        "size": 1.82,
+        "timestamp": "2025-06-13T08:16:43.368Z"
+      }
+    ],
+    [
+      "yuanjian-org/app/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/yuanjian-org/app/8f7e90358fd205199a9b45dc8cf93468b9935b11/.cursorrules",
+        "repositoryId": 652921170,
+        "path": "yuanjian-org/app/.cursorrules",
+        "ownerName": "yuanjian-org",
+        "repositoryName": "app",
+        "htmlUrl": "https://github.com/yuanjian-org/app/blob/8f7e90358fd205199a9b45dc8cf93468b9935b11/.cursorrules",
+        "size": 8.24,
+        "timestamp": "2025-06-13T08:16:43.667Z"
+      }
+    ],
+    [
+      "ax-llm/ax/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ax-llm/ax/2a0fbf457d66919a01d1600c4bad450a75d506b9/.cursorrules",
+        "repositoryId": 605728251,
+        "path": "ax-llm/ax/.cursorrules",
+        "ownerName": "ax-llm",
+        "repositoryName": "ax",
+        "htmlUrl": "https://github.com/ax-llm/ax/blob/2a0fbf457d66919a01d1600c4bad450a75d506b9/.cursorrules",
+        "size": 7.2,
+        "timestamp": "2025-06-13T08:16:46.213Z"
+      }
+    ],
+    [
+      "fernando-duarte/heteroskedasticity_identification/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/fernando-duarte/heteroskedasticity_identification/4abe2d6a2cc2428424eda721a84aed0a37e2d2aa/.cursorrules",
+        "repositoryId": 1001128820,
+        "path": "fernando-duarte/heteroskedasticity_identification/.cursorrules",
+        "ownerName": "fernando-duarte",
+        "repositoryName": "heteroskedasticity_identification",
+        "htmlUrl": "https://github.com/fernando-duarte/heteroskedasticity_identification/blob/4abe2d6a2cc2428424eda721a84aed0a37e2d2aa/.cursorrules",
+        "size": 2.88,
+        "timestamp": "2025-06-13T08:16:48.714Z"
+      }
+    ],
+    [
+      "BharathVasireddy/lynk-labs/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/BharathVasireddy/lynk-labs/ecb683a891b0d4c77e79127dd81335f58a8a0757/.cursorrules",
+        "repositoryId": 1001145074,
+        "path": "BharathVasireddy/lynk-labs/.cursorrules",
+        "ownerName": "BharathVasireddy",
+        "repositoryName": "lynk-labs",
+        "htmlUrl": "https://github.com/BharathVasireddy/lynk-labs/blob/ecb683a891b0d4c77e79127dd81335f58a8a0757/.cursorrules",
+        "size": 7.95,
+        "timestamp": "2025-06-13T08:16:49.657Z"
+      }
+    ],
+    [
+      "MattH-ca/test-financial-project/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/MattH-ca/test-financial-project/372c37263a73db46949461631ff76e2495ba9d1e/.cursorrules",
+        "repositoryId": 1000592350,
+        "path": "MattH-ca/test-financial-project/.cursorrules",
+        "ownerName": "MattH-ca",
+        "repositoryName": "test-financial-project",
+        "htmlUrl": "https://github.com/MattH-ca/test-financial-project/blob/372c37263a73db46949461631ff76e2495ba9d1e/.cursorrules",
+        "size": 2.66,
+        "timestamp": "2025-06-13T08:16:50.095Z"
+      }
+    ],
+    [
+      "DanielSanchez052/Mailing/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/DanielSanchez052/Mailing/96ca17645e24ee3d336477b4876d819b3b691f35/.cursorrules",
+        "repositoryId": 997136349,
+        "path": "DanielSanchez052/Mailing/.cursorrules",
+        "ownerName": "DanielSanchez052",
+        "repositoryName": "Mailing",
+        "htmlUrl": "https://github.com/DanielSanchez052/Mailing/blob/96ca17645e24ee3d336477b4876d819b3b691f35/.cursorrules",
+        "size": 3.4,
+        "timestamp": "2025-06-13T08:16:50.235Z"
+      }
+    ],
+    [
+      "Anan1218/homehealth/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Anan1218/homehealth/a680d5296331a5f3ffac947ed9bea26de7a54d3d/.cursorrules",
+        "repositoryId": 997744430,
+        "path": "Anan1218/homehealth/.cursorrules",
+        "ownerName": "Anan1218",
+        "repositoryName": "homehealth",
+        "htmlUrl": "https://github.com/Anan1218/homehealth/blob/a680d5296331a5f3ffac947ed9bea26de7a54d3d/.cursorrules",
+        "size": 9.85,
+        "timestamp": "2025-06-13T08:16:50.656Z"
+      }
+    ],
+    [
+      "hotboat123/hotboat-dashboard/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/hotboat123/hotboat-dashboard/b49bf25ba4e8042aafbf043648399303d02042d7/.cursorrules",
+        "repositoryId": 959534094,
+        "path": "hotboat123/hotboat-dashboard/.cursorrules",
+        "ownerName": "hotboat123",
+        "repositoryName": "hotboat-dashboard",
+        "htmlUrl": "https://github.com/hotboat123/hotboat-dashboard/blob/b49bf25ba4e8042aafbf043648399303d02042d7/.cursorrules",
+        "size": 5.55,
+        "timestamp": "2025-06-13T08:16:52.032Z"
+      }
+    ],
+    [
+      "MoazzamAliSE/cursor_presentation/.cursor/rules/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/MoazzamAliSE/cursor_presentation/e0100f941bb08876c9b2a7d78f2a3b9a52a6afe8/.cursor/rules/.cursorrules",
+        "repositoryId": 1000836823,
+        "path": "MoazzamAliSE/cursor_presentation/.cursor/rules/.cursorrules",
+        "ownerName": "MoazzamAliSE",
+        "repositoryName": "cursor_presentation",
+        "htmlUrl": "https://github.com/MoazzamAliSE/cursor_presentation/blob/e0100f941bb08876c9b2a7d78f2a3b9a52a6afe8/.cursor/rules/.cursorrules",
+        "size": 2.78,
+        "timestamp": "2025-06-13T08:16:53.572Z"
+      }
+    ],
+    [
+      "tonk-labs/tonkbook/workers/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/tonk-labs/tonkbook/644cca86e595d6b6ad7ae307bdbca89a4e5c5ea0/workers/.cursorrules",
+        "repositoryId": 998828339,
+        "path": "tonk-labs/tonkbook/workers/.cursorrules",
+        "ownerName": "tonk-labs",
+        "repositoryName": "tonkbook",
+        "htmlUrl": "https://github.com/tonk-labs/tonkbook/blob/644cca86e595d6b6ad7ae307bdbca89a4e5c5ea0/workers/.cursorrules",
+        "size": 9.26,
+        "timestamp": "2025-06-13T08:16:53.701Z"
+      }
+    ],
+    [
+      "j-94/Donkeyv1-extracted/Raw_Chat_Vault/ChatGPT/.cursorrules and Composer Explained.md",
+      {
+        "name": ".cursorrules and Composer Explained.md",
+        "downloadUrl": "https://raw.githubusercontent.com/j-94/Donkeyv1-extracted/7358dc3e6dbb34d2014ddfd433721f0e810b3d23/Raw_Chat_Vault/ChatGPT/.cursorrules and Composer Explained.md",
+        "repositoryId": 1001276596,
+        "path": "j-94/Donkeyv1-extracted/Raw_Chat_Vault/ChatGPT/.cursorrules and Composer Explained.md",
+        "ownerName": "j-94",
+        "repositoryName": "Donkeyv1-extracted",
+        "htmlUrl": "https://github.com/j-94/Donkeyv1-extracted/blob/7358dc3e6dbb34d2014ddfd433721f0e810b3d23/Raw_Chat_Vault/ChatGPT/.cursorrules%20and%20Composer%20Explained.md",
+        "size": 143.4,
+        "timestamp": "2025-06-13T08:16:54.078Z"
+      }
+    ],
+    [
+      "avivamar/rolittmain/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/avivamar/rolittmain/c9a9bd2de1709c0f873bc2f1d209fe7bf7077ddf/.cursorrules",
+        "repositoryId": 850874549,
+        "path": "avivamar/rolittmain/.cursorrules",
+        "ownerName": "avivamar",
+        "repositoryName": "rolittmain",
+        "htmlUrl": "https://github.com/avivamar/rolittmain/blob/c9a9bd2de1709c0f873bc2f1d209fe7bf7077ddf/.cursorrules",
+        "size": 12.27,
+        "timestamp": "2025-06-13T08:16:55.091Z"
+      }
+    ],
+    [
+      "joshhlee614/Black_Scholes_Model_Project/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/joshhlee614/Black_Scholes_Model_Project/867af38fd5f4fae1aa25cf8eafd047b418e16b37/.cursorrules",
+        "repositoryId": 967196763,
+        "path": "joshhlee614/Black_Scholes_Model_Project/.cursorrules",
+        "ownerName": "joshhlee614",
+        "repositoryName": "Black_Scholes_Model_Project",
+        "htmlUrl": "https://github.com/joshhlee614/Black_Scholes_Model_Project/blob/867af38fd5f4fae1aa25cf8eafd047b418e16b37/.cursorrules",
+        "size": 2.22,
+        "timestamp": "2025-06-13T08:16:55.622Z"
+      }
+    ],
+    [
+      "ishmcgee/company_categorizer/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ishmcgee/company_categorizer/563ccbc95e172d28830ba04b63f2d6fb9711bf31/.cursorrules",
+        "repositoryId": 1001161153,
+        "path": "ishmcgee/company_categorizer/.cursorrules",
+        "ownerName": "ishmcgee",
+        "repositoryName": "company_categorizer",
+        "htmlUrl": "https://github.com/ishmcgee/company_categorizer/blob/563ccbc95e172d28830ba04b63f2d6fb9711bf31/.cursorrules",
+        "size": 3.86,
+        "timestamp": "2025-06-13T08:16:56.329Z"
+      }
+    ],
+    [
+      "gelsogrove/shopME/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/gelsogrove/shopME/f7486c83a0e66da9c4d611952b76df72db03d3b1/.cursorrules",
+        "repositoryId": 957905370,
+        "path": "gelsogrove/shopME/.cursorrules",
+        "ownerName": "gelsogrove",
+        "repositoryName": "shopME",
+        "htmlUrl": "https://github.com/gelsogrove/shopME/blob/f7486c83a0e66da9c4d611952b76df72db03d3b1/.cursorrules",
+        "size": 12.8,
+        "timestamp": "2025-06-13T08:16:59.074Z"
+      }
+    ],
+    [
+      "prabesh412/vibe-test-store/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/prabesh412/vibe-test-store/e9b363a62d6172614caa681b5018d6945be60dc1/.cursorrules",
+        "repositoryId": 988957385,
+        "path": "prabesh412/vibe-test-store/.cursorrules",
+        "ownerName": "prabesh412",
+        "repositoryName": "vibe-test-store",
+        "htmlUrl": "https://github.com/prabesh412/vibe-test-store/blob/e9b363a62d6172614caa681b5018d6945be60dc1/.cursorrules",
+        "size": 1.67,
+        "timestamp": "2025-06-13T08:16:59.348Z"
       }
     ]
   ]

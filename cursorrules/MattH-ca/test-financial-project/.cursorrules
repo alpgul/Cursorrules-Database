@@ -1,0 +1,82 @@
+# Financial Analysis Project Rules
+
+## ENVIRONMENT SETUP (Critical Context)
+**Python**: 3.13.4 (latest stable, 64-bit Windows 11)
+**Project**: C:\Code\test-financial-project\
+**Status**: 93.8% functional (EXCELLENT)
+**Virtual Env**: Active (venv)
+
+### Core Libraries (All Working ✅)
+- yfinance 0.2.32+ (Yahoo Finance data)
+- pandas 2.1.4+ (data manipulation) 
+- numpy 1.24.3+ (numerical computing)
+- scipy 1.11.4+ (scientific computing)
+- matplotlib 3.8.2+ (plotting)
+- seaborn 0.13.0+ (statistical viz)
+- plotly 5.17.0+ (interactive charts)
+- ta 0.10.2+ (technical analysis)
+- finta 1.3+ (financial indicators)
+- numba 0.59.0+ (JIT performance)
+
+### Development Tools Available
+- Jupyter/JupyterLab (notebooks)
+- pytest (testing)
+- black/flake8/mypy (code quality)
+- line_profiler/memory_profiler (profiling)
+
+### Known Issues
+- backtrader: Compatibility issue with Python 3.13 (use manual backtesting)
+
+### Validated Capabilities
+- ✅ Live financial data download
+- ✅ Professional chart generation  
+- ✅ Technical indicator calculations
+- ✅ Statistical analysis
+- ✅ Data processing and manipulation
+- ⚠️ Automated backtesting (manual workaround needed)
+
+## PROJECT CONTEXT
+Financial analysis project involving:
+- Backtesting trading strategies
+- Charting financial instruments
+- Data analysis and modeling
+- Risk management analysis
+
+## AI INSTRUCTIONS
+1. Assume all core libraries are installed and working
+2. Use vectorized pandas operations for performance
+3. Handle missing data and market holidays
+4. Include proper error handling for financial data
+5. Write comprehensive docstrings
+6. For backtesting, use manual pandas-based approaches instead of backtrader
+## Project Context
+Financial analysis project using Python 3.13.4 involving:
+- Backtesting trading strategies
+- Charting financial instruments
+- Data analysis and modeling
+- Risk management analysis
+
+## AI Model Configuration
+- Primary: Claude 3.5 Sonnet (complex analysis)
+- Research: Gemini Pro 1.5 (market research)
+- Fallback: Gemini Flash 1.5 (quick responses)
+
+## Code Standards
+1. Use Python 3.13.4 features and type hints
+2. Include comprehensive docstrings (Google style)
+3. Follow PEP 8 with Black formatting
+4. Use meaningful variable names
+5. Add robust error handling for financial data
+
+## Financial Guidelines
+1. Always validate financial data (NaN, inf, missing dates)
+2. Include risk management considerations
+3. Document assumptions and limitations
+4. Handle market holidays and trading hours
+5. Use vectorized operations for performance
+
+## Testing Requirements
+- Write unit tests for all calculations
+- Include integration tests for data pipelines
+- Test edge cases (missing data, holidays)
+- Mock external API calls
