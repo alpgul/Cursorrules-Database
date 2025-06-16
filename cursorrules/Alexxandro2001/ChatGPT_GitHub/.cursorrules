@@ -1,0 +1,47 @@
+{
+  "project": "E-commerce elettronica con Danea",
+  "description": "Un sito e-commerce completo per un negozio di elettronica, con caricamento dei prodotti da Danea Easyfatt. Deve supportare gestione prodotti, carrello, checkout, pagamenti, e backend CMS.",
+  "tech_stack": [
+    "Next.js 14 con App Router",
+    "TypeScript",
+    "Tailwind CSS",
+    "Prisma + PostgreSQL",
+    "Stripe per i pagamenti",
+    "Zustand per la gestione dello stato",
+    "Danea Easyfatt XML/CSV import"
+  ],
+  "rules": [
+    {
+      "when": "generating code",
+      "instruction": "Segui la struttura del progetto basata su Next.js 14 con App Router e directory layout. Usa componenti server e client in modo appropriato."
+    },
+    {
+      "when": "writing frontend",
+      "instruction": "Utilizza Tailwind CSS per lo styling. Mantieni l'interfaccia semplice, pulita e responsive. Ogni componente deve essere riutilizzabile."
+    },
+    {
+      "when": "handling state",
+      "instruction": "Utilizza Zustand per la gestione dello stato globale lato client, specialmente per il carrello e l'auth utente."
+    },
+    {
+      "when": "working with database",
+      "instruction": "Usa Prisma come ORM con PostgreSQL. Ogni modello deve includere createdAt, updatedAt e soft delete (campo isDeleted)."
+    },
+    {
+      "when": "integrating external data",
+      "instruction": "Prevedi l'importazione dei prodotti da Danea Easyfatt tramite XML o CSV, estraendo nome, descrizione, prezzo, categoria, immagini, SKU, disponibilità."
+    },
+    {
+      "when": "handling payments",
+      "instruction": "Integra Stripe per il pagamento sicuro. Prevedi una pagina di conferma ordine e invio email (simulata)."
+    },
+    {
+      "when": "creating API routes",
+      "instruction": "Organizza le route API in app/api/ seguendo le convenzioni RESTful. Usa middleware per l'autenticazione se necessario."
+    },
+    {
+      "pattern": ".*",
+      "instruction": "Dopo ogni modifica o generazione di codice, esegui automaticamente:\n1. git add .\n2. git commit -m \"[Cursor] Modifica automatica salvata\"\n3. git push origin main\nAssicurati che tutto venga salvato nel repository GitHub."
+    }
+  ]
+}

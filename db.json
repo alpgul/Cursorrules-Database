@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 1665,
+  "size": 1685,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -23310,6 +23310,286 @@
         "htmlUrl": "https://github.com/prabesh412/vibe-test-store/blob/e9b363a62d6172614caa681b5018d6945be60dc1/.cursorrules",
         "size": 1.67,
         "timestamp": "2025-06-13T08:16:59.348Z"
+      }
+    ],
+    [
+      "hirokidaichi/gilot/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/hirokidaichi/gilot/0099c706ce242079976eacaf8785467d67626ad3/.cursorrules",
+        "repositoryId": 267832241,
+        "path": "hirokidaichi/gilot/.cursorrules",
+        "ownerName": "hirokidaichi",
+        "repositoryName": "gilot",
+        "htmlUrl": "https://github.com/hirokidaichi/gilot/blob/0099c706ce242079976eacaf8785467d67626ad3/.cursorrules",
+        "size": 2.24,
+        "timestamp": "2025-06-16T08:17:59.035Z"
+      }
+    ],
+    [
+      "platformlabs-co/findash/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/platformlabs-co/findash/d1b8c30b48cf255471e8effc011636447290f685/.cursorrules",
+        "repositoryId": 895211718,
+        "path": "platformlabs-co/findash/.cursorrules",
+        "ownerName": "platformlabs-co",
+        "repositoryName": "findash",
+        "htmlUrl": "https://github.com/platformlabs-co/findash/blob/d1b8c30b48cf255471e8effc011636447290f685/.cursorrules",
+        "size": 1.23,
+        "timestamp": "2025-06-16T08:18:02.245Z"
+      }
+    ],
+    [
+      "griotdev/lista-da-vanessaDOR/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/griotdev/lista-da-vanessaDOR/40a171fb4e3580880dd9ba6bceeacf62899c82b4/.cursorrules",
+        "repositoryId": 980949109,
+        "path": "griotdev/lista-da-vanessaDOR/.cursorrules",
+        "ownerName": "griotdev",
+        "repositoryName": "lista-da-vanessaDOR",
+        "htmlUrl": "https://github.com/griotdev/lista-da-vanessaDOR/blob/40a171fb4e3580880dd9ba6bceeacf62899c82b4/.cursorrules",
+        "size": 1.83,
+        "timestamp": "2025-06-16T08:18:02.426Z"
+      }
+    ],
+    [
+      "klapaudius/symfony-mcp-server/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/klapaudius/symfony-mcp-server/96cfcaeb3787331c2d1bbf8b7d5dc7ecc02fb937/.cursorrules",
+        "repositoryId": 976054541,
+        "path": "klapaudius/symfony-mcp-server/.cursorrules",
+        "ownerName": "klapaudius",
+        "repositoryName": "symfony-mcp-server",
+        "htmlUrl": "https://github.com/klapaudius/symfony-mcp-server/blob/96cfcaeb3787331c2d1bbf8b7d5dc7ecc02fb937/.cursorrules",
+        "size": 1.58,
+        "timestamp": "2025-06-16T08:18:02.539Z"
+      }
+    ],
+    [
+      "newstepsproject/new-steps-project/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/newstepsproject/new-steps-project/42137a7ec55a984cecac5df28e0ee80dd8ee0ec9/.cursorrules",
+        "repositoryId": 1002766742,
+        "path": "newstepsproject/new-steps-project/.cursorrules",
+        "ownerName": "newstepsproject",
+        "repositoryName": "new-steps-project",
+        "htmlUrl": "https://github.com/newstepsproject/new-steps-project/blob/42137a7ec55a984cecac5df28e0ee80dd8ee0ec9/.cursorrules",
+        "size": 111.28,
+        "timestamp": "2025-06-16T08:18:04.962Z"
+      }
+    ],
+    [
+      "ibrhmahmd/Spicey-Avocado/memory-bank/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ibrhmahmd/Spicey-Avocado/fc3043f28fbd6803ce5cbb53b0ef2a74eb2b62b3/memory-bank/.cursorrules",
+        "repositoryId": 1001706287,
+        "path": "ibrhmahmd/Spicey-Avocado/memory-bank/.cursorrules",
+        "ownerName": "ibrhmahmd",
+        "repositoryName": "Spicey-Avocado",
+        "htmlUrl": "https://github.com/ibrhmahmd/Spicey-Avocado/blob/fc3043f28fbd6803ce5cbb53b0ef2a74eb2b62b3/memory-bank/.cursorrules",
+        "size": 3.39,
+        "timestamp": "2025-06-16T08:18:08.418Z"
+      }
+    ],
+    [
+      "tortugichh/realtime/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/tortugichh/realtime/071a4f723c3476ddfe4d51087477d95333faa85e/.cursorrules",
+        "repositoryId": 1002372648,
+        "path": "tortugichh/realtime/.cursorrules",
+        "ownerName": "tortugichh",
+        "repositoryName": "realtime",
+        "htmlUrl": "https://github.com/tortugichh/realtime/blob/071a4f723c3476ddfe4d51087477d95333faa85e/.cursorrules",
+        "size": 3.59,
+        "timestamp": "2025-06-16T08:18:10.327Z"
+      }
+    ],
+    [
+      "hadyca/wemake/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/hadyca/wemake/62dd1018e0aa4bf976f342fef88a4bc9ca8fa735/.cursorrules",
+        "repositoryId": 956404318,
+        "path": "hadyca/wemake/.cursorrules",
+        "ownerName": "hadyca",
+        "repositoryName": "wemake",
+        "htmlUrl": "https://github.com/hadyca/wemake/blob/62dd1018e0aa4bf976f342fef88a4bc9ca8fa735/.cursorrules",
+        "size": 2.18,
+        "timestamp": "2025-06-16T08:18:10.800Z"
+      }
+    ],
+    [
+      "alexynkim/wemake/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/alexynkim/wemake/ce1dc83c9030b66abeb9834cd7cff5d897f659e2/.cursorrules",
+        "repositoryId": 986027397,
+        "path": "alexynkim/wemake/.cursorrules",
+        "ownerName": "alexynkim",
+        "repositoryName": "wemake",
+        "htmlUrl": "https://github.com/alexynkim/wemake/blob/ce1dc83c9030b66abeb9834cd7cff5d897f659e2/.cursorrules",
+        "size": 2.18,
+        "timestamp": "2025-06-16T08:18:10.965Z"
+      }
+    ],
+    [
+      "herodevs/cli/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/herodevs/cli/16e91175e19cd7127905f34d7443818588f85595/.cursorrules",
+        "repositoryId": 680522101,
+        "path": "herodevs/cli/.cursorrules",
+        "ownerName": "herodevs",
+        "repositoryName": "cli",
+        "htmlUrl": "https://github.com/herodevs/cli/blob/16e91175e19cd7127905f34d7443818588f85595/.cursorrules",
+        "size": 4.27,
+        "timestamp": "2025-06-16T08:18:11.538Z"
+      }
+    ],
+    [
+      "awell-health/navi/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/awell-health/navi/26956756e15fa3a2c89efb663ca2dad56854f14e/.cursorrules",
+        "repositoryId": 1002132843,
+        "path": "awell-health/navi/.cursorrules",
+        "ownerName": "awell-health",
+        "repositoryName": "navi",
+        "htmlUrl": "https://github.com/awell-health/navi/blob/26956756e15fa3a2c89efb663ca2dad56854f14e/.cursorrules",
+        "size": 5.04,
+        "timestamp": "2025-06-16T08:18:12.134Z"
+      }
+    ],
+    [
+      "MelbourneDeveloper/osprey/compiler/examples/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/MelbourneDeveloper/osprey/92c05ab8f860f793e389b722b006a201f2df4b3b/compiler/examples/.cursorrules",
+        "repositoryId": 1000493053,
+        "path": "MelbourneDeveloper/osprey/compiler/examples/.cursorrules",
+        "ownerName": "MelbourneDeveloper",
+        "repositoryName": "osprey",
+        "htmlUrl": "https://github.com/MelbourneDeveloper/osprey/blob/92c05ab8f860f793e389b722b006a201f2df4b3b/compiler/examples/.cursorrules",
+        "size": 3.37,
+        "timestamp": "2025-06-16T08:18:12.582Z"
+      }
+    ],
+    [
+      "Victordtesla24/cursor-vscode-anti-fake-coding-system/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Victordtesla24/cursor-vscode-anti-fake-coding-system/c608ecc1dac825f2eb77dc458a629dd780c6c5ac/.cursorrules",
+        "repositoryId": 1001003352,
+        "path": "Victordtesla24/cursor-vscode-anti-fake-coding-system/.cursorrules",
+        "ownerName": "Victordtesla24",
+        "repositoryName": "cursor-vscode-anti-fake-coding-system",
+        "htmlUrl": "https://github.com/Victordtesla24/cursor-vscode-anti-fake-coding-system/blob/c608ecc1dac825f2eb77dc458a629dd780c6c5ac/.cursorrules",
+        "size": 1.97,
+        "timestamp": "2025-06-16T08:18:13.886Z"
+      }
+    ],
+    [
+      "general-theory/swami/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/general-theory/swami/7881867f2ff6b76cdc63f4c6b1e8a3c6ef10c9bb/.cursorrules",
+        "repositoryId": 1002004735,
+        "path": "general-theory/swami/.cursorrules",
+        "ownerName": "general-theory",
+        "repositoryName": "swami",
+        "htmlUrl": "https://github.com/general-theory/swami/blob/7881867f2ff6b76cdc63f4c6b1e8a3c6ef10c9bb/.cursorrules",
+        "size": 1.12,
+        "timestamp": "2025-06-16T08:18:14.713Z"
+      }
+    ],
+    [
+      "capta1nfire/Codex/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/capta1nfire/Codex/9fef718c3351d67c38adb8490c21e4d59dfb73a4/.cursorrules",
+        "repositoryId": 957219563,
+        "path": "capta1nfire/Codex/.cursorrules",
+        "ownerName": "capta1nfire",
+        "repositoryName": "Codex",
+        "htmlUrl": "https://github.com/capta1nfire/Codex/blob/9fef718c3351d67c38adb8490c21e4d59dfb73a4/.cursorrules",
+        "size": 3.35,
+        "timestamp": "2025-06-16T08:18:14.992Z"
+      }
+    ],
+    [
+      "phadtrapong/AlgoQuiz/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/phadtrapong/AlgoQuiz/12b4b8ca4a8d5a73b6762b83390f2c2aef210b88/.cursorrules",
+        "repositoryId": 958290173,
+        "path": "phadtrapong/AlgoQuiz/.cursorrules",
+        "ownerName": "phadtrapong",
+        "repositoryName": "AlgoQuiz",
+        "htmlUrl": "https://github.com/phadtrapong/AlgoQuiz/blob/12b4b8ca4a8d5a73b6762b83390f2c2aef210b88/.cursorrules",
+        "size": 2.41,
+        "timestamp": "2025-06-16T08:18:15.304Z"
+      }
+    ],
+    [
+      "TryYourBest-25/cake_pos/.cursor/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/TryYourBest-25/cake_pos/93e81714a4af177548e9a78497db1ea6d144df86/.cursor/.cursorrules",
+        "repositoryId": 982583201,
+        "path": "TryYourBest-25/cake_pos/.cursor/.cursorrules",
+        "ownerName": "TryYourBest-25",
+        "repositoryName": "cake_pos",
+        "htmlUrl": "https://github.com/TryYourBest-25/cake_pos/blob/93e81714a4af177548e9a78497db1ea6d144df86/.cursor/.cursorrules",
+        "size": 5.12,
+        "timestamp": "2025-06-16T08:18:15.692Z"
+      }
+    ],
+    [
+      "Alexxandro2001/ChatGPT_GitHub/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Alexxandro2001/ChatGPT_GitHub/66df88cf63d3f6a178b592e4ab3cb1ba6b9ff30d/.cursorrules",
+        "repositoryId": 1001701378,
+        "path": "Alexxandro2001/ChatGPT_GitHub/.cursorrules",
+        "ownerName": "Alexxandro2001",
+        "repositoryName": "ChatGPT_GitHub",
+        "htmlUrl": "https://github.com/Alexxandro2001/ChatGPT_GitHub/blob/66df88cf63d3f6a178b592e4ab3cb1ba6b9ff30d/.cursorrules",
+        "size": 2.13,
+        "timestamp": "2025-06-16T08:18:16.435Z"
+      }
+    ],
+    [
+      "douglasselph/dug-projects/leaf/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/douglasselph/dug-projects/ee4384f70407f0af8c462477a818eb02e4220155/leaf/.cursorrules",
+        "repositoryId": 25180143,
+        "path": "douglasselph/dug-projects/leaf/.cursorrules",
+        "ownerName": "douglasselph",
+        "repositoryName": "dug-projects",
+        "htmlUrl": "https://github.com/douglasselph/dug-projects/blob/ee4384f70407f0af8c462477a818eb02e4220155/leaf/.cursorrules",
+        "size": 14.22,
+        "timestamp": "2025-06-16T08:18:16.612Z"
+      }
+    ],
+    [
+      "IshaanXCoder/Solana-basic-projects/reflex-game/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/IshaanXCoder/Solana-basic-projects/598ce68a3f6dc99d02e4e52e1cc836913a373f1f/reflex-game/.cursorrules",
+        "repositoryId": 1000390860,
+        "path": "IshaanXCoder/Solana-basic-projects/reflex-game/.cursorrules",
+        "ownerName": "IshaanXCoder",
+        "repositoryName": "Solana-basic-projects",
+        "htmlUrl": "https://github.com/IshaanXCoder/Solana-basic-projects/blob/598ce68a3f6dc99d02e4e52e1cc836913a373f1f/reflex-game/.cursorrules",
+        "size": 2.01,
+        "timestamp": "2025-06-16T08:18:16.756Z"
       }
     ]
   ]
