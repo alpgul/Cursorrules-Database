@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 1685,
+  "size": 1697,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -23590,6 +23590,174 @@
         "htmlUrl": "https://github.com/IshaanXCoder/Solana-basic-projects/blob/598ce68a3f6dc99d02e4e52e1cc836913a373f1f/reflex-game/.cursorrules",
         "size": 2.01,
         "timestamp": "2025-06-16T08:18:16.756Z"
+      }
+    ],
+    [
+      "derekross/yakbak/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/derekross/yakbak/76a7d95c661a54a793611b8f4ff799969544a71c/.cursorrules",
+        "repositoryId": 982851861,
+        "path": "derekross/yakbak/.cursorrules",
+        "ownerName": "derekross",
+        "repositoryName": "yakbak",
+        "htmlUrl": "https://github.com/derekross/yakbak/blob/76a7d95c661a54a793611b8f4ff799969544a71c/.cursorrules",
+        "size": 9.82,
+        "timestamp": "2025-06-19T08:17:12.507Z"
+      }
+    ],
+    [
+      "Hyperstaker/hyperstaker-ui/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Hyperstaker/hyperstaker-ui/48c4dee5e298baffe7f871565731582826e46616/.cursorrules",
+        "repositoryId": 757964456,
+        "path": "Hyperstaker/hyperstaker-ui/.cursorrules",
+        "ownerName": "Hyperstaker",
+        "repositoryName": "hyperstaker-ui",
+        "htmlUrl": "https://github.com/Hyperstaker/hyperstaker-ui/blob/48c4dee5e298baffe7f871565731582826e46616/.cursorrules",
+        "size": 6.22,
+        "timestamp": "2025-06-19T08:17:12.878Z"
+      }
+    ],
+    [
+      "BobBobilion/Wordwise-ai/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/BobBobilion/Wordwise-ai/25e0a69b34a31e688f83e2ece8e22bbe94297057/.cursorrules",
+        "repositoryId": 1003979358,
+        "path": "BobBobilion/Wordwise-ai/.cursorrules",
+        "ownerName": "BobBobilion",
+        "repositoryName": "Wordwise-ai",
+        "htmlUrl": "https://github.com/BobBobilion/Wordwise-ai/blob/25e0a69b34a31e688f83e2ece8e22bbe94297057/.cursorrules",
+        "size": 5.71,
+        "timestamp": "2025-06-19T08:17:14.366Z"
+      }
+    ],
+    [
+      "chaddorsey/CODAP-mcp/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/chaddorsey/CODAP-mcp/1592fa4b9607c8bde6d7f6f38a7ae01e8239e660/.cursorrules",
+        "repositoryId": 1001810259,
+        "path": "chaddorsey/CODAP-mcp/.cursorrules",
+        "ownerName": "chaddorsey",
+        "repositoryName": "CODAP-mcp",
+        "htmlUrl": "https://github.com/chaddorsey/CODAP-mcp/blob/1592fa4b9607c8bde6d7f6f38a7ae01e8239e660/.cursorrules",
+        "size": 31.64,
+        "timestamp": "2025-06-19T08:17:15.067Z"
+      }
+    ],
+    [
+      "thevertexlab/artism/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/thevertexlab/artism/206705ccd3cd19017b39e9fe88653dddd6460ee4/.cursorrules",
+        "repositoryId": 1002084694,
+        "path": "thevertexlab/artism/.cursorrules",
+        "ownerName": "thevertexlab",
+        "repositoryName": "artism",
+        "htmlUrl": "https://github.com/thevertexlab/artism/blob/206705ccd3cd19017b39e9fe88653dddd6460ee4/.cursorrules",
+        "size": 3.79,
+        "timestamp": "2025-06-19T08:17:17.037Z"
+      }
+    ],
+    [
+      "ziyerr/cleanup-pictures-clone/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ziyerr/cleanup-pictures-clone/45f913933fd17c48872e9299b9ad51b359bb94c7/.cursorrules",
+        "repositoryId": 1001236572,
+        "path": "ziyerr/cleanup-pictures-clone/.cursorrules",
+        "ownerName": "ziyerr",
+        "repositoryName": "cleanup-pictures-clone",
+        "htmlUrl": "https://github.com/ziyerr/cleanup-pictures-clone/blob/45f913933fd17c48872e9299b9ad51b359bb94c7/.cursorrules",
+        "size": 5.04,
+        "timestamp": "2025-06-19T08:17:18.043Z"
+      }
+    ],
+    [
+      "maylortaylor/suite-e-manager/suite-e-studios/.cursor/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/maylortaylor/suite-e-manager/f10eac943238f0304bfa6658060485655fefcd9d/suite-e-studios/.cursor/.cursorrules",
+        "repositoryId": 1004655046,
+        "path": "maylortaylor/suite-e-manager/suite-e-studios/.cursor/.cursorrules",
+        "ownerName": "maylortaylor",
+        "repositoryName": "suite-e-manager",
+        "htmlUrl": "https://github.com/maylortaylor/suite-e-manager/blob/f10eac943238f0304bfa6658060485655fefcd9d/suite-e-studios/.cursor/.cursorrules",
+        "size": 5.39,
+        "timestamp": "2025-06-19T08:17:18.474Z"
+      }
+    ],
+    [
+      "marcodavidd020/LUXE-Ecommerce/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/marcodavidd020/LUXE-Ecommerce/de7ba381da0aa20ffeae788374b0b62d69b9ec62/.cursorrules",
+        "repositoryId": 1001303798,
+        "path": "marcodavidd020/LUXE-Ecommerce/.cursorrules",
+        "ownerName": "marcodavidd020",
+        "repositoryName": "LUXE-Ecommerce",
+        "htmlUrl": "https://github.com/marcodavidd020/LUXE-Ecommerce/blob/de7ba381da0aa20ffeae788374b0b62d69b9ec62/.cursorrules",
+        "size": 2.78,
+        "timestamp": "2025-06-19T08:17:19.030Z"
+      }
+    ],
+    [
+      "ibrhmahmd/Inference-Engine/memory-bank/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ibrhmahmd/Inference-Engine/27b9dcc977c964589ef5a434513c8a177b96998e/memory-bank/.cursorrules",
+        "repositoryId": 948647988,
+        "path": "ibrhmahmd/Inference-Engine/memory-bank/.cursorrules",
+        "ownerName": "ibrhmahmd",
+        "repositoryName": "Inference-Engine",
+        "htmlUrl": "https://github.com/ibrhmahmd/Inference-Engine/blob/27b9dcc977c964589ef5a434513c8a177b96998e/memory-bank/.cursorrules",
+        "size": 3.39,
+        "timestamp": "2025-06-19T08:17:20.738Z"
+      }
+    ],
+    [
+      "SpencerCurtis/reordenar/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/SpencerCurtis/reordenar/4e0db4eeb044ed48f6a3173af25e963cb05641ec/.cursorrules",
+        "repositoryId": 1004029347,
+        "path": "SpencerCurtis/reordenar/.cursorrules",
+        "ownerName": "SpencerCurtis",
+        "repositoryName": "reordenar",
+        "htmlUrl": "https://github.com/SpencerCurtis/reordenar/blob/4e0db4eeb044ed48f6a3173af25e963cb05641ec/.cursorrules",
+        "size": 6.93,
+        "timestamp": "2025-06-19T08:17:23.200Z"
+      }
+    ],
+    [
+      "benniejoseph/tradetaper/tradetaper-admin/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/benniejoseph/tradetaper/cc2e71a58e811937eec7b3e2bba6af14fb4ba9b3/tradetaper-admin/.cursorrules",
+        "repositoryId": 987227735,
+        "path": "benniejoseph/tradetaper/tradetaper-admin/.cursorrules",
+        "ownerName": "benniejoseph",
+        "repositoryName": "tradetaper",
+        "htmlUrl": "https://github.com/benniejoseph/tradetaper/blob/cc2e71a58e811937eec7b3e2bba6af14fb4ba9b3/tradetaper-admin/.cursorrules",
+        "size": 19.79,
+        "timestamp": "2025-06-19T08:17:24.593Z"
+      }
+    ],
+    [
+      "andyshinn/node-dynamixel/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/andyshinn/node-dynamixel/aeefae64cb62edc5feadc8407b7699ad6cc63e0b/.cursorrules",
+        "repositoryId": 1001820461,
+        "path": "andyshinn/node-dynamixel/.cursorrules",
+        "ownerName": "andyshinn",
+        "repositoryName": "node-dynamixel",
+        "htmlUrl": "https://github.com/andyshinn/node-dynamixel/blob/aeefae64cb62edc5feadc8407b7699ad6cc63e0b/.cursorrules",
+        "size": 9.3,
+        "timestamp": "2025-06-19T08:17:25.733Z"
       }
     ]
   ]
