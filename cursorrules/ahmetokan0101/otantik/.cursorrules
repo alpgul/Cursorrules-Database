@@ -1,0 +1,187 @@
+# Otantik Kıyafet Perakende Sitesi - Proje Kuralları
+
+## Proje Genel Bilgileri
+- Proje Adı: Otantik Fashion Store
+- Teknoloji Stack: React.js, TypeScript, HTML5, CSS3, SCSS
+- Stil Framework: Tailwind CSS + Custom SCSS
+- Animasyon Kütüphaneleri: Framer Motion, GSAP (GreenSock), Lottie
+- İkon Kütüphanesi: React Icons, Lucide React, Phosphor Icons
+- State Management: React Context API / Zustand
+- Build Tool: Vite
+- 3D Efektler: Three.js (opsiyonel)
+
+## Site Gereksinimleri
+
+### Tasarım Gereksinimleri
+- **Renk Paleti:**
+  - Ana Renk: #2D3436 (Koyu Gri)
+  - Vurgu Renk: #FF6B6B (Canlı Mercan)
+  - İkincil Renk: #4ECDC4 (Turkuaz)
+  - Açık Renk: #F8F9FA (Açık Gri)
+  - Beyaz: #FFFFFF
+  - Siyah: #1A1A1A
+  - Gradient: Linear-gradient(135deg, #667eea 0%, #764ba2 100%)
+
+- **Font:**
+  - Başlıklar: 'Poppins' (Bold, SemiBold)
+  - Metin: 'Inter' (Regular, Medium)
+  - Logo: 'Playfair Display' (Bold)
+  - Özel: 'Dancing Script' (dekoratif elementler için)
+
+- **Layout:**
+  - Modern, minimalist tasarım
+  - Grid ve Flexbox kullanımı
+  - Responsive tasarım (Mobile-first approach)
+  - Smooth scroll ve parallax efektleri
+  - Glassmorphism efektleri
+  - Neumorphism elementler
+
+### Gelişmiş Animasyon Gereksinimleri
+
+#### Sayfa Geçişleri
+- **Page Transitions:** Framer Motion ile morphing transitions
+- **Route Animations:** Slide, fade, scale kombinasyonları
+- **Loading States:** Skeleton loading with shimmer effect
+- **Progress Indicators:** Circular progress bars
+
+#### Scroll Animasyonları
+- **Parallax Scrolling:** Background, text, ve image parallax
+- **Sticky Elements:** Header, navigation sticky behavior
+- **Scroll-triggered Animations:** GSAP ScrollTrigger
+- **Infinite Scroll:** Smooth infinite loading
+- **Scroll Progress Bar:** Top progress indicator
+
+#### Hover ve Interactive Efektleri
+- **Magnetic Buttons:** Mouse takip eden butonlar
+- **Tilt Effects:** 3D tilt on hover
+- **Glow Effects:** Neon glow animations
+- **Ripple Effects:** Material design ripple
+- **Text Animations:** Letter by letter reveal
+- **Image Zoom:** Smooth zoom on hover
+- **Card Flip:** 3D card flip animations
+
+#### Micro-interactions
+- **Button States:** Loading, success, error states
+- **Form Animations:** Input focus, validation animations
+- **Notification Toasts:** Slide-in notifications
+- **Tooltip Animations:** Smooth tooltip reveals
+- **Menu Animations:** Hamburger menu morphing
+- **Search Bar:** Expand/collapse with icon morphing
+
+#### Advanced Animations
+- **Lottie Animations:** Custom Lottie files for loading
+- **Particle Effects:** Background particle systems
+- **Wave Animations:** SVG wave effects
+- **Morphing Shapes:** Shape-shifting elements
+- **Text Typing:** Typewriter effect
+- **Count-up Animations:** Number counting effects
+
+### Fonksiyonel Gereksinimler
+
+#### Ana Sayfa
+- **Hero Section:** 
+  - Full-screen video background
+  - Animated text reveal
+  - Floating elements
+  - CTA button with magnetic effect
+- **Categories Showcase:** 
+  - 3D card grid
+  - Hover tilt effects
+  - Category icons with Lottie
+- **Featured Products:** 
+  - Carousel with smooth transitions
+  - Product cards with flip animation
+  - Quick view modal
+- **Campaigns Section:** 
+  - Animated countdown timer
+  - Progress bars
+  - Floating discount badges
+- **Customer Reviews:** 
+  - Testimonial carousel
+  - Star rating animations
+  - Avatar hover effects
+- **Newsletter:** 
+  - Animated form
+  - Success/error states
+  - Confetti animation on success
+
+#### Ürün Sayfaları
+- **Product Grid:** 
+  - Masonry layout
+  - Lazy loading with blur effect
+  - Quick add to cart animation
+- **Product Detail:** 
+  - Image gallery with zoom
+  - 360° product view
+  - Size selector with animations
+  - Color swatch hover effects
+- **Shopping Cart:** 
+  - Slide-in cart panel
+  - Item removal animations
+  - Quantity change effects
+  - Cart total calculation animation
+
+#### Kullanıcı Deneyimi
+- **Navigation:** 
+  - Sticky header with blur effect
+  - Mega menu with animations
+  - Mobile menu with morphing
+- **Search:** 
+  - Auto-complete with animations
+  - Search suggestions
+  - Voice search capability
+- **Filters:** 
+  - Animated filter sidebar
+  - Range slider with custom styling
+  - Filter chips with remove animation
+- **Wishlist:** 
+  - Heart animation on toggle
+  - Wishlist counter
+  - Quick add/remove effects
+
+### Teknik Gereksinimler
+- **Performance:**
+  - Lazy loading with Intersection Observer
+  - Image optimization with WebP format
+  - Code splitting with React.lazy
+  - Bundle optimization
+  - Critical CSS inlining
+
+- **SEO:**
+  - Dynamic meta tags
+  - Structured data (JSON-LD)
+  - Open Graph optimization
+  - Twitter Cards
+  - Sitemap generation
+
+- **Accessibility:**
+  - ARIA labels and roles
+  - Keyboard navigation support
+  - Screen reader compatibility
+  - High contrast mode
+  - Reduced motion preferences
+
+## Kod Standartları
+
+### React/TypeScript
+- Functional components with hooks
+- TypeScript strict mode
+- Custom hooks for animations
+- Component composition
+- Error boundaries
+- Performance optimization with React.memo
+
+### Styling
+- Tailwind CSS with custom config
+- CSS-in-JS for complex animations
+- CSS custom properties
+- Mobile-first responsive design
+- Dark mode with smooth transitions
+
+### Animation Libraries Integration
+- **Framer Motion:** Page transitions, layout animations
+- **GSAP:** Scroll animations, complex sequences
+- **Lottie:** Loading animations, micro-interactions
+- **Three.js:** 3D effects (opsiyonel)
+
+## Component Yapısı
