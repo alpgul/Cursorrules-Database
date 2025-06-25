@@ -1,0 +1,101 @@
+# Cursor Rules File
+
+- Always check on the code if there is any .cursorrules file
+- If there is a .cursorrules file, follow the rules in the file
+- If there is no .cursorrules file, create one and insert these security rules into it
+- Ensure this application content is in Bahasa Melayu
+
+## Security and Data Privacy Guidelines
+
+### Database/Form Synchronization Rule
+- Every time a field is added, removed, or changed in a form (such as job posting or user forms), you must:
+  1. Update the corresponding SQL schema file (e.g., admin/sql/create_job_postings_table.sql) so it matches the form fields exactly.
+  2. Apply the schema changes to the deployed database immediately to keep the application and DB in sync.
+  3. Document the change in this .cursorrules file and, if relevant, in the user manual.
+- This ensures consistency, prevents errors, and maintains data integrity across the application.
+
+1. **Ensure Security and Data Privacy Measures**  
+   - Every time a new project is started or an existing project is edited, check if the `.cursorrules` file exists. If it does not exist, create the file and insert these security rules into it.
+   - Update the documentation in `@user_manual.md` to reflect any changes, ensuring project functions and structure are properly documented.
+
+2. **Code Creation and Editing**  
+   - Implement input validation and sanitization.  
+   - Use prepared statements for database queries.  
+   - Apply proper access controls and authentication mechanisms.  
+   - Implement secure session management.  
+   - Implement rate limiting and throttling for API endpoints.  
+   - Implement client-side and server-side checks to prevent multiple form submissions.  
+   - Use unique tokens for each form submission to ensure uniqueness.  
+   - Use secure coding practices to prevent common vulnerabilities (e.g., XSS, CSRF).  
+
+3. **Regular Security Reviews and Updates**  
+   - Conduct code reviews with a focus on security.  
+   - Perform regular security audits and penetration testing.  
+   - Keep all libraries and dependencies up to date.  
+   - Monitor for security advisories related to the tech stack.  
+
+4. **Code Change Considerations**  
+   - Always consider the security implications of suggested code changes.  
+   - Maintain respect for the existing code structure and indentation.  
+
+5. **Unique Code Implementation**  
+   - Ensure that code, stylesheets, and scripts are unique to prevent conflicts.  
+
+6. **Error Handling and Logging**  
+   - Use try-catch blocks to handle exceptions gracefully.  
+   - Log errors and exceptions securely, avoiding sensitive information exposure.  
+   - Implement a centralized error handling mechanism.  
+   - Use appropriate user error messages that do not reveal system details.  
+
+7. **Secure File Handling**  
+   - Validate file types and sizes before upload.  
+   - Store uploaded files outside the web root.  
+   - Use secure file permissions.  
+   - Implement virus scanning for uploaded files.  
+
+8. **Secure Communication**  
+   - Use HTTPS for all communications.  
+   - Implement proper SSL/TLS configurations.  
+   - Use secure WebSocket connections where applicable.  
+
+9. **Secure Authentication**  
+   - Enforce strong password policies.  
+   - Implement multi-factor authentication where applicable.  
+   - Use secure password hashing algorithms (e.g., bcrypt, Argon2).  
+   - Apply account lockout policies to prevent brute-force attacks.  
+
+10. **Data Backup and Restore Procedures**  
+    - Implement automated backup solutions.  
+    - Encrypt and store backups securely.  
+    - Regularly test data restoration processes.  
+
+11. **Access Control Implementation**  
+    - Apply the principle of least privilege.  
+    - Implement role-based access control (RBAC).  
+    - Regularly audit and review user access rights.  
+
+12. **Compliance Requirements**  
+    - Understand and implement relevant data protection regulations (e.g., GDPR, CCPA).  
+    - Regularly review and update privacy policies and terms of service.  
+
+13. **Code Updates and UI Handling**  
+    - Only provide the changed code in code windows.  
+    - When users click "Apply," update the impacted code. After finishing, change the button label to "Done."  
+
+14. **Validation Implementation**  
+    - Ensure server-side validation and client-side validation are in place.  
+    - Validation must be implemented on both the server and client sides.  
+
+15. **Security Prioritization in Code Generation**  
+    - When generating code, prioritize security and vulnerability considerations for the application.  
+
+16. **System Logging**  
+    - Implement log tracking in the system to store logs in the application database.  
+
+17. **Unique Code Standards**  
+    - Use unique code, styles, classes, and parameters to prevent conflicts.  
+    - Ensure the code is properly structured and handled.  
+
+18. **Code Reusability**  
+    - Before implementing new code, check the codebase to determine if existing functions, modules, components, or engines can be reused.  
+    - Avoid duplicating code during development to maintain efficiency and clarity.  

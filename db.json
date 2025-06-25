@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 1720,
+  "size": 1738,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -24080,6 +24080,258 @@
         "htmlUrl": "https://github.com/Xpertly-in/account-frontend/blob/ba51a14c41b535a11d806176d310b90d3cfc393a/.cursorrules",
         "size": 1.76,
         "timestamp": "2025-06-22T08:15:02.180Z"
+      }
+    ],
+    [
+      "ean-studio/nestjs-enterprise-template/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ean-studio/nestjs-enterprise-template/768b0ac059d82a4e5cfa93f96b79e6c19dc86a6a/.cursorrules",
+        "repositoryId": 957335283,
+        "path": "ean-studio/nestjs-enterprise-template/.cursorrules",
+        "ownerName": "ean-studio",
+        "repositoryName": "nestjs-enterprise-template",
+        "htmlUrl": "https://github.com/ean-studio/nestjs-enterprise-template/blob/768b0ac059d82a4e5cfa93f96b79e6c19dc86a6a/.cursorrules",
+        "size": 2.53,
+        "timestamp": "2025-06-25T08:17:49.005Z"
+      }
+    ],
+    [
+      "robmenning/bor-workflow/ref/.cursorrulesAPP",
+      {
+        "name": ".cursorrulesAPP",
+        "downloadUrl": "https://raw.githubusercontent.com/robmenning/bor-workflow/2733f8e7b2f91f5374c712ed711ce99540af94fd/ref/.cursorrulesAPP",
+        "repositoryId": 972468055,
+        "path": "robmenning/bor-workflow/ref/.cursorrulesAPP",
+        "ownerName": "robmenning",
+        "repositoryName": "bor-workflow",
+        "htmlUrl": "https://github.com/robmenning/bor-workflow/blob/2733f8e7b2f91f5374c712ed711ce99540af94fd/ref/.cursorrulesAPP",
+        "size": 38.25,
+        "timestamp": "2025-06-25T08:17:49.320Z"
+      }
+    ],
+    [
+      "Hukasx0/cursor-os/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Hukasx0/cursor-os/c4b29189731e04d89cbfac1d1d73bd4d393ad54b/.cursorrules",
+        "repositoryId": 1007923799,
+        "path": "Hukasx0/cursor-os/.cursorrules",
+        "ownerName": "Hukasx0",
+        "repositoryName": "cursor-os",
+        "htmlUrl": "https://github.com/Hukasx0/cursor-os/blob/c4b29189731e04d89cbfac1d1d73bd4d393ad54b/.cursorrules",
+        "size": 4.53,
+        "timestamp": "2025-06-25T08:17:49.648Z"
+      }
+    ],
+    [
+      "lbj9527/TG-Manager/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/lbj9527/TG-Manager/bf11a3c744a1165a564f0e8594485c80eeec1254/.cursorrules",
+        "repositoryId": 954192822,
+        "path": "lbj9527/TG-Manager/.cursorrules",
+        "ownerName": "lbj9527",
+        "repositoryName": "TG-Manager",
+        "htmlUrl": "https://github.com/lbj9527/TG-Manager/blob/bf11a3c744a1165a564f0e8594485c80eeec1254/.cursorrules",
+        "size": 12.79,
+        "timestamp": "2025-06-25T08:17:51.401Z"
+      }
+    ],
+    [
+      "mikig28/Synapse/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/mikig28/Synapse/e964e5a79a320bf4b47ce2e7fe1fce99691fdb60/.cursorrules",
+        "repositoryId": 982421809,
+        "path": "mikig28/Synapse/.cursorrules",
+        "ownerName": "mikig28",
+        "repositoryName": "Synapse",
+        "htmlUrl": "https://github.com/mikig28/Synapse/blob/e964e5a79a320bf4b47ce2e7fe1fce99691fdb60/.cursorrules",
+        "size": 7.01,
+        "timestamp": "2025-06-25T08:17:52.395Z"
+      }
+    ],
+    [
+      "salmonist/gen-ai-catalogue-project/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/salmonist/gen-ai-catalogue-project/0f5b2d8dd26d91643733fc5de8c994e756551e92/.cursorrules",
+        "repositoryId": 1006520534,
+        "path": "salmonist/gen-ai-catalogue-project/.cursorrules",
+        "ownerName": "salmonist",
+        "repositoryName": "gen-ai-catalogue-project",
+        "htmlUrl": "https://github.com/salmonist/gen-ai-catalogue-project/blob/0f5b2d8dd26d91643733fc5de8c994e756551e92/.cursorrules",
+        "size": 8.72,
+        "timestamp": "2025-06-25T08:17:53.478Z"
+      }
+    ],
+    [
+      "torekasi/mphs-2/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/torekasi/mphs-2/2665217bb050b78f6e6adb7726a147da184196dc/.cursorrules",
+        "repositoryId": 968565241,
+        "path": "torekasi/mphs-2/.cursorrules",
+        "ownerName": "torekasi",
+        "repositoryName": "mphs-2",
+        "htmlUrl": "https://github.com/torekasi/mphs-2/blob/2665217bb050b78f6e6adb7726a147da184196dc/.cursorrules",
+        "size": 5,
+        "timestamp": "2025-06-25T08:17:53.908Z"
+      }
+    ],
+    [
+      "Manoz2201/autoform/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Manoz2201/autoform/8158a48a33988b29e60e0b79b6e17c1965faf954/.cursorrules",
+        "repositoryId": 1007037678,
+        "path": "Manoz2201/autoform/.cursorrules",
+        "ownerName": "Manoz2201",
+        "repositoryName": "autoform",
+        "htmlUrl": "https://github.com/Manoz2201/autoform/blob/8158a48a33988b29e60e0b79b6e17c1965faf954/.cursorrules",
+        "size": 6.52,
+        "timestamp": "2025-06-25T08:17:54.359Z"
+      }
+    ],
+    [
+      "ladyblueumd/cursor-rules-mcp-server/awesome-cursorrules-main/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ladyblueumd/cursor-rules-mcp-server/42920904101114898740bcf63cff1429563c8faa/awesome-cursorrules-main/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1005069272,
+        "path": "ladyblueumd/cursor-rules-mcp-server/awesome-cursorrules-main/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "ladyblueumd",
+        "repositoryName": "cursor-rules-mcp-server",
+        "htmlUrl": "https://github.com/ladyblueumd/cursor-rules-mcp-server/blob/42920904101114898740bcf63cff1429563c8faa/awesome-cursorrules-main/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "size": 2.32,
+        "timestamp": "2025-06-25T08:17:55.562Z"
+      }
+    ],
+    [
+      "ollamaNet/OllamaNet-Architecture/Documentation/memory-banks/InferenceService-memory-bank/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ollamaNet/OllamaNet-Architecture/21fce7318bff1471b7b11fc7433249c5220ad37e/Documentation/memory-banks/InferenceService-memory-bank/.cursorrules",
+        "repositoryId": 922283105,
+        "path": "ollamaNet/OllamaNet-Architecture/Documentation/memory-banks/InferenceService-memory-bank/.cursorrules",
+        "ownerName": "ollamaNet",
+        "repositoryName": "OllamaNet-Architecture",
+        "htmlUrl": "https://github.com/ollamaNet/OllamaNet-Architecture/blob/21fce7318bff1471b7b11fc7433249c5220ad37e/Documentation/memory-banks/InferenceService-memory-bank/.cursorrules",
+        "size": 3.39,
+        "timestamp": "2025-06-25T08:17:56.618Z"
+      }
+    ],
+    [
+      "twardoch/brosh/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/twardoch/brosh/03b5b08b4e8df5a03a6533e5600be3c4be679277/.cursorrules",
+        "repositoryId": 1000991563,
+        "path": "twardoch/brosh/.cursorrules",
+        "ownerName": "twardoch",
+        "repositoryName": "brosh",
+        "htmlUrl": "https://github.com/twardoch/brosh/blob/03b5b08b4e8df5a03a6533e5600be3c4be679277/.cursorrules",
+        "size": 10.51,
+        "timestamp": "2025-06-25T08:17:57.322Z"
+      }
+    ],
+    [
+      "laportagm/NeuroVision_App/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/laportagm/NeuroVision_App/6e0244e8e77086ff3f5f19c1e9d2a46824233c49/.cursorrules",
+        "repositoryId": 1007341647,
+        "path": "laportagm/NeuroVision_App/.cursorrules",
+        "ownerName": "laportagm",
+        "repositoryName": "NeuroVision_App",
+        "htmlUrl": "https://github.com/laportagm/NeuroVision_App/blob/6e0244e8e77086ff3f5f19c1e9d2a46824233c49/.cursorrules",
+        "size": 8.04,
+        "timestamp": "2025-06-25T08:17:58.430Z"
+      }
+    ],
+    [
+      "dougneale/trippy-visuals/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/dougneale/trippy-visuals/06a82e0a52567eab5fa7a09c6804ad622fb2c8a1/.cursorrules",
+        "repositoryId": 1006311198,
+        "path": "dougneale/trippy-visuals/.cursorrules",
+        "ownerName": "dougneale",
+        "repositoryName": "trippy-visuals",
+        "htmlUrl": "https://github.com/dougneale/trippy-visuals/blob/06a82e0a52567eab5fa7a09c6804ad622fb2c8a1/.cursorrules",
+        "size": 5.63,
+        "timestamp": "2025-06-25T08:17:58.560Z"
+      }
+    ],
+    [
+      "docxology/opentir/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/docxology/opentir/bf2883d7b847ef166274194812d849a421c67986/.cursorrules",
+        "repositoryId": 1007840099,
+        "path": "docxology/opentir/.cursorrules",
+        "ownerName": "docxology",
+        "repositoryName": "opentir",
+        "htmlUrl": "https://github.com/docxology/opentir/blob/bf2883d7b847ef166274194812d849a421c67986/.cursorrules",
+        "size": 7.33,
+        "timestamp": "2025-06-25T08:17:59.471Z"
+      }
+    ],
+    [
+      "JiaxianGu/AIAgentLab/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/JiaxianGu/AIAgentLab/e85990d2bfd6fd0e2411477db8602fe1b0076556/.cursorrules",
+        "repositoryId": 1004754656,
+        "path": "JiaxianGu/AIAgentLab/.cursorrules",
+        "ownerName": "JiaxianGu",
+        "repositoryName": "AIAgentLab",
+        "htmlUrl": "https://github.com/JiaxianGu/AIAgentLab/blob/e85990d2bfd6fd0e2411477db8602fe1b0076556/.cursorrules",
+        "size": 2.54,
+        "timestamp": "2025-06-25T08:17:59.781Z"
+      }
+    ],
+    [
+      "gordiash/scraper/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/gordiash/scraper/7693de0ac8cdfd9b6615c249bece13454a08dbbe/.cursorrules",
+        "repositoryId": 1006621511,
+        "path": "gordiash/scraper/.cursorrules",
+        "ownerName": "gordiash",
+        "repositoryName": "scraper",
+        "htmlUrl": "https://github.com/gordiash/scraper/blob/7693de0ac8cdfd9b6615c249bece13454a08dbbe/.cursorrules",
+        "size": 4.06,
+        "timestamp": "2025-06-25T08:18:00.085Z"
+      }
+    ],
+    [
+      "LessUp/awesome-cursorrules-zh/rules/backend/go/backend-scalability/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/LessUp/awesome-cursorrules-zh/549ca512366281c1dbbe25c470873d42baa4efc3/rules/backend/go/backend-scalability/.cursorrules",
+        "repositoryId": 991967891,
+        "path": "LessUp/awesome-cursorrules-zh/rules/backend/go/backend-scalability/.cursorrules",
+        "ownerName": "LessUp",
+        "repositoryName": "awesome-cursorrules-zh",
+        "htmlUrl": "https://github.com/LessUp/awesome-cursorrules-zh/blob/549ca512366281c1dbbe25c470873d42baa4efc3/rules/backend/go/backend-scalability/.cursorrules",
+        "size": 4.52,
+        "timestamp": "2025-06-25T08:18:00.883Z"
+      }
+    ],
+    [
+      "islandbitcoin/www/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/islandbitcoin/www/d6d8cd0d1e74be5d8d471bbeb3c14811acbc6da7/.cursorrules",
+        "repositoryId": 1003100999,
+        "path": "islandbitcoin/www/.cursorrules",
+        "ownerName": "islandbitcoin",
+        "repositoryName": "www",
+        "htmlUrl": "https://github.com/islandbitcoin/www/blob/d6d8cd0d1e74be5d8d471bbeb3c14811acbc6da7/.cursorrules",
+        "size": 31.97,
+        "timestamp": "2025-06-25T08:18:01.025Z"
       }
     ]
   ]

@@ -1,0 +1,184 @@
+# TRIPPY VISUALS PROJECT RULES
+
+# ============================
+
+## 📝 DOCUMENTATION STANDARDS
+
+### Always include comprehensive header comments in visualization files:
+
+```html
+<!--
+🌌 [VISUALIZATION NAME]
+=====================================
+
+✨ FEATURES:
+- [List all major features with descriptive details]
+- [Include technical capabilities]
+- [Note interactive elements]
+- [Describe animation systems]
+
+🎮 INTERACTIONS:
+- [Mouse controls]
+- [Keyboard shortcuts]
+- [Touch gestures if applicable]
+
+🎨 VISUAL EFFECTS:
+- [Lighting systems]
+- [Material properties]
+- [Animation types]
+- [Color schemes]
+
+🔧 TECHNOLOGY:
+- [Libraries and versions]
+- [Rendering methods]
+- [Performance considerations]
+- [Browser compatibility notes]
+
+[Brief description of the creative intent/exploration]
+-->
+```
+
+## 📁 FILE ORGANIZATION
+
+### Backup Strategy:
+
+- Create descriptive backups immediately after major features
+- Use format: `[main-feature]-[distinguisher].html`
+- Examples: `floating-sculpture-garden.html`, `mini-solar-system.html`, `rainbow-spirals.html`
+- Always backup before major changes
+
+### Backup Naming Convention:
+
+- Use clear, descriptive names focusing on the main visual concept
+- Examples: `geometric-patterns.html`, `solar-system.html`, `particle-waves.html`
+- No technology prefixes needed - the code speaks for itself
+- Documentation is always included, no need for special suffixes
+
+## 🧪 TESTING PRACTICES
+
+### Always use provided scripts for testing:
+
+- `./start-server.sh` - Start development server (no auto-browser)
+- `./test-pages.sh` - Verify pages load correctly (headless)
+- `./check-js-errors.sh` - Check for JavaScript errors and runtime issues
+- `./open-browser.sh [page]` - Manual browser opening only when needed
+- `./stop-server.sh` - Clean shutdown
+
+### Visual Feedback Workflow (MANDATORY):
+
+- **INCREMENTAL DEVELOPMENT**: Make changes step-by-step, testing each increment
+- **ALWAYS check for JavaScript errors** using `./check-js-errors.sh` after EACH code change
+- This provides immediate feedback on whether each step is working correctly
+- Allows user to see step-by-step progress rather than waiting until the end
+- Catches JavaScript errors early before they compound
+- Essential for collaborative development and debugging
+- Should be done automatically after every significant change, not just at completion
+
+### Never use direct `open` commands that auto-launch browsers
+
+### Always test WebGL compatibility before finalizing
+
+## 💻 CODING STANDARDS
+
+### WebGL Shaders:
+
+- Optimize for mobile GPU compatibility
+- Avoid dynamic loops with non-constant bounds
+- Unroll complex loops for better compatibility
+- Include error handling and shader compilation feedback
+- Use `precision mediump float;` for fragment shaders
+
+### Three.js Projects:
+
+- Always use CDN links for consistent versions
+- Include OrbitControls for camera interaction
+- Enable shadows and antialiasing by default
+- Use requestAnimationFrame for smooth animations
+- Handle window resize events properly
+
+### Performance Guidelines:
+
+- Target 60fps on mid-range devices
+- Use efficient particle systems (prefer BufferGeometry)
+- Implement LOD (Level of Detail) for complex scenes
+- Monitor draw calls and geometry complexity
+
+## 🎨 CREATIVE STANDARDS
+
+### Visual Quality:
+
+- Always include dynamic lighting
+- Use color cycling/animation for engagement
+- Implement smooth transitions and easing
+- Consider mobile viewport and touch interactions
+
+### Interactive Elements:
+
+- Provide clear visual feedback for interactions
+- Include subtle hover effects where appropriate
+- Make controls intuitive and discoverable
+- Add loading states for complex initializations
+
+## 🔄 WORKFLOW
+
+### Development Process:
+
+1. Plan visualization concept and technical approach
+2. Create base structure with full documentation header
+3. Implement core functionality
+4. Add interactive elements and polish
+5. Test across devices/browsers
+6. Create descriptive backup
+7. Prepare for next iteration
+
+### Before Major Changes:
+
+1. Backup current working version
+2. Document what you're about to change
+3. Test the change incrementally
+4. Verify functionality with test scripts
+
+## 🚀 DEPLOYMENT
+
+### File Structure:
+
+- `index.html` - **PERMANENT GALLERY** - Interactive list of all visualizations using Tailwind CSS
+- `debug.html` - Simplified testing version for current experiments
+- `sandbox.html` - Experimental playground for prototyping
+- `backups/` - All previous versions with descriptive names
+- `README.md` - Project overview and script usage
+- Server utility scripts for development workflow
+
+### ⚠️ IMPORTANT: INDEX.HTML IS NOW THE GALLERY
+
+- **index.html is permanently the project gallery** - never overwrite with a visualization
+- All visualizations should be developed in `debug.html`, `sandbox.html`, or directly as backup files
+- When a visualization is complete, create a descriptive backup and add it to the gallery
+- The gallery uses Tailwind CSS from CDN and provides an organized view of all projects
+
+### Quality Assurance:
+
+- Visual verification across browsers
+- Performance testing on mobile devices
+- Interaction testing with various input methods
+- Accessibility considerations where applicable
+
+## 📚 LEARNING & ITERATION
+
+### Documentation Purpose:
+
+- Self-documenting code for future reference
+- Educational value for learning new techniques
+- Inspiration source for new variations
+- Professional development portfolio pieces
+
+### Each visualization should explore:
+
+- New technical capabilities
+- Different aesthetic approaches
+- Novel interaction paradigms
+- Performance optimization techniques
+
+---
+
+_This file ensures consistent, high-quality development practices for creating engaging web-based visualizations._
