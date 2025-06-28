@@ -1,0 +1,122 @@
+# Modern React Development Rules
+
+You are an expert React developer specializing in modern React patterns, hooks, and performance optimization.
+
+## Core Principles
+- Use functional components with hooks over class components
+- Follow React 18+ best practices and concurrent features
+- Write accessible, semantic HTML
+- Optimize for performance and user experience
+- Use TypeScript for type safety
+
+## Component Structure
+- Use functional components exclusively
+- Keep components small and focused on a single responsibility
+- Use custom hooks to extract and reuse stateful logic
+- Prefer composition over inheritance
+- Use React.memo() for expensive components that re-render frequently
+
+## Hooks Best Practices
+- Use useState for local component state
+- Use useEffect for side effects, with proper cleanup
+- Use useCallback and useMemo to prevent unnecessary re-renders
+- Create custom hooks for reusable stateful logic
+- Always include dependencies in hook dependency arrays
+
+## State Management
+- Use useState for local component state
+- Use useContext for sharing state across components
+- Consider useReducer for complex state logic
+- Use external libraries (Redux Toolkit, Zustand) for global state only when necessary
+- Keep state as close to where it's used as possible
+
+## Performance Optimization
+- Use React.memo() to prevent unnecessary re-renders
+- Use useCallback for event handlers passed to child components
+- Use useMemo for expensive calculations
+- Lazy load components with React.lazy() and Suspense
+- Use React DevTools Profiler to identify performance bottlenecks
+
+## Event Handling
+- Use arrow functions or useCallback for event handlers
+- Prevent default behavior explicitly when needed
+- Use event delegation for lists of items
+- Handle async operations properly in event handlers
+
+## Styling
+- Use CSS Modules, Styled Components, or Tailwind CSS
+- Keep styles co-located with components
+- Use CSS-in-JS for dynamic styling
+- Follow mobile-first responsive design principles
+
+## Error Handling
+- Use Error Boundaries to catch and handle errors
+- Implement proper loading and error states
+- Use React Query or SWR for server state management
+- Handle async operations with proper error states
+
+## Testing
+- Write tests using React Testing Library
+- Test behavior, not implementation details
+- Use user-centric queries (getByRole, getByText)
+- Mock external dependencies appropriately
+
+## Code Organization
+```typescript
+import React, { useState, useEffect, useCallback, memo } from 'react';
+
+interface User {
+  id: number;
+  name: string;
+  email: string;
+}
+
+interface UserListProps {
+  users: User[];
+  onUserSelect: (user: User) => void;
+}
+
+const UserList: React.FC<UserListProps> = memo(({ users, onUserSelect }) => {
+  const [selectedId, setSelectedId] = useState<number | null>(null);
+
+  const handleUserClick = useCallback((user: User) => {
+    setSelectedId(user.id);
+    onUserSelect(user);
+  }, [onUserSelect]);
+
+  if (users.length === 0) {
+    return <div>No users found</div>;
+  }
+
+  return (
+    <ul className="user-list">
+      {users.map((user) => (
+        <li 
+          key={user.id}
+          className={selectedId === user.id ? 'selected' : ''}
+          onClick={() => handleUserClick(user)}
+        >
+          <h3>{user.name}</h3>
+          <p>{user.email}</p>
+        </li>
+      ))}
+    </ul>
+  );
+});
+
+UserList.displayName = 'UserList';
+
+export default UserList;
+```
+
+## File Structure
+- Use index files to simplify imports
+- Co-locate related files (component, styles, tests)
+- Use absolute imports with path mapping
+- Group components by feature or domain
+
+## React 18+ Specific
+- Use Suspense for data fetching and code splitting
+- Implement concurrent features when appropriate
+- Use startTransition for non-urgent updates
+- Use useDeferredValue for expensive operations 

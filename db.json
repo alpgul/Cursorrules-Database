@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 1738,
+  "size": 1752,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -24332,6 +24332,202 @@
         "htmlUrl": "https://github.com/islandbitcoin/www/blob/d6d8cd0d1e74be5d8d471bbeb3c14811acbc6da7/.cursorrules",
         "size": 31.97,
         "timestamp": "2025-06-25T08:18:01.025Z"
+      }
+    ],
+    [
+      "chess99/mp-lens/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/chess99/mp-lens/94bb7c13a3a953b10e552bd037792be9ecbf4a78/.cursorrules",
+        "repositoryId": 969558708,
+        "path": "chess99/mp-lens/.cursorrules",
+        "ownerName": "chess99",
+        "repositoryName": "mp-lens",
+        "htmlUrl": "https://github.com/chess99/mp-lens/blob/94bb7c13a3a953b10e552bd037792be9ecbf4a78/.cursorrules",
+        "size": 1.85,
+        "timestamp": "2025-06-28T08:14:45.988Z"
+      }
+    ],
+    [
+      "christopherseaman/datasci_223/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/christopherseaman/datasci_223/56073588ccbde6037694b537ed26fb91f330b8f1/.cursorrules",
+        "repositoryId": 739559058,
+        "path": "christopherseaman/datasci_223/.cursorrules",
+        "ownerName": "christopherseaman",
+        "repositoryName": "datasci_223",
+        "htmlUrl": "https://github.com/christopherseaman/datasci_223/blob/56073588ccbde6037694b537ed26fb91f330b8f1/.cursorrules",
+        "size": 6.83,
+        "timestamp": "2025-06-28T08:14:46.170Z"
+      }
+    ],
+    [
+      "Zenobia000/iSpan_python-FE_DM-cookbooks/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Zenobia000/iSpan_python-FE_DM-cookbooks/b1b316cce394c264c454a96d17aeb0de1f67b8a5/.cursorrules",
+        "repositoryId": 1001400154,
+        "path": "Zenobia000/iSpan_python-FE_DM-cookbooks/.cursorrules",
+        "ownerName": "Zenobia000",
+        "repositoryName": "iSpan_python-FE_DM-cookbooks",
+        "htmlUrl": "https://github.com/Zenobia000/iSpan_python-FE_DM-cookbooks/blob/b1b316cce394c264c454a96d17aeb0de1f67b8a5/.cursorrules",
+        "size": 24.29,
+        "timestamp": "2025-06-28T08:14:46.389Z"
+      }
+    ],
+    [
+      "twardoch/macdefaultbrowser/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/twardoch/macdefaultbrowser/12c08408159ef7f85f30110918112a9dcf753a8a/.cursorrules",
+        "repositoryId": 1009760709,
+        "path": "twardoch/macdefaultbrowser/.cursorrules",
+        "ownerName": "twardoch",
+        "repositoryName": "macdefaultbrowser",
+        "htmlUrl": "https://github.com/twardoch/macdefaultbrowser/blob/12c08408159ef7f85f30110918112a9dcf753a8a/.cursorrules",
+        "size": 8.78,
+        "timestamp": "2025-06-28T08:14:47.683Z"
+      }
+    ],
+    [
+      "LessUp/awesome-cursorrules-zh/rules/backend/php/laravel-package-guide/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/LessUp/awesome-cursorrules-zh/0b836b3572d60851959b85b475bd105302863551/rules/backend/php/laravel-package-guide/.cursorrules",
+        "repositoryId": 991967891,
+        "path": "LessUp/awesome-cursorrules-zh/rules/backend/php/laravel-package-guide/.cursorrules",
+        "ownerName": "LessUp",
+        "repositoryName": "awesome-cursorrules-zh",
+        "htmlUrl": "https://github.com/LessUp/awesome-cursorrules-zh/blob/0b836b3572d60851959b85b475bd105302863551/rules/backend/php/laravel-package-guide/.cursorrules",
+        "size": 1.5,
+        "timestamp": "2025-06-28T08:14:47.751Z"
+      }
+    ],
+    [
+      "LessUp/awesome-cursorrules-zh/rules/backend/elixir/phoenix-docker-setup/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/LessUp/awesome-cursorrules-zh/0b836b3572d60851959b85b475bd105302863551/rules/backend/elixir/phoenix-docker-setup/.cursorrules",
+        "repositoryId": 991967891,
+        "path": "LessUp/awesome-cursorrules-zh/rules/backend/elixir/phoenix-docker-setup/.cursorrules",
+        "ownerName": "LessUp",
+        "repositoryName": "awesome-cursorrules-zh",
+        "htmlUrl": "https://github.com/LessUp/awesome-cursorrules-zh/blob/0b836b3572d60851959b85b475bd105302863551/rules/backend/elixir/phoenix-docker-setup/.cursorrules",
+        "size": 1.84,
+        "timestamp": "2025-06-28T08:14:47.918Z"
+      }
+    ],
+    [
+      "Skintillion/famplan/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Skintillion/famplan/04abf3ee9c14d499b4c8995e909ff6d8b4d7e3a2/.cursorrules",
+        "repositoryId": 1008226669,
+        "path": "Skintillion/famplan/.cursorrules",
+        "ownerName": "Skintillion",
+        "repositoryName": "famplan",
+        "htmlUrl": "https://github.com/Skintillion/famplan/blob/04abf3ee9c14d499b4c8995e909ff6d8b4d7e3a2/.cursorrules",
+        "size": 5.82,
+        "timestamp": "2025-06-28T08:14:48.292Z"
+      }
+    ],
+    [
+      "Skintillion/famplan/.history/.cursorrules_20250625011047",
+      {
+        "name": ".cursorrules_20250625011047",
+        "downloadUrl": "https://raw.githubusercontent.com/Skintillion/famplan/04abf3ee9c14d499b4c8995e909ff6d8b4d7e3a2/.history/.cursorrules_20250625011047",
+        "repositoryId": 1008226669,
+        "path": "Skintillion/famplan/.history/.cursorrules_20250625011047",
+        "ownerName": "Skintillion",
+        "repositoryName": "famplan",
+        "htmlUrl": "https://github.com/Skintillion/famplan/blob/04abf3ee9c14d499b4c8995e909ff6d8b4d7e3a2/.history/.cursorrules_20250625011047",
+        "size": 5.82,
+        "timestamp": "2025-06-28T08:14:51.156Z"
+      }
+    ],
+    [
+      "ladyblueumd/cursor-rules-mcp-server/awesome-cursorrules-main/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ladyblueumd/cursor-rules-mcp-server/42920904101114898740bcf63cff1429563c8faa/awesome-cursorrules-main/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1005069272,
+        "path": "ladyblueumd/cursor-rules-mcp-server/awesome-cursorrules-main/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "ladyblueumd",
+        "repositoryName": "cursor-rules-mcp-server",
+        "htmlUrl": "https://github.com/ladyblueumd/cursor-rules-mcp-server/blob/42920904101114898740bcf63cff1429563c8faa/awesome-cursorrules-main/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "size": 7.64,
+        "timestamp": "2025-06-28T08:14:51.209Z"
+      }
+    ],
+    [
+      "th0mes/cursor-rules/frameworks/react/modern-react.cursorrules",
+      {
+        "name": "modern-react.cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/th0mes/cursor-rules/1020005a3d26c8816a928f638057f157a0f79540/frameworks/react/modern-react.cursorrules",
+        "repositoryId": 1008437145,
+        "path": "th0mes/cursor-rules/frameworks/react/modern-react.cursorrules",
+        "ownerName": "th0mes",
+        "repositoryName": "cursor-rules",
+        "htmlUrl": "https://github.com/th0mes/cursor-rules/blob/1020005a3d26c8816a928f638057f157a0f79540/frameworks/react/modern-react.cursorrules",
+        "size": 3.73,
+        "timestamp": "2025-06-28T08:14:51.323Z"
+      }
+    ],
+    [
+      "twardoch/macdefaultbrowsy/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/twardoch/macdefaultbrowsy/b0d8ad4140a03826c02cf0263693db3432bad285/.cursorrules",
+        "repositoryId": 1009910989,
+        "path": "twardoch/macdefaultbrowsy/.cursorrules",
+        "ownerName": "twardoch",
+        "repositoryName": "macdefaultbrowsy",
+        "htmlUrl": "https://github.com/twardoch/macdefaultbrowsy/blob/b0d8ad4140a03826c02cf0263693db3432bad285/.cursorrules",
+        "size": 3.28,
+        "timestamp": "2025-06-28T08:14:51.845Z"
+      }
+    ],
+    [
+      "rtuzov/emailmakers/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/rtuzov/emailmakers/deacfd1c61f8cb0b61082699eb26856f4a6e9c02/.cursorrules",
+        "repositoryId": 1008340855,
+        "path": "rtuzov/emailmakers/.cursorrules",
+        "ownerName": "rtuzov",
+        "repositoryName": "emailmakers",
+        "htmlUrl": "https://github.com/rtuzov/emailmakers/blob/deacfd1c61f8cb0b61082699eb26856f4a6e9c02/.cursorrules",
+        "size": 12.44,
+        "timestamp": "2025-06-28T08:14:53.102Z"
+      }
+    ],
+    [
+      "nikhilch98/rtribe/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/nikhilch98/rtribe/a86a3b39a0c336f04b59892631a3b5e70bdb01bb/.cursorrules",
+        "repositoryId": 1008700847,
+        "path": "nikhilch98/rtribe/.cursorrules",
+        "ownerName": "nikhilch98",
+        "repositoryName": "rtribe",
+        "htmlUrl": "https://github.com/nikhilch98/rtribe/blob/a86a3b39a0c336f04b59892631a3b5e70bdb01bb/.cursorrules",
+        "size": 10.55,
+        "timestamp": "2025-06-28T08:14:53.964Z"
+      }
+    ],
+    [
+      "twardoch/twat-hatch/src/twat_hatch/themes/default/hidden.cursorrules.j2",
+      {
+        "name": "hidden.cursorrules.j2",
+        "downloadUrl": "https://raw.githubusercontent.com/twardoch/twat-hatch/d8dc084a9811d42f62047ae4b0c594a00e6c082f/src/twat_hatch/themes/default/hidden.cursorrules.j2",
+        "repositoryId": 928063338,
+        "path": "twardoch/twat-hatch/src/twat_hatch/themes/default/hidden.cursorrules.j2",
+        "ownerName": "twardoch",
+        "repositoryName": "twat-hatch",
+        "htmlUrl": "https://github.com/twardoch/twat-hatch/blob/d8dc084a9811d42f62047ae4b0c594a00e6c082f/src/twat_hatch/themes/default/hidden.cursorrules.j2",
+        "size": 3.28,
+        "timestamp": "2025-06-28T08:14:54.311Z"
       }
     ]
   ]
