@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 1752,
+  "size": 1765,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -24528,6 +24528,188 @@
         "htmlUrl": "https://github.com/twardoch/twat-hatch/blob/d8dc084a9811d42f62047ae4b0c594a00e6c082f/src/twat_hatch/themes/default/hidden.cursorrules.j2",
         "size": 3.28,
         "timestamp": "2025-06-28T08:14:54.311Z"
+      }
+    ],
+    [
+      "Zondax/polkadot-web-migration/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Zondax/polkadot-web-migration/31452c1c42bbbf07d016113e1938dd86ab74a3ad/.cursorrules",
+        "repositoryId": 905359811,
+        "path": "Zondax/polkadot-web-migration/.cursorrules",
+        "ownerName": "Zondax",
+        "repositoryName": "polkadot-web-migration",
+        "htmlUrl": "https://github.com/Zondax/polkadot-web-migration/blob/31452c1c42bbbf07d016113e1938dd86ab74a3ad/.cursorrules",
+        "size": 3.24,
+        "timestamp": "2025-07-01T08:17:50.430Z"
+      }
+    ],
+    [
+      "dantonini/user-story-matrix/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/dantonini/user-story-matrix/b9ea760f366c94c6693cbb2e4d7bd07e4f80e020/.cursorrules",
+        "repositoryId": 956105773,
+        "path": "dantonini/user-story-matrix/.cursorrules",
+        "ownerName": "dantonini",
+        "repositoryName": "user-story-matrix",
+        "htmlUrl": "https://github.com/dantonini/user-story-matrix/blob/b9ea760f366c94c6693cbb2e4d7bd07e4f80e020/.cursorrules",
+        "size": 9.02,
+        "timestamp": "2025-07-01T08:17:51.646Z"
+      }
+    ],
+    [
+      "rjhoppe/firelink/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/rjhoppe/firelink/183e111a5b26d865afc5d3c74349da878b512567/.cursorrules",
+        "repositoryId": 853858841,
+        "path": "rjhoppe/firelink/.cursorrules",
+        "ownerName": "rjhoppe",
+        "repositoryName": "firelink",
+        "htmlUrl": "https://github.com/rjhoppe/firelink/blob/183e111a5b26d865afc5d3c74349da878b512567/.cursorrules",
+        "size": 32.22,
+        "timestamp": "2025-07-01T08:17:54.377Z"
+      }
+    ],
+    [
+      "foxleigh81/tr-test/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/foxleigh81/tr-test/1483ee1633bcf9aa90abd31d81fefa1019bb603d/.cursorrules",
+        "repositoryId": 1010126016,
+        "path": "foxleigh81/tr-test/.cursorrules",
+        "ownerName": "foxleigh81",
+        "repositoryName": "tr-test",
+        "htmlUrl": "https://github.com/foxleigh81/tr-test/blob/1483ee1633bcf9aa90abd31d81fefa1019bb603d/.cursorrules",
+        "size": 2.79,
+        "timestamp": "2025-07-01T08:17:56.000Z"
+      }
+    ],
+    [
+      "Lee-Hyeona/Stroll-Library/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Lee-Hyeona/Stroll-Library/d60ebc8faa9b9aa42f9a4bdb1e59da0e93fec190/.cursorrules",
+        "repositoryId": 1010582862,
+        "path": "Lee-Hyeona/Stroll-Library/.cursorrules",
+        "ownerName": "Lee-Hyeona",
+        "repositoryName": "Stroll-Library",
+        "htmlUrl": "https://github.com/Lee-Hyeona/Stroll-Library/blob/d60ebc8faa9b9aa42f9a4bdb1e59da0e93fec190/.cursorrules",
+        "size": 1.05,
+        "timestamp": "2025-07-01T08:17:56.461Z"
+      }
+    ],
+    [
+      "fraserpage/php-namespace-assistant/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/fraserpage/php-namespace-assistant/1104489d245f7b6e6e31176a765b42f1866b0222/.cursorrules",
+        "repositoryId": 1011260079,
+        "path": "fraserpage/php-namespace-assistant/.cursorrules",
+        "ownerName": "fraserpage",
+        "repositoryName": "php-namespace-assistant",
+        "htmlUrl": "https://github.com/fraserpage/php-namespace-assistant/blob/1104489d245f7b6e6e31176a765b42f1866b0222/.cursorrules",
+        "size": 5.86,
+        "timestamp": "2025-07-01T08:17:57.120Z"
+      }
+    ],
+    [
+      "youcaiyouaiwan123/cursorRules/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/youcaiyouaiwan123/cursorRules/6b4287c5898c3c48c1528f3bed9ec6b83b66cefe/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1010665775,
+        "path": "youcaiyouaiwan123/cursorRules/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "youcaiyouaiwan123",
+        "repositoryName": "cursorRules",
+        "htmlUrl": "https://github.com/youcaiyouaiwan123/cursorRules/blob/6b4287c5898c3c48c1528f3bed9ec6b83b66cefe/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+        "size": 2.78,
+        "timestamp": "2025-07-01T08:17:58.810Z"
+      }
+    ],
+    [
+      "youcaiyouaiwan123/cursorRules/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/youcaiyouaiwan123/cursorRules/6b4287c5898c3c48c1528f3bed9ec6b83b66cefe/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1010665775,
+        "path": "youcaiyouaiwan123/cursorRules/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "youcaiyouaiwan123",
+        "repositoryName": "cursorRules",
+        "htmlUrl": "https://github.com/youcaiyouaiwan123/cursorRules/blob/6b4287c5898c3c48c1528f3bed9ec6b83b66cefe/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "size": 6.32,
+        "timestamp": "2025-07-01T08:18:00.575Z"
+      }
+    ],
+    [
+      "youcaiyouaiwan123/cursorRules/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/youcaiyouaiwan123/cursorRules/6b4287c5898c3c48c1528f3bed9ec6b83b66cefe/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "repositoryId": 1010665775,
+        "path": "youcaiyouaiwan123/cursorRules/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "ownerName": "youcaiyouaiwan123",
+        "repositoryName": "cursorRules",
+        "htmlUrl": "https://github.com/youcaiyouaiwan123/cursorRules/blob/6b4287c5898c3c48c1528f3bed9ec6b83b66cefe/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "size": 4.93,
+        "timestamp": "2025-07-01T08:18:00.759Z"
+      }
+    ],
+    [
+      "skukla/kukla-integration-service/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/skukla/kukla-integration-service/0ae17d6d73a287e645a63c29900db5b353d84763/.cursorrules",
+        "repositoryId": 980899644,
+        "path": "skukla/kukla-integration-service/.cursorrules",
+        "ownerName": "skukla",
+        "repositoryName": "kukla-integration-service",
+        "htmlUrl": "https://github.com/skukla/kukla-integration-service/blob/0ae17d6d73a287e645a63c29900db5b353d84763/.cursorrules",
+        "size": 43.13,
+        "timestamp": "2025-07-01T08:18:04.062Z"
+      }
+    ],
+    [
+      "VsevolodUstinov/ai-first-workspace-template/Projects/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/VsevolodUstinov/ai-first-workspace-template/fef53fd10bb70bf63a8b1766cb7c59f66ff6d192/Projects/.cursorrules",
+        "repositoryId": 1010071733,
+        "path": "VsevolodUstinov/ai-first-workspace-template/Projects/.cursorrules",
+        "ownerName": "VsevolodUstinov",
+        "repositoryName": "ai-first-workspace-template",
+        "htmlUrl": "https://github.com/VsevolodUstinov/ai-first-workspace-template/blob/fef53fd10bb70bf63a8b1766cb7c59f66ff6d192/Projects/.cursorrules",
+        "size": 6.2,
+        "timestamp": "2025-07-01T08:18:06.363Z"
+      }
+    ],
+    [
+      "Sultan31415/GlowApp2/front/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Sultan31415/GlowApp2/9213a2bfe2fbc46b90e2e67535a5a41bbc45f586/front/.cursorrules",
+        "repositoryId": 1004860181,
+        "path": "Sultan31415/GlowApp2/front/.cursorrules",
+        "ownerName": "Sultan31415",
+        "repositoryName": "GlowApp2",
+        "htmlUrl": "https://github.com/Sultan31415/GlowApp2/blob/9213a2bfe2fbc46b90e2e67535a5a41bbc45f586/front/.cursorrules",
+        "size": 2.75,
+        "timestamp": "2025-07-01T08:18:07.052Z"
+      }
+    ],
+    [
+      "youcaiyouaiwan123/cursorRules/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/youcaiyouaiwan123/cursorRules/6b4287c5898c3c48c1528f3bed9ec6b83b66cefe/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1010665775,
+        "path": "youcaiyouaiwan123/cursorRules/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "youcaiyouaiwan123",
+        "repositoryName": "cursorRules",
+        "htmlUrl": "https://github.com/youcaiyouaiwan123/cursorRules/blob/6b4287c5898c3c48c1528f3bed9ec6b83b66cefe/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+        "size": 7.48,
+        "timestamp": "2025-07-01T08:18:07.804Z"
       }
     ]
   ]

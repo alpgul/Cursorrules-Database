@@ -1,0 +1,182 @@
+# VS Code Extension Development Rules
+# PHP Namespace Assistant Extension
+
+## 🏗️ Project Architecture Rules
+
+### Modular Design
+- Use clear separation of concerns with organized folder structure:
+  - `src/core/` - Core business logic and domain models
+  - `src/commands/` - VS Code command implementations
+  - `src/providers/` - Language providers, completions, diagnostics
+  - `src/utils/` - Utility functions and helpers
+  - `src/tests/` - All test files organized to mirror source structure
+- Each module should have a single responsibility
+- Use dependency injection patterns where appropriate
+- Keep VS Code API interactions in dedicated abstraction layers
+- Create clear interfaces and contracts between modules
+
+### File Organization
+- Group related functionality together
+- Use barrel exports (index.ts) for clean module interfaces
+- Separate configuration, constants, and types into dedicated files
+- Keep file sizes reasonable (< 300 lines typically)
+
+## 💻 Code Quality Standards
+
+### TypeScript Configuration
+- Use TypeScript with strict mode enabled
+- Enable all strict compiler options
+- Use proper typing for all functions, parameters, and return values
+- Avoid `any` type - use proper typing or `unknown`
+
+### Code Style
+- Use ESLint and Prettier for code formatting
+- Follow VS Code extension naming conventions
+- Implement proper error handling and logging
+- Avoid else/elseif chains - prefer early returns or strategy patterns
+- Use descriptive variable and function names
+- Add JSDoc comments for public APIs
+
+### Error Handling
+- Always handle errors gracefully
+- Log errors with appropriate context
+- Show user-friendly error messages
+- Never let exceptions crash the extension
+
+## 🧪 Testing Requirements
+
+### Test Coverage
+- Write unit tests for ALL functionality using Jest
+- Create feature tests for end-to-end scenarios
+- Achieve minimum 80% code coverage
+- Test both success and error paths
+- Use #[Test] attribute for tests as specified by user
+
+### Test Organization
+- Organize tests to mirror source structure
+- Use descriptive test names that explain what is being tested
+- Group related tests using describe blocks
+- Mock VS Code API calls in tests for isolation
+- Create test utilities for common setup/teardown
+
+### Test Types
+- **Unit Tests**: Test individual functions and classes in isolation
+- **Integration Tests**: Test module interactions
+- **Feature Tests**: Test complete user workflows
+- **Performance Tests**: Test extension startup and operation performance
+
+## 📝 Documentation Standards
+
+### Required Documentation
+- **README.md**: Comprehensive with installation, usage, examples, and troubleshooting
+- **CHANGELOG.md**: Follow "Keep a Changelog" format
+- **API Documentation**: Document all public APIs and complex logic
+- **Code Comments**: Explain why, not just what
+
+### README Requirements
+- Clear description of extension purpose
+- Installation instructions
+- Usage examples with screenshots/GIFs
+- Configuration options
+- Troubleshooting section
+- Contributing guidelines
+- License information
+
+### Changelog Format
+- Follow semantic versioning
+- Categorize changes: Added, Changed, Deprecated, Removed, Fixed, Security
+- Include dates for all releases
+- Link to relevant issues/PRs where applicable
+
+## 🚀 Version Management Workflow
+
+### Release Process
+1. Complete feature development with full test coverage
+2. Update documentation (README, CHANGELOG)
+3. Increment version in package.json following semantic versioning:
+   - PATCH: Bug fixes
+   - MINOR: New features (backward compatible)
+   - MAJOR: Breaking changes
+4. Build extension using `vsce package`
+5. Test extension locally in clean VS Code instance
+6. Commit changes with descriptive commit messages
+7. Tag release with version number
+8. Push to repository
+
+### Commit Message Format
+```
+type(scope): description
+
+[optional body]
+
+[optional footer]
+```
+Types: feat, fix, docs, style, refactor, test, chore
+
+## 🎯 VS Code Marketplace Standards
+
+### Package.json Requirements
+- Complete metadata: description, keywords, categories
+- Proper activation events (don't use "*")
+- Contribution points clearly defined
+- Dependencies minimized and justified
+- Engines field specifying VS Code version support
+
+### Extension Lifecycle
+- Implement proper activate() function
+- Handle deactivate() for cleanup
+- Use appropriate activation events
+- Register all commands, providers, and disposables
+- Proper disposal of resources
+
+### User Experience
+- Provide clear status indicators
+- Show progress for long operations
+- Implement cancellation where appropriate
+- Handle large files/projects gracefully
+- Respect user settings and preferences
+
+## 🔍 PHP Namespace Assistant Specific Rules
+
+### Core Functionality
+- Watch for PHP file changes efficiently
+- Parse namespace changes accurately
+- Update references across project
+- Handle edge cases (use statements, aliases, etc.)
+- Provide undo/redo support for changes
+- Support PSR-4 autoloading standard primarily
+- Check composer.json for autoload configuration
+
+### Performance Considerations
+- Use file system watchers efficiently
+- Implement debouncing for rapid changes
+- Cache parsed namespace information
+- Process changes incrementally
+- Provide progress feedback for large refactors
+
+## 🛡️ Quality Gates
+
+### Before Any Commit
+- All tests pass
+- Code coverage meets minimum threshold
+- ESLint passes with no errors
+- Extension builds successfully
+- Manual testing completed
+
+### Before Version Increment
+- Feature is complete and fully tested
+- Documentation is updated
+- Performance impact assessed
+- Backward compatibility considered
+- Extension tested in multiple scenarios
+
+## 🚨 Anti-Patterns to Avoid
+
+- Don't access VS Code APIs directly in business logic
+- Don't write untested code
+- Don't ignore error cases
+- Don't create overly complex functions
+- Don't mix concerns in single modules
+- Don't skip documentation updates
+- Don't commit broken code
+- Don't use synchronous operations for file I/O 
