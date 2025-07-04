@@ -1,0 +1,92 @@
+{
+  "project_overview": {
+    "name": "Caret",
+    "description": "VSCode extension for AI assistance, focusing on personalized development partnership. This project (Caret) is a fork of Caret. The 'caret-upstream' directory contains the original Caret source code for reference.",
+    "repository_url": "https://github.com/aicoding-caret/caret-zero"
+  },
+  "architecture": {
+    "summary": "Modular: Core TypeScript backend, React webview frontend.",
+    "key_components": [
+      {
+        "name": "Core Extension",
+        "path": "src/",
+        "entry_point": "src/extension.ts",
+        "description": "Backend logic, task execution, state, tools, webview communication."
+      },
+      {
+        "name": "Webview UI",
+        "path": "webview-ui/",
+        "entry_point": "webview-ui/src/App.tsx",
+        "description": "React frontend for user interaction and UI state."
+      },
+      {
+        "name": "State Management",
+        "core_provider": "src/core/webview/CaretProvider.ts",
+        "webview_context": "webview-ui/src/context/ExtensionStateContext.tsx",
+        "description": "Core state in CaretProvider, synced to webview via messages."
+      },
+      {
+        "name": "Task Management",
+        "class": "src/core/task/index.ts",
+        "description": "Manages task lifecycle, API calls, tools, state persistence."
+      },
+      {
+        "name": "Storage",
+        "location": "Internal VSCode Extension Storage",
+        "components": ["Task Storage", "Checkpoints (Git)"],
+        "description": "Handles persistence of task data and workspace snapshots."
+      }
+    ],
+    "diagram_reference": "caret-docs/architecture/extension-architecture.mmd"
+  },
+  "development_process": {
+    "state_management_guideline": "Core Extension (CaretProvider) is the source of truth. Sync state via messages. For detailed development/design/implementation guidelines, please refer to the caret-docs/development/ directory and its sub-documents (e.g., index.md, logging.md).",
+    "tool_integration": "Follow patterns in src/integrations/, respect .caretignore. For implementation and design standards, refer to caret-docs/development/.",
+    "api_providers": "Implementations in src/api/providers/.",
+    "testing": "Refer to caret-docs/testing/ for plans. For testing and quality standards, also refer to documents in caret-docs/development/.",
+    "logging": "Use common logging system (see caret-docs/development/logging.md). For detailed logging policies and examples, refer to documents in caret-docs/development/.",
+    "checkpoints": "Managed by src/integrations/checkpoints/CheckpointTracker.ts (Git-based).",
+    "documentation": "Update relevant docs in caret-docs/. For development standards, design, and implementation guidelines, refer to caret-docs/development/.",
+    "contributing": "Refer to CONTRIBUTING.md for guidelines.",
+    "rules_update_guideline": "All project rule changes (for .caretrules, .windsurfrules, .cursorrules, etc.) must first be defined in Korean in the master template file: 'caret-docs/caretrules.ko.md'. After updating the template, request the AI assistant (Alpha) to reflect these changes into the relevant English JSON rule file(s). If direct modification of 'caretrules.ko.md' is not feasible due to IDE limitations, describe the desired changes in Korean to Alpha, and explicitly ask to update 'caretrules.ko.md' first, then the target JSON files.",
+    "work_logs": {
+      "user_daily_log_location_pattern": "caret-docs/work-logs/{username}/",
+      "user_daily_log_format": "{date}.md",
+      "task_docs_location": "caret-docs/tasks/",
+      "task_doc_format_plan": "{task-number}-01-plan-{task-name}.md",
+      "task_doc_format_checklist": "{task-number}-02-action-checklist-{task-name}.md",
+      "task_doc_format_report": "{task-number}-03-report-{task-name}.md",
+      "task_status_file_path": "caret-docs/tasks/task-status.md",
+      "purpose": "Defines locations and formats for user-specific daily work logs and centralized task documents (plan, checklist, report). It is crucial to check 'tasks-status.md' for the next available task number before creating a new task and update it accordingly. Daily logs are for individual progress tracking, while task documents and status are managed centrally per task."
+    },
+    "git_rules": {
+      "commit_format": "[type]: [description]",
+      "branching_strategy": "Standard Gitflow/feature branching (TBD)."
+    },
+    "script_management": {
+      "guideline": "For repetitive tasks, proactively consider creating scripts to improve efficiency.",
+      "location": "Store scripts in subdirectories under the project root's 'scripts/' folder, organized by task or feature (e.g., 'scripts/merging/', 'scripts/deployment/').",
+      "documentation": "Document the script's purpose, usage, and any required environment variables using comments or a separate README file for clarity and ease of use by other team members."
+    },
+    "ai_agent_skills": {
+      "vscode_plugin_support": "The AI agent has specific skills and knowledge related to VSCode plugin development, which should be utilized when relevant."
+    },
+    "documentation_references": {
+      "index.md": "Overview and index of all development documents.",
+      "new-developer-onboarding-guide.md": "Essential guide for new developers joining the project.",
+      "logging.md": "Guidelines for backend and frontend logging.",
+      "webview-extension-communication.md": "How to handle messages between webview and extension.",
+      "ui-to-storage-flow.md": "Detailed guide on UI to Storage data flow, including security.",
+      "cline-upstream-merging-guide.md": "Strategy for merging with Cline upstream, including AI collaboration tips."
+    }
+  },
+  "key_files_reference": [
+    ".caretrules",
+    "caret-docs/",
+    "src/extension.ts",
+    "src/core/task/index.ts",
+    "src/core/webview/CaretProvider.ts",
+    "webview-ui/src/App.tsx",
+    "webview-ui/src/context/ExtensionStateContext.tsx"
+  ]
+}

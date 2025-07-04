@@ -1,0 +1,42 @@
+# Figma Plugin Development Rules
+
+## Ticket Management Workflow
+- **Always consult TODO.md** before implementing new features or making changes
+- **Work on tickets one by one** - Complete one ticket fully before moving to the next
+- **Ask for permission** before proceeding to the next ticket after completing the current one
+- **Update TODO.md** to mark completed tickets with ✅ and move them to the "Completed" section
+- **Test thoroughly** after each ticket completion to ensure functionality works as expected
+
+## Development Guidelines
+- Follow Figma plugin API best practices
+- Use TypeScript for type safety
+- Implement React components with proper state management
+- Ensure responsive design for plugin UI
+- Maintain clean separation between UI and Figma API logic
+- Use HSL color model for color calculations
+- Implement proper error handling and user feedback
+
+## Code Quality Standards
+- Write self-documenting code with clear variable names
+- Add JSDoc comments for complex functions
+- Keep components small and focused
+- Use proper TypeScript types throughout
+- Test color calculations thoroughly
+- Ensure accessibility in UI components
+
+## Figma Plugin Specific Rules
+- Always validate Figma document state before operations
+- Handle cases where variables don't exist gracefully
+- Provide clear user feedback for all operations
+- Respect Figma's plugin size and performance constraints
+- Use Figma's design tokens and styling where possible
+
+## Build System & Asset Management
+- **CRITICAL**: Figma plugins require ALL JavaScript to be inlined in the HTML file
+- Never use external script references (`<script src="...">`) - they won't load in Figma's sandbox
+- Webpack must be configured with `inject: false` and custom template functions to inline assets
+- Use `<%= compilation.assets['ui.js'].source() %>` in HTML templates to embed JavaScript
+- Always test that the final HTML file contains inlined JavaScript, not external references
+- If you see "white screen" after HTML loads, check if JavaScript is properly inlined
+- Template files (`src/ui/index.html`) should never contain hardcoded JavaScript - let webpack inject compiled code
+- When debugging build issues, verify both source compilation AND asset delivery method 

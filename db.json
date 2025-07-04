@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 1765,
+  "size": 1773,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -24710,6 +24710,118 @@
         "htmlUrl": "https://github.com/youcaiyouaiwan123/cursorRules/blob/6b4287c5898c3c48c1528f3bed9ec6b83b66cefe/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
         "size": 7.48,
         "timestamp": "2025-07-01T08:18:07.804Z"
+      }
+    ],
+    [
+      "aicoding-caret/caret-zero/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/aicoding-caret/caret-zero/cf7905fa48d5fe5541002c8afdd4c35602b9f713/.cursorrules",
+        "repositoryId": 971178774,
+        "path": "aicoding-caret/caret-zero/.cursorrules",
+        "ownerName": "aicoding-caret",
+        "repositoryName": "caret-zero",
+        "htmlUrl": "https://github.com/aicoding-caret/caret-zero/blob/cf7905fa48d5fe5541002c8afdd4c35602b9f713/.cursorrules",
+        "size": 5.85,
+        "timestamp": "2025-07-04T08:17:10.588Z"
+      }
+    ],
+    [
+      "anwsme/shadecn/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/anwsme/shadecn/8088779a8656f72b57dba736ed31bd65e517d92b/.cursorrules",
+        "repositoryId": 1005972381,
+        "path": "anwsme/shadecn/.cursorrules",
+        "ownerName": "anwsme",
+        "repositoryName": "shadecn",
+        "htmlUrl": "https://github.com/anwsme/shadecn/blob/8088779a8656f72b57dba736ed31bd65e517d92b/.cursorrules",
+        "size": 2.19,
+        "timestamp": "2025-07-04T08:17:15.679Z"
+      }
+    ],
+    [
+      "majiayu000/starship/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/majiayu000/starship/b7b09b592be7256ec7b818ff3746a8819fa1c84f/.cursorrules",
+        "repositoryId": 951901445,
+        "path": "majiayu000/starship/.cursorrules",
+        "ownerName": "majiayu000",
+        "repositoryName": "starship",
+        "htmlUrl": "https://github.com/majiayu000/starship/blob/b7b09b592be7256ec7b818ff3746a8819fa1c84f/.cursorrules",
+        "size": 2.28,
+        "timestamp": "2025-07-04T08:17:16.632Z"
+      }
+    ],
+    [
+      "temsan/reLove_communication_bot/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/temsan/reLove_communication_bot/901690c358f7ef4c83c782e3375dd305f645e762/.cursorrules",
+        "repositoryId": 966646076,
+        "path": "temsan/reLove_communication_bot/.cursorrules",
+        "ownerName": "temsan",
+        "repositoryName": "reLove_communication_bot",
+        "htmlUrl": "https://github.com/temsan/reLove_communication_bot/blob/901690c358f7ef4c83c782e3375dd305f645e762/.cursorrules",
+        "size": 1.28,
+        "timestamp": "2025-07-04T08:17:20.945Z"
+      }
+    ],
+    [
+      "kashiwachen/jp-buy-rent-calculator/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/kashiwachen/jp-buy-rent-calculator/2ad340603aa7b5ed36acfa34960a4a1159ec0cc5/.cursorrules",
+        "repositoryId": 1011906406,
+        "path": "kashiwachen/jp-buy-rent-calculator/.cursorrules",
+        "ownerName": "kashiwachen",
+        "repositoryName": "jp-buy-rent-calculator",
+        "htmlUrl": "https://github.com/kashiwachen/jp-buy-rent-calculator/blob/2ad340603aa7b5ed36acfa34960a4a1159ec0cc5/.cursorrules",
+        "size": 5.57,
+        "timestamp": "2025-07-04T08:17:22.702Z"
+      }
+    ],
+    [
+      "lufutu/lufutu/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/lufutu/lufutu/d87d962c34f75dfb731075278d0466016930e7a1/.cursorrules",
+        "repositoryId": 1013338059,
+        "path": "lufutu/lufutu/.cursorrules",
+        "ownerName": "lufutu",
+        "repositoryName": "lufutu",
+        "htmlUrl": "https://github.com/lufutu/lufutu/blob/d87d962c34f75dfb731075278d0466016930e7a1/.cursorrules",
+        "size": 2.47,
+        "timestamp": "2025-07-04T08:17:22.890Z"
+      }
+    ],
+    [
+      "u88803494/my-website/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/u88803494/my-website/da6d5193ad4b853d205d91230883286615c57df0/.cursorrules",
+        "repositoryId": 1007452662,
+        "path": "u88803494/my-website/.cursorrules",
+        "ownerName": "u88803494",
+        "repositoryName": "my-website",
+        "htmlUrl": "https://github.com/u88803494/my-website/blob/da6d5193ad4b853d205d91230883286615c57df0/.cursorrules",
+        "size": 6.66,
+        "timestamp": "2025-07-04T08:17:24.548Z"
+      }
+    ],
+    [
+      "LIDR-academy/AI4Devs-videogame/red_green_light-JMR/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/LIDR-academy/AI4Devs-videogame/842fe82b82542740357e9dfa6eae5d7263462357/red_green_light-JMR/.cursorrules",
+        "repositoryId": 943733062,
+        "path": "LIDR-academy/AI4Devs-videogame/red_green_light-JMR/.cursorrules",
+        "ownerName": "LIDR-academy",
+        "repositoryName": "AI4Devs-videogame",
+        "htmlUrl": "https://github.com/LIDR-academy/AI4Devs-videogame/blob/842fe82b82542740357e9dfa6eae5d7263462357/red_green_light-JMR/.cursorrules",
+        "size": 2.13,
+        "timestamp": "2025-07-04T08:17:26.746Z"
       }
     ]
   ]
