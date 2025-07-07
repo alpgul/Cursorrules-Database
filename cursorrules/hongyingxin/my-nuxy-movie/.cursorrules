@@ -1,0 +1,51 @@
+# My Nuxt Movie 项目的 Cursor 规则
+
+## 项目概述
+这是一个基于 Nuxt 3 的电影发现应用。始终参考 `docs/common-patterns.md` 获取最佳实践和模式。
+
+## 核心规则
+1. **包管理器**: 始终使用 `pnpm` 进行包管理
+2. **PhotoSwipe**: 在 nuxt.config.ts 中使用 `photoswipe/style.css`，不要在单个页面中导入
+3. **API 模式**: 遵循 common-patterns.md 中的标准 API 请求模式
+4. **UI 组件**: 使用文档中记录的加载、错误和分页模式
+5. **图片处理**: 使用 utils/image.ts 中的现有图片工具函数
+6. **代码复用**: 编写新方法前，先检查项目中是否已有类似实现，避免重复代码。如果发现多个地方有相似逻辑，考虑封装成公共函数放在 `utils/` 目录
+
+## 文档参考
+- **项目文档**: 始终参考 `docs/common-patterns.md` 中的最佳实践
+- **组件文档**: 参考 `docs/components.md` 中的组件使用说明
+- **代码注释标准**: 参考 `docs/code-standards.md` 中的注释规范
+- **TMDB 官方网站**: 项目参考 [TMDB 官方网站](https://www.themoviedb.org/) 的设计和功能
+- **TMDB API 文档**: 所有接口数据来自 [TMDB API 文档](https://developer.themoviedb.org/docs/getting-started)，处理 API 相关问题时查阅此文档
+- **Nuxt 官方文档**: 遇到 Nuxt 相关问题时，自动查阅 [Nuxt 官方文档](https://nuxt.com/docs)
+- **Vue 3 文档**: 遇到 Vue 3 相关问题时，参考 [Vue 3 官方文档](https://vuejs.org/guide/)
+- **TypeScript 文档**: 遇到类型问题时，参考 [TypeScript 官方文档](https://www.typescriptlang.org/docs/)
+
+## 问题排查流程
+1. **识别问题类型** - 判断是项目规范问题、框架使用问题、API 数据问题还是 UI/UX 设计问题
+2. **查阅项目文档** - 优先查看 `docs/common-patterns.md` 中的相关模式
+3. **检查代码注释** - 确保代码遵循 `docs/code-standards.md` 中的注释规范
+4. **查阅官方文档** - 根据问题类型查阅对应文档：
+   - UI/UX 设计问题 → [TMDB 官方网站](https://www.themoviedb.org/) 参考设计
+   - TMDB API 相关问题 → [TMDB API 文档](https://developer.themoviedb.org/docs/getting-started)
+   - Nuxt 相关问题 → [Nuxt 官方文档](https://nuxt.com/docs)
+   - Vue 3 相关问题 → [Vue 3 官方文档](https://vuejs.org/guide/)
+   - TypeScript 相关问题 → [TypeScript 官方文档](https://www.typescriptlang.org/docs/)
+5. **检查现有实现** - 查看项目中是否有类似的解决方案
+6. **提供精准方案** - 基于文档和项目规范给出准确的解决方案
+
+## 代码风格
+- 遵循 TypeScript 最佳实践
+- 使用 Vue 3 Composition API
+- 实现适当的错误处理
+- 为异步操作添加加载状态
+- 使用 Tailwind CSS 进行样式设计
+
+## 文件结构
+- API 函数放在 `api/` 目录
+- 组合式函数放在 `composables/` 目录
+- 工具函数放在 `utils/` 目录
+- 组件放在 `components/` 目录
+
+## 编写代码前
+始终检查 `docs/common-patterns.md` 中的现有模式，避免重复实现解决方案。遇到框架相关问题时，主动查阅官方文档确保解决方案的准确性。 

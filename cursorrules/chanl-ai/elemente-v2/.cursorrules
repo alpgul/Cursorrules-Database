@@ -1,0 +1,116 @@
+# Cursor Rules for Elemente v2 - AI Outreach Platform
+
+## Project Context
+This is a NextJS-based AI outreach platform with marketing website and admin dashboard in a monorepo structure. Built with TypeScript, Tailwind CSS, Shadcn UI, and integrated Tailark components.
+
+## Code Standards
+
+### TypeScript & React
+- Use TypeScript for all files (.tsx/.ts)
+- Prefer functional components with hooks
+- Use proper TypeScript interfaces for props
+- Export types and interfaces from components when reusable
+- Use `const` assertions for readonly objects
+
+### Component Architecture
+- Use the HeroWrapper pattern for flexible, prop-based hero sections
+- Prefer composition over inheritance
+- Create reusable components with clear prop interfaces
+- Use content configuration objects for page-specific data
+- Implement variants (default, simple, minimal) for flexible styling
+
+### Styling & UI
+- Use Tailwind CSS utility classes
+- Follow responsive-first design (mobile → desktop)
+- Use Shadcn UI components as base layer
+- Implement dark mode support with proper color schemes
+- Use CSS variables for consistent theming
+
+### File Organization
+```
+website/src/
+├── app/                    # NextJS app router pages
+├── components/
+│   ├── ui/                # Shadcn base components
+│   ├── blocks/            # Tailark components
+│   ├── hero-wrapper.tsx   # Flexible hero system
+│   └── site-header.tsx    # Shared header
+├── config/                # Site configuration
+├── lib/                   # Utilities and content
+└── tailark-core/          # Tailark component system
+```
+
+### Content Management
+- Use structured content objects with TypeScript interfaces
+- Centralize site configuration in `config/site.config.ts`
+- Page-specific content defined in page files
+- Use prop-based content system for reusability
+
+### Navigation & Headers
+- Use single header approach - no double headers
+- Integrate navigation into hero sections
+- Consistent branding with "Elemente" and custom logo
+- Mobile-responsive navigation with hamburger menu
+
+### Performance & SEO
+- Implement proper meta tags and SEO optimization
+- Use Next.js Image optimization
+- Enable SVG support with `dangerouslyAllowSVG: true`
+- Lazy load components where appropriate
+
+### Git & Development
+- Use meaningful commit messages
+- Ignore build directories (.next/, dist/, node_modules/)
+- Remove large files before committing
+- Use semantic versioning for releases
+
+## AI Outreach Platform Specifics
+
+### Brand Guidelines
+- Primary brand: "Elemente - AI-Driven Outreach That Converts"
+- Focus on conversion, automation, and AI personalization
+- Target audiences: Sales teams, marketing professionals, agencies
+- Value props: AI personalization, multi-channel outreach, automation
+
+### Content Strategy
+- Emphasize results and metrics (300% conversion increase)
+- Use social proof and customer testimonials
+- Clear pricing tiers: Starter ($49), Professional ($149), Enterprise
+- Free trial with no credit card required
+
+### Component Patterns
+- Hero variants: default (full), simple (clean), minimal (text-focused)
+- CTA integration in footers and strategic page locations
+- Feature showcases with benefits-focused copy
+- Stats sections with impressive metrics
+
+### External Integrations
+- Support for motion/framer-motion animations
+- Tailark component library integration
+- Email/LinkedIn/phone multi-channel messaging
+- Analytics and conversion tracking
+
+## Development Workflow
+1. Start with content strategy and user needs
+2. Use HeroWrapper for consistent page headers
+3. Build mobile-first, then enhance for desktop
+4. Test responsive design across all breakpoints
+5. Optimize for Core Web Vitals
+6. Implement proper error handling and loading states
+
+## Performance Guidelines
+- Keep bundle size under control
+- Use dynamic imports for large components
+- Optimize images and use proper formats
+- Enable TypeScript strict mode gradually
+- Monitor build times and optimize as needed
+
+## Code Review Checklist
+- [ ] TypeScript interfaces properly defined
+- [ ] Responsive design implemented
+- [ ] Accessibility considerations (ARIA labels, semantic HTML)
+- [ ] SEO meta tags included
+- [ ] Content props system used correctly
+- [ ] No double headers or navigation conflicts
+- [ ] Performance optimizations applied
+- [ ] Error boundaries and loading states implemented 

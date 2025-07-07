@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 1773,
+  "size": 1779,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -24822,6 +24822,90 @@
         "htmlUrl": "https://github.com/LIDR-academy/AI4Devs-videogame/blob/842fe82b82542740357e9dfa6eae5d7263462357/red_green_light-JMR/.cursorrules",
         "size": 2.13,
         "timestamp": "2025-07-04T08:17:26.746Z"
+      }
+    ],
+    [
+      "SongYiHan913/Vibecoding-challenge/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/SongYiHan913/Vibecoding-challenge/0b64c06a7537fce98f744221b8ce740330f6a2da/.cursorrules",
+        "repositoryId": 1010371803,
+        "path": "SongYiHan913/Vibecoding-challenge/.cursorrules",
+        "ownerName": "SongYiHan913",
+        "repositoryName": "Vibecoding-challenge",
+        "htmlUrl": "https://github.com/SongYiHan913/Vibecoding-challenge/blob/0b64c06a7537fce98f744221b8ce740330f6a2da/.cursorrules",
+        "size": 3.32,
+        "timestamp": "2025-07-07T08:18:48.261Z"
+      }
+    ],
+    [
+      "chanl-ai/elemente-v2/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/chanl-ai/elemente-v2/9405cb6bfc54663ee7fa62cc9c1088ae64556d14/.cursorrules",
+        "repositoryId": 1014521506,
+        "path": "chanl-ai/elemente-v2/.cursorrules",
+        "ownerName": "chanl-ai",
+        "repositoryName": "elemente-v2",
+        "htmlUrl": "https://github.com/chanl-ai/elemente-v2/blob/9405cb6bfc54663ee7fa62cc9c1088ae64556d14/.cursorrules",
+        "size": 4.29,
+        "timestamp": "2025-07-07T08:18:50.726Z"
+      }
+    ],
+    [
+      "youcaiyouaiwan123/cursorRules/rules/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/youcaiyouaiwan123/cursorRules/6b4287c5898c3c48c1528f3bed9ec6b83b66cefe/rules/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1010665775,
+        "path": "youcaiyouaiwan123/cursorRules/rules/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "youcaiyouaiwan123",
+        "repositoryName": "cursorRules",
+        "htmlUrl": "https://github.com/youcaiyouaiwan123/cursorRules/blob/6b4287c5898c3c48c1528f3bed9ec6b83b66cefe/rules/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+        "size": 6.25,
+        "timestamp": "2025-07-07T08:18:52.929Z"
+      }
+    ],
+    [
+      "CanAISolutions/canai-cursor-codex-v6.1.4/.cursorrules.template",
+      {
+        "name": ".cursorrules.template",
+        "downloadUrl": "https://raw.githubusercontent.com/CanAISolutions/canai-cursor-codex-v6.1.4/3b918676de698ae095511fa0b3f5e167d1ffaa27/.cursorrules.template",
+        "repositoryId": 975716536,
+        "path": "CanAISolutions/canai-cursor-codex-v6.1.4/.cursorrules.template",
+        "ownerName": "CanAISolutions",
+        "repositoryName": "canai-cursor-codex-v6.1.4",
+        "htmlUrl": "https://github.com/CanAISolutions/canai-cursor-codex-v6.1.4/blob/3b918676de698ae095511fa0b3f5e167d1ffaa27/.cursorrules.template",
+        "size": 1.53,
+        "timestamp": "2025-07-07T08:18:55.261Z"
+      }
+    ],
+    [
+      "hongyingxin/my-nuxy-movie/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/hongyingxin/my-nuxy-movie/ad2a14601ee55514ea3ccbb86cb1f6457aa76a44/.cursorrules",
+        "repositoryId": 1005469464,
+        "path": "hongyingxin/my-nuxy-movie/.cursorrules",
+        "ownerName": "hongyingxin",
+        "repositoryName": "my-nuxy-movie",
+        "htmlUrl": "https://github.com/hongyingxin/my-nuxy-movie/blob/ad2a14601ee55514ea3ccbb86cb1f6457aa76a44/.cursorrules",
+        "size": 3.09,
+        "timestamp": "2025-07-07T08:18:58.569Z"
+      }
+    ],
+    [
+      "rbasina/meetara-lab/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/rbasina/meetara-lab/e81e6c770d284f34e69ded4edb78c05821728b70/.cursorrules",
+        "repositoryId": 1012631879,
+        "path": "rbasina/meetara-lab/.cursorrules",
+        "ownerName": "rbasina",
+        "repositoryName": "meetara-lab",
+        "htmlUrl": "https://github.com/rbasina/meetara-lab/blob/e81e6c770d284f34e69ded4edb78c05821728b70/.cursorrules",
+        "size": 6.44,
+        "timestamp": "2025-07-07T08:18:58.896Z"
       }
     ]
   ]

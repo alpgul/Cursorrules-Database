@@ -1,0 +1,127 @@
+# MeeTARA Lab - Enhanced Cursor AI Rules
+
+## Project Identity
+- **Project**: MeeTARA Lab - Trinity Architecture AI Training Evolution  
+- **Mission**: 20-100x faster GGUF training + 504% intelligence amplification
+- **Core Principle**: Everything we build is enhanced by default - no need to prefix with "enhanced"
+
+## CRITICAL: Memory-Bank Approach
+- **ALWAYS** read memory-bank files first: `C:\Users\rames\Documents\tara-universal-model\memory-bank\`
+- **6 Core Files**: projectbrief.md, productContext.md, activeContext.md, systemPatterns.md, techContext.md, progress.md
+- **Reference existing TARA**: Preserve ALL 10 enhanced feature categories
+- **Evolution not replacement**: MeeTARA Lab builds upon proven TARA success
+
+## 🎯 NAMING CONVENTIONS (DOS AND DON'TS)
+
+### ✅ DO:
+- Use standard script names: `tts_manager.py`, `emotion_detector.py`, `intelligent_router.py`
+- Follow project structure: `trinity-core/`, `cloud-training/`, `model-factory/`
+- Use clear, descriptive class names: `TTSManager`, `EmotionDetector`, `TrainingConductor`
+- Keep function names action-oriented: `detect_emotion()`, `generate_voice()`, `create_gguf()`
+- Use consistent file organization by feature category
+
+### ❌ DON'T:
+- Prefix files with "enhanced_" (everything is enhanced by default)
+- Use redundant words like "improved_", "better_", "new_"
+- Mix naming conventions in same directory
+- Create deeply nested folder structures
+- Use abbreviations that aren't immediately clear
+
+### 📁 Project Structure Standards:
+```
+meetara-lab/
+├── trinity-core/              # Core Trinity Architecture + Intelligence
+│   ├── intelligence/          # TARA's core intelligence modules
+│   ├── agents/               # All specialized agents
+│   ├── tts_manager.py         # NOT enhanced_tts_manager.py
+│   ├── emotion_detector.py    # NOT enhanced_emotion_detector.py
+│   ├── intelligent_router.py  # NOT enhanced_intelligent_router.py
+│   └── utils/                # Utilities and validation
+├── cloud-training/            # Multi-cloud GPU orchestration + deployment
+│   ├── cost-optimization/     # Budget monitoring (consolidated)
+│   └── deployment/           # Production deployment (consolidated)
+├── model-factory/             # GGUF creation and optimization
+│   └── output/               # All pipeline outputs (consolidated)
+├── notebooks/                 # Google Colab integration
+│   └── connections/          # Colab connections (consolidated)
+├── tests/                    # All testing
+│   └── intelligence/         # Intelligence tests (consolidated)
+├── docs/                     # All documentation
+│   ├── demos/               # Demonstrations (consolidated)
+│   └── archive/             # Archive/backup (consolidated)
+├── config/                   # Configuration files
+├── data/                     # Training and model data
+├── memory-bank/              # Memory bank files
+└── scripts/                  # Utility scripts
+```
+
+## 🧠 TARA UNIVERSAL MODEL INTEGRATION
+
+### Preserve ALL 10 Enhanced Feature Categories:
+1. **TTS Manager** → `trinity-core/tts_manager.py`
+2. **Emotion Detection** → `trinity-core/emotion_detector.py` 
+3. **Intelligent Router** → `trinity-core/intelligent_router.py`
+4. **Universal GGUF Factory** → `model-factory/gguf_factory.py`
+5. **Training Orchestrator** → `cloud-training/training_orchestrator.py`
+6. **Monitoring & Recovery** → `cloud-training/monitoring_system.py`
+7. **Security & Privacy** → `trinity-core/security_manager.py`
+8. **Domain Experts** → `intelligence-hub/domain_experts.py`
+9. **Utilities & Validation** → `trinity-core/validation_utils.py`
+10. **Configuration Management** → `trinity-core/config_manager.py`
+
+## ⚡ Cloud Amplification Requirements
+- **Speed Target**: 20-100x faster than current CPU training (302s/step → 3-15s/step)
+- **Cost Target**: <$50/month for all 60+ domains
+- **Quality Target**: Maintain 101% validation scores (proven achievable)
+- **Compatibility**: Same 8.3MB GGUF output for MeeTARA frontend
+
+## 🎯 Trinity Architecture Implementation
+- **Arc Reactor Foundation**: 90% efficiency + 5x speed optimization
+- **Perplexity Intelligence**: Context-aware reasoning and routing
+- **Einstein Fusion**: E=mc² applied for 504% capability amplification
+
+## 📋 Development Guidelines
+
+### Code Quality:
+- Use type hints: `def process_domain(domain: str, config: Dict[str, Any]) -> Dict[str, Any]:`
+- Add comprehensive docstrings with Trinity Architecture context
+- Include error handling with graceful fallbacks
+- Implement performance tracking and statistics
+
+### Cloud Integration:
+- **Google Colab Pro+** compatibility (T4/V100/A100)
+- **Multi-provider support**: Lambda Labs, RunPod, Vast.ai
+- **Cost monitoring**: Real-time tracking with auto-shutdown
+- **Spot instance intelligence**: Automatic migration and recovery
+
+### GGUF Factory Requirements:
+- **Proven parameters**: batch_size=6, lora_r=8, max_steps=846
+- **Model compatibility**: microsoft/DialoGPT-medium base
+- **Output format**: 8.3MB Q4_K_M GGUF files
+- **Quality validation**: 101% validation score maintenance
+
+## 🛡️ Security & Privacy Standards
+- **Local processing**: No sensitive data to cloud
+- **Encryption**: All data encrypted in transit and at rest
+- **Privacy compliance**: GDPR/HIPAA ready
+- **Access control**: Secure model serving with authentication
+
+## 📊 Performance Monitoring
+- **Real-time metrics**: Training speed, cost tracking, quality scores
+- **Automatic optimization**: Resource allocation and parameter tuning
+- **Error recovery**: Automatic restart and fallback systems
+- **Dashboard integration**: Live status and progress tracking
+
+## 🔄 Memory-Bank Maintenance
+- **Update triggers**: After significant changes, new discoveries, user requests
+- **File priorities**: activeContext.md and progress.md most critical
+- **Documentation sync**: Keep .cursorrules aligned with memory-bank insights
+- **Evolution tracking**: Document architectural improvements and patterns
+
+## 💡 Trinity Architecture Principles
+- **Efficiency**: Every component optimized for 20-100x improvement
+- **Intelligence**: Context-aware decision making at all levels
+- **Amplification**: Compounding gains through agent coordination
+- **Compatibility**: Seamless integration with existing MeeTARA ecosystem
+
+Remember: We're not starting from scratch - we're amplifying proven TARA success with cloud power and Trinity intelligence! 🚀 
