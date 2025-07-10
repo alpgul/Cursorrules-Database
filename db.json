@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 1779,
+  "size": 1797,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -24906,6 +24906,258 @@
         "htmlUrl": "https://github.com/rbasina/meetara-lab/blob/e81e6c770d284f34e69ded4edb78c05821728b70/.cursorrules",
         "size": 6.44,
         "timestamp": "2025-07-07T08:18:58.896Z"
+      }
+    ],
+    [
+      "devbrother2024/mood-diary/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/devbrother2024/mood-diary/196a04659928c12f5e9e6e23262f99e1342afa50/.cursorrules",
+        "repositoryId": 874843112,
+        "path": "devbrother2024/mood-diary/.cursorrules",
+        "ownerName": "devbrother2024",
+        "repositoryName": "mood-diary",
+        "htmlUrl": "https://github.com/devbrother2024/mood-diary/blob/196a04659928c12f5e9e6e23262f99e1342afa50/.cursorrules",
+        "size": 1.89,
+        "timestamp": "2025-07-10T08:18:25.915Z"
+      }
+    ],
+    [
+      "derekross/plektos/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/derekross/plektos/7fb8ef0862aeffe493f55db13cca760c407bd46c/.cursorrules",
+        "repositoryId": 995797893,
+        "path": "derekross/plektos/.cursorrules",
+        "ownerName": "derekross",
+        "repositoryName": "plektos",
+        "htmlUrl": "https://github.com/derekross/plektos/blob/7fb8ef0862aeffe493f55db13cca760c407bd46c/.cursorrules",
+        "size": 17.15,
+        "timestamp": "2025-07-10T08:18:26.094Z"
+      }
+    ],
+    [
+      "jattu8602/school-portal-web/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/jattu8602/school-portal-web/7a7f9ccf89f49edb8123aa8895f132b576ded954/.cursorrules",
+        "repositoryId": 972148373,
+        "path": "jattu8602/school-portal-web/.cursorrules",
+        "ownerName": "jattu8602",
+        "repositoryName": "school-portal-web",
+        "htmlUrl": "https://github.com/jattu8602/school-portal-web/blob/7a7f9ccf89f49edb8123aa8895f132b576ded954/.cursorrules",
+        "size": 1.28,
+        "timestamp": "2025-07-10T08:18:26.223Z"
+      }
+    ],
+    [
+      "nara04040/Perfect-Focusing/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/nara04040/Perfect-Focusing/9188aad5892ad77b5eec803844b1e334be3c029e/.cursorrules",
+        "repositoryId": 883550435,
+        "path": "nara04040/Perfect-Focusing/.cursorrules",
+        "ownerName": "nara04040",
+        "repositoryName": "Perfect-Focusing",
+        "htmlUrl": "https://github.com/nara04040/Perfect-Focusing/blob/9188aad5892ad77b5eec803844b1e334be3c029e/.cursorrules",
+        "size": 1.89,
+        "timestamp": "2025-07-10T08:18:26.414Z"
+      }
+    ],
+    [
+      "nanjitae81/nextjs/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/nanjitae81/nextjs/d9627e5aa6c8a57e1cf1ec0a52f1289ab4df35a5/.cursorrules",
+        "repositoryId": 934670680,
+        "path": "nanjitae81/nextjs/.cursorrules",
+        "ownerName": "nanjitae81",
+        "repositoryName": "nextjs",
+        "htmlUrl": "https://github.com/nanjitae81/nextjs/blob/d9627e5aa6c8a57e1cf1ec0a52f1289ab4df35a5/.cursorrules",
+        "size": 1.89,
+        "timestamp": "2025-07-10T08:18:26.487Z"
+      }
+    ],
+    [
+      "giujae/Portfolio/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/giujae/Portfolio/bc8993290911790cbe5d6a0d888ec8b8f30cabc5/.cursorrules",
+        "repositoryId": 994801532,
+        "path": "giujae/Portfolio/.cursorrules",
+        "ownerName": "giujae",
+        "repositoryName": "Portfolio",
+        "htmlUrl": "https://github.com/giujae/Portfolio/blob/bc8993290911790cbe5d6a0d888ec8b8f30cabc5/.cursorrules",
+        "size": 1.89,
+        "timestamp": "2025-07-10T08:18:26.568Z"
+      }
+    ],
+    [
+      "k-m-jin/funny-things/apps/memo/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/k-m-jin/funny-things/0458ccf61d8ce462d67c9d8b87b9ff4240bc24d7/apps/memo/.cursorrules",
+        "repositoryId": 957080571,
+        "path": "k-m-jin/funny-things/apps/memo/.cursorrules",
+        "ownerName": "k-m-jin",
+        "repositoryName": "funny-things",
+        "htmlUrl": "https://github.com/k-m-jin/funny-things/blob/0458ccf61d8ce462d67c9d8b87b9ff4240bc24d7/apps/memo/.cursorrules",
+        "size": 1.89,
+        "timestamp": "2025-07-10T08:18:26.659Z"
+      }
+    ],
+    [
+      "weharris/RStatsBootcamp-2025/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/weharris/RStatsBootcamp-2025/3e86d77688e44b3dd31c669a73cdd16b39724639/.cursorrules",
+        "repositoryId": 1002933653,
+        "path": "weharris/RStatsBootcamp-2025/.cursorrules",
+        "ownerName": "weharris",
+        "repositoryName": "RStatsBootcamp-2025",
+        "htmlUrl": "https://github.com/weharris/RStatsBootcamp-2025/blob/3e86d77688e44b3dd31c669a73cdd16b39724639/.cursorrules",
+        "size": 6.69,
+        "timestamp": "2025-07-10T08:18:27.554Z"
+      }
+    ],
+    [
+      "KallebyX/mestres_do_cafe/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/KallebyX/mestres_do_cafe/9e33935f706938fc4cad6dd7ff70eecd4ee33719/.cursorrules",
+        "repositoryId": 1004516551,
+        "path": "KallebyX/mestres_do_cafe/.cursorrules",
+        "ownerName": "KallebyX",
+        "repositoryName": "mestres_do_cafe",
+        "htmlUrl": "https://github.com/KallebyX/mestres_do_cafe/blob/9e33935f706938fc4cad6dd7ff70eecd4ee33719/.cursorrules",
+        "size": 6.92,
+        "timestamp": "2025-07-10T08:18:28.125Z"
+      }
+    ],
+    [
+      "ralph-wren/okx-trading/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ralph-wren/okx-trading/2e889619dc607fbbca129d80aebcbbf9a0a217f0/.cursorrules",
+        "repositoryId": 959296672,
+        "path": "ralph-wren/okx-trading/.cursorrules",
+        "ownerName": "ralph-wren",
+        "repositoryName": "okx-trading",
+        "htmlUrl": "https://github.com/ralph-wren/okx-trading/blob/2e889619dc607fbbca129d80aebcbbf9a0a217f0/.cursorrules",
+        "size": 2.44,
+        "timestamp": "2025-07-10T08:18:30.267Z"
+      }
+    ],
+    [
+      "ethantrent/ibcmarketplace/.cursor/rules/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ethantrent/ibcmarketplace/ff1f278e981f830714a421c142dee12afa20312d/.cursor/rules/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 992903061,
+        "path": "ethantrent/ibcmarketplace/.cursor/rules/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "ethantrent",
+        "repositoryName": "ibcmarketplace",
+        "htmlUrl": "https://github.com/ethantrent/ibcmarketplace/blob/ff1f278e981f830714a421c142dee12afa20312d/.cursor/rules/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "size": 2.32,
+        "timestamp": "2025-07-10T08:18:31.330Z"
+      }
+    ],
+    [
+      "ethantrent/ibcmarketplace/.cursor/rules/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ethantrent/ibcmarketplace/ff1f278e981f830714a421c142dee12afa20312d/.cursor/rules/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 992903061,
+        "path": "ethantrent/ibcmarketplace/.cursor/rules/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "ethantrent",
+        "repositoryName": "ibcmarketplace",
+        "htmlUrl": "https://github.com/ethantrent/ibcmarketplace/blob/ff1f278e981f830714a421c142dee12afa20312d/.cursor/rules/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "size": 6.32,
+        "timestamp": "2025-07-10T08:18:32.716Z"
+      }
+    ],
+    [
+      "ethantrent/ClearReq/.cursor/rules-new/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ethantrent/ClearReq/2c74f3fae80bbb241df3d9685ed8178699a34172/.cursor/rules-new/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "repositoryId": 1011335270,
+        "path": "ethantrent/ClearReq/.cursor/rules-new/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "ownerName": "ethantrent",
+        "repositoryName": "ClearReq",
+        "htmlUrl": "https://github.com/ethantrent/ClearReq/blob/2c74f3fae80bbb241df3d9685ed8178699a34172/.cursor/rules-new/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "size": 4.93,
+        "timestamp": "2025-07-10T08:18:32.825Z"
+      }
+    ],
+    [
+      "ethantrent/ibcmarketplace/.cursor/rules/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ethantrent/ibcmarketplace/ff1f278e981f830714a421c142dee12afa20312d/.cursor/rules/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "repositoryId": 992903061,
+        "path": "ethantrent/ibcmarketplace/.cursor/rules/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "ownerName": "ethantrent",
+        "repositoryName": "ibcmarketplace",
+        "htmlUrl": "https://github.com/ethantrent/ibcmarketplace/blob/ff1f278e981f830714a421c142dee12afa20312d/.cursor/rules/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "size": 4.93,
+        "timestamp": "2025-07-10T08:18:33.036Z"
+      }
+    ],
+    [
+      "cdbk/cursor-defa/rules/defa/backend_rules.cursorrules",
+      {
+        "name": "backend_rules.cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/cdbk/cursor-defa/0496b02a3b086463e88b1aad79b4e6d56caf8af5/rules/defa/backend_rules.cursorrules",
+        "repositoryId": 1016155212,
+        "path": "cdbk/cursor-defa/rules/defa/backend_rules.cursorrules",
+        "ownerName": "cdbk",
+        "repositoryName": "cursor-defa",
+        "htmlUrl": "https://github.com/cdbk/cursor-defa/blob/0496b02a3b086463e88b1aad79b4e6d56caf8af5/rules/defa/backend_rules.cursorrules",
+        "size": 3.96,
+        "timestamp": "2025-07-10T08:18:33.500Z"
+      }
+    ],
+    [
+      "tallyfy/api-support/cursor/rules/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/tallyfy/api-support/3d0512f68d443c13dd81f1fb6969837767587692/cursor/rules/.cursorrules",
+        "repositoryId": 146482872,
+        "path": "tallyfy/api-support/cursor/rules/.cursorrules",
+        "ownerName": "tallyfy",
+        "repositoryName": "api-support",
+        "htmlUrl": "https://github.com/tallyfy/api-support/blob/3d0512f68d443c13dd81f1fb6969837767587692/cursor/rules/.cursorrules",
+        "size": 2.36,
+        "timestamp": "2025-07-10T08:18:33.602Z"
+      }
+    ],
+    [
+      "Cassielxd/moduforge-rs/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Cassielxd/moduforge-rs/d0a652ba94590d350826612b4c5651ce554df36e/.cursorrules",
+        "repositoryId": 1002314409,
+        "path": "Cassielxd/moduforge-rs/.cursorrules",
+        "ownerName": "Cassielxd",
+        "repositoryName": "moduforge-rs",
+        "htmlUrl": "https://github.com/Cassielxd/moduforge-rs/blob/d0a652ba94590d350826612b4c5651ce554df36e/.cursorrules",
+        "size": 16.19,
+        "timestamp": "2025-07-10T08:18:33.789Z"
+      }
+    ],
+    [
+      "cdbk/cursor-defa/rules/simple/backend_rules.cursorrules",
+      {
+        "name": "backend_rules.cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/cdbk/cursor-defa/0496b02a3b086463e88b1aad79b4e6d56caf8af5/rules/simple/backend_rules.cursorrules",
+        "repositoryId": 1016155212,
+        "path": "cdbk/cursor-defa/rules/simple/backend_rules.cursorrules",
+        "ownerName": "cdbk",
+        "repositoryName": "cursor-defa",
+        "htmlUrl": "https://github.com/cdbk/cursor-defa/blob/0496b02a3b086463e88b1aad79b4e6d56caf8af5/rules/simple/backend_rules.cursorrules",
+        "size": 3.96,
+        "timestamp": "2025-07-10T08:18:36.333Z"
       }
     ]
   ]
