@@ -1,0 +1,56 @@
+# Xpertly Project Guidelines
+
+Follow these guidelines for all work in this project:
+
+1. Mobile-First Design:
+
+   - All components must be designed for mobile devices first
+   - Use TailwindCSS responsive classes (sm:, md:, lg:, xl:)
+   - Test all components on mobile viewports first
+
+2. Component Size Limit:
+
+   - Maximum 200 lines of code per component
+   - Break down complex components into smaller, reusable pieces
+   - Keep components focused on a single responsibility
+
+3. File Naming Conventions:
+
+   - React component files must be named: `ComponentName.component.tsx` (PascalCase)
+   - Interface/type files must be in `/types` folder as `entityName.type.ts` (camelCase)
+   - Utility files must be in `/utils` folder as `entityName.utils.ts` (camelCase)
+   - Constants must be in `/utils` folder as `entityName.utils.ts` (camelCase)
+
+4. Technology Stack:
+
+   - Next.js for the framework
+   - TailwindCSS for styling (use theme colors)
+   - shadcn UI components for consistent UI
+   - react-query for state management
+   - Phosphoricons for icons
+   - Supabase for backend services
+
+5. Visual Design:
+
+   - Use vibrant gradients for backgrounds and accent elements
+   - Apply proper shadow depths for visual hierarchy
+   - Implement interactive hover effects
+   - Ensure all design elements are responsive
+   - Use only Phosphor icons for all icon needs
+
+6. Code Quality:
+
+   - Follow ESLint and Prettier configurations
+   - Write clean, maintainable code
+   - Include appropriate TypeScript typing
+   - Ensure proper accessibility
+
+7. Dark Mode Support:
+
+   - Use next-themes for theme management
+   - Follow semantic color naming
+   - Maintain proper contrast ratios (WCAG AA standards)
+
+8. Documentation:
+   - Keep documentation up to date
+   - Update progress.md after completing tasks
