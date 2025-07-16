@@ -1,0 +1,58 @@
+- Use Tailwind + Daisy UI for styling
+  - Ensure that the layout works on mobile and desktop. Keep in mind both light and dark mode, avoid hardcoding white, greys and blacks.
+- follow Vue3/ts best practices
+- Our interfaces (and their implementation, currently dexie)
+- Do not EVER!!!! import interface implementations directly. 
+  - Util function get an interface passed in (NEVER depending on an implementation)
+  - Page*.vue components (in the pages/) folder provide/inject implementations
+  - No component!!! may ever import an interface implementation, ever
+- Components are either controller (logic, maybe dependency and store, do nothing in template except loading a representational component) or representational only (just props and emits, no external dependencies)
+- keep code unit-testable as much a possible
+- fix linter errors always
+- do not replicate type files! types should always live in dedicated files (unless ONLY relevant hyper-locally), and existing types should be reused.
+- use lucide icons (lucide-vue-next). Ensure!! icon names are valid ([icon list](https://raw.githubusercontent.com/mazeincoding/lucide-icons-list/refs/heads/main/icons.txt))
+
+- do NOT run `npm run dev`. It's annoying and useless.
+
+## How to Add a Feature
+
+### High-Level Organisation
+
+As a rule:
+
+- Open an issue (work towards an issue)
+- make a branch
+
+### Development
+
+- Add unit tests via the configured `vitest` environment
+  - It's not required to use TDD, but it may make sense, especially when working on logic-heave features
+  - However, each added feature should at least be convered in regards to basic happy path
+
+- Keep files reasonably small.
+- Write VERY CLEAN code. functions and lines of code should be self-explanatory. If a collection of code lines is confusing to read (or even just a single line), it should likely be its own function
+- Keep components and pages as purely representational as possible
+
+- Types and interfaces live in `/types` unless they are 100% only usable in one file or page. Do NOT, EVER, copypaste types in component files
+
+- ALWAYS use `@/...` import syntax, except if the the imported thing is in the same directory. That's way more robust, and way more readable.
+
+### Documentation
+
+- Write conceptual stuff in `docs/` as a markdown guide
+- Code should mostly document itself, see chapter above
+- Use JsDoc style annotation, but ONLY!! to explain purpose or non-obvious decisions. Do NOT! JS-Doc annotate params or returns, that is *already done* by typescript. Keep it short. Explain how the code fits into the bigger picture.
+- Avoid! just reiterating the name of a function (or whatever), e.g. we do not want to see `downloadLatestLessons() // downloads the latest lessons`. That is wasteful. Focus on purpose and how it ties in!
+
+### Testing
+
+- Write unit tests, component test and integration test when it's useful to improve our confidence
+- Test files should live alongside the code they are testing
+
+### Tech Stack
+
+- Standard Vue + Vite app
+    - Meaning, per-default, we are doing things *server-side*
+- `eslint` is setup. Don't forget to run linter.
+- we have `Tailwind` + `Daisy UI` installed, utilize that for design
+    - Avoid manual CSS when possible

@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 1808,
+  "size": 1818,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -25312,6 +25312,146 @@
         "htmlUrl": "https://github.com/moonklabs/aiwf/blob/5a24037cd8dea869eff901ffcaaa5c196999064f/claude-code/aiwf/ko/ai-tools/cursor/template/.cursorrules",
         "size": 7.93,
         "timestamp": "2025-07-13T08:14:55.266Z"
+      }
+    ],
+    [
+      "djm81/chroma_mcp_server/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/djm81/chroma_mcp_server/4401cbbb23e80a2aafcdf99140eed095d87d1ad4/.cursorrules",
+        "repositoryId": 956828882,
+        "path": "djm81/chroma_mcp_server/.cursorrules",
+        "ownerName": "djm81",
+        "repositoryName": "chroma_mcp_server",
+        "htmlUrl": "https://github.com/djm81/chroma_mcp_server/blob/4401cbbb23e80a2aafcdf99140eed095d87d1ad4/.cursorrules",
+        "size": 2.68,
+        "timestamp": "2025-07-16T08:18:01.776Z"
+      }
+    ],
+    [
+      "space-cadet/memory-bank/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/space-cadet/memory-bank/c9ce8b908af6fb9a347832f01ea97f769a7ae073/.cursorrules",
+        "repositoryId": 962342887,
+        "path": "space-cadet/memory-bank/.cursorrules",
+        "ownerName": "space-cadet",
+        "repositoryName": "memory-bank",
+        "htmlUrl": "https://github.com/space-cadet/memory-bank/blob/c9ce8b908af6fb9a347832f01ea97f769a7ae073/.cursorrules",
+        "size": 3.29,
+        "timestamp": "2025-07-16T08:18:03.860Z"
+      }
+    ],
+    [
+      "XWeaponX7/gan-deng-yan-game/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/XWeaponX7/gan-deng-yan-game/b8c0409b62ebe42c7387d5224cb86a3887698488/.cursorrules",
+        "repositoryId": 1007200166,
+        "path": "XWeaponX7/gan-deng-yan-game/.cursorrules",
+        "ownerName": "XWeaponX7",
+        "repositoryName": "gan-deng-yan-game",
+        "htmlUrl": "https://github.com/XWeaponX7/gan-deng-yan-game/blob/b8c0409b62ebe42c7387d5224cb86a3887698488/.cursorrules",
+        "size": 17.1,
+        "timestamp": "2025-07-16T08:18:06.958Z"
+      }
+    ],
+    [
+      "bravegeek/az-vectordb/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/bravegeek/az-vectordb/c7e50318728ba3c33bd9d5afde353b473b0307ad/.cursorrules",
+        "repositoryId": 1006330220,
+        "path": "bravegeek/az-vectordb/.cursorrules",
+        "ownerName": "bravegeek",
+        "repositoryName": "az-vectordb",
+        "htmlUrl": "https://github.com/bravegeek/az-vectordb/blob/c7e50318728ba3c33bd9d5afde353b473b0307ad/.cursorrules",
+        "size": 5.38,
+        "timestamp": "2025-07-16T08:18:08.411Z"
+      }
+    ],
+    [
+      "ethantrent/ibcmarketplace/.cursor/rules/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ethantrent/ibcmarketplace/ff1f278e981f830714a421c142dee12afa20312d/.cursor/rules/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 992903061,
+        "path": "ethantrent/ibcmarketplace/.cursor/rules/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "ethantrent",
+        "repositoryName": "ibcmarketplace",
+        "htmlUrl": "https://github.com/ethantrent/ibcmarketplace/blob/ff1f278e981f830714a421c142dee12afa20312d/.cursor/rules/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "size": 7.64,
+        "timestamp": "2025-07-16T08:18:10.070Z"
+      }
+    ],
+    [
+      "ethantrent/ibcmarketplace/.cursor/rules/rules/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ethantrent/ibcmarketplace/ff1f278e981f830714a421c142dee12afa20312d/.cursor/rules/rules/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 992903061,
+        "path": "ethantrent/ibcmarketplace/.cursor/rules/rules/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "ethantrent",
+        "repositoryName": "ibcmarketplace",
+        "htmlUrl": "https://github.com/ethantrent/ibcmarketplace/blob/ff1f278e981f830714a421c142dee12afa20312d/.cursor/rules/rules/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+        "size": 6.25,
+        "timestamp": "2025-07-16T08:18:10.173Z"
+      }
+    ],
+    [
+      "youcaiyouaiwan123/cursorRules/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/youcaiyouaiwan123/cursorRules/6b4287c5898c3c48c1528f3bed9ec6b83b66cefe/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "repositoryId": 1010665775,
+        "path": "youcaiyouaiwan123/cursorRules/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "ownerName": "youcaiyouaiwan123",
+        "repositoryName": "cursorRules",
+        "htmlUrl": "https://github.com/youcaiyouaiwan123/cursorRules/blob/6b4287c5898c3c48c1528f3bed9ec6b83b66cefe/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "size": 3.59,
+        "timestamp": "2025-07-16T08:18:11.088Z"
+      }
+    ],
+    [
+      "ethantrent/portfolio/.cursor/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ethantrent/portfolio/2fa14548378e1455744b1609e3224f68dfebf109/.cursor/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "repositoryId": 999062516,
+        "path": "ethantrent/portfolio/.cursor/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "ownerName": "ethantrent",
+        "repositoryName": "portfolio",
+        "htmlUrl": "https://github.com/ethantrent/portfolio/blob/2fa14548378e1455744b1609e3224f68dfebf109/.cursor/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "size": 4.93,
+        "timestamp": "2025-07-16T08:18:11.654Z"
+      }
+    ],
+    [
+      "koljapluemer/linguanodon/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/koljapluemer/linguanodon/70b9a84ddd5de1fa965ccad090b930e5d106e790/.cursorrules",
+        "repositoryId": 1007285049,
+        "path": "koljapluemer/linguanodon/.cursorrules",
+        "ownerName": "koljapluemer",
+        "repositoryName": "linguanodon",
+        "htmlUrl": "https://github.com/koljapluemer/linguanodon/blob/70b9a84ddd5de1fa965ccad090b930e5d106e790/.cursorrules",
+        "size": 3.14,
+        "timestamp": "2025-07-16T08:18:13.682Z"
+      }
+    ],
+    [
+      "ZhuTechLLC/astro-notebook---/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ZhuTechLLC/astro-notebook---/84173a33eac6b0f6eaabaeb784324e17f6afeb0a/.cursorrules",
+        "repositoryId": 1010955422,
+        "path": "ZhuTechLLC/astro-notebook---/.cursorrules",
+        "ownerName": "ZhuTechLLC",
+        "repositoryName": "astro-notebook---",
+        "htmlUrl": "https://github.com/ZhuTechLLC/astro-notebook---/blob/84173a33eac6b0f6eaabaeb784324e17f6afeb0a/.cursorrules",
+        "size": 13.91,
+        "timestamp": "2025-07-16T08:18:14.644Z"
       }
     ]
   ]

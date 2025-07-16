@@ -1,0 +1,524 @@
+# VS Code 代码主题规则 - Astro项目
+
+## 🎨 代码展示标准
+所有代码块（生成、识别、引用）必须使用VS Code Dark主题标准：
+
+### 基础要求
+- 背景色：#1e1e1e (VS Code编辑器背景)
+- 文字色：#d4d4d4 (VS Code默认文字)
+- 边框色：#3e3e3e (VS Code边框)
+- 内联代码背景：#262626
+
+### 语法高亮配色
+- 关键字：#569cd6 (蓝色)
+- 字符串：#ce9178 (橙色)  
+- 注释：#6a9955 (绿色)
+- 数字：#b5cea8 (浅绿色)
+- 函数：#dcdcaa (黄色)
+- 类名：#4ec9b0 (青色)
+
+### CSS实现
+```css
+[data-theme="dark"] pre {
+  background: #1e1e1e !important;
+  color: #d4d4d4 !important;
+  border: 1px solid #3e3e3e !important;
+}
+
+[data-theme="dark"] code {
+  background-color: #262626 !important;
+  color: #d4d4d4 !important;
+}
+```
+
+### 适用场景
+- ✅ Markdown代码块
+- ✅ 内联代码
+- ✅ 技术文档代码示例
+- ✅ 配置文件展示
+- ✅ 命令行指令
+- ✅ AI生成的所有代码内容
+
+## 🔍 检查要求
+- 暗色模式下对比度必须清晰（对比度 > 7:1）
+- 所有语法元素必须有明显区分
+- 代码可读性测试必须通过
+
+## 📋 执行标准
+每次生成或修改代码时，自动应用此主题标准，确保一致的视觉体验。
+
+---
+
+# 📚 文档系统开发规范
+
+## 📝 内容创作标准
+
+### 文档结构要求
+- 每个页面必须包含完整的frontmatter
+- 标题层级必须有序且符合语义（h1 → h2 → h3）
+- 中文内容使用全角标点，英文内容使用半角标点
+- 金融术语保持一致性（美股、投资组合、技术分析等）
+- 数据和图表必须标注来源和更新时间
+
+### 内容质量要求
+```markdown
+frontmatter 必须包含：
+- title: 页面标题
+- description: 页面描述 
+- layout: 布局文件
+- updateDate: 更新日期
+```
+
+## 🎨 设计系统规范
+
+### 主题系统
+- 必须支持亮色/暗色主题切换
+- 使用CSS变量系统，禁止硬编码颜色
+- 所有组件在两种主题下都必须测试通过
+
+### 颜色规范
+```css
+/* 主色调变量 */
+--primary-color: #4f46e5;
+--primary-dark: #3730a3;
+--text-primary: var(--color-text);
+--bg-primary: var(--color-bg);
+--card-bg: var(--color-card);
+--border-color: var(--color-border);
+```
+
+### 字体规范
+- 移动端最小字体：16px
+- 桌面端最小字体：14px
+- 行高：1.5-1.6 倍
+- 字体族：系统字体栈优先
+
+## 📱 响应式设计标准
+
+### 断点标准
+```css
+/* 标准断点 */
+--mobile: 0-767px
+--tablet: 768px-1023px  
+--desktop: 1024px+
+```
+
+### 移动优先原则
+- 所有组件必须从移动端开始设计
+- 触摸目标最小尺寸：44px × 44px
+- 移动端导航必须可用且易操作
+
+## 🧩 组件开发规范
+
+### 组件结构
+```astro
+---
+// TypeScript 接口定义
+interface Props {
+  title: string;
+  description?: string;
+  variant?: 'primary' | 'secondary';
+}
+
+const { title, description, variant = 'primary' } = Astro.props;
+---
+
+<!-- 组件HTML -->
+<div class={`component component--${variant}`}>
+  <h2>{title}</h2>
+  {description && <p>{description}</p>}
+</div>
+
+<style>
+/* 组件样式，使用CSS变量 */
+.component {
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+</style>
+```
+
+### 组件要求
+- 必须支持双主题
+- 使用TypeScript类型定义
+- 可复用组件放在 `/src/components/`
+- 文件名使用PascalCase
+- 必须包含样式隔离
+
+## ⚡ 性能优化要求
+
+### 资源优化
+- 图片格式：WebP > AVIF > PNG/JPEG
+- 图片必须设置合适的尺寸和alt属性
+- 非关键图片使用懒加载
+- 字体使用 `font-display: swap`
+
+### 代码优化
+```astro
+<!-- 图片优化示例 -->
+<img 
+  src="/images/chart.webp" 
+  alt="投资组合收益图表" 
+  loading="lazy"
+  width="800" 
+  height="400"
+/>
+
+<!-- 字体优化 -->
+<style>
+@font-face {
+  font-family: 'CustomFont';
+  src: url('/fonts/font.woff2') format('woff2');
+  font-display: swap;
+}
+</style>
+```
+
+### 性能指标
+- Core Web Vitals: LCP < 2.5s, FID < 100ms, CLS < 0.1
+- 首屏加载时间 < 2秒
+- 图片优化率 > 80%
+
+## 🔍 SEO优化标准
+
+### 页面元数据
+```astro
+---
+const { title, description } = Astro.props;
+---
+
+<head>
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+</head>
+```
+
+### SEO要求
+- 每个页面必须有唯一的title和description
+- 使用语义化HTML标签
+- 内部链接使用相对路径
+- 图片必须有描述性alt属性
+- 页面URL结构清晰且有意义
+
+## ♿ 无障碍访问标准
+
+### WCAG 2.1 AA 合规
+- 颜色对比度 ≥ 4.5:1 (正常文字)
+- 颜色对比度 ≥ 3:1 (大文字)
+- 所有交互元素支持键盘导航
+- 使用ARIA标签增强语义
+
+### 实现示例
+```astro
+<!-- 无障碍按钮 -->
+<button 
+  type="button"
+  aria-label="打开主题切换菜单"
+  aria-expanded="false"
+  aria-haspopup="true"
+>
+  切换主题
+</button>
+
+<!-- 跳转链接 -->
+<a href="#main-content" class="skip-link">
+  跳转到主内容
+</a>
+```
+
+## 📁 文件命名规范
+
+### 目录结构
+```
+src/
+├── components/     # 组件 (PascalCase)
+├── layouts/       # 布局文件 (PascalCase)  
+├── pages/         # 页面文件 (kebab-case)
+├── styles/        # 样式文件 (kebab-case)
+└── utils/         # 工具函数 (camelCase)
+```
+
+### 命名约定
+- 组件文件：`MyComponent.astro`
+- 页面文件：`my-page.md` 或 `my-page.astro`
+- 样式文件：`global-styles.css`
+- 工具文件：`formatUtils.ts`
+
+## 🔒 安全性要求
+
+### 内容安全
+- 所有用户输入必须验证和清理
+- 外部链接使用 `rel="noopener noreferrer"`
+- 敏感信息不得硬编码
+
+### 实现示例
+```astro
+<!-- 安全的外部链接 -->
+<a 
+  href="https://external-site.com" 
+  target="_blank" 
+  rel="noopener noreferrer"
+>
+  外部链接
+</a>
+```
+
+---
+
+**执行要求**：所有代码生成和修改都必须遵循上述规范，确保项目的一致性、性能和可维护性。
+
+---
+
+## 🚨 【CRITICAL】HTML标签间零空行强制规则
+
+### ⚠️ 最高优先级规范
+**在所有Markdown文件中，HTML标签之间绝对禁止存在空行**
+
+### 核心规则
+- 任何 `</div>` 和下一个HTML标签之间不允许空行
+- 任何 `<h4>`, `<h5>` 标题和下方div标签间不允许空行  
+- 所有HTML容器标签必须紧密连接
+- 新生成的HTML内容必须立即检查空行
+
+### ❌ 绝对禁止
+```html
+    </div>
+    
+    <div class="next-section">
+        <h4>标题</h4>
+        
+        <div class="content">
+```
+
+### ✅ 强制要求
+```html
+    </div>
+    <div class="next-section">
+        <h4>标题</h4>
+        <div class="content">
+```
+
+### 🔍 强制检查项
+1. **每个 `</div>` 的下一行必须是HTML标签**
+2. **标题下方必须直接跟随div标签**  
+3. **新增HTML内容必须优先检查**
+4. **提交前必须全文验证**
+
+### 💡 执行要求
+- 生成HTML内容时逐行紧密编写
+- 每完成一个组件立即检查空行
+- 使用VS Code正则 `</div>\s*\n\s*\n\s*<` 快速定位问题
+- 发现空行立即删除，绝不延误
+
+### 🎯 质量标准
+- HTML标签间空行出现率 = **0%**
+- 违规容忍度 = **零容忍**
+- 检查时间 < 5分钟
+- 修复必须立即执行
+
+**📌 重要说明**：此规则优先级最高，违反将导致页面显示异常空白，严重影响用户体验。每次涉及HTML的编辑都必须严格遵守。
+
+---
+
+## 🚀 【CRITICAL】Token优化生成规则
+
+### ⚠️ 最高优先级规范
+**在生成长章节或复杂内容时，必须遵循Token优化原则，确保内容质量与效率平衡**
+
+### 核心优化策略
+
+#### 1. 📋 分阶段输出策略
+- **第一步**：生成目录结构 + 核心摘要占位
+- **第二步**：按小节逐个细化，每次聚焦 150-300 行
+- **第三步**：补充CSS样式和交互效果
+- **禁止**：一次性生成超过500行的完整章节
+
+#### 2. 🎨 样式复用原则
+- **公共样式**：统一CSS/组件放 `/src/styles/` 公共文件
+- **章节样式**：仅保留局部覆盖样式，避免重复
+- **引用方式**：使用 `@import` 或组件引用，减少重复代码
+- **禁止**：每章都复制800+行CSS代码
+
+#### 3. 📊 占位符使用规范
+- **图表占位**：`<!-- 图表占位：[章节标题] -->`
+- **代码占位**：`<!-- 代码示例占位：xxx -->`
+- **数据占位**：`<!-- 数据表格占位：xxx -->`
+- **后续补充**：需要时单独生成，降低主文Token消耗
+
+#### 4. 🔧 最小化编辑原则
+- **精准替换**：`edit_file` 只替换出错行，避免整章重写
+- **增量更新**：只提交diff中有改动的最小范围
+- **分批提交**：大章拆分多个PR/commit，便于审阅
+- **禁止**：因格式问题整章重新生成
+
+#### 5. 📚 引用附录策略
+- **共享定义**：财务指标公式、技术术语放附录A.1
+- **章节引用**：正文中使用「详见附录A.1」引用
+- **避免重复**：不在每章重复写同样的公式解释
+- **统一管理**：附录作为知识库，章节作为应用
+
+#### 6. 💬 简化Prompt原则
+- **目标导向**：提示中只给目标与输出格式
+- **约束明确**：明确字数、结构、风格要求
+- **避免冗长**：不要把整段范例塞进prompt
+- **关键信息**：重点指标或公式可放在附录
+
+#### 7. 📈 分批提交标准
+- **单次生成**：≤300行，≤50KB
+- **章节拆分**：大章分解为3-5次增量提交
+- **质量保证**：每次提交都确保内容完整可读
+- **进度跟踪**：明确标注当前进度和下一步计划
+
+### 🎯 执行标准
+- **Token消耗**：相比一次性生成降低40%+
+- **内容质量**：保持专业深度，不因优化降低标准
+- **可维护性**：便于后续编辑和版本控制
+- **阅读体验**：最终输出保持完整性和连贯性
+
+### 🔍 检查清单
+- [ ] 是否分阶段生成？
+- [ ] 是否使用了占位符？
+- [ ] 是否复用了公共样式？
+- [ ] 是否最小化编辑范围？
+- [ ] 是否引用了附录？
+- [ ] 是否简化了Prompt？
+- [ ] 是否分批提交？
+
+**📌 重要说明**：此规则与HTML零空行规则同等重要，违反将导致生成效率低下、内容质量下降。每次生成长内容时都必须严格遵守。
+
+---
+
+## 🔧 【CRITICAL】组件化重构与代码复用规则
+
+### ⚠️ 基于o3-pro评估的优化策略
+**针对HTML重复、CSS冗余、元数据不一致等问题的系统性解决方案**
+
+### 核心问题识别
+1. **HTML结构重复**：`chapter-overview`、`overview-grid`每章重复120-150 tokens
+2. **CSS规则冗余**：`.chapters-grid`、`.chapter-card`等样式重复定义
+3. **Front-matter不统一**：部分章节缺少`description`、`updateDate`字段
+4. **组件化缺失**：大量可复用UI元素使用原生HTML
+
+### 🧩 强制组件化标准
+
+#### 1. 必用组件库
+```astro
+<!-- 章节概览 -->
+<ChapterOverview cards={[
+  { icon: "📊", title: "标题", description: "描述" }
+]} />
+
+<!-- 核心摘要 -->
+<CoreSummary content="摘要内容文字..." />
+
+<!-- 关键指标 -->
+<KeyMetrics metrics={[
+  { value: "15.2%", label: "年化收益", benchmark: "vs 11.8%" }
+]} />
+```
+
+#### 2. 禁止原生HTML重复
+- **绝对禁止**：重复使用相同的HTML结构
+- **强制要求**：超过2次使用的HTML必须组件化
+- **检查标准**：每个文件HTML重复率 < 20%
+
+#### 3. Front-matter统一标准
+```yaml
+---
+title: "页面标题"
+description: "页面描述 (SEO优化)"
+lang: "zh-CN"
+alt: "替代标题"
+layout: /src/layouts/HandbookLayout.astro
+updateDate: "2025-01-03"
+---
+```
+
+#### 4. CSS复用策略
+- **公共样式**：基础组件样式放 `/src/styles/components.css`
+- **主题变量**：统一使用CSS变量，避免硬编码
+- **局部样式**：仅保留特定页面的覆盖样式
+
+### 🚀 生成工作流程
+
+#### 第一步：结构规划
+1. 确定使用的组件：`ChapterOverview`、`CoreSummary`、`KeyMetrics`
+2. 设计数据结构：卡片、指标、摘要内容
+3. 预估token消耗：组件化后减少60-80%
+
+#### 第二步：组件化生成
+```markdown
+<!-- 使用组件而非原生HTML -->
+<ChapterOverview cards={cardData} />
+<CoreSummary content={summaryText} />
+<KeyMetrics metrics={metricsData} />
+```
+
+#### 第三步：样式优化
+- 引用公共样式：`@import '/src/styles/components.css'`
+- 仅添加页面特有样式
+- 避免重复定义相同的CSS规则
+
+#### 第四步：质量检查
+- [ ] 是否使用了组件而非原生HTML？
+- [ ] Front-matter是否包含所有必需字段？
+- [ ] CSS是否复用了公共样式？
+- [ ] Token消耗是否降低了50%+？
+
+### 📊 效率提升指标
+
+#### Token节省预期
+- **章节概览**：每章节省 120-150 tokens
+- **核心摘要**：每章节省 20-30 tokens
+- **关键指标**：每次使用节省 30-50 tokens
+- **CSS复用**：每章节省 200-400 tokens
+
+#### 总体效果
+- 12章节总计节省：**2,000-2,400 tokens**
+- 生成效率提升：**40-60%**
+- 维护成本降低：**70%**
+- 代码一致性：**95%+**
+
+### 🔍 强制检查清单
+
+#### 生成前检查
+- [ ] 是否有可复用的HTML结构？
+- [ ] 是否可以使用现有组件？
+- [ ] Front-matter是否完整？
+- [ ] CSS是否会重复？
+
+#### 生成后检查
+- [ ] 组件是否正确引用？
+- [ ] 样式是否复用公共CSS？
+- [ ] HTML重复率是否 < 20%？
+- [ ] Token消耗是否优化？
+
+### 💡 执行优先级
+
+#### 最高优先级（立即执行）
+1. 使用`ChapterOverview`组件替代原生HTML
+2. 统一所有章节的Front-matter字段
+3. 合并重复的CSS规则
+
+#### 高优先级（本轮优化）
+1. 创建`KeyMetrics`、`CoreSummary`组件
+2. 建立公共样式文件
+3. 清理现有文件的重复代码
+
+#### 中等优先级（后续优化）
+1. 创建更多细粒度组件
+2. 建立组件使用文档
+3. 自动化检查工具
+
+### 🎯 成功标准
+- **重复代码**：减少80%以上
+- **Token效率**：提升50%以上
+- **维护成本**：降低70%以上
+- **一致性**：达到95%以上
+
+**📌 重要说明**：此规则与HTML零空行规则、Token优化规则同等重要。违反将导致代码冗余、维护困难、Token浪费。每次生成新内容时都必须严格遵守组件化原则。
+
+---
