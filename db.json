@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 1818,
+  "size": 1829,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -25452,6 +25452,160 @@
         "htmlUrl": "https://github.com/ZhuTechLLC/astro-notebook---/blob/84173a33eac6b0f6eaabaeb784324e17f6afeb0a/.cursorrules",
         "size": 13.91,
         "timestamp": "2025-07-16T08:18:14.644Z"
+      }
+    ],
+    [
+      "tonk-labs/tonk/examples/file-browser/src/stores/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/tonk-labs/tonk/234380b09f7498b07dcab2a8c0d359f3f863b87e/examples/file-browser/src/stores/.cursorrules",
+        "repositoryId": 930902643,
+        "path": "tonk-labs/tonk/examples/file-browser/src/stores/.cursorrules",
+        "ownerName": "tonk-labs",
+        "repositoryName": "tonk",
+        "htmlUrl": "https://github.com/tonk-labs/tonk/blob/234380b09f7498b07dcab2a8c0d359f3f863b87e/examples/file-browser/src/stores/.cursorrules",
+        "size": 9.29,
+        "timestamp": "2025-07-19T08:15:44.988Z"
+      }
+    ],
+    [
+      "EmersonBraun/js-dev-course/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/EmersonBraun/js-dev-course/1834c4615ec9204a12eb14c27655fce7abda802a/.cursorrules",
+        "repositoryId": 493364301,
+        "path": "EmersonBraun/js-dev-course/.cursorrules",
+        "ownerName": "EmersonBraun",
+        "repositoryName": "js-dev-course",
+        "htmlUrl": "https://github.com/EmersonBraun/js-dev-course/blob/1834c4615ec9204a12eb14c27655fce7abda802a/.cursorrules",
+        "size": 4.6,
+        "timestamp": "2025-07-19T08:15:45.053Z"
+      }
+    ],
+    [
+      "darianrosebrook/kokoro-onnx-raycast-api/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/darianrosebrook/kokoro-onnx-raycast-api/03b0ffe4e05b3f2e9187cd501ae6fc38cfe46a28/.cursorrules",
+        "repositoryId": 1013388813,
+        "path": "darianrosebrook/kokoro-onnx-raycast-api/.cursorrules",
+        "ownerName": "darianrosebrook",
+        "repositoryName": "kokoro-onnx-raycast-api",
+        "htmlUrl": "https://github.com/darianrosebrook/kokoro-onnx-raycast-api/blob/03b0ffe4e05b3f2e9187cd501ae6fc38cfe46a28/.cursorrules",
+        "size": 4.69,
+        "timestamp": "2025-07-19T08:15:46.359Z"
+      }
+    ],
+    [
+      "marcelontime/browser_automation/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/marcelontime/browser_automation/b7be7bf3096a040fc5c0ec0950cb9f21b1d74719/.cursorrules",
+        "repositoryId": 1018266008,
+        "path": "marcelontime/browser_automation/.cursorrules",
+        "ownerName": "marcelontime",
+        "repositoryName": "browser_automation",
+        "htmlUrl": "https://github.com/marcelontime/browser_automation/blob/b7be7bf3096a040fc5c0ec0950cb9f21b1d74719/.cursorrules",
+        "size": 63.84,
+        "timestamp": "2025-07-19T08:15:46.539Z"
+      }
+    ],
+    [
+      "wangchangdog/railway-todo-app/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/wangchangdog/railway-todo-app/d80d749bef1152123aaa33c982a098fe07002207/.cursorrules",
+        "repositoryId": 1017291341,
+        "path": "wangchangdog/railway-todo-app/.cursorrules",
+        "ownerName": "wangchangdog",
+        "repositoryName": "railway-todo-app",
+        "htmlUrl": "https://github.com/wangchangdog/railway-todo-app/blob/d80d749bef1152123aaa33c982a098fe07002207/.cursorrules",
+        "size": 4.51,
+        "timestamp": "2025-07-19T08:15:47.472Z"
+      }
+    ],
+    [
+      "ethantrent/portfolio/.cursor/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ethantrent/portfolio/2fa14548378e1455744b1609e3224f68dfebf109/.cursor/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 999062516,
+        "path": "ethantrent/portfolio/.cursor/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "ethantrent",
+        "repositoryName": "portfolio",
+        "htmlUrl": "https://github.com/ethantrent/portfolio/blob/2fa14548378e1455744b1609e3224f68dfebf109/.cursor/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "size": 6.32,
+        "timestamp": "2025-07-19T08:15:48.283Z"
+      }
+    ],
+    [
+      "ethantrent/ibcmarketplace/.cursor/rules/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ethantrent/ibcmarketplace/ff1f278e981f830714a421c142dee12afa20312d/.cursor/rules/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "repositoryId": 992903061,
+        "path": "ethantrent/ibcmarketplace/.cursor/rules/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "ownerName": "ethantrent",
+        "repositoryName": "ibcmarketplace",
+        "htmlUrl": "https://github.com/ethantrent/ibcmarketplace/blob/ff1f278e981f830714a421c142dee12afa20312d/.cursor/rules/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "size": 3.59,
+        "timestamp": "2025-07-19T08:15:48.342Z"
+      }
+    ],
+    [
+      "ai-cherry/sophia-main/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ai-cherry/sophia-main/621690f33f44a76b7f7a3cbf7d717fcd01d7119d/.cursorrules",
+        "repositoryId": 1003080970,
+        "path": "ai-cherry/sophia-main/.cursorrules",
+        "ownerName": "ai-cherry",
+        "repositoryName": "sophia-main",
+        "htmlUrl": "https://github.com/ai-cherry/sophia-main/blob/621690f33f44a76b7f7a3cbf7d717fcd01d7119d/.cursorrules",
+        "size": 8.92,
+        "timestamp": "2025-07-19T08:15:49.614Z"
+      }
+    ],
+    [
+      "leonardogrig/the-ai-forger-starter-kit/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/leonardogrig/the-ai-forger-starter-kit/0cd22751045d0230fa07d78aa6dc4426ad117977/.cursorrules",
+        "repositoryId": 1003199601,
+        "path": "leonardogrig/the-ai-forger-starter-kit/.cursorrules",
+        "ownerName": "leonardogrig",
+        "repositoryName": "the-ai-forger-starter-kit",
+        "htmlUrl": "https://github.com/leonardogrig/the-ai-forger-starter-kit/blob/0cd22751045d0230fa07d78aa6dc4426ad117977/.cursorrules",
+        "size": 7.32,
+        "timestamp": "2025-07-19T08:15:49.849Z"
+      }
+    ],
+    [
+      "PlenipotentiaryFounder/desert-skies-portal/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/PlenipotentiaryFounder/desert-skies-portal/491d977e507b4e2ccfa74030744531c0c405feaf/.cursorrules",
+        "repositoryId": 987902020,
+        "path": "PlenipotentiaryFounder/desert-skies-portal/.cursorrules",
+        "ownerName": "PlenipotentiaryFounder",
+        "repositoryName": "desert-skies-portal",
+        "htmlUrl": "https://github.com/PlenipotentiaryFounder/desert-skies-portal/blob/491d977e507b4e2ccfa74030744531c0c405feaf/.cursorrules",
+        "size": 6.25,
+        "timestamp": "2025-07-19T08:15:50.119Z"
+      }
+    ],
+    [
+      "ZAM-HH-LLC/CrittrCoveStaging/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ZAM-HH-LLC/CrittrCoveStaging/5235d8ce6744b92e7190e9e1aa6386f3e2f40e0c/.cursorrules",
+        "repositoryId": 931853552,
+        "path": "ZAM-HH-LLC/CrittrCoveStaging/.cursorrules",
+        "ownerName": "ZAM-HH-LLC",
+        "repositoryName": "CrittrCoveStaging",
+        "htmlUrl": "https://github.com/ZAM-HH-LLC/CrittrCoveStaging/blob/5235d8ce6744b92e7190e9e1aa6386f3e2f40e0c/.cursorrules",
+        "size": 13.75,
+        "timestamp": "2025-07-19T08:15:50.259Z"
       }
     ]
   ]

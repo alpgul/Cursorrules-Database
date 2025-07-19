@@ -1,0 +1,290 @@
+───────────────────────────
+CURSOR PROJECT GUIDELINES
+───────────────────────────
+
+### 0. How Cursor should answer  
+1. Always state exactly what you changed at the end of the response, and give a brief summary of what you're about to implement before implementing it.  
+2. Never edit code, comments, or styling you were not asked to explicitly touch.  
+3. Finish every response with a short “Summary:” line.  
+4. Think about what i ask you in terms of either a senior software engineer, or a senior software architect if i am asking architectural questions.
+5. Cursor MUST NOT output or execute any Git commands (add/commit/push/pull) or removal commands without permission, other than that, you can run the commands.
+6. Cursor MUST NOT try to run the frontend server themselves when responding unless asked to.
+
+---
+
+### 1. Logging & Debugging  
+1. When adding `console.log` in **JS/TS** files, use:  
+   ```js
+   debugLog("MBA<NNNN>: <message>", data);
+   ```  
+   * Use the same X‑digit `<NNNN>` for **all** logs added in one change or in one chat session if that whole session is discussing the same issue.  
+   * DO NOT use the MBA3210 anymore. 
+   * DO NOT use the debugLog function in the backend.
+2. Remind me to filter logs with `MBA<NNNN>` in your explanation of what you changed at the end.
+3. Replace all use cases of is_DEBUG with the debugLog function. 
+
+---
+
+### 2. Time & Date Rules  
+1. All times stored in DB and sent over API are UTC, “YYYY‑MM‑DD HH:mm”.* Frontend will convert these to MM-DD-YYYY and the user's timezone using time_utils.js 
+
+| Direction |                    Frontend action                          |    Backend action   |
+|-----------|-------------------------------------------------------------|---------------------|
+| To API    |           Convert user TZ ➜ UTC via **time_utils.js**       | Store UTC           |
+| From API  | Receive UTC -> Convert UTC to user TZ using time_utils.js   | Send UTC date times |
+
+2. Use `formatDateTimeRangeFromUTC` for ranges; otherwise `formatFromUTC`.
+3. Any new functions that deal with date or time formatting should be coded in time_utils.js
+
+
+---
+
+### 3. Backend (Django + DRF) - /Users/mattaertker/Documents/GitHub/CrittrCoveStaging/backend/zenexotics_backend
+1. Endpoint pattern: `/api/<app>/v1/...`  
+2. Auth helpers in core/common_checks.py:  
+   * `is_professional(request.user)`  
+   * `owns_service(request.user, service)`  
+3. Avoid code duplication—centralise shared logic.
+4. Add any constants that may be used multiple times to the constants.py. 
+5. Never modify code in <app_name>/views.py or <app_name>/urls.py unless explicitly told to do so.
+6. NEVER try to run the backend server yourself in your responses to me. DO NOT USE THE "runserver" COMMAND.
+7. When trying to run makemigrations/migrate, be sure to activate the virtual environment first.
+8. ALWAYS use pip3 or python3 to run commands, NEVER run pip or python. ALWAYS active the venv first. 
+
+---
+
+### 4. Frontend (React Native) - located: /Users/mattaertker/Documents/GitHub/CrittrCoveStaging/CrittrCoveStaging/package.json
+1. **Never** reference `is_prototype` outside *AuthContext.js* and the sign‑in page; delete any other occurrences.  
+2. Place new API calls in `src/api/API.js` with a doc‑comment header.
+3. NEVER use Alert.alert. Either create a modal for the alert, or use toasts like ProfileInfoTab.js does. 
+4. Error/success responses → show modal + toast.  
+5. Reduce needless round‑trips (e.g., only save pets/services if modified).
+6. NEVER create new components in the ui or edit the styling of the ui unless explicitly told to do so.
+7. NEVER try to run the frontend server yourself in your responses to me. DO NOT USE THE "npm run start" COMMAND.
+8. ALWAYS make the code compatible on web/ios/android versions.
+9. ALWAYS keep file lengths below 1500 lines of code, and break them up where needed to other files if they exceed that length (except for MessageHistory.js, don't touch this file in terms of breaking it up). 
+
+---
+
+### 5. Data & Naming Conventions  
+| Aspect | Rule |
+|--------|------|
+| Variables | **snake_case** everywhere (`unit_of_time`) |
+| Values | **Title Case** exactly as user sees (`"Dog"`, `"Per Visit"`) |
+| Front ↔ Back | Names must match 1‑for‑1—no mapping tables if possible. |
+| Duplication | Don’t send the same field twice in JSON. Follow DRY Principles. This goes for functions, locations, and anything where code is duplicated, do not repeat yourself, call centralized functions that have the same code bodies. |
+
+---
+
+### 6. Styling  
+*Cursor MUST NOT change any CSS / Tailwind / StyleSheet unless explicitly told.*
+
+---
+
+### 7. File locations (absolute paths)  
+* backend: `/Users/mattaertker/Documents/GitHub/CrittrCoveStaging/backend/zenexotics_backend`  
+* frontend: `/Users/mattaertker/Documents/GitHub/CrittrCoveStaging/CrittrCoveStaging`
+
+---
+
+### 8. Debugging myths  
+1. 404 after a change is almost never the backend URL—check imports & variables first.
+
+---
+
+### 9. Booking Architecture Invariants
+───────────────────────────
+• Booking creation MUST call BookingSummaryService.create_or_update_from_draft().
+• Never hand‑code subtotal / fee maths; rely on BookingSummaryService.
+• Signals on BookingOccurrence & BookingOccurrenceRate MUST trigger
+  BookingSummaryService.recalculate_from_occurrence_change().
+• Taxes are computed ONLY via BookingSummary.taxes → core.tax_utils.calculate_taxes();
+  do not duplicate tax logic.
+• Platform fee overrides come from draft; otherwise auto‑calculated in the service.
+• Treat booking_summary, booking_occurrences, booking_occurrence_rates as
+  single‑source‑of‑truth tables—no direct writes outside the approved services/signals.
+• Python code MUST pass `ruff check` and `black --check`.
+• JS/TS MUST pass `eslint` and `prettier`.
+• Cursor should auto‑fix violations or warn me.
+• For new backend models, Cursor MUST create a migration and list its filename in the Summary.
+
+
+---
+
+### 10. Testing 
+• New backend logic → add pytest unit test(s) under backend/<app>/tests/.
+• New frontend utility functions → add Jest tests in __tests__/
+• Tests must run with `pytest -q` and `npm test --passWithNoTests`.
+
+---
+
+### 11. Security & Secrets
+• No hard‑coded credentials. Use `environ.get("VAR")` in Django settings and
+  `react-native-dotenv` on the frontend.
+• Cursor must warn if new third‑party libs are added without review.
+
+---
+
+### 12. Error Handling & Status Codes
+• DRF views: return 4XX for client errors, 5XX only for unexpected exceptions.
+• Cursor MUST wrap risky DB ops in `transaction.atomic()` and log exceptions
+  with `logger.exception`.
+• Frontend API wrapper must surface `response.data.detail` in toast.
+
+---
+
+### 13. Seed Data & Migrations
+• Whenever a model changes, Cursor must create a Django migration file and
+  list its filename in the Summary block.
+• Seed data or fixtures go in backend/fixtures/; never hard‑code test data
+  in migrations.
+
+---
+
+### 14. TYPESCRIPT & TYPE‑SAFETY
+Frontend (React Native)
+• Any **new** component, hook, context, or util MUST be written in TypeScript
+  (.ts / .tsx). Legacy .js files may stay, but if you touch one you must either
+  convert it or prepend `// @ts-check` and add JSDoc typedefs.
+• Place shared DTO / API‑response interfaces in `src/types/` and import them
+  everywhere (components + API wrapper) – no inline `any`.
+• `tsc --noEmit --strict` must compile cleanly after Cursor’s changes.
+
+### API Token Management in CrittrCove
+
+1. **Never manually handle authentication tokens in API calls** - Token management is handled through the AuthContext component.
+
+2. **All API calls should be made using the axios instance** which is automatically configured with interceptors in AuthContext.js that:
+   - Add the authentication token to every request automatically
+   - Handle token refresh when tokens expire
+   - Implement a circuit breaker pattern for auth failures
+   - Provide error handling for authentication issues
+
+3. **Do NOT:**
+   - Use `getStorage('userToken')` to retrieve tokens manually
+   - Set Authorization headers manually in API calls
+   - Add token handling logic in individual API functions
+
+4. **Example of correct API function implementation:**
+   ```javascript
+   export const someApiFunction = async (params) => {
+     try {
+       // No manual token handling
+       const response = await axios.get(`${API_BASE_URL}/api/endpoint/`, {
+         params: params
+       });
+       
+       return response.data;
+     } catch (error) {
+       // Error handling
+       throw error;
+     }
+   };
+   ```
+
+5. **How token management works in AuthContext:**
+   - Interceptors automatically attach tokens to all requests
+   - Tokens are refreshed preemptively before they expire
+   - Invalid tokens trigger automatic sign-out
+   - All token storage and retrieval is centralized in the AuthContext
+
+6. **Testing API calls:**
+   - Use the debugLog function to track API requests and responses
+   - Always use consistent log codes (e.g., 'MBA1234') for related functionality
+   - Include appropriate error handling that captures detailed error information 
+
+Backend (Django + DRF)
+• Serializers MUST declare explicit fields – never use `fields = "__all__"`.
+• New or modified models must specify field types with Django field classes.
+
+Cross‑cutting invariants
+• Key names travelling between back‑end and front‑end must match 1‑for‑1
+  (snake_case).  
+• Cursor must fix or warn about any type errors it introduces.
+
+### Server Operation Rules
+1. **ABSOLUTE PROHIBITION**: Cursor MUST NEVER run any server (frontend, backend, development server, etc.) commands like:
+   - `npm run start`, `npm run dev`, `npm run web`, `npm run ios`, `npm run android`, `npm run build`,`npm run build:ios`, `npm run build:android`, `npm run build:web`, `npm run build:all`
+   - `python manage.py runserver`
+   - Any command that starts a server process
+   - Any command containing keywords like "start", "run", "serve", "dev", etc. that might run a server
+
+2. **Server Operation**: The user ALWAYS handles server operations manually on their own system. Cursor MUST limit its role to:
+   - Code modifications
+   - Static file operations
+   - Non-server git operations that don't commit/push
+   - Information gathering through passive commands
+
+3. **When Server Operations Are Mentioned**:
+   - Explain that server operations should be performed by the user
+   - Provide the command the user should run themselves, but NEVER use run_terminal_cmd to execute it
+   - If needed, suggest testing alternatives that don't require a running server
+
+
+### 15. DRY PRINCIPLES & CODE DUPLICATION PREVENTION
+**CRITICAL**: Cursor MUST NEVER duplicate utility functions, validation logic, or business logic across multiple files.
+
+**Before implementing any function or logic:**
+1. **SEARCH FIRST**: Always search the codebase for existing similar functions before writing new ones
+2. **CHECK IMPORTS**: Look for existing utility files in `src/utils/`, `src/data/`, `src/validation/`, etc. Or for the backend: `zenexotics_backend/core/`.
+3. **CREATE SHARED UTILITIES**: If similar logic exists in multiple files or even the same file, extract to a shared utility file
+4. **IMPORT DON'T COPY**: Always import shared functions rather than copying code between files
+
+**When you find duplicated code:**
+1. **IMMEDIATELY REFACTOR**: Create a shared utility file and update all files to import from it
+2. **DOCUMENT USAGE**: Add clear JSDoc comments explaining what the function does and where it's used
+3. **UPDATE IMPORTS**: Replace all duplicated code with imports from the shared utility
+
+**Common places to check for existing utilities:**
+- `src/utils/` - General utility functions
+- `src/data/` - Data processing and sanitization functions  
+- `src/validation/` - Validation logic
+- `src/helpers/` - Helper functions
+- `src/constants/` - Shared constants
+- `zenexotics_backend/core/` - Backend utility functions
+
+**Example of CORRECT approach:**
+```javascript
+// ❌ WRONG - Duplicating sanitization logic
+// File 1: ConversationList.js
+const sanitizeContactDetails = (content) => { /* duplicate logic */ };
+
+// File 2: MessageList.js  
+const sanitizeContactDetails = (content) => { /* duplicate logic */ };
+
+// ✅ CORRECT - Shared utility
+// File: src/data/contactSanitization.js
+export const sanitizeContactDetails = (content) => { /* shared logic */ };
+
+// File 1: ConversationList.js
+import { sanitizeContactDetails } from '../../data/contactSanitization';
+
+// File 2: MessageList.js
+import { sanitizeContactDetails } from '../../data/contactSanitization';
+```
+
+**PENALTY**: If you duplicate code instead of creating shared utilities, you must immediately refactor and create the shared utility file.
+
+---
+
+Design Tips to follow when coding certain frontend components:
+### Click-Outside-to-Close Dropdown Pattern
+When implementing dropdowns that should close when clicking outside:
+
+1. **Structure**: Use Modal > TouchableOpacity (overlay) > dropdown content
+2. **Overlay**: Single TouchableOpacity with `activeOpacity={1}` and `onPress={closeDropdown}`
+3. **Event Blocking**: Add `onPress={(e) => e.stopPropagation()}` to ALL interactive elements inside the overlay
+4. **Dropdown Content**: Wrap dropdown lists in TouchableOpacity with `activeOpacity={1}` and `onPress={(e) => e.stopPropagation()}`
+5. **Never**: Use nested TouchableWithoutFeedback or multiple overlay layers
+
+Example:
+```jsx
+<Modal visible={showDropdown}>
+  <TouchableOpacity style={styles.overlay} activeOpacity={1} onPress={closeDropdown}>
+    <TouchableOpacity style={styles.content} activeOpacity={1} onPress={(e) => e.stopPropagation()}>
+      <TouchableOpacity onPress={(e) => e.stopPropagation()}>{/* buttons */}</TouchableOpacity>
+    </TouchableOpacity>
+  </TouchableOpacity>
+</Modal>
+```
+```
