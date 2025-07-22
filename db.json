@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 1829,
+  "size": 1840,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -25606,6 +25606,160 @@
         "htmlUrl": "https://github.com/ZAM-HH-LLC/CrittrCoveStaging/blob/5235d8ce6744b92e7190e9e1aa6386f3e2f40e0c/.cursorrules",
         "size": 13.75,
         "timestamp": "2025-07-19T08:15:50.259Z"
+      }
+    ],
+    [
+      "MasoodZaf/pakistani-tax-advisor/.cursorrules.md",
+      {
+        "name": ".cursorrules.md",
+        "downloadUrl": "https://raw.githubusercontent.com/MasoodZaf/pakistani-tax-advisor/fa192d26a67c71928302c2f79487baac659a05fe/.cursorrules.md",
+        "repositoryId": 1019046388,
+        "path": "MasoodZaf/pakistani-tax-advisor/.cursorrules.md",
+        "ownerName": "MasoodZaf",
+        "repositoryName": "pakistani-tax-advisor",
+        "htmlUrl": "https://github.com/MasoodZaf/pakistani-tax-advisor/blob/fa192d26a67c71928302c2f79487baac659a05fe/.cursorrules.md",
+        "size": 1.23,
+        "timestamp": "2025-07-22T08:19:04.118Z"
+      }
+    ],
+    [
+      "runwhen-contrib/rw-cli-codecollection/codebundles/azure-vm-os-health/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/runwhen-contrib/rw-cli-codecollection/439698b065b710c74a95a1ce6cb14a06a8636b2d/codebundles/azure-vm-os-health/.cursorrules",
+        "repositoryId": 629160683,
+        "path": "runwhen-contrib/rw-cli-codecollection/codebundles/azure-vm-os-health/.cursorrules",
+        "ownerName": "runwhen-contrib",
+        "repositoryName": "rw-cli-codecollection",
+        "htmlUrl": "https://github.com/runwhen-contrib/rw-cli-codecollection/blob/439698b065b710c74a95a1ce6cb14a06a8636b2d/codebundles/azure-vm-os-health/.cursorrules",
+        "size": 8.78,
+        "timestamp": "2025-07-22T08:19:04.620Z"
+      }
+    ],
+    [
+      "jcdoll/purpleAirRelayControl/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/jcdoll/purpleAirRelayControl/f1ca740592a073ca7419d0b1c8d3d2aca74a245b/.cursorrules",
+        "repositoryId": 405450342,
+        "path": "jcdoll/purpleAirRelayControl/.cursorrules",
+        "ownerName": "jcdoll",
+        "repositoryName": "purpleAirRelayControl",
+        "htmlUrl": "https://github.com/jcdoll/purpleAirRelayControl/blob/f1ca740592a073ca7419d0b1c8d3d2aca74a245b/.cursorrules",
+        "size": 3.01,
+        "timestamp": "2025-07-22T08:19:05.272Z"
+      }
+    ],
+    [
+      "Greenborn/precios/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Greenborn/precios/07e369bc676dc18cec895065cd674c43799e907d/.cursorrules",
+        "repositoryId": 535429224,
+        "path": "Greenborn/precios/.cursorrules",
+        "ownerName": "Greenborn",
+        "repositoryName": "precios",
+        "htmlUrl": "https://github.com/Greenborn/precios/blob/07e369bc676dc18cec895065cd674c43799e907d/.cursorrules",
+        "size": 3.82,
+        "timestamp": "2025-07-22T08:19:09.565Z"
+      }
+    ],
+    [
+      "gracejiang0612/DCWP-Consumer-Complaints/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/gracejiang0612/DCWP-Consumer-Complaints/e3ada9b283aa747d337404bbedbf40faaa7c64d4/.cursorrules",
+        "repositoryId": 1007488814,
+        "path": "gracejiang0612/DCWP-Consumer-Complaints/.cursorrules",
+        "ownerName": "gracejiang0612",
+        "repositoryName": "DCWP-Consumer-Complaints",
+        "htmlUrl": "https://github.com/gracejiang0612/DCWP-Consumer-Complaints/blob/e3ada9b283aa747d337404bbedbf40faaa7c64d4/.cursorrules",
+        "size": 4.03,
+        "timestamp": "2025-07-22T08:19:09.885Z"
+      }
+    ],
+    [
+      "youcaiyouaiwan123/cursorRules/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/youcaiyouaiwan123/cursorRules/6b4287c5898c3c48c1528f3bed9ec6b83b66cefe/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1010665775,
+        "path": "youcaiyouaiwan123/cursorRules/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "youcaiyouaiwan123",
+        "repositoryName": "cursorRules",
+        "htmlUrl": "https://github.com/youcaiyouaiwan123/cursorRules/blob/6b4287c5898c3c48c1528f3bed9ec6b83b66cefe/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "size": 7.64,
+        "timestamp": "2025-07-22T08:19:10.656Z"
+      }
+    ],
+    [
+      "ethantrent/ClearReq/.cursor/rules-new/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ethantrent/ClearReq/e80b07a5eadd2fbea78ea1d8a4b9304eea91dce7/.cursor/rules-new/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "repositoryId": 1022177862,
+        "path": "ethantrent/ClearReq/.cursor/rules-new/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "ownerName": "ethantrent",
+        "repositoryName": "ClearReq",
+        "htmlUrl": "https://github.com/ethantrent/ClearReq/blob/e80b07a5eadd2fbea78ea1d8a4b9304eea91dce7/.cursor/rules-new/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "size": 3.59,
+        "timestamp": "2025-07-22T08:19:12.697Z"
+      }
+    ],
+    [
+      "zackees/fastled-wasm/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/zackees/fastled-wasm/438e966deb7ca4b8ae6285302e5441bcf3642bd5/.cursorrules",
+        "repositoryId": 879109706,
+        "path": "zackees/fastled-wasm/.cursorrules",
+        "ownerName": "zackees",
+        "repositoryName": "fastled-wasm",
+        "htmlUrl": "https://github.com/zackees/fastled-wasm/blob/438e966deb7ca4b8ae6285302e5441bcf3642bd5/.cursorrules",
+        "size": 2.74,
+        "timestamp": "2025-07-22T08:19:12.838Z"
+      }
+    ],
+    [
+      "loopback-labs/House-help/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/loopback-labs/House-help/0a2cd135554e4c6d6ea9fa3316c0b3d694d5f03d/.cursorrules",
+        "repositoryId": 874401437,
+        "path": "loopback-labs/House-help/.cursorrules",
+        "ownerName": "loopback-labs",
+        "repositoryName": "House-help",
+        "htmlUrl": "https://github.com/loopback-labs/House-help/blob/0a2cd135554e4c6d6ea9fa3316c0b3d694d5f03d/.cursorrules",
+        "size": 19.73,
+        "timestamp": "2025-07-22T08:19:13.193Z"
+      }
+    ],
+    [
+      "Keddib/diditui-v2/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Keddib/diditui-v2/c17a129091a00210eec37de69275d72e76eecc5e/.cursorrules",
+        "repositoryId": 1009576058,
+        "path": "Keddib/diditui-v2/.cursorrules",
+        "ownerName": "Keddib",
+        "repositoryName": "diditui-v2",
+        "htmlUrl": "https://github.com/Keddib/diditui-v2/blob/c17a129091a00210eec37de69275d72e76eecc5e/.cursorrules",
+        "size": 1.73,
+        "timestamp": "2025-07-22T08:19:16.885Z"
+      }
+    ],
+    [
+      "FORN-studio/forn.dk/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/FORN-studio/forn.dk/413231361519f837f369435ecfaa117d80f4a41b/.cursorrules",
+        "repositoryId": 962011518,
+        "path": "FORN-studio/forn.dk/.cursorrules",
+        "ownerName": "FORN-studio",
+        "repositoryName": "forn.dk",
+        "htmlUrl": "https://github.com/FORN-studio/forn.dk/blob/413231361519f837f369435ecfaa117d80f4a41b/.cursorrules",
+        "size": 17.44,
+        "timestamp": "2025-07-22T08:19:17.343Z"
       }
     ]
   ]
