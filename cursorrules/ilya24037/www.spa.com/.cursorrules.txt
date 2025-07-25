@@ -1,0 +1,482 @@
+# 🎯 SPA PLATFORM - ПРАВИЛА ДЛЯ НОВИЧКА (МОДУЛЬНАЯ АРХИТЕКТУРА)
+
+## 👶 ВАЖНО: ПРОЕКТ ДЛЯ НОВИЧКА
+**Разрабатывает:** новичок + ИИ помощник
+**Поддерживает:** тот же новичок
+**Принцип:** код должен быть понятен через 6 месяцев
+
+### Правила для ИИ при работе с новичком:
+1. **Объясняй каждое решение** - почему именно так
+2. **Давай альтернативы** - "можно так или так"
+3. **Предупреждай о сложностях** - что может сломаться
+4. **Показывай примеры** - как это работает на практике
+5. **Пиши понятные имена** - не `fn()`, а `calculateTotalPrice()`
+
+## 📋 О ПРОЕКТЕ
+**Платформа услуг массажа** = дизайн **Ozon** + функционал **Avito**
+- Язык: **ТОЛЬКО русский** (включая комментарии)
+- База: MySQL (прод)
+- **Цель:** создать платформу, которую сможет поддерживать один человек
+
+## 💻 ТЕХНИЧЕСКИЙ СТЕК
+```
+Backend: Laravel 12, PHP 8.2+
+Frontend: Vue 3 (Composition API), Inertia.js, Pinia
+Стили: Tailwind CSS
+Сборка: Vite
+```
+
+## 🏗️ МОДУЛЬНАЯ АРХИТЕКТУРА (КАК НА БОЛЬШИХ САЙТАХ)
+
+### ПРИНЦИП: Один модуль = одна функция
+```
+❌ ПЛОХО: MasterProfile.vue (2000 строк)
+✅ ХОРОШО: 
+   - MasterProfile/index.vue (композиция)
+   - MasterProfile/Header.vue (шапка)
+   - MasterProfile/Gallery.vue (галерея)
+   - MasterProfile/Services.vue (услуги)
+   - MasterProfile/Reviews.vue (отзывы)
+```
+
+### Структура модулей (как у Ozon/Avito)
+```
+resources/js/
+├── Components/
+│   ├── UI/              # Базовые элементы
+│   │   ├── Button/
+│   │   │   ├── Button.vue (основной компонент)
+│   │   │   ├── ButtonIcon.vue (с иконкой)
+│   │   │   └── ButtonGroup.vue (группа кнопок)
+│   │   ├── Card/
+│   │   │   ├── Card.vue
+│   │   │   ├── CardHeader.vue
+│   │   │   └── CardFooter.vue
+│   │   └── Form/
+│   │       ├── Input.vue
+│   │       ├── Select.vue
+│   │       └── Textarea.vue
+│   │
+│   ├── Master/          # Компоненты мастера
+│   │   ├── MasterCard/
+│   │   │   ├── index.vue (главный)
+│   │   │   ├── MasterCardImage.vue
+│   │   │   ├── MasterCardInfo.vue
+│   │   │   ├── MasterCardPrice.vue
+│   │   │   └── MasterCardActions.vue
+│   │   ├── MasterProfile/
+│   │   │   ├── index.vue
+│   │   │   ├── ProfileHeader.vue
+│   │   │   ├── ProfileGallery.vue
+│   │   │   ├── ProfileServices.vue
+│   │   │   └── ProfileReviews.vue
+│   │   └── MasterFilters/
+│   │       ├── index.vue
+│   │       ├── PriceFilter.vue
+│   │       ├── LocationFilter.vue
+│   │       └── CategoryFilter.vue
+│   │
+│   └── Common/          # Общие компоненты
+│       ├── Header/
+│       ├── Footer/
+│       └── Sidebar/
+│
+├── Composables/         # Переиспользуемая логика
+│   ├── useMaster.js    # Работа с мастерами
+│   ├── useBooking.js   # Бронирование
+│   ├── useFilters.js   # Фильтрация
+│   └── useAuth.js      # Авторизация
+│
+└── Pages/              # Страницы (тонкие)
+    ├── Masters/
+    │   ├── Index.vue   # Список (использует компоненты)
+    │   └── Show.vue    # Детальная (использует модули)
+    └── Bookings/
+        └── Create.vue
+```
+
+### Правила разбиения на модули
+
+#### 1. По размеру (как у Avito)
+```vue
+<!-- ❌ ПЛОХО: Один большой компонент -->
+<template>
+  <div class="master-card">
+    <!-- 500 строк кода -->
+  </div>
+</template>
+
+<!-- ✅ ХОРОШО: Разбито на части -->
+<template>
+  <Card class="master-card">
+    <MasterCardImage :images="master.images" />
+    <MasterCardInfo :master="master" />
+    <MasterCardPrice :price="master.price" />
+    <MasterCardActions 
+      :master-id="master.id"
+      @favorite="toggleFavorite"
+      @book="openBooking"
+    />
+  </Card>
+</template>
+```
+
+#### 2. По функциям (как у Ozon)
+```javascript
+// ❌ ПЛОХО: Вся логика в одном файле
+export default {
+  data() {
+    return {
+      masters: [],
+      filters: {},
+      favorites: [],
+      booking: {},
+      // ... еще 20 свойств
+    }
+  },
+  methods: {
+    loadMasters() {},
+    filterMasters() {},
+    addToFavorites() {},
+    createBooking() {},
+    // ... еще 30 методов
+  }
+}
+
+// ✅ ХОРОШО: Композиции по функциям
+import { useMasters } from '@/Composables/useMasters'
+import { useFilters } from '@/Composables/useFilters'
+import { useFavorites } from '@/Composables/useFavorites'
+
+export default {
+  setup() {
+    const { masters, loadMasters } = useMasters()
+    const { filters, applyFilters } = useFilters()
+    const { favorites, toggleFavorite } = useFavorites()
+    
+    return {
+      masters,
+      filters,
+      favorites
+    }
+  }
+}
+```
+
+#### 3. Максимальные размеры файлов
+```
+Компонент: максимум 200 строк
+Composable: максимум 150 строк
+Страница: максимум 100 строк (только композиция)
+CSS блок: максимум 50 строк (остальное в отдельные файлы)
+```
+
+### Примеры модульных компонентов
+
+#### Карточка мастера (модульная структура)
+```vue
+<!-- Components/Master/MasterCard/index.vue -->
+<template>
+  <article class="master-card">
+    <MasterCardImage 
+      :src="master.avatar"
+      :alt="master.name"
+      :badges="master.badges"
+      @favorite="$emit('favorite')"
+    />
+    
+    <MasterCardInfo 
+      :name="master.name"
+      :rating="master.rating"
+      :reviews-count="master.reviews_count"
+      :specialization="master.specialization"
+    />
+    
+    <MasterCardPrice 
+      :price-from="master.price_from"
+      :discount="master.discount"
+    />
+    
+    <MasterCardActions 
+      :master-id="master.id"
+      :phone="master.phone"
+      @book="$emit('book')"
+      @call="$emit('call')"
+    />
+  </article>
+</template>
+
+<script setup>
+// Только пропсы и эмиты - вся логика в дочерних компонентах
+defineProps({
+  master: {
+    type: Object,
+    required: true
+  }
+})
+
+defineEmits(['favorite', 'book', 'call'])
+</script>
+```
+
+#### Composable для работы с мастерами
+```javascript
+// Composables/useMasters.js
+export function useMasters() {
+  const masters = ref([])
+  const loading = ref(false)
+  const error = ref(null)
+  
+  // Загрузка списка
+  const loadMasters = async (filters = {}) => {
+    loading.value = true
+    error.value = null
+    
+    try {
+      const { data } = await axios.get('/api/masters', { params: filters })
+      masters.value = data.data
+    } catch (e) {
+      error.value = 'Не удалось загрузить мастеров'
+      console.error('Ошибка загрузки:', e)
+    } finally {
+      loading.value = false
+    }
+  }
+  
+  // Поиск по имени
+  const searchMasters = (query) => {
+    return masters.value.filter(master => 
+      master.name.toLowerCase().includes(query.toLowerCase())
+    )
+  }
+  
+  return {
+    masters: readonly(masters),
+    loading: readonly(loading),
+    error: readonly(error),
+    loadMasters,
+    searchMasters
+  }
+}
+```
+
+### Структура Laravel (модульная)
+
+#### Контроллеры (тонкие)
+```php
+// ❌ ПЛОХО: Толстый контроллер
+class MasterController extends Controller
+{
+    public function index(Request $request)
+    {
+        // 200 строк логики фильтрации
+        // 100 строк форматирования
+        // 50 строк кеширования
+    }
+}
+
+// ✅ ХОРОШО: Модульный подход
+class MasterController extends Controller
+{
+    public function __construct(
+        private MasterService $masterService,
+        private FilterService $filterService
+    ) {}
+    
+    public function index(MasterFilterRequest $request)
+    {
+        $filters = $this->filterService->parse($request);
+        $masters = $this->masterService->getFiltered($filters);
+        
+        return MasterResource::collection($masters);
+    }
+}
+```
+
+#### Сервисы (бизнес-логика)
+```php
+// app/Services/MasterService.php
+class MasterService
+{
+    public function getFiltered(array $filters): LengthAwarePaginator
+    {
+        return Master::query()
+            ->active()
+            ->withFilters($filters)
+            ->withRelations()
+            ->paginate(20);
+    }
+}
+
+// app/Services/BookingService.php  
+class BookingService
+{
+    public function create(array $data): Booking
+    {
+        // Валидация времени
+        $this->validateTimeSlot($data);
+        
+        // Создание брони
+        $booking = Booking::create($data);
+        
+        // Уведомления
+        $this->notificationService->bookingCreated($booking);
+        
+        return $booking;
+    }
+}
+```
+
+## 🎨 UI КОМПОНЕНТЫ (СТИЛЬ OZON)
+
+### Базовая кнопка (модульная)
+```vue
+<!-- Components/UI/Button/Button.vue -->
+<template>
+  <button 
+    :class="buttonClasses"
+    :disabled="disabled || loading"
+    @click="$emit('click', $event)"
+  >
+    <SpinnerIcon v-if="loading" class="w-4 h-4 animate-spin" />
+    <slot v-else />
+  </button>
+</template>
+
+<script setup>
+import { computed } from 'vue'
+import { useButtonStyles } from './useButtonStyles'
+
+const props = defineProps({
+  variant: {
+    type: String,
+    default: 'primary',
+    validator: (v) => ['primary', 'success', 'secondary'].includes(v)
+  },
+  size: {
+    type: String,
+    default: 'md',
+    validator: (v) => ['sm', 'md', 'lg'].includes(v)
+  },
+  disabled: Boolean,
+  loading: Boolean
+})
+
+const buttonClasses = computed(() => useButtonStyles(props))
+</script>
+```
+
+### Композиция стилей
+```javascript
+// Components/UI/Button/useButtonStyles.js
+export function useButtonStyles({ variant, size, disabled }) {
+  const base = 'font-medium rounded-lg transition-all transform active:scale-95'
+  
+  const variants = {
+    primary: 'bg-[#005BFF] hover:bg-[#0048CC] text-white',
+    success: 'bg-[#00D46A] hover:bg-[#00B055] text-white',
+    secondary: 'bg-white border border-gray-300 hover:border-[#005BFF]'
+  }
+  
+  const sizes = {
+    sm: 'px-3 py-1.5 text-sm',
+    md: 'px-4 py-2 text-base',
+    lg: 'px-6 py-3 text-lg'
+  }
+  
+  const state = disabled 
+    ? 'opacity-50 cursor-not-allowed' 
+    : 'cursor-pointer'
+  
+  return [base, variants[variant], sizes[size], state].join(' ')
+}
+```
+
+## 📱 МОБИЛЬНАЯ ВЕРСИЯ (ПРИОРИТЕТ)
+
+### Адаптивные компоненты
+```vue
+<!-- Компонент автоматически адаптируется -->
+<template>
+  <div class="master-grid">
+    <!-- Мобильная: 1 колонка, Планшет: 2, Десктоп: 3 -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <MasterCard 
+        v-for="master in masters" 
+        :key="master.id"
+        :master="master"
+      />
+    </div>
+  </div>
+</template>
+```
+
+## 📝 ФОРМАТ ОТВЕТОВ ДЛЯ НОВИЧКА
+
+### При создании модуля:
+```
+1. **Что делаем:** Создаем модуль карточки мастера
+
+2. **Структура файлов:**
+   Components/Master/MasterCard/
+   ├── index.vue (главный)
+   ├── MasterCardImage.vue (картинка)
+   └── MasterCardInfo.vue (информация)
+
+3. **Почему так:** 
+   - Легче найти нужный код
+   - Можно переиспользовать части
+   - Проще тестировать
+
+4. **Код каждого файла:** [с комментариями]
+
+5. **Как подключить:**
+   import MasterCard from '@/Components/Master/MasterCard'
+
+6. **Что проверить:**
+   - Работает на мобильном
+   - Все части отображаются
+   - Кнопки кликаются
+```
+
+### При создании функции:
+```
+1. **Название функции:** formatPrice (не fp или fmt)
+2. **Что делает:** Форматирует цену как "1 500 ₽"
+3. **Где разместить:** utils/formatters.js
+4. **Код с примерами:**
+   formatPrice(1500) // "1 500 ₽"
+   formatPrice(0) // "Бесплатно"
+```
+
+## ⚡ КОМАНДЫ ДЛЯ НОВИЧКА
+
+```bash
+# Создать компонент с папкой
+mkdir -p resources/js/Components/Master/MasterCard
+touch resources/js/Components/Master/MasterCard/index.vue
+
+# Создать сервис
+php artisan make:service MasterService
+
+# Проверить что работает
+npm run dev
+php artisan serve
+# Открыть http://localhost:8000
+```
+
+## ✅ ЧЕКЛИСТ МОДУЛЬНОСТИ
+
+Перед коммитом проверь:
+- [ ] Файл меньше 200 строк?
+- [ ] Одна функция = одна задача?
+- [ ] Есть комментарии на русском?
+- [ ] Понятные имена (не x, y, z)?
+- [ ] Можно переиспользовать в другом месте?
+- [ ] Легко найти через поиск?
+
+---
+**ПОМНИ:** 
+- Пиши так, чтобы ты сам понял через полгода
+- Лучше 5 маленьких файлов, чем 1 большой
+- Смотри как сделано на Ozon/Avito и делай похоже

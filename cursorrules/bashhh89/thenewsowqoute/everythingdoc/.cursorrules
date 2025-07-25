@@ -1,0 +1,237 @@
+# CURSOR RULES - PRODUCTION-READY DEVELOPMENT STANDARDS
+
+## CRITICAL DEVELOPMENT PRINCIPLES
+
+### NO TOLERANCE POLICY - ZERO EXCEPTIONS
+- **NO PLACEHOLDERS**: Never create placeholder functions, UI elements, data, or comments like "TODO: Implement later"
+- **NO MOCK DATA**: Never use fake data, sample data, or mock content to make things "look like they work"
+- **NO FALLBACK DATA**: If real functionality doesn't work, fix it - don't fake it with fallback content
+- **NO SHORTCUTS**: Every feature must be fully functional and production-ready from day one
+
+### PRODUCTION-READY REQUIREMENTS
+- All code must be robust with proper error handling
+- Complete implementation only - no partial or demo functionality
+- Real data integration - if API fails, show proper error states, not fake data
+- Professional error messages and user feedback
+- Full TypeScript type safety (when using TypeScript)
+- Comprehensive input validation and sanitization
+
+## DEVELOPMENT ENVIRONMENT PREFERENCES
+
+### Package Manager & Scripts
+- **ALWAYS use PNPM** - never use npm or yarn
+- **PowerShell Compatible**: Never use && for chaining commands (use ; or separate commands)
+- **Port Management**: Always kill all ports before restarting servers
+- **No Workarounds**: Build production-ready solutions, not temporary fixes
+
+### Code Quality Standards
+- **ESLint + Prettier**: Enforce consistent code formatting
+- **Type Safety**: Use TypeScript with strict mode enabled
+- **Error Boundaries**: Implement proper error handling at all levels
+- **Performance First**: Optimize for speed and efficiency from the start
+
+## ARCHITECTURE REQUIREMENTS
+
+### Real Data Implementation
+- Connect to actual APIs and databases
+- Implement proper loading states (not fake loading)
+- Handle real error scenarios with meaningful messages
+- Use actual authentication and authorization
+- Implement real-time data where applicable
+
+### No Development Shortcuts
+- No console.log statements in production code
+- No hardcoded values or magic numbers
+- No commented-out code blocks
+- No temporary variables or functions
+- No debug code or development-only features
+
+### Professional Standards
+- All functions must have proper return types
+- All components must handle edge cases
+- All forms must have validation
+- All API calls must have error handling
+- All user interactions must provide feedback
+
+## UI/UX REQUIREMENTS
+
+### Real Content Only
+- Use actual company branding and logos
+- Implement real text content, not Lorem ipsum
+- Show actual data from APIs, not sample data
+- Display real user information, not fake profiles
+- Use production-ready images and assets
+
+### Professional Interface
+- No "Under Construction" messages
+- No "Coming Soon" placeholders
+- No disabled buttons without explanation
+- No empty states without proper messaging
+- No broken or incomplete features
+
+### User Experience
+- All interactions must be functional
+- Loading states must reflect real operations
+- Error messages must be helpful and actionable
+- Success feedback must be meaningful
+- Navigation must be complete and working
+
+## TECHNICAL IMPLEMENTATION
+
+### Database & Backend
+- Use real database connections
+- Implement proper migrations and seeding
+- Handle database errors gracefully
+- Use environment variables for configuration
+- Implement proper security measures
+
+### API Integration
+- Connect to actual third-party services
+- Handle API rate limits and quotas
+- Implement proper retry mechanisms
+- Use real authentication tokens
+- Handle network failures appropriately
+
+### State Management
+- Use production-ready state management solutions
+- Implement proper data flow
+- Handle state persistence correctly
+- Manage async operations properly
+- Implement proper cleanup
+
+## TESTING & QUALITY ASSURANCE
+
+### Testing Requirements
+- Write actual tests, not placeholder tests
+- Test real functionality, not mocked behavior
+- Implement integration tests with real services
+- Test error scenarios and edge cases
+- Ensure tests pass before deployment
+
+### Performance Standards
+- Optimize bundle sizes
+- Implement code splitting where appropriate
+- Use proper caching strategies
+- Minimize API calls and database queries
+- Ensure fast load times
+
+## DEPLOYMENT REQUIREMENTS
+
+### Production Readiness
+- Environment-specific configurations
+- Proper secret management
+- SSL/TLS implementation
+- Security headers and CORS setup
+- Monitoring and logging
+
+### Documentation
+- Clear README with setup instructions
+- API documentation for all endpoints
+- Environment variable documentation
+- Deployment instructions
+- Troubleshooting guides
+
+## CODE STYLE PREFERENCES
+
+### File Organization
+```
+src/
+  components/       # Reusable UI components
+  pages/           # Page components
+  hooks/           # Custom React hooks
+  utils/           # Utility functions
+  types/           # TypeScript type definitions
+  api/             # API integration
+  store/           # State management
+  styles/          # Styling files
+```
+
+### Naming Conventions
+- Use descriptive, meaningful names
+- PascalCase for components and classes
+- camelCase for functions and variables
+- UPPER_CASE for constants
+- kebab-case for file names
+
+### Component Structure
+```typescript
+// Real implementation example
+const UserProfile: React.FC<UserProfileProps> = ({ userId }) => {
+  const { data: user, error, isLoading } = useUserQuery(userId);
+  
+  if (isLoading) return <LoadingSpinner />;
+  if (error) return <ErrorMessage error={error} />;
+  if (!user) return <UserNotFound />;
+  
+  return (
+    <div className="user-profile">
+      <Avatar src={user.avatar} alt={user.name} />
+      <h1>{user.name}</h1>
+      <p>{user.email}</p>
+    </div>
+  );
+};
+```
+
+## AI ASSISTANT GUIDELINES
+
+### When Building Features
+1. Implement complete functionality immediately
+2. Use real data sources and APIs
+3. Handle all error scenarios properly
+4. Provide meaningful user feedback
+5. Ensure mobile responsiveness
+6. Add proper TypeScript types
+7. Include comprehensive error handling
+
+### When Debugging Issues
+1. Fix the root cause, don't work around it
+2. Implement proper error logging
+3. Provide clear error messages to users
+4. Test the fix thoroughly
+5. Update documentation if needed
+
+### When Adding Dependencies
+1. Choose production-ready, well-maintained packages
+2. Minimize bundle size impact
+3. Ensure security and reliability
+4. Update package.json properly
+5. Document any configuration needed
+
+## DEPLOYMENT CHECKLIST
+
+Before any deployment:
+- [ ] All features are fully functional
+- [ ] No placeholder content remains
+- [ ] All APIs are connected and working
+- [ ] Error handling is comprehensive
+- [ ] Performance is optimized
+- [ ] Security measures are in place
+- [ ] Documentation is complete
+- [ ] Tests are passing
+- [ ] Environment variables are configured
+- [ ] Monitoring is set up
+
+## BUSINESS REQUIREMENTS
+
+### Client Delivery Standards
+- **Production Ready**: Client can simply run `pnpm install`, build, and start
+- **No Surprises**: Everything works exactly as demonstrated
+- **Professional Quality**: Meets enterprise-grade standards
+- **Complete Functionality**: No missing features or workarounds
+- **Reliable Performance**: Consistent, fast, and stable operation
+
+### Success Metrics
+- Zero placeholder content in final product
+- 100% functional features from day one
+- Professional user experience throughout
+- Real data integration working correctly
+- Proper error handling for all scenarios
+
+---
+
+## SUMMARY
+
+This project demands ZERO TOLERANCE for anything that isn't production-ready. Every single component, function, API call, and user interaction must be fully functional and professional from the moment it's implemented. No exceptions, no shortcuts, no temporary solutions.
+
+**Remember**: If it's not ready for the client to use in production, it's not ready to be built. 
