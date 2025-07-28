@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 1885,
+  "size": 1902,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -26390,6 +26390,244 @@
         "htmlUrl": "https://github.com/navinthedream/Shopify-Hackathon/blob/7614b03d4e6e9d54c93589f8bd60db86aca82037/.cursorrules",
         "size": 1.46,
         "timestamp": "2025-07-25T08:18:02.461Z"
+      }
+    ],
+    [
+      "SiriusFHJ/ShangAnNotes/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/SiriusFHJ/ShangAnNotes/62dd0108cccd44bcaf88087f1f09061842909d38/.cursorrules",
+        "repositoryId": 884042746,
+        "path": "SiriusFHJ/ShangAnNotes/.cursorrules",
+        "ownerName": "SiriusFHJ",
+        "repositoryName": "ShangAnNotes",
+        "htmlUrl": "https://github.com/SiriusFHJ/ShangAnNotes/blob/62dd0108cccd44bcaf88087f1f09061842909d38/.cursorrules",
+        "size": 4.01,
+        "timestamp": "2025-07-28T08:19:52.287Z"
+      }
+    ],
+    [
+      "longportapp/openapi-website/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/longportapp/openapi-website/bb3123302c942eb55f70a9d1a198fe4c6609e4d7/.cursorrules",
+        "repositoryId": 481440571,
+        "path": "longportapp/openapi-website/.cursorrules",
+        "ownerName": "longportapp",
+        "repositoryName": "openapi-website",
+        "htmlUrl": "https://github.com/longportapp/openapi-website/blob/bb3123302c942eb55f70a9d1a198fe4c6609e4d7/.cursorrules",
+        "size": 2.14,
+        "timestamp": "2025-07-28T08:19:52.517Z"
+      }
+    ],
+    [
+      "JStepUX/CardShark/docs/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/JStepUX/CardShark/76d7a48cd26a1ead0364fe23beb05d35c07648a1/docs/.cursorrules",
+        "repositoryId": 898329893,
+        "path": "JStepUX/CardShark/docs/.cursorrules",
+        "ownerName": "JStepUX",
+        "repositoryName": "CardShark",
+        "htmlUrl": "https://github.com/JStepUX/CardShark/blob/76d7a48cd26a1ead0364fe23beb05d35c07648a1/docs/.cursorrules",
+        "size": 31.41,
+        "timestamp": "2025-07-28T08:19:53.075Z"
+      }
+    ],
+    [
+      "adilmoujahid/p5js-ai-editor/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/adilmoujahid/p5js-ai-editor/c1d89d04f2b710ce60c787f979366c985f1085df/.cursorrules",
+        "repositoryId": 1001110379,
+        "path": "adilmoujahid/p5js-ai-editor/.cursorrules",
+        "ownerName": "adilmoujahid",
+        "repositoryName": "p5js-ai-editor",
+        "htmlUrl": "https://github.com/adilmoujahid/p5js-ai-editor/blob/c1d89d04f2b710ce60c787f979366c985f1085df/.cursorrules",
+        "size": 2.89,
+        "timestamp": "2025-07-28T08:19:53.423Z"
+      }
+    ],
+    [
+      "overtrue/pivot/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/overtrue/pivot/145c80c2877fa2e7aeb51873671bdf3ad846637d/.cursorrules",
+        "repositoryId": 959744584,
+        "path": "overtrue/pivot/.cursorrules",
+        "ownerName": "overtrue",
+        "repositoryName": "pivot",
+        "htmlUrl": "https://github.com/overtrue/pivot/blob/145c80c2877fa2e7aeb51873671bdf3ad846637d/.cursorrules",
+        "size": 5.45,
+        "timestamp": "2025-07-28T08:19:53.549Z"
+      }
+    ],
+    [
+      "lcorbitt/bitwerks/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/lcorbitt/bitwerks/eb527d8cb9b3cd934e3dbb4af10237042778a016/.cursorrules",
+        "repositoryId": 991440596,
+        "path": "lcorbitt/bitwerks/.cursorrules",
+        "ownerName": "lcorbitt",
+        "repositoryName": "bitwerks",
+        "htmlUrl": "https://github.com/lcorbitt/bitwerks/blob/eb527d8cb9b3cd934e3dbb4af10237042778a016/.cursorrules",
+        "size": 1.89,
+        "timestamp": "2025-07-28T08:19:56.893Z"
+      }
+    ],
+    [
+      "arvid-berndtsson/Chess-MCP/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/arvid-berndtsson/Chess-MCP/c9aeaa56bee0608b256be5334d7721ae3d7816e3/.cursorrules",
+        "repositoryId": 1026778506,
+        "path": "arvid-berndtsson/Chess-MCP/.cursorrules",
+        "ownerName": "arvid-berndtsson",
+        "repositoryName": "Chess-MCP",
+        "htmlUrl": "https://github.com/arvid-berndtsson/Chess-MCP/blob/c9aeaa56bee0608b256be5334d7721ae3d7816e3/.cursorrules",
+        "size": 2.63,
+        "timestamp": "2025-07-28T08:19:57.211Z"
+      }
+    ],
+    [
+      "martinfou/ocr-receipt/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/martinfou/ocr-receipt/3bc7b41a83f2ad1523e1cfd520bf611a39b51b2c/.cursorrules",
+        "repositoryId": 1023356922,
+        "path": "martinfou/ocr-receipt/.cursorrules",
+        "ownerName": "martinfou",
+        "repositoryName": "ocr-receipt",
+        "htmlUrl": "https://github.com/martinfou/ocr-receipt/blob/3bc7b41a83f2ad1523e1cfd520bf611a39b51b2c/.cursorrules",
+        "size": 8.92,
+        "timestamp": "2025-07-28T08:19:57.852Z"
+      }
+    ],
+    [
+      "XD3an/awesome-ai-coding-all-in-one/cursor/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/XD3an/awesome-ai-coding-all-in-one/ba540f27b73aa17b2a6c5fcde5d456987b66620c/cursor/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "repositoryId": 1019307077,
+        "path": "XD3an/awesome-ai-coding-all-in-one/cursor/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "ownerName": "XD3an",
+        "repositoryName": "awesome-ai-coding-all-in-one",
+        "htmlUrl": "https://github.com/XD3an/awesome-ai-coding-all-in-one/blob/ba540f27b73aa17b2a6c5fcde5d456987b66620c/cursor/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "size": 4.93,
+        "timestamp": "2025-07-28T08:19:59.283Z"
+      }
+    ],
+    [
+      "XD3an/awesome-ai-coding-all-in-one/cursor/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/XD3an/awesome-ai-coding-all-in-one/ba540f27b73aa17b2a6c5fcde5d456987b66620c/cursor/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1019307077,
+        "path": "XD3an/awesome-ai-coding-all-in-one/cursor/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "XD3an",
+        "repositoryName": "awesome-ai-coding-all-in-one",
+        "htmlUrl": "https://github.com/XD3an/awesome-ai-coding-all-in-one/blob/ba540f27b73aa17b2a6c5fcde5d456987b66620c/cursor/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "size": 6.32,
+        "timestamp": "2025-07-28T08:20:00.635Z"
+      }
+    ],
+    [
+      "leviethung2103/news-portal-version2/awesome-cursorrules/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/leviethung2103/news-portal-version2/7b904fa4d072269e28ef2bc9c53639816ab2b501/awesome-cursorrules/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "repositoryId": 1026627777,
+        "path": "leviethung2103/news-portal-version2/awesome-cursorrules/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "ownerName": "leviethung2103",
+        "repositoryName": "news-portal-version2",
+        "htmlUrl": "https://github.com/leviethung2103/news-portal-version2/blob/7b904fa4d072269e28ef2bc9c53639816ab2b501/awesome-cursorrules/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "size": 3.59,
+        "timestamp": "2025-07-28T08:20:01.083Z"
+      }
+    ],
+    [
+      "XD3an/awesome-ai-coding-all-in-one/cursor/rules/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/XD3an/awesome-ai-coding-all-in-one/ba540f27b73aa17b2a6c5fcde5d456987b66620c/cursor/rules/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1019307077,
+        "path": "XD3an/awesome-ai-coding-all-in-one/cursor/rules/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "XD3an",
+        "repositoryName": "awesome-ai-coding-all-in-one",
+        "htmlUrl": "https://github.com/XD3an/awesome-ai-coding-all-in-one/blob/ba540f27b73aa17b2a6c5fcde5d456987b66620c/cursor/rules/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+        "size": 6.25,
+        "timestamp": "2025-07-28T08:20:01.187Z"
+      }
+    ],
+    [
+      "Roasted-Codes/Dedi/old/Dedi-Bot-v1.1.1/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Roasted-Codes/Dedi/3364ad380ceb8dbd93484bd6c03ce017a10d314f/old/Dedi-Bot-v1.1.1/.cursorrules",
+        "repositoryId": 953122405,
+        "path": "Roasted-Codes/Dedi/old/Dedi-Bot-v1.1.1/.cursorrules",
+        "ownerName": "Roasted-Codes",
+        "repositoryName": "Dedi",
+        "htmlUrl": "https://github.com/Roasted-Codes/Dedi/blob/3364ad380ceb8dbd93484bd6c03ce017a10d314f/old/Dedi-Bot-v1.1.1/.cursorrules",
+        "size": 9.75,
+        "timestamp": "2025-07-28T08:20:03.660Z"
+      }
+    ],
+    [
+      "mono404/clean-architecture-spring-boot-coroutine/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/mono404/clean-architecture-spring-boot-coroutine/e547ee2099c7b73879d92b61e3f71bead70127f5/.cursorrules",
+        "repositoryId": 929350887,
+        "path": "mono404/clean-architecture-spring-boot-coroutine/.cursorrules",
+        "ownerName": "mono404",
+        "repositoryName": "clean-architecture-spring-boot-coroutine",
+        "htmlUrl": "https://github.com/mono404/clean-architecture-spring-boot-coroutine/blob/e547ee2099c7b73879d92b61e3f71bead70127f5/.cursorrules",
+        "size": 6.17,
+        "timestamp": "2025-07-28T08:20:05.335Z"
+      }
+    ],
+    [
+      "ethantrent/ibcmarketplace/.cursor/rules/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ethantrent/ibcmarketplace/ff1f278e981f830714a421c142dee12afa20312d/.cursor/rules/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 992903061,
+        "path": "ethantrent/ibcmarketplace/.cursor/rules/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "ethantrent",
+        "repositoryName": "ibcmarketplace",
+        "htmlUrl": "https://github.com/ethantrent/ibcmarketplace/blob/ff1f278e981f830714a421c142dee12afa20312d/.cursor/rules/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+        "size": 7.48,
+        "timestamp": "2025-07-28T08:20:05.960Z"
+      }
+    ],
+    [
+      "leonardogrig/forger-sheets-dashboard-example/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/leonardogrig/forger-sheets-dashboard-example/58e423363b7eb1ae0fb97c38f9359422a77fe338/.cursorrules",
+        "repositoryId": 1027307903,
+        "path": "leonardogrig/forger-sheets-dashboard-example/.cursorrules",
+        "ownerName": "leonardogrig",
+        "repositoryName": "forger-sheets-dashboard-example",
+        "htmlUrl": "https://github.com/leonardogrig/forger-sheets-dashboard-example/blob/58e423363b7eb1ae0fb97c38f9359422a77fe338/.cursorrules",
+        "size": 7.32,
+        "timestamp": "2025-07-28T08:20:06.162Z"
+      }
+    ],
+    [
+      "mono404/clean-architecture-spring-boot-coroutine/.cursor/rules/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/mono404/clean-architecture-spring-boot-coroutine/e547ee2099c7b73879d92b61e3f71bead70127f5/.cursor/rules/.cursorrules",
+        "repositoryId": 929350887,
+        "path": "mono404/clean-architecture-spring-boot-coroutine/.cursor/rules/.cursorrules",
+        "ownerName": "mono404",
+        "repositoryName": "clean-architecture-spring-boot-coroutine",
+        "htmlUrl": "https://github.com/mono404/clean-architecture-spring-boot-coroutine/blob/e547ee2099c7b73879d92b61e3f71bead70127f5/.cursor/rules/.cursorrules",
+        "size": 6.17,
+        "timestamp": "2025-07-28T08:20:06.293Z"
       }
     ]
   ]
