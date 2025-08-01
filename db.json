@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 1923,
+  "size": 1930,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -26922,6 +26922,104 @@
         "htmlUrl": "https://github.com/Danvid1009/shopify_hackathon_crewcart/blob/6d1e36d108492dbc5c5b1a73729455cafea7d14b/cocart/.cursorrules",
         "size": 1.46,
         "timestamp": "2025-07-31T08:19:01.196Z"
+      }
+    ],
+    [
+      "ActiveInferenceInstitute/GeneralizedNotationNotation/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ActiveInferenceInstitute/GeneralizedNotationNotation/a771f58507878a0372e6bff55c85c111999f0484/.cursorrules",
+        "repositoryId": 622673569,
+        "path": "ActiveInferenceInstitute/GeneralizedNotationNotation/.cursorrules",
+        "ownerName": "ActiveInferenceInstitute",
+        "repositoryName": "GeneralizedNotationNotation",
+        "htmlUrl": "https://github.com/ActiveInferenceInstitute/GeneralizedNotationNotation/blob/a771f58507878a0372e6bff55c85c111999f0484/.cursorrules",
+        "size": 8.26,
+        "timestamp": "2025-08-01T08:18:23.518Z"
+      }
+    ],
+    [
+      "klppl/brainbox/cursorrules/comprehensive.cursorrules",
+      {
+        "name": "comprehensive.cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/klppl/brainbox/fec4fac8dcece10a6876cbf9e4dbc1263d9d4913/cursorrules/comprehensive.cursorrules",
+        "repositoryId": 949329023,
+        "path": "klppl/brainbox/cursorrules/comprehensive.cursorrules",
+        "ownerName": "klppl",
+        "repositoryName": "brainbox",
+        "htmlUrl": "https://github.com/klppl/brainbox/blob/fec4fac8dcece10a6876cbf9e4dbc1263d9d4913/cursorrules/comprehensive.cursorrules",
+        "size": 9.73,
+        "timestamp": "2025-08-01T08:18:23.683Z"
+      }
+    ],
+    [
+      "nickytonline/mcp-typescript-template/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/nickytonline/mcp-typescript-template/b79327ac0883ea99a72ebcf26b4108f6f490df64/.cursorrules",
+        "repositoryId": 1029872721,
+        "path": "nickytonline/mcp-typescript-template/.cursorrules",
+        "ownerName": "nickytonline",
+        "repositoryName": "mcp-typescript-template",
+        "htmlUrl": "https://github.com/nickytonline/mcp-typescript-template/blob/b79327ac0883ea99a72ebcf26b4108f6f490df64/.cursorrules",
+        "size": 4.91,
+        "timestamp": "2025-08-01T08:18:29.652Z"
+      }
+    ],
+    [
+      "aa-del9/native-template/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/aa-del9/native-template/60bcb804004e7fe46fae7eda0b1285413cc4bf34/.cursorrules",
+        "repositoryId": 1030121520,
+        "path": "aa-del9/native-template/.cursorrules",
+        "ownerName": "aa-del9",
+        "repositoryName": "native-template",
+        "htmlUrl": "https://github.com/aa-del9/native-template/blob/60bcb804004e7fe46fae7eda0b1285413cc4bf34/.cursorrules",
+        "size": 4.61,
+        "timestamp": "2025-08-01T08:18:29.945Z"
+      }
+    ],
+    [
+      "XD3an/awesome-ai-coding-all-in-one/cursor/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/XD3an/awesome-ai-coding-all-in-one/643101fcdd06801d588957fcdee3206144b776fa/cursor/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1019307077,
+        "path": "XD3an/awesome-ai-coding-all-in-one/cursor/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "XD3an",
+        "repositoryName": "awesome-ai-coding-all-in-one",
+        "htmlUrl": "https://github.com/XD3an/awesome-ai-coding-all-in-one/blob/643101fcdd06801d588957fcdee3206144b776fa/cursor/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "size": 7.64,
+        "timestamp": "2025-08-01T08:18:31.848Z"
+      }
+    ],
+    [
+      "XD3an/awesome-ai-coding-all-in-one/cursor/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/XD3an/awesome-ai-coding-all-in-one/643101fcdd06801d588957fcdee3206144b776fa/cursor/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "repositoryId": 1019307077,
+        "path": "XD3an/awesome-ai-coding-all-in-one/cursor/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "ownerName": "XD3an",
+        "repositoryName": "awesome-ai-coding-all-in-one",
+        "htmlUrl": "https://github.com/XD3an/awesome-ai-coding-all-in-one/blob/643101fcdd06801d588957fcdee3206144b776fa/cursor/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "size": 3.59,
+        "timestamp": "2025-08-01T08:18:33.822Z"
+      }
+    ],
+    [
+      "jayleekr/sans-kids-school-2025/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/jayleekr/sans-kids-school-2025/60558a92e16b4469ffb17b1e8f816d8b580492e9/.cursorrules",
+        "repositoryId": 1030154826,
+        "path": "jayleekr/sans-kids-school-2025/.cursorrules",
+        "ownerName": "jayleekr",
+        "repositoryName": "sans-kids-school-2025",
+        "htmlUrl": "https://github.com/jayleekr/sans-kids-school-2025/blob/60558a92e16b4469ffb17b1e8f816d8b580492e9/.cursorrules",
+        "size": 9.09,
+        "timestamp": "2025-08-01T08:18:36.360Z"
       }
     ]
   ]
