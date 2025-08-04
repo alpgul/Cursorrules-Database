@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 1930,
+  "size": 1942,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -27020,6 +27020,174 @@
         "htmlUrl": "https://github.com/jayleekr/sans-kids-school-2025/blob/60558a92e16b4469ffb17b1e8f816d8b580492e9/.cursorrules",
         "size": 9.09,
         "timestamp": "2025-08-01T08:18:36.360Z"
+      }
+    ],
+    [
+      "TexasCoding/project-x-py/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/TexasCoding/project-x-py/37dbdcd076a945a67c8b5a830ed596b4c5d1898e/.cursorrules",
+        "repositoryId": 1021155542,
+        "path": "TexasCoding/project-x-py/.cursorrules",
+        "ownerName": "TexasCoding",
+        "repositoryName": "project-x-py",
+        "htmlUrl": "https://github.com/TexasCoding/project-x-py/blob/37dbdcd076a945a67c8b5a830ed596b4c5d1898e/.cursorrules",
+        "size": 11.59,
+        "timestamp": "2025-08-04T08:19:51.480Z"
+      }
+    ],
+    [
+      "Organica-Ai-Solutions/NIS_Protocol/system/nis-integrity-toolkit/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Organica-Ai-Solutions/NIS_Protocol/444ef7b3fd984e8f577415d0b18ca503bce4bc1a/system/nis-integrity-toolkit/.cursorrules",
+        "repositoryId": 977590833,
+        "path": "Organica-Ai-Solutions/NIS_Protocol/system/nis-integrity-toolkit/.cursorrules",
+        "ownerName": "Organica-Ai-Solutions",
+        "repositoryName": "NIS_Protocol",
+        "htmlUrl": "https://github.com/Organica-Ai-Solutions/NIS_Protocol/blob/444ef7b3fd984e8f577415d0b18ca503bce4bc1a/system/nis-integrity-toolkit/.cursorrules",
+        "size": 5.8,
+        "timestamp": "2025-08-04T08:19:52.650Z"
+      }
+    ],
+    [
+      "ai-coding-labs/cursor-rules/resources/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ai-coding-labs/cursor-rules/112b682dda22c4317632db7f036340b045622255/resources/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 987021729,
+        "path": "ai-coding-labs/cursor-rules/resources/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "ai-coding-labs",
+        "repositoryName": "cursor-rules",
+        "htmlUrl": "https://github.com/ai-coding-labs/cursor-rules/blob/112b682dda22c4317632db7f036340b045622255/resources/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "size": 7.64,
+        "timestamp": "2025-08-04T08:19:53.656Z"
+      }
+    ],
+    [
+      "pentius00/NIS_Protocol/system/nis-integrity-toolkit/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/pentius00/NIS_Protocol/475a42f9c240530d8004187372cac7212feb4437/system/nis-integrity-toolkit/.cursorrules",
+        "repositoryId": 1030447556,
+        "path": "pentius00/NIS_Protocol/system/nis-integrity-toolkit/.cursorrules",
+        "ownerName": "pentius00",
+        "repositoryName": "NIS_Protocol",
+        "htmlUrl": "https://github.com/pentius00/NIS_Protocol/blob/475a42f9c240530d8004187372cac7212feb4437/system/nis-integrity-toolkit/.cursorrules",
+        "size": 5.8,
+        "timestamp": "2025-08-04T08:19:53.721Z"
+      }
+    ],
+    [
+      "ethantrent/ClearReq/.cursor/rules-new/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ethantrent/ClearReq/e80b07a5eadd2fbea78ea1d8a4b9304eea91dce7/.cursor/rules-new/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1022177862,
+        "path": "ethantrent/ClearReq/.cursor/rules-new/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "ethantrent",
+        "repositoryName": "ClearReq",
+        "htmlUrl": "https://github.com/ethantrent/ClearReq/blob/e80b07a5eadd2fbea78ea1d8a4b9304eea91dce7/.cursor/rules-new/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "size": 2.32,
+        "timestamp": "2025-08-04T08:19:53.775Z"
+      }
+    ],
+    [
+      "ethantrent/ClearReq/.cursor/rules-new/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ethantrent/ClearReq/e80b07a5eadd2fbea78ea1d8a4b9304eea91dce7/.cursor/rules-new/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1022177862,
+        "path": "ethantrent/ClearReq/.cursor/rules-new/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "ethantrent",
+        "repositoryName": "ClearReq",
+        "htmlUrl": "https://github.com/ethantrent/ClearReq/blob/e80b07a5eadd2fbea78ea1d8a4b9304eea91dce7/.cursor/rules-new/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "size": 6.32,
+        "timestamp": "2025-08-04T08:19:53.934Z"
+      }
+    ],
+    [
+      "twelsh37/twospace/frontend/.cursorrules-comprehensive",
+      {
+        "name": ".cursorrules-comprehensive",
+        "downloadUrl": "https://raw.githubusercontent.com/twelsh37/twospace/5ca4cfec871f8e79cb719ed4bcd6f4fb342f8be7/frontend/.cursorrules-comprehensive",
+        "repositoryId": 1005948665,
+        "path": "twelsh37/twospace/frontend/.cursorrules-comprehensive",
+        "ownerName": "twelsh37",
+        "repositoryName": "twospace",
+        "htmlUrl": "https://github.com/twelsh37/twospace/blob/5ca4cfec871f8e79cb719ed4bcd6f4fb342f8be7/frontend/.cursorrules-comprehensive",
+        "size": 6.92,
+        "timestamp": "2025-08-04T08:19:54.188Z"
+      }
+    ],
+    [
+      "erweixin/langshift.dev/content/docs/js2rust/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/erweixin/langshift.dev/1309261fb79b75ebed84340a0d4a431db729994c/content/docs/js2rust/.cursorrules",
+        "repositoryId": 1016039789,
+        "path": "erweixin/langshift.dev/content/docs/js2rust/.cursorrules",
+        "ownerName": "erweixin",
+        "repositoryName": "langshift.dev",
+        "htmlUrl": "https://github.com/erweixin/langshift.dev/blob/1309261fb79b75ebed84340a0d4a431db729994c/content/docs/js2rust/.cursorrules",
+        "size": 5.7,
+        "timestamp": "2025-08-04T08:19:54.260Z"
+      }
+    ],
+    [
+      "source-data/soda-mmQC/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/source-data/soda-mmQC/9fa915f9428a50565c870fa0a1b4d7169643052d/.cursorrules",
+        "repositoryId": 942554084,
+        "path": "source-data/soda-mmQC/.cursorrules",
+        "ownerName": "source-data",
+        "repositoryName": "soda-mmQC",
+        "htmlUrl": "https://github.com/source-data/soda-mmQC/blob/9fa915f9428a50565c870fa0a1b4d7169643052d/.cursorrules",
+        "size": 2.21,
+        "timestamp": "2025-08-04T08:19:54.657Z"
+      }
+    ],
+    [
+      "PresidentHadley/new-biglio/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/PresidentHadley/new-biglio/d0567cbd4056fb79bcee2cee80493f092de600c8/.cursorrules",
+        "repositoryId": 1030524571,
+        "path": "PresidentHadley/new-biglio/.cursorrules",
+        "ownerName": "PresidentHadley",
+        "repositoryName": "new-biglio",
+        "htmlUrl": "https://github.com/PresidentHadley/new-biglio/blob/d0567cbd4056fb79bcee2cee80493f092de600c8/.cursorrules",
+        "size": 4.81,
+        "timestamp": "2025-08-04T08:19:55.655Z"
+      }
+    ],
+    [
+      "CxxxxDxxxF/gotlockz-bot/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/CxxxxDxxxF/gotlockz-bot/fc8b9519f240beaca054605b2823d3d92370958b/.cursorrules",
+        "repositoryId": 983211287,
+        "path": "CxxxxDxxxF/gotlockz-bot/.cursorrules",
+        "ownerName": "CxxxxDxxxF",
+        "repositoryName": "gotlockz-bot",
+        "htmlUrl": "https://github.com/CxxxxDxxxF/gotlockz-bot/blob/fc8b9519f240beaca054605b2823d3d92370958b/.cursorrules",
+        "size": 4.14,
+        "timestamp": "2025-08-04T08:19:55.767Z"
+      }
+    ],
+    [
+      "zehrer/SwiftFlash/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/zehrer/SwiftFlash/2d58817a1db9c754d4c5a02721014848d335b0f7/.cursorrules",
+        "repositoryId": 1026763696,
+        "path": "zehrer/SwiftFlash/.cursorrules",
+        "ownerName": "zehrer",
+        "repositoryName": "SwiftFlash",
+        "htmlUrl": "https://github.com/zehrer/SwiftFlash/blob/2d58817a1db9c754d4c5a02721014848d335b0f7/.cursorrules",
+        "size": 4.46,
+        "timestamp": "2025-08-04T08:19:56.541Z"
       }
     ]
   ]
