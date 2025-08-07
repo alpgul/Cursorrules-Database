@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 1942,
+  "size": 1949,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -27188,6 +27188,104 @@
         "htmlUrl": "https://github.com/zehrer/SwiftFlash/blob/2d58817a1db9c754d4c5a02721014848d335b0f7/.cursorrules",
         "size": 4.46,
         "timestamp": "2025-08-04T08:19:56.541Z"
+      }
+    ],
+    [
+      "Catafal/aura-P.A.-agent/.cursorrules.md",
+      {
+        "name": ".cursorrules.md",
+        "downloadUrl": "https://raw.githubusercontent.com/Catafal/aura-P.A.-agent/1304edc1a73fd69356ff2850918ff8222d3be23d/.cursorrules.md",
+        "repositoryId": 918701351,
+        "path": "Catafal/aura-P.A.-agent/.cursorrules.md",
+        "ownerName": "Catafal",
+        "repositoryName": "aura-P.A.-agent",
+        "htmlUrl": "https://github.com/Catafal/aura-P.A.-agent/blob/1304edc1a73fd69356ff2850918ff8222d3be23d/.cursorrules.md",
+        "size": 1.79,
+        "timestamp": "2025-08-07T08:18:41.171Z"
+      }
+    ],
+    [
+      "meetnearme/api/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/meetnearme/api/582f07e271ed0ab961d81bbac0b46b0dbe777e4c/.cursorrules",
+        "repositoryId": 695628924,
+        "path": "meetnearme/api/.cursorrules",
+        "ownerName": "meetnearme",
+        "repositoryName": "api",
+        "htmlUrl": "https://github.com/meetnearme/api/blob/582f07e271ed0ab961d81bbac0b46b0dbe777e4c/.cursorrules",
+        "size": 6.77,
+        "timestamp": "2025-08-07T08:18:44.929Z"
+      }
+    ],
+    [
+      "andygale/codepad/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/andygale/codepad/2060e59119360fbc63043187255411e636c99a26/.cursorrules",
+        "repositoryId": 1003347453,
+        "path": "andygale/codepad/.cursorrules",
+        "ownerName": "andygale",
+        "repositoryName": "codepad",
+        "htmlUrl": "https://github.com/andygale/codepad/blob/2060e59119360fbc63043187255411e636c99a26/.cursorrules",
+        "size": 2.44,
+        "timestamp": "2025-08-07T08:18:46.790Z"
+      }
+    ],
+    [
+      "ai-coding-labs/cursor-rules/resources/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ai-coding-labs/cursor-rules/112b682dda22c4317632db7f036340b045622255/resources/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 987021729,
+        "path": "ai-coding-labs/cursor-rules/resources/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "ai-coding-labs",
+        "repositoryName": "cursor-rules",
+        "htmlUrl": "https://github.com/ai-coding-labs/cursor-rules/blob/112b682dda22c4317632db7f036340b045622255/resources/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+        "size": 7.48,
+        "timestamp": "2025-08-07T08:18:48.624Z"
+      }
+    ],
+    [
+      "networmix/TopoGen/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/networmix/TopoGen/370f1bb45a57e986e4e6d1c900ccc9890113ba11/.cursorrules",
+        "repositoryId": 1031444492,
+        "path": "networmix/TopoGen/.cursorrules",
+        "ownerName": "networmix",
+        "repositoryName": "TopoGen",
+        "htmlUrl": "https://github.com/networmix/TopoGen/blob/370f1bb45a57e986e4e6d1c900ccc9890113ba11/.cursorrules",
+        "size": 8.94,
+        "timestamp": "2025-08-07T08:18:48.844Z"
+      }
+    ],
+    [
+      "XD3an/awesome-ai-coding-all-in-one/cursor/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/XD3an/awesome-ai-coding-all-in-one/029411bff314471d78a48a7adc29be02e3ac67a8/cursor/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1019307077,
+        "path": "XD3an/awesome-ai-coding-all-in-one/cursor/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "XD3an",
+        "repositoryName": "awesome-ai-coding-all-in-one",
+        "htmlUrl": "https://github.com/XD3an/awesome-ai-coding-all-in-one/blob/029411bff314471d78a48a7adc29be02e3ac67a8/cursor/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "size": 2.32,
+        "timestamp": "2025-08-07T08:18:50.872Z"
+      }
+    ],
+    [
+      "ethantrent/portfolio/.cursor/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ethantrent/portfolio/2fa14548378e1455744b1609e3224f68dfebf109/.cursor/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 999062516,
+        "path": "ethantrent/portfolio/.cursor/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "ethantrent",
+        "repositoryName": "portfolio",
+        "htmlUrl": "https://github.com/ethantrent/portfolio/blob/2fa14548378e1455744b1609e3224f68dfebf109/.cursor/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+        "size": 7.48,
+        "timestamp": "2025-08-07T08:18:50.964Z"
       }
     ]
   ]
