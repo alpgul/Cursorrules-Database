@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 1949,
+  "size": 1958,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -27286,6 +27286,132 @@
         "htmlUrl": "https://github.com/ethantrent/portfolio/blob/2fa14548378e1455744b1609e3224f68dfebf109/.cursor/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
         "size": 7.48,
         "timestamp": "2025-08-07T08:18:50.964Z"
+      }
+    ],
+    [
+      "astmain/dayu_sys/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/astmain/dayu_sys/9ba9f1c68be7adcc0b5ebde6732e4f8eaf0530d7/.cursorrules",
+        "repositoryId": 990382911,
+        "path": "astmain/dayu_sys/.cursorrules",
+        "ownerName": "astmain",
+        "repositoryName": "dayu_sys",
+        "htmlUrl": "https://github.com/astmain/dayu_sys/blob/9ba9f1c68be7adcc0b5ebde6732e4f8eaf0530d7/.cursorrules",
+        "size": 4.86,
+        "timestamp": "2025-08-10T08:15:49.746Z"
+      }
+    ],
+    [
+      "nxgdevllc/proj-spbr-booking/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/nxgdevllc/proj-spbr-booking/4aa1d6f542e84ad8f18458daf6d83fb71a732475/.cursorrules",
+        "repositoryId": 1033764558,
+        "path": "nxgdevllc/proj-spbr-booking/.cursorrules",
+        "ownerName": "nxgdevllc",
+        "repositoryName": "proj-spbr-booking",
+        "htmlUrl": "https://github.com/nxgdevllc/proj-spbr-booking/blob/4aa1d6f542e84ad8f18458daf6d83fb71a732475/.cursorrules",
+        "size": 10.5,
+        "timestamp": "2025-08-10T08:15:50.252Z"
+      }
+    ],
+    [
+      "leviethung2103/news-portal-version2/awesome-cursorrules/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/leviethung2103/news-portal-version2/7b904fa4d072269e28ef2bc9c53639816ab2b501/awesome-cursorrules/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1026627777,
+        "path": "leviethung2103/news-portal-version2/awesome-cursorrules/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "leviethung2103",
+        "repositoryName": "news-portal-version2",
+        "htmlUrl": "https://github.com/leviethung2103/news-portal-version2/blob/7b904fa4d072269e28ef2bc9c53639816ab2b501/awesome-cursorrules/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "size": 6.32,
+        "timestamp": "2025-08-10T08:15:52.673Z"
+      }
+    ],
+    [
+      "ethantrent/ClearReq/.cursor/rules-new/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ethantrent/ClearReq/e80b07a5eadd2fbea78ea1d8a4b9304eea91dce7/.cursor/rules-new/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1022177862,
+        "path": "ethantrent/ClearReq/.cursor/rules-new/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "ethantrent",
+        "repositoryName": "ClearReq",
+        "htmlUrl": "https://github.com/ethantrent/ClearReq/blob/e80b07a5eadd2fbea78ea1d8a4b9304eea91dce7/.cursor/rules-new/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "size": 7.64,
+        "timestamp": "2025-08-10T08:15:52.770Z"
+      }
+    ],
+    [
+      "conneroisu/better-auth-turso/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/conneroisu/better-auth-turso/f4180c27ef7447889cbe3e179589a2fa830e3ed2/.cursorrules",
+        "repositoryId": 1026475329,
+        "path": "conneroisu/better-auth-turso/.cursorrules",
+        "ownerName": "conneroisu",
+        "repositoryName": "better-auth-turso",
+        "htmlUrl": "https://github.com/conneroisu/better-auth-turso/blob/f4180c27ef7447889cbe3e179589a2fa830e3ed2/.cursorrules",
+        "size": 7.92,
+        "timestamp": "2025-08-10T08:15:53.594Z"
+      }
+    ],
+    [
+      "kargig/divemap/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/kargig/divemap/80c9d0b70b126ffe6b15b705894b47514e7aa0e7/.cursorrules",
+        "repositoryId": 1027908221,
+        "path": "kargig/divemap/.cursorrules",
+        "ownerName": "kargig",
+        "repositoryName": "divemap",
+        "htmlUrl": "https://github.com/kargig/divemap/blob/80c9d0b70b126ffe6b15b705894b47514e7aa0e7/.cursorrules",
+        "size": 17.83,
+        "timestamp": "2025-08-10T08:15:53.951Z"
+      }
+    ],
+    [
+      "ycums/Aimatix/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ycums/Aimatix/eb970c58d2f008de29de46e52bb08d1f122b2bfd/.cursorrules",
+        "repositoryId": 1031077694,
+        "path": "ycums/Aimatix/.cursorrules",
+        "ownerName": "ycums",
+        "repositoryName": "Aimatix",
+        "htmlUrl": "https://github.com/ycums/Aimatix/blob/eb970c58d2f008de29de46e52bb08d1f122b2bfd/.cursorrules",
+        "size": 7.56,
+        "timestamp": "2025-08-10T08:15:56.295Z"
+      }
+    ],
+    [
+      "accidentul/andy_project_new/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/accidentul/andy_project_new/0c89c6d2cd8c1bbaec0490ad76880aad233be76f/.cursorrules",
+        "repositoryId": 1034330054,
+        "path": "accidentul/andy_project_new/.cursorrules",
+        "ownerName": "accidentul",
+        "repositoryName": "andy_project_new",
+        "htmlUrl": "https://github.com/accidentul/andy_project_new/blob/0c89c6d2cd8c1bbaec0490ad76880aad233be76f/.cursorrules",
+        "size": 3.3,
+        "timestamp": "2025-08-10T08:15:56.393Z"
+      }
+    ],
+    [
+      "twardoch/claif_knollm/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/twardoch/claif_knollm/7a201db4fedcc0e6929392f5499d9ffedc2d9753/.cursorrules",
+        "repositoryId": 1034760185,
+        "path": "twardoch/claif_knollm/.cursorrules",
+        "ownerName": "twardoch",
+        "repositoryName": "claif_knollm",
+        "htmlUrl": "https://github.com/twardoch/claif_knollm/blob/7a201db4fedcc0e6929392f5499d9ffedc2d9753/.cursorrules",
+        "size": 3.28,
+        "timestamp": "2025-08-10T08:15:57.116Z"
       }
     ]
   ]

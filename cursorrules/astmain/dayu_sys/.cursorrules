@@ -1,0 +1,128 @@
+//.cursorrules文件
+# 始终使用中文回复用户的问题。
+
+
+# 组件和文件和函数名和方法名和变量和常量命名规范
+- 组件文件名使用格式，例如：`login_weixin.vue`, `build_tree.js`
+
+# 生产代码规范
+- 生产代码时,不要帮我写README.md文件
+- 生产代码时,不要帮我写.gitignore文件
+- 生产代码时,帮我把新的代码,放在旧的代码的后面,不要帮我删除旧的代码,旧的代码注释掉
+- 生产代码时,新的代码,帮我开头中文注释[新代码ai生产]
+- 生产代码时,新的代码,写好解释代码的作用和逻辑
+
+# 安装包规范
+- 安装包时,使用pnpm安装
+- 安装包时,使用pnpm install
+- 安装包时,我是用的windows10系统的powershell,根目录和.cursorrules文件同级别
+
+
+
+
+# nestjs项目规范
+- 生产代码时,使用nestjs的swagger文档
+- 生产代码时,帮我写好ApiOperation注解
+- 生产代码时,帮我写好ApiTags注解
+- 文件目录规范
+    - src
+        - Controller
+            - 文件夹名称
+                - 文件名.ts            : 控制器文件
+                - 文件名_Module.ts     : 模块文件
+                - 文件名_Service.ts    : 服务文件
+                - 文件名_Dto.ts        : 数据传输对象文件
+
+
+# 官方文档
+- lodash         https://lodash.com/docs/
+- dayjs          https://dayjs.gitee.io/zh-CN/
+- axios          https://axios-http.com/zh/docs/intro
+- axiosExtra
+- vue3           https://cn.vuejs.org/guide/introduction.html
+- vue-router     https://router.vuejs.org/zh/
+- element-plus   https://element-plus.org/zh-CN/
+- nestjs         https://docs.nestjs.com/
+- swagger        https://docs.nestjs.com/openapi/introduction
+- prisma         https://www.prisma.io/docs/orm
+- expressjs      https://expressjs.com/en/5x/api.html
+- minio          https://docs.min.io/enterprise/aistor-object-store/
+
+
+
+
+# 使用原生html代码规范(参开.cursorrules文件的原生html代码规范)
+- 使用vue2语法
+- 使用axios(axios.defaults.baseURL = "http://[ip地址]:端口号";)
+- 使用dayjs
+- css样式style尽量少是用
+- 不要使用 a,p,h1,h2.h3
+- 不要使用 hover,disabled属性
+- 参考下面的代码
+参考代码开始
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>[和文件名一致]</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.13/dayjs.min.js"></script>
+</head>
+<body style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);  min-height: 100vh;  padding: 20px;">
+    <main id="app">
+        <input type="file" id="file_input" @change="file_change" hidden>
+        <button @click="()=>document.querySelector('#file_input').click()">选择文件</button>
+        <span>文件名: {{ file_obj ? file_obj.name+ " 大小:"+file_obj.size : "无文件" }}</span>
+        <hr style="width: 100%;">
+        <button @click="按钮()">按钮</button>
+        <input type="text" v-model="file_dir_path">
+    </main>
+    <script>
+        axios.defaults.baseURL = "http://[ip地址]:[端口号]";//固定写法
+        Vue.prototype.axios = axios;
+        Vue.prototype.window = window;
+        Vue.prototype.document = window.document;
+        window.app = new Vue({
+            el: "#app",
+            data: {
+                file_obj: null,
+                file_dir_path:"xupeng/"
+            },
+            mounted() { },
+            methods: {
+                // 选择文件
+                file_change() {
+                    this.file_obj = event.target.files[0];
+                },
+                // 主要方法按钮
+                按钮() {
+                    if (!this.file_obj) return alert("请先选择文件")
+                    const time1 = Date.now();
+                    console.log(`000---开始执行:`);
+                    console.log(`000---file_obj:`, this.file_obj);
+                    console.log("111---axios", this.axios);
+                    console.log("222---window", this.window);
+                    console.log("333---document", this.document);
+                    console.log("耗时:", dayjs(Date.now() - time1).format("mm:ss"));
+                },
+            },
+        });
+    </script>
+</body>
+<style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    #app { display: flex; flex-direction: column;align-items: center; gap: 10px;width: 800px;padding: 20px; margin: 0 auto; background: white;border-radius: 15px;    }
+    button {color: white;border: none;padding: 12px 30px;border-radius: 25px;cursor: pointer;background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);    }
+    input[type="text"] {max-width: 120px;padding: 12px 10px;border: 3px solid #e1e5e9;border-radius: 25px;}
+</style>
+</html>
+参考代码解释
+
+
+
+
+
+
+
