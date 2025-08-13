@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 1958,
+  "size": 1973,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -27412,6 +27412,216 @@
         "htmlUrl": "https://github.com/twardoch/claif_knollm/blob/7a201db4fedcc0e6929392f5499d9ffedc2d9753/.cursorrules",
         "size": 3.28,
         "timestamp": "2025-08-10T08:15:57.116Z"
+      }
+    ],
+    [
+      "Daggerpov/Spawn-App-iOS-SwiftUI/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Daggerpov/Spawn-App-iOS-SwiftUI/113f461e7c128a4ada6ede47096d8d92e9737e39/.cursorrules",
+        "repositoryId": 882908434,
+        "path": "Daggerpov/Spawn-App-iOS-SwiftUI/.cursorrules",
+        "ownerName": "Daggerpov",
+        "repositoryName": "Spawn-App-iOS-SwiftUI",
+        "htmlUrl": "https://github.com/Daggerpov/Spawn-App-iOS-SwiftUI/blob/113f461e7c128a4ada6ede47096d8d92e9737e39/.cursorrules",
+        "size": 1.23,
+        "timestamp": "2025-08-13T08:17:32.624Z"
+      }
+    ],
+    [
+      "Nantero1/ai-first-devops-toolkit/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Nantero1/ai-first-devops-toolkit/f95de34ce090c81e1d70e8fe521223515c234aa2/.cursorrules",
+        "repositoryId": 1015053029,
+        "path": "Nantero1/ai-first-devops-toolkit/.cursorrules",
+        "ownerName": "Nantero1",
+        "repositoryName": "ai-first-devops-toolkit",
+        "htmlUrl": "https://github.com/Nantero1/ai-first-devops-toolkit/blob/f95de34ce090c81e1d70e8fe521223515c234aa2/.cursorrules",
+        "size": 2.66,
+        "timestamp": "2025-08-13T08:17:32.763Z"
+      }
+    ],
+    [
+      "jacob-ebey/react-router-dashboard-saas-template/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/jacob-ebey/react-router-dashboard-saas-template/e198ba1b6e68b6d1280551eb1859496bd0c7be39/.cursorrules",
+        "repositoryId": 1033469903,
+        "path": "jacob-ebey/react-router-dashboard-saas-template/.cursorrules",
+        "ownerName": "jacob-ebey",
+        "repositoryName": "react-router-dashboard-saas-template",
+        "htmlUrl": "https://github.com/jacob-ebey/react-router-dashboard-saas-template/blob/e198ba1b6e68b6d1280551eb1859496bd0c7be39/.cursorrules",
+        "size": 8.24,
+        "timestamp": "2025-08-13T08:17:33.710Z"
+      }
+    ],
+    [
+      "mazerunner70/housef3/backend/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/mazerunner70/housef3/0098eb37fc595de578df5da297546cb7e31978d1/backend/.cursorrules",
+        "repositoryId": 959464926,
+        "path": "mazerunner70/housef3/backend/.cursorrules",
+        "ownerName": "mazerunner70",
+        "repositoryName": "housef3",
+        "htmlUrl": "https://github.com/mazerunner70/housef3/blob/0098eb37fc595de578df5da297546cb7e31978d1/backend/.cursorrules",
+        "size": 1.53,
+        "timestamp": "2025-08-13T08:17:34.595Z"
+      }
+    ],
+    [
+      "poglesbyg/nanopore-tracking-app/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/poglesbyg/nanopore-tracking-app/9f4a75dc48c5ba7ab16651ad6d0c9a453fd6886d/.cursorrules",
+        "repositoryId": 1019672991,
+        "path": "poglesbyg/nanopore-tracking-app/.cursorrules",
+        "ownerName": "poglesbyg",
+        "repositoryName": "nanopore-tracking-app",
+        "htmlUrl": "https://github.com/poglesbyg/nanopore-tracking-app/blob/9f4a75dc48c5ba7ab16651ad6d0c9a453fd6886d/.cursorrules",
+        "size": 17.53,
+        "timestamp": "2025-08-13T08:17:35.038Z"
+      }
+    ],
+    [
+      "iLearnHow/mynextlesson-synthesis/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/iLearnHow/mynextlesson-synthesis/c14265d96a533f8fd178a8d072fc137b3350e966/.cursorrules",
+        "repositoryId": 1026741554,
+        "path": "iLearnHow/mynextlesson-synthesis/.cursorrules",
+        "ownerName": "iLearnHow",
+        "repositoryName": "mynextlesson-synthesis",
+        "htmlUrl": "https://github.com/iLearnHow/mynextlesson-synthesis/blob/c14265d96a533f8fd178a8d072fc137b3350e966/.cursorrules",
+        "size": 1.77,
+        "timestamp": "2025-08-13T08:17:35.266Z"
+      }
+    ],
+    [
+      "igskak/white-povar/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/igskak/white-povar/78678b87607f58a7299616ef7036a091af243a77/.cursorrules",
+        "repositoryId": 1035572942,
+        "path": "igskak/white-povar/.cursorrules",
+        "ownerName": "igskak",
+        "repositoryName": "white-povar",
+        "htmlUrl": "https://github.com/igskak/white-povar/blob/78678b87607f58a7299616ef7036a091af243a77/.cursorrules",
+        "size": 1.26,
+        "timestamp": "2025-08-13T08:17:35.471Z"
+      }
+    ],
+    [
+      "parthraninga/cursor-rules/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/parthraninga/cursor-rules/2733a163fbeb89d00e9fd9287a269881d39dbae1/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1036829587,
+        "path": "parthraninga/cursor-rules/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "parthraninga",
+        "repositoryName": "cursor-rules",
+        "htmlUrl": "https://github.com/parthraninga/cursor-rules/blob/2733a163fbeb89d00e9fd9287a269881d39dbae1/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+        "size": 2.78,
+        "timestamp": "2025-08-13T08:17:36.247Z"
+      }
+    ],
+    [
+      "ethantrent/ClearReq/.cursor/rules-new/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ethantrent/ClearReq/e80b07a5eadd2fbea78ea1d8a4b9304eea91dce7/.cursor/rules-new/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1022177862,
+        "path": "ethantrent/ClearReq/.cursor/rules-new/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "ethantrent",
+        "repositoryName": "ClearReq",
+        "htmlUrl": "https://github.com/ethantrent/ClearReq/blob/e80b07a5eadd2fbea78ea1d8a4b9304eea91dce7/.cursor/rules-new/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+        "size": 2.78,
+        "timestamp": "2025-08-13T08:17:36.334Z"
+      }
+    ],
+    [
+      "ethantrent/portfolio/.cursor/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ethantrent/portfolio/2fa14548378e1455744b1609e3224f68dfebf109/.cursor/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 999062516,
+        "path": "ethantrent/portfolio/.cursor/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "ethantrent",
+        "repositoryName": "portfolio",
+        "htmlUrl": "https://github.com/ethantrent/portfolio/blob/2fa14548378e1455744b1609e3224f68dfebf109/.cursor/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+        "size": 2.78,
+        "timestamp": "2025-08-13T08:17:36.405Z"
+      }
+    ],
+    [
+      "ethantrent/ibcmarketplace/.cursor/rules/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ethantrent/ibcmarketplace/ff1f278e981f830714a421c142dee12afa20312d/.cursor/rules/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 992903061,
+        "path": "ethantrent/ibcmarketplace/.cursor/rules/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "ethantrent",
+        "repositoryName": "ibcmarketplace",
+        "htmlUrl": "https://github.com/ethantrent/ibcmarketplace/blob/ff1f278e981f830714a421c142dee12afa20312d/.cursor/rules/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+        "size": 2.78,
+        "timestamp": "2025-08-13T08:17:36.471Z"
+      }
+    ],
+    [
+      "parthraninga/cursor-rules/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/parthraninga/cursor-rules/2733a163fbeb89d00e9fd9287a269881d39dbae1/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1036829587,
+        "path": "parthraninga/cursor-rules/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "parthraninga",
+        "repositoryName": "cursor-rules",
+        "htmlUrl": "https://github.com/parthraninga/cursor-rules/blob/2733a163fbeb89d00e9fd9287a269881d39dbae1/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "size": 2.32,
+        "timestamp": "2025-08-13T08:17:37.022Z"
+      }
+    ],
+    [
+      "parthraninga/cursor-rules/rules/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/parthraninga/cursor-rules/2733a163fbeb89d00e9fd9287a269881d39dbae1/rules/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1036829587,
+        "path": "parthraninga/cursor-rules/rules/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "parthraninga",
+        "repositoryName": "cursor-rules",
+        "htmlUrl": "https://github.com/parthraninga/cursor-rules/blob/2733a163fbeb89d00e9fd9287a269881d39dbae1/rules/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+        "size": 6.25,
+        "timestamp": "2025-08-13T08:17:37.072Z"
+      }
+    ],
+    [
+      "parthraninga/cursor-rules/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/parthraninga/cursor-rules/2733a163fbeb89d00e9fd9287a269881d39dbae1/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "repositoryId": 1036829587,
+        "path": "parthraninga/cursor-rules/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "ownerName": "parthraninga",
+        "repositoryName": "cursor-rules",
+        "htmlUrl": "https://github.com/parthraninga/cursor-rules/blob/2733a163fbeb89d00e9fd9287a269881d39dbae1/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "size": 4.93,
+        "timestamp": "2025-08-13T08:17:37.600Z"
+      }
+    ],
+    [
+      "evgenygurin/astroloh/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/evgenygurin/astroloh/e7274f5f06901424ae8223b9f7fcefc81dfa074e/.cursorrules",
+        "repositoryId": 1030572979,
+        "path": "evgenygurin/astroloh/.cursorrules",
+        "ownerName": "evgenygurin",
+        "repositoryName": "astroloh",
+        "htmlUrl": "https://github.com/evgenygurin/astroloh/blob/e7274f5f06901424ae8223b9f7fcefc81dfa074e/.cursorrules",
+        "size": 6.48,
+        "timestamp": "2025-08-13T08:17:38.420Z"
       }
     ]
   ]
