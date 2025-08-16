@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 1973,
+  "size": 1981,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -27622,6 +27622,118 @@
         "htmlUrl": "https://github.com/evgenygurin/astroloh/blob/e7274f5f06901424ae8223b9f7fcefc81dfa074e/.cursorrules",
         "size": 6.48,
         "timestamp": "2025-08-13T08:17:38.420Z"
+      }
+    ],
+    [
+      "Divizyon/t2-sportlink-web-backend/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Divizyon/t2-sportlink-web-backend/fb6089a1b6e382aab62cf36af2aaff3b5ebd0e40/.cursorrules",
+        "repositoryId": 939343884,
+        "path": "Divizyon/t2-sportlink-web-backend/.cursorrules",
+        "ownerName": "Divizyon",
+        "repositoryName": "t2-sportlink-web-backend",
+        "htmlUrl": "https://github.com/Divizyon/t2-sportlink-web-backend/blob/fb6089a1b6e382aab62cf36af2aaff3b5ebd0e40/.cursorrules",
+        "size": 1.83,
+        "timestamp": "2025-08-16T08:15:07.349Z"
+      }
+    ],
+    [
+      "nRudzy/Peso/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/nRudzy/Peso/2c297d336bcf37e82202f89d263d2e4a7e42354a/.cursorrules",
+        "repositoryId": 1022711972,
+        "path": "nRudzy/Peso/.cursorrules",
+        "ownerName": "nRudzy",
+        "repositoryName": "Peso",
+        "htmlUrl": "https://github.com/nRudzy/Peso/blob/2c297d336bcf37e82202f89d263d2e4a7e42354a/.cursorrules",
+        "size": 19.28,
+        "timestamp": "2025-08-16T08:15:09.023Z"
+      }
+    ],
+    [
+      "Coach-Me-Mobile/InnerWorldApp/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Coach-Me-Mobile/InnerWorldApp/d4476a0b5b3c4143d89664ca83ffb58e451bb0db/.cursorrules",
+        "repositoryId": 1034754816,
+        "path": "Coach-Me-Mobile/InnerWorldApp/.cursorrules",
+        "ownerName": "Coach-Me-Mobile",
+        "repositoryName": "InnerWorldApp",
+        "htmlUrl": "https://github.com/Coach-Me-Mobile/InnerWorldApp/blob/d4476a0b5b3c4143d89664ca83ffb58e451bb0db/.cursorrules",
+        "size": 5.09,
+        "timestamp": "2025-08-16T08:15:10.437Z"
+      }
+    ],
+    [
+      "ai-coding-labs/cursor-rules/resources/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ai-coding-labs/cursor-rules/112b682dda22c4317632db7f036340b045622255/resources/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 987021729,
+        "path": "ai-coding-labs/cursor-rules/resources/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "ai-coding-labs",
+        "repositoryName": "cursor-rules",
+        "htmlUrl": "https://github.com/ai-coding-labs/cursor-rules/blob/112b682dda22c4317632db7f036340b045622255/resources/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+        "size": 2.78,
+        "timestamp": "2025-08-16T08:15:12.546Z"
+      }
+    ],
+    [
+      "XD3an/awesome-ai-coding-all-in-one/cursor/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/XD3an/awesome-ai-coding-all-in-one/d65ba26f86b991909cef39492a35e6c2333b72a3/cursor/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1019307077,
+        "path": "XD3an/awesome-ai-coding-all-in-one/cursor/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "XD3an",
+        "repositoryName": "awesome-ai-coding-all-in-one",
+        "htmlUrl": "https://github.com/XD3an/awesome-ai-coding-all-in-one/blob/d65ba26f86b991909cef39492a35e6c2333b72a3/cursor/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+        "size": 2.78,
+        "timestamp": "2025-08-16T08:15:12.646Z"
+      }
+    ],
+    [
+      "Stephen-Collins-tech/intent-kit/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Stephen-Collins-tech/intent-kit/c55f7b7aaf48a1eb7352481f5d43c15045eb3eb7/.cursorrules",
+        "repositoryId": 1005319062,
+        "path": "Stephen-Collins-tech/intent-kit/.cursorrules",
+        "ownerName": "Stephen-Collins-tech",
+        "repositoryName": "intent-kit",
+        "htmlUrl": "https://github.com/Stephen-Collins-tech/intent-kit/blob/c55f7b7aaf48a1eb7352481f5d43c15045eb3eb7/.cursorrules",
+        "size": 8.63,
+        "timestamp": "2025-08-16T08:15:13.549Z"
+      }
+    ],
+    [
+      "sebastian0619/proxy-nest/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/sebastian0619/proxy-nest/1ec0a07f15266ae91bf4a8b37b378b488558eb92/.cursorrules",
+        "repositoryId": 888611357,
+        "path": "sebastian0619/proxy-nest/.cursorrules",
+        "ownerName": "sebastian0619",
+        "repositoryName": "proxy-nest",
+        "htmlUrl": "https://github.com/sebastian0619/proxy-nest/blob/1ec0a07f15266ae91bf4a8b37b378b488558eb92/.cursorrules",
+        "size": 19.57,
+        "timestamp": "2025-08-16T08:15:13.739Z"
+      }
+    ],
+    [
+      "How1337ItIs/billsloth/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/How1337ItIs/billsloth/0d598b32af62eebb3c8913c6a38ab80fc8374b6e/.cursorrules",
+        "repositoryId": 1023438687,
+        "path": "How1337ItIs/billsloth/.cursorrules",
+        "ownerName": "How1337ItIs",
+        "repositoryName": "billsloth",
+        "htmlUrl": "https://github.com/How1337ItIs/billsloth/blob/0d598b32af62eebb3c8913c6a38ab80fc8374b6e/.cursorrules",
+        "size": 7.68,
+        "timestamp": "2025-08-16T08:15:14.873Z"
       }
     ]
   ]

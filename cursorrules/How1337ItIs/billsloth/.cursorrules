@@ -1,0 +1,206 @@
+# Cursor Rules for Bill Sloth Project
+
+## CRITICAL: Process Documentation Requirements
+
+### **MANDATORY DOCUMENTATION TEMPLATE**
+For ALL process work, follow this exact template:
+
+1. **Create timestamped documentation file:**
+   - Format: `docs/CURSOR_AGENT_[PROCESS]_[DATE]_[TIME]_MIDAS_WHALE.md`
+   - Example: `docs/CURSOR_AGENT_ISO_BUILD_ATTEMPT_2025-07-28_1408_MIDAS_WHALE.md`
+
+2. **Include these sections in EVERY process documentation:**
+
+   #### **🚨 INITIAL MISTAKES AND CORRECTIONS**
+   - Document what I did wrong initially
+   - Record user's specific corrections and feedback
+   - Explain what I should have done instead
+   - Quantify impact (time wasted, complexity created)
+
+   #### **📋 COMPREHENSIVE STEP-BY-STEP DOCUMENTATION**
+   - Timestamp every action
+   - Record rationale for decisions
+   - Document commands executed
+   - Capture results (success/failure/setback)
+   - Include remediation actions taken
+
+   #### **🔍 CRITICAL LESSONS LEARNED**
+   - Extract key insights from the process
+   - Document anti-patterns to avoid
+   - Record what worked and why
+   - Include user feedback and corrections
+
+   #### **🛠️ REMEDIATION ACTIONS TAKEN**
+   - Document how I fixed the process
+   - Record improvements made to guidelines
+   - Include changes to future workflow
+
+   #### **📊 CURRENT STATUS AND NEXT STEPS**
+   - Clear status indicators (✅ ❌ 🔄 ⏳)
+   - Quantified results where possible
+   - Specific next actions
+
+   #### **🎯 KEY INSIGHTS**
+   - Why the working solution is better
+   - Why my initial approach failed
+   - Documentation improvements made
+
+   #### **📝 COMMITMENT TO IMPROVED PROCESS**
+   - Specific commitments going forward
+   - New documentation standards
+   - Process improvements
+
+### **DOCUMENTATION STANDARDS**
+- **Document from the very first command**
+- **Record every decision and its rationale**
+- **Capture setbacks and remediations immediately**
+- **Include user feedback and corrections**
+- **Maintain comprehensive audit trail**
+- **Use proper file naming with author and timestamp**
+
+### **ALWAYS CHECK EXISTING SOLUTIONS FIRST**
+Before writing ANY new code, scripts, or solutions:
+
+1. **Search Current Project (2-3 minutes max):**
+   ```bash
+   # Search by functionality/problem domain
+   find . -name "*iso*" -o -name "*build*" -o -name "*deploy*" -o -name "*setup*"
+   find . -name "*backup*" -o -name "*install*" -o -name "*config*"
+   
+   # Search by technology stack
+   grep -r "docker\|kubernetes\|powershell\|wsl" . --include="*.sh" --include="*.ps1"
+   
+   # Check common solution directories
+   ls -la tools/ scripts/ bin/ utils/ utilities/ 2>/dev/null
+   ```
+
+2. **Smart Directory Reconnaissance:**
+   - Look for pattern: `task-domain/` directories (e.g., `windows-setup/`, `iso-creation/`)
+   - Check utility directories: `tools/`, `scripts/`, `bin/`, `utilities/`
+   - Examine root-level scripts that match your task domain
+   - Browse recent files: `ls -lat | head -20` (recently modified = actively used)
+
+3. **Functional Analysis Approach:**
+   - Ask: "What am I trying to do?" (e.g., "create ISO", "deploy system", "backup data")
+   - Search by action verbs: `find . -name "*create*" -o -name "*make*" -o -name "*build*"`
+   - Look for similar end goals rather than exact tool names
+   - Check documentation: `README*`, `*.md` files often point to main tools
+
+4. **CRITICAL: Check Open Source Solutions Before Custom Implementation:**
+   - Search GitHub/GitLab for mature solutions in your problem domain
+   - Look for official tools from relevant organizations (Microsoft, Ubuntu, etc.)
+   - Check package managers: npm, pip, apt, brew, chocolatey for existing tools
+   - Evaluate maturity: stars, recent commits, documentation quality
+   - Prefer proven tools over writing custom implementations
+
+### **ANTI-PATTERNS TO AVOID**
+❌ **NEVER:**
+- Start writing new solutions without searching first
+- Assume nothing exists without verification
+- Reinvent functionality that already works
+- Write custom implementations when mature open source tools exist
+- Ignore official/widely-adopted solutions in favor of custom code
+
+✅ **ALWAYS:**
+- Search local project solutions first (2 minutes)
+- Search open source repositories second (3 minutes)
+- Check official tools from relevant organizations
+- Evaluate existing solutions before creating new ones
+- Prefer mature, maintained tools over custom implementations
+- Document why existing solutions didn't work (if they fail)
+- Ask user about existing solutions when unsure
+
+### **INTELLIGENCE HEURISTICS**
+- **Size matters:** Larger files (>1KB) likely contain substantial functionality
+- **Recent activity:** `ls -lat` shows what's actively maintained
+- **Cross-references:** If one script references another, follow that trail
+- **Directory clustering:** Multiple related files in same directory = mature solution area
+
+### **REAL-WORLD EXAMPLE SEARCH PATTERNS**
+```bash
+# ISO Creation Task:
+find . -name "*iso*" -o -name "*build*" -type f
+ls -la windows-setup/ tools/ 2>/dev/null
+grep -r "ubuntu\|iso" . --include="*.ps1" | head -5
+
+# Backup/Deployment Task:
+find . -name "*backup*" -o -name "*deploy*" -o -name "*sync*"
+ls -lat | grep -E "\.(sh|ps1|py)$" | head -10
+
+# System Setup Task:
+find . -name "*setup*" -o -name "*install*" -o -name "*config*"
+grep -r "apt\|brew\|pip\|npm" . --include="*.sh" | head -5
+```
+
+This approach finds actual working solutions by understanding the problem domain rather than relying on naming conventions.
+
+---
+
+## PowerShell Compatibility
+- **NEVER use `New-TemporaryFile`** - doesn't exist before PowerShell 5.0
+- **ALWAYS use** `[System.IO.Path]::GetTempFileName()` instead
+- **NEVER use `head`** - use `Select-Object -First` instead
+- **Target PowerShell 3.0** for maximum compatibility
+- **Check commands exist** with `Get-Command` before use
+- **Always check `$LASTEXITCODE`** after external commands
+
+## WSL Integration
+- Ubuntu distro is often **"Ubuntu-22.04"** not just "Ubuntu"
+- **Always quote paths** with spaces in WSL commands
+- **Use explicit `-d` parameter** with wsl commands
+- **Path conversion pattern:**
+  ```powershell
+  $drive = $path.Substring(0,1).ToLower()
+  $wslPath = "/mnt/$drive/" + $path.Substring(2).Replace('\','/')
+  ```
+- **Fix line endings** with `sed -i 's/\r$//'` when needed
+
+## Script Best Practices
+- **NO Unicode/emojis** in shell scripts - use ASCII only
+- **Use `-Encoding ASCII`** for WSL scripts (avoids BOM issues)
+- **Always use `-y` or `--non-interactive`** flags
+- **Set timeouts** for long operations (30 min max)
+- **Clean up** before operations: `rm -rf /tmp/billsloth* 2>/dev/null || true`
+
+## Git & Branch Management
+- **Always work in `dev` branch** for this project
+- **Check branch** before commits: `git branch --show-current`
+- **Never commit to `main`** directly
+
+## Error Prevention
+- **Test on Windows** before committing PowerShell scripts
+- **Use cloud-init** over squashfs modifications
+- **Validate with metrics** (file counts, sizes)
+- **Force flags when safe**: `unsquashfs -f`
+- **Unique timestamps** prevent conflicts: `$(Get-Date -Format "yyyyMMdd-HHmmss")`
+
+## Common Patterns
+
+### Safe Temp Files
+```powershell
+# Good - works everywhere
+$temp = [System.IO.Path]::GetTempFileName()
+# Cleanup
+Remove-Item $temp -Force
+```
+
+### WSL Script Execution
+```powershell
+# Write script with proper encoding
+$script | Out-File -FilePath $temp -Encoding ASCII
+# Execute in WSL
+wsl -d Ubuntu-22.04 bash $wslPath
+```
+
+### Long Operations
+```powershell
+# With timeout
+$job = Start-Job -ScriptBlock { long-operation }
+Wait-Job $job -Timeout 1800  # 30 minutes
+```
+
+## Bill Sloth Specific
+- **Branch workflow**: main (protected) → dev (active) → user-testing (Bill's)
+- **No emojis** in output - Bill's terminal might not support
+- **Test with QEMU** before physical hardware
+- **Document commands** for Bill's reference
