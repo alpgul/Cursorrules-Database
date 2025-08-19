@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 1981,
+  "size": 1988,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -27734,6 +27734,104 @@
         "htmlUrl": "https://github.com/How1337ItIs/billsloth/blob/0d598b32af62eebb3c8913c6a38ab80fc8374b6e/.cursorrules",
         "size": 7.68,
         "timestamp": "2025-08-16T08:15:14.873Z"
+      }
+    ],
+    [
+      "pcarioufr/llm-2000/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/pcarioufr/llm-2000/7f693104ffd3fa4f201a9266b9ef0f29168ed893/.cursorrules",
+        "repositoryId": 605082503,
+        "path": "pcarioufr/llm-2000/.cursorrules",
+        "ownerName": "pcarioufr",
+        "repositoryName": "llm-2000",
+        "htmlUrl": "https://github.com/pcarioufr/llm-2000/blob/7f693104ffd3fa4f201a9266b9ef0f29168ed893/.cursorrules",
+        "size": 4.94,
+        "timestamp": "2025-08-19T08:16:45.271Z"
+      }
+    ],
+    [
+      "vibercode/cli/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/vibercode/cli/c8c66a85ecc14154984689b950b32a52375eb044/.cursorrules",
+        "repositoryId": 1035170834,
+        "path": "vibercode/cli/.cursorrules",
+        "ownerName": "vibercode",
+        "repositoryName": "cli",
+        "htmlUrl": "https://github.com/vibercode/cli/blob/c8c66a85ecc14154984689b950b32a52375eb044/.cursorrules",
+        "size": 3.93,
+        "timestamp": "2025-08-19T08:16:45.697Z"
+      }
+    ],
+    [
+      "AgenticWeb4/agentic_systemsthinking/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/AgenticWeb4/agentic_systemsthinking/1fb9937e9cefd8cdff594179612773bd5faa8f92/.cursorrules",
+        "repositoryId": 1035346309,
+        "path": "AgenticWeb4/agentic_systemsthinking/.cursorrules",
+        "ownerName": "AgenticWeb4",
+        "repositoryName": "agentic_systemsthinking",
+        "htmlUrl": "https://github.com/AgenticWeb4/agentic_systemsthinking/blob/1fb9937e9cefd8cdff594179612773bd5faa8f92/.cursorrules",
+        "size": 20.19,
+        "timestamp": "2025-08-19T08:16:47.542Z"
+      }
+    ],
+    [
+      "StandardTouch/yomstay_adminpanel_frontend/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/StandardTouch/yomstay_adminpanel_frontend/848cb52f3b75eea98ed111adfe91e07b288baf2d/.cursorrules",
+        "repositoryId": 988826437,
+        "path": "StandardTouch/yomstay_adminpanel_frontend/.cursorrules",
+        "ownerName": "StandardTouch",
+        "repositoryName": "yomstay_adminpanel_frontend",
+        "htmlUrl": "https://github.com/StandardTouch/yomstay_adminpanel_frontend/blob/848cb52f3b75eea98ed111adfe91e07b288baf2d/.cursorrules",
+        "size": 10.05,
+        "timestamp": "2025-08-19T08:16:47.655Z"
+      }
+    ],
+    [
+      "parthraninga/cursor-rules/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/parthraninga/cursor-rules/2733a163fbeb89d00e9fd9287a269881d39dbae1/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1036829587,
+        "path": "parthraninga/cursor-rules/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "parthraninga",
+        "repositoryName": "cursor-rules",
+        "htmlUrl": "https://github.com/parthraninga/cursor-rules/blob/2733a163fbeb89d00e9fd9287a269881d39dbae1/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "size": 7.64,
+        "timestamp": "2025-08-19T08:16:48.433Z"
+      }
+    ],
+    [
+      "seelander09/kjv-sources/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/seelander09/kjv-sources/68c19fae12ae33f21d179741573d287c9d837bde/.cursorrules",
+        "repositoryId": 1025938146,
+        "path": "seelander09/kjv-sources/.cursorrules",
+        "ownerName": "seelander09",
+        "repositoryName": "kjv-sources",
+        "htmlUrl": "https://github.com/seelander09/kjv-sources/blob/68c19fae12ae33f21d179741573d287c9d837bde/.cursorrules",
+        "size": 6.66,
+        "timestamp": "2025-08-19T08:16:51.323Z"
+      }
+    ],
+    [
+      "twardoch/mytypy/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/twardoch/mytypy/4978da97ff33466c125dd55154263eec1a138c19/.cursorrules",
+        "repositoryId": 1039299692,
+        "path": "twardoch/mytypy/.cursorrules",
+        "ownerName": "twardoch",
+        "repositoryName": "mytypy",
+        "htmlUrl": "https://github.com/twardoch/mytypy/blob/4978da97ff33466c125dd55154263eec1a138c19/.cursorrules",
+        "size": 3.28,
+        "timestamp": "2025-08-19T08:16:52.700Z"
       }
     ]
   ]
