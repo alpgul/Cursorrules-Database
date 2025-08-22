@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 1988,
+  "size": 1999,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -27832,6 +27832,160 @@
         "htmlUrl": "https://github.com/twardoch/mytypy/blob/4978da97ff33466c125dd55154263eec1a138c19/.cursorrules",
         "size": 3.28,
         "timestamp": "2025-08-19T08:16:52.700Z"
+      }
+    ],
+    [
+      "katistix/uws/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/katistix/uws/47f3a820213283e117d552a841f10dfc1e59f981/.cursorrules",
+        "repositoryId": 1029137074,
+        "path": "katistix/uws/.cursorrules",
+        "ownerName": "katistix",
+        "repositoryName": "uws",
+        "htmlUrl": "https://github.com/katistix/uws/blob/47f3a820213283e117d552a841f10dfc1e59f981/.cursorrules",
+        "size": 1.57,
+        "timestamp": "2025-08-22T08:16:50.596Z"
+      }
+    ],
+    [
+      "ashish-tandon/OpenPolicy-Merge-Platform-V2/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ashish-tandon/OpenPolicy-Merge-Platform-V2/7b287bf36b1326c3bbd3a7a1d319210a9349e33a/.cursorrules",
+        "repositoryId": 1041625333,
+        "path": "ashish-tandon/OpenPolicy-Merge-Platform-V2/.cursorrules",
+        "ownerName": "ashish-tandon",
+        "repositoryName": "OpenPolicy-Merge-Platform-V2",
+        "htmlUrl": "https://github.com/ashish-tandon/OpenPolicy-Merge-Platform-V2/blob/7b287bf36b1326c3bbd3a7a1d319210a9349e33a/.cursorrules",
+        "size": 6.26,
+        "timestamp": "2025-08-22T08:16:50.815Z"
+      }
+    ],
+    [
+      "ozhangebesoglu/karadefter/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ozhangebesoglu/karadefter/7758e3d0c2140bb669583599e7db4fa8a3aad0d4/.cursorrules",
+        "repositoryId": 1039756684,
+        "path": "ozhangebesoglu/karadefter/.cursorrules",
+        "ownerName": "ozhangebesoglu",
+        "repositoryName": "karadefter",
+        "htmlUrl": "https://github.com/ozhangebesoglu/karadefter/blob/7758e3d0c2140bb669583599e7db4fa8a3aad0d4/.cursorrules",
+        "size": 2.78,
+        "timestamp": "2025-08-22T08:16:52.187Z"
+      }
+    ],
+    [
+      "netbirdio/addon-netbird/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/netbirdio/addon-netbird/82415d061de932d799dd1ec58293f6d10ef76e18/.cursorrules",
+        "repositoryId": 634344150,
+        "path": "netbirdio/addon-netbird/.cursorrules",
+        "ownerName": "netbirdio",
+        "repositoryName": "addon-netbird",
+        "htmlUrl": "https://github.com/netbirdio/addon-netbird/blob/82415d061de932d799dd1ec58293f6d10ef76e18/.cursorrules",
+        "size": 6.25,
+        "timestamp": "2025-08-22T08:16:52.243Z"
+      }
+    ],
+    [
+      "parthraninga/cursor-rules/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/parthraninga/cursor-rules/2733a163fbeb89d00e9fd9287a269881d39dbae1/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "repositoryId": 1036829587,
+        "path": "parthraninga/cursor-rules/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "ownerName": "parthraninga",
+        "repositoryName": "cursor-rules",
+        "htmlUrl": "https://github.com/parthraninga/cursor-rules/blob/2733a163fbeb89d00e9fd9287a269881d39dbae1/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "size": 3.59,
+        "timestamp": "2025-08-22T08:16:52.301Z"
+      }
+    ],
+    [
+      "nickytonline/swole-mcp/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/nickytonline/swole-mcp/dc1bfdc5662bccfd7ca7a9d2416dec637c26e97f/.cursorrules",
+        "repositoryId": 1041640193,
+        "path": "nickytonline/swole-mcp/.cursorrules",
+        "ownerName": "nickytonline",
+        "repositoryName": "swole-mcp",
+        "htmlUrl": "https://github.com/nickytonline/swole-mcp/blob/dc1bfdc5662bccfd7ca7a9d2416dec637c26e97f/.cursorrules",
+        "size": 4.91,
+        "timestamp": "2025-08-22T08:16:52.799Z"
+      }
+    ],
+    [
+      "popwandee/aicamera/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/popwandee/aicamera/1c4560f2b03e795675214531ed211b9490f89ac6/.cursorrules",
+        "repositoryId": 982790372,
+        "path": "popwandee/aicamera/.cursorrules",
+        "ownerName": "popwandee",
+        "repositoryName": "aicamera",
+        "htmlUrl": "https://github.com/popwandee/aicamera/blob/1c4560f2b03e795675214531ed211b9490f89ac6/.cursorrules",
+        "size": 8.63,
+        "timestamp": "2025-08-22T08:16:53.338Z"
+      }
+    ],
+    [
+      "vietqtran/ielts-mate-fe/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/vietqtran/ielts-mate-fe/f77b6ec21c328b0ba728234ab1a271ca70960299/.cursorrules",
+        "repositoryId": 986428861,
+        "path": "vietqtran/ielts-mate-fe/.cursorrules",
+        "ownerName": "vietqtran",
+        "repositoryName": "ielts-mate-fe",
+        "htmlUrl": "https://github.com/vietqtran/ielts-mate-fe/blob/f77b6ec21c328b0ba728234ab1a271ca70960299/.cursorrules",
+        "size": 2.11,
+        "timestamp": "2025-08-22T08:16:54.171Z"
+      }
+    ],
+    [
+      "kietpham-agilityio/e-commerce/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/kietpham-agilityio/e-commerce/698d0d66550f3f8ac35415ab71a276b99864763c/.cursorrules",
+        "repositoryId": 1030164967,
+        "path": "kietpham-agilityio/e-commerce/.cursorrules",
+        "ownerName": "kietpham-agilityio",
+        "repositoryName": "e-commerce",
+        "htmlUrl": "https://github.com/kietpham-agilityio/e-commerce/blob/698d0d66550f3f8ac35415ab71a276b99864763c/.cursorrules",
+        "size": 2.29,
+        "timestamp": "2025-08-22T08:16:54.359Z"
+      }
+    ],
+    [
+      "ambr-0-se/Builder-s-Pub/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ambr-0-se/Builder-s-Pub/1f7f6c8c3a9fc93870bb674d9723aa1117841552/.cursorrules",
+        "repositoryId": 1039908129,
+        "path": "ambr-0-se/Builder-s-Pub/.cursorrules",
+        "ownerName": "ambr-0-se",
+        "repositoryName": "Builder-s-Pub",
+        "htmlUrl": "https://github.com/ambr-0-se/Builder-s-Pub/blob/1f7f6c8c3a9fc93870bb674d9723aa1117841552/.cursorrules",
+        "size": 7.82,
+        "timestamp": "2025-08-22T08:16:55.018Z"
+      }
+    ],
+    [
+      "rentoken-world/rentoken-contracts/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/rentoken-world/rentoken-contracts/b60ca0361ab325921dad564e93ba14bd419db78c/.cursorrules",
+        "repositoryId": 1039533463,
+        "path": "rentoken-world/rentoken-contracts/.cursorrules",
+        "ownerName": "rentoken-world",
+        "repositoryName": "rentoken-contracts",
+        "htmlUrl": "https://github.com/rentoken-world/rentoken-contracts/blob/b60ca0361ab325921dad564e93ba14bd419db78c/.cursorrules",
+        "size": 5.71,
+        "timestamp": "2025-08-22T08:16:55.377Z"
       }
     ]
   ]
