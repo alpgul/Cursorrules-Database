@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 1999,
+  "size": 2003,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -27986,6 +27986,62 @@
         "htmlUrl": "https://github.com/rentoken-world/rentoken-contracts/blob/b60ca0361ab325921dad564e93ba14bd419db78c/.cursorrules",
         "size": 5.71,
         "timestamp": "2025-08-22T08:16:55.377Z"
+      }
+    ],
+    [
+      "JordiNodeJS/pinwheel-astro/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/JordiNodeJS/pinwheel-astro/fc4ca6fd390a57f4e24c88728d38f235db6b5c03/.cursorrules",
+        "repositoryId": 1042883855,
+        "path": "JordiNodeJS/pinwheel-astro/.cursorrules",
+        "ownerName": "JordiNodeJS",
+        "repositoryName": "pinwheel-astro",
+        "htmlUrl": "https://github.com/JordiNodeJS/pinwheel-astro/blob/fc4ca6fd390a57f4e24c88728d38f235db6b5c03/.cursorrules",
+        "size": 12.09,
+        "timestamp": "2025-08-25T08:18:06.581Z"
+      }
+    ],
+    [
+      "SecuritahGuy/NFLDrafter/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/SecuritahGuy/NFLDrafter/ccdeecc7e9341ffc021fad30f2bb4cd33d8a53c5/.cursorrules",
+        "repositoryId": 1043430250,
+        "path": "SecuritahGuy/NFLDrafter/.cursorrules",
+        "ownerName": "SecuritahGuy",
+        "repositoryName": "NFLDrafter",
+        "htmlUrl": "https://github.com/SecuritahGuy/NFLDrafter/blob/ccdeecc7e9341ffc021fad30f2bb4cd33d8a53c5/.cursorrules",
+        "size": 5.75,
+        "timestamp": "2025-08-25T08:18:07.885Z"
+      }
+    ],
+    [
+      "Kernel360/KUNI_2thecore_frontend/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Kernel360/KUNI_2thecore_frontend/6e6c9f81f5c9173c79b3df0c82075ea95c191d85/.cursorrules",
+        "repositoryId": 1019522585,
+        "path": "Kernel360/KUNI_2thecore_frontend/.cursorrules",
+        "ownerName": "Kernel360",
+        "repositoryName": "KUNI_2thecore_frontend",
+        "htmlUrl": "https://github.com/Kernel360/KUNI_2thecore_frontend/blob/6e6c9f81f5c9173c79b3df0c82075ea95c191d85/.cursorrules",
+        "size": 1.43,
+        "timestamp": "2025-08-25T08:18:11.293Z"
+      }
+    ],
+    [
+      "JWZY/daggerheart-sheet/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/JWZY/daggerheart-sheet/961d8ec3280df530af4dd72c5f224baca440d86e/.cursorrules",
+        "repositoryId": 1043986053,
+        "path": "JWZY/daggerheart-sheet/.cursorrules",
+        "ownerName": "JWZY",
+        "repositoryName": "daggerheart-sheet",
+        "htmlUrl": "https://github.com/JWZY/daggerheart-sheet/blob/961d8ec3280df530af4dd72c5f224baca440d86e/.cursorrules",
+        "size": 1.69,
+        "timestamp": "2025-08-25T08:18:12.216Z"
       }
     ]
   ]
