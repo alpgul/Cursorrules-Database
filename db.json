@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 2003,
+  "size": 2012,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -28042,6 +28042,132 @@
         "htmlUrl": "https://github.com/JWZY/daggerheart-sheet/blob/961d8ec3280df530af4dd72c5f224baca440d86e/.cursorrules",
         "size": 1.69,
         "timestamp": "2025-08-25T08:18:12.216Z"
+      }
+    ],
+    [
+      "tambo-ai/tambo-cloud/apps/api/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/tambo-ai/tambo-cloud/fb44a95be8c1ba5ee1f01271cf9eb4e88ef0d325/apps/api/.cursorrules",
+        "repositoryId": 842280576,
+        "path": "tambo-ai/tambo-cloud/apps/api/.cursorrules",
+        "ownerName": "tambo-ai",
+        "repositoryName": "tambo-cloud",
+        "htmlUrl": "https://github.com/tambo-ai/tambo-cloud/blob/fb44a95be8c1ba5ee1f01271cf9eb4e88ef0d325/apps/api/.cursorrules",
+        "size": 4.26,
+        "timestamp": "2025-08-28T08:16:03.680Z"
+      }
+    ],
+    [
+      "docxology/codomyrmex/code/ai_code_editing/.cursor/documentation_module.cursorrules",
+      {
+        "name": "documentation_module.cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/docxology/codomyrmex/c39299fe148f367f162dee8270273b2e292b73c8/code/ai_code_editing/.cursor/documentation_module.cursorrules",
+        "repositoryId": 984900169,
+        "path": "docxology/codomyrmex/code/ai_code_editing/.cursor/documentation_module.cursorrules",
+        "ownerName": "docxology",
+        "repositoryName": "codomyrmex",
+        "htmlUrl": "https://github.com/docxology/codomyrmex/blob/c39299fe148f367f162dee8270273b2e292b73c8/code/ai_code_editing/.cursor/documentation_module.cursorrules",
+        "size": 3.61,
+        "timestamp": "2025-08-28T08:16:04.371Z"
+      }
+    ],
+    [
+      "acertainKnight/project-thoth/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/acertainKnight/project-thoth/eee4cb636ff7083671e2aa9ecbe69318d87878c5/.cursorrules",
+        "repositoryId": 946004741,
+        "path": "acertainKnight/project-thoth/.cursorrules",
+        "ownerName": "acertainKnight",
+        "repositoryName": "project-thoth",
+        "htmlUrl": "https://github.com/acertainKnight/project-thoth/blob/eee4cb636ff7083671e2aa9ecbe69318d87878c5/.cursorrules",
+        "size": 3.68,
+        "timestamp": "2025-08-28T08:16:06.181Z"
+      }
+    ],
+    [
+      "Sopizhenko/catalog-ai/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Sopizhenko/catalog-ai/b9ad64a68673aa518d9a49563e528778597307e7/.cursorrules",
+        "repositoryId": 1044973252,
+        "path": "Sopizhenko/catalog-ai/.cursorrules",
+        "ownerName": "Sopizhenko",
+        "repositoryName": "catalog-ai",
+        "htmlUrl": "https://github.com/Sopizhenko/catalog-ai/blob/b9ad64a68673aa518d9a49563e528778597307e7/.cursorrules",
+        "size": 5.5,
+        "timestamp": "2025-08-28T08:16:06.802Z"
+      }
+    ],
+    [
+      "RafaelAlvesTech/petrobras-offshore-wells-anomaly-detection-control-charts/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/RafaelAlvesTech/petrobras-offshore-wells-anomaly-detection-control-charts/26d1e5358a708d770f83a0f24217efa4e600f81a/.cursorrules",
+        "repositoryId": 1045214188,
+        "path": "RafaelAlvesTech/petrobras-offshore-wells-anomaly-detection-control-charts/.cursorrules",
+        "ownerName": "RafaelAlvesTech",
+        "repositoryName": "petrobras-offshore-wells-anomaly-detection-control-charts",
+        "htmlUrl": "https://github.com/RafaelAlvesTech/petrobras-offshore-wells-anomaly-detection-control-charts/blob/26d1e5358a708d770f83a0f24217efa4e600f81a/.cursorrules",
+        "size": 4.64,
+        "timestamp": "2025-08-28T08:16:08.377Z"
+      }
+    ],
+    [
+      "nick227/prompt-harvest/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/nick227/prompt-harvest/db287ad800ead330c09b87de674ce5fb5c2aa349/.cursorrules",
+        "repositoryId": 773447886,
+        "path": "nick227/prompt-harvest/.cursorrules",
+        "ownerName": "nick227",
+        "repositoryName": "prompt-harvest",
+        "htmlUrl": "https://github.com/nick227/prompt-harvest/blob/db287ad800ead330c09b87de674ce5fb5c2aa349/.cursorrules",
+        "size": 3.98,
+        "timestamp": "2025-08-28T08:16:08.754Z"
+      }
+    ],
+    [
+      "404FoundingFather/lfc-kernel/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/404FoundingFather/lfc-kernel/9a2ecb36dd35a9f4c32ed9aef0e51a45ad88959b/.cursorrules",
+        "repositoryId": 1018140633,
+        "path": "404FoundingFather/lfc-kernel/.cursorrules",
+        "ownerName": "404FoundingFather",
+        "repositoryName": "lfc-kernel",
+        "htmlUrl": "https://github.com/404FoundingFather/lfc-kernel/blob/9a2ecb36dd35a9f4c32ed9aef0e51a45ad88959b/.cursorrules",
+        "size": 2.3,
+        "timestamp": "2025-08-28T08:16:09.140Z"
+      }
+    ],
+    [
+      "arghoritma/litex/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/arghoritma/litex/00d7497a291006e4a3bff4625e1d3c060ed82ece/.cursorrules",
+        "repositoryId": 1045284063,
+        "path": "arghoritma/litex/.cursorrules",
+        "ownerName": "arghoritma",
+        "repositoryName": "litex",
+        "htmlUrl": "https://github.com/arghoritma/litex/blob/00d7497a291006e4a3bff4625e1d3c060ed82ece/.cursorrules",
+        "size": 5.94,
+        "timestamp": "2025-08-28T08:16:09.275Z"
+      }
+    ],
+    [
+      "fiqrioemry/supabase-nextjs-saas-template-starter/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/fiqrioemry/supabase-nextjs-saas-template-starter/4fb0c7302d13bf2ebdf44f399f0aef674e577791/.cursorrules",
+        "repositoryId": 1042775235,
+        "path": "fiqrioemry/supabase-nextjs-saas-template-starter/.cursorrules",
+        "ownerName": "fiqrioemry",
+        "repositoryName": "supabase-nextjs-saas-template-starter",
+        "htmlUrl": "https://github.com/fiqrioemry/supabase-nextjs-saas-template-starter/blob/4fb0c7302d13bf2ebdf44f399f0aef674e577791/.cursorrules",
+        "size": 3.03,
+        "timestamp": "2025-08-28T08:16:09.895Z"
       }
     ]
   ]

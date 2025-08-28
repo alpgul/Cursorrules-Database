@@ -1,0 +1,98 @@
+# Cursor Rules for Next.js SaaS Template with Supabase
+
+## Project Overview
+This is a Next.js 14 SaaS template with Supabase integration, featuring authentication, form management, and a dashboard interface.
+
+## Technology Stack
+- **Framework**: Next.js 14 with App Router
+- **Database**: Supabase (PostgreSQL)
+- **Authentication**: Supabase Auth with OAuth providers
+- **Styling**: Tailwind CSS with shadcn/ui components
+- **Language**: TypeScript
+- **State Management**: Zustand for form state
+- **Validation**: Zod schemas
+
+## Code Style & Conventions
+
+### File Naming
+- Use kebab-case for file names: `form-builder-edit-page.tsx`
+- Use PascalCase for component names: `FormBuilderEditPage`
+- Use camelCase for variables, functions, and props
+
+### Component Structure
+- Place components in appropriate directories under `components/`
+- Use TypeScript interfaces for props
+- Implement proper error boundaries and loading states
+- Follow React best practices with hooks
+
+### Database & API
+- Use Supabase client for database operations
+- Implement proper error handling for API calls
+- Use RLS (Row Level Security) policies
+- Follow the established schema patterns in `database/schema.sql`
+
+### Styling
+- Use Tailwind CSS utility classes
+- Leverage shadcn/ui components for consistency
+- Implement responsive design patterns
+- Use CSS variables for theming
+
+### Authentication
+- Implement proper auth guards and middleware
+- Use Supabase auth hooks and context
+- Handle OAuth flows correctly
+- Implement proper session management
+
+### Forms
+- Use Zod for validation schemas
+- Implement proper form state management with Zustand
+- Use controlled components for form inputs
+- Handle form submission states and errors
+
+### Error Handling
+- Implement comprehensive error boundaries
+- Use proper error logging and user feedback
+- Handle network errors gracefully
+- Provide meaningful error messages
+
+### Performance
+- Implement proper loading states
+- Use Next.js Image component for images
+- Implement proper caching strategies
+- Optimize bundle size
+
+### Security
+- Validate all user inputs
+- Implement proper CSRF protection
+- Use environment variables for sensitive data
+- Follow OWASP security guidelines
+
+## File Organization
+- Keep related functionality together
+- Use barrel exports where appropriate
+- Maintain clear separation of concerns
+- Follow the established directory structure
+
+## Testing & Quality
+- Write meaningful component tests
+- Implement proper error handling
+- Use TypeScript strict mode
+- Follow ESLint rules
+
+## Common Patterns
+- Use React Server Components where possible
+- Implement proper loading and error states
+- Use proper TypeScript types from `lib/types/`
+- Follow the established action patterns in `lib/actions/`
+
+## Dependencies
+- Don't add unnecessary dependencies
+- Use established patterns from the existing codebase
+- Keep dependencies up to date
+- Document any new dependencies added
+
+## Documentation
+- Write clear component documentation
+- Document complex business logic
+- Keep README and setup instructions updated
+- Document environment variables needed
