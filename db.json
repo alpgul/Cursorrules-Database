@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 2012,
+  "size": 2022,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -28168,6 +28168,146 @@
         "htmlUrl": "https://github.com/fiqrioemry/supabase-nextjs-saas-template-starter/blob/4fb0c7302d13bf2ebdf44f399f0aef674e577791/.cursorrules",
         "size": 3.03,
         "timestamp": "2025-08-28T08:16:09.895Z"
+      }
+    ],
+    [
+      "Couks/ebener-tkd/.cursorrules.md",
+      {
+        "name": ".cursorrules.md",
+        "downloadUrl": "https://raw.githubusercontent.com/Couks/ebener-tkd/523cb8e84b46b5a240effc326a73b692dc0ab961/.cursorrules.md",
+        "repositoryId": 827028699,
+        "path": "Couks/ebener-tkd/.cursorrules.md",
+        "ownerName": "Couks",
+        "repositoryName": "ebener-tkd",
+        "htmlUrl": "https://github.com/Couks/ebener-tkd/blob/523cb8e84b46b5a240effc326a73b692dc0ab961/.cursorrules.md",
+        "size": 8.96,
+        "timestamp": "2025-08-31T08:13:43.766Z"
+      }
+    ],
+    [
+      "Pataco80/capriati-sa-nextjs/.cursorrules.md",
+      {
+        "name": ".cursorrules.md",
+        "downloadUrl": "https://raw.githubusercontent.com/Pataco80/capriati-sa-nextjs/b7aa85fa69f97d4f3c9976e6eb672355280037a1/.cursorrules.md",
+        "repositoryId": 1027383342,
+        "path": "Pataco80/capriati-sa-nextjs/.cursorrules.md",
+        "ownerName": "Pataco80",
+        "repositoryName": "capriati-sa-nextjs",
+        "htmlUrl": "https://github.com/Pataco80/capriati-sa-nextjs/blob/b7aa85fa69f97d4f3c9976e6eb672355280037a1/.cursorrules.md",
+        "size": 10.56,
+        "timestamp": "2025-08-31T08:13:44.322Z"
+      }
+    ],
+    [
+      "twardoch/pedalboard-pluginary/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/twardoch/pedalboard-pluginary/8a8572d9a58fc8dde0675a3bb979f42c87d47e29/.cursorrules",
+        "repositoryId": 720109873,
+        "path": "twardoch/pedalboard-pluginary/.cursorrules",
+        "ownerName": "twardoch",
+        "repositoryName": "pedalboard-pluginary",
+        "htmlUrl": "https://github.com/twardoch/pedalboard-pluginary/blob/8a8572d9a58fc8dde0675a3bb979f42c87d47e29/.cursorrules",
+        "size": 9.55,
+        "timestamp": "2025-08-31T08:13:44.834Z"
+      }
+    ],
+    [
+      "dcrebbin/t3-mac-app/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/dcrebbin/t3-mac-app/377c3889f3b90e1644d88950ed45e42649dd00f8/.cursorrules",
+        "repositoryId": 976184475,
+        "path": "dcrebbin/t3-mac-app/.cursorrules",
+        "ownerName": "dcrebbin",
+        "repositoryName": "t3-mac-app",
+        "htmlUrl": "https://github.com/dcrebbin/t3-mac-app/blob/377c3889f3b90e1644d88950ed45e42649dd00f8/.cursorrules",
+        "size": 3.66,
+        "timestamp": "2025-08-31T08:13:45.233Z"
+      }
+    ],
+    [
+      "docxology/codomyrmex/src/codomyrmex/ai_code_editing/.cursor/documentation_module.cursorrules",
+      {
+        "name": "documentation_module.cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/docxology/codomyrmex/c70676d437e7384ab9884e470c9bf7df802208ab/src/codomyrmex/ai_code_editing/.cursor/documentation_module.cursorrules",
+        "repositoryId": 984900169,
+        "path": "docxology/codomyrmex/src/codomyrmex/ai_code_editing/.cursor/documentation_module.cursorrules",
+        "ownerName": "docxology",
+        "repositoryName": "codomyrmex",
+        "htmlUrl": "https://github.com/docxology/codomyrmex/blob/c70676d437e7384ab9884e470c9bf7df802208ab/src/codomyrmex/ai_code_editing/.cursor/documentation_module.cursorrules",
+        "size": 3.61,
+        "timestamp": "2025-08-31T08:13:45.445Z"
+      }
+    ],
+    [
+      "Shopify/shop-minis/with-fal-ai/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Shopify/shop-minis/f1e3c9a581a676ff3b9cbb878e28976c7f492121/with-fal-ai/.cursorrules",
+        "repositoryId": 624331559,
+        "path": "Shopify/shop-minis/with-fal-ai/.cursorrules",
+        "ownerName": "Shopify",
+        "repositoryName": "shop-minis",
+        "htmlUrl": "https://github.com/Shopify/shop-minis/blob/f1e3c9a581a676ff3b9cbb878e28976c7f492121/with-fal-ai/.cursorrules",
+        "size": 1.46,
+        "timestamp": "2025-08-31T08:13:49.081Z"
+      }
+    ],
+    [
+      "huanzhen777/FileFlexManager/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/huanzhen777/FileFlexManager/809b94de865e586fa72adfa4f941a19455bff10d/.cursorrules",
+        "repositoryId": 927075578,
+        "path": "huanzhen777/FileFlexManager/.cursorrules",
+        "ownerName": "huanzhen777",
+        "repositoryName": "FileFlexManager",
+        "htmlUrl": "https://github.com/huanzhen777/FileFlexManager/blob/809b94de865e586fa72adfa4f941a19455bff10d/.cursorrules",
+        "size": 2.75,
+        "timestamp": "2025-08-31T08:13:49.141Z"
+      }
+    ],
+    [
+      "gfhdhytghd/My_Note/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/gfhdhytghd/My_Note/7ed7a89a37b83f07de2f193d50c17fc28428784d/.cursorrules",
+        "repositoryId": 999744916,
+        "path": "gfhdhytghd/My_Note/.cursorrules",
+        "ownerName": "gfhdhytghd",
+        "repositoryName": "My_Note",
+        "htmlUrl": "https://github.com/gfhdhytghd/My_Note/blob/7ed7a89a37b83f07de2f193d50c17fc28428784d/.cursorrules",
+        "size": 2.73,
+        "timestamp": "2025-08-31T08:13:50.358Z"
+      }
+    ],
+    [
+      "tult98/camera-store/apps/frontend/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/tult98/camera-store/4594ccb4e0596917de50f1264188d0065eb87221/apps/frontend/.cursorrules",
+        "repositoryId": 1036189219,
+        "path": "tult98/camera-store/apps/frontend/.cursorrules",
+        "ownerName": "tult98",
+        "repositoryName": "camera-store",
+        "htmlUrl": "https://github.com/tult98/camera-store/blob/4594ccb4e0596917de50f1264188d0065eb87221/apps/frontend/.cursorrules",
+        "size": 2.67,
+        "timestamp": "2025-08-31T08:13:50.842Z"
+      }
+    ],
+    [
+      "yvjnlee/go-cart/go-cart/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/yvjnlee/go-cart/6c1704ea8291335a6e6e78d68795f4b8198ae55d/go-cart/.cursorrules",
+        "repositoryId": 1035138993,
+        "path": "yvjnlee/go-cart/go-cart/.cursorrules",
+        "ownerName": "yvjnlee",
+        "repositoryName": "go-cart",
+        "htmlUrl": "https://github.com/yvjnlee/go-cart/blob/6c1704ea8291335a6e6e78d68795f4b8198ae55d/go-cart/.cursorrules",
+        "size": 1.46,
+        "timestamp": "2025-08-31T08:13:51.405Z"
       }
     ]
   ]
