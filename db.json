@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 2022,
+  "size": 2026,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -28308,6 +28308,62 @@
         "htmlUrl": "https://github.com/yvjnlee/go-cart/blob/6c1704ea8291335a6e6e78d68795f4b8198ae55d/go-cart/.cursorrules",
         "size": 1.46,
         "timestamp": "2025-08-31T08:13:51.405Z"
+      }
+    ],
+    [
+      "anonymze/restaurant/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/anonymze/restaurant/4ff2947dd0ef3967ebd797f1d31829d205fdc719/.cursorrules",
+        "repositoryId": 911382459,
+        "path": "anonymze/restaurant/.cursorrules",
+        "ownerName": "anonymze",
+        "repositoryName": "restaurant",
+        "htmlUrl": "https://github.com/anonymze/restaurant/blob/4ff2947dd0ef3967ebd797f1d31829d205fdc719/.cursorrules",
+        "size": 1.23,
+        "timestamp": "2025-09-01T08:18:00.892Z"
+      }
+    ],
+    [
+      "ozturkkl/framework-control/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ozturkkl/framework-control/d817ef90cb36b4fab41770560c13e44f8e7742ff/.cursorrules",
+        "repositoryId": 1038890058,
+        "path": "ozturkkl/framework-control/.cursorrules",
+        "ownerName": "ozturkkl",
+        "repositoryName": "framework-control",
+        "htmlUrl": "https://github.com/ozturkkl/framework-control/blob/d817ef90cb36b4fab41770560c13e44f8e7742ff/.cursorrules",
+        "size": 1.75,
+        "timestamp": "2025-09-01T08:18:03.237Z"
+      }
+    ],
+    [
+      "tbordinat/lighting/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/tbordinat/lighting/b6517f45e466e44ce6176b2fbbd89e57a9f25d67/.cursorrules",
+        "repositoryId": 1034650379,
+        "path": "tbordinat/lighting/.cursorrules",
+        "ownerName": "tbordinat",
+        "repositoryName": "lighting",
+        "htmlUrl": "https://github.com/tbordinat/lighting/blob/b6517f45e466e44ce6176b2fbbd89e57a9f25d67/.cursorrules",
+        "size": 3.15,
+        "timestamp": "2025-09-01T08:18:05.356Z"
+      }
+    ],
+    [
+      "adilyoltay/obsessless-mobile-app/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/adilyoltay/obsessless-mobile-app/396ca84061adc9782926b24631603044710841a0/.cursorrules",
+        "repositoryId": 1029474540,
+        "path": "adilyoltay/obsessless-mobile-app/.cursorrules",
+        "ownerName": "adilyoltay",
+        "repositoryName": "obsessless-mobile-app",
+        "htmlUrl": "https://github.com/adilyoltay/obsessless-mobile-app/blob/396ca84061adc9782926b24631603044710841a0/.cursorrules",
+        "size": 7.5,
+        "timestamp": "2025-09-01T08:18:06.626Z"
       }
     ]
   ]
