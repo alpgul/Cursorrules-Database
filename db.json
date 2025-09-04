@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 2026,
+  "size": 2040,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -28364,6 +28364,202 @@
         "htmlUrl": "https://github.com/adilyoltay/obsessless-mobile-app/blob/396ca84061adc9782926b24631603044710841a0/.cursorrules",
         "size": 7.5,
         "timestamp": "2025-09-01T08:18:06.626Z"
+      }
+    ],
+    [
+      "Bkevz/FLIGHT/shared-rules/.cursorrules-database",
+      {
+        "name": ".cursorrules-database",
+        "downloadUrl": "https://raw.githubusercontent.com/Bkevz/FLIGHT/5b6804a81101253a64742fcee0d4a47f40091b8e/shared-rules/.cursorrules-database",
+        "repositoryId": 990471967,
+        "path": "Bkevz/FLIGHT/shared-rules/.cursorrules-database",
+        "ownerName": "Bkevz",
+        "repositoryName": "FLIGHT",
+        "htmlUrl": "https://github.com/Bkevz/FLIGHT/blob/5b6804a81101253a64742fcee0d4a47f40091b8e/shared-rules/.cursorrules-database",
+        "size": 12.96,
+        "timestamp": "2025-09-04T08:15:42.734Z"
+      }
+    ],
+    [
+      "wtthornton/ha-ingestor/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/wtthornton/ha-ingestor/7bd54118b48f73924712abc02cfb4f98289cefea/.cursorrules",
+        "repositoryId": 1040769220,
+        "path": "wtthornton/ha-ingestor/.cursorrules",
+        "ownerName": "wtthornton",
+        "repositoryName": "ha-ingestor",
+        "htmlUrl": "https://github.com/wtthornton/ha-ingestor/blob/7bd54118b48f73924712abc02cfb4f98289cefea/.cursorrules",
+        "size": 3.99,
+        "timestamp": "2025-09-04T08:15:43.991Z"
+      }
+    ],
+    [
+      "washyaderner/crystal-seed-tarot-dot-com/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/washyaderner/crystal-seed-tarot-dot-com/17b24868ee145a097d8f19c7efd5c1b041755d7d/.cursorrules",
+        "repositoryId": 937934588,
+        "path": "washyaderner/crystal-seed-tarot-dot-com/.cursorrules",
+        "ownerName": "washyaderner",
+        "repositoryName": "crystal-seed-tarot-dot-com",
+        "htmlUrl": "https://github.com/washyaderner/crystal-seed-tarot-dot-com/blob/17b24868ee145a097d8f19c7efd5c1b041755d7d/.cursorrules",
+        "size": 30.37,
+        "timestamp": "2025-09-04T08:15:46.302Z"
+      }
+    ],
+    [
+      "ai-coding-labs/cursor-rules/resources/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ai-coding-labs/cursor-rules/112b682dda22c4317632db7f036340b045622255/resources/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 987021729,
+        "path": "ai-coding-labs/cursor-rules/resources/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "ai-coding-labs",
+        "repositoryName": "cursor-rules",
+        "htmlUrl": "https://github.com/ai-coding-labs/cursor-rules/blob/112b682dda22c4317632db7f036340b045622255/resources/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "size": 6.32,
+        "timestamp": "2025-09-04T08:15:46.692Z"
+      }
+    ],
+    [
+      "HaymayndzUltra/Matalinongworkflow/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/HaymayndzUltra/Matalinongworkflow/c6bd5281b6f43703e917e10dbfe6bf2b8e0016f0/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1036422547,
+        "path": "HaymayndzUltra/Matalinongworkflow/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "HaymayndzUltra",
+        "repositoryName": "Matalinongworkflow",
+        "htmlUrl": "https://github.com/HaymayndzUltra/Matalinongworkflow/blob/c6bd5281b6f43703e917e10dbfe6bf2b8e0016f0/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+        "size": 2.78,
+        "timestamp": "2025-09-04T08:15:46.790Z"
+      }
+    ],
+    [
+      "HaymayndzUltra/Matalinongworkflow/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/HaymayndzUltra/Matalinongworkflow/c6bd5281b6f43703e917e10dbfe6bf2b8e0016f0/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1036422547,
+        "path": "HaymayndzUltra/Matalinongworkflow/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "HaymayndzUltra",
+        "repositoryName": "Matalinongworkflow",
+        "htmlUrl": "https://github.com/HaymayndzUltra/Matalinongworkflow/blob/c6bd5281b6f43703e917e10dbfe6bf2b8e0016f0/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "size": 2.32,
+        "timestamp": "2025-09-04T08:15:47.676Z"
+      }
+    ],
+    [
+      "HaymayndzUltra/Matalinongworkflow/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/HaymayndzUltra/Matalinongworkflow/c6bd5281b6f43703e917e10dbfe6bf2b8e0016f0/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "repositoryId": 1036422547,
+        "path": "HaymayndzUltra/Matalinongworkflow/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "ownerName": "HaymayndzUltra",
+        "repositoryName": "Matalinongworkflow",
+        "htmlUrl": "https://github.com/HaymayndzUltra/Matalinongworkflow/blob/c6bd5281b6f43703e917e10dbfe6bf2b8e0016f0/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "size": 3.59,
+        "timestamp": "2025-09-04T08:15:47.748Z"
+      }
+    ],
+    [
+      "bigabid/vebo/cursor-rules-directory/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/bigabid/vebo/0624edbbcf25e66c8480580aff82064cc50a46f9/cursor-rules-directory/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1049107446,
+        "path": "bigabid/vebo/cursor-rules-directory/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "bigabid",
+        "repositoryName": "vebo",
+        "htmlUrl": "https://github.com/bigabid/vebo/blob/0624edbbcf25e66c8480580aff82064cc50a46f9/cursor-rules-directory/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "size": 6.32,
+        "timestamp": "2025-09-04T08:15:48.531Z"
+      }
+    ],
+    [
+      "bigabid/ai-hackathon/rules-directory/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/bigabid/ai-hackathon/54a1e5ef65885ac54a7db7984dccb33c03728a04/rules-directory/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1046239803,
+        "path": "bigabid/ai-hackathon/rules-directory/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "bigabid",
+        "repositoryName": "ai-hackathon",
+        "htmlUrl": "https://github.com/bigabid/ai-hackathon/blob/54a1e5ef65885ac54a7db7984dccb33c03728a04/rules-directory/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "size": 6.32,
+        "timestamp": "2025-09-04T08:15:48.622Z"
+      }
+    ],
+    [
+      "compass-ai-chat/compass/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/compass-ai-chat/compass/3a043e7d183da1c44d46aab715e863b25cb262e6/.cursorrules",
+        "repositoryId": 987078751,
+        "path": "compass-ai-chat/compass/.cursorrules",
+        "ownerName": "compass-ai-chat",
+        "repositoryName": "compass",
+        "htmlUrl": "https://github.com/compass-ai-chat/compass/blob/3a043e7d183da1c44d46aab715e863b25cb262e6/.cursorrules",
+        "size": 2.02,
+        "timestamp": "2025-09-04T08:15:49.231Z"
+      }
+    ],
+    [
+      "solextech24/alx-prolly/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/solextech24/alx-prolly/f474031dea685937d0cd6b6450a4c87de0c44242/.cursorrules",
+        "repositoryId": 1048652161,
+        "path": "solextech24/alx-prolly/.cursorrules",
+        "ownerName": "solextech24",
+        "repositoryName": "alx-prolly",
+        "htmlUrl": "https://github.com/solextech24/alx-prolly/blob/f474031dea685937d0cd6b6450a4c87de0c44242/.cursorrules",
+        "size": 4.64,
+        "timestamp": "2025-09-04T08:15:50.356Z"
+      }
+    ],
+    [
+      "marlinjai/MedusaJS/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/marlinjai/MedusaJS/d7186a3d3a046acdc9607e042f20ccb8c2106012/.cursorrules",
+        "repositoryId": 961896182,
+        "path": "marlinjai/MedusaJS/.cursorrules",
+        "ownerName": "marlinjai",
+        "repositoryName": "MedusaJS",
+        "htmlUrl": "https://github.com/marlinjai/MedusaJS/blob/d7186a3d3a046acdc9607e042f20ccb8c2106012/.cursorrules",
+        "size": 15.03,
+        "timestamp": "2025-09-04T08:15:51.217Z"
+      }
+    ],
+    [
+      "parthraninga/cursor-rules/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/parthraninga/cursor-rules/2733a163fbeb89d00e9fd9287a269881d39dbae1/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1036829587,
+        "path": "parthraninga/cursor-rules/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "parthraninga",
+        "repositoryName": "cursor-rules",
+        "htmlUrl": "https://github.com/parthraninga/cursor-rules/blob/2733a163fbeb89d00e9fd9287a269881d39dbae1/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+        "size": 7.48,
+        "timestamp": "2025-09-04T08:15:52.260Z"
+      }
+    ],
+    [
+      "HaymayndzUltra/Matalinongworkflow/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/HaymayndzUltra/Matalinongworkflow/c6bd5281b6f43703e917e10dbfe6bf2b8e0016f0/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1036422547,
+        "path": "HaymayndzUltra/Matalinongworkflow/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "HaymayndzUltra",
+        "repositoryName": "Matalinongworkflow",
+        "htmlUrl": "https://github.com/HaymayndzUltra/Matalinongworkflow/blob/c6bd5281b6f43703e917e10dbfe6bf2b8e0016f0/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+        "size": 7.48,
+        "timestamp": "2025-09-04T08:15:52.345Z"
       }
     ]
   ]
