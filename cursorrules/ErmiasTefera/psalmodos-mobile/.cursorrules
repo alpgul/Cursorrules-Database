@@ -1,0 +1,164 @@
+# Psalmodos Mobile - Project Intelligence
+
+## Project Overview
+Ethiopian Orthodox Christian hymns (mezmurs) streaming app built with Expo/React Native. Focus on cultural sensitivity, offline capability, and professional audio playback.
+
+## Critical Implementation Paths
+
+### Audio Playback Architecture
+- **React Native Track Player** is the core audio engine
+- **Service-based approach**: `track-player.service.js` handles background playback
+- **State synchronization**: Zustand stores manage playback state across components
+- **Queue management**: Tracks are added to player queue in `mezmur.store.ts`
+
+### Player Component Hierarchy
+```
+floating-track-control.tsx (Mini player - always visible)
+    ↓ navigates to
+mezmur-detail.tsx (Full-screen player with lyrics)
+    ↓ contains
+player.tsx (Player container)
+    ├── PlayerProgressbar.tsx (Seek control)
+    ├── PlayerControls.tsx (Play/pause/skip)
+    └── PlayerVolumeBar.tsx (Volume control)
+```
+
+### State Management Pattern
+- **Domain separation**: `mezmur.store.ts` for music, `category.store.ts` for categories
+- **Action-based updates**: Clear methods like `togglePlayState()`, `setCurrentMezmur()`
+- **Reactive components**: Components automatically re-render on store changes
+
+## Key Technical Decisions
+
+### Why Zustand over Redux?
+- Lighter weight for mobile app
+- Better TypeScript integration
+- Simpler API for this use case
+- Good performance characteristics
+
+### Why React Native Track Player?
+- Professional audio capabilities
+- Background playback support
+- Lock screen controls
+- Queue management
+- Cross-platform compatibility
+
+### Why NativeWind + Custom Components?
+- Rapid styling with Tailwind utilities
+- Consistent design system
+- Easy theming and customization
+- Good performance with compiled styles
+
+## Project-Specific Patterns
+
+### Mezmur Data Flow
+1. **Fetch**: `fetchMezmurs()` gets data from Supabase
+2. **Cache**: Store in MMKV for offline access
+3. **Queue**: Add tracks to TrackPlayer queue
+4. **Play**: User interactions trigger playback
+5. **Sync**: State updates across all components
+
+### Offline-First Strategy
+- **Local storage**: MMKV for metadata, FileSystem for audio files
+- **Fallback**: Use cached data when offline
+- **Sync**: Update local data when online
+- **Downloads**: `saveMezmurFile()` for offline playback
+
+### Component Communication
+- **Props down**: Data flows from stores to components
+- **Actions up**: User interactions trigger store actions
+- **Hooks**: Custom hooks like `useTrackPlayerEvents` for shared logic
+
+## Known Challenges & Solutions
+
+### Player State Synchronization
+- **Challenge**: Keeping mini player and full player in sync
+- **Solution**: Centralized state in `mezmur.store.ts`
+- **Pattern**: Single source of truth with reactive updates
+
+### Background Playback
+- **Challenge**: Audio continues when app is backgrounded
+- **Solution**: Service-based architecture with TrackPlayer
+- **Implementation**: `RNTPService` handles remote events
+
+### Offline/Online Transitions
+- **Challenge**: Seamless experience when network changes
+- **Solution**: Local-first approach with network fallback
+- **Pattern**: Check local data first, then fetch from API
+
+## Development Workflow
+
+### File Organization
+- **Pages**: `app/` directory with Expo Router
+- **Components**: `components/` with domain-specific grouping
+- **Business Logic**: `services/` for external integrations
+- **State**: `store/` for Zustand stores
+- **Types**: `models/` for TypeScript interfaces
+
+### Styling Approach
+- **Global**: `global.css` for base styles
+- **Components**: NativeWind classes for component styling
+- **Tokens**: `constants/tokens.ts` for design system values
+- **Themes**: Automatic light/dark mode support
+
+### Build & Deployment
+- **Development**: Expo Dev Client for custom builds
+- **Staging**: EAS Build preview builds
+- **Production**: EAS Build production builds
+- **Platforms**: iOS and Android with shared codebase
+
+## User Experience Considerations
+
+### Cultural Sensitivity
+- **Respect**: Ethiopian Orthodox traditions and aesthetics
+- **Accessibility**: Works for users of all technical levels
+- **Performance**: Smooth on various device capabilities
+- **Offline**: Essential for areas with poor connectivity
+
+### Audio Experience
+- **Quality**: High-quality audio playback
+- **Controls**: Intuitive and responsive controls
+- **Lyrics**: Clear, readable lyrics display
+- **Background**: Seamless background playback
+
+## Performance Optimization
+
+### Audio Performance
+- **Buffering**: Efficient audio buffering strategies
+- **Memory**: Proper cleanup of audio resources
+- **Battery**: Optimized for battery life
+- **Network**: Adaptive quality based on connection
+
+### UI Performance
+- **Rendering**: Efficient component re-rendering
+- **Animations**: Smooth animations with Reanimated
+- **Loading**: Proper loading states and error handling
+- **Navigation**: Fast navigation between screens
+
+## Testing Strategy
+
+### Component Testing
+- **Unit Tests**: Individual component functionality
+- **Integration Tests**: Component interaction testing
+- **E2E Tests**: Full user flow testing
+- **Audio Tests**: Playback functionality testing
+
+### Device Testing
+- **iOS**: Various iPhone models and iOS versions
+- **Android**: Different manufacturers and Android versions
+- **Performance**: Low-end and high-end device testing
+- **Network**: Various network conditions testing
+
+## Deployment Considerations
+
+### App Store Requirements
+- **iOS**: Proper entitlements for background audio
+- **Android**: Audio focus management for phone calls
+- **Content**: Appropriate content for religious app
+- **Privacy**: Proper privacy policy and data handling
+
+### Build Configuration
+- **EAS Build**: Cloud builds for consistent results
+- **Environment**: Proper environment variable management
+- **Signing**: Correct code signing for both platforms
+- **Distribution**: Internal and external distribution channels

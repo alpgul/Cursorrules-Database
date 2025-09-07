@@ -1,0 +1,347 @@
+# Next.js Frontend Development Rules
+
+## Project Context
+This is the Next.js 14 frontend for the NeuroInsight platform - a Parkinson's Disease biomarker monitoring dashboard.
+
+## Next.js 14 Best Practices
+
+### App Directory Structure
+- Use Next.js 14 app directory structure
+- Implement proper layout hierarchy
+- Use server and client components appropriately
+- Follow Next.js routing conventions
+- Implement proper metadata
+
+### Component Guidelines
+- Use functional components with hooks
+- Implement proper TypeScript interfaces
+- Use PascalCase for component names
+- Keep components small and focused
+- Use proper prop destructuring
+- Implement proper key props for lists
+
+### TypeScript Best Practices
+- Define proper interfaces for all props
+- Use strict type checking
+- Avoid `any` types - use specific types
+- Use generics when appropriate
+- Implement proper type guards
+- Use union types for state
+
+### State Management
+- Use useState for local component state
+- Use useReducer for complex state logic
+- Use Context API for shared state
+- Implement proper state updates
+- Avoid prop drilling
+- Use custom hooks for reusable logic
+
+### API Integration
+- Use proper error handling for API calls
+- Implement loading states
+- Use proper TypeScript types for responses
+- Implement retry logic for failed requests
+- Handle different response status codes
+- Use proper HTTP methods
+
+### Styling with Tailwind CSS
+- Use consistent spacing scale
+- Use semantic color names from theme
+- Implement responsive design
+- Use consistent component patterns
+- Avoid inline styles except for dynamic values
+- Use CSS custom properties for theme values
+
+### Performance Optimization
+- Use React.memo for expensive components
+- Implement proper code splitting
+- Use lazy loading for routes
+- Optimize images and assets
+- Monitor bundle size
+- Use proper dependency arrays in useEffect
+
+### Error Handling
+- Implement error boundaries
+- Show user-friendly error messages
+- Handle network errors gracefully
+- Implement retry mechanisms
+- Log errors for debugging
+- Use proper fallback UI
+
+### Accessibility
+- Use semantic HTML elements
+- Implement proper ARIA attributes
+- Ensure keyboard navigation
+- Test with screen readers
+- Use proper color contrast
+- Implement focus management
+
+### File Organization
+```
+frontend/src/
+├── app/                # Next.js 14 app directory
+│   ├── layout.tsx      # Root layout
+│   ├── page.tsx        # Home page
+│   ├── globals.css     # Global styles
+│   └── [feature]/      # Feature-based routing
+├── components/         # Reusable components
+│   ├── ui/            # Basic UI components
+│   └── [feature]/     # Feature-specific components
+├── hooks/             # Custom React hooks
+├── types/             # TypeScript type definitions
+├── utils/             # Utility functions
+├── api.ts             # API client functions
+└── theme.ts           # Theme configuration
+```
+
+### Component Examples
+
+#### Basic Component
+```tsx
+interface PatientCardProps {
+  patient: Patient;
+  onSelect: (patientId: string) => void;
+}
+
+export const PatientCard: React.FC<PatientCardProps> = ({ 
+  patient, 
+  onSelect 
+}) => {
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleClick = useCallback(() => {
+    setIsLoading(true);
+    onSelect(patient.id);
+  }, [patient.id, onSelect]);
+
+  return (
+    <div className="card p-4 hover:shadow-lg transition-shadow">
+      <h3 className="text-lg font-semibold">{patient.name}</h3>
+      <p className="text-muted-foreground">{patient.status}</p>
+      <button 
+        onClick={handleClick}
+        disabled={isLoading}
+        className="btn-primary mt-2"
+      >
+        {isLoading ? 'Loading...' : 'View Details'}
+      </button>
+    </div>
+  );
+};
+```
+
+#### Custom Hook
+```tsx
+const usePatients = () => {
+  const [patients, setPatients] = useState<Patient[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchPatients = async () => {
+      try {
+        setLoading(true);
+        const data = await getPatients();
+        setPatients(data.patient_ids.map(id => ({ 
+          id, 
+          name: id, 
+          status: 'Active' 
+        })));
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Failed to fetch patients');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPatients();
+  }, []);
+
+  return { patients, loading, error };
+};
+```
+
+#### API Integration
+```tsx
+// api.ts
+export async function getPatients(): Promise<PatientsResponse> {
+  try {
+    const res = await fetch(`${API_BASE_URL}/patients`, {
+      next: { revalidate: 5000 },
+    });
+    
+    if (!res.ok) {
+      throw new Error(`HTTP error! status: ${res.status}`);
+    }
+    
+    return await res.json();
+  } catch (error) {
+    console.error("Error fetching patients:", error);
+    throw error;
+  }
+}
+```
+
+### Styling Guidelines
+
+#### Tailwind CSS Patterns
+```tsx
+// Good: Using Tailwind classes consistently
+<div className="card p-6 bg-card border border-border rounded-lg shadow-soft">
+  <h2 className="text-2xl font-semibold text-foreground mb-4">
+    {title}
+  </h2>
+  <p className="text-muted-foreground">
+    {description}
+  </p>
+</div>
+
+// Good: Responsive design
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+  {items.map(item => (
+    <ItemCard key={item.id} item={item} />
+  ))}
+</div>
+```
+
+### Error Handling Patterns
+
+#### Error Boundary
+```tsx
+class ErrorBoundary extends React.Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return <ErrorFallback />;
+    }
+
+    return this.props.children;
+  }
+}
+```
+
+#### API Error Handling
+```tsx
+const useApiCall = <T>(apiCall: () => Promise<T>) => {
+  const [data, setData] = useState<T | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const execute = useCallback(async () => {
+    try {
+      setLoading(true);
+      setError(null);
+      const result = await apiCall();
+      setData(result);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'An error occurred');
+    } finally {
+      setLoading(false);
+    }
+  }, [apiCall]);
+
+  return { data, loading, error, execute };
+};
+```
+
+### Performance Patterns
+
+#### Memoization
+```tsx
+const ExpensiveComponent = React.memo<Props>(({ data, onUpdate }) => {
+  const processedData = useMemo(() => {
+    return data.map(item => ({
+      ...item,
+      processed: heavyComputation(item)
+    }));
+  }, [data]);
+
+  const handleUpdate = useCallback((id: string) => {
+    onUpdate(id);
+  }, [onUpdate]);
+
+  return (
+    <div>
+      {processedData.map(item => (
+        <Item key={item.id} item={item} onUpdate={handleUpdate} />
+      ))}
+    </div>
+  );
+});
+```
+
+### Testing Patterns
+
+#### Component Testing
+```tsx
+import { render, screen, fireEvent } from '@testing-library/react';
+import { PatientCard } from './PatientCard';
+
+describe('PatientCard', () => {
+  it('renders patient information correctly', () => {
+    const mockPatient = {
+      id: 'P01',
+      name: 'Patient 1',
+      status: 'Active'
+    };
+    
+    const mockOnSelect = jest.fn();
+    
+    render(<PatientCard patient={mockPatient} onSelect={mockOnSelect} />);
+    
+    expect(screen.getByText('Patient 1')).toBeInTheDocument();
+    expect(screen.getByText('Active')).toBeInTheDocument();
+  });
+
+  it('calls onSelect when button is clicked', () => {
+    const mockPatient = { id: 'P01', name: 'Patient 1', status: 'Active' };
+    const mockOnSelect = jest.fn();
+    
+    render(<PatientCard patient={mockPatient} onSelect={mockOnSelect} />);
+    
+    fireEvent.click(screen.getByText('View Details'));
+    
+    expect(mockOnSelect).toHaveBeenCalledWith('P01');
+  });
+});
+```
+
+### Quick Commands
+```bash
+# Start development server
+npm run dev
+
+# Install dependencies
+npm install
+
+# Run tests
+npm test
+
+# Build for production
+npm run build
+
+# Lint code
+npm run lint
+```
+
+### Common Patterns
+- Use proper loading states
+- Implement error boundaries
+- Use custom hooks for reusable logic
+- Implement proper TypeScript types
+- Use Tailwind CSS consistently
+- Follow Next.js 14 conventions
+- Implement proper accessibility
+- Use proper performance optimizations

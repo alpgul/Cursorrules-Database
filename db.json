@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 2040,
+  "size": 2051,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -28560,6 +28560,160 @@
         "htmlUrl": "https://github.com/HaymayndzUltra/Matalinongworkflow/blob/c6bd5281b6f43703e917e10dbfe6bf2b8e0016f0/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
         "size": 7.48,
         "timestamp": "2025-09-04T08:15:52.345Z"
+      }
+    ],
+    [
+      "ZyphrZero/LingYaoKeys/docs/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ZyphrZero/LingYaoKeys/fce9a0a009aa435b8f875bdd1693c59a85c22fd2/docs/.cursorrules",
+        "repositoryId": 902734351,
+        "path": "ZyphrZero/LingYaoKeys/docs/.cursorrules",
+        "ownerName": "ZyphrZero",
+        "repositoryName": "LingYaoKeys",
+        "htmlUrl": "https://github.com/ZyphrZero/LingYaoKeys/blob/fce9a0a009aa435b8f875bdd1693c59a85c22fd2/docs/.cursorrules",
+        "size": 4.28,
+        "timestamp": "2025-09-07T08:13:18.426Z"
+      }
+    ],
+    [
+      "ZyphrZero/wails-react-ts-template/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ZyphrZero/wails-react-ts-template/cfb19f346c9d7ed34e3dd2d5799651522620a42c/.cursorrules",
+        "repositoryId": 921685342,
+        "path": "ZyphrZero/wails-react-ts-template/.cursorrules",
+        "ownerName": "ZyphrZero",
+        "repositoryName": "wails-react-ts-template",
+        "htmlUrl": "https://github.com/ZyphrZero/wails-react-ts-template/blob/cfb19f346c9d7ed34e3dd2d5799651522620a42c/.cursorrules",
+        "size": 4.28,
+        "timestamp": "2025-09-07T08:13:19.304Z"
+      }
+    ],
+    [
+      "Zaki-goumri/react-starter/.cursor/rules/security.cursorrules",
+      {
+        "name": "security.cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Zaki-goumri/react-starter/d453488ad1a8e51bde70d1e913df3ac20d086dfd/.cursor/rules/security.cursorrules",
+        "repositoryId": 1050455042,
+        "path": "Zaki-goumri/react-starter/.cursor/rules/security.cursorrules",
+        "ownerName": "Zaki-goumri",
+        "repositoryName": "react-starter",
+        "htmlUrl": "https://github.com/Zaki-goumri/react-starter/blob/d453488ad1a8e51bde70d1e913df3ac20d086dfd/.cursor/rules/security.cursorrules",
+        "size": 12.08,
+        "timestamp": "2025-09-07T08:13:19.447Z"
+      }
+    ],
+    [
+      "Zaki-goumri/react-starter/.cursor/rules/state-management.cursorrules",
+      {
+        "name": "state-management.cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Zaki-goumri/react-starter/d453488ad1a8e51bde70d1e913df3ac20d086dfd/.cursor/rules/state-management.cursorrules",
+        "repositoryId": 1050455042,
+        "path": "Zaki-goumri/react-starter/.cursor/rules/state-management.cursorrules",
+        "ownerName": "Zaki-goumri",
+        "repositoryName": "react-starter",
+        "htmlUrl": "https://github.com/Zaki-goumri/react-starter/blob/d453488ad1a8e51bde70d1e913df3ac20d086dfd/.cursor/rules/state-management.cursorrules",
+        "size": 7.88,
+        "timestamp": "2025-09-07T08:13:19.748Z"
+      }
+    ],
+    [
+      "rachmanj/payreq-x-v3/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/rachmanj/payreq-x-v3/91cd5ded25f970486e6eb9e8e1cf76c36f0bd23c/.cursorrules",
+        "repositoryId": 835988071,
+        "path": "rachmanj/payreq-x-v3/.cursorrules",
+        "ownerName": "rachmanj",
+        "repositoryName": "payreq-x-v3",
+        "htmlUrl": "https://github.com/rachmanj/payreq-x-v3/blob/91cd5ded25f970486e6eb9e8e1cf76c36f0bd23c/.cursorrules",
+        "size": 2.5,
+        "timestamp": "2025-09-07T08:13:21.160Z"
+      }
+    ],
+    [
+      "ErmiasTefera/psalmodos-mobile/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ErmiasTefera/psalmodos-mobile/a1a1cc770c58a5cac8445a453a4bef3d67730533/.cursorrules",
+        "repositoryId": 911107431,
+        "path": "ErmiasTefera/psalmodos-mobile/.cursorrules",
+        "ownerName": "ErmiasTefera",
+        "repositoryName": "psalmodos-mobile",
+        "htmlUrl": "https://github.com/ErmiasTefera/psalmodos-mobile/blob/a1a1cc770c58a5cac8445a453a4bef3d67730533/.cursorrules",
+        "size": 5.81,
+        "timestamp": "2025-09-07T08:13:21.973Z"
+      }
+    ],
+    [
+      "N2BBrasil/backend-playground/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/N2BBrasil/backend-playground/f8a46924261cb10d6827455c355bcb36e98a60c8/.cursorrules",
+        "repositoryId": 1050660968,
+        "path": "N2BBrasil/backend-playground/.cursorrules",
+        "ownerName": "N2BBrasil",
+        "repositoryName": "backend-playground",
+        "htmlUrl": "https://github.com/N2BBrasil/backend-playground/blob/f8a46924261cb10d6827455c355bcb36e98a60c8/.cursorrules",
+        "size": 11.59,
+        "timestamp": "2025-09-07T08:13:23.188Z"
+      }
+    ],
+    [
+      "bigabid/vebo/cursor-rules-directory/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/bigabid/vebo/053648a3092be9b6fee656c049ff2f178f809b4e/cursor-rules-directory/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "repositoryId": 1049107446,
+        "path": "bigabid/vebo/cursor-rules-directory/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "ownerName": "bigabid",
+        "repositoryName": "vebo",
+        "htmlUrl": "https://github.com/bigabid/vebo/blob/053648a3092be9b6fee656c049ff2f178f809b4e/cursor-rules-directory/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "size": 4.93,
+        "timestamp": "2025-09-07T08:13:24.289Z"
+      }
+    ],
+    [
+      "FocusTorn/focused-ux/.cursorrules-og",
+      {
+        "name": ".cursorrules-og",
+        "downloadUrl": "https://raw.githubusercontent.com/FocusTorn/focused-ux/0a0073e85952e8159a4ae5ac45b84b0217effce7/.cursorrules-og",
+        "repositoryId": 1010256579,
+        "path": "FocusTorn/focused-ux/.cursorrules-og",
+        "ownerName": "FocusTorn",
+        "repositoryName": "focused-ux",
+        "htmlUrl": "https://github.com/FocusTorn/focused-ux/blob/0a0073e85952e8159a4ae5ac45b84b0217effce7/.cursorrules-og",
+        "size": 69.35,
+        "timestamp": "2025-09-07T08:13:24.770Z"
+      }
+    ],
+    [
+      "markdyousef/neuro-insight-demo/frontend/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/markdyousef/neuro-insight-demo/81ceb46922898f51229430814dea42c1f88b7c65/frontend/.cursorrules",
+        "repositoryId": 1051285673,
+        "path": "markdyousef/neuro-insight-demo/frontend/.cursorrules",
+        "ownerName": "markdyousef",
+        "repositoryName": "neuro-insight-demo",
+        "htmlUrl": "https://github.com/markdyousef/neuro-insight-demo/blob/81ceb46922898f51229430814dea42c1f88b7c65/frontend/.cursorrules",
+        "size": 8.47,
+        "timestamp": "2025-09-07T08:13:26.482Z"
+      }
+    ],
+    [
+      "Hagar-ishay/fanfic/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Hagar-ishay/fanfic/70a9880dc9a4beb184bb5e0eb8e077f0fa2d99a7/.cursorrules",
+        "repositoryId": 876795922,
+        "path": "Hagar-ishay/fanfic/.cursorrules",
+        "ownerName": "Hagar-ishay",
+        "repositoryName": "fanfic",
+        "htmlUrl": "https://github.com/Hagar-ishay/fanfic/blob/70a9880dc9a4beb184bb5e0eb8e077f0fa2d99a7/.cursorrules",
+        "size": 7,
+        "timestamp": "2025-09-07T08:13:27.653Z"
       }
     ]
   ]

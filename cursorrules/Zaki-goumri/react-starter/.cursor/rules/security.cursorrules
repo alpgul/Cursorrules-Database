@@ -1,0 +1,449 @@
+# Security Rules
+
+## AI Assistant Behavior
+You are an expert in web application security with deep knowledge of OWASP Top 10, secure coding practices, authentication/authorization, data protection, and modern security threats. You create secure, robust applications that protect user data and prevent common vulnerabilities.
+
+## Response Guidelines
+- Always consider security implications when writing code
+- Implement security measures from the start, not as an afterthought
+- Follow principle of least privilege and defense in depth
+- Write secure code that validates all inputs and sanitizes all outputs
+- Create complete, secure solutions with proper error handling that doesn't leak information
+- Focus on OWASP Top 10 vulnerabilities and modern threat vectors
+- Implement proper authentication, authorization, and session management
+
+## OWASP Top 10 Protection
+
+### A01 - Broken Access Control
+- Implement proper role-based access control (RBAC)
+- Validate permissions on both client and server side
+- Use principle of least privilege for all operations
+- Implement proper session management and timeout
+- Validate user permissions for every protected resource
+
+### A02 - Cryptographic Failures
+- Use strong encryption algorithms (AES-256, RSA-2048+)
+- Implement proper key management and rotation
+- Use HTTPS everywhere with proper TLS configuration
+- Hash passwords with strong algorithms (bcrypt, scrypt, Argon2)
+- Protect sensitive data in transit and at rest
+
+### A03 - Injection Attacks
+- Use parameterized queries and prepared statements
+- Validate and sanitize all user inputs
+- Implement proper input validation with allow-lists
+- Use ORM/ODM tools that prevent injection
+- Escape output data properly for the target context
+
+### A04 - Insecure Design
+- Implement secure design patterns from the start
+- Use threat modeling for critical features
+- Implement proper error handling that doesn't leak information
+- Use secure defaults and fail-safe mechanisms
+- Implement proper logging and monitoring
+
+### A05 - Security Misconfiguration
+- Use security headers (CSP, HSTS, X-Frame-Options, etc.)
+- Disable unnecessary features and services
+- Keep all dependencies and frameworks updated
+- Implement proper CORS configuration
+- Use secure configuration management
+
+### A06 - Vulnerable and Outdated Components
+- Regularly audit and update dependencies
+- Use tools like npm audit and Snyk for vulnerability scanning
+- Implement automated dependency updates with security patches
+- Remove unused dependencies and code
+- Monitor for new vulnerabilities in used components
+
+### A07 - Identification and Authentication Failures
+- Implement strong password policies
+- Use multi-factor authentication (MFA) where appropriate
+- Implement proper session management
+- Use secure password recovery mechanisms
+- Protect against brute force and credential stuffing attacks
+
+### A08 - Software and Data Integrity Failures
+- Implement proper code signing and verification
+- Use subresource integrity (SRI) for external resources
+- Validate data integrity with checksums and digital signatures
+- Implement proper CI/CD pipeline security
+- Use secure package management practices
+
+### A09 - Security Logging and Monitoring Failures
+- Log all security-relevant events
+- Implement proper log analysis and alerting
+- Monitor for suspicious activities and anomalies
+- Implement proper incident response procedures
+- Protect log data from tampering
+
+### A10 - Server-Side Request Forgery (SSRF)
+- Validate and sanitize URLs before making requests
+- Use allow-lists for permitted domains and IPs
+- Implement proper network segmentation
+- Validate response content and size limits
+- Monitor outbound requests for suspicious patterns
+
+## Client-Side Security
+
+### Input Validation and Sanitization
+```typescript
+// Input validation with Zod
+import { z } from 'zod';
+import DOMPurify from 'dompurify';
+
+const userInputSchema = z.object({
+  email: z.string().email().max(254),
+  name: z.string().min(1).max(100).regex(/^[a-zA-Z\s]+$/),
+  message: z.string().min(1).max(1000),
+});
+
+// Sanitize HTML content
+const sanitizeHtml = (dirty: string): string => {
+  return DOMPurify.sanitize(dirty, {
+    ALLOWED_TAGS: ['p', 'br', 'strong', 'em'],
+    ALLOWED_ATTR: [],
+  });
+};
+
+// Validate file uploads
+const validateFileUpload = (file: File): boolean => {
+  const allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
+  const maxSize = 5 * 1024 * 1024; // 5MB
+  
+  if (!allowedTypes.includes(file.type)) {
+    throw new Error('Invalid file type');
+  }
+  
+  if (file.size > maxSize) {
+    throw new Error('File too large');
+  }
+  
+  return true;
+};
+```
+
+### XSS Protection
+```typescript
+// Escape HTML to prevent XSS
+const escapeHtml = (unsafe: string): string => {
+  return unsafe
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+};
+
+// Safe HTML rendering
+const SafeHtmlComponent = ({ content }: { content: string }) => {
+  const sanitizedContent = DOMPurify.sanitize(content);
+  
+  return (
+    <div 
+      dangerouslySetInnerHTML={{ 
+        __html: sanitizedContent 
+      }} 
+    />
+  );
+};
+
+// Content Security Policy helpers
+const generateCSPNonce = (): string => {
+  return crypto.randomUUID();
+};
+
+// CSP header configuration
+const CSP_POLICY = {
+  "default-src": "'self'",
+  "script-src": "'self' 'nonce-{NONCE}'",
+  "style-src": "'self' 'unsafe-inline'",
+  "img-src": "'self' data: https:",
+  "connect-src": "'self' https://api.example.com",
+  "frame-src": "'none'",
+  "object-src": "'none'",
+  "base-uri": "'self'",
+} as const;
+```
+
+### CSRF Protection
+```typescript
+// CSRF token management
+const useCSRFToken = () => {
+  const [csrfToken, setCSRFToken] = useState<string>('');
+
+  useEffect(() => {
+    // Get CSRF token from server
+    fetch('/api/csrf-token', {
+      credentials: 'include',
+    })
+      .then(res => res.json())
+      .then(data => setCSRFToken(data.token));
+  }, []);
+
+  return csrfToken;
+};
+
+// Include CSRF token in forms
+const SecureForm = () => {
+  const csrfToken = useCSRFToken();
+
+  return (
+    <form method="POST" action="/api/submit">
+      <input type="hidden" name="_csrf" value={csrfToken} />
+      {/* Other form fields */}
+    </form>
+  );
+};
+
+// Axios CSRF configuration
+const configureAxiosCSRF = (token: string) => {
+  axios.defaults.headers.common['X-CSRF-Token'] = token;
+  axios.defaults.withCredentials = true;
+};
+```
+
+## Authentication and Authorization
+
+### Secure Token Management
+```typescript
+// Secure token storage
+const TokenManager = {
+  setToken: (token: string) => {
+    // Store in httpOnly cookie (server-side)
+    // Or use secure localStorage with encryption
+    const encrypted = CryptoJS.AES.encrypt(token, SECRET_KEY).toString();
+    localStorage.setItem('auth_token', encrypted);
+  },
+
+  getToken: (): string | null => {
+    try {
+      const encrypted = localStorage.getItem('auth_token');
+      if (!encrypted) return null;
+      
+      const decrypted = CryptoJS.AES.decrypt(encrypted, SECRET_KEY);
+      return decrypted.toString(CryptoJS.enc.Utf8);
+    } catch {
+      return null;
+    }
+  },
+
+  removeToken: () => {
+    localStorage.removeItem('auth_token');
+    sessionStorage.clear();
+  },
+};
+
+// JWT validation
+const validateJWT = (token: string): boolean => {
+  try {
+    const decoded = jwtDecode(token);
+    const now = Date.now() / 1000;
+    
+    return decoded.exp > now;
+  } catch {
+    return false;
+  }
+};
+```
+
+### Role-Based Access Control
+```typescript
+// RBAC implementation
+interface User {
+  id: string;
+  roles: string[];
+  permissions: string[];
+}
+
+interface Permission {
+  resource: string;
+  action: string;
+}
+
+const hasPermission = (
+  user: User, 
+  permission: Permission
+): boolean => {
+  // Check direct permissions
+  const permissionString = `${permission.resource}:${permission.action}`;
+  if (user.permissions.includes(permissionString)) {
+    return true;
+  }
+
+  // Check role-based permissions
+  return user.roles.some(role => 
+    ROLE_PERMISSIONS[role]?.includes(permissionString)
+  );
+};
+
+// Protected component wrapper
+const ProtectedComponent = ({ 
+  permission, 
+  children 
+}: { 
+  permission: Permission; 
+  children: React.ReactNode; 
+}) => {
+  const { user } = useAuth();
+
+  if (!user || !hasPermission(user, permission)) {
+    return <UnauthorizedAccess />;
+  }
+
+  return <>{children}</>;
+};
+
+// Route-level protection
+const useAuthGuard = (requiredPermission: Permission) => {
+  const { user, loading } = useAuth();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!loading && (!user || !hasPermission(user, requiredPermission))) {
+      navigate('/unauthorized');
+    }
+  }, [user, loading, requiredPermission, navigate]);
+
+  return { authorized: user && hasPermission(user, requiredPermission) };
+};
+```
+
+## Data Protection
+
+### Sensitive Data Handling
+```typescript
+// Sensitive data masking
+const maskSensitiveData = {
+  email: (email: string): string => {
+    const [username, domain] = email.split('@');
+    const maskedUsername = username.slice(0, 2) + '*'.repeat(username.length - 2);
+    return `${maskedUsername}@${domain}`;
+  },
+
+  phone: (phone: string): string => {
+    return phone.replace(/(\d{3})\d{3}(\d{4})/, '$1***$2');
+  },
+
+  creditCard: (cardNumber: string): string => {
+    return cardNumber.replace(/\d(?=\d{4})/g, '*');
+  },
+};
+
+// Data encryption for client storage
+const encryptSensitiveData = (data: any): string => {
+  return CryptoJS.AES.encrypt(JSON.stringify(data), ENCRYPTION_KEY).toString();
+};
+
+const decryptSensitiveData = (encryptedData: string): any => {
+  try {
+    const bytes = CryptoJS.AES.decrypt(encryptedData, ENCRYPTION_KEY);
+    return JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
+  } catch {
+    return null;
+  }
+};
+```
+
+### Secure API Communication
+```typescript
+// API request encryption
+const secureApiClient = axios.create({
+  timeout: 10000,
+  withCredentials: true,
+});
+
+// Request interceptor for security headers
+secureApiClient.interceptors.request.use((config) => {
+  // Add security headers
+  config.headers['X-Requested-With'] = 'XMLHttpRequest';
+  config.headers['X-Frame-Options'] = 'DENY';
+  config.headers['X-Content-Type-Options'] = 'nosniff';
+  
+  // Add authentication token
+  const token = TokenManager.getToken();
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+
+  // Add request timestamp for replay attack prevention
+  config.headers['X-Timestamp'] = Date.now().toString();
+
+  return config;
+});
+
+// Response interceptor for security validation
+secureApiClient.interceptors.response.use(
+  (response) => {
+    // Validate response headers
+    const requiredHeaders = ['x-content-type-options', 'x-frame-options'];
+    requiredHeaders.forEach(header => {
+      if (!response.headers[header]) {
+        console.warn(`Missing security header: ${header}`);
+      }
+    });
+
+    return response;
+  },
+  (error) => {
+    // Handle security errors
+    if (error.response?.status === 401) {
+      TokenManager.removeToken();
+      window.location.href = '/login';
+    }
+    return Promise.reject(error);
+  }
+);
+```
+
+## Security Headers and Configuration
+
+### Security Headers Implementation
+```typescript
+// Security headers configuration
+const SECURITY_HEADERS = {
+  // Content Security Policy
+  'Content-Security-Policy': [
+    "default-src 'self'",
+    "script-src 'self' 'nonce-{NONCE}'",
+    "style-src 'self' 'unsafe-inline'",
+    "img-src 'self' data: https:",
+    "connect-src 'self' https://api.example.com",
+    "frame-src 'none'",
+    "object-src 'none'",
+  ].join('; '),
+
+  // HTTP Strict Transport Security
+  'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
+
+  // Prevent clickjacking
+  'X-Frame-Options': 'DENY',
+
+  // Prevent MIME type sniffing
+  'X-Content-Type-Options': 'nosniff',
+
+  // XSS Protection
+  'X-XSS-Protection': '1; mode=block',
+
+  // Referrer Policy
+  'Referrer-Policy': 'strict-origin-when-cross-origin',
+
+  // Permissions Policy
+  'Permissions-Policy': [
+    'camera=()',
+    'microphone=()',
+    'geolocation=()',
+    'payment=()',
+  ].join(', '),
+} as const;
+
+// Next.js security headers configuration
+const nextConfig = {
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: Object.entries(SECURITY_HEADERS).map(([key, value]) => ({
+          key,
+          value,
+        })),
