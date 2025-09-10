@@ -1,0 +1,97 @@
+# CURSORRULES - Rise Against Hunger Italia
+# Sistema Perfetto Completo - Regole di Sviluppo PERFEZIONE ASSOLUTA
+
+## ⚡ TL;DR (versione corta da usare ogni giorno)
+
+- **Usa SEMPRE**: `PerfectText`, `PerfectImage`, `PerfectContainer`, `useUniversalTheme`, `SystemImmunity`, `responsiveSystem` (`scaleFont`, `scaleSpacing`, `scaleDimensionLinear`).
+- **Vietato**: `FormattedText`, `ResponsiveBox/ResponsiveImage`, `useResponsive*`, `Dimensions.get(...)` per layout/scaling, breakpoint manuali, `allowFontScaling=true`.
+- **PerfectText**: `size` obbligatorio; `lines` quando servono righe esatte; `immunity={true}` sempre. Per wrap identico su tutti i device, usa `containerWidth` riferito a iPhone 15.
+- **PerfectImage**: usa `preset` (`hero|card|thumbnail|banner`).
+- **PerfectContainer**: usa `preset`; `theme="auto"` di default; niente layout manuali.
+- **Dark Mode**: un solo toggle globale (`useUniversalTheme`); testi con `color="auto"` quando serve.
+- **Immunità**: `SystemImmunity.setGlobalImmunity(true)` all'avvio; niente gestioni manuali di scaling/accessibilità.
+- **Import corretti**:
+```ts
+import {
+  PerfectText, PerfectImage, PerfectContainer,
+  PageContainer, CardContainer, SectionContainer, ModalContainer,
+  useUniversalTheme
+} from '@/components/ui';
+import responsiveSystem, { scaleFont, scaleSpacing, scaleDimensionLinear } from '@/shared/constants/responsiveSystem';
+import { SystemImmunity } from '@/shared/utils/SystemImmunity';
+```
+- **Checklist rapida**:
+  - PerfectText/PerfectImage/PerfectContainer usati ovunque
+  - `size/lines/immunity` corretti nei testi
+  - `theme="auto"` e `color="auto"` quando servono
+  - Zero `Dimensions`, zero breakpoint manuali, zero percentuali hardcoded
+  - `npm run pre-modifiche` e `npm run post-modifiche` verdi; `npm run conta-problemi` = 0
+
+Per i dettagli completi, vedi: `docs/DEVELOPMENT_GUIDE.md`, `docs/ARCHITECTURE.md`, `docs/QUALITY_STANDARDS.md`, `docs/RESPONSIVE_SYSTEM_VALIDATION.md`.
+
+---
+
+## 🚫 Anti‑patterns VIETATI (solo a scopo didattico, non usare mai)
+```ts
+// ❌ PATTERN LEGACY VIETATI (esempi di cosa NON fare)
+// Questi pattern sono stati sostituiti dal Perfect System
+
+// ❌ Componenti obsoleti (ora sostituiti da Perfect System)
+// import { FormattedText, FormattedTextEnhanced } from '@/components/ui';
+// import { ResponsiveBox, ResponsiveStack, ResponsiveCard, ResponsiveImage } from '@/components/ui';
+// import { useResponsiveLayout, useResponsiveDarkMode } from '@/shared/hooks';
+
+// ❌ Calcoli manuali (ora gestiti automaticamente)
+// const { width, height } = Dimensions.get('window');
+// <FormattedText fontSize={32} fixedLines={2}>
+// <ResponsiveBox preset="card">
+// <Text allowFontScaling={true}>
+
+// ✅ PERFECT SYSTEM (pattern corretti)
+import { PerfectText, PerfectImage, PerfectContainer } from '@/components/ui';
+<PerfectText size={32} lines={2}>Testo sempre perfetto</PerfectText>
+<PerfectContainer preset="card">Layout sempre identico</PerfectContainer>
+<PerfectImage preset="hero" source={image} />
+```
+
+---
+
+## ✅ Import corretti (unici)
+```ts
+import {
+  PerfectText, PerfectImage, PerfectContainer,
+  PerfectTitle, PerfectSubtitle, PerfectBody, PerfectCaption,
+  HeroImage, CardImage, ThumbnailImage, BannerImage,
+  PageContainer, CardContainer, SectionContainer, ModalContainer,
+  useUniversalTheme
+} from '@/components/ui';
+
+import responsiveSystem, { scaleFont, scaleSpacing, scaleDimensionLinear } from '@/shared/constants/responsiveSystem';
+import { SystemImmunity } from '@/shared/utils/SystemImmunity';
+```
+
+---
+
+## 📋 Checklist pre‑commit (rigorosa)
+```text
+[] Perfect* ovunque | [] size/lines/immunity | [] theme="auto"/color="auto"
+[] Niente Dimensions/breakpoint/percentuali | [] Conta‑problemi = 0 | [] Post‑modifiche OK
+```
+
+---
+
+## 📌 Addendum – Sistema Millimetrico (Android parity + wrap identico)
+
+- PerfectText: per wrap identici su tutti i device, aggiungi `containerWidth` (riferito a iPhone 15, 393) scalato con `scaleDimensionLinear`.
+```tsx
+<PerfectText size={22} lines={2} containerWidth={140}>Dona e{`\n`}Aiuta</PerfectText>
+```
+- Normalizzazione Android (testo) automatica:
+  - `includeFontPadding = false`, `textBreakStrategy = 'simple'`, `ellipsizeMode = 'clip'`
+- Accesso sicuro a LOGICAL_REFERENCE:
+```ts
+import responsiveSystem, { scaleDimensionLinear } from '@/shared/constants/responsiveSystem';
+const referenceWidth = responsiveSystem?.LOGICAL_REFERENCE?.width ?? 393;
+const ninetyPercent = scaleDimensionLinear(referenceWidth * 0.9);
+```
+- Immagini header: preferisci `PerfectImage preset='hero'` (16:9). Se necessario, usa `resizeMode='contain'` con altezza scalata.
