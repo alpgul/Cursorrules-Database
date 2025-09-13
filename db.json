@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 2059,
+  "size": 2066,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -28826,6 +28826,104 @@
         "htmlUrl": "https://github.com/beaml1ve/support-staging/blob/e516604fd3137bfb8c81a38e6b97088173764f64/platforms/staging/session-logs/2025-09-06_10-30-00_server-restart-increased-resources/.cursorrules",
         "size": 3.11,
         "timestamp": "2025-09-10T08:16:11.646Z"
+      }
+    ],
+    [
+      "AvinasiLabs/lsp-system/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/AvinasiLabs/lsp-system/fce72a3d5cc52a2ef490d77790dd76b70ad8c3f0/.cursorrules",
+        "repositoryId": 1022161786,
+        "path": "AvinasiLabs/lsp-system/.cursorrules",
+        "ownerName": "AvinasiLabs",
+        "repositoryName": "lsp-system",
+        "htmlUrl": "https://github.com/AvinasiLabs/lsp-system/blob/fce72a3d5cc52a2ef490d77790dd76b70ad8c3f0/.cursorrules",
+        "size": 3.25,
+        "timestamp": "2025-09-13T08:13:41.595Z"
+      }
+    ],
+    [
+      "vibe-coding-labs/cursor-rules/resources/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/vibe-coding-labs/cursor-rules/112b682dda22c4317632db7f036340b045622255/resources/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 987021729,
+        "path": "vibe-coding-labs/cursor-rules/resources/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "vibe-coding-labs",
+        "repositoryName": "cursor-rules",
+        "htmlUrl": "https://github.com/vibe-coding-labs/cursor-rules/blob/112b682dda22c4317632db7f036340b045622255/resources/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+        "size": 7.48,
+        "timestamp": "2025-09-13T08:13:42.354Z"
+      }
+    ],
+    [
+      "vibe-coding-labs/cursor-rules/resources/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/vibe-coding-labs/cursor-rules/112b682dda22c4317632db7f036340b045622255/resources/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 987021729,
+        "path": "vibe-coding-labs/cursor-rules/resources/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "vibe-coding-labs",
+        "repositoryName": "cursor-rules",
+        "htmlUrl": "https://github.com/vibe-coding-labs/cursor-rules/blob/112b682dda22c4317632db7f036340b045622255/resources/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "size": 6.32,
+        "timestamp": "2025-09-13T08:13:43.895Z"
+      }
+    ],
+    [
+      "ElLuchoMan/restaurante-back/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ElLuchoMan/restaurante-back/c41e9e728e6d78a4c56ebc912c2355c1ce496690/.cursorrules",
+        "repositoryId": 855412817,
+        "path": "ElLuchoMan/restaurante-back/.cursorrules",
+        "ownerName": "ElLuchoMan",
+        "repositoryName": "restaurante-back",
+        "htmlUrl": "https://github.com/ElLuchoMan/restaurante-back/blob/c41e9e728e6d78a4c56ebc912c2355c1ce496690/.cursorrules",
+        "size": 1.99,
+        "timestamp": "2025-09-13T08:13:45.105Z"
+      }
+    ],
+    [
+      "TECozens/csp-for-mro/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/TECozens/csp-for-mro/c8058ead0f39bb26bd9964af072dc89a0e92cea8/.cursorrules",
+        "repositoryId": 1031392073,
+        "path": "TECozens/csp-for-mro/.cursorrules",
+        "ownerName": "TECozens",
+        "repositoryName": "csp-for-mro",
+        "htmlUrl": "https://github.com/TECozens/csp-for-mro/blob/c8058ead0f39bb26bd9964af072dc89a0e92cea8/.cursorrules",
+        "size": 3.89,
+        "timestamp": "2025-09-13T08:13:45.645Z"
+      }
+    ],
+    [
+      "cooodecat/otto-handler/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/cooodecat/otto-handler/0644a1ec43ec8ed17f36a85213c09b7d4db707b5/.cursorrules",
+        "repositoryId": 1046684772,
+        "path": "cooodecat/otto-handler/.cursorrules",
+        "ownerName": "cooodecat",
+        "repositoryName": "otto-handler",
+        "htmlUrl": "https://github.com/cooodecat/otto-handler/blob/0644a1ec43ec8ed17f36a85213c09b7d4db707b5/.cursorrules",
+        "size": 9.13,
+        "timestamp": "2025-09-13T08:13:46.241Z"
+      }
+    ],
+    [
+      "elng12/polytrack.best/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/elng12/polytrack.best/4488738ec7bc2941c5fd34b22087cf0000e143af/.cursorrules",
+        "repositoryId": 1055443814,
+        "path": "elng12/polytrack.best/.cursorrules",
+        "ownerName": "elng12",
+        "repositoryName": "polytrack.best",
+        "htmlUrl": "https://github.com/elng12/polytrack.best/blob/4488738ec7bc2941c5fd34b22087cf0000e143af/.cursorrules",
+        "size": 6.76,
+        "timestamp": "2025-09-13T08:13:47.083Z"
       }
     ]
   ]
