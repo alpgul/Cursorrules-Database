@@ -1,0 +1,39 @@
+# Remix Fastify App Architecture Rules
+
+## Form Submissions
+- Form submissions should be handled via Remix routes in `app/routes/`
+- Use Remix's Form component and action/loader functions for form handling
+- Form data should be processed in route action functions
+- Use Remix's built-in form validation and error handling
+
+## Data Type APIs
+- Data type APIs should be implemented on Fastify routes in `server/`
+- Use Fastify's route handlers for CRUD operations
+- Implement proper HTTP status codes and error handling
+- Use TypeScript generics for JSON parsing (e.g., `ky<User>('/api/users/2').json()`)
+
+## Code Organization
+- Keep Remix-specific code in the `app/` directory
+- Keep server-side API logic in the `server/` directory
+- Use Prisma for database operations
+- Follow TypeScript best practices throughout
+
+## Development Guidelines
+- Use TypeScript for all new code
+- Follow the existing project structure and patterns
+- Implement proper error handling and validation
+- Use Tailwind CSS for styling
+
+## App Execution
+- DO NOT attempt to build, run, or start the application with `npm run dev` or `npm run build`!!!
+- The developer will handle all app execution and development server management
+- Focus only on code changes, file modifications, and development assistance
+- Do not run npm scripts, start servers, or execute the application 
+
+## File Organization
+- DO NOT create barrel files (index.ts files that re-export multiple modules)
+- Import modules directly from their source files
+- Avoid creating index.ts files that simply re-export other modules
+- Keep imports explicit and traceable to their actual source files
+- ALWAYS use full aliased paths (e.g., `~server/services/linkup/types`) instead of relative paths (e.g., `./types`)
+- Use Prisma-generated types whenever possible for database models and operations

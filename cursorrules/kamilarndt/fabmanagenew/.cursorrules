@@ -1,0 +1,380 @@
+# FabManage-Clean - Cursor AI Rules
+
+## 🎯 Project Overview
+
+- **Name**: FabManage-Clean
+- **Type**: Production management system for scenography/decor projects
+- **Architecture**: React 18 + TypeScript + Vite + Modern Design System
+- **Backend**: Supabase (Auth/DB/Storage/Edge) + Node.js API
+- **UI Framework**: Ant Design + Custom Design System + Tailwind CSS
+- **State Management**: Zustand (slice pattern) + TanStack Query
+- **Testing**: Vitest + Testing Library + Playwright + Storybook
+
+## 🏗️ Architecture & Structure
+
+### Design System Architecture
+
+- **Atomic Design**: Components organized by complexity (atoms, molecules, organisms, templates)
+- **Design Tokens**: Centralized in `src/new-ui/tokens/` with Figma integration
+- **Component Structure**: Each component has `.tsx`, `.test.tsx`, `.stories.tsx`, and `index.ts`
+- **Modern UI Path**: `src/new-ui/` for new components, `src/components/` for legacy
+
+### Directory Structure
+
+```
+src/
+├── new-ui/                    # Modern design system
+│   ├── atoms/                 # Basic components (Button, Input, Icon)
+│   ├── molecules/             # Composite components (Card, FormField)
+│   ├── organisms/             # Complex components (DataTable, Navigation)
+│   ├── templates/             # Page layouts
+│   └── tokens/                # Design tokens
+├── components/                # Legacy components (being migrated)
+├── hooks/                     # Custom React hooks
+├── services/                  # API service layer
+├── stores/                    # Zustand stores (slice pattern)
+├── utils/                     # Utility functions
+└── types/                     # TypeScript type definitions
+```
+
+## 🎨 UI/UX Guidelines
+
+### Component Patterns
+
+- **Modals**: Always use side drawers with `placement="right"` and `destroyOnClose`
+- **Forms**: Real-time validation with clear error messages and loading states
+- **Tables**: Consistent pagination, unique `rowKey`, and responsive design
+- **Navigation**: Sidebar navigation with breadcrumbs and mobile-first approach
+
+### Design Token Usage
+
+```typescript
+// ✅ Good - Use design tokens
+import { designTokens } from '@/new-ui/tokens/design-tokens'
+
+const primaryColor = designTokens.colors.primary
+const spacing = designTokens.spacing.md
+
+// ✅ Good - Use Tailwind classes with design tokens
+<div className="tw-bg-primary tw-p-md tw-rounded-lg">
+  Content
+</div>
+
+// ❌ Bad - Hardcoded values
+<div style={{ backgroundColor: '#1677ff', padding: '16px' }}>
+  Content
+</div>
+```
+
+### Accessibility Requirements
+
+- **WCAG 2.1 AA Compliance**: Minimum 4.5:1 contrast ratio
+- **Keyboard Navigation**: Full keyboard support for all interactive elements
+- **Screen Reader Support**: Proper ARIA labels and semantic HTML
+- **Focus Management**: Clear focus indicators and logical tab order
+
+## 🔧 Development Standards
+
+### TypeScript Standards
+
+- **Strict Mode**: Always use strict TypeScript configuration
+- **Interface vs Type**: Use `interface` for props, `type` for data structures
+- **Named Exports**: Always use named exports for components
+- **RORO Pattern**: Return objects from functions for better readability
+
+### Component Development
+
+```typescript
+// ✅ Good - Modern component structure
+import { memo } from "react";
+import { designTokens } from "@/new-ui/tokens/design-tokens";
+
+interface ButtonProps {
+  variant: "primary" | "secondary" | "destructive";
+  size: "sm" | "md" | "lg";
+  children: React.ReactNode;
+  onClick?: () => void;
+  disabled?: boolean;
+}
+
+export const Button = memo(function Button({
+  variant = "primary",
+  size = "md",
+  children,
+  onClick,
+  disabled = false,
+  ...props
+}: ButtonProps) {
+  return (
+    <button
+      className={`tw-btn tw-btn-${variant} tw-btn-${size}`}
+      onClick={onClick}
+      disabled={disabled}
+      {...props}
+    >
+      {children}
+    </button>
+  );
+});
+```
+
+### State Management
+
+- **Zustand Slices**: Organize stores by feature/domain
+- **TanStack Query**: Use for server state caching and synchronization
+- **Local State**: Use React state for component-specific data
+
+```typescript
+// ✅ Good - Zustand slice pattern
+interface ProjectStore {
+  projects: Project[];
+  selectedProject: Project | null;
+  isLoading: boolean;
+  fetchProjects: () => Promise<void>;
+  selectProject: (project: Project) => void;
+}
+
+export const useProjectStore = create<ProjectStore>((set, get) => ({
+  projects: [],
+  selectedProject: null,
+  isLoading: false,
+  fetchProjects: async () => {
+    set({ isLoading: true });
+    try {
+      const projects = await projectService.getProjects();
+      set({ projects, isLoading: false });
+    } catch (error) {
+      set({ isLoading: false });
+      throw error;
+    }
+  },
+  selectProject: (project) => set({ selectedProject: project }),
+}));
+```
+
+## 🧪 Testing Standards
+
+### Testing Philosophy
+
+- **Testing Pyramid**: 70% unit, 20% integration, 10% E2E
+- **Code Coverage**: Minimum 80% coverage for all components
+- **Accessibility**: All components must pass accessibility tests
+- **Performance**: Tests must complete within acceptable time limits
+
+### Test Structure
+
+```typescript
+// ✅ Good - Comprehensive test structure
+import { render, screen, fireEvent } from "@testing-library/react";
+import { Button } from "@/new-ui/atoms/Button/Button";
+
+describe("Button", () => {
+  test("renders with correct text", () => {
+    render(<Button>Click me</Button>);
+    expect(
+      screen.getByRole("button", { name: "Click me" })
+    ).toBeInTheDocument();
+  });
+
+  test("applies correct variant classes", () => {
+    render(<Button variant="primary">Primary</Button>);
+    const button = screen.getByRole("button");
+    expect(button).toHaveClass("tw-bg-primary");
+  });
+
+  test("handles click events", () => {
+    const handleClick = jest.fn();
+    render(<Button onClick={handleClick}>Click me</Button>);
+    fireEvent.click(screen.getByRole("button"));
+    expect(handleClick).toHaveBeenCalledTimes(1);
+  });
+
+  test("is accessible", async () => {
+    const { container } = render(<Button>Click me</Button>);
+    const results = await axe(container);
+    expect(results).toHaveNoViolations();
+  });
+});
+```
+
+## 🚀 Performance Guidelines
+
+### Code Splitting
+
+- **Route-based**: Split by page/route
+- **Component-based**: Lazy load heavy components
+- **Bundle Optimization**: Use manual chunks for vendor libraries
+
+### Memoization
+
+- **React.memo**: For expensive components
+- **useMemo**: For expensive calculations
+- **useCallback**: For stable function references
+
+```typescript
+// ✅ Good - Memoized component
+export const ExpensiveComponent = memo(function ExpensiveComponent({
+  data,
+  onUpdate,
+}: ExpensiveComponentProps) {
+  const processedData = useMemo(() => {
+    return data.map((item) => processItem(item));
+  }, [data]);
+
+  const handleUpdate = useCallback(
+    (id: string) => {
+      onUpdate(id);
+    },
+    [onUpdate]
+  );
+
+  return (
+    <div>
+      {processedData.map((item) => (
+        <Item key={item.id} data={item} onUpdate={handleUpdate} />
+      ))}
+    </div>
+  );
+});
+```
+
+## 🔒 Security & Validation
+
+### Input Validation
+
+- **Zod Schemas**: All inputs validated against Zod schemas
+- **Sanitization**: HTML content sanitized with DOMPurify
+- **Type Safety**: Strict TypeScript for compile-time safety
+
+### Authentication & Authorization
+
+- **JWT Tokens**: Bearer token in Authorization header
+- **RLS Policies**: Database-level access control
+- **Role-based Access**: Different permissions based on user roles
+
+## 📱 PWA & Deployment
+
+### PWA Configuration
+
+- **Service Worker**: Auto-update with offline support
+- **Manifest**: Proper web app manifest
+- **HTTPS**: Required for PWA features
+
+### Docker Deployment
+
+- **Multi-stage Build**: Separate build and production stages
+- **Nginx**: Static file serving with proper caching
+- **Health Checks**: Application health monitoring
+
+## 🎯 Migration Guidelines
+
+### Legacy to Modern UI
+
+- **Atomic Design**: Migrate to organized component structure
+- **Design Tokens**: Replace hardcoded values with design tokens
+- **TypeScript**: Enhance type safety and component APIs
+- **Accessibility**: Improve WCAG 2.1 AA compliance
+
+### Component Migration Pattern
+
+```typescript
+// ❌ Legacy - Ant Design with custom styling
+import { Button as AntButton } from "antd";
+
+<AntButton
+  type="primary"
+  size="large"
+  style={{ backgroundColor: "#1677ff" }}
+  onClick={handleClick}
+>
+  Click me
+</AntButton>;
+
+// ✅ Modern - Design system with tokens
+import { Button } from "@/new-ui/atoms/Button/Button";
+
+<Button variant="primary" size="lg" onClick={handleClick}>
+  Click me
+</Button>;
+```
+
+## 📚 Documentation Standards
+
+### Component Documentation
+
+- **Storybook Stories**: Comprehensive component documentation
+- **TypeScript Types**: Well-documented interfaces and types
+- **Usage Examples**: Clear examples for each component variant
+- **Accessibility Notes**: A11y requirements and testing
+
+### Code Comments
+
+- **JSDoc**: Document public APIs and complex logic
+- **Inline Comments**: Explain non-obvious business logic
+- **TODO Comments**: Mark temporary solutions and future improvements
+
+## 🔄 Git & Workflow
+
+### Branch Strategy
+
+- **main**: Production-ready code
+- **develop**: Integration branch for features
+- **feature/**: Feature development branches
+- **migration/**: UI migration branches
+
+### Commit Messages
+
+- **Format**: `type(scope): description`
+- **Types**: feat, fix, docs, style, refactor, test, chore
+- **Examples**:
+  - `feat(ui): add new Button component with design tokens`
+  - `fix(auth): resolve JWT token refresh issue`
+  - `docs(api): update API documentation with examples`
+
+## 🎨 Figma Integration
+
+### Design Token Sync
+
+- **Automated Sync**: Scripts to sync tokens from Figma
+- **Version Control**: Track token changes and updates
+- **Validation**: Ensure token consistency across components
+
+### Component Development
+
+- **Figma First**: Design in Figma before implementation
+- **Token Usage**: Always use design tokens, never hardcoded values
+- **Visual Testing**: Use Storybook for visual regression testing
+
+## 🚨 Error Handling
+
+### Error Boundaries
+
+- **Component Level**: Catch and display component errors gracefully
+- **Page Level**: Fallback UI for page-level errors
+- **Global Level**: Global error handling and reporting
+
+### User Feedback
+
+- **Loading States**: Show loading indicators for async operations
+- **Error Messages**: Clear, actionable error messages
+- **Success Feedback**: Confirm successful operations
+
+## 📊 Monitoring & Analytics
+
+### Performance Monitoring
+
+- **Core Web Vitals**: Monitor LCP, FID, CLS
+- **Bundle Size**: Track bundle size over time
+- **Error Tracking**: Monitor and alert on errors
+
+### User Analytics
+
+- **Usage Tracking**: Track component and feature usage
+- **Performance Metrics**: Monitor application performance
+- **A/B Testing**: Test different UI approaches
+
+---
+
+**Last Updated**: January 2025  
+**Rules Version**: 2.0.0  
+**Next Review**: March 2025

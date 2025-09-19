@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 2075,
+  "size": 2086,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -29050,6 +29050,160 @@
         "htmlUrl": "https://github.com/vaheed/sip-ai-agent/blob/adc41ae0f4a562ae075e6025832402f26ed767b7/.cursorrules",
         "size": 12.78,
         "timestamp": "2025-09-16T08:16:46.987Z"
+      }
+    ],
+    [
+      "vogomkkim/Navo/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/vogomkkim/Navo/3496f515bcdd6c13ebe40e1770744560dfac1886/.cursorrules",
+        "repositoryId": 1036830103,
+        "path": "vogomkkim/Navo/.cursorrules",
+        "ownerName": "vogomkkim",
+        "repositoryName": "Navo",
+        "htmlUrl": "https://github.com/vogomkkim/Navo/blob/3496f515bcdd6c13ebe40e1770744560dfac1886/.cursorrules",
+        "size": 1.22,
+        "timestamp": "2025-09-19T08:15:54.109Z"
+      }
+    ],
+    [
+      "ryuuhei0729/Swim-maneger-v2/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ryuuhei0729/Swim-maneger-v2/0900803244fe9edd242acccbde54d2a1d1f848de/.cursorrules",
+        "repositoryId": 1040054467,
+        "path": "ryuuhei0729/Swim-maneger-v2/.cursorrules",
+        "ownerName": "ryuuhei0729",
+        "repositoryName": "Swim-maneger-v2",
+        "htmlUrl": "https://github.com/ryuuhei0729/Swim-maneger-v2/blob/0900803244fe9edd242acccbde54d2a1d1f848de/.cursorrules",
+        "size": 4.16,
+        "timestamp": "2025-09-19T08:15:56.229Z"
+      }
+    ],
+    [
+      "poglesbyg/pdf_testing/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/poglesbyg/pdf_testing/ac8bde71800c6afb8e7b5770fe78616b27b32b91/.cursorrules",
+        "repositoryId": 1054296916,
+        "path": "poglesbyg/pdf_testing/.cursorrules",
+        "ownerName": "poglesbyg",
+        "repositoryName": "pdf_testing",
+        "htmlUrl": "https://github.com/poglesbyg/pdf_testing/blob/ac8bde71800c6afb8e7b5770fe78616b27b32b91/.cursorrules",
+        "size": 2.57,
+        "timestamp": "2025-09-19T08:15:57.894Z"
+      }
+    ],
+    [
+      "vibe-coding-labs/cursor-rules/resources/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/vibe-coding-labs/cursor-rules/112b682dda22c4317632db7f036340b045622255/resources/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "repositoryId": 987021729,
+        "path": "vibe-coding-labs/cursor-rules/resources/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "ownerName": "vibe-coding-labs",
+        "repositoryName": "cursor-rules",
+        "htmlUrl": "https://github.com/vibe-coding-labs/cursor-rules/blob/112b682dda22c4317632db7f036340b045622255/resources/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "size": 3.59,
+        "timestamp": "2025-09-19T08:15:58.037Z"
+      }
+    ],
+    [
+      "beaml1ve/support-staging/platforms/staging/session-logs/2025-09-07_16-41-30_usman-organization-selection-issue/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/beaml1ve/support-staging/e516604fd3137bfb8c81a38e6b97088173764f64/platforms/staging/session-logs/2025-09-07_16-41-30_usman-organization-selection-issue/.cursorrules",
+        "repositoryId": 1052018270,
+        "path": "beaml1ve/support-staging/platforms/staging/session-logs/2025-09-07_16-41-30_usman-organization-selection-issue/.cursorrules",
+        "ownerName": "beaml1ve",
+        "repositoryName": "support-staging",
+        "htmlUrl": "https://github.com/beaml1ve/support-staging/blob/e516604fd3137bfb8c81a38e6b97088173764f64/platforms/staging/session-logs/2025-09-07_16-41-30_usman-organization-selection-issue/.cursorrules",
+        "size": 10.51,
+        "timestamp": "2025-09-19T08:15:58.167Z"
+      }
+    ],
+    [
+      "bigabid/ai-hackathon/rules-directory/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/bigabid/ai-hackathon/54a1e5ef65885ac54a7db7984dccb33c03728a04/rules-directory/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1046239803,
+        "path": "bigabid/ai-hackathon/rules-directory/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "bigabid",
+        "repositoryName": "ai-hackathon",
+        "htmlUrl": "https://github.com/bigabid/ai-hackathon/blob/54a1e5ef65885ac54a7db7984dccb33c03728a04/rules-directory/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+        "size": 6.25,
+        "timestamp": "2025-09-19T08:15:59.531Z"
+      }
+    ],
+    [
+      "bigabid/vebo/cursor-rules-directory/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/bigabid/vebo/053648a3092be9b6fee656c049ff2f178f809b4e/cursor-rules-directory/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1049107446,
+        "path": "bigabid/vebo/cursor-rules-directory/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "bigabid",
+        "repositoryName": "vebo",
+        "htmlUrl": "https://github.com/bigabid/vebo/blob/053648a3092be9b6fee656c049ff2f178f809b4e/cursor-rules-directory/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "size": 2.32,
+        "timestamp": "2025-09-19T08:16:00.744Z"
+      }
+    ],
+    [
+      "scefali/eip-clone/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/scefali/eip-clone/eae0936af138cd321df818bd13d941ecce2d1711/.cursorrules",
+        "repositoryId": 1059922307,
+        "path": "scefali/eip-clone/.cursorrules",
+        "ownerName": "scefali",
+        "repositoryName": "eip-clone",
+        "htmlUrl": "https://github.com/scefali/eip-clone/blob/eae0936af138cd321df818bd13d941ecce2d1711/.cursorrules",
+        "size": 1.79,
+        "timestamp": "2025-09-19T08:16:02.986Z"
+      }
+    ],
+    [
+      "kamilarndt/fabmanagenew/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/kamilarndt/fabmanagenew/f3c3c2557c66026f270125da9ca8f10e7675ce7c/.cursorrules",
+        "repositoryId": 1048499350,
+        "path": "kamilarndt/fabmanagenew/.cursorrules",
+        "ownerName": "kamilarndt",
+        "repositoryName": "fabmanagenew",
+        "htmlUrl": "https://github.com/kamilarndt/fabmanagenew/blob/f3c3c2557c66026f270125da9ca8f10e7675ce7c/.cursorrules",
+        "size": 10.8,
+        "timestamp": "2025-09-19T08:16:03.605Z"
+      }
+    ],
+    [
+      "amirbiron/CodeBot/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/amirbiron/CodeBot/5296f772bab29d59f0eb350769a2941fa13238bc/.cursorrules",
+        "repositoryId": 1032820192,
+        "path": "amirbiron/CodeBot/.cursorrules",
+        "ownerName": "amirbiron",
+        "repositoryName": "CodeBot",
+        "htmlUrl": "https://github.com/amirbiron/CodeBot/blob/5296f772bab29d59f0eb350769a2941fa13238bc/.cursorrules",
+        "size": 8.07,
+        "timestamp": "2025-09-19T08:16:03.874Z"
+      }
+    ],
+    [
+      "nurmek51/halyk_ambassadors/frontend/halyk_ambassador_client/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/nurmek51/halyk_ambassadors/6ff972effb5489a2ad7df832d6437898dd40a319/frontend/halyk_ambassador_client/.cursorrules",
+        "repositoryId": 1055617926,
+        "path": "nurmek51/halyk_ambassadors/frontend/halyk_ambassador_client/.cursorrules",
+        "ownerName": "nurmek51",
+        "repositoryName": "halyk_ambassadors",
+        "htmlUrl": "https://github.com/nurmek51/halyk_ambassadors/blob/6ff972effb5489a2ad7df832d6437898dd40a319/frontend/halyk_ambassador_client/.cursorrules",
+        "size": 2.94,
+        "timestamp": "2025-09-19T08:16:05.962Z"
       }
     ]
   ]
