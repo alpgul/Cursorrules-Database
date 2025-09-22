@@ -1,0 +1,214 @@
+# SnapTV React Native App – Cursor Rules (Unified)
+
+## Architecture Principles
+
+* **Always modular**: before creating a new component, check if an existing one fits. Extend via props if possible.
+* **Consistency over uniqueness**: reuse existing UI patterns across the app.
+* **Update `.cursor/rules`** whenever new reusable patterns/components are introduced.
+* **Performance first**: use `React.memo`, FlatList for >50 items, extracted callbacks, optimized images.
+* **Styling**: always use `StyleSheet.create()`. Never inline styles. Colors, spacing, and radii must come from design constants.
+
+---
+
+## Design System Constants
+
+```typescript
+const COLORS = {
+  primary: "#14b8a6",     // Teal - Edutainment accent
+  secondary: "#f59e0b",   // Amber - Audiobook accent
+  background: "#000000",  // Black
+  surface: "#1A1A1A",     // Dark gray
+  border: "#374151",      // Gray border
+  text: {
+    primary: "#FFFFFF",
+    secondary: "#A0A0A0",
+    tertiary: "#6B7280"
+  }
+}
+
+const SPACING = {
+  xs: 4, sm: 8, md: 12, lg: 16, xl: 20, xxl: 24, xxxl: 32
+}
+
+const RADIUS = {
+  sm: 8, md: 12, lg: 16, xl: 20, round: 25
+}
+```
+
+---
+
+## Core UI Components (Always Use These)
+
+* **MoviePoster** → For ALL content cards (2:3 ratio).
+* **ViewAllButton** → For all section headers with "View All".
+* **SectionHeader** → For all section titles (with optional `ViewAllButton`).
+* **HorizontalScrollSection** → For horizontal content lists (uses `MoviePoster`).
+* **StatsCard** → For profile or metric displays.
+* **SearchModal** → For search functionality.
+* **SettingsItem** → For settings/profile list items.
+* **GenreFilterChips** → For filter chips.
+* **GridSection (NEW)** → Always use for "View All" and Search Results → enforces **2-column layout** with `MoviePoster`.
+* **EdutainmentCarousel** → Taller carousel with center card emphasized, side cards partially visible.
+* **AudiobookCarousel** → Shorter carousel with the same scroll effect.
+
+---
+
+## Layout Rules
+
+### Main Page
+
+* **Top bar**: Search bar (left), Profile (right).
+* **Carousel**: Use `EdutainmentCarousel` or `AudiobookCarousel` depending on section.
+* **Cards**: Always use `MoviePoster` with **2:3 ratio**.
+
+### Edutainment Section
+
+* Below carousel: **Categories**.
+* **Top Videos**: 10 cards with numbers (use `MoviePoster` + `rank` prop).
+* **Category sections**: Poster-only cards → `MoviePoster` with `showTitle={false}`.
+* **View All** → must use `ViewAllButton`.
+* **Expanded view**: Must use `GridSection`.
+
+### Audiobook Section
+
+* Use `AudiobookCarousel` only.
+* No categories below.
+
+### My List
+
+* Sections: Continue Watching, Recently Added, Recommended for You.
+* Each uses `SectionHeader` + `ViewAllButton`.
+* Expanded view → `GridSection`.
+
+### Premium Page
+
+* Simple page with pay CTA.
+
+### Search Page
+
+* Always open new screen.
+* Must use `SearchModal`.
+* Sections: Top Searches + Categories.
+
+### Profile Page
+
+* Must use `ProfileSection`.
+* Stats → always `StatsCard`.
+
+---
+
+## Component Usage Rules
+
+### MoviePoster
+
+* Must be used for ALL cards.
+* Props:
+
+  ```typescript
+  interface MoviePosterProps {
+    id: string
+    thumbnail: string
+    isPremium?: boolean
+    onPress?: () => void
+    width?: number
+    showTitle?: boolean // default true, false for category-only sections
+    rank?: number // optional, for Top 10 numbering
+  }
+  ```
+
+### EdutainmentCarousel / AudiobookCarousel
+
+* **Separate components**.
+* Props:
+
+  ```typescript
+  interface CarouselProps {
+    data: Show[]
+    onItemPress: (id: string) => void
+  }
+  ```
+* Style: center card large, side cards partially visible.
+
+### GridSection
+
+* Always use for 2-column layouts (View All, Search).
+* Props:
+
+  ```typescript
+  interface GridSectionProps {
+    title: string
+    data: Show[]
+    onItemPress: (id: string) => void
+    showSearch?: boolean
+  }
+  ```
+
+---
+
+## Navigation Rules
+
+* Bottom Navigation must always include 4 tabs in order:
+
+  1. Edutainment
+  2. Audiobook
+  3. Premium
+  4. My List
+
+---
+
+## File Structure Rules
+
+```
+components/
+├── ui/              # Core reusable UI components
+│   ├── MoviePoster.tsx
+│   ├── ViewAllButton.tsx  
+│   ├── SectionHeader.tsx
+│   ├── HorizontalScrollSection.tsx
+│   ├── StatsCard.tsx
+│   ├── GridSection.tsx
+│   ├── EdutainmentCarousel.tsx
+│   ├── AudiobookCarousel.tsx
+│   └── ...
+├── modals/          
+│   ├── SearchModal.tsx
+│   ├── CategoryModal.tsx
+│   └── ProfileModal.tsx
+├── sections/        
+│   ├── EdutainmentSection.tsx
+│   ├── AudiobookSection.tsx
+│   ├── MyListSection.tsx
+│   └── ProfileSection.tsx
+└── StreamingApp.tsx # Main container (minimal, uses sections)
+```
+
+---
+
+## Standards & Best Practices
+
+* Always TypeScript with interfaces for props.
+* Always export interfaces for reusability.
+* Always provide fallback props & error handling.
+* Optimize lists with FlatList, keyExtractor, and memoization.
+* Accessibility: meaningful labels, focus handling, tap targets.
+* Test empty, loading, and error states.
+
+---
+
+## Forbidden
+
+* ❌ Custom card/poster components (use `MoviePoster`).
+* ❌ Inline "View All" text (use `ViewAllButton`).
+* ❌ Inline section headers (use `SectionHeader`).
+* ❌ Custom carousels outside `EdutainmentCarousel` and `AudiobookCarousel`.
+* ❌ Custom grids outside `GridSection`.
+
+---
+
+## Always Remember
+
+* **Consistency > uniqueness**.
+* **Check existing components first** before creating new.
+* **Mobile-first UX**: simple, fast, accessible.
+* **Performance**: optimize images, prevent unnecessary re-renders.
+* **Type Safety**: always TypeScript.
