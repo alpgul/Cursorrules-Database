@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 2092,
+  "size": 2107,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -29288,6 +29288,216 @@
         "htmlUrl": "https://github.com/saurav-codes/focus-timer-django-vue/blob/92d763a78fce4b1b00f5f45e617f1cd951c6fe46/.cursorrules",
         "size": 1.95,
         "timestamp": "2025-09-22T08:17:38.556Z"
+      }
+    ],
+    [
+      "basnijholt/agent-cli/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/basnijholt/agent-cli/44c7b767dff771665ca82726320f01f0496be8de/.cursorrules",
+        "repositoryId": 1008501972,
+        "path": "basnijholt/agent-cli/.cursorrules",
+        "ownerName": "basnijholt",
+        "repositoryName": "agent-cli",
+        "htmlUrl": "https://github.com/basnijholt/agent-cli/blob/44c7b767dff771665ca82726320f01f0496be8de/.cursorrules",
+        "size": 1.11,
+        "timestamp": "2025-09-25T08:16:08.214Z"
+      }
+    ],
+    [
+      "heyverse/hey/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/heyverse/hey/e9b43031eb67d131d12617196976f148f9ecfba3/.cursorrules",
+        "repositoryId": 471728341,
+        "path": "heyverse/hey/.cursorrules",
+        "ownerName": "heyverse",
+        "repositoryName": "hey",
+        "htmlUrl": "https://github.com/heyverse/hey/blob/e9b43031eb67d131d12617196976f148f9ecfba3/.cursorrules",
+        "size": 3.73,
+        "timestamp": "2025-09-25T08:16:08.937Z"
+      }
+    ],
+    [
+      "RadAh174/Wordwise-ai/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/RadAh174/Wordwise-ai/b2ed58cc17cd088450e73db37fb24933efd4eb64/.cursorrules",
+        "repositoryId": 1003979358,
+        "path": "RadAh174/Wordwise-ai/.cursorrules",
+        "ownerName": "RadAh174",
+        "repositoryName": "Wordwise-ai",
+        "htmlUrl": "https://github.com/RadAh174/Wordwise-ai/blob/b2ed58cc17cd088450e73db37fb24933efd4eb64/.cursorrules",
+        "size": 5.71,
+        "timestamp": "2025-09-25T08:16:10.009Z"
+      }
+    ],
+    [
+      "MichitoSugawara/micchy/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/MichitoSugawara/micchy/360d33bd543f50848ec43fa5b1b5961caa5a20af/.cursorrules",
+        "repositoryId": 1061812536,
+        "path": "MichitoSugawara/micchy/.cursorrules",
+        "ownerName": "MichitoSugawara",
+        "repositoryName": "micchy",
+        "htmlUrl": "https://github.com/MichitoSugawara/micchy/blob/360d33bd543f50848ec43fa5b1b5961caa5a20af/.cursorrules",
+        "size": 8.71,
+        "timestamp": "2025-09-25T08:16:11.313Z"
+      }
+    ],
+    [
+      "yellowbarron/PMZ/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/yellowbarron/PMZ/0280f6b6fd05ff963f336f105033ecc1dd828f52/.cursorrules",
+        "repositoryId": 980712472,
+        "path": "yellowbarron/PMZ/.cursorrules",
+        "ownerName": "yellowbarron",
+        "repositoryName": "PMZ",
+        "htmlUrl": "https://github.com/yellowbarron/PMZ/blob/0280f6b6fd05ff963f336f105033ecc1dd828f52/.cursorrules",
+        "size": 3.66,
+        "timestamp": "2025-09-25T08:16:12.406Z"
+      }
+    ],
+    [
+      "nickytonline/cfe-mcp/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/nickytonline/cfe-mcp/d6ceb09e241628f4e6821cffbebb7b9cb51d92c1/.cursorrules",
+        "repositoryId": 1062014052,
+        "path": "nickytonline/cfe-mcp/.cursorrules",
+        "ownerName": "nickytonline",
+        "repositoryName": "cfe-mcp",
+        "htmlUrl": "https://github.com/nickytonline/cfe-mcp/blob/d6ceb09e241628f4e6821cffbebb7b9cb51d92c1/.cursorrules",
+        "size": 4.91,
+        "timestamp": "2025-09-25T08:16:14.172Z"
+      }
+    ],
+    [
+      "bigabid/ai-hackathon/rules-directory/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/bigabid/ai-hackathon/54a1e5ef65885ac54a7db7984dccb33c03728a04/rules-directory/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1046239803,
+        "path": "bigabid/ai-hackathon/rules-directory/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "bigabid",
+        "repositoryName": "ai-hackathon",
+        "htmlUrl": "https://github.com/bigabid/ai-hackathon/blob/54a1e5ef65885ac54a7db7984dccb33c03728a04/rules-directory/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "size": 7.64,
+        "timestamp": "2025-09-25T08:16:14.888Z"
+      }
+    ],
+    [
+      "thehar/job-tracker/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/thehar/job-tracker/1134452c59c1fb99df7349e67251b5a77890d809/.cursorrules",
+        "repositoryId": 1042739564,
+        "path": "thehar/job-tracker/.cursorrules",
+        "ownerName": "thehar",
+        "repositoryName": "job-tracker",
+        "htmlUrl": "https://github.com/thehar/job-tracker/blob/1134452c59c1fb99df7349e67251b5a77890d809/.cursorrules",
+        "size": 7.52,
+        "timestamp": "2025-09-25T08:16:15.316Z"
+      }
+    ],
+    [
+      "puruwin/project-frappy/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/puruwin/project-frappy/6518e3426e2f63146953ef3fe67f973cf826ff1b/.cursorrules",
+        "repositoryId": 936299993,
+        "path": "puruwin/project-frappy/.cursorrules",
+        "ownerName": "puruwin",
+        "repositoryName": "project-frappy",
+        "htmlUrl": "https://github.com/puruwin/project-frappy/blob/6518e3426e2f63146953ef3fe67f973cf826ff1b/.cursorrules",
+        "size": 2.17,
+        "timestamp": "2025-09-25T08:16:15.753Z"
+      }
+    ],
+    [
+      "qnlbnsl/portfolio/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/qnlbnsl/portfolio/9f9c895bcd38d23e176957933f062437507cc015/.cursorrules",
+        "repositoryId": 343228814,
+        "path": "qnlbnsl/portfolio/.cursorrules",
+        "ownerName": "qnlbnsl",
+        "repositoryName": "portfolio",
+        "htmlUrl": "https://github.com/qnlbnsl/portfolio/blob/9f9c895bcd38d23e176957933f062437507cc015/.cursorrules",
+        "size": 2.6,
+        "timestamp": "2025-09-25T08:16:16.438Z"
+      }
+    ],
+    [
+      "didit-protocol/diditui-v2/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/didit-protocol/diditui-v2/b051cb8fb7c24b9507ce429889abe34cfa9222fe/.cursorrules",
+        "repositoryId": 1009576058,
+        "path": "didit-protocol/diditui-v2/.cursorrules",
+        "ownerName": "didit-protocol",
+        "repositoryName": "diditui-v2",
+        "htmlUrl": "https://github.com/didit-protocol/diditui-v2/blob/b051cb8fb7c24b9507ce429889abe34cfa9222fe/.cursorrules",
+        "size": 1.73,
+        "timestamp": "2025-09-25T08:16:17.132Z"
+      }
+    ],
+    [
+      "nurmek51/frontend_halyk/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/nurmek51/frontend_halyk/4865ff5d6bb42e1e7b49999e752d375278f39d57/.cursorrules",
+        "repositoryId": 1062518270,
+        "path": "nurmek51/frontend_halyk/.cursorrules",
+        "ownerName": "nurmek51",
+        "repositoryName": "frontend_halyk",
+        "htmlUrl": "https://github.com/nurmek51/frontend_halyk/blob/4865ff5d6bb42e1e7b49999e752d375278f39d57/.cursorrules",
+        "size": 2.94,
+        "timestamp": "2025-09-25T08:16:17.294Z"
+      }
+    ],
+    [
+      "aipromptinginer-ai/local_lms/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/aipromptinginer-ai/local_lms/05c067d2e750e69db9d3e2b4ad7455f882a04e03/.cursorrules",
+        "repositoryId": 1056467273,
+        "path": "aipromptinginer-ai/local_lms/.cursorrules",
+        "ownerName": "aipromptinginer-ai",
+        "repositoryName": "local_lms",
+        "htmlUrl": "https://github.com/aipromptinginer-ai/local_lms/blob/05c067d2e750e69db9d3e2b4ad7455f882a04e03/.cursorrules",
+        "size": 4.71,
+        "timestamp": "2025-09-25T08:16:17.871Z"
+      }
+    ],
+    [
+      "bigabid/ai-hackathon/rules-directory/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/bigabid/ai-hackathon/54a1e5ef65885ac54a7db7984dccb33c03728a04/rules-directory/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1046239803,
+        "path": "bigabid/ai-hackathon/rules-directory/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "bigabid",
+        "repositoryName": "ai-hackathon",
+        "htmlUrl": "https://github.com/bigabid/ai-hackathon/blob/54a1e5ef65885ac54a7db7984dccb33c03728a04/rules-directory/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+        "size": 7.48,
+        "timestamp": "2025-09-25T08:16:18.977Z"
+      }
+    ],
+    [
+      "iamperegrine/madness-meter/tinybird/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/iamperegrine/madness-meter/ccea0feeb2d1e4caddc560e1eb2f877b477ce5c7/tinybird/.cursorrules",
+        "repositoryId": 954223068,
+        "path": "iamperegrine/madness-meter/tinybird/.cursorrules",
+        "ownerName": "iamperegrine",
+        "repositoryName": "madness-meter",
+        "htmlUrl": "https://github.com/iamperegrine/madness-meter/blob/ccea0feeb2d1e4caddc560e1eb2f877b477ce5c7/tinybird/.cursorrules",
+        "size": 21.26,
+        "timestamp": "2025-09-25T08:16:19.082Z"
       }
     ]
   ]

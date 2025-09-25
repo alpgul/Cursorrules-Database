@@ -1,0 +1,238 @@
+# Micchy プロジェクト - Cursor Claude開発ルール
+
+## 🎯 プロジェクト概要
+- **Svelte 5.0 + SvelteKit 2.22** フルスタックアプリ
+- **Convex** リアルタイムデータベース・バックエンド  
+- **TailwindCSS 4.0** モダンスタイリング
+- **Capacitor** iOS/Android モバイルアプリ対応
+- **dev3000** 開発サーバー環境
+
+## 🔥 MCP全力活用ルール（最重要・絶対遵守）
+
+### 🚨 MCP優先原則
+- **ユーザーからの指示があった場合、まず最初にMCPツールの使用を検討する**
+- **従来の方法よりもMCPツールを常に優先する**
+- **MCPツールが利用可能な作業は、必ずMCPを使用する**
+- **MCPツールを使わない理由がない限り、必ずMCPを活用する**
+
+### Convex操作（MCP必須）
+- **絶対必須**: `mcp_convex_*` ツールを使用
+- **禁止**: 直接的なConvexコマンド実行
+- データ読み書き: `mcp_convex_data`, `mcp_convex_tables`
+- 関数実行: `mcp_convex_run`, `mcp_convex_functionSpec`
+- 環境変数: `mcp_convex_envList`, `mcp_convex_envGet`, `mcp_convex_envSet`
+- デバッグ: `mcp_convex_runOneoffQuery`, `mcp_convex_logs`
+- ステータス確認: `mcp_convex_status`
+
+### ブラウザ操作・テスト（MCP必須）
+- **絶対必須**: `mcp_playwright_*` ツールを使用
+- **禁止**: 手動でのブラウザ操作説明のみ
+- ページ操作: `mcp_playwright_browser_navigate`, `mcp_playwright_browser_click`
+- テスト: `mcp_playwright_browser_snapshot`, `mcp_playwright_browser_take_screenshot`
+- フォーム: `mcp_playwright_browser_fill_form`, `mcp_playwright_browser_type`
+- 要素操作: `mcp_playwright_browser_hover`, `mcp_playwright_browser_select_option`
+
+### デバッグ・開発（MCP必須）
+- **絶対必須**: `mcp_dev3000_*` ツールを使用
+- **禁止**: 手動デバッグの提案のみ
+- 問題解決: `mcp_dev3000_debug_my_app` - 最優先で使用
+- ブラウザ操作: `mcp_dev3000_execute_browser_action`
+
+### Figmaデザイン対応（MCP優先）
+- **優先**: `mcp_figma_*` ツールを使用
+- デザインデータ取得: `mcp_figma-developer-mcp_get_figma_data`
+- 画像ダウンロード: `mcp_figma-developer-mcp_download_figma_images`
+
+### Context7ドキュメント取得（MCP優先）
+- **優先**: `mcp_context7_*` ツールを使用
+- ライブラリ検索: `mcp_context7_resolve-library-id`
+- ドキュメント取得: `mcp_context7_get-library-docs`
+
+## 📚 重要ライブラリ・技術スタック
+
+### フロントエンド
+- **Svelte 5.0**: 最新の runes API使用
+- **SvelteKit 2.22**: ファイルベースルーティング
+- **TailwindCSS 4.0**: ユーティリティファースト
+- **TypeScript**: 型安全性必須
+
+### バックエンド
+- **Convex 1.27**: リアルタイムDB
+- **convex-svelte 0.0.11**: Svelteバインディング
+
+### モバイル
+- **Capacitor 7.4**: ネイティブアプリ
+- **Ionic**: UI コンポーネント
+- **ネイティブ機能**: カメラ、写真選択、ファイル、位置情報等
+
+### 開発ツール
+- **dev3000**: 開発環境
+- **Bun**: パッケージマネージャー・ランタイム
+- **Vite 7.0**: ビルドツール
+
+## 🛠️ 開発コマンド
+
+```bash
+# メイン開発環境（推奨）
+bun run dev              # dev3000 + stagewise
+bun run vite:dev         # Vite開発サーバー
+bun run stagewise        # ステージング環境
+
+# モバイル開発
+bun run dev:ios          # iOS開発
+bun run dev:android      # Android開発
+bun run build:ios        # iOSビルド
+bun run build:android    # Androidビルド
+
+# Capacitorプラグイン追加
+bun add @capacitor/camera @capacitor/filesystem @capacitor/geolocation
+bun add @capacitor/local-notifications @capacitor/status-bar
+bun add capacitor-plugin-safe-area
+
+# その他
+bun run format           # コードフォーマット
+bun run lint            # リント
+bun run test            # テスト実行
+```
+
+## ⚡ コーディングルール
+
+### 1. ファイル構造
+```
+src/
+├── routes/          # SvelteKitページ
+├── components/      # 再利用可能コンポーネント
+├── lib/            # ユーティリティ・ヘルパー
+├── constants/      # 定数
+└── assets/         # 静的アセット
+
+convex/             # Convexバックエンド
+├── schema.ts       # データベーススキーマ
+└── *.ts           # クエリ・ミューテーション
+```
+
+### 2. エイリアス設定
+- `$` → `src`
+- `$lib` → `src/lib`  
+- `$components` → `src/components`
+- `$routes` → `src/routes`
+- `$assets` → `src/assets`
+- `$constants` → `src/constants`
+- `$convex` → `convex`
+
+### 3. スタイリング
+- **必須**: TailwindCSS使用
+- モバイルファースト設計
+- ダークモード対応考慮
+- レスポンシブデザイン
+
+### 4. Convex連携
+```typescript
+// 推奨パターン
+import { createQuery } from "convex-svelte";
+import { api } from "$convex/_generated/api";
+
+const chats = createQuery(api.chat.getChats, {});
+```
+
+### 5. Capacitorネイティブ機能対応
+- **必須**: ネイティブ機能は必ずCapacitorプラグイン使用
+- **フォールバック**: Web環境でのフォールバック実装必須
+- **プラットフォーム検出**: `Capacitor.isNativePlatform()`で分岐
+
+```typescript
+// 写真選択の推奨パターン
+import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
+import { Capacitor } from '@capacitor/core';
+
+async function selectPhoto() {
+  if (Capacitor.isNativePlatform()) {
+    // ネイティブ: Capacitorカメラプラグイン
+    const image = await Camera.getPhoto({
+      quality: 90,
+      allowEditing: false,
+      resultType: CameraResultType.Uri,
+      source: CameraSource.Photos
+    });
+    return image.webPath;
+  } else {
+    // Web: HTMLファイル入力フォールバック
+    return new Promise((resolve) => {
+      const input = document.createElement('input');
+      input.type = 'file';
+      input.accept = 'image/*';
+      input.onchange = (e) => {
+        const file = (e.target as HTMLInputElement).files?.[0];
+        if (file) {
+          resolve(URL.createObjectURL(file));
+        }
+      };
+      input.click();
+    });
+  }
+}
+```
+
+#### 対応すべきネイティブ機能
+- **カメラ・写真**: `@capacitor/camera`
+- **ファイル選択**: `@capacitor/filesystem`
+- **位置情報**: `@capacitor/geolocation`
+- **通知**: `@capacitor/local-notifications`
+- **ステータスバー**: `@capacitor/status-bar`
+- **セーフエリア**: `capacitor-plugin-safe-area`
+
+## 🚨 必須チェック事項
+
+### コード作成時
+- [ ] TypeScript型定義が適切
+- [ ] TailwindCSSでスタイリング
+- [ ] モバイル対応（Capacitor考慮）
+- [ ] Convex操作はMCPツール使用
+- [ ] エラーハンドリング実装
+- [ ] ネイティブ機能でWeb/ネイティブフォールバック実装
+- [ ] `Capacitor.isNativePlatform()`でプラットフォーム分岐
+
+### デバッグ時
+- [ ] `mcp_dev3000_debug_my_app`でエラー分析
+- [ ] `mcp_convex_logs`でサーバーログ確認
+- [ ] `mcp_playwright_*`でE2Eテスト
+
+### デプロイ前
+- [ ] `bun run lint`通過
+- [ ] `bun run test`通過
+- [ ] モバイルビルド確認（iOS/Android）
+- [ ] Convex環境変数設定確認
+- [ ] ネイティブ機能の動作確認（実機テスト）
+- [ ] Webフォールバック機能の動作確認
+
+## 🎨 UI/UX原則
+- **モダンでクリーンなデザイン**
+- **モバイルファースト**
+- **アクセシビリティ重視**
+- **パフォーマンス最適化**
+- **リアルタイム性重視**
+- **ネイティブ体験の提供** - Capacitor機能で最適な操作性
+- **プラットフォーム対応** - Web/iOS/Android全対応
+
+## 🎯 MCP活用優先順位（絶対遵守）
+
+### 1. ユーザー指示受信時の対応フロー
+1. **MCPツール確認** - 該当作業にMCPツールが使用可能か即座に確認
+2. **MCP実行** - 利用可能な場合は即座にMCPツール実行
+3. **従来手法** - MCPが利用不可の場合のみ従来手法を提案
+
+### 2. 作業種別ごとのMCP優先度
+- **🔴 Convex関連作業**: MCP使用絶対必須
+- **🔴 ブラウザテスト**: MCP使用絶対必須  
+- **🔴 デバッグ・問題解決**: MCP使用絶対必須
+- **🟡 Figmaデザイン**: MCP使用を強く推奨
+- **🟡 ライブラリ調査**: MCP使用を強く推奨
+
+### 3. MCP使用判断基準
+- ✅ **使用する**: MCPツールが存在する場合
+- ✅ **使用する**: ユーザーが具体的作業を指示した場合
+- ✅ **使用する**: 効率化が見込める場合
+- ❌ **使用しない**: 該当MCPツールが存在しない場合のみ
+
+---
+**🚨 最重要**: ユーザーからの指示があったら、まずMCPツール使用を検討し、全力で活用する！
