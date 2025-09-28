@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 2107,
+  "size": 2115,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -29498,6 +29498,118 @@
         "htmlUrl": "https://github.com/iamperegrine/madness-meter/blob/ccea0feeb2d1e4caddc560e1eb2f877b477ce5c7/tinybird/.cursorrules",
         "size": 21.26,
         "timestamp": "2025-09-25T08:16:19.082Z"
+      }
+    ],
+    [
+      "MisterV111/VoiceScribeStudio/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/MisterV111/VoiceScribeStudio/36b0809247db294c60458d5c07905e5b015a5ede/.cursorrules",
+        "repositoryId": 952207532,
+        "path": "MisterV111/VoiceScribeStudio/.cursorrules",
+        "ownerName": "MisterV111",
+        "repositoryName": "VoiceScribeStudio",
+        "htmlUrl": "https://github.com/MisterV111/VoiceScribeStudio/blob/36b0809247db294c60458d5c07905e5b015a5ede/.cursorrules",
+        "size": 3.16,
+        "timestamp": "2025-09-28T08:13:57.831Z"
+      }
+    ],
+    [
+      "vibe-coding-labs/cursor-rules/resources/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/vibe-coding-labs/cursor-rules/112b682dda22c4317632db7f036340b045622255/resources/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 987021729,
+        "path": "vibe-coding-labs/cursor-rules/resources/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "vibe-coding-labs",
+        "repositoryName": "cursor-rules",
+        "htmlUrl": "https://github.com/vibe-coding-labs/cursor-rules/blob/112b682dda22c4317632db7f036340b045622255/resources/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "size": 7.64,
+        "timestamp": "2025-09-28T08:13:59.415Z"
+      }
+    ],
+    [
+      "bigabid/vebo/cursor-rules-directory/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/bigabid/vebo/053648a3092be9b6fee656c049ff2f178f809b4e/cursor-rules-directory/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "repositoryId": 1049107446,
+        "path": "bigabid/vebo/cursor-rules-directory/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "ownerName": "bigabid",
+        "repositoryName": "vebo",
+        "htmlUrl": "https://github.com/bigabid/vebo/blob/053648a3092be9b6fee656c049ff2f178f809b4e/cursor-rules-directory/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "size": 3.59,
+        "timestamp": "2025-09-28T08:14:00.498Z"
+      }
+    ],
+    [
+      "TribeWW/localcitywalksnew/.cursorrules.md",
+      {
+        "name": ".cursorrules.md",
+        "downloadUrl": "https://raw.githubusercontent.com/TribeWW/localcitywalksnew/5fa9699989747f67b6e35bef141b1801516d7cfc/.cursorrules.md",
+        "repositoryId": 998480405,
+        "path": "TribeWW/localcitywalksnew/.cursorrules.md",
+        "ownerName": "TribeWW",
+        "repositoryName": "localcitywalksnew",
+        "htmlUrl": "https://github.com/TribeWW/localcitywalksnew/blob/5fa9699989747f67b6e35bef141b1801516d7cfc/.cursorrules.md",
+        "size": 11.54,
+        "timestamp": "2025-09-28T08:14:00.569Z"
+      }
+    ],
+    [
+      "fatihkc/hugo-personal-website/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/fatihkc/hugo-personal-website/d0453cd717d00d904dcf3e9507a8efa43e76d600/.cursorrules",
+        "repositoryId": 522660862,
+        "path": "fatihkc/hugo-personal-website/.cursorrules",
+        "ownerName": "fatihkc",
+        "repositoryName": "hugo-personal-website",
+        "htmlUrl": "https://github.com/fatihkc/hugo-personal-website/blob/d0453cd717d00d904dcf3e9507a8efa43e76d600/.cursorrules",
+        "size": 4.98,
+        "timestamp": "2025-09-28T08:14:00.698Z"
+      }
+    ],
+    [
+      "idgleb/PostulaMatic/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/idgleb/PostulaMatic/fc94fade72ec09c8a0cfd83d27cd6ae6f434f7c7/.cursorrules",
+        "repositoryId": 1062553642,
+        "path": "idgleb/PostulaMatic/.cursorrules",
+        "ownerName": "idgleb",
+        "repositoryName": "PostulaMatic",
+        "htmlUrl": "https://github.com/idgleb/PostulaMatic/blob/fc94fade72ec09c8a0cfd83d27cd6ae6f434f7c7/.cursorrules",
+        "size": 4.1,
+        "timestamp": "2025-09-28T08:14:01.672Z"
+      }
+    ],
+    [
+      "xMetalWorkerx/Trade-Warz/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/xMetalWorkerx/Trade-Warz/25c2774458e4bcafe3e5e5a7cbcfae1201b273e2/.cursorrules",
+        "repositoryId": 1064246934,
+        "path": "xMetalWorkerx/Trade-Warz/.cursorrules",
+        "ownerName": "xMetalWorkerx",
+        "repositoryName": "Trade-Warz",
+        "htmlUrl": "https://github.com/xMetalWorkerx/Trade-Warz/blob/25c2774458e4bcafe3e5e5a7cbcfae1201b273e2/.cursorrules",
+        "size": 3,
+        "timestamp": "2025-09-28T08:14:02.538Z"
+      }
+    ],
+    [
+      "sudotx/automatic-waffle/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/sudotx/automatic-waffle/6e1f4c774d832c036cafa512aa7f06be108151b0/.cursorrules",
+        "repositoryId": 902469525,
+        "path": "sudotx/automatic-waffle/.cursorrules",
+        "ownerName": "sudotx",
+        "repositoryName": "automatic-waffle",
+        "htmlUrl": "https://github.com/sudotx/automatic-waffle/blob/6e1f4c774d832c036cafa512aa7f06be108151b0/.cursorrules",
+        "size": 4.09,
+        "timestamp": "2025-09-28T08:14:02.901Z"
       }
     ]
   ]
