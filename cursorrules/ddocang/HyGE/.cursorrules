@@ -1,0 +1,125 @@
+# Cursor Rules for Hyge Project
+
+## Project Overview
+
+This is a hydrogen station monitoring system built with Next.js, TypeScript, and Supabase.
+
+## Tech Stack
+
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Database**: Supabase
+- **Styling**: Styled Components (Emotion)
+- **Real-time**: WebSocket connections
+- **Maps**: Naver Maps API
+
+## Code Style & Conventions
+
+- Use TypeScript for all new files (JavaScript files prohibited)
+- Follow conventional commit messages
+- Keep files under 1000 lines maximum
+- Use Emotion styled-components with responsive design
+- Mobile-first approach with breakpoints at 768px and 1024px
+
+## Database Management
+
+### Supabase MCP Integration
+
+- **MCP Server**: `@supabase/mcp-server-supabase` for database management
+- **Environment Variables**: `SUPABASE_ACCESS_TOKEN`, `SUPABASE_PROJECT_ID`
+- **Connection**: MCP server runs on localhost for Cursor IDE integration
+
+### Data Cleanup Commands
+
+```bash
+# Quick data cleanup (10k records)
+npm run cleanup:data
+
+# Specific amounts
+npm run cleanup:data:100k  # 100,000 records
+npm run cleanup:data:200k  # 200,000 records
+
+# Custom amount
+node scripts/cleanup-realtime-data.js [number]
+```
+
+### MCP Server Management
+
+```bash
+# Start MCP server
+$env:SUPABASE_ACCESS_TOKEN="token"; $env:SUPABASE_PROJECT_ID="project_id"; node_modules\.bin\mcp-server-supabase
+
+# Test MCP connection
+npm run mcp:test
+
+# Check environment
+npm run check-env
+```
+
+## Database Maintenance Best Practices
+
+- **Regular Cleanup**: Delete old data monthly (100k-200k records)
+- **Batch Processing**: Use 1,000-10,000 records per batch
+- **Timing**: Perform cleanup during low-usage periods
+- **Monitoring**: Track database size and query performance
+- **Backup**: Consider data export before major deletions
+
+## File Structure
+
+- `/app` - Next.js App Router pages and components
+- `/components` - Shared React components
+- `/scripts` - Database maintenance and utility scripts
+- `/database` - SQL schema files
+- `/hooks` - Custom React hooks
+- `/types` - TypeScript type definitions
+
+## Key Features
+
+1. **Real-time Monitoring**: WebSocket-based sensor data monitoring
+2. **CCTV Streaming**: HLS video streaming with ffmpeg
+3. **Equipment Management**: Facility and maintenance tracking
+4. **Data Visualization**: Charts and trend analysis
+
+## Environment Variables
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+SUPABASE_ACCESS_TOKEN=your_supabase_access_token
+SUPABASE_PROJECT_ID=your_supabase_project_id
+```
+
+## Development Guidelines
+
+- Never run `npm run dev`, `npm start`, or `npm run build` (user responsibility)
+- Use `npm run lint` for code quality checks
+- Use `npx tsc --noEmit` for TypeScript type checking
+- Follow the existing component patterns and styling approach
+- Maintain responsive design for mobile and desktop
+
+## Database Schema
+
+- `realtime_data` - Sensor data from PLC systems
+- `equipment` - Facility and equipment information
+- `maintenance_history` - Maintenance records and history
+
+## Real-time Data Sources
+
+- **WebSocket**: `wss://iwxu7qs5h3.execute-api.ap-northeast-2.amazonaws.com/dev`
+- **Topics**: `BASE/P001`, `BASE/P003` for different facilities
+- **Data Fields**: `barr` (vibration), `gdet` (gas), `fdet` (fire)
+
+## Performance Considerations
+
+- Monitor database size and query performance
+- Regular cleanup of old realtime_data records
+- Use batch operations for large data manipulations
+- Implement proper error handling and logging
+- Consider data archiving for long-term storage
+
+## Security Notes
+
+- Keep environment variables secure
+- Use proper authentication for database access
+- Implement rate limiting for API endpoints
+- Regular security updates for dependencies

@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 2115,
+  "size": 2120,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -29610,6 +29610,76 @@
         "htmlUrl": "https://github.com/sudotx/automatic-waffle/blob/6e1f4c774d832c036cafa512aa7f06be108151b0/.cursorrules",
         "size": 4.09,
         "timestamp": "2025-09-28T08:14:02.901Z"
+      }
+    ],
+    [
+      "chenrookie96/GCI-/.cursor/rules/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/chenrookie96/GCI-/a86a87b38ba87d3d41c5861c81930658adc2a8ec/.cursor/rules/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "repositoryId": 1058638984,
+        "path": "chenrookie96/GCI-/.cursor/rules/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "ownerName": "chenrookie96",
+        "repositoryName": "GCI-",
+        "htmlUrl": "https://github.com/chenrookie96/GCI-/blob/a86a87b38ba87d3d41c5861c81930658adc2a8ec/.cursor/rules/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "size": 4.93,
+        "timestamp": "2025-10-01T08:16:54.607Z"
+      }
+    ],
+    [
+      "bigabid/ai-hackathon/rules-directory/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/bigabid/ai-hackathon/54a1e5ef65885ac54a7db7984dccb33c03728a04/rules-directory/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "repositoryId": 1046239803,
+        "path": "bigabid/ai-hackathon/rules-directory/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "ownerName": "bigabid",
+        "repositoryName": "ai-hackathon",
+        "htmlUrl": "https://github.com/bigabid/ai-hackathon/blob/54a1e5ef65885ac54a7db7984dccb33c03728a04/rules-directory/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "size": 3.59,
+        "timestamp": "2025-10-01T08:16:55.839Z"
+      }
+    ],
+    [
+      "ddocang/HyGE/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ddocang/HyGE/2cf03fd3223dd7be890485dfc2fadf4446db3884/.cursorrules",
+        "repositoryId": 947202053,
+        "path": "ddocang/HyGE/.cursorrules",
+        "ownerName": "ddocang",
+        "repositoryName": "HyGE",
+        "htmlUrl": "https://github.com/ddocang/HyGE/blob/2cf03fd3223dd7be890485dfc2fadf4446db3884/.cursorrules",
+        "size": 3.67,
+        "timestamp": "2025-10-01T08:17:00.337Z"
+      }
+    ],
+    [
+      "bigabid/vebo/cursor-rules-directory/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/bigabid/vebo/053648a3092be9b6fee656c049ff2f178f809b4e/cursor-rules-directory/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1049107446,
+        "path": "bigabid/vebo/cursor-rules-directory/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "bigabid",
+        "repositoryName": "vebo",
+        "htmlUrl": "https://github.com/bigabid/vebo/blob/053648a3092be9b6fee656c049ff2f178f809b4e/cursor-rules-directory/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+        "size": 7.48,
+        "timestamp": "2025-10-01T08:17:00.479Z"
+      }
+    ],
+    [
+      "twardoch/vttrix/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/twardoch/vttrix/1f0d21af2905a8a0b107ca3e28a3c1095fb530c1/.cursorrules",
+        "repositoryId": 1048494175,
+        "path": "twardoch/vttrix/.cursorrules",
+        "ownerName": "twardoch",
+        "repositoryName": "vttrix",
+        "htmlUrl": "https://github.com/twardoch/vttrix/blob/1f0d21af2905a8a0b107ca3e28a3c1095fb530c1/.cursorrules",
+        "size": 3.28,
+        "timestamp": "2025-10-01T08:17:01.263Z"
       }
     ]
   ]
