@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 2120,
+  "size": 2129,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -29680,6 +29680,132 @@
         "htmlUrl": "https://github.com/twardoch/vttrix/blob/1f0d21af2905a8a0b107ca3e28a3c1095fb530c1/.cursorrules",
         "size": 3.28,
         "timestamp": "2025-10-01T08:17:01.263Z"
+      }
+    ],
+    [
+      "ShiXiangYu1/cursor-rules-pugongying/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ShiXiangYu1/cursor-rules-pugongying/fdeb87af3e891be80bf34daa63ff8f5b3b86dffc/.cursorrules",
+        "repositoryId": 933260704,
+        "path": "ShiXiangYu1/cursor-rules-pugongying/.cursorrules",
+        "ownerName": "ShiXiangYu1",
+        "repositoryName": "cursor-rules-pugongying",
+        "htmlUrl": "https://github.com/ShiXiangYu1/cursor-rules-pugongying/blob/fdeb87af3e891be80bf34daa63ff8f5b3b86dffc/.cursorrules",
+        "size": 3.44,
+        "timestamp": "2025-10-04T08:13:59.614Z"
+      }
+    ],
+    [
+      "ShiXiangYu1/cursor-rules-pugongying/rules/通用/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ShiXiangYu1/cursor-rules-pugongying/fdeb87af3e891be80bf34daa63ff8f5b3b86dffc/rules/通用/.cursorrules",
+        "repositoryId": 933260704,
+        "path": "ShiXiangYu1/cursor-rules-pugongying/rules/通用/.cursorrules",
+        "ownerName": "ShiXiangYu1",
+        "repositoryName": "cursor-rules-pugongying",
+        "htmlUrl": "https://github.com/ShiXiangYu1/cursor-rules-pugongying/blob/fdeb87af3e891be80bf34daa63ff8f5b3b86dffc/rules/%E9%80%9A%E7%94%A8/.cursorrules",
+        "size": 3.44,
+        "timestamp": "2025-10-04T08:13:59.827Z"
+      }
+    ],
+    [
+      "ShiXiangYu1/cursor-rules-pugongying/.cursor-rules/通用/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ShiXiangYu1/cursor-rules-pugongying/fdeb87af3e891be80bf34daa63ff8f5b3b86dffc/.cursor-rules/通用/.cursorrules",
+        "repositoryId": 933260704,
+        "path": "ShiXiangYu1/cursor-rules-pugongying/.cursor-rules/通用/.cursorrules",
+        "ownerName": "ShiXiangYu1",
+        "repositoryName": "cursor-rules-pugongying",
+        "htmlUrl": "https://github.com/ShiXiangYu1/cursor-rules-pugongying/blob/fdeb87af3e891be80bf34daa63ff8f5b3b86dffc/.cursor-rules/%E9%80%9A%E7%94%A8/.cursorrules",
+        "size": 3.44,
+        "timestamp": "2025-10-04T08:13:59.918Z"
+      }
+    ],
+    [
+      "chenrookie96/GCI-/.cursor/rules/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/chenrookie96/GCI-/4780990f759de972efde6771999eaec0a2ec893a/.cursor/rules/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1058638984,
+        "path": "chenrookie96/GCI-/.cursor/rules/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "chenrookie96",
+        "repositoryName": "GCI-",
+        "htmlUrl": "https://github.com/chenrookie96/GCI-/blob/4780990f759de972efde6771999eaec0a2ec893a/.cursor/rules/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "size": 2.32,
+        "timestamp": "2025-10-04T08:14:03.769Z"
+      }
+    ],
+    [
+      "HaymayndzUltra/Matalinongworkflow/rules/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/HaymayndzUltra/Matalinongworkflow/c6bd5281b6f43703e917e10dbfe6bf2b8e0016f0/rules/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1036422547,
+        "path": "HaymayndzUltra/Matalinongworkflow/rules/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "HaymayndzUltra",
+        "repositoryName": "Matalinongworkflow",
+        "htmlUrl": "https://github.com/HaymayndzUltra/Matalinongworkflow/blob/c6bd5281b6f43703e917e10dbfe6bf2b8e0016f0/rules/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+        "size": 6.25,
+        "timestamp": "2025-10-04T08:14:04.072Z"
+      }
+    ],
+    [
+      "chenrookie96/GCI-/.cursor/rules/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/chenrookie96/GCI-/4780990f759de972efde6771999eaec0a2ec893a/.cursor/rules/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1058638984,
+        "path": "chenrookie96/GCI-/.cursor/rules/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "chenrookie96",
+        "repositoryName": "GCI-",
+        "htmlUrl": "https://github.com/chenrookie96/GCI-/blob/4780990f759de972efde6771999eaec0a2ec893a/.cursor/rules/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "size": 7.64,
+        "timestamp": "2025-10-04T08:14:05.791Z"
+      }
+    ],
+    [
+      "TribeWW/localcitywalksnew/.cursor/.cursorrules.md",
+      {
+        "name": ".cursorrules.md",
+        "downloadUrl": "https://raw.githubusercontent.com/TribeWW/localcitywalksnew/f582d71d56c76a25d2e495b126d77ec3867cd3a4/.cursor/.cursorrules.md",
+        "repositoryId": 998480405,
+        "path": "TribeWW/localcitywalksnew/.cursor/.cursorrules.md",
+        "ownerName": "TribeWW",
+        "repositoryName": "localcitywalksnew",
+        "htmlUrl": "https://github.com/TribeWW/localcitywalksnew/blob/f582d71d56c76a25d2e495b126d77ec3867cd3a4/.cursor/.cursorrules.md",
+        "size": 11.54,
+        "timestamp": "2025-10-04T08:14:05.990Z"
+      }
+    ],
+    [
+      "iServU/AgentDevFramework/tools/cursor/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/iServU/AgentDevFramework/93e7d8b8e503cabf3bd3969a280dc74dd746e361/tools/cursor/.cursorrules",
+        "repositoryId": 1068531642,
+        "path": "iServU/AgentDevFramework/tools/cursor/.cursorrules",
+        "ownerName": "iServU",
+        "repositoryName": "AgentDevFramework",
+        "htmlUrl": "https://github.com/iServU/AgentDevFramework/blob/93e7d8b8e503cabf3bd3969a280dc74dd746e361/tools/cursor/.cursorrules",
+        "size": 15.85,
+        "timestamp": "2025-10-04T08:14:08.358Z"
+      }
+    ],
+    [
+      "Xbro1305/smartwear/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Xbro1305/smartwear/ff4a180862424074a0dade8f0fe9b783975cc01b/.cursorrules",
+        "repositoryId": 1045554047,
+        "path": "Xbro1305/smartwear/.cursorrules",
+        "ownerName": "Xbro1305",
+        "repositoryName": "smartwear",
+        "htmlUrl": "https://github.com/Xbro1305/smartwear/blob/ff4a180862424074a0dade8f0fe9b783975cc01b/.cursorrules",
+        "size": 4.72,
+        "timestamp": "2025-10-04T08:14:09.501Z"
       }
     ]
   ]
