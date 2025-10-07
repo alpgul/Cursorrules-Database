@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 2129,
+  "size": 2135,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -29806,6 +29806,90 @@
         "htmlUrl": "https://github.com/Xbro1305/smartwear/blob/ff4a180862424074a0dade8f0fe9b783975cc01b/.cursorrules",
         "size": 4.72,
         "timestamp": "2025-10-04T08:14:09.501Z"
+      }
+    ],
+    [
+      "salesforcecli/plugin-lightning-dev/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/salesforcecli/plugin-lightning-dev/944354683c4be128524024725969f4cac2d2999a/.cursorrules",
+        "repositoryId": 788646038,
+        "path": "salesforcecli/plugin-lightning-dev/.cursorrules",
+        "ownerName": "salesforcecli",
+        "repositoryName": "plugin-lightning-dev",
+        "htmlUrl": "https://github.com/salesforcecli/plugin-lightning-dev/blob/944354683c4be128524024725969f4cac2d2999a/.cursorrules",
+        "size": 6.08,
+        "timestamp": "2025-10-07T08:16:46.361Z"
+      }
+    ],
+    [
+      "azutoolkit/azu/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/azutoolkit/azu/7a955cdd38afcd4719630847b7f8b9fc7d83b26d/.cursorrules",
+        "repositoryId": 236335471,
+        "path": "azutoolkit/azu/.cursorrules",
+        "ownerName": "azutoolkit",
+        "repositoryName": "azu",
+        "htmlUrl": "https://github.com/azutoolkit/azu/blob/7a955cdd38afcd4719630847b7f8b9fc7d83b26d/.cursorrules",
+        "size": 6.43,
+        "timestamp": "2025-10-07T08:16:46.885Z"
+      }
+    ],
+    [
+      "Dongmoon29/code_racer/frontend/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Dongmoon29/code_racer/8512ed962ae20e6028b38b9fff809e9650da9220/frontend/.cursorrules",
+        "repositoryId": 958463622,
+        "path": "Dongmoon29/code_racer/frontend/.cursorrules",
+        "ownerName": "Dongmoon29",
+        "repositoryName": "code_racer",
+        "htmlUrl": "https://github.com/Dongmoon29/code_racer/blob/8512ed962ae20e6028b38b9fff809e9650da9220/frontend/.cursorrules",
+        "size": 6,
+        "timestamp": "2025-10-07T08:16:50.707Z"
+      }
+    ],
+    [
+      "nickytonline/pimp-my-ride-mcp/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/nickytonline/pimp-my-ride-mcp/45a6fe5b1aedb8075407bcbf95a5721ee774043e/.cursorrules",
+        "repositoryId": 1071044293,
+        "path": "nickytonline/pimp-my-ride-mcp/.cursorrules",
+        "ownerName": "nickytonline",
+        "repositoryName": "pimp-my-ride-mcp",
+        "htmlUrl": "https://github.com/nickytonline/pimp-my-ride-mcp/blob/45a6fe5b1aedb8075407bcbf95a5721ee774043e/.cursorrules",
+        "size": 4.91,
+        "timestamp": "2025-10-07T08:16:52.020Z"
+      }
+    ],
+    [
+      "DULASlee/hxlot/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/DULASlee/hxlot/d26c3045a4a1de181784882a04fff778c5048b5a/.cursorrules",
+        "repositoryId": 1032348076,
+        "path": "DULASlee/hxlot/.cursorrules",
+        "ownerName": "DULASlee",
+        "repositoryName": "hxlot",
+        "htmlUrl": "https://github.com/DULASlee/hxlot/blob/d26c3045a4a1de181784882a04fff778c5048b5a/.cursorrules",
+        "size": 20.02,
+        "timestamp": "2025-10-07T08:16:54.407Z"
+      }
+    ],
+    [
+      "Christopher-Powers/Mosaic/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Christopher-Powers/Mosaic/c2975e08b584fb332550605fe08553b9e2c162e2/.cursorrules",
+        "repositoryId": 1070339431,
+        "path": "Christopher-Powers/Mosaic/.cursorrules",
+        "ownerName": "Christopher-Powers",
+        "repositoryName": "Mosaic",
+        "htmlUrl": "https://github.com/Christopher-Powers/Mosaic/blob/c2975e08b584fb332550605fe08553b9e2c162e2/.cursorrules",
+        "size": 8.67,
+        "timestamp": "2025-10-07T08:16:54.540Z"
       }
     ]
   ]
