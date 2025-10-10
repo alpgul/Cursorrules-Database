@@ -1,0 +1,44 @@
+{
+  "rules": [
+    {
+      "condition": "filepath matches '.*\\.md$'",
+      "effect": "block",
+      "message": "Markdown 文件生成已被禁止"
+    },
+    {
+      "condition": "filepath matches '.*\\.txt$'",
+      "effect": "block",
+      "message": "TXT 文件生成已被禁止"
+    },
+    {
+      "condition": "filepath matches '.*\\.bat$'",
+      "effect": "block",
+      "message": "BAT 文件生成已被禁止"
+    },
+    {
+      "condition": "filepath matches '.*\\.sh$'",
+      "effect": "block",
+      "message": "SH 文件生成已被禁止"
+    },
+    {
+      "condition": "filepath matches '.*\\.ps1$'",
+      "effect": "block",
+      "message": "PS1 文件生成已被禁止"
+    }
+  ],
+  "postTaskHooks": [
+    {
+      "condition": "taskCompleted",
+      "action": "updateHtml",
+      "target": "docs/*.html",
+      "message": "更新修改的内容到html文档中"
+    }
+  ],
+  "preTaskHooks": [
+    {
+      "condition": "taskStarted",
+      "action": "updateRule",
+      "message": "更新规则到rule.txt中, rule.txt唯一ruin标准"
+    }
+  ]
+}
