@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 2170,
+  "size": 2181,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -30380,6 +30380,160 @@
         "htmlUrl": "https://github.com/qqrewquu/zifeng-guo-portfolio/blob/4ba9efe4c182cbb72e53d8b1e658bbc0dbd75f2f/.cursorrules",
         "size": 9.66,
         "timestamp": "2025-10-10T08:16:48.332Z"
+      }
+    ],
+    [
+      "icon-project/sodax-frontend/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/icon-project/sodax-frontend/0e117ed84ba9e98b081f90bb0d0388d414ac40e6/.cursorrules",
+        "repositoryId": 983678672,
+        "path": "icon-project/sodax-frontend/.cursorrules",
+        "ownerName": "icon-project",
+        "repositoryName": "sodax-frontend",
+        "htmlUrl": "https://github.com/icon-project/sodax-frontend/blob/0e117ed84ba9e98b081f90bb0d0388d414ac40e6/.cursorrules",
+        "size": 1.63,
+        "timestamp": "2025-10-13T08:18:24.653Z"
+      }
+    ],
+    [
+      "tonk-labs/tonkbook/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/tonk-labs/tonkbook/8ec3d4bf941092f8499c969de8ceafa29883b37e/.cursorrules",
+        "repositoryId": 998828339,
+        "path": "tonk-labs/tonkbook/.cursorrules",
+        "ownerName": "tonk-labs",
+        "repositoryName": "tonkbook",
+        "htmlUrl": "https://github.com/tonk-labs/tonkbook/blob/8ec3d4bf941092f8499c969de8ceafa29883b37e/.cursorrules",
+        "size": 7.55,
+        "timestamp": "2025-10-13T08:18:25.815Z"
+      }
+    ],
+    [
+      "layzdonw/lazyaudio/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/layzdonw/lazyaudio/c86003dd24ba1b6dd459153be88b1590be4a9c69/.cursorrules",
+        "repositoryId": 946536172,
+        "path": "layzdonw/lazyaudio/.cursorrules",
+        "ownerName": "layzdonw",
+        "repositoryName": "lazyaudio",
+        "htmlUrl": "https://github.com/layzdonw/lazyaudio/blob/c86003dd24ba1b6dd459153be88b1590be4a9c69/.cursorrules",
+        "size": 1.55,
+        "timestamp": "2025-10-13T08:18:25.998Z"
+      }
+    ],
+    [
+      "danfmaia/hybrid-legal-doc-classifier/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/danfmaia/hybrid-legal-doc-classifier/5ef6ce4adfbf7126b42d3638728d63ec14890c87/.cursorrules",
+        "repositoryId": 928650164,
+        "path": "danfmaia/hybrid-legal-doc-classifier/.cursorrules",
+        "ownerName": "danfmaia",
+        "repositoryName": "hybrid-legal-doc-classifier",
+        "htmlUrl": "https://github.com/danfmaia/hybrid-legal-doc-classifier/blob/5ef6ce4adfbf7126b42d3638728d63ec14890c87/.cursorrules",
+        "size": 2.91,
+        "timestamp": "2025-10-13T08:18:26.333Z"
+      }
+    ],
+    [
+      "sadiuysal/crawl4ai-mcp-server/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/sadiuysal/crawl4ai-mcp-server/66425c8020a2cc482f54c5c0f244ea5d3f69b9b4/.cursorrules",
+        "repositoryId": 1038270656,
+        "path": "sadiuysal/crawl4ai-mcp-server/.cursorrules",
+        "ownerName": "sadiuysal",
+        "repositoryName": "crawl4ai-mcp-server",
+        "htmlUrl": "https://github.com/sadiuysal/crawl4ai-mcp-server/blob/66425c8020a2cc482f54c5c0f244ea5d3f69b9b4/.cursorrules",
+        "size": 6.95,
+        "timestamp": "2025-10-13T08:18:26.517Z"
+      }
+    ],
+    [
+      "LenGxien/AI-Three3dModel/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/LenGxien/AI-Three3dModel/48aa2925bb355dd8343ab3353392cccd11380375/.cursorrules",
+        "repositoryId": 890215819,
+        "path": "LenGxien/AI-Three3dModel/.cursorrules",
+        "ownerName": "LenGxien",
+        "repositoryName": "AI-Three3dModel",
+        "htmlUrl": "https://github.com/LenGxien/AI-Three3dModel/blob/48aa2925bb355dd8343ab3353392cccd11380375/.cursorrules",
+        "size": 2.24,
+        "timestamp": "2025-10-13T08:18:27.409Z"
+      }
+    ],
+    [
+      "lxl66566/git-sync-backup/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/lxl66566/git-sync-backup/e84e7ad20b1b99d6d03b921d5f5fa9d88aa2e303/.cursorrules",
+        "repositoryId": 815829070,
+        "path": "lxl66566/git-sync-backup/.cursorrules",
+        "ownerName": "lxl66566",
+        "repositoryName": "git-sync-backup",
+        "htmlUrl": "https://github.com/lxl66566/git-sync-backup/blob/e84e7ad20b1b99d6d03b921d5f5fa9d88aa2e303/.cursorrules",
+        "size": 2.4,
+        "timestamp": "2025-10-13T08:18:29.085Z"
+      }
+    ],
+    [
+      "aicell-lab/reef-imaging/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/aicell-lab/reef-imaging/317ab97883a3d71bbd3c2c7b519b4de7ad406f73/.cursorrules",
+        "repositoryId": 803308370,
+        "path": "aicell-lab/reef-imaging/.cursorrules",
+        "ownerName": "aicell-lab",
+        "repositoryName": "reef-imaging",
+        "htmlUrl": "https://github.com/aicell-lab/reef-imaging/blob/317ab97883a3d71bbd3c2c7b519b4de7ad406f73/.cursorrules",
+        "size": 9.65,
+        "timestamp": "2025-10-13T08:18:29.250Z"
+      }
+    ],
+    [
+      "vipinyadav01/js-stack/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/vipinyadav01/js-stack/c4bb5519c8fa794108179811b5a7f5c3c0f0fbd4/.cursorrules",
+        "repositoryId": 1052297220,
+        "path": "vipinyadav01/js-stack/.cursorrules",
+        "ownerName": "vipinyadav01",
+        "repositoryName": "js-stack",
+        "htmlUrl": "https://github.com/vipinyadav01/js-stack/blob/c4bb5519c8fa794108179811b5a7f5c3c0f0fbd4/.cursorrules",
+        "size": 8.91,
+        "timestamp": "2025-10-13T08:18:34.778Z"
+      }
+    ],
+    [
+      "LucasSantana-Dev/finance-control/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/LucasSantana-Dev/finance-control/9ebb4d83357a0586534b1ca96b90d8b297e284ef/.cursorrules",
+        "repositoryId": 1011493486,
+        "path": "LucasSantana-Dev/finance-control/.cursorrules",
+        "ownerName": "LucasSantana-Dev",
+        "repositoryName": "finance-control",
+        "htmlUrl": "https://github.com/LucasSantana-Dev/finance-control/blob/9ebb4d83357a0586534b1ca96b90d8b297e284ef/.cursorrules",
+        "size": 7.85,
+        "timestamp": "2025-10-13T08:18:34.966Z"
+      }
+    ],
+    [
+      "JakubKontra/cartop-monorepo/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/JakubKontra/cartop-monorepo/c6a806cfc9d5aeb744e909936cba591b655353b9/.cursorrules",
+        "repositoryId": 1073605836,
+        "path": "JakubKontra/cartop-monorepo/.cursorrules",
+        "ownerName": "JakubKontra",
+        "repositoryName": "cartop-monorepo",
+        "htmlUrl": "https://github.com/JakubKontra/cartop-monorepo/blob/c6a806cfc9d5aeb744e909936cba591b655353b9/.cursorrules",
+        "size": 4.7,
+        "timestamp": "2025-10-13T08:18:41.806Z"
       }
     ]
   ]

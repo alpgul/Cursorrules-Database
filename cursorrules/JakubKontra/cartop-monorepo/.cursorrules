@@ -1,0 +1,178 @@
+# Orbis Veritas Frontend - Cursor Rules
+
+## 🚨 CRITICAL: Always Read Project Documentation First
+
+**BEFORE writing any code, you MUST read `orbis-veritas-frontend.md` to understand:**
+
+- Project structure and architecture
+- Database schema and API endpoints
+- Business logic rules and constraints
+- Authentication and authorization patterns
+- Environment configuration
+- Known issues and limitations
+
+## 📋 Documentation Requirements
+
+### After Major Features
+
+- Update `orbis-veritas-frontend.md` with new features
+- Document any new API endpoints
+- Update business logic rules
+- Add new environment variables
+- Document breaking changes
+
+### After Database Changes
+
+- Update the database schema section
+- Document new migrations
+- Update API endpoint documentation
+- Note any data model changes
+
+### After API Changes
+
+- Update API endpoints section
+- Regenerate API clients if needed
+- Update authentication requirements
+- Document new business rules
+
+## 🏗️ Architecture Guidelines
+
+### Monorepo Structure
+
+- **CRM App**: `apps/crm/` - Main business application
+- **Customer App**: `apps/customer/` - Customer-facing features
+- **Shared Packages**: `packages/` - Reusable code
+- **API Client**: `packages/veritas-api/` - Centralized API types and functions
+
+### Code Organization
+
+- Use TypeScript for all new code
+- Follow existing patterns in the codebase
+- Place components in appropriate feature folders
+- Use Zod for form validation schemas
+- Implement proper error handling
+
+### API Integration
+
+- Always use `@veritas/api` package for API calls
+- Never import from local `_generated` folders
+- Configure API with proper authentication provider
+- Handle loading and error states properly
+
+## 🔐 Authentication & Security
+
+### MSAL Integration
+
+- Use existing MSAL configuration
+- Handle token refresh automatically
+- Implement proper error handling for auth failures
+- Follow role-based access control patterns
+
+### Data Validation
+
+- Use Zod schemas for all forms
+- Validate on both frontend and backend
+- Implement proper error messages
+- Follow existing validation patterns
+
+## 🧪 Testing Requirements
+
+### Unit Tests
+
+- Write tests for utility functions
+- Test component behavior with React Testing Library
+- Use Jest for test runner
+- Maintain good test coverage
+
+### E2E Tests
+
+- Use Cypress for end-to-end testing
+- Test critical user flows
+- Use `data-testid` attributes for selectors
+- Never test against production data
+
+### Visual Regression
+
+- Use Storybook for component testing
+- Run Playwright tests for visual regression
+- Update snapshots when UI changes intentionally
+
+## 🚀 Development Workflow
+
+### Environment Setup
+
+- Use Yarn 4 with Corepack
+- Set up proper environment variables
+- Use HTTPS for local development (required for MSAL)
+- Follow the environment configuration in documentation
+
+### API Development
+
+- Generate API clients using Orval
+- Update OpenAPI specs when backend changes
+- Test API integration thoroughly
+- Handle API errors gracefully
+
+### Code Quality
+
+- Use ESLint and Prettier
+- Follow TypeScript strict mode
+- Use proper import/export patterns
+- Write self-documenting code
+
+## 🚨 Common Pitfalls to Avoid
+
+### Don't Do This
+
+- ❌ Import from local `_generated` folders
+- ❌ Hardcode API URLs or credentials
+- ❌ Skip authentication in API calls
+- ❌ Ignore TypeScript errors
+- ❌ Break existing business logic rules
+- ❌ Forget to update documentation
+
+### Do This Instead
+
+- ✅ Use `@veritas/api` package imports
+- ✅ Use environment variables for configuration
+- ✅ Implement proper auth providers
+- ✅ Fix TypeScript errors immediately
+- ✅ Follow documented business rules
+- ✅ Update `orbis-veritas-frontend.md` after changes
+
+## 📚 Key Resources
+
+### Documentation
+
+- `orbis-veritas-frontend.md` - Main project documentation
+- `README.md` - Setup and development instructions
+- `MIGRATION.md` - Recent migration notes
+
+### Configuration Files
+
+- `package.json` - Dependencies and scripts
+- `orval.config.ts` - API generation configuration
+- `next.config.ts` - Next.js configuration
+- Environment files in `apps/*/environments/`
+
+### Important Directories
+
+- `apps/crm/src/` - Main CRM application code
+- `packages/veritas-api/` - Centralized API client
+- `packages/ui/` - Shared UI components
+- `apps/*/docs/` - OpenAPI specifications
+
+## 🔄 Update Checklist
+
+When making changes, ensure you:
+
+1. ✅ Read `orbis-veritas-frontend.md` first
+2. ✅ Understand the existing architecture
+3. ✅ Follow established patterns
+4. ✅ Update documentation if needed
+5. ✅ Test your changes thoroughly
+6. ✅ Update this file if adding new rules
+
+---
+
+**Remember**: This project has complex business logic, multiple environments, and strict authentication requirements. Always consult the documentation before making changes!

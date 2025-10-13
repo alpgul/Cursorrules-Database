@@ -1,0 +1,262 @@
+# JS-Stack Project Rules for Cursor AI
+
+## Project Overview
+This is JS-Stack, a powerful CLI tool for scaffolding production-ready JavaScript full-stack projects. It consists of:
+- **CLI Tool** (cli/): Commander.js-based CLI for project scaffolding
+- **Web Interface** (web/): Next.js app for interactive project building
+- **Template System**: Handlebars templates with layered structure
+- **Monorepo**: Turbo-managed workspace with shared configurations
+
+## Architecture & Structure
+
+### CLI Tool (`cli/`)
+```
+cli/
+├── commands/          # CLI command handlers (enhanced-init.js, add.js, list.js)
+├── generators/        # Project generation logic (project-generator.js, ModularGenerator.js)
+├── templates/         # Handlebars templates with layered structure
+├── utils/             # Utility functions (validation, file operations, etc.)
+├── core/              # Core functionality (CLICore.js, CompatibilityEngine.js)
+├── config/            # Validation schemas and configuration
+└── cli.js            # Main CLI entry point with Commander.js
+```
+
+### Web Interface (`web/`)
+```
+web/
+├── src/
+│   ├── app/          # Next.js App Router pages
+│   ├── components/   # React components (builder, UI, analytics)
+│   ├── lib/          # Utility libraries and configurations
+│   ├── hooks/        # Custom React hooks
+│   └── fonts/        # Custom fonts
+├── public/           # Static assets
+└── package.json
+```
+
+## Key Technologies
+
+### CLI Stack
+- **Commander.js**: CLI command parsing and option handling
+- **@clack/prompts**: Interactive prompts and user input
+- **Handlebars**: Template engine for project generation
+- **Yup**: Schema validation for configuration
+- **Chalk**: Terminal styling and colors
+- **ESBuild**: Fast bundling for CLI distribution
+
+### Web Stack
+- **Next.js 15**: App Router with TypeScript
+- **Tailwind CSS**: Utility-first CSS framework
+- **shadcn/ui**: Component library built on Radix UI
+- **Radix UI**: Accessible component primitives
+- **Framer Motion**: Animation library
+- **Lucide React**: Icon library
+
+## Development Commands
+
+### Root Level
+```bash
+npm run dev              # Start both CLI and web in development
+npm run dev:cli          # Start CLI in development mode  
+npm run dev:web          # Start web interface in development
+npm run build            # Build both CLI and web
+npm run build:cli        # Build only CLI tool
+npm run lint             # Lint all code
+npm run format           # Format code with Prettier
+npm run test             # Run tests
+npm run clean            # Clean build artifacts
+```
+
+### CLI Testing
+```bash
+node cli/cli.js --help                           # Test CLI help
+node cli/cli.js hello --dry-run --verbose        # Test CLI with dry run
+npx create-js-stack@latest --help                # Test published CLI
+```
+
+### Web Development
+```bash
+cd web && npm run dev      # Start Next.js dev server
+cd web && npm run build    # Build Next.js app
+cd web && npm run lint     # Lint web code
+```
+
+## Supported Technologies
+
+### Frontend Frameworks
+- React, Vue, Angular, Svelte
+- Next.js, Nuxt
+- React Native
+
+### Backend Frameworks  
+- Express, Fastify, Koa, Hapi
+- NestJS
+
+### Databases
+- SQLite, PostgreSQL, MySQL
+- MongoDB
+
+### ORMs/ODMs
+- Prisma, Sequelize, Mongoose
+- TypeORM
+
+### Authentication
+- JWT, Passport, Auth0
+- OAuth, Better Auth
+
+### Addons
+- Docker, Testing, Biome
+- Turborepo
+
+## Code Patterns & Conventions
+
+### CLI Patterns
+- Use Commander.js for command parsing with proper option definitions
+- Use @clack/prompts for interactive user prompts
+- Use Handlebars templates with `{{variable}}` syntax
+- Use Yup schemas for validation (see `cli/config/ValidationSchemas.js`)
+- Use chalk for colored terminal output
+- Follow layered template system: Base → Framework → Integration → Feature → Tooling
+- CLI options should support both short (`-m`) and long (`--package-manager`) forms
+
+### Web Patterns
+- Use Next.js App Router with TypeScript
+- Use Tailwind CSS with shadcn/ui components
+- Use Radix UI for accessible components
+- Use Framer Motion for animations
+- Follow component composition patterns
+- Use React hooks for state management
+- TypeScript strict mode enabled
+
+### File Naming Conventions
+- CLI files: `.js` extension
+- Web components: `.tsx` extension
+- Web utilities: `.ts` extension
+- Templates: `.hbs` extension
+- Config files: `.json` or `.js`
+
+## Template System
+
+### Layered Structure
+1. **Base Layer** (`01-base/`): Core project structure
+2. **Framework Layer** (`02-frameworks/`): Frontend/backend frameworks
+3. **Integration Layer** (`03-integrations/`): Database, auth, etc.
+4. **Feature Layer** (`04-features/`): Specific features
+5. **Tooling Layer** (`05-tooling/`): Development tools
+6. **Deployment Layer** (`06-deployment/`): Deployment configs
+
+### Template Variables
+- Use Handlebars `{{variable}}` syntax
+- Common variables: `{{projectName}}`, `{{packageManager}}`, `{{database}}`, etc.
+- Conditional blocks: `{{#if condition}}...{{/if}}`
+- Iteration: `{{#each items}}...{{/each}}`
+
+## CLI Command Structure
+
+### Main Command
+```bash
+npx create-js-stack@latest [projectName] [options]
+```
+
+### Key Options
+- `--frontend <type>`: Frontend framework selection
+- `--backend <type>`: Backend framework selection  
+- `--database <type>`: Database selection
+- `--orm <type>`: ORM/ODM selection
+- `--auth <type>`: Authentication method
+- `--addons <addons...>`: Additional tools
+- `--package-manager <manager>`: Package manager (npm, yarn, pnpm, bun)
+- `--git`: Initialize git repository
+- `--install`: Install dependencies
+- `--dry-run`: Preview without creating files
+- `--verbose`: Detailed output
+
+## Compatibility System
+
+### Database-ORM Compatibility
+- MongoDB → Mongoose only
+- PostgreSQL/MySQL/SQLite → Prisma, Sequelize, TypeORM
+- Enforced in `cli/config/ValidationSchemas.js`
+
+### Frontend-Auth Compatibility
+- Next.js → Better Auth, Auth0, JWT, OAuth
+- React → Auth0, Better Auth, JWT, OAuth, Passport
+- Vue → Auth0, Better Auth, JWT, OAuth, Passport
+- Angular → Auth0, JWT, OAuth, Passport
+
+### Backend-Database Compatibility
+- All backends support all databases
+- NestJS has excellent support for all major DBs
+
+## Debugging & Troubleshooting
+
+### CLI Debugging
+- Add `--verbose` flag for detailed output
+- Use `--dry-run` to preview changes
+- Check `cli/utils/` for debugging utilities
+- Validate CLI options in `cli/cli.js`
+
+### Web Debugging
+- Use Next.js dev tools
+- Check browser dev tools for client issues
+- Use console.log for debugging (remove before production)
+- Check `web/src/components/builder/config.ts` for state management
+
+### Common Issues
+- CLI flag parsing: Check `cli/cli.js` option definitions
+- Template not found: Check `cli/templates/` directory structure
+- Build failures: Run `npm run clean && npm install`
+- Web interface not loading: Check Next.js dev server
+- Package manager conflicts: Use `--package-manager` flag explicitly
+
+## Recent Fixes & Important Notes
+
+### Package Manager Flag Fix
+- Fixed `--package-manager` CLI flag parsing conflict in `cli/cli.js`
+- Consolidated duplicate options: `-m, --package-manager, --pm <manager>`
+- Web interface command generation uses correct `--package-manager` flag
+- Simple examples remain simple, complex generation uses full flags
+
+### Build System
+- CLI builds to `dist/` directory using ESBuild
+- Web builds using Next.js build system
+- Turbo manages monorepo builds and caching
+
+## Best Practices
+
+### Development
+- Always test CLI commands with `--dry-run` first
+- Use semantic versioning for releases
+- Keep templates DRY and maintainable
+- Validate all user inputs with Yup schemas
+- Provide helpful error messages and suggestions
+
+### Code Quality
+- Use TypeScript for web interface type safety
+- Follow accessibility guidelines in web interface
+- Test across different Node.js versions (18+)
+- Use Prettier for code formatting
+- Use ESLint for code linting
+
+### Testing
+- Test CLI commands with various flag combinations
+- Test template generation with `--dry-run`
+- Test compatibility validation
+- Test web interface responsiveness
+- Test CLI command generation from web interface
+
+## Context for AI Assistance
+
+When working on this project:
+1. The CLI tool generates complete full-stack projects from templates
+2. The web interface provides an interactive builder for the CLI
+3. Both use the same underlying configuration system in `web/src/components/builder/config.ts`
+4. Templates are layered: base → framework → integration → feature → tooling
+5. Compatibility rules ensure valid technology combinations
+6. The project uses modern JavaScript/TypeScript with best practices
+7. Always test CLI commands with `--dry-run` first
+8. The web interface generates CLI commands that should work identically to manual CLI usage
+9. Package manager flag is `--package-manager` (not `--pm` in generated commands)
+10. Use Commander.js patterns for CLI option definitions
+11. Use Next.js App Router patterns for web development
+12. Follow the existing code style and patterns in each file
