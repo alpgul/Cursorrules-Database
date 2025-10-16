@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 2181,
+  "size": 2189,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -30534,6 +30534,118 @@
         "htmlUrl": "https://github.com/JakubKontra/cartop-monorepo/blob/c6a806cfc9d5aeb744e909936cba591b655353b9/.cursorrules",
         "size": 4.7,
         "timestamp": "2025-10-13T08:18:41.806Z"
+      }
+    ],
+    [
+      "slotix/dbconvert-streams-ui/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/slotix/dbconvert-streams-ui/47143b9672caf3ca00a5f00bd48216e55cf9103f/.cursorrules",
+        "repositoryId": 667132792,
+        "path": "slotix/dbconvert-streams-ui/.cursorrules",
+        "ownerName": "slotix",
+        "repositoryName": "dbconvert-streams-ui",
+        "htmlUrl": "https://github.com/slotix/dbconvert-streams-ui/blob/47143b9672caf3ca00a5f00bd48216e55cf9103f/.cursorrules",
+        "size": 2.22,
+        "timestamp": "2025-10-16T08:17:37.386Z"
+      }
+    ],
+    [
+      "besongsamuel/rawbank-signup/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/besongsamuel/rawbank-signup/64a3b85f766460b153f525abc271a4c7257248bc/.cursorrules",
+        "repositoryId": 1075477093,
+        "path": "besongsamuel/rawbank-signup/.cursorrules",
+        "ownerName": "besongsamuel",
+        "repositoryName": "rawbank-signup",
+        "htmlUrl": "https://github.com/besongsamuel/rawbank-signup/blob/64a3b85f766460b153f525abc271a4c7257248bc/.cursorrules",
+        "size": 10.62,
+        "timestamp": "2025-10-16T08:17:43.630Z"
+      }
+    ],
+    [
+      "bigabid/ai-hackathon/rules-directory/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/bigabid/ai-hackathon/54a1e5ef65885ac54a7db7984dccb33c03728a04/rules-directory/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1046239803,
+        "path": "bigabid/ai-hackathon/rules-directory/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "bigabid",
+        "repositoryName": "ai-hackathon",
+        "htmlUrl": "https://github.com/bigabid/ai-hackathon/blob/54a1e5ef65885ac54a7db7984dccb33c03728a04/rules-directory/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "size": 2.32,
+        "timestamp": "2025-10-16T08:17:44.997Z"
+      }
+    ],
+    [
+      "bigabid/vebo/cursor-rules-directory/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/bigabid/vebo/053648a3092be9b6fee656c049ff2f178f809b4e/cursor-rules-directory/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1049107446,
+        "path": "bigabid/vebo/cursor-rules-directory/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "bigabid",
+        "repositoryName": "vebo",
+        "htmlUrl": "https://github.com/bigabid/vebo/blob/053648a3092be9b6fee656c049ff2f178f809b4e/cursor-rules-directory/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "size": 7.64,
+        "timestamp": "2025-10-16T08:17:47.545Z"
+      }
+    ],
+    [
+      "aaronjnichols/wetlands_ml_codex/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/aaronjnichols/wetlands_ml_codex/4c3611119d3d60f1e6dc783544b43783794d9745/.cursorrules",
+        "repositoryId": 1067312713,
+        "path": "aaronjnichols/wetlands_ml_codex/.cursorrules",
+        "ownerName": "aaronjnichols",
+        "repositoryName": "wetlands_ml_codex",
+        "htmlUrl": "https://github.com/aaronjnichols/wetlands_ml_codex/blob/4c3611119d3d60f1e6dc783544b43783794d9745/.cursorrules",
+        "size": 10.87,
+        "timestamp": "2025-10-16T08:17:50.286Z"
+      }
+    ],
+    [
+      "Blarsamio/YogaTimerMobile/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Blarsamio/YogaTimerMobile/47409ea9d1d5234f5858663809d060e38ec1a5ee/.cursorrules",
+        "repositoryId": 1076163421,
+        "path": "Blarsamio/YogaTimerMobile/.cursorrules",
+        "ownerName": "Blarsamio",
+        "repositoryName": "YogaTimerMobile",
+        "htmlUrl": "https://github.com/Blarsamio/YogaTimerMobile/blob/47409ea9d1d5234f5858663809d060e38ec1a5ee/.cursorrules",
+        "size": 11.52,
+        "timestamp": "2025-10-16T08:17:51.744Z"
+      }
+    ],
+    [
+      "dinjou/magus/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/dinjou/magus/ae6752e464b8785b1c3fa7a4e0dc3085d54b95e7/.cursorrules",
+        "repositoryId": 827925787,
+        "path": "dinjou/magus/.cursorrules",
+        "ownerName": "dinjou",
+        "repositoryName": "magus",
+        "htmlUrl": "https://github.com/dinjou/magus/blob/ae6752e464b8785b1c3fa7a4e0dc3085d54b95e7/.cursorrules",
+        "size": 1.85,
+        "timestamp": "2025-10-16T08:17:52.232Z"
+      }
+    ],
+    [
+      "rkendel1/ax/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/rkendel1/ax/0aa4aa2ceed1ba61106711baed6ce962cf2eb604/.cursorrules",
+        "repositoryId": 1077243170,
+        "path": "rkendel1/ax/.cursorrules",
+        "ownerName": "rkendel1",
+        "repositoryName": "ax",
+        "htmlUrl": "https://github.com/rkendel1/ax/blob/0aa4aa2ceed1ba61106711baed6ce962cf2eb604/.cursorrules",
+        "size": 7.33,
+        "timestamp": "2025-10-16T08:17:53.781Z"
       }
     ]
   ]
