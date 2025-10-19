@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 2189,
+  "size": 2195,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -30646,6 +30646,90 @@
         "htmlUrl": "https://github.com/rkendel1/ax/blob/0aa4aa2ceed1ba61106711baed6ce962cf2eb604/.cursorrules",
         "size": 7.33,
         "timestamp": "2025-10-16T08:17:53.781Z"
+      }
+    ],
+    [
+      "busybox42/elemta/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/busybox42/elemta/05bb01105e199ec8a6b39ecf2fb7b05cb1d9eeeb/.cursorrules",
+        "repositoryId": 930691007,
+        "path": "busybox42/elemta/.cursorrules",
+        "ownerName": "busybox42",
+        "repositoryName": "elemta",
+        "htmlUrl": "https://github.com/busybox42/elemta/blob/05bb01105e199ec8a6b39ecf2fb7b05cb1d9eeeb/.cursorrules",
+        "size": 9.77,
+        "timestamp": "2025-10-19T08:14:03.983Z"
+      }
+    ],
+    [
+      "Bermpje/EuroCV/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Bermpje/EuroCV/300e74bc49fc11270bc7a86bf573e4a9a1feaced/.cursorrules",
+        "repositoryId": 1074852724,
+        "path": "Bermpje/EuroCV/.cursorrules",
+        "ownerName": "Bermpje",
+        "repositoryName": "EuroCV",
+        "htmlUrl": "https://github.com/Bermpje/EuroCV/blob/300e74bc49fc11270bc7a86bf573e4a9a1feaced/.cursorrules",
+        "size": 2.4,
+        "timestamp": "2025-10-19T08:14:04.945Z"
+      }
+    ],
+    [
+      "vibe-coding-labs/cursor-rules/resources/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/vibe-coding-labs/cursor-rules/112b682dda22c4317632db7f036340b045622255/resources/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 987021729,
+        "path": "vibe-coding-labs/cursor-rules/resources/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "vibe-coding-labs",
+        "repositoryName": "cursor-rules",
+        "htmlUrl": "https://github.com/vibe-coding-labs/cursor-rules/blob/112b682dda22c4317632db7f036340b045622255/resources/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "size": 2.32,
+        "timestamp": "2025-10-19T08:14:11.348Z"
+      }
+    ],
+    [
+      "MichaelFrieze/shelfbound/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/MichaelFrieze/shelfbound/5e10888a7708fb08ff5365cb02f5693697610eeb/.cursorrules",
+        "repositoryId": 1073983870,
+        "path": "MichaelFrieze/shelfbound/.cursorrules",
+        "ownerName": "MichaelFrieze",
+        "repositoryName": "shelfbound",
+        "htmlUrl": "https://github.com/MichaelFrieze/shelfbound/blob/5e10888a7708fb08ff5365cb02f5693697610eeb/.cursorrules",
+        "size": 3.24,
+        "timestamp": "2025-10-19T08:14:12.905Z"
+      }
+    ],
+    [
+      "fieldjoshua/UltrAI_JFF/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/fieldjoshua/UltrAI_JFF/11b9ebbe15e4fef7b572e39ead37f6fac752ff41/.cursorrules",
+        "repositoryId": 1075960132,
+        "path": "fieldjoshua/UltrAI_JFF/.cursorrules",
+        "ownerName": "fieldjoshua",
+        "repositoryName": "UltrAI_JFF",
+        "htmlUrl": "https://github.com/fieldjoshua/UltrAI_JFF/blob/11b9ebbe15e4fef7b572e39ead37f6fac752ff41/.cursorrules",
+        "size": 11,
+        "timestamp": "2025-10-19T08:14:16.437Z"
+      }
+    ],
+    [
+      "dunghthlqt/PBL6_Android/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/dunghthlqt/PBL6_Android/d674c522813a7135d8cf42adc1c5b847be62c1ec/.cursorrules",
+        "repositoryId": 1068035170,
+        "path": "dunghthlqt/PBL6_Android/.cursorrules",
+        "ownerName": "dunghthlqt",
+        "repositoryName": "PBL6_Android",
+        "htmlUrl": "https://github.com/dunghthlqt/PBL6_Android/blob/d674c522813a7135d8cf42adc1c5b847be62c1ec/.cursorrules",
+        "size": 4.27,
+        "timestamp": "2025-10-19T08:14:18.084Z"
       }
     ]
   ]
