@@ -1,0 +1,239 @@
+# FriendsLeague - Cursor Rules
+
+## 🎯 Prosjektoversikt
+FriendLeague er en sosial applikasjon som kombinerer meldingsfunksjonalitet med konkurransefunksjoner. Brukere kan kommunisere én-til-én eller i grupper, opprette "ligaer" med regler, poengsystem og leaderboard, samt arrangere events.
+
+## 🛠️ Teknologistack (IKKE ENDRE)
+
+### Frontend
+- **React Native** - Cross-platform mobilapp
+- **TypeScript** - Type-sikkerhet
+- **Zustand** - State management
+- **React Navigation** - Navigasjon
+- **Socket.io Client** - Sanntidskommunikasjon
+
+### Backend
+- **NestJS** - Node.js framework (IKKE Express.js eller Fastify)
+- **TypeScript** - Type-sikkerhet
+- **Prisma** - ORM for database (IKKE TypeORM eller andre ORM-er)
+- **PostgreSQL** - Hoveddatabase (IKKE MongoDB eller andre databaser)
+- **Redis** - Caching og sanntidsdata
+- **Socket.io** - WebSocket for sanntidskommunikasjon
+- **JWT** - Autentisering
+
+### Infrastruktur
+- **Docker** - Containerisering
+- **AWS S3** - Filopplasting
+- **Firebase** - Push notifications
+
+### Hosting
+- Databasen er hosted på Neon
+- Backend er hosted på Render
+- Redis er hosted på Upstash
+
+## 📁 Prosjektstruktur
+```
+(kan endres)
+friendsleague/
+├── backend/          # NestJS API
+│   ├── src/
+│   │   ├── auth/     # Autentisering
+│   │   ├── chat/     # Chat-funksjonalitet
+│   │   ├── leagues/  # Liga-funksjonalitet
+│   │   ├── events/   # Event-funksjonalitet
+│   │   ├── users/    # Brukerhåndtering
+│   │   └── common/   # Delte moduler
+│   ├── prisma/       # Database schema
+│   └── docker-compose.yml
+├── mobile/           # React Native app
+│   ├── src/
+│   │   ├── screens/  # App-skjermer
+│   │   ├── components/ # Gjenbrukbare komponenter
+│   │   ├── store/    # Zustand state management
+│   │   ├── services/ # API-tjenester
+│   │   └── types/    # TypeScript typer
+├── shared/           # Delte typer og interfaces
+└── docs/             # Dokumentasjon
+```
+
+## 🎨 Kodekonvensjoner
+
+### TypeScript
+- Bruk **strict mode** alltid
+- Definer typer eksplisitt, ikke `any`
+- Bruk interfaces for objekter, types for unions
+- Eksporter typer med `export type` når mulig
+
+### NestJS
+- Følg NestJS modulstruktur (Controller, Service, Module)
+- Bruk **decorators** for validering og autentisering
+- Implementer **DTOs** for alle API-endepunkter
+- Bruk **Guards** for autentisering og autorisering
+- Implementer **Interceptors** for logging og feilhåndtering
+
+### Prisma
+- Definer **schema** i `schema.prisma`
+- Bruk **Prisma Client** for database-operasjoner
+- Implementer **migrations** for database-endringer
+- Bruk **transactions** for komplekse operasjoner
+
+### React Native
+- Bruk **functional components** med hooks
+- Implementer **custom hooks** for gjenbrukbar logikk
+- Bruk **Zustand** for global state management
+- Følg **React Navigation** best practices
+
+## 🏗️ Clean Code & Modularization Principles
+
+### 📏 File Size & Complexity Limits
+- **Screens**: Maksimalt 300-400 linjer per fil
+- **Components**: Maksimalt 200-250 linjer per fil
+- **Services**: Maksimalt 300 linjer per fil
+- **Hooks**: Maksimalt 100 linjer per fil
+- **Hvis filen blir for stor**: Del opp i mindre, fokuserte moduler
+
+### 🔧 Modularization Strategy
+- **ALDTID** tenk først: "Kan dette deles opp i mindre deler?"
+- **Identifiser gjenbrukbar logikk** og ekstraher til custom hooks
+- **Separer UI-komponenter** fra business logic
+- **Opprett spesialiserte komponenter** for spesifikke funksjoner
+- **Bruk composition** over inheritance
+
+### 🎯 Component Design Principles
+- **Single Responsibility**: Hver komponent har én klar oppgave
+- **Props Interface**: Definer tydelige, type-sikre props
+- **Default Props**: Bruk default verdier for valgfrie props
+- **Error Boundaries**: Implementer feilhåndtering på komponentnivå
+- **Memoization**: Bruk `React.memo` for performance-optimering
+
+### 🪝 Custom Hooks Guidelines
+- **Ekstraher gjenbrukbar logikk** til custom hooks
+- **Prefix med "use"** (f.eks. `useVideoThumbnail`, `useSwipeToClose`)
+- **Returner objekt** med navngitte properties
+- **Håndter loading og error states** i hooks
+- **Dokumenter hook dependencies** og side effects
+
+### 📱 Screen Architecture
+- **Container/Presentational Pattern**: Separer data-logikk fra UI
+- **Custom hooks** for kompleks state management
+- **Modular components** for UI-deler
+- **Service layer** for API-kall og business logic
+- **Error handling** på hvert nivå
+
+### 🧩 Component Composition
+- **Compound Components**: For relaterte UI-elementer
+- **Render Props**: For fleksibel data-deling
+- **Higher-Order Components**: For cross-cutting concerns
+- **Context API**: For deep prop drilling
+
+### 📋 Planning & Design Process
+1. **Analyser kravet** - Hva skal implementeres?
+2. **Identifiser komponenter** - Hvilke UI-deler trengs?
+3. **Identifiser hooks** - Hvilken logikk kan gjenbrukes?
+4. **Design interfaces** - Hvordan skal komponenter kommunisere?
+5. **Planer filstruktur** - Hvor skal hver del plasseres?
+6. **Implementer inkrementelt** - Bygg opp steg for steg
+7. **Refaktorer** - Forbedre og forenkle etter implementasjon
+
+### 🔄 Refactoring Guidelines
+- **Regelmessig refaktorering** - Ikke la kode bli rotete
+- **Identifiser code smells**: Lange funksjoner, duplisert kode, komplekse conditions
+- **Ekstraher konstanter** og magic numbers
+- **Forenkle nested conditions** med early returns
+- **Bruk descriptive names** for variabler og funksjoner
+
+### 📦 File Organization
+```
+components/
+├── ui/              # Grunnleggende UI-komponenter
+├── forms/           # Form-relaterte komponenter
+├── media/           # Media-spesifikke komponenter
+└── layout/          # Layout-komponenter
+
+hooks/
+├── api/             # API-relaterte hooks
+├── ui/              # UI-interaksjon hooks
+└── data/            # Data management hooks
+
+services/
+├── api/             # API services
+├── storage/         # Local storage services
+└── utils/           # Utility functions
+```
+
+### ⚡ Performance Considerations
+- **Lazy loading** for store komponenter
+- **Code splitting** på screen-nivå
+- **Memoization** for dyre beregninger
+- **Debouncing** for user input
+- **Virtualization** for store lister
+
+### 🧪 Testing Strategy
+- **Unit tests** for custom hooks og utility functions
+- **Component tests** for UI-komponenter
+- **Integration tests** for komplekse funksjoner
+- **Mock external dependencies** konsekvent
+
+## 🔒 Sikkerhet
+- Valider all input med **class-validator**
+- Bruk **JWT access tokens** (kort levetid) + **refresh tokens** (lang levetid)
+- Implementer **refresh token rotation** for bedre sikkerhet på mobile enheter
+- Implementer **rate limiting** på API-endepunkter
+- Sanitizer brukerinput før lagring
+- Bruk **HTTPS** i produksjon
+- **Token blacklisting** ved utlogging
+
+## 📊 Database Design
+- **PostgreSQL** som hoveddatabase
+- **Redis** for caching og sanntidsdata
+- **Normalisering** - følg 3NF for dataintegritet
+- **Indeksering** - lag indekser på alle foreign keys og ofte brukte kolonner
+- **Soft delete** for viktige data (ikke hard delete)
+- **Prisma migrations** - alltid kjøre via CI/CD før produksjon for å unngå inkonsistens
+
+## 🚀 Performance
+- Implementer **caching** med Redis
+- Bruk **pagination** for store datamengder
+- Optimiser **database queries** med Prisma
+- Implementer **lazy loading** i React Native
+- Komprimer bilder før opplasting
+
+## 🧪 Testing
+- **Unit tests** for alle services
+- **Integration tests** for API-endepunkter
+- **E2E tests** for kritiske brukerflyter
+- Bruk **Jest** for testing
+- **Database migrations** - test i CI/CD før produksjon
+
+## 📝 Dokumentasjon
+- Dokumenter alle API-endepunkter
+- Skriv **README** for hver modul
+- Bruk **JSDoc** for funksjoner
+- Oppdater **CHANGELOG** for endringer
+
+## 🚫 IKKE BRUK
+- Express.js eller Fastify (bruk NestJS)
+- TypeORM eller andre ORM-er (bruk Prisma)
+- MongoDB eller andre databaser (bruk PostgreSQL)
+- Redux (bruk Zustand)
+- JavaScript (bruk TypeScript)
+
+## ✅ ALLTID BRUK
+- TypeScript for type-sikkerhet
+- Prisma for database-operasjoner
+- NestJS decorators og moduler
+- Zustand for state management
+- JWT access + refresh tokens for autentisering
+- Docker for containerisering
+- Database indekser på foreign keys
+- Prisma migrations via CI/CD
+
+## 🚫 IKKE GÅ VIDERE UTEN TILLATELSE
+- **ALDRIG** implementere nye funksjoner uten eksplisitt tillatelse
+- **ALDRIG** opprette nye filer uten at brukeren ber om det
+- **ALDRIG** gå videre til neste steg uten at brukeren sier "okay" eller "gå videre"
+- **ALDRIG** gjøre flere endringer samtidig uten å spørre først
+- **ALDRIG** anta at brukeren vil ha noe implementert
+- **ALLTID** spørre før du gjør noe nytt: "Vil du at jeg skal..."
+- **ALLTID** vente på bekreftelse før du fortsetter
+- **ALLTID** gi brukeren full oversikt over hva som er gjort

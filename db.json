@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 2195,
+  "size": 2201,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -30730,6 +30730,90 @@
         "htmlUrl": "https://github.com/dunghthlqt/PBL6_Android/blob/d674c522813a7135d8cf42adc1c5b847be62c1ec/.cursorrules",
         "size": 4.27,
         "timestamp": "2025-10-19T08:14:18.084Z"
+      }
+    ],
+    [
+      "uanmita/uanmita.github.io/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/uanmita/uanmita.github.io/86d7692cf28bd8f7b588b12d36787cbc4ed7c6ed/.cursorrules",
+        "repositoryId": 812606300,
+        "path": "uanmita/uanmita.github.io/.cursorrules",
+        "ownerName": "uanmita",
+        "repositoryName": "uanmita.github.io",
+        "htmlUrl": "https://github.com/uanmita/uanmita.github.io/blob/86d7692cf28bd8f7b588b12d36787cbc4ed7c6ed/.cursorrules",
+        "size": 2.72,
+        "timestamp": "2025-10-22T08:18:31.952Z"
+      }
+    ],
+    [
+      "KellerAI/kellerai-coderabbit/knowledge-base/cursorrules/.cursorrules-nodejs",
+      {
+        "name": ".cursorrules-nodejs",
+        "downloadUrl": "https://raw.githubusercontent.com/KellerAI/kellerai-coderabbit/aae56a56b698bae8ed015cf264a43484e53ec02a/knowledge-base/cursorrules/.cursorrules-nodejs",
+        "repositoryId": 1079437044,
+        "path": "KellerAI/kellerai-coderabbit/knowledge-base/cursorrules/.cursorrules-nodejs",
+        "ownerName": "KellerAI",
+        "repositoryName": "kellerai-coderabbit",
+        "htmlUrl": "https://github.com/KellerAI/kellerai-coderabbit/blob/aae56a56b698bae8ed015cf264a43484e53ec02a/knowledge-base/cursorrules/.cursorrules-nodejs",
+        "size": 23.48,
+        "timestamp": "2025-10-22T08:18:32.835Z"
+      }
+    ],
+    [
+      "luyenhaidangit/flex-microfrontend/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/luyenhaidangit/flex-microfrontend/22627287b59f2af26235a2b2427503cee545ddc0/.cursorrules",
+        "repositoryId": 867758090,
+        "path": "luyenhaidangit/flex-microfrontend/.cursorrules",
+        "ownerName": "luyenhaidangit",
+        "repositoryName": "flex-microfrontend",
+        "htmlUrl": "https://github.com/luyenhaidangit/flex-microfrontend/blob/22627287b59f2af26235a2b2427503cee545ddc0/.cursorrules",
+        "size": 1.47,
+        "timestamp": "2025-10-22T08:18:33.753Z"
+      }
+    ],
+    [
+      "shizaahmad27/friendsleague/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/shizaahmad27/friendsleague/bee3e772457070c9e1c80d6bf97ec7f13711ae06/.cursorrules",
+        "repositoryId": 1056115809,
+        "path": "shizaahmad27/friendsleague/.cursorrules",
+        "ownerName": "shizaahmad27",
+        "repositoryName": "friendsleague",
+        "htmlUrl": "https://github.com/shizaahmad27/friendsleague/blob/bee3e772457070c9e1c80d6bf97ec7f13711ae06/.cursorrules",
+        "size": 8.82,
+        "timestamp": "2025-10-22T08:18:34.958Z"
+      }
+    ],
+    [
+      "leonpagotto/leo-kit/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/leonpagotto/leo-kit/e230424a67e84bca265b4eb3f5bc59b2af675c40/.cursorrules",
+        "repositoryId": 1078886667,
+        "path": "leonpagotto/leo-kit/.cursorrules",
+        "ownerName": "leonpagotto",
+        "repositoryName": "leo-kit",
+        "htmlUrl": "https://github.com/leonpagotto/leo-kit/blob/e230424a67e84bca265b4eb3f5bc59b2af675c40/.cursorrules",
+        "size": 30.53,
+        "timestamp": "2025-10-22T08:18:36.130Z"
+      }
+    ],
+    [
+      "Denni-Wild/Subs-bot/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Denni-Wild/Subs-bot/42e10d2a5765177387dc4adb22b3c425cdfd05d2/.cursorrules",
+        "repositoryId": 1019474081,
+        "path": "Denni-Wild/Subs-bot/.cursorrules",
+        "ownerName": "Denni-Wild",
+        "repositoryName": "Subs-bot",
+        "htmlUrl": "https://github.com/Denni-Wild/Subs-bot/blob/42e10d2a5765177387dc4adb22b3c425cdfd05d2/.cursorrules",
+        "size": 5.82,
+        "timestamp": "2025-10-22T08:18:39.768Z"
       }
     ]
   ]
