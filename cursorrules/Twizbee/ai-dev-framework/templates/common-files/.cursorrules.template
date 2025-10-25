@@ -1,0 +1,414 @@
+# AI-Agnostic Development Framework - Cursor Rules
+
+## Framework Location
+This project uses the AI-Agnostic Development Framework.
+All agents, workflows, and guidelines are in the `.ai-framework/` directory.
+
+---
+
+## Current Development Phase
+**Phase**: [Planning / Documentation / Implementation / Validation]  
+**Focus**: [Current feature or task you're working on]
+
+---
+
+## Coding Standards & Best Practices
+
+### 📚 Reference Document
+**Primary Guidelines**: `.ai-framework/templates/best-practices/coding-guidelines.md`
+
+### React Native & Expo Standards
+- **Components**: Functional components with TypeScript interfaces
+- **File Naming**: `PascalCase.tsx` for components, `camelCase.ts` for utilities
+- **Directory Naming**: `lowercase-with-dashes`
+- **State Management**: 
+  - React Context for global state
+  - react-query for server state
+  - Zustand for complex client state
+- **Performance**: 
+  - Use `useMemo` and `useCallback` appropriately
+  - Implement code splitting with React.lazy
+  - Optimize images (WebP format, lazy loading)
+- **Navigation**: react-navigation following best practices
+- **Safe Areas**: Always use SafeAreaView for all screens
+- **Styling**: Styled-components or Tailwind CSS
+
+### NestJS Backend Standards
+- **Architecture**: Modular (one module per domain/route)
+- **DTOs**: Use class-validator for all input validation
+- **Services**: One service per entity
+- **Error Handling**: Global exception filters
+- **Testing**: Unit tests for services + E2E tests for controllers
+- **Structure**:
+  ```
+  backend/
+  ├── src/
+  │   ├── core/           # Global filters, guards, interceptors
+  │   ├── shared/         # Shared utilities and services
+  │   └── features/       # Feature modules
+  ```
+
+### TypeScript General Standards
+- **Mode**: Strict mode enabled
+- **Types**: Prefer interfaces over types
+- **Naming**: 
+  - Variables: `camelCase` with auxiliary verbs (isLoading, hasError)
+  - Constants: `SCREAMING_SNAKE_CASE`
+  - Functions: `camelCase`
+  - Classes/Interfaces: `PascalCase`
+- **Enums**: Avoid enums; use const objects or maps instead
+- **Functions**: Use `function` keyword for pure functions
+
+---
+
+## Project Structure
+
+### Frontend (Feature-Based Organization)
+```
+frontend/
+├── features/
+│   ├── auth/
+│   │   ├── components/
+│   │   ├── hooks/
+│   │   ├── services/
+│   │   └── types/
+│   └── [feature-name]/
+└── shared/
+    ├── components/      # Used by 3+ features
+    ├── hooks/
+    ├── utils/
+    └── types/
+```
+
+### Backend (Feature-Based Organization)
+```
+backend/
+├── src/
+│   ├── features/
+│   │   ├── auth/
+│   │   │   ├── auth.module.ts
+│   │   │   ├── auth.controller.ts
+│   │   │   ├── auth.service.ts
+│   │   │   ├── dto/
+│   │   │   ├── entities/
+│   │   │   └── tests/
+│   │   └── [feature-name]/
+│   ├── core/            # Global artifacts
+│   └── shared/          # Shared utilities
+```
+
+---
+
+## Security Requirements
+
+### Authentication & Authorization
+- Sanitize ALL user inputs to prevent XSS attacks
+- Use environment variables for ALL secrets (never hardcode)
+- Implement proper authentication flow (token refresh, logout)
+- Use row-level security where applicable (Supabase)
+
+### API Security
+- Rate limiting on all endpoints
+- CORS properly configured
+- HTTPS for all external communications
+- Validate all inputs with DTOs/Zod
+- Protection against: SQL injection, XSS, CSRF
+
+### Data Security
+- Use `react-native-encrypted-storage` for sensitive data
+- Never log sensitive information
+- Implement proper session management
+
+---
+
+## Testing Requirements
+
+### Coverage Targets
+- **Minimum**: 80% coverage for critical paths
+- **Unit Tests**: All business logic and utility functions
+- **Integration Tests**: All API endpoints
+- **E2E Tests**: Critical user flows
+
+### Testing Stack
+- **Frontend**: Jest + React Native Testing Library + Detox
+- **Backend**: Jest + Supertest for E2E
+
+### Test Naming
+```typescript
+describe('RecipeService', () => {
+  describe('createRecipe', () => {
+    it('should create recipe with valid data', () => {})
+    it('should throw error if title is missing', () => {})
+    it('should handle duplicate recipe names', () => {})
+  })
+})
+```
+
+---
+
+## Error Handling Patterns
+
+### Frontend
+- Implement global error boundaries
+- Use early returns for error conditions
+- Provide user-friendly error messages
+- Log errors to monitoring service (Sentry)
+
+### Backend
+- Use global exception filters
+- Return consistent error response format:
+  ```json
+  {
+    "statusCode": 400,
+    "message": "User-friendly message",
+    "error": "Bad Request",
+    "timestamp": "2025-10-14T10:00:00Z"
+  }
+  ```
+- Log errors with context (user ID, request ID, stack trace)
+
+---
+
+## Performance Optimization
+
+### Frontend
+- Minimize useState and useEffect usage
+- Implement virtual lists for long lists (react-native-flash-list)
+- Optimize images (compress, use appropriate formats)
+- Lazy load routes and heavy components
+- Avoid unnecessary re-renders
+
+### Backend
+- Implement caching strategies (Redis where needed)
+- Use database indexes appropriately
+- Implement pagination for list endpoints
+- Use connection pooling
+- Monitor query performance
+
+---
+
+## Agent References
+
+When you need specific guidance, reference these agents from `.ai-framework/agents/`:
+
+### Phase 0: Planning
+- **Senior Engineer Brainstorm**: `00-planning/senior-engineer-brainstorm.md`
+- **Product Designer Brief**: `00-planning/product-designer-brief.md`
+- **Technical Spec Writer**: `00-planning/technical-spec-writer.md`
+
+### Phase 1: Documentation
+- **Product Manager**: `01-documentation/product-manager.md`
+- **UX/UI Designer**: `01-documentation/ux-ui-designer.md`
+- **System Architect**: `01-documentation/system-architect.md`
+
+### Phase 2: Implementation
+- **Feature Documenter**: `02-implementation/feature-documenter.md`
+- **Senior Backend Engineer**: `02-implementation/senior-backend-engineer.md`
+- **Senior Frontend Engineer**: `02-implementation/senior-frontend-engineer.md`
+- **QA Test Automation**: `02-implementation/qa-test-automation-engineer.md`
+- **DevOps Deployment**: `02-implementation/devops-deployment-engineer.md`
+- **Security Analyst**: `02-implementation/security-analyst.md`
+
+### Phase 3: Validation
+- **Reqing Ball** (Requirements Validation): `03-validation/reqing-ball.md`
+- **Polisher** (Quality Review): `03-validation/polisher.md`
+
+---
+
+## Custom Agent Shortcuts
+
+Use these shortcuts to invoke specific agent behaviors:
+
+### @pm → Product Manager
+Act as Product Manager from `.ai-framework/agents/01-documentation/product-manager.md`
+- Problem-first approach
+- Create user stories and acceptance criteria
+- Critical analysis of requirements
+
+### @architect → System Architect
+Act as System Architect from `.ai-framework/agents/01-documentation/system-architect.md`
+- Design system architecture
+- Create API contracts and data models
+- Define technology stack
+
+### @backend → Senior Backend Engineer
+Reference `.ai-framework/agents/02-implementation/senior-backend-engineer.md`
+Follow NestJS guidelines from coding standards
+- Implement APIs and business logic
+- Write comprehensive tests
+- Handle errors gracefully
+
+### @frontend → Senior Frontend Engineer
+Reference `.ai-framework/agents/02-implementation/senior-frontend-engineer.md`
+Follow React Native guidelines from coding standards
+- Build production-ready UI
+- Implement state management
+- Ensure accessibility
+
+### @qa → QA Test Engineer
+Act as QA Test Automation Engineer from `.ai-framework/agents/02-implementation/qa-test-automation-engineer.md`
+- Write unit, integration, and E2E tests
+- Ensure coverage targets are met
+- Test edge cases and error scenarios
+
+### @security → Security Analyst
+Act as Security Analyst from `.ai-framework/agents/02-implementation/security-analyst.md`
+- Perform security audits
+- Check for vulnerabilities
+- Ensure OWASP compliance
+
+### @review → Code Review / Polisher
+Act as Polisher from `.ai-framework/agents/03-validation/polisher.md`
+- Review code quality
+- Check FANG-level standards
+- Ensure consistency with design system
+
+---
+
+## Development Workflow
+
+### Starting a New Feature
+1. **Plan**: Use Product Manager agent for requirements
+2. **Design**: Use UX/UI Designer for interface specs
+3. **Architect**: Use System Architect for technical design
+4. **Implement**: Use Backend/Frontend Engineers with coding guidelines
+5. **Test**: Use QA Engineer for comprehensive tests
+6. **Review**: Use Polisher for quality check
+7. **Validate**: Use Reqing Ball for requirements compliance
+
+### Daily Development
+1. **Morning**: Review `CONTEXT.md` for current focus
+2. **During**: Reference coding guidelines frequently
+3. **Before Commit**: Run tests, use @review for quality check
+4. **End of Day**: Update `CONTEXT.md` with progress
+
+---
+
+## Important Context Files
+
+Always reference these files for project-specific context:
+
+- **`CONTEXT.md`**: Current project state and recent changes
+- **`docs/project-documentation/`**: Product and architecture docs
+- **`docs/design-documentation/`**: Design system and UI specs
+- **`.ai-workflow-status.yaml`**: Development phase tracking
+
+---
+
+## Git Workflow
+
+### Commit Messages
+Use conventional commits format:
+- `feat:` new feature
+- `fix:` bug fix
+- `refactor:` code refactoring
+- `test:` adding tests
+- `docs:` documentation changes
+- `chore:` maintenance tasks
+
+### Example
+```
+feat(auth): implement social login with Google
+
+- Add Google OAuth configuration
+- Create login button component
+- Handle auth callback
+- Add tests for auth flow
+
+Closes #123
+```
+
+---
+
+## Environment Variables
+
+### Required Variables
+[List your required environment variables here]
+
+Example:
+```
+DATABASE_URL=
+SUPABASE_URL=
+SUPABASE_ANON_KEY=
+STRIPE_PUBLISHABLE_KEY=
+STRIPE_SECRET_KEY=
+```
+
+### Security
+- Never commit `.env` files
+- Use `.env.example` as template
+- Validate environment variables at startup (use Zod)
+
+---
+
+## Documentation Standards
+
+### Code Comments
+- Document WHY, not WHAT (code should be self-explanatory)
+- Complex business logic requires explanation
+- Public APIs need JSDoc comments
+
+### File Documentation
+- Each feature should have a README in its directory
+- Update `CONTEXT.md` regularly
+- Keep architecture docs in sync with code
+
+---
+
+## Logging Standards
+
+### Frontend
+```typescript
+// Use structured logging
+logger.info('User logged in', { userId, timestamp });
+logger.error('API call failed', { endpoint, error, userId });
+```
+
+### Backend
+```typescript
+// Include request context
+this.logger.log('Creating recipe', { userId, recipeData });
+this.logger.error('Database error', { error, context, userId });
+```
+
+---
+
+## Project-Specific Notes
+
+[Add your project-specific rules, patterns, or decisions here]
+
+### Known Patterns
+- [Pattern 1]
+- [Pattern 2]
+
+### Deprecated Patterns (Avoid These)
+- [Legacy pattern to avoid]
+- [Reason why it's deprecated]
+
+### Critical Decisions
+- [Important architectural decision 1]
+- [Important architectural decision 2]
+
+---
+
+## Quick Reference
+
+**Need help with a specific task?**
+
+- Architecture planning: `@.ai-framework/agents/00-planning/senior-engineer-brainstorm.md`
+- Product requirements: `@.ai-framework/agents/01-documentation/product-manager.md`
+- Technical specs: `@.ai-framework/agents/00-planning/technical-spec-writer.md`
+- Coding guidelines: `@.ai-framework/templates/best-practices/coding-guidelines.md`
+- Code review: `@.ai-framework/agents/03-validation/polisher.md`
+
+**For detailed guidance on any topic, ask me to read the relevant file from `.ai-framework/`**
+
+---
+
+<!-- 
+This file configures Cursor's AI assistant to follow your development framework.
+Update this file as your project evolves.
+
+Last updated: [DATE]
+-->
+
