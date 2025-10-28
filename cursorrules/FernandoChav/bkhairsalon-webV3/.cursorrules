@@ -1,0 +1,860 @@
+# BK Hair Salon Web - Guía de Desarrollo
+
+## 🎯 Objetivos del Proyecto
+
+- **Calidad sobre velocidad**: Código mantenible y robusto
+- **User Experience First**: Decisiones centradas en el usuario
+- **Type Safety**: TypeScript al máximo para prevenir errores
+- **Performance**: Optimizar Web Vitals y experiencia móvil
+- **Accesibilidad**: WCAG 2.1 AA mínimo
+- **Testing**: Cobertura en código crítico
+
+---
+
+## 📐 Arquitectura en Capas
+
+### Flujo de Dependencias
+
+```
+UI Layer (views/, components/)     → Solo renderiza y captura eventos
+  ↓
+Logic Layer (hooks/)               → Lógica de negocio y estado
+  ↓
+Data Layer (clients/, atoms/)      → APIs y estado global
+  ↓
+Domain Layer (models/)             → Tipos, schemas, entidades
+```
+
+### 1. UI Layer (`views/`, `components/`)
+
+**Responsabilidad única**: Renderizar y capturar eventos del usuario
+
+#### Reglas CRÍTICAS
+
+- ✅ Delegar toda lógica a hooks custom
+- ✅ Calcular valores computados ANTES del return del JSX
+- ✅ NO incluir lógica condicional o transformaciones en el JSX
+- ✅ Todas las props y retornos de hooks DEBEN usarse
+- ✅ NO usar `useState` en componentes de `views/` - extraer a hooks
+- ✅ `'use client'` solo cuando sea absolutamente necesario (hooks, providers, interactividad)
+- ✅ NO repetir `'use client'` en componentes que heredan de su padre
+
+#### EXCEPCIÓN: `src/components/`
+
+Los componentes en `src/components/` pueden contener:
+- ✅ Lógica completa del componente
+- ✅ Estado local (`useState`)
+- ✅ Handlers y validaciones
+- ✅ Transformaciones de datos
+
+**NO permitido** (usar hooks específicos):
+- ❌ Llamadas a APIs (usar `hooks/api/`)
+- ❌ Estado global (usar atoms de Jotai)
+- ❌ Lógica de negocio compartida entre componentes
+
+#### Ejemplos
+
+```typescript
+// ✅ CORRECTO - Computed values antes del JSX
+export const RegisterView = () => {
+  const { form, handleSubmit, isLoading, isValid } = useRegisterForm();
+
+  const buttonText = isLoading ? 'Creando cuenta...' : 'Crear cuenta';
+  const buttonClassName = cn('w-full', isValid ? 'bg-primary' : 'bg-muted');
+  const shouldShowError = !isValid && form.formState.isDirty;
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <Button className={buttonClassName}>{buttonText}</Button>
+      {shouldShowError && <ErrorMessage />}
+    </form>
+  );
+};
+
+// ❌ INCORRECTO - Lógica en el JSX
+export const RegisterView = () => {
+  const { form, handleSubmit, isLoading, isValid } = useRegisterForm();
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <Button className={isValid ? 'bg-primary' : 'bg-muted'}>
+        {isLoading ? 'Creando cuenta...' : 'Crear cuenta'}
+      </Button>
+    </form>
+  );
+};
+
+// ✅ CORRECTO - Lógica en hook custom
+export const LoginForm = () => {
+  const { form, showPassword, isLoading, handleSubmit, handlePasswordToggle } = useLoginForm();
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <Input type={showPassword ? 'text' : 'password'} />
+      <Button onClick={handlePasswordToggle}>
+        {showPassword ? 'Ocultar' : 'Mostrar'}
+      </Button>
+    </form>
+  );
+};
+
+// ❌ INCORRECTO - useState en componente UI
+export const LoginForm = () => {
+  const [showPassword, setShowPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSubmit = (data) => {
+    setIsLoading(true);
+  };
+
+  return <form onSubmit={handleSubmit}>...</form>;
+};
+```
+
+#### Directiva 'use client'
+
+```typescript
+// ✅ CORRECTO - 'use client' en vista principal
+// src/views/app/login/index.tsx
+'use client';
+export const LoginView: FC = () => {
+  const { form, handleSubmit, isLoading } = useLoginView();
+  return <LoginForm form={form} handleSubmit={handleSubmit} isLoading={isLoading} />;
+};
+
+// ✅ CORRECTO - Componente interno SIN 'use client' (hereda)
+// src/views/app/login/components/login-form.tsx
+export const LoginForm: FC<LoginFormProps> = ({ form, handleSubmit, isLoading }) => {
+  return <form onSubmit={handleSubmit}>...</form>;
+};
+
+// ✅ CORRECTO - Hook con 'use client'
+'use client';
+export const useLoginView = () => {
+  const form = useForm<LoginForm>();
+  return { form, handleSubmit, isLoading };
+};
+
+// ❌ INCORRECTO - 'use client' repetitivo
+'use client'; // ❌ NO necesario, hereda del padre
+export const LoginForm: FC<LoginFormProps> = (props) => {
+  return <form>...</form>;
+};
+```
+
+### 2. Logic Layer (`hooks/`)
+
+#### `hooks/api/` - React Query
+
+**Responsabilidad**: Gestión de estado del servidor (cache, refetch, mutations)
+
+**Convenciones de nombres**:
+- Queries: `use[Entity][Action]Query` (ej: `useUserProfileQuery`)
+- Mutations: `use[Action][Entity]Mutation` (ej: `useEditUserMutation`)
+
+**Reglas CRÍTICAS**:
+- ✅ Solo retornar lo que se usa en consumidores
+- ✅ Si un valor no se usa, no exponerlo
+
+```typescript
+// ✅ CORRECTO - Solo retorna lo necesario
+export const useUserProfileQuery = () => {
+  const { data, isLoading, error } = useQuery({
+    queryKey: ['user', 'profile'],
+    queryFn: fetchProfile,
+  });
+  return { data, isLoading, error };
+};
+
+// ❌ INCORRECTO - Retorna todo
+export const useUserProfileQuery = () => {
+  const queryResult = useQuery({ /* ... */ });
+  return queryResult; // ❌ Expone propiedades no utilizadas
+};
+```
+
+#### `hooks/common/` - Hooks de UI
+
+**Responsabilidad**: Lógica reutilizable de UI (validación, estado local, side effects)
+
+**Convenciones**:
+- Nombres: `use[Feature]` (ej: `useFileUpload`, `useToggle`)
+- Tipado explícito de parámetros y retorno
+- Orden de retorno: primero valores, luego handlers
+
+```typescript
+// ✅ CORRECTO - Hook con tipado explícito
+interface UseFileUploadParams {
+  maxFiles?: number;
+  allowedTypes?: string[];
+}
+
+interface UseFileUploadReturn {
+  files: FileWithPreview[];
+  hasFiles: boolean;
+  canAddMore: boolean;
+  fileCount: number;
+  handleAddFiles: (newFiles: FileList | File[]) => void;
+  handleRemoveFile: (index: number) => void;
+  handleClearFiles: () => void;
+}
+
+export const useFileUpload = (params: UseFileUploadParams = {}): UseFileUploadReturn => {
+  const { maxFiles = 5, allowedTypes = [] } = params;
+  
+  return {
+    files,
+    hasFiles,
+    canAddMore,
+    fileCount,
+    handleAddFiles,
+    handleRemoveFile,
+    handleClearFiles,
+  };
+};
+
+// ❌ INCORRECTO - Sin tipado explícito
+export const useFileUpload = (maxFiles = 5) => {
+  return { files, addFiles, removeFile };
+};
+```
+
+#### Hooks de formulario (`views/*/hooks/`)
+
+**Responsabilidad**: Orquestar lógica de formularios específicos
+
+**Reglas CRÍTICAS**:
+- ✅ Relación 1:1 con componente principal: `use-[component-name]-form` → `[ComponentName]`
+- ✅ Solo retornar valores usados por el componente
+- ✅ Orden: primero valores, luego handlers
+
+```typescript
+// ✅ CORRECTO - Hook de formulario
+export const useRegisterForm = () => {
+  const form = useForm<RegisterRequest>();
+  const { mutate, isPending } = useRegisterMutation();
+
+  const handleSubmit = (data) => {
+    mutate(transformData(data));
+  };
+
+  return {
+    form,
+    isLoading: isPending,
+    isValid: form.formState.isValid,
+    handleSubmit,
+  };
+};
+
+// ❌ INCORRECTO - Expone mutation completo
+export const useRegisterForm = () => {
+  const form = useForm<RegisterRequest>();
+  const mutation = useRegisterMutation();
+  return { form, mutation };
+};
+```
+
+### 3. Data Layer (`clients/`, `atoms/`)
+
+#### `clients/` - HTTP Clients
+
+**Patrón**: Repository Pattern con Axios
+- Una clase por recurso/entidad
+- Tipar requests y responses con interfaces de `models/`
+
+```typescript
+class UserClient {
+  async getProfile(): Promise<ApiResponse<ProfileDto>> {
+    const response = await baseClient.get<ApiResponse<ProfileDto>>('/user/profile');
+    return response.data;
+  }
+}
+```
+
+#### `atoms/` - Estado Global (Jotai)
+
+**Cuándo usar**:
+- ✅ Estado compartido entre componentes no relacionados
+- ❌ NO para estado local o formularios
+
+### 4. Domain Layer (`models/`)
+
+- `schemas/`: Validación Zod (`[entity]Schema`)
+- `requests/`: DTOs de Request
+- `responses/`: DTOs de Response
+- `entities/`: Modelos de dominio
+
+---
+
+## 🎨 Convenciones de Código
+
+### Nomenclatura
+
+#### Componentes
+- **PascalCase**: `UserProfile`, `LoginForm`, `EditUserModal`
+- **Sufijos**: `*View`, `*Form`, `*Modal`, `*Card`, `*List`
+
+#### Hooks
+- **Prefijo `use` + camelCase**: `useUserProfile`, `useAuth`, `useFileUpload`
+
+#### Variables Booleanas
+
+**CRÍTICO**: Usar prefijo `is` para claridad
+
+**Excepciones** (significado semántico claro):
+- `has*` (ej: `hasServices`, `hasError`)
+- `can*` (ej: `canSubmit`, `canEdit`)
+- `should*` (ej: `shouldShow`, `shouldRender`)
+
+```typescript
+// ✅ CORRECTO
+const isOpen = useState(false);
+const isLoading = false;
+const isValid = form.formState.isValid;
+const hasServices = services.length > 0;
+const canSubmit = form.formState.isValid;
+const shouldShow = !isLoading && hasData;
+
+// ❌ INCORRECTO
+const open = useState(false);
+const loading = false;
+const valid = form.formState.isValid;
+```
+
+#### Handlers de Eventos
+
+**CRÍTICO**: Siempre usar prefijo `handle` en camelCase
+- Patrón: `handle[EventName]` o `handle[Action]`
+- Aplica tanto para handlers internos como para props
+
+```typescript
+// ✅ CORRECTO
+const handleSubmit = (data: FormData) => {};
+const handleFileSelect = (files: File[]) => {};
+const handlePasswordToggle = () => {};
+
+<EditUserForm
+  handleFormSubmit={handleSubmit}
+  handlePasswordToggle={handleToggle}
+/>
+
+// ❌ INCORRECTO
+const onSubmit = (data: FormData) => {};
+const submitHandler = (data: FormData) => {};
+
+<EditUserForm
+  onFormSubmit={handleSubmit}
+  onPasswordToggle={handleToggle}
+/>
+```
+
+#### Constantes
+- **UPPER_SNAKE_CASE**: `MAX_FILE_SIZE`, `API_BASE_URL`
+
+#### Tipos/Interfaces
+- **PascalCase**: `UserProfile`, `ApiResponse<T>`
+- **Sufijos**: `*Props`, `*State`, `*Response`, `*Request`, `*Dto`
+
+### Orden de Elementos
+
+#### En Interfaces
+
+**CRÍTICO**: Primero valores, luego handlers
+
+```typescript
+// ✅ CORRECTO
+interface EditUserFormProps {
+  form: UseFormReturn<EditUserForm>;
+  canSubmit: boolean;
+  isSubmitting: boolean;
+  isLoading: boolean;
+  handleFormSubmit: () => void;
+  handleReset: () => void;
+}
+
+// ❌ INCORRECTO
+interface EditUserFormProps {
+  handleFormSubmit: () => void;
+  form: UseFormReturn<EditUserForm>;
+  handleReset: () => void;
+  canSubmit: boolean;
+}
+```
+
+#### En Desestructuración y Pasaje de Props
+
+**CRÍTICO**: Mantener mismo orden que la interface
+
+```typescript
+// ✅ CORRECTO
+export const EditUserForm: FC<EditUserFormProps> = ({
+  form,
+  canSubmit,
+  isSubmitting,
+  isLoading,
+  handleFormSubmit,
+  handleReset,
+}) => {
+  return (
+    <form>
+      <Button
+        isDisabled={!canSubmit}
+        isLoading={isSubmitting}
+        onClick={handleFormSubmit}
+      />
+    </form>
+  );
+};
+
+// Usar componente
+<EditUserForm
+  form={form}
+  canSubmit={canSubmit}
+  isSubmitting={isSubmitting}
+  isLoading={isLoading}
+  handleFormSubmit={handleFormSubmit}
+  handleReset={handleReset}
+/>
+```
+
+#### En Retorno de Hooks
+
+**CRÍTICO**: Primero valores, luego handlers
+
+```typescript
+// ✅ CORRECTO
+export const useEditUserForm = () => {
+  return {
+    form,
+    profile,
+    isLoading,
+    canSubmit,
+    hasChanges,
+    handleSubmit,
+    handleReset,
+  };
+};
+
+// ❌ INCORRECTO
+export const useEditUserForm = () => {
+  return {
+    handleSubmit,
+    form,
+    handleReset,
+    isLoading,
+  };
+};
+```
+
+### Exports
+
+**CRÍTICO**: NUNCA usar `export *` - siempre exports explícitos
+
+```typescript
+// ✅ CORRECTO
+export type { BaseEntity } from './base';
+export type { UserRole, UserRoleData } from './role';
+export { UserClient } from './user-client';
+
+// ❌ INCORRECTO
+export * from './role';
+export * from './auth';
+```
+
+### Imports (orden automático con Prettier)
+
+1. React
+2. Next.js
+3. Librerías externas
+4. Imports internos (@/)
+5. Imports relativos (./, ../)
+
+---
+
+## 🔒 TypeScript - Type Safety
+
+### Reglas Fundamentales
+
+```typescript
+// ✅ CORRECTO
+interface User {
+  id: string;
+  name: string;
+}
+const user: User = { id: '1', name: 'John' };
+
+// ❌ NUNCA usar 'any'
+const user: any = { id: '1', name: 'John' };
+```
+
+### Type Guards
+
+```typescript
+if (error instanceof AxiosError) {
+  // TypeScript sabe que error es AxiosError
+}
+```
+
+### Utility Types
+
+Usar cuando sea apropiado: `Partial<T>`, `Pick<T>`, `Omit<T>`, `Required<T>`
+
+### Validación sobre Assertions
+
+```typescript
+// ❌ EVITAR
+const user = data as User;
+
+// ✅ PREFERIR
+const user = UserSchema.parse(data);
+```
+
+---
+
+## 🎯 Principios de Diseño
+
+### SOLID
+
+- **Single Responsibility**: Un módulo = una responsabilidad
+- **Open/Closed**: Abierto a extensión, cerrado a modificación
+- **Liskov Substitution**: Subcomponentes intercambiables
+- **Interface Segregation**: Interfaces específicas, no generales (no declarar props innecesarias)
+- **Dependency Inversion**: Depender de abstracciones, no implementaciones
+
+### Otros Principios
+
+- **DRY**: Si se repite 3+ veces → extraer
+- **KISS**: Preferir simplicidad
+- **YAGNI**: Solo implementar lo necesario ahora
+- **Separation of Concerns**: Lógica ≠ Presentación
+- **Composition over Inheritance**: Usar composición en React
+
+---
+
+## 📊 Patrones de Diseño
+
+### Repository Pattern
+
+```typescript
+class UserClient {
+  async getAll(): Promise<User[]> {}
+  async getById(id: string): Promise<User> {}
+  async create(data: CreateUserDto): Promise<User> {}
+  async update(id: string, data: UpdateUserDto): Promise<User> {}
+  async delete(id: string): Promise<void> {}
+}
+```
+
+### Custom Hooks Pattern
+
+- Un hook = una responsabilidad
+- Hooks pueden componer otros hooks
+- Solo retornar lo consumido
+- `useState` solo en hooks, no en componentes
+
+### Compound Components (shadcn/ui)
+
+```typescript
+<Card>
+  <CardHeader>
+    <CardTitle>Title</CardTitle>
+  </CardHeader>
+  <CardContent>Content</CardContent>
+</Card>
+```
+
+---
+
+## 🔄 Estrategia de Estado
+
+| Tipo | Cuándo usar | Herramienta |
+|------|-------------|-------------|
+| **Local** | Estado de un solo componente | `useState` (solo en hooks) |
+| **Formulario** | Cualquier formulario | `react-hook-form` + Zod |
+| **Servidor** | Datos del backend | React Query |
+| **Global** | Estado compartido entre componentes no relacionados | Jotai |
+| **URL** | Estado que debe persistir en URL | Next.js (searchParams) |
+
+---
+
+## 🚨 Manejo de Errores
+
+### En Clients
+
+```typescript
+// Solo lanzar excepciones, no manejarlas
+async create(data: CreateDto): Promise<Response> {
+  const response = await baseClient.post('/endpoint', data);
+  return response.data;
+}
+```
+
+### En Hooks (React Query)
+
+```typescript
+const { mutate } = useMutation({
+  mutationFn: client.create,
+  onError: (error: AxiosError<ApiResponse>) => {
+    if (isValidationError(error)) {
+      extractValidationMessages(error).forEach(toast.error);
+    } else {
+      toast.error(error.response?.data?.message || 'Error desconocido');
+    }
+  },
+});
+```
+
+### En UI
+
+- Mostrar loading states
+- Mostrar errores con toast (Sonner)
+- Proveer fallbacks UI
+
+---
+
+## 🎨 UI/UX
+
+### Diseño Responsive
+
+**Mobile-first** con breakpoints Tailwind:
+- `sm: 640px`
+- `md: 768px`
+- `lg: 1024px`
+- `xl: 1280px`
+- `2xl: 1536px`
+
+### Accesibilidad (WCAG 2.1 AA)
+
+- Elementos semánticos HTML
+- `aria-labels` cuando sea necesario
+- Keyboard navigation funcional
+- Focus visible
+- Ratios de contraste adecuados
+
+### Estados de Carga
+
+- Siempre mostrar feedback durante operaciones async
+- Usar `<LoadingSpinner>` o `<Skeleton>`
+- Deshabilitar botones durante loading
+
+### Manejo de Errores
+
+- Mensajes claros y accionables
+- Validación en tiempo real (onTouched)
+- Errores cerca del campo relevante
+
+### Animaciones
+
+- Usar utilities `transition-*` de Tailwind
+- Mantener animaciones sutiles (<300ms)
+- Respetar `prefers-reduced-motion`
+
+---
+
+## 📊 Performance
+
+### Code Splitting
+
+- Next.js lo hace automáticamente
+- Usar dynamic imports para componentes pesados
+
+### Optimización de Imágenes
+
+- Usar `<Image>` de Next.js
+- Lazy loading por defecto
+
+### Memoización
+
+- `useMemo` para cálculos costosos
+- `useCallback` para funciones pasadas a hijos
+- `React.memo` para componentes puros
+
+### Bundle Size
+
+```typescript
+// ✅ CORRECTO
+import { Button } from '@/components/shadcn';
+
+// ❌ INCORRECTO
+import * as Components from '@/components/shadcn';
+```
+
+---
+
+## 🔐 Seguridad
+
+### Autenticación
+
+- Tokens en cookies HTTP-only (NextAuth)
+- Refresh tokens automático
+- Validar sesión en middleware
+
+### Validación
+
+- Backend + Frontend (nunca solo client-side)
+- Zod para schemas consistentes
+
+### Prevención XSS/CSRF
+
+- React escapa automáticamente
+- Cuidado con `dangerouslySetInnerHTML`
+- NextAuth maneja CSRF tokens
+
+---
+
+## 🧪 Testing
+
+### Qué Testear
+
+- ✅ Lógica de negocio compleja (hooks)
+- ✅ Componentes críticos
+- ✅ Utilidades y helpers
+- ✅ Validaciones (schemas Zod)
+- ❌ Componentes triviales
+- ❌ Código generado
+
+### Patrón AAA
+
+```typescript
+it('debe registrar usuario exitosamente', async () => {
+  // Arrange
+  const mockData = { /* ... */ };
+
+  // Act
+  const result = await register(mockData);
+
+  // Assert
+  expect(result).toEqual(expectedResult);
+});
+```
+
+---
+
+## 🛠️ Herramientas y Comandos
+
+### Package Manager: Yarn (NO usar npm)
+
+```bash
+yarn install
+yarn add [package]
+yarn add -D [package]
+yarn remove [package]
+```
+
+### Desarrollo
+
+```bash
+yarn dev              # Servidor de desarrollo
+yarn build            # Build de producción
+yarn lint             # Linting
+yarn lint:fix         # Fix automático
+yarn type-check       # Verificación de tipos
+yarn format           # Formatear código
+yarn test             # Tests modo watch
+yarn test:run         # Tests una vez
+yarn test:coverage    # Cobertura de tests
+yarn knip             # Análisis de código no usado
+```
+
+---
+
+## 📝 Documentación
+
+### JSDoc
+
+- Documentar funciones/hooks públicos complejos
+- Incluir ejemplos cuando sea útil
+
+### Comentarios
+
+```typescript
+// ✅ BUEN comentario - explica POR QUÉ
+// Usamos setTimeout en lugar de useEffect para evitar re-renders
+// Ver: https://github.com/facebook/react/issues/14920
+
+// ❌ MAL comentario - explica QUÉ (obvio)
+// Incrementa el contador
+count++;
+```
+
+---
+
+## ⚠️ Errores Comunes a Evitar
+
+1. Usar `any` - rompe type safety
+2. Fetch directo en componentes - usar React Query hooks
+3. Lógica en componentes UI - extraer a hooks
+4. `useState` en componentes UI - extraer a hooks (excepto `src/components/`)
+5. Olvidar loading/error states
+6. Usar índices como keys - usar IDs únicos
+7. Abusar de `useEffect` - considerar alternativas
+8. Mezclar inline styles con Tailwind
+9. Hardcodear strings repetidos - usar constantes
+10. Ignorar warnings del linter
+11. Sobre-optimizar prematuramente
+12. Lógica en JSX - calcular antes del return
+13. Props no utilizadas - solo declarar lo necesario
+14. Retornos no utilizados - solo retornar lo usado
+15. Prefijo `on` en handlers - usar `handle`
+16. Orden mezclado en exports de hooks
+17. Usar `npm` en lugar de `yarn`
+18. Hooks sobrecargados - mantener relación 1:1
+19. Variables booleanas sin `is` (excepto semántica clara)
+20. `'use client'` repetitivo
+21. Orden mezclado en interfaces/props
+22. Usar `export *` - especificar exports
+23. Hooks sin tipado explícito
+
+---
+
+## ✅ Checklist Pre-Commit
+
+- [ ] No hay `any` en el código
+- [ ] Todas las props declaradas se usan
+- [ ] Todo lo que retorna un hook se usa
+- [ ] Computed values antes del return del JSX
+- [ ] Handlers con patrón `handle[EventName]`
+- [ ] No hay lógica en el JSX
+- [ ] No hay `useState` en componentes UI (excepto `src/components/`)
+- [ ] Variables booleanas con `is` (o semántica clara)
+- [ ] `'use client'` solo cuando sea necesario
+- [ ] Interfaces/props ordenadas: valores, luego handlers
+- [ ] No hay `export *` - todos explícitos
+- [ ] Hooks con tipado explícito
+- [ ] `yarn lint` pasa sin errores
+- [ ] `yarn type-check` pasa sin errores
+- [ ] Tests agregados/actualizados
+- [ ] Código formateado con Prettier
+
+---
+
+## 🎯 Reglas de Oro
+
+1. **Computed values primero, JSX después**
+2. **Solo declarar lo que se usa**
+3. **Handlers: `handle[EventName]` siempre**
+4. **Hooks y props: primero valores, luego handlers**
+5. **Un componente = una responsabilidad**
+6. **Lógica en hooks, no en componentes**
+7. **`useState` solo en hooks** (excepto `src/components/`)
+8. **Un hook = un componente (relación 1:1)**
+9. **Type safety siempre, `any` nunca**
+10. **Usar `yarn`, no `npm`**
+11. **Variables booleanas: `is[State]` o semántica clara**
+12. **`'use client'` solo cuando sea necesario**
+13. **Interfaces ordenadas: valores → handlers**
+14. **Hooks con tipado explícito**
+15. **Mobile-first en todo momento**
+16. **Accesibilidad no es opcional**
+17. **Testear lógica crítica**
+18. **Exports siempre explícitos**
+
+---
+
+## 📚 Recursos
+
+- [Next.js Docs](https://nextjs.org/docs)
+- [React Query Docs](https://tanstack.com/query/latest)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [TypeScript Deep Dive](https://basarat.gitbook.io/typescript/)
+- [Refactoring UI](https://www.refactoringui.com/)

@@ -1,0 +1,208 @@
+# Nexy AI Assistant - Development Rules
+
+> Детализированные правила лежат в `client/.cursorrules` и `server/.cursorrules`. Этот файл фиксирует общие принципы и минимальный shared-контекст.
+
+## 1. Контекст перед изменениями
+Перед началом работы обязательно изучи актуальные материалы проекта:
+- `Docs/PRODUCT_CONCEPT.md` — концепт продукта, UX и сценарии SLEEPING/LISTENING/PROCESSING
+- `Docs/GLOBAL_DELIVERY_PLAN.md` — глобальный план поставки, Azure VM, требования к подписи
+- `Docs/GO_TO_MARKET_BETA_PLAN_RU.md` — план выхода на рынок
+- `Docs/PACKAGING_FINAL_GUIDE.md` — финальный гайд по упаковке PKG
+- `Docs/ARCHITECTURE_OVERVIEW.md` — архитектура клиента и сервера
+- `Docs/CURRENT_STATUS_REPORT.md` — актуальные пользовательские истории
+
+## 2. Технический baseline (клиент)
+- macOS меню-бар приложение (rumps)
+- Обязательные разрешения: microphone, screen_capture, network, notifications
+- gRPC клиент для связи с сервером (async/await)
+- Автообновления через Sparkle (silent)
+- Azure VM: 20.151.51.172, Team ID: 5NKLL2CLB9, Bundle ID: com.nexy.assistant
+
+Полный набор правил см. в `client/.cursorrules`.
+
+## 3. Технический baseline (сервер)
+- Python 3.11+, запуск через `server/main.py`
+- gRPC сервис из `server/modules/grpc_service/core/grpc_server.py`, протокол описан в `server/modules/grpc_service/streaming.proto`
+- HTTP health-check на 8080 (aiohttp) обязателен для Azure Container Apps
+- Опциональный update-сервер на 8081 из каталога `update-server`
+- Конфигурация из `server/config` и `config.env`; секреты хранятся вне репозитория
+- Модули и интеграции завершены, архитектура описана в `Docs/ARCHITECTURE_OVERVIEW.md`
+- Масштабирование до 100 пользователей с мониторингом в `server/monitoring/`
+
+Подробные серверные требования см. в `server/.cursorrules`.
+
+## 4. Текущий статус
+Следующие интеграции завершены и должны оставаться стабильными:
+InstanceManagerIntegration, AutostartManagerIntegration, TrayControllerIntegration,
+PermissionsIntegration, InputProcessingIntegration, UpdaterIntegration,
+NetworkManagerIntegration, AudioDeviceIntegration, InterruptManagementIntegration,
+VoiceRecognitionIntegration, ScreenshotCaptureIntegration, HardwareIdIntegration,
+GrpcClientIntegration, SpeechPlaybackIntegration, ModeManagementIntegration,
+SignalIntegration, WelcomeMessageIntegration, VoiceOverDuckingIntegration.
+
+### Workflows (новая архитектура):
+- **ListeningWorkflow** - координатор LISTENING режима, дебаунс, умные таймауты
+- **ProcessingWorkflow** - координатор PROCESSING: capture→grpc→playback→SLEEPING
+- **BaseWorkflow** - базовый класс для всех workflows
+
+### Серверная часть (завершена):
+- 9 модулей полностью реализованы и протестированы
+- Масштабирование до 100 пользователей настроено
+- Система мониторинга активна (`server/monitoring/`)
+- gRPC сервер оптимизирован для высокой нагрузки
+
+## 5. Архитектура и режимы работы
+- Поддерживаются только три режима: SLEEPING (серый, микрофон выключен, фоновое обновление), LISTENING (синий пульс, распознавание речи, обновления остановлены), PROCESSING (желтый спиннер, отправка данных, воспроизведение ответа, обновления остановлены).
+- Переход LISTENING активируется долгим удержанием пробела, отпускание переводит в PROCESSING.
+- Все подсистемы общаются через EventBus.
+- Интеграции тонкие: управляют существующими модулями и не дублируют бизнес-логику.
+- Workflows координируют сложные переходы между режимами: ListeningWorkflow (LISTENING), ProcessingWorkflow (PROCESSING).
+- Перед созданием нового модуля/интеграции повторно используй существующие компоненты. Расширяй их конфигурацией, событиями или провайдерами. Новый блок допускается только когда требуемого поведения нет и его нельзя разумно добавить в текущие; документируй обоснование и зависимости в профильных отчетах.
+
+## 6. Критические запреты
+- Не нарушай EventBus архитектуру и не создавай прямых связей между модулями.
+- Не меняй режим напрямую, используй только события `mode.request`.
+- Не дублируй функционал модулей и не добавляй новые режимы.
+- Не работай с модулями напрямую (только через интеграции) и не дублируй конфигурацию.
+- Не меняй порядок запуска SimpleModuleCoordinator без согласования.
+- Не правь Bundle ID, Team ID и структуру проекта без подтверждения.
+
+## 7. Приоритеты разработки
+Высокий: используй существующие модули, создавай тонкие интеграции, строго следуй EventBus.
+Средний: расширяй интеграции и добавляй события только при реальной необходимости.
+Низкий: создание новых модулей и изменение core архитектуры — только в крайних случаях.
+
+## 8. Паттерн интеграции
+```python
+"""
+Интеграция для <описание>
+Тонкая обертка над существующим модулем
+"""
+import asyncio
+import logging
+from typing import Any, Dict, Optional
+
+from integration.core.base_integration import BaseIntegration
+from modules.<module>.core.<module_class> import <ModuleClass>
+
+logger = logging.getLogger(__name__)
+
+class <FeatureName>Integration(BaseIntegration):
+    def __init__(self, event_bus, state_manager, error_handler, config=None):
+        super().__init__(event_bus, state_manager, error_handler)
+        self.config = config
+        self.module = <ModuleClass>()
+
+    async def initialize(self) -> bool:
+        try:
+            await self.event_bus.subscribe("<event>", self.handle_event)
+            return True
+        except Exception as exc:
+            logger.error("Failed to initialize %s: %s", self.__class__.__name__, exc)
+            return False
+
+    async def start(self) -> bool:
+        try:
+            return await self.module.start()
+        except Exception as exc:
+            logger.error("Failed to start %s: %s", self.__class__.__name__, exc)
+            return False
+
+    async def stop(self) -> bool:
+        try:
+            return await self.module.stop()
+        except Exception as exc:
+            logger.error("Failed to stop %s: %s", self.__class__.__name__, exc)
+            return False
+
+    async def handle_event(self, event: Dict[str, Any]) -> None:
+        try:
+            result = await self.module.process(event)
+            await self.event_bus.publish("<result.event>", result)
+        except Exception as exc:
+            await self.error_handler.handle_error(exc, "handle_event")
+```
+
+## 9. Работа с событиями и режимами
+- Все публикации и подписки выполняются через EventBus.
+- Режимы запрашиваются событием `mode.request` со ссылкой на источник.
+- Каждая операция, запускающая цепочку действий, должна включать `session_id`.
+- Ошибки публикуются отдельными событиями `<feature>.error` с контекстом.
+
+## 10. Конфигурация
+- Клиент: единственный источник — `client/config/unified_config.yaml`; дополнительные YAML допускаются только после согласования и не должны дублировать параметры.
+- Сервер: параметры в `server/config/` и переменных окружения, секреты вне репозитория.
+- Загружай конфигурацию только через существующие loaders/утилиты, не создавай обособленных глобальных singletons.
+- Пример клиентского раздела:
+```yaml
+my_feature:
+  enabled: true
+  timeout_sec: 5.0
+  retry_attempts: 3
+```
+
+## 11. Обработка ошибок и логирование
+- Все ошибки проходят через `error_handler`, прямые `print` запрещены.
+- Логируй значимые события через `logging_manager.py` в формате `YYYY-MM-DD HH:MM:SS - Nexy - LEVEL - Message`.
+- Не записывай PII или секреты в логи.
+
+## 12. Чеклист изменений
+Перед началом:
+- Изучи `client/modules/` и актуальные интеграции.
+- Посмотри `unified_config.yaml` и план запуска `SimpleModuleCoordinator`.
+- Определи необходимые события EventBus.
+- Если задача серверная: изучи `server/modules/`, `server/integrations/`, `Docs/ARCHITECTURE_OVERVIEW.md` и актуальные gRPC контракты.
+
+Во время:
+- Создавай только интеграции, не новые модули.
+- Используй существующие модули и конфигурацию.
+- Все коммуникации выполняй через EventBus и `mode.request` для смены режима.
+- Сохраняй именование в стиле проекта.
+- На сервере: не смешивай клиентскую логику, соблюдай границы API, обновляй `streaming.proto` и генерируй stubs при изменениях.
+- Перед добавлением новой интеграции/модуля проверь возможность расширить существующую; если создаёшь новый компонент, заранее согласуй и задокументируй его необходимость.
+
+После:
+- Добавь интеграцию в `SimpleModuleCoordinator` и проверь порядок.
+- Прогони тесты/моки, чтобы убедиться в отсутствии регрессий.
+- Обнови документацию при необходимости и проверь импорты.
+- Для серверных изменений: обнови `requirements.txt` при добавлении зависимостей, перегенерируй gRPC артефакты и зафиксируй health-checks.
+- **ВЕРСИОНИРОВАНИЕ: При загрузке кода на GitHub ВСЕГДА создавай новую версию через `./scripts/create_version_release.sh vX.Y.Z "Описание"`. НИКОГДА не изменяй текущий код напрямую - только через систему версионирования.**
+
+## 13. Стандарты кода и тестирования
+- Python 3.11+, обязательны type hints.
+- gRPC и сетевые операции реализуй с async/await.
+- Конфигурацию загружай через существующие утилиты, секреты храни во внешних источниках (env или Keychain).
+- Для каждой интеграции нужны unit-тесты в `integration/tests/`, мокай внешние зависимости и проверяй переходы между режимами.
+- Sparkle: `appcast_url`, `check_interval` настраиваются через конфиг.
+- Мониторинг: используй `server/monitoring/` для отслеживания производительности и ошибок.
+- Масштабирование: сервер настроен на 100 пользователей с оптимизированными параметрами.
+
+## 13.1. Система версионирования (КРИТИЧНО!)
+- **ПРАВИЛО #1:** При загрузке кода на GitHub ВСЕГДА создавай новую версию через `./scripts/create_version_release.sh vX.Y.Z "Описание"`
+- **ПРАВИЛО #2:** НИКОГДА не изменяй текущий код напрямую - только через систему версионирования
+- **ПРАВИЛО #3:** Каждая версия должна иметь уникальный номер и описание изменений
+- **ПРАВИЛО #4:** Используй семантическое версионирование: v1.0.0 (major.minor.patch)
+- **ПРАВИЛО #5:** Все изменения автоматически коммитятся и создается Git тег
+- **ПРАВИЛО #6:** Автоматически создаются архивы и GitHub Release (если установлен gh CLI)
+- **ПРАВИЛО #7:** Доступ к версиям: Git теги, GitHub Releases, архивы
+- **ПРАВИЛО #8:** Переключение между версиями: `git checkout vX.Y.Z`
+- **ПРАВИЛО #9:** Просмотр всех версий: `./scripts/list_releases.sh`
+- **ПРАВИЛО #10:** Документация по версионированию: `RELEASE_MANAGEMENT.md`
+
+## 14. Основные принципы
+Архитектура: модульность, событийность, конфигурируемость, тестируемость, расширяемость.
+Разработка: DRY, SOLID, KISS, YAGNI.
+Безопасность: минимальные привилегии, защита данных, валидация входа, TLS/HTTPS для коммуникаций.
+
+## 15. Золотые правила для ассистента
+1. Сначала изучай существующие решения, потом создавай новое.
+2. Интеграции остаются тонкими — только координация.
+3. EventBus используется для всех коммуникаций.
+4. Смена режимов выполняется через `mode.request`.
+5. Конфигурация хранится в `unified_config.yaml` и не дублируется.
+6. Соблюдай порядок SimpleModuleCoordinator.
+7. Любые ошибки проходят через error_handler.
+8. Логируй существенные действия, избегая чувствительных данных.
+9. Тестируй поведение через события.
+10. Поддерживай документацию в актуальном состоянии.
+11. **ВЕРСИОНИРОВАНИЕ: При загрузке кода на GitHub ВСЕГДА создавай новую версию через `./scripts/create_version_release.sh vX.Y.Z "Описание"`. НИКОГДА не изменяй текущий код напрямую - только через систему версионирования.**
