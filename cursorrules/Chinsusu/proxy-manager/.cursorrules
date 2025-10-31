@@ -1,0 +1,84 @@
+# Proxy-Manager Project Rules for Warp Agent
+
+This skeleton project contains a distributed proxy management system.
+
+## Quick Overview
+
+**Components:**
+- `proxy-manager/`: Go backend (SQLite, chi) - Central API
+- `proxy-server-local/`: Go agent - Distributed nodes  
+- `apps/web/`: React + TS (Vite) - Dashboard
+
+**Key Principle:** PM is source of truth. PSL nodes sync via heartbeats + idempotent config changes.
+
+**Stack:**
+- Go 1.22, SQLite, chi, BoltDB
+- Node.js 18+, React, TypeScript, Vite, Bootstrap
+
+## Essential Rules
+
+### 1. Coding Standards
+- **Go**: gofmt + golangci-lint, 120 cols, tabs, wrap errors with context
+- **TS/React**: Prettier + ESLint, 100 cols, no console.log in prod, hooks at top level
+- Both: Naming (PascalCase types, camelCase functions), comprehensive error handling
+
+### 2. Before Any Commit
+- Run tests: `go test ./...` (Go) or `npm test` (TS)
+- Run linting: `golangci-lint run` (Go) or `npm run lint` (TS)
+- Update docs if API/schema changes
+- Use Conventional Commits: `feat(scope): description`
+
+### 3. Security
+- Never log credentials; mask proxy addresses as `://***:***@`
+- No hardcoded secrets; use env vars (`PM_REGISTER_TOKEN`, `JWT_SECRET`)
+- Parameterized SQL queries only (prevent injection)
+- All inputs validated server-side
+
+### 4. Git Workflow
+- Branches: `main` (stable) ← `dev` (integration) ← `feature/*` (work)
+- PRs must pass: linting, tests, coverage thresholds, code review
+- No direct commits to `main`
+
+### 5. Implementation Pattern
+For new endpoints: OpenAPI spec → domain models → repo → service → handler → tests → migration → docs → commit
+
+### 6. Testing
+- Target 70%+ coverage for `svc/` layer (business logic)
+- 60%+ for `repo/` layer (data access)
+- Unit tests with mocks; integration tests with Docker Compose (TODO)
+
+## File Organization
+
+- `.warp/`: Detailed modular guidelines (use when implementing features)
+  - Start with `00-project-overview.md`
+  - Reference language-specific standards
+  - Check `06-implementation-guide.md` for step-by-step
+  - Avoid mistakes with `07-common-pitfalls.md`
+
+## Common Commands
+
+```bash
+# Go
+go run ./cmd/pm                # Start PM
+go run ./cmd/psl               # Start PSL
+go test ./...                  # Test all
+golangci-lint run              # Lint
+
+# React
+npm run dev                    # Dev server
+npm run build                  # Build
+npm test                       # Tests
+npm run lint                   # Lint & typecheck
+```
+
+## When Stuck
+
+1. Check `.warp/06-implementation-guide.md` for patterns
+2. Review `.warp/07-common-pitfalls.md` for anti-patterns
+3. Look at existing code in `internal/svc`, `internal/api` for examples
+4. Read relevant `README.md` files
+
+## Key Files
+- OpenAPI spec: `proxy-manager/openapi/openapi.yaml`
+- Project docs: `proxy-manager/docs/`
+- Full guidelines: `proxy-manager/docs/full-guidelines.md`
