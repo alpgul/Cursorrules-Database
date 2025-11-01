@@ -1,0 +1,77 @@
+# Development Rules
+
+> Always read every file under `prompts/` (and subdirectories) before starting work.
+
+## Code Style
+
+- TypeScript with strict types
+- Functional components only
+- Tailwind CSS for styling
+- Semicolons required
+- English comments only
+- No abbreviations in naming
+- No emojis in code
+
+## Project Structure
+
+- `app/` - Next.js App Router
+- `components/` - Shared UI components (with `index.ts` exports)
+- `features/` - Feature modules (`home`, `order`, etc.)
+- `contexts/` - Global state (CartContext, ToastContext)
+- `data/` - Product data
+- `public/products/` - WebP images
+- `locales/` - UI text content (i18n)
+- `scripts/` - Automation tools
+- `prompts/` - Documentation & operational prompts
+
+## Key Files
+
+- `data/products.ts` - Products with TypeScript types
+- `components/ProductCard.tsx` - Product display
+- `features/order/OrderModal.tsx` - Cart and checkout flow
+- `locales/siteContent.ts` - UI text (Russian, Spanish)
+
+## Technologies
+
+- Next.js 15.5.3
+- React 19.1.0
+- TypeScript 5
+- Tailwind CSS 4
+- WebP images (85% quality)
+
+## Before Coding
+
+1. Read `README.md` for quick overview
+2. Check `prompts/ARCHITECTURE.md` for structure
+3. Review `.development` for setup
+4. See `prompts/PRODUCTS_STRUCTURE.md` for data format
+
+## Common Commands
+
+```bash
+npm run dev      # Development server
+npm run build    # Production build
+npm run lint     # Code check
+```
+
+## Image Management
+
+```bash
+# Download from Tilda
+node scripts/download-tilda-images.cjs
+
+# Update product arrays
+node scripts/update-product-images.cjs
+```
+
+## Important
+
+- Always use TypeScript – no `any` types (prefer `unknown` + narrows)
+- Derive types from schemas when available
+- Prefer `type` aliases over `interface`
+- Local prop/handler types must be inlined at the point of use
+- Component props must be typed
+- Use Context for global state
+- Lazy load images
+- Test responsive design (16:10 aspect ratio)
+- No default exports outside Next.js `page.tsx` / `layout.tsx` / `route.ts`

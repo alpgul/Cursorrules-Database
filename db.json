@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 2251,
+  "size": 2256,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -31514,6 +31514,76 @@
         "htmlUrl": "https://github.com/adam0white/MessageAI/blob/d2e43aa331922dfcee91b1f44cbc8fb634e00e3c/.cursorrules",
         "size": 2.83,
         "timestamp": "2025-10-31T08:16:25.548Z"
+      }
+    ],
+    [
+      "yanivbarlev/startwebtools/.cursorrules.md",
+      {
+        "name": ".cursorrules.md",
+        "downloadUrl": "https://raw.githubusercontent.com/yanivbarlev/startwebtools/24b74140d94d6f9490a94beb7abd22fbf4510701/.cursorrules.md",
+        "repositoryId": 990569510,
+        "path": "yanivbarlev/startwebtools/.cursorrules.md",
+        "ownerName": "yanivbarlev",
+        "repositoryName": "startwebtools",
+        "htmlUrl": "https://github.com/yanivbarlev/startwebtools/blob/24b74140d94d6f9490a94beb7abd22fbf4510701/.cursorrules.md",
+        "size": 3.81,
+        "timestamp": "2025-11-01T08:14:03.889Z"
+      }
+    ],
+    [
+      "AlessandroLongo23/ATMDM/.cursorrules.md",
+      {
+        "name": ".cursorrules.md",
+        "downloadUrl": "https://raw.githubusercontent.com/AlessandroLongo23/ATMDM/8b2d5d5e2bee32000dcbc819c74017c6c0d8ee61/.cursorrules.md",
+        "repositoryId": 1083552477,
+        "path": "AlessandroLongo23/ATMDM/.cursorrules.md",
+        "ownerName": "AlessandroLongo23",
+        "repositoryName": "ATMDM",
+        "htmlUrl": "https://github.com/AlessandroLongo23/ATMDM/blob/8b2d5d5e2bee32000dcbc819c74017c6c0d8ee61/.cursorrules.md",
+        "size": 1.33,
+        "timestamp": "2025-11-01T08:14:04.175Z"
+      }
+    ],
+    [
+      "liszo/UAE-DS/.cursorrules.md",
+      {
+        "name": ".cursorrules.md",
+        "downloadUrl": "https://raw.githubusercontent.com/liszo/UAE-DS/e0da27367085785bdd83e35db3fcccaf9d0cd455/.cursorrules.md",
+        "repositoryId": 1012790157,
+        "path": "liszo/UAE-DS/.cursorrules.md",
+        "ownerName": "liszo",
+        "repositoryName": "UAE-DS",
+        "htmlUrl": "https://github.com/liszo/UAE-DS/blob/e0da27367085785bdd83e35db3fcccaf9d0cd455/.cursorrules.md",
+        "size": 9.72,
+        "timestamp": "2025-11-01T08:14:04.594Z"
+      }
+    ],
+    [
+      "Zennify/msb-fsc/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Zennify/msb-fsc/17f04843c73f39f977ae7f18d6a1431c984b447c/.cursorrules",
+        "repositoryId": 1082805832,
+        "path": "Zennify/msb-fsc/.cursorrules",
+        "ownerName": "Zennify",
+        "repositoryName": "msb-fsc",
+        "htmlUrl": "https://github.com/Zennify/msb-fsc/blob/17f04843c73f39f977ae7f18d6a1431c984b447c/.cursorrules",
+        "size": 10.98,
+        "timestamp": "2025-11-01T08:14:08.952Z"
+      }
+    ],
+    [
+      "ScalableJS/reina-de-tapas-next/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ScalableJS/reina-de-tapas-next/de2d406a65eb98071bbe2a2da034f8a035575001/.cursorrules",
+        "repositoryId": 1061391917,
+        "path": "ScalableJS/reina-de-tapas-next/.cursorrules",
+        "ownerName": "ScalableJS",
+        "repositoryName": "reina-de-tapas-next",
+        "htmlUrl": "https://github.com/ScalableJS/reina-de-tapas-next/blob/de2d406a65eb98071bbe2a2da034f8a035575001/.cursorrules",
+        "size": 1.94,
+        "timestamp": "2025-11-01T08:14:10.600Z"
       }
     ]
   ]
