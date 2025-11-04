@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 2256,
+  "size": 2260,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -31584,6 +31584,62 @@
         "htmlUrl": "https://github.com/ScalableJS/reina-de-tapas-next/blob/de2d406a65eb98071bbe2a2da034f8a035575001/.cursorrules",
         "size": 1.94,
         "timestamp": "2025-11-01T08:14:10.600Z"
+      }
+    ],
+    [
+      "AkhileshManda/director-ai/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/AkhileshManda/director-ai/01c19c633ffe93109dbb06f5d11e1d8d58e28b91/.cursorrules",
+        "repositoryId": 1064876080,
+        "path": "AkhileshManda/director-ai/.cursorrules",
+        "ownerName": "AkhileshManda",
+        "repositoryName": "director-ai",
+        "htmlUrl": "https://github.com/AkhileshManda/director-ai/blob/01c19c633ffe93109dbb06f5d11e1d8d58e28b91/.cursorrules",
+        "size": 12.21,
+        "timestamp": "2025-11-04T08:17:39.084Z"
+      }
+    ],
+    [
+      "ShiXiangYu1/cursor-rules-pugongying/rules/微信小程序/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ShiXiangYu1/cursor-rules-pugongying/fdeb87af3e891be80bf34daa63ff8f5b3b86dffc/rules/微信小程序/.cursorrules",
+        "repositoryId": 933260704,
+        "path": "ShiXiangYu1/cursor-rules-pugongying/rules/微信小程序/.cursorrules",
+        "ownerName": "ShiXiangYu1",
+        "repositoryName": "cursor-rules-pugongying",
+        "htmlUrl": "https://github.com/ShiXiangYu1/cursor-rules-pugongying/blob/fdeb87af3e891be80bf34daa63ff8f5b3b86dffc/rules/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/.cursorrules",
+        "size": 3.4,
+        "timestamp": "2025-11-04T08:17:40.296Z"
+      }
+    ],
+    [
+      "ShiXiangYu1/cursor-rules-pugongying/.cursor-rules/微信小程序/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ShiXiangYu1/cursor-rules-pugongying/fdeb87af3e891be80bf34daa63ff8f5b3b86dffc/.cursor-rules/微信小程序/.cursorrules",
+        "repositoryId": 933260704,
+        "path": "ShiXiangYu1/cursor-rules-pugongying/.cursor-rules/微信小程序/.cursorrules",
+        "ownerName": "ShiXiangYu1",
+        "repositoryName": "cursor-rules-pugongying",
+        "htmlUrl": "https://github.com/ShiXiangYu1/cursor-rules-pugongying/blob/fdeb87af3e891be80bf34daa63ff8f5b3b86dffc/.cursor-rules/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/.cursorrules",
+        "size": 3.4,
+        "timestamp": "2025-11-04T08:17:41.195Z"
+      }
+    ],
+    [
+      "ziyerr/yueyue/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ziyerr/yueyue/c2ba9e89712497c180bfb0057df45a6ab4a0cb48/.cursorrules",
+        "repositoryId": 998290254,
+        "path": "ziyerr/yueyue/.cursorrules",
+        "ownerName": "ziyerr",
+        "repositoryName": "yueyue",
+        "htmlUrl": "https://github.com/ziyerr/yueyue/blob/c2ba9e89712497c180bfb0057df45a6ab4a0cb48/.cursorrules",
+        "size": 3.4,
+        "timestamp": "2025-11-04T08:17:41.348Z"
       }
     ]
   ]
