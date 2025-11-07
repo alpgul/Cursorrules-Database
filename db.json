@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 2260,
+  "size": 2263,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -31640,6 +31640,48 @@
         "htmlUrl": "https://github.com/ziyerr/yueyue/blob/c2ba9e89712497c180bfb0057df45a6ab4a0cb48/.cursorrules",
         "size": 3.4,
         "timestamp": "2025-11-04T08:17:41.348Z"
+      }
+    ],
+    [
+      "wisemapping/wisemapping-frontend/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/wisemapping/wisemapping-frontend/d56004d70c297f77e65a0d93f6e718ac8df2228a/.cursorrules",
+        "repositoryId": 756189382,
+        "path": "wisemapping/wisemapping-frontend/.cursorrules",
+        "ownerName": "wisemapping",
+        "repositoryName": "wisemapping-frontend",
+        "htmlUrl": "https://github.com/wisemapping/wisemapping-frontend/blob/d56004d70c297f77e65a0d93f6e718ac8df2228a/.cursorrules",
+        "size": 7.83,
+        "timestamp": "2025-11-07T08:16:58.810Z"
+      }
+    ],
+    [
+      "graciolli-f/Rubric/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/graciolli-f/Rubric/21a7ef40cd653819c07bf04a3a8624a69412200f/.cursorrules",
+        "repositoryId": 1032216228,
+        "path": "graciolli-f/Rubric/.cursorrules",
+        "ownerName": "graciolli-f",
+        "repositoryName": "Rubric",
+        "htmlUrl": "https://github.com/graciolli-f/Rubric/blob/21a7ef40cd653819c07bf04a3a8624a69412200f/.cursorrules",
+        "size": 2.51,
+        "timestamp": "2025-11-07T08:16:58.939Z"
+      }
+    ],
+    [
+      "boneskull/impvol/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/boneskull/impvol/59c2ae791f5efd0b873fb01f3f35f8e1af45c58d/.cursorrules",
+        "repositoryId": 833822388,
+        "path": "boneskull/impvol/.cursorrules",
+        "ownerName": "boneskull",
+        "repositoryName": "impvol",
+        "htmlUrl": "https://github.com/boneskull/impvol/blob/59c2ae791f5efd0b873fb01f3f35f8e1af45c58d/.cursorrules",
+        "size": 4.8,
+        "timestamp": "2025-11-07T08:16:59.235Z"
       }
     ]
   ]
