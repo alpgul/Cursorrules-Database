@@ -1,0 +1,101 @@
+# Cursor Rules for IDEAS MEDIA COMPANY
+
+## Project Overview
+This is a full-stack photography business management system with:
+- Admin server (Node.js/Express/GraphQL)
+- Client server (Node.js/Express/GraphQL) 
+- Shared package (@ideal-photography/shared)
+- Admin client (React)
+- Client client (React)
+
+## Coding Standards
+
+### JavaScript/Node.js
+- Use ES6+ features (import/export, async/await, destructuring)
+- Prefer const/let over var
+- Use meaningful variable and function names
+- Add JSDoc comments for complex functions
+- Handle errors properly with try/catch blocks
+
+### React
+- Use functional components with hooks
+- Prefer custom hooks for reusable logic
+- Use proper prop types or TypeScript interfaces
+- Keep components small and focused
+- Use meaningful component and hook names
+
+### Database (MongoDB/Mongoose)
+- Use proper schema validation
+- Implement proper indexing strategies
+- Use transactions for multi-document operations
+- Handle connection errors gracefully
+
+### File Organization
+- Group related files in folders
+- Use consistent naming conventions (camelCase for JS, kebab-case for files)
+- Keep shared utilities in the shared package
+- Separate concerns (routes, models, middleware, etc.)
+
+### Import/Export
+- Use absolute imports for shared package: `@ideal-photography/shared/...`
+- Use relative imports for local files: `./component` or `../utils`
+- Group imports: external packages first, then local imports
+- Use named exports when possible
+
+### Error Handling
+- Always handle async operations with try/catch
+- Provide meaningful error messages
+- Log errors appropriately
+- Return proper HTTP status codes
+
+### Security
+- Validate all inputs
+- Use proper authentication and authorization
+- Sanitize user data
+- Use environment variables for sensitive data
+
+### Environment Files - CRITICAL PROTECTION
+- **NEVER** create, modify, or overwrite `.env`, `.env.*`, or `.env.*.local` files
+- **NEVER** use write, search_replace, or MultiEdit tools on environment files
+- **ONLY** read environment files to check configuration
+- Environment files contain sensitive data and are not version controlled
+- If environment variables need to be referenced, use the config files instead
+- If you need to check environment variables, ask the user to show them
+
+### Performance
+- Implement proper caching strategies
+- Use pagination for large datasets
+- Optimize database queries
+- Minimize bundle sizes
+
+## Project-Specific Rules
+
+### Shared Package
+- All shared serverutilities go in `@ideal-photography/shared`
+- Keep shared package versioned and published to npm
+- Don't use relative imports to shared folder
+- Test shared package changes before publishing
+
+### Database Models
+- Use proper Mongoose schemas with validation
+- Implement proper indexing
+- Use unique constraints where appropriate
+- Handle TTL indexes correctly
+
+### Permissions System
+- Use `getPermissionsForRole(role)` for permission assignment
+- Never hardcode permissions
+- Validate permissions on both client and server
+- Use proper permission constants
+
+### Deployment
+- Test locally with same package versions as production
+- Ensure all dependencies are in package.json
+- Use proper environment variables
+
+## Code Review Guidelines
+- Check for proper error handling
+- Verify security best practices
+- Ensure proper testing coverage
+- Validate performance implications
+- Check for code duplication
