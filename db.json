@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 2284,
+  "size": 2295,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -31976,6 +31976,160 @@
         "htmlUrl": "https://github.com/samkeshmiri/bodo/blob/ef3e3cc89835d5bfa2b3727b4d08e5fb9617557a/.cursorrules",
         "size": 6.95,
         "timestamp": "2025-11-10T08:19:15.939Z"
+      }
+    ],
+    [
+      "simstudioai/sim/apps/sim/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/simstudioai/sim/53150021e006158289261b8d00ed75199aef31bd/apps/sim/.cursorrules",
+        "repositoryId": 912559512,
+        "path": "simstudioai/sim/apps/sim/.cursorrules",
+        "ownerName": "simstudioai",
+        "repositoryName": "sim",
+        "htmlUrl": "https://github.com/simstudioai/sim/blob/53150021e006158289261b8d00ed75199aef31bd/apps/sim/.cursorrules",
+        "size": 20.18,
+        "timestamp": "2025-11-13T08:17:22.140Z"
+      }
+    ],
+    [
+      "crmhawkins/crm_generico/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/crmhawkins/crm_generico/cc0c6e60a48d6a4cd2f013fae6fb0ed6a0214918/.cursorrules",
+        "repositoryId": 887329051,
+        "path": "crmhawkins/crm_generico/.cursorrules",
+        "ownerName": "crmhawkins",
+        "repositoryName": "crm_generico",
+        "htmlUrl": "https://github.com/crmhawkins/crm_generico/blob/cc0c6e60a48d6a4cd2f013fae6fb0ed6a0214918/.cursorrules",
+        "size": 4.63,
+        "timestamp": "2025-11-13T08:17:22.953Z"
+      }
+    ],
+    [
+      "oimiragieo/LLM-RULES/.factory/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/oimiragieo/LLM-RULES/943ab19744b27b51b38877230956e410459f0565/.factory/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1088308337,
+        "path": "oimiragieo/LLM-RULES/.factory/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "oimiragieo",
+        "repositoryName": "LLM-RULES",
+        "htmlUrl": "https://github.com/oimiragieo/LLM-RULES/blob/943ab19744b27b51b38877230956e410459f0565/.factory/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "size": 2.32,
+        "timestamp": "2025-11-13T08:17:24.254Z"
+      }
+    ],
+    [
+      "oimiragieo/LLM-RULES/.cursor/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/oimiragieo/LLM-RULES/943ab19744b27b51b38877230956e410459f0565/.cursor/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "repositoryId": 1088308337,
+        "path": "oimiragieo/LLM-RULES/.cursor/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "ownerName": "oimiragieo",
+        "repositoryName": "LLM-RULES",
+        "htmlUrl": "https://github.com/oimiragieo/LLM-RULES/blob/943ab19744b27b51b38877230956e410459f0565/.cursor/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "size": 4.93,
+        "timestamp": "2025-11-13T08:17:24.534Z"
+      }
+    ],
+    [
+      "oimiragieo/LLM-RULES/.claude/rules/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/oimiragieo/LLM-RULES/943ab19744b27b51b38877230956e410459f0565/.claude/rules/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1088308337,
+        "path": "oimiragieo/LLM-RULES/.claude/rules/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "oimiragieo",
+        "repositoryName": "LLM-RULES",
+        "htmlUrl": "https://github.com/oimiragieo/LLM-RULES/blob/943ab19744b27b51b38877230956e410459f0565/.claude/rules/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+        "size": 6.25,
+        "timestamp": "2025-11-13T08:17:24.584Z"
+      }
+    ],
+    [
+      "oimiragieo/LLM-RULES/.claude/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/oimiragieo/LLM-RULES/943ab19744b27b51b38877230956e410459f0565/.claude/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "repositoryId": 1088308337,
+        "path": "oimiragieo/LLM-RULES/.claude/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "ownerName": "oimiragieo",
+        "repositoryName": "LLM-RULES",
+        "htmlUrl": "https://github.com/oimiragieo/LLM-RULES/blob/943ab19744b27b51b38877230956e410459f0565/.claude/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "size": 4.93,
+        "timestamp": "2025-11-13T08:17:25.436Z"
+      }
+    ],
+    [
+      "slightlyarrogant/raptor_project/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/slightlyarrogant/raptor_project/edd94e172ef1deab5ec7f8043daf292a960449d8/.cursorrules",
+        "repositoryId": 863142607,
+        "path": "slightlyarrogant/raptor_project/.cursorrules",
+        "ownerName": "slightlyarrogant",
+        "repositoryName": "raptor_project",
+        "htmlUrl": "https://github.com/slightlyarrogant/raptor_project/blob/edd94e172ef1deab5ec7f8043daf292a960449d8/.cursorrules",
+        "size": 4.58,
+        "timestamp": "2025-11-13T08:17:26.271Z"
+      }
+    ],
+    [
+      "detarus/xGirlfriend-front/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/detarus/xGirlfriend-front/cdd773e3dedb3712b110cf6d7f221aea3218ec69/.cursorrules",
+        "repositoryId": 1093785500,
+        "path": "detarus/xGirlfriend-front/.cursorrules",
+        "ownerName": "detarus",
+        "repositoryName": "xGirlfriend-front",
+        "htmlUrl": "https://github.com/detarus/xGirlfriend-front/blob/cdd773e3dedb3712b110cf6d7f221aea3218ec69/.cursorrules",
+        "size": 1.1,
+        "timestamp": "2025-11-13T08:17:26.769Z"
+      }
+    ],
+    [
+      "nguyenduckminh0810/DATN_Nhom7_2/.cursor/rules/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/nguyenduckminh0810/DATN_Nhom7_2/b1a6b0f66758061148fbbde2a1684256aef08685/.cursor/rules/.cursorrules",
+        "repositoryId": 1068215461,
+        "path": "nguyenduckminh0810/DATN_Nhom7_2/.cursor/rules/.cursorrules",
+        "ownerName": "nguyenduckminh0810",
+        "repositoryName": "DATN_Nhom7_2",
+        "htmlUrl": "https://github.com/nguyenduckminh0810/DATN_Nhom7_2/blob/b1a6b0f66758061148fbbde2a1684256aef08685/.cursor/rules/.cursorrules",
+        "size": 1.76,
+        "timestamp": "2025-11-13T08:17:27.544Z"
+      }
+    ],
+    [
+      "oimiragieo/LLM-RULES/.claude/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/oimiragieo/LLM-RULES/943ab19744b27b51b38877230956e410459f0565/.claude/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1088308337,
+        "path": "oimiragieo/LLM-RULES/.claude/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "oimiragieo",
+        "repositoryName": "LLM-RULES",
+        "htmlUrl": "https://github.com/oimiragieo/LLM-RULES/blob/943ab19744b27b51b38877230956e410459f0565/.claude/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+        "size": 7.48,
+        "timestamp": "2025-11-13T08:17:28.218Z"
+      }
+    ],
+    [
+      "oimiragieo/LLM-RULES/.factory/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/oimiragieo/LLM-RULES/943ab19744b27b51b38877230956e410459f0565/.factory/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1088308337,
+        "path": "oimiragieo/LLM-RULES/.factory/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "oimiragieo",
+        "repositoryName": "LLM-RULES",
+        "htmlUrl": "https://github.com/oimiragieo/LLM-RULES/blob/943ab19744b27b51b38877230956e410459f0565/.factory/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
+        "size": 7.48,
+        "timestamp": "2025-11-13T08:17:28.268Z"
       }
     ]
   ]

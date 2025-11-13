@@ -1,0 +1,30 @@
+# Cursor AI Assistant Rules
+
+## Testing and Build Commands
+
+**IMPORTANT: Do NOT run build or dev commands for testing purposes**
+
+- ❌ **NEVER** use `npm run build` for testing code changes
+- ❌ **NEVER** use `npm run dev` for testing code changes  
+- ❌ **NEVER** use `yarn build` or `yarn dev` for testing
+- ❌ **NEVER** start development servers to test functionality
+
+## What TO DO instead:
+
+- ✅ Use TypeScript checking: `npx tsc --noEmit --skipLibCheck [specific-files]` if needed
+- ✅ Use linting: `npx eslint [specific-files]` if needed
+- ✅ Let the USER test by running dev/build commands themselves
+- ✅ Focus on code implementation and correctness
+- ✅ Provide clear instructions to the user about what to test
+
+## Reasoning:
+
+The user should be in full control of when to start/stop development servers and build processes. These commands can:
+- Consume system resources
+- Interfere with existing running processes
+- Take unnecessary time
+- The user knows best when they want to test their changes
+
+## Exception:
+
+Only run build/dev commands if the user explicitly asks you to do so in their message. 
