@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 2295,
+  "size": 2302,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -32130,6 +32130,104 @@
         "htmlUrl": "https://github.com/oimiragieo/LLM-RULES/blob/943ab19744b27b51b38877230956e410459f0565/.factory/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules",
         "size": 7.48,
         "timestamp": "2025-11-13T08:17:28.268Z"
+      }
+    ],
+    [
+      "bigint/hey/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/bigint/hey/873d76d6154a32204a45d266eb59a2e66c131038/.cursorrules",
+        "repositoryId": 471728341,
+        "path": "bigint/hey/.cursorrules",
+        "ownerName": "bigint",
+        "repositoryName": "hey",
+        "htmlUrl": "https://github.com/bigint/hey/blob/873d76d6154a32204a45d266eb59a2e66c131038/.cursorrules",
+        "size": 3.73,
+        "timestamp": "2025-11-16T08:15:10.949Z"
+      }
+    ],
+    [
+      "tmptrash/find-myself/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/tmptrash/find-myself/a73ad38ee5863d3e10d279bfd8c0534eeae36a48/.cursorrules",
+        "repositoryId": 1074976153,
+        "path": "tmptrash/find-myself/.cursorrules",
+        "ownerName": "tmptrash",
+        "repositoryName": "find-myself",
+        "htmlUrl": "https://github.com/tmptrash/find-myself/blob/a73ad38ee5863d3e10d279bfd8c0534eeae36a48/.cursorrules",
+        "size": 14.68,
+        "timestamp": "2025-11-16T08:15:12.428Z"
+      }
+    ],
+    [
+      "herdeybayor/hng13-stage4-backend/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/herdeybayor/hng13-stage4-backend/3e4875aa2b4337ec6897a4942c6e52d2eb17a631/.cursorrules",
+        "repositoryId": 1095167446,
+        "path": "herdeybayor/hng13-stage4-backend/.cursorrules",
+        "ownerName": "herdeybayor",
+        "repositoryName": "hng13-stage4-backend",
+        "htmlUrl": "https://github.com/herdeybayor/hng13-stage4-backend/blob/3e4875aa2b4337ec6897a4942c6e52d2eb17a631/.cursorrules",
+        "size": 3.66,
+        "timestamp": "2025-11-16T08:15:17.958Z"
+      }
+    ],
+    [
+      "oimiragieo/LLM-RULES/.claude/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/oimiragieo/LLM-RULES/943ab19744b27b51b38877230956e410459f0565/.claude/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1088308337,
+        "path": "oimiragieo/LLM-RULES/.claude/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "oimiragieo",
+        "repositoryName": "LLM-RULES",
+        "htmlUrl": "https://github.com/oimiragieo/LLM-RULES/blob/943ab19744b27b51b38877230956e410459f0565/.claude/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "size": 6.32,
+        "timestamp": "2025-11-16T08:15:18.238Z"
+      }
+    ],
+    [
+      "oimiragieo/LLM-RULES/.claude/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/oimiragieo/LLM-RULES/943ab19744b27b51b38877230956e410459f0565/.claude/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1088308337,
+        "path": "oimiragieo/LLM-RULES/.claude/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "oimiragieo",
+        "repositoryName": "LLM-RULES",
+        "htmlUrl": "https://github.com/oimiragieo/LLM-RULES/blob/943ab19744b27b51b38877230956e410459f0565/.claude/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "size": 2.32,
+        "timestamp": "2025-11-16T08:15:18.366Z"
+      }
+    ],
+    [
+      "vukovicpavle/template/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/vukovicpavle/template/3798f35834144157fd58faf671793ec07406abd8/.cursorrules",
+        "repositoryId": 1064184584,
+        "path": "vukovicpavle/template/.cursorrules",
+        "ownerName": "vukovicpavle",
+        "repositoryName": "template",
+        "htmlUrl": "https://github.com/vukovicpavle/template/blob/3798f35834144157fd58faf671793ec07406abd8/.cursorrules",
+        "size": 8.6,
+        "timestamp": "2025-11-16T08:15:19.728Z"
+      }
+    ],
+    [
+      "mattmayer-ai/mwm/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/mattmayer-ai/mwm/49681d382971acdeb24fac0dbb449c7a090cc841/.cursorrules",
+        "repositoryId": 1095762623,
+        "path": "mattmayer-ai/mwm/.cursorrules",
+        "ownerName": "mattmayer-ai",
+        "repositoryName": "mwm",
+        "htmlUrl": "https://github.com/mattmayer-ai/mwm/blob/49681d382971acdeb24fac0dbb449c7a090cc841/.cursorrules",
+        "size": 6,
+        "timestamp": "2025-11-16T08:15:21.710Z"
       }
     ]
   ]
