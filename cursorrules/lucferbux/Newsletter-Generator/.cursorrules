@@ -1,0 +1,395 @@
+# RHOAI Newsletter Generator - AI Instructions
+
+This project generates HTML email newsletters from markdown content for the Red Hat OpenShift AI (RHOAI) Dashboard team.
+
+## ⚠️ CRITICAL: Gmail Compatibility Requirements
+
+**ALL generated HTML must be Gmail-compatible. This means:**
+
+### Allowed in Gmail:
+- ✅ Inline CSS only (style="..." attributes)
+- ✅ Table-based layouts (no flexbox, no CSS grid)
+- ✅ Web-safe fonts: Arial, Helvetica, sans-serif, Georgia, Times New Roman, Courier
+- ✅ Basic HTML tags: `<table>`, `<tr>`, `<td>`, `<p>`, `<h1-h6>`, `<a>`, `<img>`, `<span>`, `<center>`
+- ✅ HTTPS image URLs (publicly accessible - imgur.com recommended)
+- ✅ Background colors via inline styles AND bgcolor attribute
+- ✅ Simple CSS properties: color, font-size, padding, margin, background, border, text-align, line-height
+
+### Forbidden in Gmail:
+- ❌ External CSS files (`<link rel="stylesheet">`)
+- ❌ `<style>` tags in `<head>`
+- ❌ JavaScript (any `<script>` tags)
+- ❌ Forms (`<form>`, `<input>`, `<button>`)
+- ❌ Video/audio tags (`<video>`, `<audio>`)
+- ❌ CSS animations or transitions
+- ❌ Flexbox or CSS Grid
+- ❌ Position: absolute/fixed
+- ❌ CSS pseudo-elements (::before, ::after)
+- ❌ Custom fonts (@font-face)
+- ❌ SVG inline code (use PNG/JPG images instead)
+- ❌ Local file paths for images
+
+### Gmail Best Practices:
+1. **Maximum width: 600px** - Wider emails may be cut off
+2. **Use `<center>` tags** - Gmail sometimes strips CSS centering
+3. **Double-specify colors** - Use both `bgcolor="..."` and `style="background:..."`
+4. **Test in Gmail** - Always test before sending
+5. **Mobile-first** - Use `width:100%` and `max-width` for responsive images
+6. **Avoid nested tables >3 levels deep** - Gmail rendering issues
+7. **All images must be HTTPS** - HTTP images will be blocked
+
+---
+
+## Available Actions
+
+### `/business-achievements`
+**Purpose:** Generate a newsletter focused on business value, strategic outcomes, and management-level insights.
+
+**Target Audience:** Management, business units, executives, product owners
+
+**Content Focus:**
+- Business impact and ROI
+- Strategic advantages
+- Market positioning
+- Team collaboration benefits
+- Customer value propositions
+- High-level technical achievements framed as business wins
+
+**Tone:** Professional, strategic, results-oriented
+
+**Example Structure:**
+- Executive summary style opening
+- Business metrics and outcomes
+- Strategic implications
+- Future business opportunities
+
+---
+
+### `/tech-releases`
+**Purpose:** Generate a newsletter highlighting new features, improvements, and what's changed in the product release.
+
+**Target Audience:** Product users, engineers, developers, technical leads, DevOps teams
+
+**Content Focus:**
+- New features and capabilities (what users can do now)
+- User-facing improvements and enhancements
+- UI/UX changes and new workflows
+- Performance improvements (user impact)
+- Key highlights with screenshots/visuals
+- Getting started with new features
+- Practical examples and use cases
+
+**Tone:** Informative, enthusiastic, user-focused (not deeply technical)
+
+**Example Structure:**
+- "What's New" overview
+- Feature highlights with descriptions
+- Screenshots or visual examples
+- How users benefit from changes
+- Quick start or "try it now" sections
+- No deep code examples or architecture details
+
+---
+
+## Newsletter Generation Workflow
+
+When a user requests newsletter generation, follow these steps:
+
+### Step 1: Read and Analyze Markdown
+1. Read the markdown file from the `markdown/` folder
+2. Identify the key themes, topics, and content structure
+3. Extract any image URLs (must be from imgur.com or similar public hosting)
+4. **⚠️ Image Warning:** If images are found, verify they are publicly hosted (imgur.com recommended). Local or restricted URLs will not work in emails.
+
+### Step 2: Transform Content Based on Type
+
+**For `/business-achievements`:**
+- Summarize technical details into business value
+- Emphasize outcomes over implementation
+- Use metrics and impact statements
+- Frame features as competitive advantages
+- Highlight team collaboration and efficiency gains
+- Keep jargon minimal, explain acronyms
+
+**For `/tech-releases`:**
+- Focus on what's new and what users can do
+- Highlight user-facing features and improvements
+- Use clear, accessible language (avoid deep technical jargon)
+- Include screenshots or visual descriptions
+- Organize by feature area
+- Show practical use cases and benefits
+- Keep it exciting and engaging (changelog style)
+- Link to documentation for "learn more"
+- No code snippets unless absolutely necessary for clarity
+
+### Step 3: Generate Gmail-Compatible HTML Newsletter
+
+**CRITICAL: Every HTML element must follow Gmail compatibility rules!**
+
+1. Use the template from `templates/rhoai-template.html` (or user-specified template)
+2. Replace placeholders:
+   - `{{TITLE}}` - Page title for browser tab
+   - `{{HEADER_TITLE}}` - Main newsletter heading (H1)
+   - `{{HEADER_SUBTITLE}}` - Supporting paragraph under heading
+   - `{{CONTENT_SECTIONS}}` - All content sections in HTML
+
+3. **Gmail-Compatible Content Section Components:**
+
+**Section with Title & Description:**
+```html
+<tr>
+    <td style="padding:20px 30px 10px 30px;">
+        <h2 style="font-family:Arial, Helvetica, sans-serif;font-size:20px;margin:0;font-weight:700;color:#2c3e50;text-align:center;">Section Title</h2>
+        <p style="font-family:Arial, Helvetica, sans-serif;margin:10px 0 0 0;font-size:15px;line-height:22px;color:#444746;text-align:center;">Section description text</p>
+    </td>
+</tr>
+```
+
+**Card/Highlight Box (with bgcolor attribute for Gmail):**
+```html
+<tr>
+    <td style="padding:10px 30px;">
+        <table role="presentation" style="width:100%;border-collapse:collapse;border:0;border-spacing:0;margin-bottom:15px;">
+            <tr>
+                <td style="padding:20px;background:#f2f2f2;border-radius:12px;" bgcolor="#f2f2f2">
+                    <span style="font-size:32px;margin-bottom:10px;display:block;">🎯</span>
+                    <h3 style="font-family:Arial, Helvetica, sans-serif;font-size:16px;margin:0 0 10px 0;font-weight:700;color:#2c3e50;">Card Title</h3>
+                    <p style="font-family:Arial, Helvetica, sans-serif;margin:0;font-size:14px;line-height:20px;color:#3c4043;">Card content paragraph text goes here.</p>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+```
+
+**Image Section (MUST use HTTPS URLs):**
+```html
+<tr>
+    <td style="padding:10px 30px;">
+        <table role="presentation" style="width:100%;border-collapse:collapse;border:0;border-spacing:0;margin-bottom:20px;">
+            <tr>
+                <td style="padding:15px;background:#f2f2f2;border-radius:12px;" bgcolor="#f2f2f2">
+                    <p style="font-family:Arial, Helvetica, sans-serif;font-size:16px;font-weight:700;color:#2c3e50;margin:0 0 10px 0;text-align:center;">Image Caption</p>
+                    <table role="presentation" style="width:100%;border-collapse:collapse;border:0;border-spacing:0;">
+                        <tr>
+                            <td align="center" style="padding:10px;">
+                                <img src="https://i.imgur.com/EXAMPLE.png" 
+                                     alt="Descriptive alt text" 
+                                     width="540" 
+                                     style="display:block;width:100%;max-width:540px;height:auto;border:2px solid #dfe1e5;border-radius:8px;" />
+                            </td>
+                        </tr>
+                    </table>
+                    <p style="font-family:Arial, Helvetica, sans-serif;margin:10px 0 0 0;font-size:13px;line-height:18px;color:#3c4043;text-align:center;">Image description or context</p>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+```
+
+**List Items (use table rows, not <ul>/<li>):**
+```html
+<tr>
+    <td style="padding:10px 30px;">
+        <table role="presentation" style="width:100%;border-collapse:collapse;border:0;border-spacing:0;">
+            <tr>
+                <td style="padding:5px 0;">
+                    <span style="font-family:Arial, Helvetica, sans-serif;font-size:14px;color:#3c4043;">✓ First item</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding:5px 0;">
+                    <span style="font-family:Arial, Helvetica, sans-serif;font-size:14px;color:#3c4043;">✓ Second item</span>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+```
+
+**Links (always use full HTTPS URLs):**
+```html
+<a href="https://example.com/full-path" style="color:#1a73e8;text-decoration:underline;font-family:Arial, Helvetica, sans-serif;">Link Text</a>
+```
+
+4. **Gmail Validation Checklist Before Saving:**
+   - [ ] All styles are inline (no `<style>` tags)
+   - [ ] Only table-based layout (no flexbox/grid)
+   - [ ] All fonts are web-safe (Arial, Helvetica, sans-serif)
+   - [ ] Background colors have both `style="background:..."` AND `bgcolor="..."`
+   - [ ] All image URLs are HTTPS (https://i.imgur.com/...)
+   - [ ] No JavaScript anywhere
+   - [ ] No forms or buttons
+   - [ ] Maximum width 600px
+   - [ ] All links have full HTTPS URLs
+   - [ ] No SVG inline code
+   - [ ] No external CSS files
+
+5. Save the generated HTML to the `newsletters/` folder (or user-specified output folder)
+
+### Step 4: Provide Output Summary
+
+After generation, provide:
+1. ✅ Confirmation of file creation with path
+2. 📋 Brief content summary
+3. 🖼️ Image URL check results (if any)
+4. ⚠️ Gmail compatibility confirmation
+5. 📧 Next steps: How to preview and send via Gmail
+
+---
+
+## Example User Prompts
+
+**Business Newsletter:**
+```
+/business-achievements
+
+Generate a business-focused newsletter about the RHOAI 2.35 release.
+Use markdown file: markdown/rhoai-2.35-release.md
+Template: templates/rhoai-template.html (default)
+Output: newsletters/rhoai-2.35-business.html
+
+Focus on the modular architecture benefits for business efficiency.
+```
+
+**Feature Highlights Newsletter:**
+```
+/tech-releases
+
+Create a "What's New" feature highlights newsletter for RHOAI 3.0.
+Source: markdown/rhoai-3.0-sprint-demo.md
+Output: newsletters/rhoai-3.0-features.html
+
+Focus on:
+- New user-facing features and capabilities
+- UI improvements and new workflows
+- What users can do now that they couldn't before
+- Include visual descriptions for screenshots
+- Keep it exciting and accessible (changelog style)
+```
+
+## Best Practices
+
+### Content
+- Keep newsletters concise (3-5 main sections max)
+- Use bullet points for lists (implemented as table rows)
+- Highlight key takeaways
+- Include clear calls-to-action when relevant
+
+### Images
+- **Always use publicly hosted images** (imgur.com recommended)
+- Optimize images to < 300KB each
+- Use descriptive alt text
+- Maintain 16:9 aspect ratio where possible
+- Recommended size: 540px width
+- **MUST be HTTPS URLs**
+
+### Gmail-Compatible Design
+- **Stick to the template's color scheme:**
+  - Background: #f2f2f2 (grey)
+  - White content: #ffffff
+  - Primary text: #1f1f1f
+  - Secondary text: #444746
+  - Accent: #2c3e50 (dark grey-blue)
+- **Use emojis sparingly** (1 per card/section max)
+- **Maintain consistent spacing** between sections
+- **Double-specify backgrounds:** Both `bgcolor="..."` and `style="background:..."`
+- **Test centering:** Use both `<center>` tags and `text-align:center`
+
+### Gmail Rendering Rules
+- **No external CSS files** - Everything must be inline
+- **All styles must be inline** - Within `style="..."` attributes
+- **No JavaScript** - Gmail strips all scripts
+- **No `<button>` elements** - Use `<a>` tags styled as buttons
+- **Use web-safe fonts** - Arial, Helvetica, sans-serif only
+- **Images must be HTTPS URLs** - No local paths
+- **Table-based layout only** - No flexbox or grid
+- **Maximum width 600px** - Wider content may be cut off
+- **Test in Gmail** - Always verify rendering before sending
+
+---
+
+## Validation Checklist
+
+Before finalizing a newsletter, verify:
+- [ ] All placeholders replaced
+- [ ] Images are publicly accessible HTTPS URLs
+- [ ] No broken HTML tags
+- [ ] Consistent formatting and spacing
+- [ ] Content matches the requested type (business vs. technical)
+- [ ] File saved to correct output path
+- [ ] Footer includes "Dashboard Platform Team"
+- [ ] **ALL styles are inline (no `<style>` tags)**
+- [ ] **Only table-based layout used**
+- [ ] **All fonts are web-safe (Arial, Helvetica, sans-serif)**
+- [ ] **No JavaScript present**
+- [ ] **No forms or buttons**
+- [ ] **All images are HTTPS**
+- [ ] **Maximum width 600px**
+
+---
+
+## Error Handling
+
+**If markdown file not found:**
+- List available markdown files in `markdown/` folder
+- Ask user to verify file name
+
+**If image URLs are invalid:**
+- Warn the user that local/private images won't work in Gmail
+- Suggest using imgur.com with HTTPS
+- Provide placeholder text in the HTML
+
+**If template not found:**
+- Fall back to `templates/rhoai-template.html`
+- Notify user of the fallback
+
+**If non-Gmail-compatible HTML detected:**
+- Flag the issue immediately
+- Explain what needs to be fixed
+- Provide Gmail-compatible alternative
+
+---
+
+## Post-Generation Instructions
+
+After generating the newsletter, remind the user:
+
+1. **Preview the newsletter:**
+   - Open the HTML file in a browser
+   - Use VS Code Live Server or Cursor's preview feature
+   - Check that all images load correctly
+   - Verify layout is centered and width is 600px
+
+2. **Send via Gmail:**
+   - See `docs/gmail-guide.md` for detailed instructions
+   - Quick method: Open HTML in browser → Cmd+A → Cmd+C → Paste in Gmail compose
+   - **Important:** Copy from browser preview, NOT from source code
+
+3. **Test before sending:**
+   - Send to yourself first
+   - Check on desktop Gmail web interface
+   - Check on mobile Gmail app
+   - Verify images load in email client
+   - Verify layout is centered
+   - Test all links
+
+4. **Gmail Compatibility Check:**
+   - Open in Gmail and verify no layout breaks
+   - Check that colors and fonts display correctly
+   - Ensure images are not blocked (HTTPS only)
+   - Confirm mobile responsiveness
+
+---
+
+## Support
+
+**Example Files:**
+- `markdown/example-business-newsletter.md` - Business/management focused newsletter example
+- `markdown/example-feature-newsletter.md` - Feature highlights/changelog newsletter example
+
+**For questions or issues:**
+- Check `docs/usage-guide.md` for detailed instructions
+- Review `CONTRIBUTING.md` for contribution guidelines
+- Contact: Dashboard Platform Team

@@ -1,0 +1,297 @@
+# Refine Framework Coding Rules
+
+## 🎯 Nguyên tắc chung
+**LUÔN ƯU TIÊN SỬ DỤNG REFINE COMPONENTS VÀ HOOKS TRƯỚC KHI DÙNG CÁC THƯ VIỆN KHÁC**
+
+Dự án này sử dụng Refine framework với Ant Design UI. Tất cả code phải tuân thủ các quy tắc sau:
+
+---
+
+## 📦 Navigation & Routing
+
+### ❌ KHÔNG BAO GIỜ:
+```tsx
+import { useRouter } from "next/navigation";
+router.push("/path");
+```
+
+### ✅ PHẢI DÙNG:
+```tsx
+import { useNavigation } from "@refinedev/core";
+
+const { create, edit, list, show } = useNavigation();
+create("landing_pages");        // Navigate to create page
+edit("landing_pages", "123");    // Navigate to edit page
+list("landing_pages");           // Navigate to list page
+show("landing_pages", "123");    // Navigate to show page
+```
+
+### ✅ Cho Links:
+```tsx
+import { useLink } from "@refinedev/core";
+
+const LinkTo = useLink();
+<LinkTo to="/landing-pages">Landing Pages</LinkTo>
+```
+
+---
+
+## 📝 Forms
+
+### ❌ KHÔNG BAO GIỜ:
+```tsx
+import { Form } from "antd";
+const [form] = Form.useForm();
+```
+
+### ✅ PHẢI DÙNG:
+```tsx
+import { useForm } from "@refinedev/antd";
+
+const { formProps, saveButtonProps, onFinish } = useForm({
+  resource: "landing_pages",
+});
+
+<Form {...formProps} onFinish={onFinish}>
+  {/* form fields */}
+</Form>
+```
+
+---
+
+## 📊 Lists & Tables
+
+### ❌ KHÔNG BAO GIỜ:
+```tsx
+const [data, setData] = useState([]);
+useEffect(() => {
+  // fetch data manually
+}, []);
+```
+
+### ✅ PHẢI DÙNG:
+```tsx
+import { useTable } from "@refinedev/antd";
+
+const { tableProps } = useTable({
+  resource: "landing_pages",
+  syncWithLocation: true,
+});
+```
+
+---
+
+## 🎨 CRUD Pages
+
+### ❌ KHÔNG BAO GIỜ:
+```tsx
+// Custom page structure
+export default function CreatePage() {
+  return <div>...</div>;
+}
+```
+
+### ✅ PHẢI DÙNG:
+```tsx
+import { Create, Edit, List, Show } from "@refinedev/antd";
+
+// Create Page
+export default function LandingPageCreate() {
+  const { formProps, saveButtonProps } = useForm({
+    resource: "landing_pages",
+  });
+  
+  return (
+    <Create saveButtonProps={saveButtonProps}>
+      <Form {...formProps}>
+        {/* form fields */}
+      </Form>
+    </Create>
+  );
+}
+
+// Edit Page
+export default function LandingPageEdit() {
+  const { formProps, saveButtonProps } = useForm({
+    resource: "landing_pages",
+  });
+  
+  return (
+    <Edit saveButtonProps={saveButtonProps}>
+      <Form {...formProps}>
+        {/* form fields */}
+      </Form>
+    </Edit>
+  );
+}
+
+// List Page
+export default function LandingPageList() {
+  const { tableProps } = useTable({
+    resource: "landing_pages",
+  });
+  
+  return (
+    <List>
+      <Table {...tableProps} />
+    </List>
+  );
+}
+```
+
+---
+
+## 🔘 Action Buttons
+
+### ❌ KHÔNG BAO GIỜ:
+```tsx
+<Button onClick={() => router.push(`/edit/${id}`)}>Edit</Button>
+<Button onClick={() => deleteItem(id)}>Delete</Button>
+```
+
+### ✅ PHẢI DÙNG:
+```tsx
+import { EditButton, DeleteButton, ShowButton } from "@refinedev/antd";
+
+<EditButton recordItemId={record.id} />
+<DeleteButton recordItemId={record.id} />
+<ShowButton recordItemId={record.id} />
+```
+
+---
+
+## 🔍 Data Fetching
+
+### ❌ KHÔNG BAO GIỜ:
+```tsx
+const [data, setData] = useState(null);
+useEffect(() => {
+  fetch("/api/data").then(res => res.json()).then(setData);
+}, []);
+```
+
+### ✅ PHẢI DÙNG:
+```tsx
+import { useList, useShow, useCreate, useUpdate, useDelete } from "@refinedev/core";
+
+// List data
+const { data, isLoading } = useList({
+  resource: "landing_pages",
+});
+
+// Show single record
+const { data, isLoading } = useShow({
+  resource: "landing_pages",
+  id: "123",
+});
+
+// Create
+const { mutate: create } = useCreate();
+create({ resource: "landing_pages", values: { title: "New" } });
+
+// Update
+const { mutate: update } = useUpdate();
+update({ resource: "landing_pages", id: "123", values: { title: "Updated" } });
+
+// Delete
+const { mutate: delete } = useDelete();
+delete({ resource: "landing_pages", id: "123" });
+```
+
+---
+
+## 🔐 Authentication
+
+### ❌ KHÔNG BAO GIỜ:
+```tsx
+// Direct Supabase calls for auth
+const { data: { user } } = await supabase.auth.getUser();
+```
+
+### ✅ PHẢI DÙNG:
+```tsx
+import { useGetIdentity, useLogout } from "@refinedev/core";
+
+const { data: user } = useGetIdentity();
+const { mutate: logout } = useLogout();
+```
+
+---
+
+## 🎯 Resource Configuration
+
+**LUÔN ĐẢM BẢO RESOURCE ĐƯỢC ĐỊNH NGHĨA TRONG `src/app/layout.tsx`:**
+
+```tsx
+<Refine
+  resources={[
+    {
+      name: "landing_pages",
+      list: "/landing-pages",
+      create: "/landing-pages/create",
+      edit: "/landing-pages/edit/:id",
+      meta: {
+        icon: <GlobalOutlined />,
+        canDelete: true,
+      },
+    },
+  ]}
+>
+```
+
+---
+
+## 📚 Import Paths
+
+### ✅ Đúng:
+```tsx
+// Refine Core
+import { useNavigation, useList, useShow } from "@refinedev/core";
+
+// Refine Ant Design
+import { useForm, useTable, Create, Edit, List } from "@refinedev/antd";
+import { EditButton, DeleteButton } from "@refinedev/antd";
+
+// Ant Design (chỉ dùng cho UI components)
+import { Button, Form, Input, Table } from "antd";
+```
+
+### ❌ Sai:
+```tsx
+// KHÔNG import Next.js router cho navigation
+import { useRouter } from "next/navigation";
+```
+
+---
+
+## ⚠️ Lưu ý đặc biệt
+
+1. **KHÔNG BAO GIỜ** sử dụng `useRouter` từ Next.js cho navigation trong components
+2. **LUÔN** sử dụng `useNavigation` từ `@refinedev/core` cho tất cả navigation
+3. **LUÔN** sử dụng `useForm`, `useTable` từ Refine thay vì tự quản lý state
+4. **LUÔN** wrap CRUD pages trong `Create`, `Edit`, `List`, `Show` components
+5. **LUÔN** sử dụng Refine buttons (`EditButton`, `DeleteButton`) thay vì custom buttons
+6. **LUÔN** sử dụng Refine hooks (`useList`, `useShow`, `useCreate`, etc.) cho data operations
+
+---
+
+## 🔍 Checklist trước khi commit
+
+- [ ] Đã thay thế tất cả `useRouter` bằng `useNavigation`
+- [ ] Đã sử dụng `useForm` cho tất cả forms
+- [ ] Đã sử dụng `useTable` cho tất cả lists/tables
+- [ ] Đã wrap CRUD pages trong Refine components (`Create`, `Edit`, `List`, `Show`)
+- [ ] Đã sử dụng Refine buttons (`EditButton`, `DeleteButton`, `ShowButton`)
+- [ ] Đã sử dụng Refine hooks cho data operations
+- [ ] Resource đã được định nghĩa trong `layout.tsx`
+- [ ] Không có direct Supabase calls cho auth (dùng `useGetIdentity`)
+
+---
+
+## 📖 Tài liệu tham khảo
+
+- Refine Core: https://refine.dev/docs/core/
+- Refine Ant Design: https://refine.dev/docs/ui-frameworks/antd/
+- Refine Navigation: https://refine.dev/docs/routing/hooks/use-navigation/
+- Refine Data Hooks: https://refine.dev/docs/data/hooks/use-list/
+

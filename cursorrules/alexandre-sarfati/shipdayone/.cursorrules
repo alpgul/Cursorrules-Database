@@ -1,0 +1,271 @@
+# AI Assistant Guidelines
+
+## Project Identity
+
+Next.js 15 SaaS boilerplate template. Keep code generic, customizable, and well-documented.
+
+## Critical Constraints
+
+- **pnpm only** - Never suggest npm/yarn
+- **shadcn CLI** - `components/ui/` must stay flat (CLI-managed)
+- **URLs use filename** - `/articles/{mdx-filename}` NOT frontmatter slug
+- **After content changes** - Always run `pnpm generate:pathnames`
+- **i18n structure** - Locale-first: `messages/{locale}/{category}.json`
+- **Server Components default** - Only add `"use client"` when needed
+- **No Prisma/Tinybird cloud updates** - Without explicit permission
+- **Icons as SVGs** - Never install icon packages (lucide-react, react-icons, etc). Add SVG code directly to `components/icons/custom-icons.tsx`
+
+## UI/UX Guidelines
+
+### Typography & Headlines
+
+- Keep headlines clear, concise, and benefit-driven
+- Use sentence case for natural reading flow
+- Avoid jargon and overly creative phrasing
+- Focus on user outcomes, not features
+- Headlines should immediately communicate value
+- Example: "Brew artisanal coffee without a barista" (clear, benefit-focused)
+
+### Paragraphs & Content Structure
+
+- **Maximum length**: 2-3 sentences per paragraph
+- Keep paragraphs short and scannable
+- Use line breaks generously between paragraphs
+- Avoid walls of text - break up dense content
+- Lead with the most important information
+- Use concrete examples over abstract concepts
+- Write conversationally, as if explaining to a friend
+
+### Spacing & Layout
+
+- Use generous white space between content sections
+- Maintain consistent spacing patterns throughout the design
+- Create clear visual relationships through proximity
+- Group related content together with proper spacing
+- Use sectional breaks to separate different content areas
+- Align elements consistently to create visual order
+- Guide users with clear visual flow (top to bottom, left to right)
+
+### Color & State Communication
+
+- **Red/Pink backgrounds**: Errors, warnings, critical actions, "don't" examples
+- **Green backgrounds**: Success states, positive outcomes, confirmations, "do" examples
+- Use color purposefully to communicate meaning, not decoration
+- Maintain sufficient contrast for accessibility
+- Never rely on color alone to convey information
+- Avoid using red/green purely for decorative purposes
+
+### Card Design Patterns
+
+- **Structure**: Icon → Headline → Brief Description (1-2 lines maximum)
+- Cards should have clear, descriptive titles
+- Keep descriptions concise and benefit-focused
+- Icons should support, not replace, text labels
+- Use icons that reinforce the message
+- Maintain consistent card sizing within groups
+- Ensure adequate padding inside cards
+
+### Call-to-Action (CTA) Guidelines
+
+- Be specific and action-oriented: "Get rich quick" not "Learn more"
+- Focus on outcomes, not generic actions
+- Use only one primary CTA per section
+- Place CTAs where they're immediately visible
+- Make CTAs stand out with sufficient contrast
+- Button text should describe what happens next
+- Avoid vague language like "Click here" or "Get started"
+
+### Visual Hierarchy Principles
+
+- Most important content should be visually prominent
+- Use size, weight, and spacing to establish hierarchy
+- Guide the eye with intentional flow patterns
+- Place critical CTAs above the fold
+- Use consistent heading levels (H1 → H2 → H3)
+- Make scanning easy with clear structure
+- Don't bury important information
+
+### Copy Best Practices
+
+**Do:**
+
+- Write for clarity and scannability
+- Use active voice and direct language
+- Use examples to illustrate concepts
+- Test copy with real user scenarios
+- Use bullet points for lists
+- Make value propositions obvious
+- Use "you" language to speak directly to users
+- Be specific about what users can accomplish
+- Lead with benefits before explaining how it works
+- Avoid marketing fluff and buzzwords
+
+**Don't:**
+
+- Use multiple competing CTAs in one section
+- Rely on creativity over clarity
+- Write long, complex sentences
+- Hide important information in dense paragraphs
+- Use passive voice unnecessarily
+- Create ambiguous or clever headlines that obscure meaning
+- Add features without explaining benefits
+- Use jargon or technical terms without explanation
+- Make users work to understand your message
+
+### Component Interaction States
+
+- All interactive elements must have clear hover states
+- Focus states should be clearly visible for accessibility
+- Disabled states should be visually distinct
+- Loading states should provide feedback
+- Error states should be immediately noticeable (red/pink)
+- Success states should be clear and positive (green)
+
+### Information Architecture
+
+- Structure content from general to specific
+- Use progressive disclosure for complex features
+- Provide clear navigation paths
+- Make call-to-actions contextually relevant
+- Group related features logically
+- Limit choices per section to avoid decision paralysis
+- Create clear entry points for user journeys
+
+### Content Writing Tone
+
+- Conversational and friendly, not corporate
+- Direct and straightforward
+- Benefit-driven and user-focused
+- Professional but approachable
+- Confident without being arrogant
+- Helpful and educational
+- Avoid buzzwords and marketing speak
+
+## Project Structure (Recently Reorganized)
+
+```
+├── app/[locale]/(app)/          # Internationalized routes
+├── components/
+│   ├── ui/                      # shadcn only (CLI-managed, flat)
+│   ├── primitives/              # Reusable (was base/)
+│   │   ├── typography/          # H1, H2, Paragraph, Label
+│   │   ├── layout/              # Section, HeroSection
+│   │   └── media/               # Avatar
+│   ├── features/                # Feature-specific
+│   │   ├── blog/
+│   │   ├── landing/
+│   │   ├── footer/
+│   │   └── legal/
+│   ├── mdx/                     # MDX content components
+│   │   ├── content/             # Landing & pricing
+│   │   ├── interactive/         # Faq, Steps, Tally
+│   │   ├── media/               # Figure, Pre
+│   │   ├── typography/          # Highlight, Quote, LinkCards
+│   │   ├── sections/            # InfoSection
+│   │   └── structured-data/     # SEO components
+│   ├── common/                  # Shared (Logo, LocaleLayout)
+│   └── animations/              # MagicUI (was magicui/)
+├── lib/
+│   ├── mdx/
+│   │   ├── plugins/             # All remark/rehype plugins
+│   │   ├── utils/               # MDX utilities
+│   │   └── config.ts            # Main MDX config (was mdx.ts)
+│   └── analytics/               # pimms, tracking
+├── config/                      # All config files
+│   ├── constants.ts             # App constants (was app/constants.ts)
+│   └── redirects.ts             # Redirects (was root redirect.ts)
+├── messages/{locale}/           # i18n (locale-first)
+├── scripts/
+│   ├── content/                 # generatePathnames, validate-internal-links
+│   └── assets/                  # optimize-svgs
+└── types/                       # Type definitions
+```
+
+## Import Patterns (Use These)
+
+```typescript
+// Primitives (reusable building blocks)
+import { H1 } from "@/components/primitives/typography/h1";
+import { Section } from "@/components/primitives/layout/section";
+
+// Features (domain-specific)
+import BlogCard from "@/components/features/blog/blog-card";
+import Header from "@/components/features/landing/header";
+
+// MDX components
+import { Faq } from "@/components/mdx/interactive/Faq";
+import { Figure } from "@/components/mdx/media/Figure";
+
+// Common shared
+import Logo from "@/components/common/logo";
+
+// Config & Lib
+import { WEB_URL, AUTHORS } from "@/config/constants";
+import { getPages, formatDate } from "@/lib/mdx/config";
+import { pimms } from "@/lib/analytics/pimms";
+```
+
+## URL Routing Rules
+
+**CRITICAL**: URLs are based on MDX **filename**, NOT frontmatter slug.
+
+```
+✅ /articles/getting-started      (from getting-started.mdx)
+❌ /articles/some-slug-value       (from slug: "some-slug-value")
+```
+
+After adding/removing content:
+
+```bash
+pnpm generate:pathnames  # Updates i18n/pathnames.ts
+```
+
+## Content Organization
+
+```
+content/{locale}/
+├── blog/        → /articles/{filename}
+├── legal/       → /legal/{filename}
+└── landings/    → configured in i18n/pathnames.ts
+```
+
+## Key File Locations
+
+- **Constants**: `config/constants.ts` (not `app/constants.ts`)
+- **Redirects**: `config/redirects.ts` (not root `redirect.ts`)
+- **i18n messages**: `messages/en/*.json` (locale-first, not category-first)
+- **MDX config**: `lib/mdx/config.ts` (not `lib/mdx.ts`)
+
+## Common Patterns
+
+### Adding Components
+
+1. Choose directory: `primitives/`, `features/`, `mdx/`, `common/`
+2. Use TypeScript interfaces for props
+3. Export types for reusability
+
+### File Naming
+
+- Components: `PascalCase.tsx`
+- Utilities: `camelCase.ts`
+- Config: `kebab-case.ts`
+- Content: `kebab-case.mdx`
+
+### TypeScript
+
+- Strict mode enabled
+- Always type parameters and returns
+- Avoid `any`
+
+## Development
+
+- **Local dev server**: `http://localhost:3001` (port 3001, not default 3000)
+
+## Non-Obvious Commands
+
+```bash
+pnpm generate:pathnames    # After content changes (IMPORTANT)
+pnpm links:fix              # Auto-fix broken internal links
+pnpm links:validate         # Check internal links
+pnpm build:analyze          # Analyze bundle size
+```
