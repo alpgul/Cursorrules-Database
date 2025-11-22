@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 2326,
+  "size": 2335,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -32564,6 +32564,132 @@
         "htmlUrl": "https://github.com/alexandre-sarfati/shipdayone/blob/72bbbc4e48eba9bc180585c5e07ae34d471298af/.cursorrules",
         "size": 9.36,
         "timestamp": "2025-11-19T08:17:10.774Z"
+      }
+    ],
+    [
+      "zhou-en/turf_portal/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/zhou-en/turf_portal/93e22890649e9cd7afb67bcd2e8b419fff483c1f/.cursorrules",
+        "repositoryId": 293379887,
+        "path": "zhou-en/turf_portal/.cursorrules",
+        "ownerName": "zhou-en",
+        "repositoryName": "turf_portal",
+        "htmlUrl": "https://github.com/zhou-en/turf_portal/blob/93e22890649e9cd7afb67bcd2e8b419fff483c1f/.cursorrules",
+        "size": 11.1,
+        "timestamp": "2025-11-22T08:15:22.941Z"
+      }
+    ],
+    [
+      "johnmay10000/aats/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/johnmay10000/aats/d3fd6248114045e1ec6f0b5e3957bac2181fda42/.cursorrules",
+        "repositoryId": 1100262322,
+        "path": "johnmay10000/aats/.cursorrules",
+        "ownerName": "johnmay10000",
+        "repositoryName": "aats",
+        "htmlUrl": "https://github.com/johnmay10000/aats/blob/d3fd6248114045e1ec6f0b5e3957bac2181fda42/.cursorrules",
+        "size": 9.16,
+        "timestamp": "2025-11-22T08:15:25.196Z"
+      }
+    ],
+    [
+      "jasonzhouu/AIFinance/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/jasonzhouu/AIFinance/425b31825e148389a5c8530abd5fe5a3a8a64377/.cursorrules",
+        "repositoryId": 868150303,
+        "path": "jasonzhouu/AIFinance/.cursorrules",
+        "ownerName": "jasonzhouu",
+        "repositoryName": "AIFinance",
+        "htmlUrl": "https://github.com/jasonzhouu/AIFinance/blob/425b31825e148389a5c8530abd5fe5a3a8a64377/.cursorrules",
+        "size": 1.91,
+        "timestamp": "2025-11-22T08:15:27.058Z"
+      }
+    ],
+    [
+      "clmntgbr/substream-api/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/clmntgbr/substream-api/2e124beba9c2bb43aacd4fda88d7f548ae4c4d50/.cursorrules",
+        "repositoryId": 1063531699,
+        "path": "clmntgbr/substream-api/.cursorrules",
+        "ownerName": "clmntgbr",
+        "repositoryName": "substream-api",
+        "htmlUrl": "https://github.com/clmntgbr/substream-api/blob/2e124beba9c2bb43aacd4fda88d7f548ae4c4d50/.cursorrules",
+        "size": 16.72,
+        "timestamp": "2025-11-22T08:15:32.389Z"
+      }
+    ],
+    [
+      "DashZeroAlionSystems/LightDom/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/DashZeroAlionSystems/LightDom/68d3310a628ad9a6d565b66179fdd6ed9eb93c55/.cursorrules",
+        "repositoryId": 1058049743,
+        "path": "DashZeroAlionSystems/LightDom/.cursorrules",
+        "ownerName": "DashZeroAlionSystems",
+        "repositoryName": "LightDom",
+        "htmlUrl": "https://github.com/DashZeroAlionSystems/LightDom/blob/68d3310a628ad9a6d565b66179fdd6ed9eb93c55/.cursorrules",
+        "size": 45,
+        "timestamp": "2025-11-22T08:15:32.629Z"
+      }
+    ],
+    [
+      "happysantoo/vajrapulse/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/happysantoo/vajrapulse/52288ff99fdacde84121b3182ef7d23ae963b105/.cursorrules",
+        "repositoryId": 1097228033,
+        "path": "happysantoo/vajrapulse/.cursorrules",
+        "ownerName": "happysantoo",
+        "repositoryName": "vajrapulse",
+        "htmlUrl": "https://github.com/happysantoo/vajrapulse/blob/52288ff99fdacde84121b3182ef7d23ae963b105/.cursorrules",
+        "size": 16.44,
+        "timestamp": "2025-11-22T08:15:32.790Z"
+      }
+    ],
+    [
+      "TechWebSid/online_exam_system/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/TechWebSid/online_exam_system/64211b69dd0af06ae116456c749fac850e0a91c5/.cursorrules",
+        "repositoryId": 944876130,
+        "path": "TechWebSid/online_exam_system/.cursorrules",
+        "ownerName": "TechWebSid",
+        "repositoryName": "online_exam_system",
+        "htmlUrl": "https://github.com/TechWebSid/online_exam_system/blob/64211b69dd0af06ae116456c749fac850e0a91c5/.cursorrules",
+        "size": 3,
+        "timestamp": "2025-11-22T08:15:33.861Z"
+      }
+    ],
+    [
+      "TedHoffmanJr/agp-website/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/TedHoffmanJr/agp-website/7b5be14853662d382931c4878896e505c874a9e9/.cursorrules",
+        "repositoryId": 1095310649,
+        "path": "TedHoffmanJr/agp-website/.cursorrules",
+        "ownerName": "TedHoffmanJr",
+        "repositoryName": "agp-website",
+        "htmlUrl": "https://github.com/TedHoffmanJr/agp-website/blob/7b5be14853662d382931c4878896e505c874a9e9/.cursorrules",
+        "size": 4.52,
+        "timestamp": "2025-11-22T08:15:34.773Z"
+      }
+    ],
+    [
+      "gaiypov/360uiux/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/gaiypov/360uiux/13d4432c54bb22f1de4a5e5c0ade3d0d015276db/.cursorrules",
+        "repositoryId": 1084985351,
+        "path": "gaiypov/360uiux/.cursorrules",
+        "ownerName": "gaiypov",
+        "repositoryName": "360uiux",
+        "htmlUrl": "https://github.com/gaiypov/360uiux/blob/13d4432c54bb22f1de4a5e5c0ade3d0d015276db/.cursorrules",
+        "size": 11.36,
+        "timestamp": "2025-11-22T08:15:35.848Z"
       }
     ]
   ]

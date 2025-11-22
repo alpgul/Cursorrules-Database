@@ -1,0 +1,275 @@
+# Cursor Rules for Agentic Trading System
+
+This file defines mandatory rules for Cursor AI when working in this repository. These rules ensure consistent workflow, documentation standards, and code quality.
+
+---
+
+## ⚠️ MANDATORY REQUIREMENTS - READ FIRST ⚠️
+
+These requirements are **NON-NEGOTIABLE** and must be followed **AT ALL TIMES**:
+
+### 1. GIT CHECKPOINTS (MANDATORY)
+
+**CRITICAL**: Git commits are MANDATORY at these checkpoints:
+
+**Checkpoint Triggers (MUST commit after)**:
+1. ✅ **Completing a phase** - Every phase completion (Phase 0, Phase 1, etc.)
+2. ✅ **Creating core documents** - Major deliverables, architecture plans
+3. ✅ **Completing logical units** - Set of related files, features, or modules
+4. ✅ **Before context switch** - Switching between different work areas
+5. ✅ **Bug fixes** - Any fix that resolves an issue
+6. ✅ **Documentation updates** - Significant doc changes
+7. ✅ **Every 30-60 minutes** - Maximum time between commits during active work
+
+**Commit Message Format (REQUIRED)**:
+```
+<Brief summary line (50-72 chars)>
+
+<Detailed description of what was done>
+
+<Why it was done (rationale)>
+
+<What deliverables/files were affected>
+
+<Any relevant context or decisions>
+
+Status: <Current state>
+```
+
+**Anti-Patterns (DO NOT DO)**:
+- ❌ Too vague: "Update files"
+- ❌ No context: "WIP"
+- ❌ Multiple unrelated changes in one commit
+- ❌ Waiting 2+ hours without commit
+
+**Checkpoint Strategy**:
+- Each core document → separate commit
+- Each template set → separate commit
+- Each example set → separate commit
+- Each phase → separate commit
+- Documentation updates → separate commit
+
+---
+
+### 2. DOCUMENTATION NAMING (MANDATORY)
+
+**CRITICAL**: Daily work documentation MUST follow this exact format:
+
+**Format**: `YYYYMMDD_NNNN_DESCRIPTIVE_NAME.md`
+
+**Components**:
+- **YYYYMMDD**: Date with NO separators (e.g., `20251114`)
+- **NNNN**: 4-digit sequential number starting at 0000 (e.g., `0000`, `0001`, `0002`, ...)
+- **DESCRIPTIVE_NAME**: ALL_CAPS with underscores (e.g., `PHASE_1_COMPLETE`)
+
+**Examples**:
+- ✅ `20251114_0000_MANDATORY_GIT_CHECKPOINTS.md`
+- ✅ `20251114_0006_KIMI_PLANNING_COMPLETE.md`
+- ❌ `20251114_0930_SUMMARY.md` (timestamp instead of sequential)
+- ❌ `2025_11_14_0000_SUMMARY.md` (has date separators)
+- ❌ `SUMMARY.md` (missing date and number)
+
+**Location**: `docs/YYYY_MM_DD/` (dated folders)
+- `docs/2025_11_14/20251114_0000_*.md` (first doc of the day)
+- `docs/2025_11_14/20251114_0001_*.md` (second doc of the day)
+- Each day starts fresh at 0000
+
+**How to Determine Next Number**:
+1. List files in current day's folder: `ls docs/2025_11_14/`
+2. Find highest number (e.g., `20251114_0007_...`)
+3. Increment by 1 (e.g., next is `0008`)
+4. Use that number for new document
+
+---
+
+### 3. FILE ORGANIZATION (MANDATORY)
+
+**Three-Tier Documentation Hierarchy**:
+
+**TIER 1: Strategic** - `ARCHITECTURE_PLAN.md` (project root)
+- High-level architecture and major components
+- Updated rarely (major changes only)
+- NO timestamp, NO sequence number
+
+**TIER 2: Tactical** - `docs/plans/` folder
+- Feature-specific plans: `FEATURE_NAME_PLAN.md`
+- Paired TODO lists: `FEATURE_NAME_TODO.md`
+- Updated regularly as work progresses
+- NO timestamp, NO sequence number
+
+**TIER 3: Execution** - `docs/YYYY_MM_DD/` folders
+- Daily work logs, decisions, summaries
+- Format: `YYYYMMDD_NNNN_DESCRIPTIVE_NAME.md` (MANDATORY)
+- Updated multiple times per day
+- **MUST use sequential numbers**
+
+**Protected Folders**:
+- ❌ `cursor/` - Cursor-specific rules and templates (DO NOT MODIFY)
+- ❌ `claude/` - Claude Code rules and templates (DO NOT MODIFY)
+- ❌ `kimi/` - Kimi-specific rules and templates (DO NOT MODIFY unless explicitly requested)
+
+---
+
+### 4. TODO LIST MANAGEMENT (MANDATORY)
+
+**Using TodoWrite Tool**:
+- ✅ Use TodoWrite tool to track all tasks
+- ✅ Mark tasks as `in_progress` when starting
+- ✅ Mark tasks as `completed` when finished
+- ✅ Update actual time spent on each task
+- ✅ ONLY ONE task `in_progress` at a time
+
+**Paired Plan and TODO**:
+- Every plan document (`FEATURE_NAME_PLAN.md`) MUST have paired TODO (`FEATURE_NAME_TODO.md`)
+- TODO lists updated after EACH task completion
+- Add timestamped update history entries
+- Update progress percentages
+
+**Update Requirements**:
+- Mark tasks complete immediately after finishing
+- Add actual time spent when available
+- Update progress percentages
+- Add update history entry with timestamp
+
+---
+
+### 5. TESTING & VERIFICATION (MANDATORY)
+
+**Before Every Git Commit**:
+1. ✅ Read all created/modified files to verify content
+2. ✅ Check for linter errors (if applicable)
+3. ✅ Verify all references/links work
+4. ✅ Ensure markdown formatting is correct
+5. ✅ Test any templates created
+
+**For Code Repositories**:
+- ✅ Run all relevant tests
+- ✅ Ensure 100% tests passing
+- ✅ Check code follows style guidelines
+- ✅ Verify no breaking changes
+
+---
+
+## 🔄 Standard Workflow
+
+### Task Implementation Flow
+
+1. **Read TODO list** → Identify next task
+2. **Start task** → Use TodoWrite to mark task as `in_progress`
+3. **Do work** → Create/modify files
+4. **Verify** → Read files, check quality, verify links
+5. **Complete task** → Use TodoWrite to mark as `completed`, add actual time
+6. **Git checkpoint** → Commit with descriptive message
+7. **Repeat** → Next task
+
+### Multi-File Work
+
+For tasks creating multiple related files:
+- Complete all related files first
+- Verify all files work together
+- Single commit for the logical unit
+- But don't wait too long (30-60 min max)
+
+### Phase Completion
+
+1. Complete all tasks in phase
+2. Update TODO list (mark phase complete)
+3. Create phase summary document (in `docs/YYYY_MM_DD/`)
+4. Git checkpoint with "Phase X complete" message
+5. Brief pause/review before next phase
+
+---
+
+## 🐍 Python Code Style
+
+### Functional Programming Principles
+
+- **Always prefer standalone functions rather than classes**
+- **Prefer immutable functions**
+- **Prefer functional style programming**
+- **Use pattern matching and ADTs** when appropriate
+
+### Testing
+
+- **Always use `uv run` to run a test module**
+- **Ensure there are comprehensive tests that pass for any code and modules created**
+
+### Code Style
+
+- **Adhere and conform to language-specific style guides in `cursor/` folder**:
+  - **Python**: `cursor/python-fp-style-guide.md`
+  - **TypeScript**: `cursor/typescript-fp-style-guide.md`
+  - **Rust**: `cursor/rust-fp-style-guide.md`
+  - **Haskell**: `cursor/haskell-fp-style-guide.md`
+  - **Swift**: `cursor/swift-fp-style-guide.md`
+  - **Kotlin**: `cursor/kotlin-fp-style-guide.md`
+- **Functional Programming Principles**: See `cursor/CURSOR_FP_PRINCIPLES.md`
+- **Data Structure Patterns**: See `cursor/DATA_STRUCTURE_PATTERNS.md`
+- If language guide doesn't exist, follow functional programming best practices
+
+---
+
+## 📋 Project-Specific Rules
+
+### Agentic Trading System Context
+
+This repository contains comprehensive technical documentation for building an AI-powered algorithmic trading system. See `AGENTS.md` for complete project details.
+
+**Key Points**:
+- **Status**: Documentation Repository (No Implementation Yet)
+- **Technology Stack**: Next.js 14, TypeScript, Python (FastAPI), Supabase, Inngest
+- **Target Market**: US Stock Market (S&P 500, NASDAQ 100)
+- **Critical**: Complete 2+ years of backtesting before paper trading
+- **Critical**: 2-4 weeks of successful paper trading before live trading
+
+### Documentation Structure
+
+- **Architecture**: `docs/01_system_architecture.md`
+- **Agent Implementations**: `docs/02_agent_implementations.md`
+- **Risk Management**: `docs/03_risk_management_backtesting.md`
+- **Database**: `docs/04_database_deployment.md`
+- **Judge Agent**: `docs/05_judge_agent_self_improvement.md`
+- **Testing**: `docs/06_sandbox_testing_validation.md`
+
+---
+
+## 🚨 Critical Warnings
+
+1. **NEVER trade with money you cannot afford to lose**
+2. **MANDATORY**: Complete 2+ years of backtesting before paper trading
+3. **MANDATORY**: 2-4 weeks of successful paper trading before live
+4. **Start with minimal capital** ($1,000) and scale gradually
+5. **Test kill switch extensively** before live trading
+6. **Monitor system personally** for first 2 weeks of live trading
+7. **This is not financial advice** - for educational/research purposes
+8. **Paper performance must match backtest within 20%** or investigate
+9. **If backtest fails, STOP** - do not proceed to live trading
+10. **Circuit breakers must work flawlessly** - test repeatedly
+
+---
+
+## 💡 Quick Reference
+
+### Daily Work Checklist
+
+1. ✅ Check TODO list before starting work
+2. ✅ One task at a time (mark in_progress, complete, then next)
+3. ✅ Git checkpoint every 30-60 min or after major milestones
+4. ✅ Sequential filenames for daily work (check existing files first)
+5. ✅ Read before modifying - verify content before changes
+6. ✅ Update TODO lists immediately after completing tasks
+7. ✅ Use parallel tool calls when possible for efficiency
+
+### File Naming Quick Reference
+
+- **Daily work**: `docs/YYYY_MM_DD/YYYYMMDD_NNNN_DESCRIPTIVE_NAME.md`
+- **Plans**: `docs/plans/FEATURE_NAME_PLAN.md`
+- **TODOs**: `docs/plans/FEATURE_NAME_TODO.md`
+- **Architecture**: `ARCHITECTURE_PLAN.md` (root)
+
+---
+
+**Last Updated**: 2025-11-14
+**Applies To**: This repository only
+**Based On**: KIMI.md mandatory rules + AGENTS.md project context
+
