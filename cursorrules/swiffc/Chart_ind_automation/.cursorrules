@@ -1,0 +1,1129 @@
+# CAD AI AGENT - NEW 3-AGENT ARCHITECTURE
+
+## PROJECT OVERVIEW
+
+**Product:** AI-Powered CAD Automation System
+**Architecture:** 3-Agent System (Brain, Hands, Simulation)
+**Stack:** Python Backend + Next.js Frontend + .NET CAD Drivers
+**Target User:** Engineers in oil & gas/petrochemical industry
+**Primary CAD:** SolidWorks, Autodesk Inventor
+**Platform:** Web Application (cross-platform)
+
+---
+
+## ⚠️ AUTOMATIC FILE MERGING RULE (CRITICAL - READ FIRST)
+
+**MANDATORY RULE:** ALWAYS attempt to merge content into existing files. NEVER create new files unless absolutely necessary.
+
+### Before Creating ANY New File:
+
+1. **🔍 SEARCH FIRST (MANDATORY)**
+   - Search for existing files with similar content
+   - Check `docs/` directory for documentation
+   - Check if content can be added to existing sections
+   - **If in doubt, merge rather than create**
+
+2. **📄 .MD FILE CREATION (HIGHLY RESTRICTED)**
+   ```
+   ❌ NEVER create new .md files without explicit justification
+   ✅ ALWAYS merge into existing .md files when possible
+   ✅ ALWAYS consolidate duplicate content
+   ✅ ALWAYS archive old files before creating replacements
+   ```
+
+3. **🔄 Merge Decision Tree:**
+   ```
+   New content to add?
+   ├─ Does similar .md file exist?
+   │   ├─ YES → Merge into existing file (ADD SECTION)
+   │   └─ NO → Check if related file exists
+   │       ├─ YES → Add to related file
+   │       └─ NO → Only NOW consider creating new file
+   │
+   └─ If creating new file:
+       ├─ Justify why existing files cannot be used
+       ├─ Ensure proper location (docs/, scripts/, etc.)
+       └─ Update index/README to reference it
+   ```
+
+4. **📋 Consolidation Priority List:**
+   - **Status info** → Always merge into `docs/PROJECT_STATUS.md`
+   - **Architecture docs** → Merge into `docs/ARCHITECTURE.md` or `.cursorrules`
+   - **Setup/installation** → Merge into `docs/INSTALLATION.md`
+   - **API docs** → Merge into `docs/API_REFERENCE.md`
+   - **User guides** → Merge into `docs/USER_GUIDE.md`
+   - **Rules/conventions** → Merge into `.cursorrules` or existing rule docs
+
+5. **🗂️ File Organization Actions:**
+   ```python
+   # BEFORE creating new file, perform these checks:
+   existing_files = search_for_similar_content(content_type)
+   
+   if existing_files:
+       # Option 1: Merge into existing file (PREFERRED)
+       merge_content_into(existing_files[0], new_content)
+   
+   elif related_files := search_for_related_content(topic):
+       # Option 2: Add to related file
+       add_section_to(related_files[0], new_content)
+   
+   else:
+       # Option 3: Create new file (LAST RESORT)
+       if user_explicitly_requested:
+           create_new_file(path, content)
+       else:
+           ask_user_for_confirmation()
+   ```
+
+6. **🚫 Specific Restrictions:**
+   
+   **NEVER create these without explicit user request:**
+   - `STATUS_*.md` files (use `docs/PROJECT_STATUS.md`)
+   - `ARCHITECTURE_*.md` files (use existing architecture docs)
+   - `TODO.md`, `TASKS.md` (use project management tools)
+   - `NOTES.md`, `SCRATCH.md` (temporary files)
+   - Duplicate documentation files
+
+7. **✅ When New File IS Justified:**
+   - Content is completely unique and unrelated
+   - File serves specific technical purpose (config, schema, etc.)
+   - User explicitly requested new file
+   - Existing files would become too large (>2000 lines)
+   
+   **Then follow these steps:**
+   ```
+   1. Verify no existing file can contain this content
+   2. Choose correct directory (docs/, scripts/, configs/, etc.)
+   3. Use clear, descriptive name
+   4. Add reference in README or index file
+   5. Document why new file was necessary
+   ```
+
+8. **📊 Examples:**
+
+   **❌ BAD - Creating unnecessary file:**
+   ```
+   User: "Add documentation about testing"
+   AI: Creating "docs/TESTING_GUIDE.md"  ← WRONG!
+   ```
+
+   **✅ GOOD - Merging into existing file:**
+   ```
+   User: "Add documentation about testing"
+   AI: Adding "Testing" section to existing "docs/USER_GUIDE.md"
+   ```
+
+   **❌ BAD - Creating duplicate status file:**
+   ```
+   AI: Creating "docs/PROGRESS_UPDATE.md"  ← WRONG!
+   ```
+
+   **✅ GOOD - Updating existing status file:**
+   ```
+   AI: Updating "docs/PROJECT_STATUS.md" with new progress
+   ```
+
+---
+
+### 🧹 MANDATORY CLEANUP & MAINTENANCE
+
+**RULE:** Regularly clean up, consolidate, and keep .md files current.
+
+#### 1. **Identify Files to Keep (WHITELIST)**
+
+**Essential .md Files Only:**
+```
+docs/
+├── PROJECT_STATUS.md          ✅ KEEP - Single source of truth
+├── ARCHITECTURE.md             ✅ KEEP - System architecture
+├── INSTALLATION.md             ✅ KEEP - Setup instructions
+├── USER_GUIDE.md               ✅ KEEP - User documentation
+├── API_REFERENCE.md            ✅ KEEP - API documentation
+├── STATUS_AUTOMATION_RULE.md   ✅ KEEP - Automation rules
+└── FILE_ORGANIZATION_RULE.md   ✅ KEEP - Organization rules
+
+README.md                       ✅ KEEP - Project overview (root)
+```
+
+**Everything else → Evaluate for consolidation or archival**
+
+#### 2. **Cleanup Decision Tree:**
+
+```
+Found an .md file not in whitelist?
+├─ Is content still relevant?
+│   ├─ YES → Can it merge into whitelist file?
+│   │   ├─ YES → Merge and delete original
+│   │   └─ NO → Archive to docs/_archive/
+│   │
+│   └─ NO → Delete immediately
+│
+└─ Is it a duplicate?
+    └─ YES → Consolidate into primary file, delete duplicate
+```
+
+#### 3. **Automatic Cleanup Actions:**
+
+**When working on ANY task involving .md files:**
+
+1. ✅ **List all .md files** in `docs/`
+   ```bash
+   find docs/ -name "*.md" -type f
+   ```
+
+2. ✅ **Compare against whitelist** (essential files above)
+
+3. ✅ **For each non-whitelisted file:**
+   - Read the content
+   - Determine if still relevant
+   - If relevant → Merge into appropriate whitelist file
+   - If outdated → Archive to `docs/_archive/[category]/`
+   - If duplicate → Consolidate and delete
+
+4. ✅ **Update references** in other files
+
+5. ✅ **Document consolidation** in commit message
+
+#### 4. **Consolidation Patterns:**
+
+| Found File Type | Action | Target File |
+|----------------|--------|-------------|
+| `STATUS_*.md` | Merge content | `docs/PROJECT_STATUS.md` |
+| `PROGRESS_*.md` | Merge content | `docs/PROJECT_STATUS.md` |
+| `ARCH_*.md` | Merge content | `docs/ARCHITECTURE.md` or `.cursorrules` |
+| `SETUP_*.md` | Merge content | `docs/INSTALLATION.md` |
+| `API_*.md` | Merge content | `docs/API_REFERENCE.md` |
+| `GUIDE_*.md` | Merge content | `docs/USER_GUIDE.md` |
+| `TODO.md` | Use project tools | Delete (use todo_write tool) |
+| `NOTES.md` | Temporary content | Archive or delete |
+| Old dated files | Historical | Archive to `docs/_archive/` |
+
+#### 5. **Keep Content Current (MANDATORY):**
+
+**Before completing ANY task:**
+
+1. ✅ **Check for outdated information**
+   - Search for dates in .md files
+   - Look for "TODO", "WIP", "Coming Soon"
+   - Find version numbers that need updating
+
+2. ✅ **Update or remove outdated content**
+   - Update completion percentages
+   - Update dates to current
+   - Remove completed TODOs
+   - Update version numbers
+
+3. ✅ **Verify consistency**
+   - Cross-reference with actual code
+   - Ensure docs match implementation
+   - Update examples if API changed
+
+4. ✅ **Remove contradictions**
+   - Check for conflicting information
+   - Consolidate into single truth
+   - Delete obsolete sections
+
+#### 6. **Archive Strategy:**
+
+**For files that need preservation but aren't current:**
+
+```
+docs/_archive/
+├── status/                     ← Old status files
+│   ├── 2024-01-15_STATUS.md
+│   └── 2024-12-20_PROGRESS.md
+│
+├── architecture/               ← Old architecture docs
+│   └── OLD_ARCHITECTURE_V1.md
+│
+└── guides/                     ← Old guides/tutorials
+    └── OLD_SETUP_GUIDE.md
+```
+
+**Archive naming:** `[DATE]_[ORIGINAL_NAME].md` or `OLD_[ORIGINAL_NAME].md`
+
+#### 7. **Periodic Maintenance (Execute Regularly):**
+
+**Every time you work on the project:**
+
+```python
+# Maintenance Checklist
+1. [ ] List all .md files in docs/
+2. [ ] Identify files NOT in whitelist
+3. [ ] Read and evaluate each non-whitelisted file
+4. [ ] Merge relevant content into whitelist files
+5. [ ] Archive historical content
+6. [ ] Delete outdated/duplicate content
+7. [ ] Update dates and version numbers
+8. [ ] Verify all links work
+9. [ ] Check for contradictions
+10. [ ] Commit cleanup with descriptive message
+```
+
+**Commit message format:**
+```
+chore(docs): consolidate and cleanup documentation
+
+- Merged [file1] into [target]
+- Archived [file2] (outdated)
+- Deleted [file3] (duplicate)
+- Updated dates and versions across all docs
+```
+
+#### 8. **Proactive Cleanup Examples:**
+
+**❌ BAD - Ignoring existing mess:**
+```
+Found: docs/OLD_STATUS.md, docs/STATUS_DEC.md, docs/PROGRESS.md
+Action: Creates NEW file "docs/CURRENT_STATUS.md"
+Result: Now 4 status files! ← WRONG!
+```
+
+**✅ GOOD - Cleaning while working:**
+```
+Found: docs/OLD_STATUS.md, docs/STATUS_DEC.md, docs/PROGRESS.md
+Action: 
+1. Merge all into docs/PROJECT_STATUS.md
+2. Archive old versions to docs/_archive/status/
+3. Update references
+Result: 1 current status file ← CORRECT!
+```
+
+#### 9. **Automation Scripts:**
+
+**Create cleanup script if needed:**
+```python
+# scripts/cleanup_docs.py
+"""
+Automated documentation cleanup script.
+- Lists all .md files
+- Identifies non-whitelisted files
+- Prompts for consolidation actions
+- Archives old content
+- Updates references
+"""
+```
+
+#### 10. **Quality Gates:**
+
+**Before ANY commit:**
+- ✅ No duplicate .md files
+- ✅ All dates are current
+- ✅ No "TODO" or "WIP" in published docs
+- ✅ No contradicting information
+- ✅ All .md files serve clear purpose
+- ✅ Non-essential files archived or deleted
+
+---
+
+### 🎯 SUMMARY (Remember This)
+
+**Golden Rules:**
+1. **MERGE rather than CREATE** - Consolidate into existing files
+2. **CLEANUP while working** - Don't ignore existing mess
+3. **KEEP CURRENT** - Update dates, versions, content
+4. **WHITELIST ONLY** - Only essential .md files survive
+5. **ARCHIVE, DON'T DELETE** - Preserve history in `_archive/`
+
+**Workflow:**
+- 🔍 **Search first** - Find existing files
+- 📝 **Merge content** - Add to existing files
+- 🧹 **Cleanup** - Consolidate duplicates
+- 📅 **Update** - Keep everything current
+- 🗂️ **Archive** - Move old content to `_archive/`
+- ⚠️ **Last resort** - Only create if absolutely necessary
+
+**This rule applies to ALL file types but especially .md files!**
+
+---
+
+## ARCHITECTURE OVERVIEW
+
+### 3-Agent System
+
+**1. Brain Agent** (Intelligence Layer - `src/brain_agent/`)
+- Natural language processing with Claude/GPT-4
+- Engineering standards retrieval (ASME, API, ASTM, PIP)
+- PDF to CAD conversion intelligence
+- Excel parsing with formula DAG analysis
+- Engineering calculations (ASME Section VIII, TEMA)
+- Design validation
+- Material selection intelligence
+- Continuous learning with RAG
+
+**2. Hands Agent** (Execution Layer - `src/hands_agent/`)
+- SolidWorks/Inventor integration via .NET COM
+- CAD instruction execution through gRPC
+- Part and assembly creation (basic and advanced)
+- Assembly operations (read, mates, fixes)
+- Weldment and structural operations
+- Drawing generation
+- File export (STEP, DWG, PDF, multiple formats)
+- Undo/Redo operations
+- 3D sketch creation
+
+**3. Simulation Agent** (Analysis Layer - `src/simulation_agent/`)
+- FEA (Finite Element Analysis)
+- CFD (Computational Fluid Dynamics)
+- DFM (Design for Manufacturing) checks
+- Standards compliance validation
+- Cost estimation
+
+### Technology Stack
+
+**Backend:**
+- FastAPI - REST API + WebSocket
+- Python 3.11+ - Orchestration
+- PostgreSQL - Relational database
+- SQLAlchemy - ORM
+- Alembic - Database migrations
+- ChromaDB - Vector database for learning
+- gRPC - CAD driver communication
+
+**Frontend:**
+- Next.js 14 - Web framework
+- TypeScript - Type safety
+- Tailwind CSS - Styling
+- Three.js - 3D CAD viewer
+- WebSocket - Real-time progress
+
+**CAD Integration:**
+- .NET 8.0 - CAD drivers
+- COM Automation - SolidWorks/Inventor API
+- gRPC - Python ↔ .NET communication
+
+---
+
+## PROJECT STRUCTURE
+
+```
+Agent_Ai/
+├── backend/                     # FastAPI backend
+│   ├── main.py                  # Application entry
+│   ├── config.py                # Configuration
+│   ├── database.py              # Database management (PostgreSQL + SQLAlchemy)
+│   ├── models.py                # Pydantic models (API validation)
+│   ├── db_models.py             # SQLAlchemy models (database tables)
+│   ├── websocket.py             # WebSocket manager
+│   └── routers/                 # API endpoints
+│       ├── design.py            # Design creation
+│       ├── analyze.py           # Assembly analysis
+│       ├── pdf.py               # PDF conversion
+│       └── upload.py            # File uploads
+│
+├── frontend/                    # Next.js frontend
+│   ├── app/
+│   │   ├── page.tsx             # Main chat interface
+│   │   ├── layout.tsx           # App layout
+│   │   └── components/          # React components
+│   │       ├── ChatInterface.tsx
+│   │       ├── ProgressBar.tsx
+│   │       └── CADViewer.tsx
+│   ├── package.json
+│   └── next.config.js
+│
+├── src/                         # Agent implementations
+│   ├── brain_agent/             # Intelligence layer
+│   │   ├── brain_agent.py
+│   │   ├── standards_retrieval.py
+│   │   ├── pdf_to_cad.py
+│   │   ├── excel_parser.py      # Enhanced with formula DAG
+│   │   ├── learning_system.py
+│   │   ├── engineering_calc.py  # ASME/TEMA calculations
+│   │   ├── design_validator.py  # Design validation
+│   │   └── material_selector.py # Material selection intelligence
+│   │
+│   ├── hands_agent/             # Execution layer
+│   │   ├── hands_agent_grpc.py  # gRPC client (all operations implemented)
+│   │   └── dotnet/              # .NET CAD drivers
+│   │       ├── InventorDriver/   # Inventor driver (TCP port 50052)
+│   │       └── SolidWorksDriver/ # SolidWorks driver (TCP port 50051)
+│   │
+│   ├── simulation_agent/        # Analysis layer
+│   │   └── simulation_agent.py
+│
+├── proto/                       # gRPC protocol definitions
+│   └── cad.proto                # Enhanced with advanced operations
+│
+├── alembic/                     # Database migrations
+│   ├── versions/
+│   └── env.py
+│
+├── backend/
+│   ├── knowledge_base/          # Component knowledge base (75 components, 15 families, 11 categories)
+│   │   ├── component_index.json
+│   │   ├── components/          # Organized by category (piping, valves, vessels, etc.)
+│   │   └── standards/           # Engineering standards reference
+│
+├── data/                        # Data storage
+│   ├── outputs/                 # Generated CAD files
+│   ├── uploads/                 # User uploads
+│   ├── standards_cache/         # Cached engineering standards PDFs
+│   └── chromadb/                # ChromaDB vector database for learning
+│
+├── scripts/                     # Automation scripts
+│   ├── setup_new_project.ps1    # Full setup
+│   ├── start.ps1                # Start all services
+│   └── update_status_docs.py   # Status document automation (MANDATORY)
+│
+├── configs/                     # Configuration files
+├── .env                         # Environment variables
+├── docker-compose.yml           # Docker orchestration
+└── README.md                    # Project documentation
+```
+
+---
+
+## CODE QUALITY STANDARDS
+
+### Python Best Practices
+
+- Follow PEP 8 style guide strictly
+- Use type hints for all function signatures
+- Minimum 80% test coverage required
+- All functions must have Google-style docstrings
+
+### Type Hints (Required)
+
+```python
+from typing import Dict, List, Optional
+
+def function_name(param: str, count: int = 10) -> Dict[str, Any]:
+    """Brief description."""
+    pass
+
+class ClassName:
+    attr1: str
+    attr2: int
+    attr3: Optional[dict] = None
+```
+
+### Docstrings (Google Style - Required)
+
+```python
+def function_name(param: str, optional_param: int = 10) -> Dict[str, Any]:
+    """
+    Brief one-line description.
+
+    Longer description if needed. Explain what the function does,
+    when to use it, and any important details.
+
+    Args:
+        param: Description of parameter
+        optional_param: Description of optional parameter (default: 10)
+
+    Returns:
+        Dictionary containing:
+            - key1: Description
+            - key2: Description
+
+    Raises:
+        ValueError: When param is invalid
+        CADAPIError: When CAD operation fails
+
+    Example:
+        >>> result = function_name("test")
+        >>> print(result['status'])
+        'success'
+    """
+    pass
+```
+
+### Error Handling (Required)
+
+```python
+import structlog
+
+logger = structlog.get_logger(__name__)
+
+def function_name(param: str) -> Dict[str, Any]:
+    """Function with comprehensive error handling."""
+
+    logger.info("function_started", param=param)
+
+    try:
+        # Validate inputs
+        if not param:
+            raise ValueError("param cannot be empty")
+
+        # Main logic
+        result = process(param)
+
+        logger.info("function_completed", result=result)
+        return result
+
+    except ValueError as e:
+        logger.error("validation_error", error=str(e))
+        raise
+    except Exception as e:
+        logger.error("unexpected_error", error=str(e), traceback=traceback.format_exc())
+        raise
+```
+
+### Logging (Structured - Required)
+
+```python
+import structlog
+
+logger = structlog.get_logger(__name__)
+
+# Use structured logging
+logger.info("operation_started", user_input="create cube", size=50)
+logger.debug("processing_step", step=1, action="create_sketch")
+logger.warning("performance_slow", duration_ms=5000)
+logger.error("operation_failed", error=str(e), traceback=traceback.format_exc())
+```
+
+---
+
+## ARCHITECTURE PRINCIPLES
+
+### SOLID Principles
+- **S**ingle Responsibility - One class, one purpose
+- **O**pen/Closed - Open for extension, closed for modification
+- **L**iskov Substitution - Subclasses must be substitutable
+- **I**nterface Segregation - Many specific interfaces > one general
+- **D**ependency Inversion - Depend on abstractions, not concretions
+
+### API Design
+- RESTful endpoints for CRUD operations
+- WebSocket for real-time progress updates
+- gRPC for high-performance Python ↔ .NET communication
+- Comprehensive error responses with status codes
+
+### Database Design
+- SQLAlchemy ORM for type safety
+- Alembic for schema migrations
+- PostgreSQL for relational data
+- ChromaDB for vector embeddings (learning)
+
+---
+
+## DATABASE SCHEMA
+
+### Core Tables (SQLAlchemy Models)
+
+**Users Table:**
+```python
+class User(Base):
+    id = Column(Integer, primary_key=True)
+    email = Column(String, unique=True, nullable=False)
+    name = Column(String)
+    company = Column(String)
+    created_at = Column(DateTime, default=datetime.utcnow)
+```
+
+**Jobs Table:**
+```python
+class Job(Base):
+    id = Column(Integer, primary_key=True)
+    job_id = Column(String, unique=True, nullable=False)  # JOB-YYYYMMDD-HHMM
+    user_id = Column(Integer, ForeignKey('users.id'))
+    input_text = Column(Text)
+    input_type = Column(String)  # 'natural_language', 'pdf', 'excel'
+    design_type = Column(String)  # 'pressure_vessel', 'heat_exchanger'
+    parameters = Column(JSON)
+    status = Column(String)  # 'queued', 'processing', 'completed', 'failed'
+    progress = Column(Float, default=0.0)
+    output_files = Column(JSON)
+```
+
+**Complete Table List:**
+1. `User` - User accounts
+2. `Job` - Design jobs with lifecycle tracking
+3. `Standard` - Engineering standards library (ASME, API, PIP, etc.)
+4. `Component` - Reusable CAD components
+5. `DesignTemplate` - Design templates
+6. `UserPreference` - User preferences and settings
+7. `Material` - Material library
+8. `LearningEvent` - AI learning events (ChromaDB integration)
+9. `Upload` - File upload tracking
+10. `AnalysisResult` - FEA/CFD/DFM analysis results
+
+*See backend/db_models.py for complete schema with relationships*
+
+---
+
+## API ENDPOINTS
+
+### Design API
+- `POST /api/design/create` - Create new design
+- `GET /api/design/status/{job_id}` - Get job status
+- `GET /api/design/results/{job_id}` - Get design results
+
+### Analysis API
+- `POST /api/analyze/assembly` - Analyze assembly
+- `GET /api/analyze/results/{job_id}` - Get analysis results
+
+### PDF API
+- `POST /api/pdf/upload` - Upload PDF
+- `POST /api/pdf/convert` - Convert PDF to CAD
+- `GET /api/pdf/status/{job_id}` - Get conversion status
+
+### Upload API
+- `POST /api/upload` - Upload file (PDF, Excel, CAD)
+- `POST /api/upload-multiple` - Upload multiple files
+- `GET /api/uploads/{file_id}` - Get upload info
+- `DELETE /api/uploads/{file_id}` - Delete upload
+
+### WebSocket
+- `WS /ws/{client_id}` - Real-time progress updates
+
+---
+
+## gRPC PROTOCOL
+
+**Services:**
+- `SolidWorksDriver` - SolidWorks operations
+- `InventorDriver` - Inventor operations
+
+**Enhanced Operations (All Implemented):**
+```protobuf
+rpc CreatePartAdvanced(PartSpec) returns (Result);
+rpc CreateAssemblyAdvanced(AssemblySpec) returns (Result);
+rpc ReadActiveAssembly(ReadAssemblyRequest) returns (AssemblyData);
+rpc ApplyFix(FixSpec) returns (Result);
+rpc ExportMultiple(ExportSpec) returns (Result);
+rpc AddWeldmentMember(WeldmentMember) returns (Result);
+rpc AddAngleL(AngleL) returns (Result);
+rpc GenerateDrawing(Document) returns (Result);
+rpc Create3DSketch(Sketch3D) returns (Result);
+rpc Undo(UndoRequest) returns (Result);
+rpc Redo(RedoRequest) returns (Result);
+```
+
+*See proto/cad.proto for complete definitions*
+*All operations implemented in `src/hands_agent/hands_agent_grpc.py`*
+
+---
+
+## ENGINEERING STANDARDS
+
+### Supported Standards
+- **ASME** - Section VIII Division 1 (Pressure Vessels), B31.3 (Process Piping)
+- **API** - API 661, API 620, API 650
+- **PIP** - PIP STC01015, PIP STF01130
+- **TEMA** - Heat Exchanger Standards
+- **ASTM** - Material specifications
+
+### Standards Implementation
+
+**Engineering Calculations:**
+```python
+from src.brain_agent.engineering_calc import EngineeringCalculator
+
+calc = EngineeringCalculator()
+
+# Pressure vessel calculation (ASME Section VIII)
+result = calc.pressure_vessel_asme({
+    'design_pressure': 150,  # PSI
+    'diameter': 48,          # inches
+    'allowable_stress': 20000,
+    'weld_efficiency': 0.85
+})
+# Returns: wall_thickness_actual, MAWP, safety_factor
+
+# Heat exchanger sizing (TEMA)
+result = calc.heat_exchanger_tema({
+    'heat_duty': 1000000,    # BTU/hr
+    'hot_inlet_temp': 200,   # °F
+    'hot_outlet_temp': 150,
+    'cold_inlet_temp': 80,
+    'cold_outlet_temp': 120
+})
+# Returns: required_area, number_of_tubes, shell_diameter
+```
+
+**Design Validation:**
+```python
+from src.brain_agent.design_validator import DesignValidator
+
+validator = DesignValidator()
+
+# Validate pressure vessel design
+validation = validator.validate_pressure_vessel({
+    'design_pressure': 150,
+    'wall_thickness': 0.375,
+    'diameter': 48,
+    'temperature': 500,
+    'material': 'SA-516-70'
+})
+# Returns: valid (bool), errors (list), warnings (list)
+```
+
+**Material Selection:**
+```python
+from src.brain_agent.material_selector import MaterialSelector
+
+selector = MaterialSelector()
+
+# Get material recommendations
+materials = selector.select_optimal_material({
+    'temperature': 500,          # °F
+    'min_strength': 35000,       # PSI
+    'environment': 'normal',
+    'application': 'pressure_vessel'
+})
+# Returns: Top 5 materials with scores, costs, strengths, concerns
+```
+
+---
+
+## DEVELOPMENT WORKFLOW
+
+### Daily Cycle
+1. Pull latest: `git pull origin develop`
+2. Create branch: `git checkout -b feature/new-feature`
+3. Write code (follow standards above)
+4. Run tests: `pytest tests/`
+5. Run linters: `black src/`, `isort src/`, `flake8 src/`
+6. Commit: `git commit -m "feat(scope): description"`
+7. Push: `git push origin feature/new-feature`
+8. Create pull request
+9. Merge after review
+
+### Testing Requirements
+- **Unit tests** for all functions
+- **Integration tests** for API endpoints
+- **End-to-end tests** for complete workflows
+- **Minimum 80% coverage** required
+
+### Testing Pattern
+```python
+import pytest
+from unittest.mock import Mock, patch
+
+class TestModuleName:
+    @pytest.fixture
+    def instance(self):
+        return ClassName()
+
+    def test_success_case(self, instance):
+        result = instance.method("input")
+        assert result['status'] == 'success'
+
+    def test_error_handling(self, instance):
+        with pytest.raises(ValueError):
+            instance.method("")
+
+    @patch('module.external_dependency')
+    def test_with_mock(self, mock_dep, instance):
+        mock_dep.return_value = "mocked"
+        result = instance.method("input")
+        assert result is not None
+```
+
+---
+
+## GIT COMMIT CONVENTIONS
+
+**Format:** `type(scope): description`
+
+**Types:**
+- `feat`: New feature
+- `fix`: Bug fix
+- `docs`: Documentation
+- `style`: Formatting
+- `refactor`: Code restructuring
+- `test`: Adding tests
+- `chore`: Maintenance
+- `perf`: Performance improvement
+
+**Examples:**
+```
+feat(brain): add material selection intelligence
+feat(backend): implement PostgreSQL database with SQLAlchemy
+feat(upload): add multipart file upload handler
+fix(excel): handle cross-sheet formula references
+docs(readme): update installation instructions
+test(calc): add tests for ASME calculations
+```
+
+---
+
+## SECURITY REQUIREMENTS
+
+- Never commit API keys (use .env)
+- Validate all file paths (prevent directory traversal)
+- Sanitize user inputs
+- Use HTTPS for all web requests
+- Handle passwords securely (never log)
+- Validate file uploads (type, size)
+
+---
+
+## ENVIRONMENT VARIABLES
+
+```bash
+# API Keys
+ANTHROPIC_API_KEY=sk-ant-...
+OPENAI_API_KEY=sk-...
+GOOGLE_API_KEY=AIza...
+
+# Database
+DATABASE_URL=postgresql://user:pass@localhost:5432/cad_ai_agent
+
+# CAD
+SOLIDWORKS_ENABLED=true
+CAD_DRIVER_PORT=50051
+
+# API
+API_PORT=8000
+FRONTEND_PORT=3000
+```
+
+---
+
+## PERFORMANCE TARGETS
+
+- LLM response: <3 seconds
+- CAD operation: <5 seconds
+- Excel analysis: <10 seconds per file
+- PDF analysis: <15 seconds per page
+- UI responsiveness: <100ms
+- API response: <500ms
+- Database query: <100ms
+
+---
+
+## STATUS DOCUMENT AUTOMATION (MANDATORY RULE)
+
+**RULE:** All status documents MUST be updated simultaneously whenever project completion changes.
+
+### Status Documents (Must Stay Synchronized)
+1. `docs/PROJECT_STATUS.md` - **SINGLE SOURCE OF TRUTH**
+2. `README.md` - Minimal summary with link to PROJECT_STATUS.md
+
+### Workflow
+**After making progress:**
+1. Edit `COMPLETION_STATUS` in `scripts/update_status_docs.py`
+2. Run: `python scripts/update_status_docs.py`
+3. Updates `docs/PROJECT_STATUS.md` (single source of truth)
+4. Syncs `README.md` (minimal summary)
+5. Commit together: `git add scripts/update_status_docs.py docs/PROJECT_STATUS.md README.md`
+
+**Never manually edit status percentages - always use the automation script!**
+
+*See `docs/STATUS_AUTOMATION_RULE.md` for complete documentation*
+
+---
+
+## FILE ORGANIZATION RULE (MANDATORY)
+
+**RULE:** All new files MUST be analyzed completely and organized appropriately.
+
+### Status Files (ONLY 2 FILES)
+- `docs/PROJECT_STATUS.md` - Single source of truth
+- `README.md` - Minimal summary with link
+
+**If a new status file is added:**
+- ❌ DO NOT add it to automation
+- ✅ DO analyze it and consolidate into PROJECT_STATUS.md
+- ✅ DO archive old status files to `docs/_archive/status/`
+
+### File Organization Process
+1. Analyze file purpose and category
+2. Determine correct location (docs/, src/, scripts/, etc.)
+3. Check for duplicates
+4. Organize appropriately
+5. Update documentation
+
+**Root directory must stay minimal** - only essential files (README, .cursorrules, .gitignore, requirements.txt, etc.)
+
+*See `docs/FILE_ORGANIZATION_RULE.md` for complete documentation*
+
+---
+
+## ANTIGRAVITY INTEGRATION RULES (EXPERIMENTAL)
+
+**Status:** Easter Egg / Experimental Feature
+**Trigger:** `/antigravity` or Konami Code
+
+### 1. Behavioral Rules
+- **UI Elements:** Must detach and fall using 2D physics (`Matter.js`)
+- **CAD Parts:** Must float in 3D space with Zero-G physics (`Cannon.js`/`Ammo.js`)
+- **Interaction:** Elements must be interactive (throwable, collideable)
+
+### 2. Safety Rules (CRITICAL)
+- **❌ NO SAVE:** Never save physics positions to the database.
+- **❌ NO PERSISTENCE:** Do not update assembly mates based on physics state.
+- **✅ REVERT:** Always provide an immediate "Reset" to restore original state.
+- **Performance:** Auto-disable if < 15 FPS. Cap at 50 physics bodies.
+
+*See `docs/ANTIGRAVITY_INTEGRATION_RULE.md` for full specifications*
+
+---
+
+## WHEN GENERATING CODE
+
+1. Start with type hints and docstring
+2. Implement core logic
+3. Add comprehensive error handling
+4. Add logging statements
+5. Write corresponding tests
+6. Update documentation
+7. **Update status documents if completion changes** (use `scripts/update_status_docs.py`)
+
+---
+
+## SUCCESS CRITERIA
+
+### Feature Complete When:
+✅ All modules implemented
+✅ All tests passing (80%+ coverage)
+✅ No linting errors (black, isort, flake8, mypy)
+✅ Tested with real SolidWorks
+✅ Performance targets met
+✅ Documentation complete
+
+### System Complete When:
+✅ Can create parts, assemblies, drawings
+✅ Can analyze Excel with formula DAG
+✅ Can convert PDF to CAD
+✅ Can validate designs (ASME, API, PIP)
+✅ Can select optimal materials
+✅ Can integrate with PostgreSQL database
+✅ Real-time progress via WebSocket
+✅ Knowledge base with 75+ components searchable
+✅ All CAD operations available (weldment, drawings, undo/redo)
+✅ Learning system storing design patterns
+✅ Production-ready deployment
+
+---
+
+## PRIORITY ORDER
+
+1. **Correctness** - Code must work as specified
+2. **Reliability** - Must handle errors gracefully
+3. **Security** - Protect user data and API keys
+4. **Maintainability** - Easy to understand and modify
+5. **Performance** - Fast enough for user needs
+6. **Elegance** - Clean, pythonic code
+
+---
+
+## CURRENT PROJECT STATUS
+
+**Overall Completion:** ~99% (as of 2025-01-13)
+
+### Component Status:
+- ✅ **Infrastructure:** 100% Complete
+- ✅ **Knowledge Base:** 100% Complete (75 components, 15 families, 11 categories)
+- ✅ **CAD Drivers:** 100% Complete (All proto operations implemented)
+- ✅ **Learning System:** 100% Complete (ChromaDB integration)
+- ✅ **Agents:** 100% Complete (Workflow orchestration, advanced PDF/Excel, pattern matching, enhanced simulation)
+- ✅ **Frontend:** 100% Complete (All components, WebSocket integration, 3D viewer)
+- ✅ **Simulation:** 100% Complete (FEA, CFD, DFM, compliance, cost estimation)
+- 🟡 **Testing:** 80% Complete (Comprehensive test suite, ~80% coverage)
+- ✅ **DevOps:** 100% Complete (CI/CD pipeline, Docker setup, deployment scripts, monitoring)
+
+### Recent Completions (2025-01-13):
+- ✅ Status document automation system implemented
+- ✅ Knowledge Base verified at 100% (75 components in ChromaDB)
+- ✅ CAD Drivers completed to 100% (all 11 advanced operations implemented)
+- ✅ Hands Agent: All proto operations now available in Python client
+- ✅ **Agents 100% Complete** - Workflow orchestration, advanced PDF/Excel parsing, pattern matching, enhanced simulation
+- ✅ **Frontend 100% Complete** - All components (InterferenceList, PartRecognitionCard, Assembly Analyzer), WebSocket integration, 3D viewer
+- ✅ **Simulation 100% Complete** - FEA, CFD, DFM, compliance, and cost estimation all implemented
+- ✅ **Testing 80% Complete** - Comprehensive test suite with ~80% coverage
+- ✅ **DevOps 100% Complete** - CI/CD pipeline, Docker setup, deployment scripts, monitoring
+
+*Status documents automatically synchronized via `scripts/update_status_docs.py`*
+
+---
+
+**Architecture:** 3-Agent System (Brain, Hands, Simulation)
+**Version:** 2.0.0 (Restructured)
+**Last Updated:** 2025-11-21
+
+**🚨 IMPORTANT:** Always use `START_APP.bat` to start the application - see MANDATORY STARTUP RULE below
+
+---
+
+## 📊 CURRENT DOCUMENTATION STATE (2025-11-21)
+
+**Active .md Files:** 37 (72% reduction from 132+)
+- docs/ (13): 8 essential + 6 standards
+- Other locations (24): READMEs, configs, system prompts
+
+**Archived Files:** 270+ files preserved in `docs/_archive/`
+
+**AI Tools Configured:** 3 (Cursor IDE, Claude CLI, Gemini CLI)
+- All follow unified merge-first approach
+- Helper scripts: `scripts/claude.ps1`, `scripts/gemini.ps1`
+- Config guide: `configs/AI_TOOLS_SETUP.md`
+
+---
+
+## 🚨 MANDATORY STARTUP RULE (CRITICAL - ALWAYS FOLLOW)
+
+**RULE:** ALWAYS use `START_APP.bat` to start the application. NEVER manually start services with individual commands.
+
+### Why This Rule Exists
+
+The `START_APP.bat` file ensures:
+1. **Sequential startup order** - All steps execute in proper sequence [1/6] through [6/6]
+2. **API keys loaded LAST** - API keys are loaded at step [5/6] BEFORE services start
+3. **API keys confirmation** - Shows "CONFIRMED" message after API keys are loaded
+4. **Proper environment variables** - Environment variables set BEFORE backend starts
+5. **Error handling** - Validates Python, Node.js, .env file, and API keys before starting
+
+### What to ALWAYS Do
+
+**ONE AND ONLY WAY TO START:**
+```cmd
+START_APP.bat
+```
+
+OR in PowerShell:
+```powershell
+.\START_APP.bat
+```
+
+### What to NEVER Do
+
+❌ **NEVER manually start services:**
+```bash
+# ❌ WRONG - DO NOT DO THIS:
+python -m uvicorn backend.main:app --reload
+npm run dev
+cd frontend; npm run dev
+```
+
+### Startup Sequence (As Defined in START_APP.bat)
+
+1. [1/6] Check .env file exists
+2. [2/6] Clean frontend cache
+3. [3/6] Verify Python installation
+4. [4/6] Verify Node.js installation
+5. [5/6] **Load API keys LAST** (before services) - Shows "CONFIRMED" after loading
+6. [6/6] Start services sequentially
+
+### For AI Assistants
+
+**When user asks to start/restart/run the app:**
+
+1. ✅ **ALWAYS use:** `START_APP.bat` or `.\START_APP.bat`
+2. ❌ **NEVER use:** Individual python/npm commands
+3. ✅ **ALWAYS wait for:** "[5/6] API KEYS CONFIRMED" message
+4. ✅ **ALWAYS verify:** Sequential startup completed [1/6] through [6/6]
+
+**Example Workflow:**
+```cmd
+# ✅ CORRECT - Always do this:
+.\START_APP.bat
+
+# ❌ WRONG - Never do this:
+python -m uvicorn backend.main:app --reload
+cd frontend; npm run dev
+```
+
+### Exception Handling
+
+**Only exception:** When testing/debugging individual services separately (user explicitly requests this)
+
+**In all other cases:** Use `START_APP.bat`
+
+---
+
+**This rule ensures API keys are always loaded properly and chat functionality works!**

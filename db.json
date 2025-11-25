@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 2335,
+  "size": 2341,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -32690,6 +32690,90 @@
         "htmlUrl": "https://github.com/gaiypov/360uiux/blob/13d4432c54bb22f1de4a5e5c0ade3d0d015276db/.cursorrules",
         "size": 11.36,
         "timestamp": "2025-11-22T08:15:35.848Z"
+      }
+    ],
+    [
+      "swiffc/Chart_ind_automation/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/swiffc/Chart_ind_automation/c3f200d5f63d9e8629a2f7d6adc278910ccc2da1/.cursorrules",
+        "repositoryId": 1090449060,
+        "path": "swiffc/Chart_ind_automation/.cursorrules",
+        "ownerName": "swiffc",
+        "repositoryName": "Chart_ind_automation",
+        "htmlUrl": "https://github.com/swiffc/Chart_ind_automation/blob/c3f200d5f63d9e8629a2f7d6adc278910ccc2da1/.cursorrules",
+        "size": 34.21,
+        "timestamp": "2025-11-25T08:18:52.897Z"
+      }
+    ],
+    [
+      "robesonw/agentic-exception-platform/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/robesonw/agentic-exception-platform/4581f6273e5c33e0b8c6305f43a2a0deb0d7158e/.cursorrules",
+        "repositoryId": 1102165935,
+        "path": "robesonw/agentic-exception-platform/.cursorrules",
+        "ownerName": "robesonw",
+        "repositoryName": "agentic-exception-platform",
+        "htmlUrl": "https://github.com/robesonw/agentic-exception-platform/blob/4581f6273e5c33e0b8c6305f43a2a0deb0d7158e/.cursorrules",
+        "size": 1.76,
+        "timestamp": "2025-11-25T08:18:55.519Z"
+      }
+    ],
+    [
+      "ialexies/tempchat/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ialexies/tempchat/ca965bae09bf381474a8989ee81e6969f132b928/.cursorrules",
+        "repositoryId": 1102850854,
+        "path": "ialexies/tempchat/.cursorrules",
+        "ownerName": "ialexies",
+        "repositoryName": "tempchat",
+        "htmlUrl": "https://github.com/ialexies/tempchat/blob/ca965bae09bf381474a8989ee81e6969f132b928/.cursorrules",
+        "size": 10.3,
+        "timestamp": "2025-11-25T08:18:57.311Z"
+      }
+    ],
+    [
+      "big-emotion/ethniafrica/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/big-emotion/ethniafrica/aa1ae8f3cf4884ce1fcefc9bead1917ef71043bc/.cursorrules",
+        "repositoryId": 1072285275,
+        "path": "big-emotion/ethniafrica/.cursorrules",
+        "ownerName": "big-emotion",
+        "repositoryName": "ethniafrica",
+        "htmlUrl": "https://github.com/big-emotion/ethniafrica/blob/aa1ae8f3cf4884ce1fcefc9bead1917ef71043bc/.cursorrules",
+        "size": 8.03,
+        "timestamp": "2025-11-25T08:18:57.468Z"
+      }
+    ],
+    [
+      "mohanselise/legal-template/legal_templates/llm-docs/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/mohanselise/legal-template/2142c1fede5143beee27ca496ac5115afa74a1c1/legal_templates/llm-docs/.cursorrules",
+        "repositoryId": 1090967600,
+        "path": "mohanselise/legal-template/legal_templates/llm-docs/.cursorrules",
+        "ownerName": "mohanselise",
+        "repositoryName": "legal-template",
+        "htmlUrl": "https://github.com/mohanselise/legal-template/blob/2142c1fede5143beee27ca496ac5115afa74a1c1/legal_templates/llm-docs/.cursorrules",
+        "size": 12.33,
+        "timestamp": "2025-11-25T08:18:59.798Z"
+      }
+    ],
+    [
+      "Gaeevy/langtut/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Gaeevy/langtut/76e71aea42eb8adcb4755b3752b5ceb7cb79acfd/.cursorrules",
+        "repositoryId": 978671587,
+        "path": "Gaeevy/langtut/.cursorrules",
+        "ownerName": "Gaeevy",
+        "repositoryName": "langtut",
+        "htmlUrl": "https://github.com/Gaeevy/langtut/blob/76e71aea42eb8adcb4755b3752b5ceb7cb79acfd/.cursorrules",
+        "size": 8.51,
+        "timestamp": "2025-11-25T08:19:08.865Z"
       }
     ]
   ]
