@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 2341,
+  "size": 2348,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -32774,6 +32774,104 @@
         "htmlUrl": "https://github.com/Gaeevy/langtut/blob/76e71aea42eb8adcb4755b3752b5ceb7cb79acfd/.cursorrules",
         "size": 8.51,
         "timestamp": "2025-11-25T08:19:08.865Z"
+      }
+    ],
+    [
+      "peterjpitcher/the-anchor-management-tools/.cursorrules_log_temp.txt",
+      {
+        "name": ".cursorrules_log_temp.txt",
+        "downloadUrl": "https://raw.githubusercontent.com/peterjpitcher/the-anchor-management-tools/bdd1bc8f67da5cab91cead2aaa2342695a5b7841/.cursorrules_log_temp.txt",
+        "repositoryId": 957020556,
+        "path": "peterjpitcher/the-anchor-management-tools/.cursorrules_log_temp.txt",
+        "ownerName": "peterjpitcher",
+        "repositoryName": "the-anchor-management-tools",
+        "htmlUrl": "https://github.com/peterjpitcher/the-anchor-management-tools/blob/bdd1bc8f67da5cab91cead2aaa2342695a5b7841/.cursorrules_log_temp.txt",
+        "size": 7.11,
+        "timestamp": "2025-11-28T08:17:54.636Z"
+      }
+    ],
+    [
+      "noahpaige/yet-another-portfolio/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/noahpaige/yet-another-portfolio/f257038d355bc6580862605a9da9ef28e732d252/.cursorrules",
+        "repositoryId": 978325592,
+        "path": "noahpaige/yet-another-portfolio/.cursorrules",
+        "ownerName": "noahpaige",
+        "repositoryName": "yet-another-portfolio",
+        "htmlUrl": "https://github.com/noahpaige/yet-another-portfolio/blob/f257038d355bc6580862605a9da9ef28e732d252/.cursorrules",
+        "size": 2.75,
+        "timestamp": "2025-11-28T08:17:57.763Z"
+      }
+    ],
+    [
+      "rbarinov/echoshell/tunnel-server/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/rbarinov/echoshell/9264ecdd088d31615106cc6434e9cba0812daa83/tunnel-server/.cursorrules",
+        "repositoryId": 1102354130,
+        "path": "rbarinov/echoshell/tunnel-server/.cursorrules",
+        "ownerName": "rbarinov",
+        "repositoryName": "echoshell",
+        "htmlUrl": "https://github.com/rbarinov/echoshell/blob/9264ecdd088d31615106cc6434e9cba0812daa83/tunnel-server/.cursorrules",
+        "size": 5.24,
+        "timestamp": "2025-11-28T08:17:58.101Z"
+      }
+    ],
+    [
+      "ibrhmahmd/Resume-Builder/memory-bank/projects/LLM-Inference-memory-bank/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ibrhmahmd/Resume-Builder/dd4764514ef0a9d0c683da6721f062fc1cef9038/memory-bank/projects/LLM-Inference-memory-bank/.cursorrules",
+        "repositoryId": 967139653,
+        "path": "ibrhmahmd/Resume-Builder/memory-bank/projects/LLM-Inference-memory-bank/.cursorrules",
+        "ownerName": "ibrhmahmd",
+        "repositoryName": "Resume-Builder",
+        "htmlUrl": "https://github.com/ibrhmahmd/Resume-Builder/blob/dd4764514ef0a9d0c683da6721f062fc1cef9038/memory-bank/projects/LLM-Inference-memory-bank/.cursorrules",
+        "size": 3.39,
+        "timestamp": "2025-11-28T08:18:00.604Z"
+      }
+    ],
+    [
+      "everycure-org/matrix/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/everycure-org/matrix/9148f2dc3b72bd8ccd11a1a400a603231059f713/.cursorrules",
+        "repositoryId": 797215326,
+        "path": "everycure-org/matrix/.cursorrules",
+        "ownerName": "everycure-org",
+        "repositoryName": "matrix",
+        "htmlUrl": "https://github.com/everycure-org/matrix/blob/9148f2dc3b72bd8ccd11a1a400a603231059f713/.cursorrules",
+        "size": 1.72,
+        "timestamp": "2025-11-28T08:18:00.760Z"
+      }
+    ],
+    [
+      "Vance-Club/lucifer/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Vance-Club/lucifer/700215ee4be198a38e4194c4900ce83aa3474576/.cursorrules",
+        "repositoryId": 1101830762,
+        "path": "Vance-Club/lucifer/.cursorrules",
+        "ownerName": "Vance-Club",
+        "repositoryName": "lucifer",
+        "htmlUrl": "https://github.com/Vance-Club/lucifer/blob/700215ee4be198a38e4194c4900ce83aa3474576/.cursorrules",
+        "size": 1.28,
+        "timestamp": "2025-11-28T08:18:03.695Z"
+      }
+    ],
+    [
+      "swiffc/CAD-AI-AGENT/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/swiffc/CAD-AI-AGENT/e7b510eb58d39ed6e4b581c690b1b6a76af85300/.cursorrules",
+        "repositoryId": 1104116358,
+        "path": "swiffc/CAD-AI-AGENT/.cursorrules",
+        "ownerName": "swiffc",
+        "repositoryName": "CAD-AI-AGENT",
+        "htmlUrl": "https://github.com/swiffc/CAD-AI-AGENT/blob/e7b510eb58d39ed6e4b581c690b1b6a76af85300/.cursorrules",
+        "size": 34.37,
+        "timestamp": "2025-11-28T08:18:04.171Z"
       }
     ]
   ]

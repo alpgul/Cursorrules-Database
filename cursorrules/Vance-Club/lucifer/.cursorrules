@@ -1,0 +1,27 @@
+# Lucifer - Forex Provider Service - Cursor Rules
+
+> **Note**: This file contains Lucifer-specific rules. For common standards shared across all Shivalik stack services, see `../.cursorrules-common`
+
+## Project Context
+Lucifer is a Golang microservice that provides forex rates functionality. It handles forex rate retrieval based on user ID and country information provided via request headers (`x-user-id` and `x-country`).
+
+## Key Differences from Other Services
+
+- **No User Authentication**: This service uses `x-user-id` and `x-country` headers directly instead of requiring user authentication
+- **Simple Service**: Focused on forex rates retrieval, minimal dependencies
+
+## Service-Specific Patterns
+
+### Header Extraction
+- Always use `x-user-id` header for user identification (not `x-customer-id`)
+- Always use `x-country` header for country information
+- Use utility functions in `internal/handler/utils/header_utils.go` for header extraction
+
+### Forex Rates Service
+- The `ForexService.GetRates()` method should be implemented based on the app-server's `/v2/forex-provider/get-rates` implementation
+- Currently contains placeholder logic that needs to be replaced with actual implementation
+
+## API Endpoints
+
+- `GET /lucifer/v2/forex-provider/get-rates` - Get forex rates for user and country
+
