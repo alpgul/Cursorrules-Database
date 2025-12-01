@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 2348,
+  "size": 2362,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -32872,6 +32872,202 @@
         "htmlUrl": "https://github.com/swiffc/CAD-AI-AGENT/blob/e7b510eb58d39ed6e4b581c690b1b6a76af85300/.cursorrules",
         "size": 34.37,
         "timestamp": "2025-11-28T08:18:04.171Z"
+      }
+    ],
+    [
+      "XDMIQ-UAT/JobMatch.Zip/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/XDMIQ-UAT/JobMatch.Zip/93617553ae5f69ef6eaf0804908c106db7a1818b/.cursorrules",
+        "repositoryId": 1101673628,
+        "path": "XDMIQ-UAT/JobMatch.Zip/.cursorrules",
+        "ownerName": "XDMIQ-UAT",
+        "repositoryName": "JobMatch.Zip",
+        "htmlUrl": "https://github.com/XDMIQ-UAT/JobMatch.Zip/blob/93617553ae5f69ef6eaf0804908c106db7a1818b/.cursorrules",
+        "size": 3.56,
+        "timestamp": "2025-12-01T08:20:22.986Z"
+      }
+    ],
+    [
+      "bounjee/PromptHive/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/bounjee/PromptHive/a0b8e6c67c9c682fe07505d5017e6654fe9197bd/.cursorrules",
+        "repositoryId": 1004541936,
+        "path": "bounjee/PromptHive/.cursorrules",
+        "ownerName": "bounjee",
+        "repositoryName": "PromptHive",
+        "htmlUrl": "https://github.com/bounjee/PromptHive/blob/a0b8e6c67c9c682fe07505d5017e6654fe9197bd/.cursorrules",
+        "size": 4.56,
+        "timestamp": "2025-12-01T08:20:23.539Z"
+      }
+    ],
+    [
+      "svan058/dunelegacy.com/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/svan058/dunelegacy.com/80eb83bf07c0fd89ed1beaa08b20c180f1afb17a/.cursorrules",
+        "repositoryId": 1097491475,
+        "path": "svan058/dunelegacy.com/.cursorrules",
+        "ownerName": "svan058",
+        "repositoryName": "dunelegacy.com",
+        "htmlUrl": "https://github.com/svan058/dunelegacy.com/blob/80eb83bf07c0fd89ed1beaa08b20c180f1afb17a/.cursorrules",
+        "size": 3.46,
+        "timestamp": "2025-12-01T08:20:24.038Z"
+      }
+    ],
+    [
+      "senal88/SYSTEM_PROMPT/.backup_cursorrules_20251106_190155/08_configuracao.cursorrules",
+      {
+        "name": "08_configuracao.cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/senal88/SYSTEM_PROMPT/46f2a93402665c839dd684794d651a01b41fd662/.backup_cursorrules_20251106_190155/08_configuracao.cursorrules",
+        "repositoryId": 1097307264,
+        "path": "senal88/SYSTEM_PROMPT/.backup_cursorrules_20251106_190155/08_configuracao.cursorrules",
+        "ownerName": "senal88",
+        "repositoryName": "SYSTEM_PROMPT",
+        "htmlUrl": "https://github.com/senal88/SYSTEM_PROMPT/blob/46f2a93402665c839dd684794d651a01b41fd662/.backup_cursorrules_20251106_190155/08_configuracao.cursorrules",
+        "size": 3.23,
+        "timestamp": "2025-12-01T08:20:26.630Z"
+      }
+    ],
+    [
+      "hatefsystems/search-engine-core/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/hatefsystems/search-engine-core/4851b4c0b15f1a4bb8eaedd205d29966a50b2d13/.cursorrules",
+        "repositoryId": 876897293,
+        "path": "hatefsystems/search-engine-core/.cursorrules",
+        "ownerName": "hatefsystems",
+        "repositoryName": "search-engine-core",
+        "htmlUrl": "https://github.com/hatefsystems/search-engine-core/blob/4851b4c0b15f1a4bb8eaedd205d29966a50b2d13/.cursorrules",
+        "size": 42.53,
+        "timestamp": "2025-12-01T08:20:27.001Z"
+      }
+    ],
+    [
+      "swiffc/CADForge_AI/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/swiffc/CADForge_AI/5048906b194892e94c9d46c5aef0a5d1d28060ea/.cursorrules",
+        "repositoryId": 1105546816,
+        "path": "swiffc/CADForge_AI/.cursorrules",
+        "ownerName": "swiffc",
+        "repositoryName": "CADForge_AI",
+        "htmlUrl": "https://github.com/swiffc/CADForge_AI/blob/5048906b194892e94c9d46c5aef0a5d1d28060ea/.cursorrules",
+        "size": 34.37,
+        "timestamp": "2025-12-01T08:20:27.606Z"
+      }
+    ],
+    [
+      "eco2-team/backend/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/eco2-team/backend/b50d073260fae530e491979e36373adb5b690614/.cursorrules",
+        "repositoryId": 1084300499,
+        "path": "eco2-team/backend/.cursorrules",
+        "ownerName": "eco2-team",
+        "repositoryName": "backend",
+        "htmlUrl": "https://github.com/eco2-team/backend/blob/b50d073260fae530e491979e36373adb5b690614/.cursorrules",
+        "size": 6.74,
+        "timestamp": "2025-12-01T08:20:28.920Z"
+      }
+    ],
+    [
+      "Phillboard/mobul/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Phillboard/mobul/2902e0f580e9dd973136268ec2229c260f87914d/.cursorrules",
+        "repositoryId": 1097821102,
+        "path": "Phillboard/mobul/.cursorrules",
+        "ownerName": "Phillboard",
+        "repositoryName": "mobul",
+        "htmlUrl": "https://github.com/Phillboard/mobul/blob/2902e0f580e9dd973136268ec2229c260f87914d/.cursorrules",
+        "size": 2.5,
+        "timestamp": "2025-12-01T08:20:29.001Z"
+      }
+    ],
+    [
+      "cmobley001/my-dev-portfolio/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/cmobley001/my-dev-portfolio/40ec5a17ce5be8edc197185b46b71a3f6d373e7d/.cursorrules",
+        "repositoryId": 1105636529,
+        "path": "cmobley001/my-dev-portfolio/.cursorrules",
+        "ownerName": "cmobley001",
+        "repositoryName": "my-dev-portfolio",
+        "htmlUrl": "https://github.com/cmobley001/my-dev-portfolio/blob/40ec5a17ce5be8edc197185b46b71a3f6d373e7d/.cursorrules",
+        "size": 1.86,
+        "timestamp": "2025-12-01T08:20:29.166Z"
+      }
+    ],
+    [
+      "CamaireTech-Production/lebonprix/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/CamaireTech-Production/lebonprix/48943a571558f3b829f5fe5007cb696c711e2dcf/.cursorrules",
+        "repositoryId": 996501996,
+        "path": "CamaireTech-Production/lebonprix/.cursorrules",
+        "ownerName": "CamaireTech-Production",
+        "repositoryName": "lebonprix",
+        "htmlUrl": "https://github.com/CamaireTech-Production/lebonprix/blob/48943a571558f3b829f5fe5007cb696c711e2dcf/.cursorrules",
+        "size": 11.91,
+        "timestamp": "2025-12-01T08:20:29.278Z"
+      }
+    ],
+    [
+      "nhuanld17/the-rubik/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/nhuanld17/the-rubik/6336f81ea545f58ccd246edcac9185488744da0b/.cursorrules",
+        "repositoryId": 1106864342,
+        "path": "nhuanld17/the-rubik/.cursorrules",
+        "ownerName": "nhuanld17",
+        "repositoryName": "the-rubik",
+        "htmlUrl": "https://github.com/nhuanld17/the-rubik/blob/6336f81ea545f58ccd246edcac9185488744da0b/.cursorrules",
+        "size": 9.59,
+        "timestamp": "2025-12-01T08:20:29.895Z"
+      }
+    ],
+    [
+      "manuelfussTC/PulseFramework/templates/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/manuelfussTC/PulseFramework/5c2b1979d25d34cd4883a4744a52908bc7c1eab1/templates/.cursorrules",
+        "repositoryId": 1105975885,
+        "path": "manuelfussTC/PulseFramework/templates/.cursorrules",
+        "ownerName": "manuelfussTC",
+        "repositoryName": "PulseFramework",
+        "htmlUrl": "https://github.com/manuelfussTC/PulseFramework/blob/5c2b1979d25d34cd4883a4744a52908bc7c1eab1/templates/.cursorrules",
+        "size": 2.2,
+        "timestamp": "2025-12-01T08:20:30.139Z"
+      }
+    ],
+    [
+      "toptiersalespro/PowerShell-Security-Framework/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/toptiersalespro/PowerShell-Security-Framework/58183d0c97fd480b8d786c90a160b7e738d93264/.cursorrules",
+        "repositoryId": 1106800910,
+        "path": "toptiersalespro/PowerShell-Security-Framework/.cursorrules",
+        "ownerName": "toptiersalespro",
+        "repositoryName": "PowerShell-Security-Framework",
+        "htmlUrl": "https://github.com/toptiersalespro/PowerShell-Security-Framework/blob/58183d0c97fd480b8d786c90a160b7e738d93264/.cursorrules",
+        "size": 3.11,
+        "timestamp": "2025-12-01T08:20:30.609Z"
+      }
+    ],
+    [
+      "senal88/SYSTEM_PROMPT/context-engineering/cursor-rules/projetos/08_configuracao.cursorrules",
+      {
+        "name": "08_configuracao.cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/senal88/SYSTEM_PROMPT/46f2a93402665c839dd684794d651a01b41fd662/context-engineering/cursor-rules/projetos/08_configuracao.cursorrules",
+        "repositoryId": 1097307264,
+        "path": "senal88/SYSTEM_PROMPT/context-engineering/cursor-rules/projetos/08_configuracao.cursorrules",
+        "ownerName": "senal88",
+        "repositoryName": "SYSTEM_PROMPT",
+        "htmlUrl": "https://github.com/senal88/SYSTEM_PROMPT/blob/46f2a93402665c839dd684794d651a01b41fd662/context-engineering/cursor-rules/projetos/08_configuracao.cursorrules",
+        "size": 3.23,
+        "timestamp": "2025-12-01T08:20:30.908Z"
       }
     ]
   ]

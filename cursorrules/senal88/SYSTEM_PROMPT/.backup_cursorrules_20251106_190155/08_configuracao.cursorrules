@@ -1,0 +1,112 @@
+# .cursorrules - 08_configuracao
+
+# Last Updated: 2025-10-30
+# Version: 1.0.0
+
+## Project Overview
+
+[DESCRIPTION: Brief description of project purpose, tech stack, environment]
+
+**Repositório Local:** `~/Projetos/08_configuracao`  
+**Integração:** `~/Dotfiles/automation_1password` (governança centralizada)
+
+## Governance Inheritance
+
+Este projeto herda governança de `~/Dotfiles/automation_1password/.cursorrules`:
+- **Padrões de data:** Last Updated: YYYY-MM-DD, Version: X.Y.Z (Semantic Versioning)
+- **Segurança:** Secrets via 1Password CLI (`op://`), nunca hardcoded
+- **Scripts Shell:** `set -euo pipefail`, idempotência obrigatória
+- **Documentação:** Headers padronizados em todos `.md` críticos
+
+## Context Packs (Project-Specific)
+
+context:
+  priority_high:
+    - ./src/**
+    - ./docs/**
+    - ./scripts/**
+    - ./config/**
+  
+  priority_medium:
+    - ./tests/**
+    - ./examples/**
+  
+  exclusions:
+    - ./node_modules/**
+    - ./dist/**
+    - ./build/**
+    - ./**/*.log
+    - ./**/.env
+    - ./**/credentials.json
+
+## Integration with automation_1password
+
+### Shared Secrets Management
+- Use vaults: `1p_macos` (DEV) ou `1p_vps` (PROD)
+- Template pattern: `templates/env/*.secrets.env.op`
+- Injection: `op inject -i template.env.op -o .env`
+- Never commit: `.env`, `credentials.json`, tokens
+
+### Shared Scripts (Optional)
+Reference: `~/Dotfiles/automation_1password/scripts/`
+- `scripts/secrets/inject_secrets_macos.sh` — Injeção de secrets
+- `scripts/validation/validate_architecture.sh` — Validação
+
+### Architecture Snapshot (When Needed)
+Reference: `~/Dotfiles/automation_1password/exports/architecture_system_snapshot_YYYYMMDD.md`
+- Use for: LLM context ingestion, full system state
+- Current: `architecture_system_snapshot_20251030.md` (6114 lines, 232 KB)
+- SHA-256: `59ba13544e81bb6e6a18a22e5928e7a098750dfba54d7738f4a59077181150d6`
+
+## Code Style and Conventions
+
+### Stack: tool
+[Ex: TypeScript strict, React hooks, Python type hints, etc.]
+
+### Documentation
+- Use Markdown with headers: `Last Updated: YYYY-MM-DD`, `Version: X.Y.Z`
+- Include code examples with syntax highlighting
+- Provide step-by-step instructions
+- Add troubleshooting sections
+
+## Security Best Practices
+
+### Secrets Management
+- Never commit `.env`, `credentials.json`, or certificate files
+- Always use `op://` references via 1Password CLI
+- Use restrictive file permissions (600 for sensitive files)
+- Validate all inputs
+
+## Apple Silicon Optimizations (if applicable)
+
+- Prioritize ARM64 native images over x86_64/amd64
+- Use Docker with `platform: linux/arm64` when applicable
+- Test on M1/M2/M3 chips
+
+## AI Assistant Instructions
+
+When helping with this project:
+
+1. Consider Apple Silicon optimizations (if applicable)
+2. Prioritize security in all suggestions
+3. Reference shared governance from `~/Dotfiles/automation_1password`
+4. Use 1Password CLI for secrets (`op://` syntax)
+5. Follow project-specific code style conventions
+6. Maintain documentation headers (Last Updated/Version)
+7. Include error handling and validation
+8. Provide complete, tested code examples
+
+
+## Context Packs (Project-Specific)
+
+  priority_high:
+    - ./scripts/**
+    - ./config/**
+    - ./docs/**
+  
+  priority_medium:
+    - ./templates/**
+  
+  exclusions:
+    - ./**/*.log
+    - ./**/.env*

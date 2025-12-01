@@ -1,0 +1,96 @@
+# Dune Legacy Website & Metaserver
+
+## Project Overview
+Website and multiplayer metaserver for Dune Legacy game.
+- Website: Static HTML at https://dunelegacy.com
+- Metaserver: PHP API at https://dunelegacy.com/metaserver/metaserver.php
+- Hosting: Single DigitalOcean Droplet serves both
+
+## Key Files
+- `DEPLOYMENT.md` - Complete deployment & troubleshooting guide (READ THIS FIRST!)
+- `README.md` - Project overview
+- `deploy/create-droplet.sh` - Creates metaserver VM
+- `deploy/setup-github-actions.sh` - Enables auto-deployment
+- `deploy/app.yaml` - App Platform config (website only)
+
+## Repository Structure
+```
+├── website/          - Static site files (HTML/CSS/JS)
+├── metaserver/       - PHP metaserver code
+│   ├── metaserver.php   - Main API (list/add/update/remove servers)
+│   ├── index.php        - Status dashboard
+│   └── download.php     - Game downloads
+├── deploy/           - Deployment automation scripts
+└── .github/workflows/ - CI/CD (auto-deploy on push)
+```
+
+## Deployment Architecture
+- **Single Droplet** serves both website and metaserver
+- **Auto-deploy**: GitHub Actions on push → SSH → git pull
+- **URL structure**: dunelegacy.com/ (website), dunelegacy.com/metaserver/ (API)
+- **Data persistence**: Droplet has persistent data at `/var/www/data/` (servers.dat, stats.json)
+
+## Critical: Data Persistence
+**Droplet filesystem:**
+- `/var/www/html/` - Code (updated by git pull) ✅ Safe to update
+  - `index.html` etc - Website files
+  - `metaserver/` - Metaserver PHP files
+- `/var/www/data/` - Data (NEVER touched by deploys) ⚠️ PERSISTENT
+  - `servers.dat` - Active game servers
+  - `stats.json` - Game statistics (total games, recent games, popular maps)
+
+**NEVER suggest:**
+- Deleting `/var/www/data/`
+- Deleting the droplet (unless intentional)
+- Running `create-droplet.sh` more than once
+- Recreating droplet to "fix" issues (loses all data!)
+
+## Safe Operations
+✅ Update code via `git push` (data preserved)
+✅ Restart Apache (data preserved)
+✅ Reboot droplet (data preserved)
+✅ Update PHP files (data preserved)
+
+## Common Commands
+```bash
+# Deploy everything (first time)
+cd deploy && ./create-droplet.sh && ./setup-github-actions.sh
+
+# Update code (automatic)
+git push origin main
+
+# Check status
+curl https://dunelegacy.com
+curl https://dunelegacy.com/metaserver/metaserver.php?action=list
+
+# Debug - SSH into droplet
+ssh root@192.81.217.88
+
+# View logs
+ssh root@192.81.217.88 "tail -50 /var/log/apache2/dunelegacy-error.log"
+ssh root@192.81.217.88 "tail -50 /var/log/apache2/dunelegacy-access.log"
+
+# View persistent data (stats & active servers)
+ssh root@192.81.217.88 "ls -la /var/www/data/"
+ssh root@192.81.217.88 "cat /var/www/data/stats.json"
+ssh root@192.81.217.88 "cat /var/www/data/servers.dat"
+
+# Follow logs in real-time
+ssh root@192.81.217.88 "tail -f /var/log/apache2/dunelegacy-error.log"
+```
+
+## When User Asks About:
+- **Deployment** → Point to DEPLOYMENT.md
+- **Data loss concerns** → Explain `/var/www/data/` is persistent
+- **How to update code** → `git push origin main` (auto-deploys)
+- **Game URL** → https://dunelegacy.com/metaserver/metaserver.php (NO client changes needed!)
+- **Troubleshooting** → See DEPLOYMENT.md "Troubleshooting" section
+- **Cost** → $6/month total (no App Platform!)
+
+## Tech Stack
+- Hosting: Ubuntu 24.04 Droplet ($6/month)
+- Web Server: Apache 2.4
+- Language: PHP 8.3 (metaserver), Static HTML (website)
+- CI/CD: GitHub Actions
+- Storage: Flat files (servers.dat, stats.json)
+
