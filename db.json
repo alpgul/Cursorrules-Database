@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 2362,
+  "size": 2372,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -33068,6 +33068,146 @@
         "htmlUrl": "https://github.com/senal88/SYSTEM_PROMPT/blob/46f2a93402665c839dd684794d651a01b41fd662/context-engineering/cursor-rules/projetos/08_configuracao.cursorrules",
         "size": 3.23,
         "timestamp": "2025-12-01T08:20:30.908Z"
+      }
+    ],
+    [
+      "bolabaden/bolabaden-infra/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/bolabaden/bolabaden-infra/1de509352bf6cb74fec5e79f60ac6a175a1bb929/.cursorrules",
+        "repositoryId": 1063564193,
+        "path": "bolabaden/bolabaden-infra/.cursorrules",
+        "ownerName": "bolabaden",
+        "repositoryName": "bolabaden-infra",
+        "htmlUrl": "https://github.com/bolabaden/bolabaden-infra/blob/1de509352bf6cb74fec5e79f60ac6a175a1bb929/.cursorrules",
+        "size": 5.41,
+        "timestamp": "2025-12-04T08:19:05.183Z"
+      }
+    ],
+    [
+      "jonno2012/tattoo-site/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/jonno2012/tattoo-site/71ca53332c1dc1adf35260a05f4d177b0360e14b/.cursorrules",
+        "repositoryId": 1102563140,
+        "path": "jonno2012/tattoo-site/.cursorrules",
+        "ownerName": "jonno2012",
+        "repositoryName": "tattoo-site",
+        "htmlUrl": "https://github.com/jonno2012/tattoo-site/blob/71ca53332c1dc1adf35260a05f4d177b0360e14b/.cursorrules",
+        "size": 2.42,
+        "timestamp": "2025-12-04T08:19:05.639Z"
+      }
+    ],
+    [
+      "bigabid/ai-hackathon/rules-directory/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/bigabid/ai-hackathon/54a1e5ef65885ac54a7db7984dccb33c03728a04/rules-directory/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "repositoryId": 1046239803,
+        "path": "bigabid/ai-hackathon/rules-directory/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "ownerName": "bigabid",
+        "repositoryName": "ai-hackathon",
+        "htmlUrl": "https://github.com/bigabid/ai-hackathon/blob/54a1e5ef65885ac54a7db7984dccb33c03728a04/rules-directory/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "size": 4.93,
+        "timestamp": "2025-12-04T08:19:06.341Z"
+      }
+    ],
+    [
+      "mknoufi/Stock_counting/awesome-cursorrules-repo/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/mknoufi/Stock_counting/f8c20b53caed0986f4ab2d304f55932fd3c94771/awesome-cursorrules-repo/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1107765165,
+        "path": "mknoufi/Stock_counting/awesome-cursorrules-repo/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "mknoufi",
+        "repositoryName": "Stock_counting",
+        "htmlUrl": "https://github.com/mknoufi/Stock_counting/blob/f8c20b53caed0986f4ab2d304f55932fd3c94771/awesome-cursorrules-repo/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "size": 2.32,
+        "timestamp": "2025-12-04T08:19:07.423Z"
+      }
+    ],
+    [
+      "mknoufi/STOCK_VERIFY_ui/awesome-cursorrules-repo/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/mknoufi/STOCK_VERIFY_ui/b48b141bf54d24f85ccffa19146d5d8fa186b587/awesome-cursorrules-repo/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1108608771,
+        "path": "mknoufi/STOCK_VERIFY_ui/awesome-cursorrules-repo/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "mknoufi",
+        "repositoryName": "STOCK_VERIFY_ui",
+        "htmlUrl": "https://github.com/mknoufi/STOCK_VERIFY_ui/blob/b48b141bf54d24f85ccffa19146d5d8fa186b587/awesome-cursorrules-repo/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "size": 2.32,
+        "timestamp": "2025-12-04T08:19:07.487Z"
+      }
+    ],
+    [
+      "ryanmaclean/vibecode-webgui/azure/SwiftUI-Apps/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ryanmaclean/vibecode-webgui/ebfc970b59271e6fc16578c17668a411cff39fb5/azure/SwiftUI-Apps/.cursorrules",
+        "repositoryId": 1021075367,
+        "path": "ryanmaclean/vibecode-webgui/azure/SwiftUI-Apps/.cursorrules",
+        "ownerName": "ryanmaclean",
+        "repositoryName": "vibecode-webgui",
+        "htmlUrl": "https://github.com/ryanmaclean/vibecode-webgui/blob/ebfc970b59271e6fc16578c17668a411cff39fb5/azure/SwiftUI-Apps/.cursorrules",
+        "size": 7.39,
+        "timestamp": "2025-12-04T08:19:07.992Z"
+      }
+    ],
+    [
+      "bpg/home-ops/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/bpg/home-ops/af4a6ebf43b04ca895914a2ab67b746b88268123/.cursorrules",
+        "repositoryId": 1026359891,
+        "path": "bpg/home-ops/.cursorrules",
+        "ownerName": "bpg",
+        "repositoryName": "home-ops",
+        "htmlUrl": "https://github.com/bpg/home-ops/blob/af4a6ebf43b04ca895914a2ab67b746b88268123/.cursorrules",
+        "size": 25.84,
+        "timestamp": "2025-12-04T08:19:08.108Z"
+      }
+    ],
+    [
+      "WaltJohnsonIII/alignsynch-mvp/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/WaltJohnsonIII/alignsynch-mvp/a439de659c80ba63f4f27218fe6fb691c8bca037/.cursorrules",
+        "repositoryId": 1037511954,
+        "path": "WaltJohnsonIII/alignsynch-mvp/.cursorrules",
+        "ownerName": "WaltJohnsonIII",
+        "repositoryName": "alignsynch-mvp",
+        "htmlUrl": "https://github.com/WaltJohnsonIII/alignsynch-mvp/blob/a439de659c80ba63f4f27218fe6fb691c8bca037/.cursorrules",
+        "size": 7.5,
+        "timestamp": "2025-12-04T08:19:09.014Z"
+      }
+    ],
+    [
+      "Solware-Agency/Solhub_prod/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Solware-Agency/Solhub_prod/d5f6546f5a418161546ce9daf4d3c309550da39f/.cursorrules",
+        "repositoryId": 1060366195,
+        "path": "Solware-Agency/Solhub_prod/.cursorrules",
+        "ownerName": "Solware-Agency",
+        "repositoryName": "Solhub_prod",
+        "htmlUrl": "https://github.com/Solware-Agency/Solhub_prod/blob/d5f6546f5a418161546ce9daf4d3c309550da39f/.cursorrules",
+        "size": 95.82,
+        "timestamp": "2025-12-04T08:19:09.786Z"
+      }
+    ],
+    [
+      "techieroshan/studentsupport/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/techieroshan/studentsupport/b3a5d486dd6daab2e86f77f2f4c56eb16e6e3d13/.cursorrules",
+        "repositoryId": 1105756960,
+        "path": "techieroshan/studentsupport/.cursorrules",
+        "ownerName": "techieroshan",
+        "repositoryName": "studentsupport",
+        "htmlUrl": "https://github.com/techieroshan/studentsupport/blob/b3a5d486dd6daab2e86f77f2f4c56eb16e6e3d13/.cursorrules",
+        "size": 4.72,
+        "timestamp": "2025-12-04T08:19:09.879Z"
       }
     ]
   ]

@@ -1,0 +1,49 @@
+
+
+  You are an expert in Laravel.
+
+  Key Principles
+  - Write concise, technical responses with accurate examples in PHP.
+  - Follow Laravel best practices and conventions.
+  - Use object-oriented programming with a focus on SOLID principles.
+  - Favor iteration and modularization over duplication.
+  - Use descriptive and meaningful names for variables, methods, and files.
+  - Adhere to Laravel's directory structure conventions (e.g., app/Http/Controllers).
+  - Prioritize dependency injection and service containers.
+
+  Laravel
+  - Leverage PHP 8.2+ features (e.g., readonly properties, match expressions).
+  - Apply strict typing: declare(strict_types=1).
+  - Follow PSR-12 coding standards for PHP.
+  - Use Laravel's built-in features and helpers (e.g., `Str::` and `Arr::`).
+  - File structure: Stick to Laravel's MVC architecture and directory organization.
+  - Implement error handling and logging:
+    - Use Laravel's exception handling and logging tools.
+    - Create custom exceptions when necessary.
+    - Apply try-catch blocks for predictable errors.
+  - Use Laravel's request validation and middleware effectively.
+  - Implement Eloquent ORM for database modeling and queries.
+  - Use migrations and seeders to manage database schema changes and test data.
+  
+  Dependencies
+  - Laravel (latest stable version)
+  - Composer for dependency management
+
+  Best Practices
+  - Use Eloquent ORM and Repository patterns for data access.
+  - Leverage Laravel’s caching mechanisms for optimal performance.
+  - Use Laravel’s testing tools (PHPUnit) for unit and feature testing.
+  - Ensure database integrity with proper indexing, transactions, and migrations.
+  - Use Laravel's localization features for multi-language support.
+  - always create Laravel API Resources for json responses.
+  - Return standardized JSON responses with pagination metadata.
+  - Use Laravel Form Request Validation for all API endpoints.
+
+  Key Conventions
+  1. Follow Laravel's MVC architecture.
+  2. Use routing for clean URL and endpoint definitions.
+  3. Implement request validation with Form Requests.
+  6. Manage database relationships using Eloquent's features.
+  
+  Shared TS
+  - There will be a nuxt application in apps/web and a React Native app in apps/mobile. The React Native application in apps/mobile will be the mobile equivalent of the nuxt app in apps/web. Any shared code (type definitions, upload validation etc) that can be placed in packages/shared-ts should be.

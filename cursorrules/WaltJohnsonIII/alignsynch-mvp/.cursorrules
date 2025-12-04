@@ -1,0 +1,257 @@
+# Cursor Rules for AlignSynch Project with Optimized BMAD and Dart Integration
+
+## 🚨 CRITICAL CONTENT PRESERVATION RULES 🚨
+
+### ABSOLUTE CONTENT PRESERVATION POLICY
+- **NEVER DELETE ANY CONTENT** - Always archive instead
+- **ALWAYS CREATE BACKUP COPIES** before making changes
+- **USE ARCHIVE FOLDERS** for deprecated content
+- **DOCUMENT ALL CHANGES** in version control
+- **ONLY DELETE IF EXPLICITLY REQUESTED** by user
+
+### ARCHIVAL STRUCTURE
+```
+archived/
+├── components/
+│   ├── original-home-components/
+│   ├── deprecated-features/
+│   └── old-versions/
+├── pages/
+│   ├── original-pages/
+│   └── deprecated-routes/
+└── docs/
+    ├── change-log/
+    └── migration-notes/
+```
+
+### CONTENT PRESERVATION WORKFLOW
+1. **Before any change**: Create backup in `archived/` folder
+2. **Document changes**: Update change log in Dart
+3. **Test thoroughly**: Ensure new content works
+4. **Keep references**: Maintain links to archived content
+5. **Version control**: Commit all changes with clear messages
+
+## Optimized MCP Server Configuration
+
+### Essential MCP Servers (Global Install)
+```json
+{
+  "mcpServers": {
+    "dart": {
+      "command": "mcp-server-dart"
+    },
+    "filesystem": {
+      "command": "mcp-server-filesystem",
+      "args": ["--root", "C:/Users/jaden.black/BlackCloud/repos/alignsynch-web"]
+    },
+    "sequential-thinking": {
+      "command": "mcp-server-sequential-thinking"
+    }
+  }
+}
+```
+
+## Available MCP Functions (Optimized)
+
+### Core Functions (Always Available)
+- **Dart**: Project, task, and changelog management
+- **Filesystem**: File operations and directory access
+- **Sequential Thinking**: Step-by-step reasoning
+
+### Eliminated Duplicates
+- ❌ Removed: Agentic Tools MCP server
+- ❌ Removed: Memory MCP server (Dart handles project memory)
+- ❌ Removed: Redundant task management systems
+- ❌ Removed: Context-heavy servers
+
+## BMAD Integration (Optimized)
+
+### BMAD Agent Activation
+- `@bmad-orchestrator` - Master coordinator
+- `@dev` - Full-stack development
+- `@qa` - Quality assurance
+- `@architect` - System architecture
+- `@analyst` - Domain research and analysis
+- `@pm` - Product management
+- `@po` - Product owner
+- `@ux-expert` - User experience design
+- `@sm` - Scrum master
+- `@bmad-master` - BMAD framework expert
+
+### BMAD Commands (Context-Optimized)
+- `*help` - Show all commands
+- `*status` - Show current progress
+- `*plan` - Create workflow plan
+- `*workflow-guidance` - Get personalized workflow recommendations
+- `*task [name]` - Execute specific task
+- `*checklist [name]` - Run specific checklist
+
+## Project-Specific Context (Minimal Loading)
+
+### AlignSynch Project
+- **Framework**: 4-opinion assessment (Feel, Wish, Think, Guess)
+- **Tech Stack**: Next.js 15 + React 19 + TypeScript + ShadCN UI + Tailwind CSS
+- **User Roles**: Initiator, Counterparty, Coach
+- **Current Phase**: Phase 2 (Core Architecture Implementation)
+
+### Essential Files (On-Demand Loading)
+- `docs/BMAD-QUICK-START.md` - BMAD workflow guidance
+- `docs/ALIGNSYNCH-SETUP-PLAN.md` - Complete project roadmap
+- `docs/NEXT-STEPS-PLAN.md` - Immediate next actions
+- `web-bundles/agents/` - All BMAD agent configurations
+- `package.json` - Project dependencies
+- `components.json` - ShadCN UI configuration
+- `tailwind.config.ts` - Styling system
+
+## Development Guidelines (Optimized)
+
+### Code Standards
+- Follow Next.js 15 App Router patterns
+- Use React Server Components by default
+- Implement TypeScript strict mode
+- Follow ShadCN UI component patterns
+- Maintain accessibility standards
+
+### BMAD Workflow (Context-Efficient)
+1. **Planning**: Use `@analyst` → `@pm` → `@architect`
+2. **Development**: Use `@dev` with `@qa` review
+3. **Testing**: Use `@qa` for comprehensive testing
+4. **Coordination**: Use `@bmad-orchestrator` for workflow management
+
+### Task Management Workflow (Dart-Integrated)
+1. **Create Project**: Use `mcp_Dart_create_task` with type "Project"
+2. **Add Tasks**: Use `mcp_Dart_create_task` with hierarchy
+3. **Track Progress**: Use `mcp_Dart_update_task`
+4. **Create Changelog**: Use `mcp_Dart_create_doc` for changelog entries
+5. **Store Decisions**: Use `mcp_Dart_create_doc` for technical decisions
+
+## Optimization Features
+
+### Context Optimization
+- Load only essential files for specific tasks
+- Use BMAD agents for specialized work
+- Reference existing patterns in codebase
+- Store technical decisions in Dart docs
+
+### Dart Integration (Streamlined)
+- Use Dart for all project management
+- Leverage Dart's built-in task hierarchy
+- Store project context in Dart docs
+- Track progress with Dart task updates
+
+### BMAD Integration (Efficient)
+- Start with `@bmad-orchestrator` for coordination
+- Use specific agents for specialized tasks
+- Follow planning → development → testing workflow
+- Document decisions in Dart format
+
+## Quick Start Commands (Optimized)
+
+### Initialize Project
+```bash
+# Start BMAD Orchestrator
+@bmad-orchestrator
+*workflow-guidance
+
+# Create project in Dart
+mcp_Dart_create_task
+{
+  "title": "AlignSynch",
+  "type": "Project",
+  "description": "Relationship management platform using 4-opinion framework",
+  "dartboard": "AlignSynch/Active"
+}
+```
+
+### Development Workflow (Context-Efficient)
+```bash
+# Architecture planning
+@architect
+*task create-architecture
+
+# Development
+@dev
+*task implement-feature
+
+# Quality assurance
+@qa
+*task review-code
+```
+
+### Task Management (Dart-Integrated)
+```bash
+# List current tasks
+mcp_Dart_list_tasks
+
+# Create new task
+mcp_Dart_create_task
+{
+  "title": "Database Schema Design",
+  "description": "Design comprehensive database schema",
+  "dartboard": "AlignSynch/Active",
+  "priority": "high",
+  "tags": ["database", "architecture"]
+}
+```
+
+### Documentation Management (Dart-Integrated)
+```bash
+# Create changelog entry
+mcp_Dart_create_doc
+{
+  "title": "Changelog - Database Schema Implementation",
+  "text": "## Database Schema Design\n\n- Implemented user authentication tables\n- Created relationship assessment tables\n- Added progress tracking schema",
+  "folder": "General/Docs"
+}
+
+# Create technical decision doc
+mcp_Dart_create_doc
+{
+  "title": "Technical Decision - Database Choice",
+  "text": "Selected Supabase for real-time features and built-in auth",
+  "folder": "General/Docs"
+}
+```
+
+## Environment Setup (Optimized)
+
+### Required Tools (Global Install)
+- Node.js 20+
+- pnpm (recommended)
+- Cursor IDE with MCP support
+- Dart MCP server (global)
+- BMAD framework web bundles
+
+### Configuration Files (Minimal)
+- `.cursorrules` - Cursor configuration (this file)
+- `web-bundles/` - BMAD agent configurations
+- `docs/` - Project documentation
+
+### MCP Server Status (Optimized)
+- **Dart**: Global install, project/task/changelog management
+- **Filesystem**: Global install, project root access
+- **Sequential Thinking**: Global install, reasoning support
+- **Working Directory**: `C:/Users/jaden.black/BlackCloud/repos/alignsynch-web`
+- **Functions**: Essential project management only
+
+## Success Metrics (Optimized)
+
+### Development Efficiency
+- ✅ Dart MCP functions accessible
+- ✅ BMAD agents working properly
+- ✅ Task management integrated in Dart
+- ✅ Changelog system functional in Dart
+- ✅ Context optimization working
+- ✅ No duplicate servers
+- ✅ Global installation
+
+### Project Progress
+- ✅ Phase 2 tasks created and tracked in Dart
+- ✅ Technical decisions documented in Dart
+- ✅ BMAD workflow established
+- ✅ Development pipeline optimized
+- ✅ MCP servers streamlined
+
+---
+
+**Ready to Start**: Use `@bmad-orchestrator` → `*workflow-guidance` to begin the optimized development workflow with Dart integration!
