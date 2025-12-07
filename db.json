@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 2372,
+  "size": 2381,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -33208,6 +33208,132 @@
         "htmlUrl": "https://github.com/techieroshan/studentsupport/blob/b3a5d486dd6daab2e86f77f2f4c56eb16e6e3d13/.cursorrules",
         "size": 4.72,
         "timestamp": "2025-12-04T08:19:09.879Z"
+      }
+    ],
+    [
+      "bashdeban/fastmind/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/bashdeban/fastmind/a52c515e1aec3de2b00a41830c2fbe631128faf8/.cursorrules",
+        "repositoryId": 1107675255,
+        "path": "bashdeban/fastmind/.cursorrules",
+        "ownerName": "bashdeban",
+        "repositoryName": "fastmind",
+        "htmlUrl": "https://github.com/bashdeban/fastmind/blob/a52c515e1aec3de2b00a41830c2fbe631128faf8/.cursorrules",
+        "size": 6.8,
+        "timestamp": "2025-12-07T08:15:29.628Z"
+      }
+    ],
+    [
+      "markybuilds/montext/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/markybuilds/montext/5cf33b4fb931b8c525992a5d3fbeb429f7cfbe08/.cursorrules",
+        "repositoryId": 1014376132,
+        "path": "markybuilds/montext/.cursorrules",
+        "ownerName": "markybuilds",
+        "repositoryName": "montext",
+        "htmlUrl": "https://github.com/markybuilds/montext/blob/5cf33b4fb931b8c525992a5d3fbeb429f7cfbe08/.cursorrules",
+        "size": 1.26,
+        "timestamp": "2025-12-07T08:15:31.816Z"
+      }
+    ],
+    [
+      "weng-chenghui/pulsive/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/weng-chenghui/pulsive/3cf6d8d9658b1df90903b32f8b38ddb58295e5c6/.cursorrules",
+        "repositoryId": 1109985830,
+        "path": "weng-chenghui/pulsive/.cursorrules",
+        "ownerName": "weng-chenghui",
+        "repositoryName": "pulsive",
+        "htmlUrl": "https://github.com/weng-chenghui/pulsive/blob/3cf6d8d9658b1df90903b32f8b38ddb58295e5c6/.cursorrules",
+        "size": 10.06,
+        "timestamp": "2025-12-07T08:15:32.669Z"
+      }
+    ],
+    [
+      "mknoufi/Stock_counting/awesome-cursorrules-repo/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/mknoufi/Stock_counting/6b2d460aec97ce96eba81307ce2d6360f5f5988b/awesome-cursorrules-repo/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1107765165,
+        "path": "mknoufi/Stock_counting/awesome-cursorrules-repo/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "mknoufi",
+        "repositoryName": "Stock_counting",
+        "htmlUrl": "https://github.com/mknoufi/Stock_counting/blob/6b2d460aec97ce96eba81307ce2d6360f5f5988b/awesome-cursorrules-repo/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "size": 7.64,
+        "timestamp": "2025-12-07T08:15:33.753Z"
+      }
+    ],
+    [
+      "goby35/NienLuanNganh/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/goby35/NienLuanNganh/b717dac10cfac88617e546ff286b9a84027191d9/.cursorrules",
+        "repositoryId": 1109908197,
+        "path": "goby35/NienLuanNganh/.cursorrules",
+        "ownerName": "goby35",
+        "repositoryName": "NienLuanNganh",
+        "htmlUrl": "https://github.com/goby35/NienLuanNganh/blob/b717dac10cfac88617e546ff286b9a84027191d9/.cursorrules",
+        "size": 3.73,
+        "timestamp": "2025-12-07T08:15:33.857Z"
+      }
+    ],
+    [
+      "mknoufi/STOCK_VERIFY_ui/awesome-cursorrules-repo/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/mknoufi/STOCK_VERIFY_ui/198b78a97fbd42ab68e7fe8902b8c99e946a578d/awesome-cursorrules-repo/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1108608771,
+        "path": "mknoufi/STOCK_VERIFY_ui/awesome-cursorrules-repo/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "mknoufi",
+        "repositoryName": "STOCK_VERIFY_ui",
+        "htmlUrl": "https://github.com/mknoufi/STOCK_VERIFY_ui/blob/198b78a97fbd42ab68e7fe8902b8c99e946a578d/awesome-cursorrules-repo/rules/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "size": 7.64,
+        "timestamp": "2025-12-07T08:15:35.498Z"
+      }
+    ],
+    [
+      "theerapat-pong/Thaifoodie_Staff/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/theerapat-pong/Thaifoodie_Staff/f95bd49411c9530ba22f875488280e361a19af4a/.cursorrules",
+        "repositoryId": 1111377681,
+        "path": "theerapat-pong/Thaifoodie_Staff/.cursorrules",
+        "ownerName": "theerapat-pong",
+        "repositoryName": "Thaifoodie_Staff",
+        "htmlUrl": "https://github.com/theerapat-pong/Thaifoodie_Staff/blob/f95bd49411c9530ba22f875488280e361a19af4a/.cursorrules",
+        "size": 1.67,
+        "timestamp": "2025-12-07T08:15:37.613Z"
+      }
+    ],
+    [
+      "i0527/Simple-TDC-GameProject/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/i0527/Simple-TDC-GameProject/f7df7e2359de4635d394c1b2fd6841c8573f7060/.cursorrules",
+        "repositoryId": 1099360337,
+        "path": "i0527/Simple-TDC-GameProject/.cursorrules",
+        "ownerName": "i0527",
+        "repositoryName": "Simple-TDC-GameProject",
+        "htmlUrl": "https://github.com/i0527/Simple-TDC-GameProject/blob/f7df7e2359de4635d394c1b2fd6841c8573f7060/.cursorrules",
+        "size": 6.52,
+        "timestamp": "2025-12-07T08:15:38.915Z"
+      }
+    ],
+    [
+      "happysantoo/cache-location-poc/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/happysantoo/cache-location-poc/14c32e3b22fcdb6ec36679d327aa322cae069214/.cursorrules",
+        "repositoryId": 1103399814,
+        "path": "happysantoo/cache-location-poc/.cursorrules",
+        "ownerName": "happysantoo",
+        "repositoryName": "cache-location-poc",
+        "htmlUrl": "https://github.com/happysantoo/cache-location-poc/blob/14c32e3b22fcdb6ec36679d327aa322cae069214/.cursorrules",
+        "size": 16.44,
+        "timestamp": "2025-12-07T08:15:39.120Z"
       }
     ]
   ]

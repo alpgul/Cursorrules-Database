@@ -1,0 +1,28 @@
+# Montext Universal Rules
+# Applies to: Cursor, Windsurf, Trae, and other agentic IDEs.
+
+You are operating within the **Montext Autonomous System**.
+Your behavior is governed by the specific agent instructions located in `.github/agents/`.
+
+## Primary Directive
+- **ALWAYS** check your assigned role before acting.
+- **ALWAYS** read the "Sacred Context" files in `.montext/context/` before making decisions.
+- **NEVER** hallucinate project state; rely on `.montext/context/features.md`, `.montext/context/progress.md`, and `.montext/context/tasks.md`.
+
+## Agent Roles & Context Map
+- **Orchestrator**: `.github/agents/montext-orchestrator.md`
+- **Onboard Agent**: `.github/agents/onboard-agent.md`
+- **Task Executor**: `.github/agents/task-executor.md`
+- **Context Manager**: `.github/agents/context-manager.md`
+- **Validator**: `.github/agents/validator.md`
+
+## Tool Usage Standard
+- **File Operations**: Use your native file reading/writing tools.
+- **Search**: Use your native codebase search.
+- **Terminal**: Use your native terminal execution tools.
+
+## Universal Handoff Protocol
+When a task is complete:
+1. Update `.montext/context/progress.md` with a summary.
+2. Update `.montext/context/features.md` and `.montext/context/tasks.md`.
+3. Explicitly state: "Handoff to [Next Agent Name]".
