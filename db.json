@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 2381,
+  "size": 2387,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -33334,6 +33334,90 @@
         "htmlUrl": "https://github.com/happysantoo/cache-location-poc/blob/14c32e3b22fcdb6ec36679d327aa322cae069214/.cursorrules",
         "size": 16.44,
         "timestamp": "2025-12-07T08:15:39.120Z"
+      }
+    ],
+    [
+      "xvadur/system/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/xvadur/system/2690e3b2aec59006797daa4cd3b20bcaa7c90f11/.cursorrules",
+        "repositoryId": 1108050477,
+        "path": "xvadur/system/.cursorrules",
+        "ownerName": "xvadur",
+        "repositoryName": "system",
+        "htmlUrl": "https://github.com/xvadur/system/blob/2690e3b2aec59006797daa4cd3b20bcaa7c90f11/.cursorrules",
+        "size": 3.1,
+        "timestamp": "2025-12-10T08:18:53.371Z"
+      }
+    ],
+    [
+      "betterlokaki/HomeVisit/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/betterlokaki/HomeVisit/772fba061745a608593169fa48da0899753849b3/.cursorrules",
+        "repositoryId": 1095841482,
+        "path": "betterlokaki/HomeVisit/.cursorrules",
+        "ownerName": "betterlokaki",
+        "repositoryName": "HomeVisit",
+        "htmlUrl": "https://github.com/betterlokaki/HomeVisit/blob/772fba061745a608593169fa48da0899753849b3/.cursorrules",
+        "size": 11.67,
+        "timestamp": "2025-12-10T08:18:54.215Z"
+      }
+    ],
+    [
+      "oimiragieo/LLM-RULES/.factory/rules/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/oimiragieo/LLM-RULES/2f489d71171b7b1eef73ec5fe5b9737ee90183d8/.factory/rules/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1088308337,
+        "path": "oimiragieo/LLM-RULES/.factory/rules/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "oimiragieo",
+        "repositoryName": "LLM-RULES",
+        "htmlUrl": "https://github.com/oimiragieo/LLM-RULES/blob/2f489d71171b7b1eef73ec5fe5b9737ee90183d8/.factory/rules/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+        "size": 6.25,
+        "timestamp": "2025-12-10T08:18:55.441Z"
+      }
+    ],
+    [
+      "oimiragieo/LLM-RULES/.factory/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/oimiragieo/LLM-RULES/2f489d71171b7b1eef73ec5fe5b9737ee90183d8/.factory/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1088308337,
+        "path": "oimiragieo/LLM-RULES/.factory/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "oimiragieo",
+        "repositoryName": "LLM-RULES",
+        "htmlUrl": "https://github.com/oimiragieo/LLM-RULES/blob/2f489d71171b7b1eef73ec5fe5b9737ee90183d8/.factory/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "size": 6.32,
+        "timestamp": "2025-12-10T08:18:55.585Z"
+      }
+    ],
+    [
+      "rob-mosher/collaborators-framework/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/rob-mosher/collaborators-framework/6743f0581f8f50dba681fe45d308dbc1c1f96559/.cursorrules",
+        "repositoryId": 898767400,
+        "path": "rob-mosher/collaborators-framework/.cursorrules",
+        "ownerName": "rob-mosher",
+        "repositoryName": "collaborators-framework",
+        "htmlUrl": "https://github.com/rob-mosher/collaborators-framework/blob/6743f0581f8f50dba681fe45d308dbc1c1f96559/.cursorrules",
+        "size": 1.31,
+        "timestamp": "2025-12-10T08:18:56.056Z"
+      }
+    ],
+    [
+      "nech-ai/nech/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/nech-ai/nech/8104d23d70a73deeb5c1d71e3a4d6f0bd53f385e/.cursorrules",
+        "repositoryId": 903873958,
+        "path": "nech-ai/nech/.cursorrules",
+        "ownerName": "nech-ai",
+        "repositoryName": "nech",
+        "htmlUrl": "https://github.com/nech-ai/nech/blob/8104d23d70a73deeb5c1d71e3a4d6f0bd53f385e/.cursorrules",
+        "size": 6.35,
+        "timestamp": "2025-12-10T08:18:56.308Z"
       }
     ]
   ]
