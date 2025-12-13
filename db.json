@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 2387,
+  "size": 2403,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -33418,6 +33418,230 @@
         "htmlUrl": "https://github.com/nech-ai/nech/blob/8104d23d70a73deeb5c1d71e3a4d6f0bd53f385e/.cursorrules",
         "size": 6.35,
         "timestamp": "2025-12-10T08:18:56.308Z"
+      }
+    ],
+    [
+      "phillip-motion/quiver/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/phillip-motion/quiver/e655541c3f8e47a2f3cb9606913d47ea6299deeb/.cursorrules",
+        "repositoryId": 1063721902,
+        "path": "phillip-motion/quiver/.cursorrules",
+        "ownerName": "phillip-motion",
+        "repositoryName": "quiver",
+        "htmlUrl": "https://github.com/phillip-motion/quiver/blob/e655541c3f8e47a2f3cb9606913d47ea6299deeb/.cursorrules",
+        "size": 2.2,
+        "timestamp": "2025-12-13T08:15:45.429Z"
+      }
+    ],
+    [
+      "Manwe-777/tool-db/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Manwe-777/tool-db/d0a5c44d99b60475bc94874c9719dd4945499eaf/.cursorrules",
+        "repositoryId": 394467180,
+        "path": "Manwe-777/tool-db/.cursorrules",
+        "ownerName": "Manwe-777",
+        "repositoryName": "tool-db",
+        "htmlUrl": "https://github.com/Manwe-777/tool-db/blob/d0a5c44d99b60475bc94874c9719dd4945499eaf/.cursorrules",
+        "size": 1.41,
+        "timestamp": "2025-12-13T08:15:45.523Z"
+      }
+    ],
+    [
+      "firuslab/obfussor/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/firuslab/obfussor/4f68c6e36649029096f3b0f99ea245e57ee0df48/.cursorrules",
+        "repositoryId": 1067980009,
+        "path": "firuslab/obfussor/.cursorrules",
+        "ownerName": "firuslab",
+        "repositoryName": "obfussor",
+        "htmlUrl": "https://github.com/firuslab/obfussor/blob/4f68c6e36649029096f3b0f99ea245e57ee0df48/.cursorrules",
+        "size": 4.74,
+        "timestamp": "2025-12-13T08:15:46.062Z"
+      }
+    ],
+    [
+      "LAVARONG/wechat-automation-api/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/LAVARONG/wechat-automation-api/47fe991bc7edcf9cd30577db829383972c243289/.cursorrules",
+        "repositoryId": 1087047412,
+        "path": "LAVARONG/wechat-automation-api/.cursorrules",
+        "ownerName": "LAVARONG",
+        "repositoryName": "wechat-automation-api",
+        "htmlUrl": "https://github.com/LAVARONG/wechat-automation-api/blob/47fe991bc7edcf9cd30577db829383972c243289/.cursorrules",
+        "size": 6.05,
+        "timestamp": "2025-12-13T08:15:46.392Z"
+      }
+    ],
+    [
+      "twardoch/virginia-clemm-poe/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/twardoch/virginia-clemm-poe/0d67aa721fc8f40f6a2fa6c89a6a4a7a2b1df293/.cursorrules",
+        "repositoryId": 1031268008,
+        "path": "twardoch/virginia-clemm-poe/.cursorrules",
+        "ownerName": "twardoch",
+        "repositoryName": "virginia-clemm-poe",
+        "htmlUrl": "https://github.com/twardoch/virginia-clemm-poe/blob/0d67aa721fc8f40f6a2fa6c89a6a4a7a2b1df293/.cursorrules",
+        "size": 16.06,
+        "timestamp": "2025-12-13T08:15:46.955Z"
+      }
+    ],
+    [
+      "twardoch/playwrightauthor/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/twardoch/playwrightauthor/bfab1a7693d8f1a928308a394a3a9f80ffc369c4/.cursorrules",
+        "repositoryId": 1031328049,
+        "path": "twardoch/playwrightauthor/.cursorrules",
+        "ownerName": "twardoch",
+        "repositoryName": "playwrightauthor",
+        "htmlUrl": "https://github.com/twardoch/playwrightauthor/blob/bfab1a7693d8f1a928308a394a3a9f80ffc369c4/.cursorrules",
+        "size": 16.06,
+        "timestamp": "2025-12-13T08:15:47.033Z"
+      }
+    ],
+    [
+      "twardoch/playpi/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/twardoch/playpi/b50d144aa0cbbb118f8bfcd5e605c0857e67de60/.cursorrules",
+        "repositoryId": 1065473984,
+        "path": "twardoch/playpi/.cursorrules",
+        "ownerName": "twardoch",
+        "repositoryName": "playpi",
+        "htmlUrl": "https://github.com/twardoch/playpi/blob/b50d144aa0cbbb118f8bfcd5e605c0857e67de60/.cursorrules",
+        "size": 16.06,
+        "timestamp": "2025-12-13T08:15:47.109Z"
+      }
+    ],
+    [
+      "tommcclean/tommcclean.me/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/tommcclean/tommcclean.me/243beb243486540c0c5f554ed34e9deee8eed4c1/.cursorrules",
+        "repositoryId": 239587884,
+        "path": "tommcclean/tommcclean.me/.cursorrules",
+        "ownerName": "tommcclean",
+        "repositoryName": "tommcclean.me",
+        "htmlUrl": "https://github.com/tommcclean/tommcclean.me/blob/243beb243486540c0c5f554ed34e9deee8eed4c1/.cursorrules",
+        "size": 7.33,
+        "timestamp": "2025-12-13T08:15:48.005Z"
+      }
+    ],
+    [
+      "Siyeolryu/ica-SYR-/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Siyeolryu/ica-SYR-/6bbaca9715037243c373187763f5235b16ce01f3/.cursorrules",
+        "repositoryId": 1115126831,
+        "path": "Siyeolryu/ica-SYR-/.cursorrules",
+        "ownerName": "Siyeolryu",
+        "repositoryName": "ica-SYR-",
+        "htmlUrl": "https://github.com/Siyeolryu/ica-SYR-/blob/6bbaca9715037243c373187763f5235b16ce01f3/.cursorrules",
+        "size": 4.36,
+        "timestamp": "2025-12-13T08:15:49.328Z"
+      }
+    ],
+    [
+      "6in/yaml-query-language/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/6in/yaml-query-language/861587947524540a128b7fe1df807b38a0701646/.cursorrules",
+        "repositoryId": 1112663488,
+        "path": "6in/yaml-query-language/.cursorrules",
+        "ownerName": "6in",
+        "repositoryName": "yaml-query-language",
+        "htmlUrl": "https://github.com/6in/yaml-query-language/blob/861587947524540a128b7fe1df807b38a0701646/.cursorrules",
+        "size": 4.09,
+        "timestamp": "2025-12-13T08:15:49.458Z"
+      }
+    ],
+    [
+      "thinhnguyen102/ainnect_mobile/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/thinhnguyen102/ainnect_mobile/a6fdf22b7416ba0c79a86ebb8e521931a7ec01fa/.cursorrules",
+        "repositoryId": 1078702504,
+        "path": "thinhnguyen102/ainnect_mobile/.cursorrules",
+        "ownerName": "thinhnguyen102",
+        "repositoryName": "ainnect_mobile",
+        "htmlUrl": "https://github.com/thinhnguyen102/ainnect_mobile/blob/a6fdf22b7416ba0c79a86ebb8e521931a7ec01fa/.cursorrules",
+        "size": 4.59,
+        "timestamp": "2025-12-13T08:15:50.306Z"
+      }
+    ],
+    [
+      "DaveW001/margin-calc/.cursorrules.backup-2025-12-01-2151",
+      {
+        "name": ".cursorrules.backup-2025-12-01-2151",
+        "downloadUrl": "https://raw.githubusercontent.com/DaveW001/margin-calc/b02bbf52400811cf1435bfbacf59115f4863fa3b/.cursorrules.backup-2025-12-01-2151",
+        "repositoryId": 981815352,
+        "path": "DaveW001/margin-calc/.cursorrules.backup-2025-12-01-2151",
+        "ownerName": "DaveW001",
+        "repositoryName": "margin-calc",
+        "htmlUrl": "https://github.com/DaveW001/margin-calc/blob/b02bbf52400811cf1435bfbacf59115f4863fa3b/.cursorrules.backup-2025-12-01-2151",
+        "size": 5.06,
+        "timestamp": "2025-12-13T08:15:51.218Z"
+      }
+    ],
+    [
+      "AutoWDS/autowds-backend/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/AutoWDS/autowds-backend/420cf8add3e86a29f8ebc3e11bb1342f077e2edb/.cursorrules",
+        "repositoryId": 853647500,
+        "path": "AutoWDS/autowds-backend/.cursorrules",
+        "ownerName": "AutoWDS",
+        "repositoryName": "autowds-backend",
+        "htmlUrl": "https://github.com/AutoWDS/autowds-backend/blob/420cf8add3e86a29f8ebc3e11bb1342f077e2edb/.cursorrules",
+        "size": 6.36,
+        "timestamp": "2025-12-13T08:15:51.447Z"
+      }
+    ],
+    [
+      "shubhamtaywade82/swing_long_trader/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/shubhamtaywade82/swing_long_trader/d8426beb4ea9582f721fa444b5fd5c73a75d542e/.cursorrules",
+        "repositoryId": 1113978464,
+        "path": "shubhamtaywade82/swing_long_trader/.cursorrules",
+        "ownerName": "shubhamtaywade82",
+        "repositoryName": "swing_long_trader",
+        "htmlUrl": "https://github.com/shubhamtaywade82/swing_long_trader/blob/d8426beb4ea9582f721fa444b5fd5c73a75d542e/.cursorrules",
+        "size": 7.36,
+        "timestamp": "2025-12-13T08:15:53.700Z"
+      }
+    ],
+    [
+      "peterhallen/Coding-Standards/src/coding_standards/data/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/peterhallen/Coding-Standards/ee85765705df36acd881bbec073d5dd5ffb3291c/src/coding_standards/data/.cursorrules",
+        "repositoryId": 1103959332,
+        "path": "peterhallen/Coding-Standards/src/coding_standards/data/.cursorrules",
+        "ownerName": "peterhallen",
+        "repositoryName": "Coding-Standards",
+        "htmlUrl": "https://github.com/peterhallen/Coding-Standards/blob/ee85765705df36acd881bbec073d5dd5ffb3291c/src/coding_standards/data/.cursorrules",
+        "size": 4.34,
+        "timestamp": "2025-12-13T08:15:54.316Z"
+      }
+    ],
+    [
+      "senal88/SYSTEM_PROMPT/system_prompts/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/senal88/SYSTEM_PROMPT/a5e521b49fc2ebcbebe920f0ec3145e308c929e6/system_prompts/.cursorrules",
+        "repositoryId": 1097307264,
+        "path": "senal88/SYSTEM_PROMPT/system_prompts/.cursorrules",
+        "ownerName": "senal88",
+        "repositoryName": "SYSTEM_PROMPT",
+        "htmlUrl": "https://github.com/senal88/SYSTEM_PROMPT/blob/a5e521b49fc2ebcbebe920f0ec3145e308c929e6/system_prompts/.cursorrules",
+        "size": 6.64,
+        "timestamp": "2025-12-13T08:15:55.208Z"
       }
     ]
   ]
