@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 2403,
+  "size": 2413,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -33642,6 +33642,146 @@
         "htmlUrl": "https://github.com/senal88/SYSTEM_PROMPT/blob/a5e521b49fc2ebcbebe920f0ec3145e308c929e6/system_prompts/.cursorrules",
         "size": 6.64,
         "timestamp": "2025-12-13T08:15:55.208Z"
+      }
+    ],
+    [
+      "mehotkhan/safarnak.app/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/mehotkhan/safarnak.app/494b18e427b393c69d6ebbd9f1b219ba6ceb1fe1/.cursorrules",
+        "repositoryId": 1081953419,
+        "path": "mehotkhan/safarnak.app/.cursorrules",
+        "ownerName": "mehotkhan",
+        "repositoryName": "safarnak.app",
+        "htmlUrl": "https://github.com/mehotkhan/safarnak.app/blob/494b18e427b393c69d6ebbd9f1b219ba6ceb1fe1/.cursorrules",
+        "size": 40.79,
+        "timestamp": "2025-12-16T08:19:48.607Z"
+      }
+    ],
+    [
+      "musarad/NEXA-AI/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/musarad/NEXA-AI/bccdb33c3578cfcd16394e67762845f0eeeabbf7/.cursorrules",
+        "repositoryId": 1115874658,
+        "path": "musarad/NEXA-AI/.cursorrules",
+        "ownerName": "musarad",
+        "repositoryName": "NEXA-AI",
+        "htmlUrl": "https://github.com/musarad/NEXA-AI/blob/bccdb33c3578cfcd16394e67762845f0eeeabbf7/.cursorrules",
+        "size": 1.96,
+        "timestamp": "2025-12-16T08:19:50.532Z"
+      }
+    ],
+    [
+      "iPaulPro/palus/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/iPaulPro/palus/b822fc18af6008204acb0011bd3137fa0d80a1b3/.cursorrules",
+        "repositoryId": 1114158977,
+        "path": "iPaulPro/palus/.cursorrules",
+        "ownerName": "iPaulPro",
+        "repositoryName": "palus",
+        "htmlUrl": "https://github.com/iPaulPro/palus/blob/b822fc18af6008204acb0011bd3137fa0d80a1b3/.cursorrules",
+        "size": 3.73,
+        "timestamp": "2025-12-16T08:19:50.611Z"
+      }
+    ],
+    [
+      "mknoufi/Stock_counting/awesome-cursorrules-repo/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/mknoufi/Stock_counting/6b2d460aec97ce96eba81307ce2d6360f5f5988b/awesome-cursorrules-repo/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "repositoryId": 1107765165,
+        "path": "mknoufi/Stock_counting/awesome-cursorrules-repo/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "ownerName": "mknoufi",
+        "repositoryName": "Stock_counting",
+        "htmlUrl": "https://github.com/mknoufi/Stock_counting/blob/6b2d460aec97ce96eba81307ce2d6360f5f5988b/awesome-cursorrules-repo/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "size": 4.93,
+        "timestamp": "2025-12-16T08:19:51.203Z"
+      }
+    ],
+    [
+      "mknoufi/Stock_counting/awesome-cursorrules-repo/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/mknoufi/Stock_counting/6b2d460aec97ce96eba81307ce2d6360f5f5988b/awesome-cursorrules-repo/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "repositoryId": 1107765165,
+        "path": "mknoufi/Stock_counting/awesome-cursorrules-repo/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "ownerName": "mknoufi",
+        "repositoryName": "Stock_counting",
+        "htmlUrl": "https://github.com/mknoufi/Stock_counting/blob/6b2d460aec97ce96eba81307ce2d6360f5f5988b/awesome-cursorrules-repo/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "size": 3.59,
+        "timestamp": "2025-12-16T08:19:51.276Z"
+      }
+    ],
+    [
+      "peterhallen/Coding-Standards/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/peterhallen/Coding-Standards/8b51eb3d8c26b45ff2369a4deef3d5ec1c065d46/.cursorrules",
+        "repositoryId": 1103959332,
+        "path": "peterhallen/Coding-Standards/.cursorrules",
+        "ownerName": "peterhallen",
+        "repositoryName": "Coding-Standards",
+        "htmlUrl": "https://github.com/peterhallen/Coding-Standards/blob/8b51eb3d8c26b45ff2369a4deef3d5ec1c065d46/.cursorrules",
+        "size": 4.34,
+        "timestamp": "2025-12-16T08:19:51.390Z"
+      }
+    ],
+    [
+      "remcostoeten/dora/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/remcostoeten/dora/810927cb31af7b0ad91c76558e5d67d0321d1d9f/.cursorrules",
+        "repositoryId": 981732899,
+        "path": "remcostoeten/dora/.cursorrules",
+        "ownerName": "remcostoeten",
+        "repositoryName": "dora",
+        "htmlUrl": "https://github.com/remcostoeten/dora/blob/810927cb31af7b0ad91c76558e5d67d0321d1d9f/.cursorrules",
+        "size": 7.67,
+        "timestamp": "2025-12-16T08:19:52.200Z"
+      }
+    ],
+    [
+      "rafaelreis-se/task-management-system/frontend/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/rafaelreis-se/task-management-system/5eeb7605e34ab4ad735691617c3870158a100869/frontend/.cursorrules",
+        "repositoryId": 1115813502,
+        "path": "rafaelreis-se/task-management-system/frontend/.cursorrules",
+        "ownerName": "rafaelreis-se",
+        "repositoryName": "task-management-system",
+        "htmlUrl": "https://github.com/rafaelreis-se/task-management-system/blob/5eeb7605e34ab4ad735691617c3870158a100869/frontend/.cursorrules",
+        "size": 1.96,
+        "timestamp": "2025-12-16T08:19:53.468Z"
+      }
+    ],
+    [
+      "fghaffar/claude-cursor-setup/examples/react-express/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/fghaffar/claude-cursor-setup/09d923223753f10f283790d0a34fc7e5ae2db056/examples/react-express/.cursorrules",
+        "repositoryId": 1115758192,
+        "path": "fghaffar/claude-cursor-setup/examples/react-express/.cursorrules",
+        "ownerName": "fghaffar",
+        "repositoryName": "claude-cursor-setup",
+        "htmlUrl": "https://github.com/fghaffar/claude-cursor-setup/blob/09d923223753f10f283790d0a34fc7e5ae2db056/examples/react-express/.cursorrules",
+        "size": 4.88,
+        "timestamp": "2025-12-16T08:19:53.949Z"
+      }
+    ],
+    [
+      "dleigh-paa/David-s-New-Project/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/dleigh-paa/David-s-New-Project/8cbeab315c90231343e09850c1d99705b51a8b6d/.cursorrules",
+        "repositoryId": 1108709109,
+        "path": "dleigh-paa/David-s-New-Project/.cursorrules",
+        "ownerName": "dleigh-paa",
+        "repositoryName": "David-s-New-Project",
+        "htmlUrl": "https://github.com/dleigh-paa/David-s-New-Project/blob/8cbeab315c90231343e09850c1d99705b51a8b6d/.cursorrules",
+        "size": 4.34,
+        "timestamp": "2025-12-16T08:19:54.163Z"
       }
     ]
   ]

@@ -1,0 +1,96 @@
+# Task Management System - Frontend
+
+## Project Overview
+Simple React frontend for task management system. Keep it clean and functional.
+
+## Style Rules
+- DO NOT use emojis in code, comments, documentation, scripts, or any project files
+- Keep output messages clean and professional without emoji characters
+
+## Stack
+- React 18 + TypeScript
+- Material UI
+- React Router
+- Axios
+- React Hook Form
+- Vite
+
+## Important Rules
+DO NOT over-engineer - keep it simple
+DO NOT use Redux or complex state management
+USE React Context for auth only
+USE local state for everything else
+
+## API Endpoints (Backend)
+
+Base: http://localhost:5000/api
+
+Public:
+- POST /auth/register
+- POST /auth/login
+
+Protected (need JWT token):
+- GET /tasks
+- POST /tasks
+- PUT /tasks/{id}
+- DELETE /tasks/{id}
+
+## Structure
+
+```
+src/
+├── components/     # Reusable components
+├── pages/         # Login, Register, Dashboard
+├── services/      # API calls
+├── context/       # Auth context
+├── types/         # TypeScript types
+└── App.tsx
+```
+
+## Code Style
+
+Keep components simple:
+- Small, focused components
+- Clear prop types
+- Use MUI components consistently
+- Responsive with MUI Grid
+- Handle loading and errors
+
+TypeScript:
+- Proper types for API responses
+- Avoid `any`
+- Interface for props
+
+Forms:
+- React Hook Form for validation
+- MUI TextField components
+- Show validation errors
+
+API:
+- Axios with interceptor for JWT
+- Store token in localStorage
+- Clear on logout
+- Handle 401 errors
+
+## What to Build
+
+Pages:
+1. Login - email, password, link to register
+2. Register - name, email, password
+3. Dashboard - task list with create/edit/delete
+
+Components:
+- Layout with header
+- Task list (cards or table)
+- Task form dialog
+- Private route wrapper
+
+## Keep It Simple
+
+- No complex patterns
+- No unnecessary abstractions
+- Focus on working features
+- Make it responsive
+- Handle errors gracefully
+
+This is an interview project - show clean code and good practices, not fancy architecture.
