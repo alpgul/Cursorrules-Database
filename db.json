@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 2413,
+  "size": 2423,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -33782,6 +33782,146 @@
         "htmlUrl": "https://github.com/dleigh-paa/David-s-New-Project/blob/8cbeab315c90231343e09850c1d99705b51a8b6d/.cursorrules",
         "size": 4.34,
         "timestamp": "2025-12-16T08:19:54.163Z"
+      }
+    ],
+    [
+      "docxology/codomyrmex/cursorrules/modules/ci_cd_automation.cursorrules",
+      {
+        "name": "ci_cd_automation.cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/docxology/codomyrmex/284ca59fd428d0d16da158e75be3b1978e16311d/cursorrules/modules/ci_cd_automation.cursorrules",
+        "repositoryId": 984900169,
+        "path": "docxology/codomyrmex/cursorrules/modules/ci_cd_automation.cursorrules",
+        "ownerName": "docxology",
+        "repositoryName": "codomyrmex",
+        "htmlUrl": "https://github.com/docxology/codomyrmex/blob/284ca59fd428d0d16da158e75be3b1978e16311d/cursorrules/modules/ci_cd_automation.cursorrules",
+        "size": 4.08,
+        "timestamp": "2025-12-19T08:19:03.541Z"
+      }
+    ],
+    [
+      "shepherdvovkes/COURTAPP/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/shepherdvovkes/COURTAPP/0791d995471eba21f80674a78829342c5c3538aa/.cursorrules",
+        "repositoryId": 1111377796,
+        "path": "shepherdvovkes/COURTAPP/.cursorrules",
+        "ownerName": "shepherdvovkes",
+        "repositoryName": "COURTAPP",
+        "htmlUrl": "https://github.com/shepherdvovkes/COURTAPP/blob/0791d995471eba21f80674a78829342c5c3538aa/.cursorrules",
+        "size": 8.42,
+        "timestamp": "2025-12-19T08:19:04.322Z"
+      }
+    ],
+    [
+      "michael-h-patrianna/mdimension/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/michael-h-patrianna/mdimension/d1aa28742bd37c53cd2cee803a9c1f1c43428807/.cursorrules",
+        "repositoryId": 1114721613,
+        "path": "michael-h-patrianna/mdimension/.cursorrules",
+        "ownerName": "michael-h-patrianna",
+        "repositoryName": "mdimension",
+        "htmlUrl": "https://github.com/michael-h-patrianna/mdimension/blob/d1aa28742bd37c53cd2cee803a9c1f1c43428807/.cursorrules",
+        "size": 3.55,
+        "timestamp": "2025-12-19T08:19:05.626Z"
+      }
+    ],
+    [
+      "oimiragieo/agent-studio/.claude/archive/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/oimiragieo/agent-studio/5b3403c98153660a5727174184ccc73b4e88a6a1/.claude/archive/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1088308337,
+        "path": "oimiragieo/agent-studio/.claude/archive/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "oimiragieo",
+        "repositoryName": "agent-studio",
+        "htmlUrl": "https://github.com/oimiragieo/agent-studio/blob/5b3403c98153660a5727174184ccc73b4e88a6a1/.claude/archive/solidity-foundry-cursorrules-prompt-file/.cursorrules",
+        "size": 7.64,
+        "timestamp": "2025-12-19T08:19:07.839Z"
+      }
+    ],
+    [
+      "oimiragieo/agent-studio/.cursor/rules/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/oimiragieo/agent-studio/5b3403c98153660a5727174184ccc73b4e88a6a1/.cursor/rules/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1088308337,
+        "path": "oimiragieo/agent-studio/.cursor/rules/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "oimiragieo",
+        "repositoryName": "agent-studio",
+        "htmlUrl": "https://github.com/oimiragieo/agent-studio/blob/5b3403c98153660a5727174184ccc73b4e88a6a1/.cursor/rules/java-general-purpose-cursorrules-prompt-file/.cursorrules",
+        "size": 6.25,
+        "timestamp": "2025-12-19T08:19:07.917Z"
+      }
+    ],
+    [
+      "oimiragieo/agent-studio/.factory/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/oimiragieo/agent-studio/5b3403c98153660a5727174184ccc73b4e88a6a1/.factory/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "repositoryId": 1088308337,
+        "path": "oimiragieo/agent-studio/.factory/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "ownerName": "oimiragieo",
+        "repositoryName": "agent-studio",
+        "htmlUrl": "https://github.com/oimiragieo/agent-studio/blob/5b3403c98153660a5727174184ccc73b4e88a6a1/.factory/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "size": 3.59,
+        "timestamp": "2025-12-19T08:19:08.000Z"
+      }
+    ],
+    [
+      "docxology/codomyrmex/cursorrules/modules/modeling_3d.cursorrules",
+      {
+        "name": "modeling_3d.cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/docxology/codomyrmex/284ca59fd428d0d16da158e75be3b1978e16311d/cursorrules/modules/modeling_3d.cursorrules",
+        "repositoryId": 984900169,
+        "path": "docxology/codomyrmex/cursorrules/modules/modeling_3d.cursorrules",
+        "ownerName": "docxology",
+        "repositoryName": "codomyrmex",
+        "htmlUrl": "https://github.com/docxology/codomyrmex/blob/284ca59fd428d0d16da158e75be3b1978e16311d/cursorrules/modules/modeling_3d.cursorrules",
+        "size": 3.75,
+        "timestamp": "2025-12-19T08:19:08.147Z"
+      }
+    ],
+    [
+      "not-a-company/notacompany/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/not-a-company/notacompany/31daac63f68a6164ef334d0ec0bfc96e43dc5cb9/.cursorrules",
+        "repositoryId": 1056961461,
+        "path": "not-a-company/notacompany/.cursorrules",
+        "ownerName": "not-a-company",
+        "repositoryName": "notacompany",
+        "htmlUrl": "https://github.com/not-a-company/notacompany/blob/31daac63f68a6164ef334d0ec0bfc96e43dc5cb9/.cursorrules",
+        "size": 3.51,
+        "timestamp": "2025-12-19T08:19:09.677Z"
+      }
+    ],
+    [
+      "BZ-Technologies/bzt-app-template/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/BZ-Technologies/bzt-app-template/cc72821e38070cc93d1ca243a45df6a9899b4091/.cursorrules",
+        "repositoryId": 1116085304,
+        "path": "BZ-Technologies/bzt-app-template/.cursorrules",
+        "ownerName": "BZ-Technologies",
+        "repositoryName": "bzt-app-template",
+        "htmlUrl": "https://github.com/BZ-Technologies/bzt-app-template/blob/cc72821e38070cc93d1ca243a45df6a9899b4091/.cursorrules",
+        "size": 8.99,
+        "timestamp": "2025-12-19T08:19:10.487Z"
+      }
+    ],
+    [
+      "BZ-Technologies/bzt-app-training-scheduler/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/BZ-Technologies/bzt-app-training-scheduler/47330b93f066bf60b048991082cbf1c6b356115b/.cursorrules",
+        "repositoryId": 1116096154,
+        "path": "BZ-Technologies/bzt-app-training-scheduler/.cursorrules",
+        "ownerName": "BZ-Technologies",
+        "repositoryName": "bzt-app-training-scheduler",
+        "htmlUrl": "https://github.com/BZ-Technologies/bzt-app-training-scheduler/blob/47330b93f066bf60b048991082cbf1c6b356115b/.cursorrules",
+        "size": 8.99,
+        "timestamp": "2025-12-19T08:19:12.335Z"
       }
     ]
   ]

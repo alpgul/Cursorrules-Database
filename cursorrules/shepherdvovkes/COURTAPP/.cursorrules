@@ -1,0 +1,159 @@
+# Clean Architecture Rules for Flutter Project
+
+## Dependency Rules (CRITICAL)
+- **Domain layer** MUST NOT import from Data or Presentation layers
+- **Data layer** MUST NOT import from Presentation layer
+- **Presentation layer** CAN import from Domain layer only (entities, use cases, repository interfaces)
+- **Use Cases** MUST be in Domain layer and use Repository interfaces only
+- **BLoC classes** MUST use Use Cases, NOT Repositories directly
+- **Pages/Widgets** MUST use BLoC or Use Cases, NOT Repositories or Data Sources directly
+
+## File Structure
+```
+lib/features/{feature}/
+  domain/
+    entities/          # Pure Dart classes, no framework dependencies
+    repositories/      # Abstract interfaces only
+    usecases/         # Business logic, one use case per file
+  data/
+    datasources/      # Remote/Local data sources
+    models/           # Data transfer objects (DTOs), extend entities
+    repositories/     # Repository implementations
+  presentation/
+    bloc/            # State management (uses Use Cases only)
+    pages/           # UI pages (uses BLoC or Use Cases)
+    widgets/         # Reusable UI components
+    models/          # UI-specific models (SortType, FilterType, ViewMode, etc.)
+```
+
+**Note**: Presentation models are UI-specific data structures and should NOT be used outside presentation layer
+
+## Naming Conventions
+- **Use Cases**: PascalCase verbs (GetSavedCases, SaveCase, DeleteCase)
+- **Repositories**: Interface in domain, Implementation in data (e.g., CasesRepository vs CasesRepositoryImpl)
+- **BLoC**: Use factory registration in DI, inject Use Cases only
+- **Entities**: Pure Dart classes with Equatable, no JSON annotations
+- **Models**: Extend entities, include JSON serialization
+
+## Code Review Checklist
+Before committing, verify:
+- [ ] No data layer imports in presentation layer
+- [ ] No direct repository usage in BLoC (use Use Cases instead)
+- [ ] No direct data source usage in presentation layer
+- [ ] All business logic in Use Cases (not in BLoC or pages)
+- [ ] Entities are pure Dart classes (no framework dependencies)
+- [ ] Models extend entities and handle JSON serialization
+- [ ] Use Cases have validation logic
+- [ ] DI configuration registers in correct order: Infrastructure → Core Services → Data Sources → Repositories → Use Cases → BLoCs
+- [ ] Repository implementations wrap all calls in try-catch and return Either<Failure, T>
+- [ ] Core Services with business logic are wrapped in Use Cases (not injected directly into BLoCs)
+- [ ] Error handling uses ErrorHandler for user-friendly messages
+- [ ] Presentation models are UI-specific only (not domain entities)
+- [ ] **BLoC Safety**: All async callbacks use `safeAdd()` or check `isClosed` before `bloc.add()`
+- [ ] **BLoC Safety**: `mounted` state checked before `bloc.add()` in `addPostFrameCallback`
+- [ ] **BLoC Safety**: No `bloc.add()` calls in `dispose()` methods
+
+## Dependency Injection Rules
+- Register in order: Infrastructure → Core Services → Data Sources → Repository Implementations → Use Cases → BLoCs
+- Use `registerSingleton` for infrastructure (SharedPreferences, Hive, Dio) - initialized immediately
+- Use `registerLazySingleton` for repositories, use cases, and core services
+- Use `registerFactory` for BLoCs (new instance per request)
+- Never inject Data Sources or Models into Presentation layer
+- Core Services should be registered BEFORE Data Sources (they may be dependencies)
+
+## Error Handling
+- Use `Either<Failure, T>` pattern from dartz package
+- Failures should be in core/errors/failures.dart
+- Use Cases should return Either, not throw exceptions
+- BLoCs should handle Either results with fold()
+- **All Repository implementations** MUST wrap data source calls in try-catch blocks
+- **Exceptions** MUST be converted to appropriate `Failure` types:
+  - Network errors → `NetworkFailure`
+  - Server errors → `ServerFailure`
+  - Validation errors → `ValidationFailure`
+  - Timeout errors → `TimeoutFailure`
+  - Not found → `NotFoundFailure`
+  - Cache errors → `CacheFailure`
+  - Unknown errors → `UnknownFailure`
+- **Never throw exceptions** from Repository - always return `Either<Failure, T>`
+- **Error messages** should be user-friendly and localized when possible
+- **Use `ErrorHandler`** (from `core/errors/error_handler.dart`) to convert `Failure` to user-friendly messages in BLoCs
+- **Pattern**: `failure.fold((failure) => ErrorHandler.getErrorMessage(failure), (data) => data)`
+
+## Testing Guidelines
+- Domain layer: Unit tests for Use Cases (mock repositories)
+- Data layer: Unit tests for Repository implementations (mock data sources)
+- Presentation layer: Widget/Bloc tests (mock Use Cases)
+
+## Core Services Rules
+- **Core Services** (from `core/services/`) are infrastructure services (OCR, Google Drive, OpenAI, etc.)
+- **General Rule**: Core Services SHOULD be wrapped in Use Cases when they represent business logic
+- **Exception**: Core Services CAN be injected directly into BLoCs ONLY when:
+  - They are pure infrastructure utilities (file operations, notifications, app lifecycle, etc.)
+  - They don't contain business logic
+  - They are used for UI-specific operations (e.g., image picking, file selection, notifications)
+- **Best Practice**: Prefer wrapping Core Services in Use Cases for better testability and separation of concerns
+- **Examples**:
+  ❌ `OCRService` directly in BLoC (should be in Use Case)
+  ❌ `OpenAIService` directly in BLoC (should be in Use Case)
+  ✅ `NotificationService` directly in BLoC (infrastructure utility)
+  ✅ `AppLifecycleService` directly in BLoC (infrastructure utility)
+  ✅ `TextFileService` directly in BLoC (file operation utility)
+
+## BLoC Safety Rules (CRITICAL)
+- **Always use `safeAdd()` or check `isClosed` before `bloc.add()` in async callbacks**
+- **Check `mounted` state before calling `bloc.add()` in `addPostFrameCallback`**
+- **Use `context.read<Bloc>()` only when widget is guaranteed to be mounted**
+- **Avoid calling `bloc.add()` in `dispose()` methods**
+
+### Safe BLoC Event Handling
+- Use `bloc.safeAdd(event)` extension method from `BlocUtils` (available via `SafeBlocExtension`)
+- The `safeAdd()` method automatically checks `isClosed` before adding events
+- Always use `safeAdd()` when calling `bloc.add()` from:
+  - Async callbacks (`.then()`, `.catchError()`, `async/await` in callbacks)
+  - `BlocListener` callbacks
+  - `Future` completions
+  - Timer callbacks
+  - Stream subscriptions
+
+### Best Practices
+- ✅ Always use `safeAdd()` or check `isClosed` before `bloc.add()` in async callbacks
+- ✅ Check `mounted` state before calling `bloc.add()` in `addPostFrameCallback`
+- ✅ Use `context.read<Bloc>()` only when widget is guaranteed to be mounted
+- ✅ Avoid calling `bloc.add()` in `dispose()` methods
+- ✅ Inside BLoC event handlers, check `isClosed` before `add()` in nested async operations
+
+### Code Review Checklist for BLoC Event Handlers
+When adding new BLoC event handlers or modifying existing ones:
+- [ ] Check if callback is async
+- [ ] Verify `isClosed` check for async callbacks
+- [ ] Use `safeAdd()` for UI handlers (from `BlocUtils` extension)
+- [ ] Check `mounted` for `addPostFrameCallback`
+- [ ] Verify no `bloc.add()` calls in `dispose()` methods
+- [ ] Ensure async operations check `isClosed` before emitting states
+
+### Examples
+❌ `bloc.add(event)` in async callback (may throw if BLoC is closed)
+❌ `bloc.add(event)` without checking `mounted` in `addPostFrameCallback`
+❌ `bloc.add(event)` in `dispose()` method
+✅ `bloc.safeAdd(event)` in async callback
+✅ `if (mounted) bloc.safeAdd(event)` in `addPostFrameCallback`
+✅ `if (!isClosed) add(event)` inside BLoC event handler
+
+## Common Violations to Avoid
+❌ `import '../../data/models/case_model.dart'` in presentation layer
+❌ `final repository = getIt<CasesRepository>()` in BLoC
+❌ `zakonOnlineService.getCaseFullText()` in presentation layer
+❌ `openAIService.analyzeText()` directly in BLoC (should use Use Case)
+❌ `ocrService.recognizeText()` directly in BLoC (should use Use Case)
+✅ `final getCaseById = getIt<GetCaseById>()` in BLoC
+✅ `final result = await getCaseById(id)` in BLoC
+✅ Use Cases wrap repository calls with validation
+✅ `notificationService.showNotification()` directly in BLoC (infrastructure utility)
+
+## When Adding New Features
+1. Start with Domain: Create Entity → Repository Interface → Use Cases
+2. Then Data: Create Model → Data Sources → Repository Implementation
+3. Finally Presentation: Create BLoC (with Use Cases) → Pages → Widgets
+4. Register everything in DI configuration
+

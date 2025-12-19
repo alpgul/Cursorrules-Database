@@ -1,0 +1,117 @@
+# Cursor Rules for notacompany.com
+
+## Project Overview
+
+Personal portfolio website for **Tiago Martins**, founder and solo employee of *not a company*.
+
+### Design Philosophy
+- Inspired by the [world's first website](https://info.cern.ch/)
+- Times New Roman font, blue underlined links, horizontal rules
+- No fancy styling—just content that serves humans
+- Minimal meta tags, no OG previews
+
+### Business Context
+- **Founder**: Tiago Martins (solo employee)
+- **Focus**: Consumer infrastructure that makes better living effortless
+- **Portfolio**: Dynamic count from `content/brands/` MDX files
+- **Contact**: hey@notacompany.com
+
+## Tech Stack
+
+- **Framework**: Next.js 15 (App Router, Static Generation)
+- **Language**: TypeScript
+- **Styling**: Minimal CSS (classic HTML aesthetic)
+- **Fonts**: Times New Roman (serif)
+- **Analytics**: Seline + Vercel Speed Insights
+- **Deployment**: Vercel
+
+## Site Configuration
+
+All site info is centralized in `lib/site-config.ts`:
+
+```typescript
+import { siteConfig } from '@/lib/site-config'
+
+siteConfig.url           // https://www.notacompany.com
+siteConfig.email         // hey@notacompany.com
+siteConfig.brandCount    // Dynamic count from MDX files
+siteConfig.strings.*     // i18n-ready content strings
+```
+
+**Always use `siteConfig`** for:
+- URLs (meta, sitemap, robots, llms.txt)
+- Meta descriptions
+- Site identity (name, email, founder)
+- Any text that might need i18n in the future
+
+## Pages
+
+- `app/page.tsx`: Homepage with about section
+- `app/portfolio/page.tsx`: Portfolio listing with filters
+- `app/portfolio/[slug]/page.tsx`: Individual brand pages
+
+## Development Guidelines
+
+### Code Quality
+```bash
+pnpm run fix-all       # Auto-fix formatting + linting
+pnpm run check-all     # Verify all passes
+pnpm run build         # Generates llms.txt + builds production
+```
+
+### Code Style
+- TypeScript with strict settings
+- Server Components preferred
+- Minimal dependencies
+- Simple, readable code
+
+### Content Guidelines
+- First person ("I" not "we")
+- Human, approachable tone
+- No corporate speak or buzzwords
+- Keep it simple and honest
+
+## Key Files
+
+- `lib/site-config.ts`: **Centralized site config** (URL, strings, i18n)
+- `lib/brands.ts`: Brand data utilities
+- `app/globals.css`: Classic HTML styling (Times, blue links, hr)
+- `content/brands/`: MDX files with brand info
+- `scripts/generate-llms-txt.ts`: Generates LLMs.txt files on build
+- `public/llms.txt`: LLM context file (auto-generated)
+- `public/brands/`: LLM-readable brand files (auto-generated)
+
+## SEO Configuration
+
+Each page sets its own canonical URL via `alternates.canonical`:
+
+```typescript
+// In each page's metadata export
+export const metadata: Metadata = {
+  alternates: {
+    canonical: '/portfolio',  // Relative path, resolved against metadataBase
+  },
+}
+```
+
+**Important SEO rules:**
+- Do NOT set canonical in root `layout.tsx` (it overrides all pages)
+- Each page must set its own canonical URL
+- Use `siteConfig.url` as `metadataBase` in root layout
+- Brand links must be server-rendered for crawlers (not client-only)
+
+## Important Notes
+
+- **No OG meta tags** - keeping it minimal
+- **No fancy UI components** - pure HTML aesthetic
+- **Static generation** for all pages
+- **LLMs.txt auto-generated** - runs on `pnpm run build`
+- **Dynamic brand count** - no hardcoded "16 brands"
+- **Per-page canonicals** - each page sets its own canonical URL
+- Footer credits: world's first website + GitHub links
+
+## Links
+
+- Website: https://www.notacompany.com
+- Source: https://github.com/not-a-company/notacompany
+- Author: https://github.com/tiagom87
