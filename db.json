@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 2423,
+  "size": 2426,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -33922,6 +33922,48 @@
         "htmlUrl": "https://github.com/BZ-Technologies/bzt-app-training-scheduler/blob/47330b93f066bf60b048991082cbf1c6b356115b/.cursorrules",
         "size": 8.99,
         "timestamp": "2025-12-19T08:19:12.335Z"
+      }
+    ],
+    [
+      "oimiragieo/agent-studio/.claude/archive/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/oimiragieo/agent-studio/5b3403c98153660a5727174184ccc73b4e88a6a1/.claude/archive/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1088308337,
+        "path": "oimiragieo/agent-studio/.claude/archive/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "oimiragieo",
+        "repositoryName": "agent-studio",
+        "htmlUrl": "https://github.com/oimiragieo/agent-studio/blob/5b3403c98153660a5727174184ccc73b4e88a6a1/.claude/archive/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules",
+        "size": 6.32,
+        "timestamp": "2025-12-22T08:19:59.608Z"
+      }
+    ],
+    [
+      "dativo-io/dativo-ingest/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/dativo-io/dativo-ingest/681cce82ea04092e7b100ae516f4da04e1bead5c/.cursorrules",
+        "repositoryId": 1091147230,
+        "path": "dativo-io/dativo-ingest/.cursorrules",
+        "ownerName": "dativo-io",
+        "repositoryName": "dativo-ingest",
+        "htmlUrl": "https://github.com/dativo-io/dativo-ingest/blob/681cce82ea04092e7b100ae516f4da04e1bead5c/.cursorrules",
+        "size": 8.37,
+        "timestamp": "2025-12-22T08:20:01.242Z"
+      }
+    ],
+    [
+      "oimiragieo/agent-studio/.cursor/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/oimiragieo/agent-studio/5b3403c98153660a5727174184ccc73b4e88a6a1/.cursor/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1088308337,
+        "path": "oimiragieo/agent-studio/.cursor/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "oimiragieo",
+        "repositoryName": "agent-studio",
+        "htmlUrl": "https://github.com/oimiragieo/agent-studio/blob/5b3403c98153660a5727174184ccc73b4e88a6a1/.cursor/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
+        "size": 2.78,
+        "timestamp": "2025-12-22T08:20:02.671Z"
       }
     ]
   ]
