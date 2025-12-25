@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 2426,
+  "size": 2435,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -33964,6 +33964,132 @@
         "htmlUrl": "https://github.com/oimiragieo/agent-studio/blob/5b3403c98153660a5727174184ccc73b4e88a6a1/.cursor/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules",
         "size": 2.78,
         "timestamp": "2025-12-22T08:20:02.671Z"
+      }
+    ],
+    [
+      "StrayDogSyn/Orchestration/.cursorrules.backup",
+      {
+        "name": ".cursorrules.backup",
+        "downloadUrl": "https://raw.githubusercontent.com/StrayDogSyn/Orchestration/d01429edfded90d915599f65d71461a807696b92/.cursorrules.backup",
+        "repositoryId": 1121909226,
+        "path": "StrayDogSyn/Orchestration/.cursorrules.backup",
+        "ownerName": "StrayDogSyn",
+        "repositoryName": "Orchestration",
+        "htmlUrl": "https://github.com/StrayDogSyn/Orchestration/blob/d01429edfded90d915599f65d71461a807696b92/.cursorrules.backup",
+        "size": 12.3,
+        "timestamp": "2025-12-25T08:18:38.653Z"
+      }
+    ],
+    [
+      "minimapletinytools/giraffeCAD-proto/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/minimapletinytools/giraffeCAD-proto/ec64dee4e020888edbf5bb8f14a7474c39eb30a3/.cursorrules",
+        "repositoryId": 909805709,
+        "path": "minimapletinytools/giraffeCAD-proto/.cursorrules",
+        "ownerName": "minimapletinytools",
+        "repositoryName": "giraffeCAD-proto",
+        "htmlUrl": "https://github.com/minimapletinytools/giraffeCAD-proto/blob/ec64dee4e020888edbf5bb8f14a7474c39eb30a3/.cursorrules",
+        "size": 1.32,
+        "timestamp": "2025-12-25T08:18:39.233Z"
+      }
+    ],
+    [
+      "oimiragieo/agent-studio/.cursor/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/oimiragieo/agent-studio/5b3403c98153660a5727174184ccc73b4e88a6a1/.cursor/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "repositoryId": 1088308337,
+        "path": "oimiragieo/agent-studio/.cursor/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "ownerName": "oimiragieo",
+        "repositoryName": "agent-studio",
+        "htmlUrl": "https://github.com/oimiragieo/agent-studio/blob/5b3403c98153660a5727174184ccc73b4e88a6a1/.cursor/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules",
+        "size": 2.32,
+        "timestamp": "2025-12-25T08:18:41.304Z"
+      }
+    ],
+    [
+      "oimiragieo/agent-studio/.cursor/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/oimiragieo/agent-studio/5b3403c98153660a5727174184ccc73b4e88a6a1/.cursor/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "repositoryId": 1088308337,
+        "path": "oimiragieo/agent-studio/.cursor/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "ownerName": "oimiragieo",
+        "repositoryName": "agent-studio",
+        "htmlUrl": "https://github.com/oimiragieo/agent-studio/blob/5b3403c98153660a5727174184ccc73b4e88a6a1/.cursor/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "size": 3.59,
+        "timestamp": "2025-12-25T08:18:41.359Z"
+      }
+    ],
+    [
+      "oimiragieo/agent-studio/.claude/archive/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/oimiragieo/agent-studio/5b3403c98153660a5727174184ccc73b4e88a6a1/.claude/archive/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "repositoryId": 1088308337,
+        "path": "oimiragieo/agent-studio/.claude/archive/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "ownerName": "oimiragieo",
+        "repositoryName": "agent-studio",
+        "htmlUrl": "https://github.com/oimiragieo/agent-studio/blob/5b3403c98153660a5727174184ccc73b4e88a6a1/.claude/archive/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "size": 3.59,
+        "timestamp": "2025-12-25T08:18:42.913Z"
+      }
+    ],
+    [
+      "abuelmagd10/code/.cursor/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/abuelmagd10/code/f94b56841b4249b0d6d6bd3e5c1517198fe7ede9/.cursor/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "repositoryId": 1091740941,
+        "path": "abuelmagd10/code/.cursor/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "ownerName": "abuelmagd10",
+        "repositoryName": "code",
+        "htmlUrl": "https://github.com/abuelmagd10/code/blob/f94b56841b4249b0d6d6bd3e5c1517198fe7ede9/.cursor/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules",
+        "size": 3.59,
+        "timestamp": "2025-12-25T08:18:42.985Z"
+      }
+    ],
+    [
+      "zevwings/workflow.rs/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/zevwings/workflow.rs/6005548e00b29058bdc116866c4233dfd2c7d7d4/.cursorrules",
+        "repositoryId": 1089180607,
+        "path": "zevwings/workflow.rs/.cursorrules",
+        "ownerName": "zevwings",
+        "repositoryName": "workflow.rs",
+        "htmlUrl": "https://github.com/zevwings/workflow.rs/blob/6005548e00b29058bdc116866c4233dfd2c7d7d4/.cursorrules",
+        "size": 12.56,
+        "timestamp": "2025-12-25T08:18:43.389Z"
+      }
+    ],
+    [
+      "marcin119a/project_tools/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/marcin119a/project_tools/425fe509271810110b79886a636219c2328d1907/.cursorrules",
+        "repositoryId": 1120044230,
+        "path": "marcin119a/project_tools/.cursorrules",
+        "ownerName": "marcin119a",
+        "repositoryName": "project_tools",
+        "htmlUrl": "https://github.com/marcin119a/project_tools/blob/425fe509271810110b79886a636219c2328d1907/.cursorrules",
+        "size": 4.33,
+        "timestamp": "2025-12-25T08:18:44.106Z"
+      }
+    ],
+    [
+      "kceryeus/ziplifica/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/kceryeus/ziplifica/7cba4ae9d5f98b3ec7f8994b0e994fbcb0e02b03/.cursorrules",
+        "repositoryId": 1100701777,
+        "path": "kceryeus/ziplifica/.cursorrules",
+        "ownerName": "kceryeus",
+        "repositoryName": "ziplifica",
+        "htmlUrl": "https://github.com/kceryeus/ziplifica/blob/7cba4ae9d5f98b3ec7f8994b0e994fbcb0e02b03/.cursorrules",
+        "size": 2.16,
+        "timestamp": "2025-12-25T08:18:44.919Z"
       }
     ]
   ]
