@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 2435,
+  "size": 2439,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -34090,6 +34090,62 @@
         "htmlUrl": "https://github.com/kceryeus/ziplifica/blob/7cba4ae9d5f98b3ec7f8994b0e994fbcb0e02b03/.cursorrules",
         "size": 2.16,
         "timestamp": "2025-12-25T08:18:44.919Z"
+      }
+    ],
+    [
+      "Snooz4pm/project-zenith/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Snooz4pm/project-zenith/c9b604e97f36404453588c803ccbfdb0c3ad314f/.cursorrules",
+        "repositoryId": 1116451392,
+        "path": "Snooz4pm/project-zenith/.cursorrules",
+        "ownerName": "Snooz4pm",
+        "repositoryName": "project-zenith",
+        "htmlUrl": "https://github.com/Snooz4pm/project-zenith/blob/c9b604e97f36404453588c803ccbfdb0c3ad314f/.cursorrules",
+        "size": 1.1,
+        "timestamp": "2025-12-28T08:17:20.371Z"
+      }
+    ],
+    [
+      "Melsaeed276/Mutlu-Log/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Melsaeed276/Mutlu-Log/8d9764f8207a8846de7fff9775594697da9c22c1/.cursorrules",
+        "repositoryId": 1123223273,
+        "path": "Melsaeed276/Mutlu-Log/.cursorrules",
+        "ownerName": "Melsaeed276",
+        "repositoryName": "Mutlu-Log",
+        "htmlUrl": "https://github.com/Melsaeed276/Mutlu-Log/blob/8d9764f8207a8846de7fff9775594697da9c22c1/.cursorrules",
+        "size": 10.48,
+        "timestamp": "2025-12-28T08:17:24.220Z"
+      }
+    ],
+    [
+      "danaia/archeon/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/danaia/archeon/6a11f37bafdabe0a784b60b04cea7f4c5dfa6b47/.cursorrules",
+        "repositoryId": 1120298001,
+        "path": "danaia/archeon/.cursorrules",
+        "ownerName": "danaia",
+        "repositoryName": "archeon",
+        "htmlUrl": "https://github.com/danaia/archeon/blob/6a11f37bafdabe0a784b60b04cea7f4c5dfa6b47/.cursorrules",
+        "size": 4.16,
+        "timestamp": "2025-12-28T08:17:25.980Z"
+      }
+    ],
+    [
+      "ConductorOne/github-workflows/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/ConductorOne/github-workflows/f50a13acedef65418af1974fd3394170b8ebf2a9/.cursorrules",
+        "repositoryId": 994962223,
+        "path": "ConductorOne/github-workflows/.cursorrules",
+        "ownerName": "ConductorOne",
+        "repositoryName": "github-workflows",
+        "htmlUrl": "https://github.com/ConductorOne/github-workflows/blob/f50a13acedef65418af1974fd3394170b8ebf2a9/.cursorrules",
+        "size": 1.57,
+        "timestamp": "2025-12-28T08:17:26.789Z"
       }
     ]
   ]
