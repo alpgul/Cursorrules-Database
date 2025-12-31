@@ -1,6 +1,6 @@
 {
   "id": "a90bb9ef-a2e7-44ce-ba9d-00abf97846b9",
-  "size": 2439,
+  "size": 2447,
   "apisearch": [
     [
       "wasp-lang/open-saas/template/app/.cursorrules",
@@ -34146,6 +34146,118 @@
         "htmlUrl": "https://github.com/ConductorOne/github-workflows/blob/f50a13acedef65418af1974fd3394170b8ebf2a9/.cursorrules",
         "size": 1.57,
         "timestamp": "2025-12-28T08:17:26.789Z"
+      }
+    ],
+    [
+      "khursheed33/langgraph-agentic-base/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/khursheed33/langgraph-agentic-base/6637694f24ee0a5024b0287a73920404597659a6/.cursorrules",
+        "repositoryId": 1122354032,
+        "path": "khursheed33/langgraph-agentic-base/.cursorrules",
+        "ownerName": "khursheed33",
+        "repositoryName": "langgraph-agentic-base",
+        "htmlUrl": "https://github.com/khursheed33/langgraph-agentic-base/blob/6637694f24ee0a5024b0287a73920404597659a6/.cursorrules",
+        "size": 1.04,
+        "timestamp": "2025-12-31T08:19:12.773Z"
+      }
+    ],
+    [
+      "wentura/payro.cz/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/wentura/payro.cz/4a398419d2311fe772f5ad4cb602563c80afa57a/.cursorrules",
+        "repositoryId": 1067749922,
+        "path": "wentura/payro.cz/.cursorrules",
+        "ownerName": "wentura",
+        "repositoryName": "payro.cz",
+        "htmlUrl": "https://github.com/wentura/payro.cz/blob/4a398419d2311fe772f5ad4cb602563c80afa57a/.cursorrules",
+        "size": 7.16,
+        "timestamp": "2025-12-31T08:19:14.392Z"
+      }
+    ],
+    [
+      "alonzo245/alon-alush/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/alonzo245/alon-alush/90476c360580d401b635f4c1dd8da8971ace030c/.cursorrules",
+        "repositoryId": 480546112,
+        "path": "alonzo245/alon-alush/.cursorrules",
+        "ownerName": "alonzo245",
+        "repositoryName": "alon-alush",
+        "htmlUrl": "https://github.com/alonzo245/alon-alush/blob/90476c360580d401b635f4c1dd8da8971ace030c/.cursorrules",
+        "size": 19.67,
+        "timestamp": "2025-12-31T08:19:15.185Z"
+      }
+    ],
+    [
+      "Dogebooch/Orbit/project-bolt-sb1-xgieemae/project/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/Dogebooch/Orbit/fa6a56b6e8879e15e0eb81e38da04fc9a9f19082/project-bolt-sb1-xgieemae/project/.cursorrules",
+        "repositoryId": 1119813277,
+        "path": "Dogebooch/Orbit/project-bolt-sb1-xgieemae/project/.cursorrules",
+        "ownerName": "Dogebooch",
+        "repositoryName": "Orbit",
+        "htmlUrl": "https://github.com/Dogebooch/Orbit/blob/fa6a56b6e8879e15e0eb81e38da04fc9a9f19082/project-bolt-sb1-xgieemae/project/.cursorrules",
+        "size": 8.55,
+        "timestamp": "2025-12-31T08:19:15.948Z"
+      }
+    ],
+    [
+      "oimiragieo/agent-studio/.factory/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/oimiragieo/agent-studio/5b3403c98153660a5727174184ccc73b4e88a6a1/.factory/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "repositoryId": 1088308337,
+        "path": "oimiragieo/agent-studio/.factory/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "ownerName": "oimiragieo",
+        "repositoryName": "agent-studio",
+        "htmlUrl": "https://github.com/oimiragieo/agent-studio/blob/5b3403c98153660a5727174184ccc73b4e88a6a1/.factory/rules/laravel-tall-stack-best-practices-cursorrules-prom/.cursorrules",
+        "size": 4.93,
+        "timestamp": "2025-12-31T08:19:17.457Z"
+      }
+    ],
+    [
+      "mjcumming/wiim/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/mjcumming/wiim/4a1f37cadfecbd3d2c7b088307ed6042fcb5d9e0/.cursorrules",
+        "repositoryId": 989080760,
+        "path": "mjcumming/wiim/.cursorrules",
+        "ownerName": "mjcumming",
+        "repositoryName": "wiim",
+        "htmlUrl": "https://github.com/mjcumming/wiim/blob/4a1f37cadfecbd3d2c7b088307ed6042fcb5d9e0/.cursorrules",
+        "size": 19.49,
+        "timestamp": "2025-12-31T08:19:17.571Z"
+      }
+    ],
+    [
+      "BatDad7/statecraft-landing/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/BatDad7/statecraft-landing/52734d2214a9637674256f9cc8dcf7ce19891bba/.cursorrules",
+        "repositoryId": 1121473221,
+        "path": "BatDad7/statecraft-landing/.cursorrules",
+        "ownerName": "BatDad7",
+        "repositoryName": "statecraft-landing",
+        "htmlUrl": "https://github.com/BatDad7/statecraft-landing/blob/52734d2214a9637674256f9cc8dcf7ce19891bba/.cursorrules",
+        "size": 1.9,
+        "timestamp": "2025-12-31T08:19:20.372Z"
+      }
+    ],
+    [
+      "bperezgo/laguna-escondida-backend/.cursorrules",
+      {
+        "name": ".cursorrules",
+        "downloadUrl": "https://raw.githubusercontent.com/bperezgo/laguna-escondida-backend/acfd4dbd58ea655b79ce455fa0d16a3fd181373b/.cursorrules",
+        "repositoryId": 1092608331,
+        "path": "bperezgo/laguna-escondida-backend/.cursorrules",
+        "ownerName": "bperezgo",
+        "repositoryName": "laguna-escondida-backend",
+        "htmlUrl": "https://github.com/bperezgo/laguna-escondida-backend/blob/acfd4dbd58ea655b79ce455fa0d16a3fd181373b/.cursorrules",
+        "size": 15.28,
+        "timestamp": "2025-12-31T08:19:21.373Z"
       }
     ]
   ]

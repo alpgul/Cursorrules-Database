@@ -1,0 +1,44 @@
+# Statecraft Landing Page - Project Rules & Architecture
+
+## 1. Visual Identity Standards (IMMUTABLE)
+Do not change these base themes without explicit user permission.
+
+### AP Government (High School)
+- **Route**: `/`
+- **Theme**: "Tactical Grid" / Situation Room
+- **Background**: `bg-slate-900` + `tactical-grid` overlay
+- **Typography**: Sans-serif (`Inter`) + Monospace (`JetBrains Mono`) for data
+- **Accents**: Terminal Green (`text-terminal-green`), Alert Red, Slate-400
+
+### Gov 2.0 (Higher Education)
+- **Route**: `/higher-ed` (and `/higher-ed/gov`)
+- **Theme**: "Scholastic + Tech" (clean, department-ready)
+- **Background**: `bg-white`
+- **Typography**: Serif (`IBM Plex Serif`) for headings, Sans for body
+- **Accents**: Blue / Red (no tactical-grid, no ticker)
+- **Key Components**: 
+  - `HigherEdHero`: "The Essay is Dead" messaging
+  - `TrustBar`: Verified Partners (University of Minnesota, etc.)
+  - `SyllabusMap`: Timeline visualization
+  - `PedagogicalEfficacy`: Research citations
+  - `PolicyBrief`: Daily Policy Briefing (college-gov)
+
+## 2. Domain Routing & Middleware
+The project uses `middleware.ts` to map domains to routes.
+- **`apgov.statecraftsims.com`** → Serves `/` (AP Gov)
+- **`gov.statecraftsims.com`** → Serves `/higher-ed` (Gov 2.0)
+- **Logic**: Ensure `apgov` is explicitly excluded from the `gov` match to prevent overlap.
+
+## 3. Stability & Testing Protocols
+- **Smoke Tests**: Run `npm run test:e2e` locally before major deployments.
+- **Component Safety**: 
+  - Do NOT delete `components/higher-ed/*` or `components/landing/*`.
+  - Do NOT remove `PedagogicalEfficacy` or `TrustBar` from the Higher Ed page.
+- **Build Safety**: `tsconfig.json` excludes `e2e` and `scripts` to prevent build failures from aux tools.
+
+## 4. Tech Stack Constraints
+- **Framework**: Next.js 14 (App Router)
+- **Styling**: Tailwind CSS + Framer Motion
+- **Database**: Upstash Redis (for Intel Briefing)
+- **Deployment**: Vercel
+
